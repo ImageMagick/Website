@@ -1,7 +1,7 @@
 <div class="magick-header">
-<p class="text-center"><a href="#anatomy">The Anatomy of the Command Line</a> • <a href="#input">Input Filename</a> • <a href="#setting">Image Setting</a> • <a href="#operator">Image Operator</a> • <a href="#sequence">Image Sequence Operator</a> • <a href="#geometry">Image Geometry</a> •  <a href="#stack">Image Stack</a> • <a href="#output">Output Filename</a></p>
+<p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#setting">Image Setting</a> • <a href="#operator">Image Operator</a> • <a href="#sequence">Image Sequence Operator</a> • <a href="#geometry">Image Geometry</a> •  <a href="#stack">Image Stack</a> • <a href="#output">Output Filename</a></p>
 
-<p class="lead magick-description">The ImageMagick command line can be as simple as this:</p>
+<p class="lead magick-description">The ImageMagick command-line can be as simple as this:</p>
 
 <pre>
 convert image.jpg image.png
@@ -16,7 +16,9 @@ convert label.gif +matte \
   -delete 0 +swap  -compose Multiply -composite  button.gif");
 </pre>
 
-<p>Without knowing much about the ImageMagick command line, you can probably figure out that the first command above converts an image in the JPEG format to one in the PNG format.  However, very few may realize the second, more complex command, gives a flat two-dimensional label a three-dimensional look with rich textures and simulated depth:</p>
+<p class="bg-info">This example command is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<code>\</code>). The backslash is the Unix <var>line-continuation</var> character. In the Windows shell, use a carat character (<code>^</code>) for line-continuation. We use the Unix style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command-lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Unix (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
+
+<p>Without knowing much about the ImageMagick command-line, you can probably surmise that the first command above converts an image in the JPEG format to one in the PNG format.  However, very few may realize the second, more complex command, gives a flat two-dimensional label a three-dimensional look with rich textures and simulated depth:</p>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/label.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/label.gif" width="78" height="53" alt="label" /></a>
@@ -25,7 +27,6 @@ convert label.gif +matte \
   <img src="<?php echo $_SESSION['RelativePath']?>/../image/button.gif" width="78" height="53" alt="button" /></a>
 </ul>
 
-<p class="warn">[ <var>A quick word about our formatting of commands:</var> The second example above is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<code>\</code>). The backslash is the Unix <var>line continuation</var> character. In the Windows shell, use a carat character (<code>^</code>) for line continuation. We use the Unix style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Unix (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
 
 <p>Here we show percent completion of a task as a shaded cylinder:</p>
 
@@ -50,12 +51,12 @@ convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-s
   cylinder_shaded.png
 </pre>
 
-<p>In the next sections we dissect the anatomy of the ImageMagick command line.  Hopefully, after carefully reading and better understanding how the command line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">program interfaces</a>.</p>
+<p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">program interfaces</a>.</p>
 
 <p>See <a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 
-<h2 class="magick-header"><a id="anatomy"></a>The Anatomy of the Command Line</h2>
-<p>The ImageMagick command line consists of</p>
+<h2 class="magick-header"><a id="anatomy"></a>The Anatomy of the Command-line</h2>
+<p>The ImageMagick command-line consists of</p>
 
 <ol>
 <li>one or more required input filenames.</li>
@@ -73,7 +74,7 @@ convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-s
 </li>
 </ol>
 
-<p>You can find a detailed explanation of each of the constituent parts of the command line in the sections that follow.</p>
+<p>You can find a detailed explanation of each of the constituent parts of the command-line in the sections that follow.</p>
 
 <h2 class="magick-header"><a id="input"></a>Input Filename</h2>
 
@@ -169,8 +170,8 @@ convert gif:fd:3 jpg:fd:4 -append tif:fd:5
 convert 'images.gif[0]' image.png
 </pre>
 
-<p class="warn">[Unix shells generally interpret brackets so we enclosed the filename in quotes above.
-In a Windows command shell the brackets are not interpreted but using quotes doesn't hurt. However, in most cases the roles of single-quotes and double-quotes are reversed with respect to Unix and Windows, so Windows users should usually try double-quotes where we display single-quotes, and vice versa.]
+<p class="bg-info">Unix shells generally interpret brackets so we enclosed the filename in quotes above.
+In a Windows command shell the brackets are not interpreted but using quotes doesn't hurt. However, in most cases the roles of single-quotes and double-quotes are reversed with respect to Unix and Windows, so Windows users should usually try double-quotes where we display single-quotes, and vice versa.
 </p>
 
 <p>You can read more than one image from a sequence with a frame range.  For example, you can extract the first four frames of an image sequence:
@@ -266,8 +267,8 @@ convert @myimages.txt mymovie.gif
 </pre>
 
 
-    <p>Some ImageMagick command-line options may exceed the capabilities of
-your command line processor.  Windows, for example, limits command lines
+    <p>Some ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> may exceed the capabilities of
+your command-line processor.  Windows, for example, limits command-lines
 to 8192 characters.  If, for example, you have a draw option with polygon
 points that exceed the command-line length limit, put the draw option instead
 in a file and reference the file with
@@ -301,15 +302,15 @@ convert logo: gif:- | display -define stream:buffer-size=0 gif:-
 
 <h2 class="magick-header"><a id="setting"></a>Image Setting</h2>
 
-<p>An image setting persists as it appears on the command line and may affect
+<p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
 writing an image as appropriate.  An image setting stays in effect until it
-is reset or the command line terminates.  The image settings include:</p>
+is reset or the command-line terminates.  The image settings include:</p>
 
-<p class="options">
+<ul>
 <?php options("adjoin", "affine", "alpha", "antialias", "authenticate", "background", "bias", "black-point-compensation", "blue-primary", "bordercolor", "caption", "channel", "comment", "compress", "debug", "define", "delay", "density", "depth", "direction", "display", "dispose", "dither", "encoding", "endian", "extract", "family", "fill", "filter", "font", "format", "fuzz", "geometry", "gravity", "green-primary", "interlace", "intent", "interpolate", "label", "limit", "linewidth", "log", "loop", "mask", "mattecolor", "monitor", "orient", "page", "pointsize", "preview", "quality", "quiet", "red-primary", "region", "render", "repage", "sampling-factor", "scene", "seed", "size", "stretch", "stroke",  "strokewidth", "style", "texture", "tile", "transparent-color", "treedepth", "type", "undercolor", "units", "verbose", "virtual-pixel", "weight");
 ?>
-</p>
+</ul>
 
 <p>In this example, <var>-channel</var> applies to each of the images, since, as we mentioned, settings persist:
 </p>
@@ -321,18 +322,18 @@ convert -channel RGB wand.png wizard.png images.png
 <h2 class="magick-header"><a id="operator"></a>Image Operator</h2>
 
 <p>An image operator differs from a setting in that it affects the image
-immediately as it appears on the command line.  An operator is
-any <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">command line option</a>
-not listed as a <a href="#setting">image setting</a>
-or <a href="#sequence">image sequence operator</a>.  Unlike an
-image setting, which persists until the command line terminates,
+immediately as it appears on the command-line.  An operator is
+any command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">option</a> not listed as a
+<a href="#setting">image setting</a> or
+<a href="#sequence">image sequence operator</a>.  Unlike an
+image setting, which persists until the command-line terminates,
 an operator is applied to an image and forgotten.  The image operators
 include:</p>
 
-<p class="options">
+<ul>
 <?php options("annotate", "black-threshold", "blur", "border", "charcoal", "chop", "clip", "clip-path", "clip-mask", "colors", "colorize", "colorspace", "compose", "contrast", "convolve", "crop", "cycle", "despeckle", "draw", "edge", "emboss", "enhance", "equalize", "evaluate", "extent", "flip", "flop", "floodfill", "frame", "gamma", "gaussian-blur", "implode", "lat", "level", "map", "median", "modulate", "monochrome", "negate", "noise", "normalize", "opaque", "ordered-dither", "paint", "posterize", "raise", "profile", "radial-blur", "raise", "random-threshold", "resample", "resize", "roll", "rotate", "sample", "scale", "sepia-tone", "segment", "shade", "shadow", "sharpen", "shave", "shear", "sigmoidal-contrast", "solarize", "splice", "spread", "strip", "swirl", "threshold", "transparent", "thumbnail", "tint", "transform", "trim", "unsharp", "version", "wave", "white-point", "white-threshold");
 ?>
-</p>
+</ul>
 
 <p>In this example, <var>-negate</var> negates the wand image but not the wizard:</p>
 
@@ -343,17 +344,17 @@ convert wand.png -negate wizard.png images.png
 <h2 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h2>
 
 <p>An image sequence operator differs from a setting in that it affects an
-image sequence immediately as it appears on the command line.  Choose from
+image sequence immediately as it appears on the command-line.  Choose from
 these image sequence operators:</p>
 
-<p class="options">
+<ul>
 <?php options("append", "affinity", "average", "clut", "coalesce", "combine", "compare", "complex", "composite", "copy", "crop", "debug", "deconstruct", "delete", "evaluate-sequence", "fft", "flatten", "fx", "hald-clut", "ift", "identify", "insert", "layers", "limit", "map", "maximum", "minimum", "morph", "mosaic", "optimize", "print", "process", "quiet", "separate", "swap", "write");
 ?>
-</p>
+</ul>
 
 <h2 class="magick-header"><a id="geometry"></a>Image Geometry</h2>
 
-<p>Many command-line options take a <var>geometry</var> argument
+<p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
 dimensional quantities. Because users want so many variations on the resulting
 dimensions, sizes, and positions of images (and because ImageMagick wants to
@@ -366,10 +367,10 @@ Keep in mind that some of these parse their arguments in slightly
 different ways. See the documentation for the individual option or
 setting for more specifics.</p>
 
-<p class="options" style="text-align:justify">
+<ul>
 <?php options("adaptive-resize", "border", "borderwidth", "chop", "crop", "density", "extent", "extract", "frame", "geometry", "iconGeometry", "liquid-rescale", "page", "region", "repage", "resize", "sample", "scale", "shave", "splice", "thumbnail", "window");
 ?>
-</p>
+</ul>
 
 <p>The <var>geometry</var> argument might take any of the forms listed in the table below. These will described in more detail in the subsections following the table. The usual form is <var>size</var>[<var>offset</var>], meaning <var>size</var> is required and <var>offset</var> is optional. Occasionally, [<var>size</var>]<var>offset</var> is possible. In no cases are spaces permitted within the <var>geometry</var> argument.</p>
 
@@ -482,7 +483,7 @@ convert logo: -resize '100x200&lt;' wiz4.png
 convert logo: -resize '@10000' wiz10000.png
 </pre>
 
-<p class="warn">Another word about the quotation marks: In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <code>&lt;</code> or <code>&gt;</code> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <code>^</code>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
+<p class="bg-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <code>&lt;</code> or <code>&gt;</code> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <code>^</code>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
 </p>
 
 <h3>Offsets in geometry</h3>
@@ -508,14 +509,14 @@ convert logo: -gravity center -region '100x200-10+20' \
 
 <h2 class="magick-header"><a id="stack"></a>Image Stack</h2>
 
-<p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
+<p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
 <pre>
 convert wand.gif \( wizard.gif -rotate 30 \) +append images.gif
 </pre>
 
 
-<p class="warn">Notice again that the  parentheses are <var>escaped</var> by preceding them with
+<p class="bg-info">Notice again that the  parentheses are <var>escaped</var> by preceding them with
 backslashes.  This is required under Unix, where parentheses are special
 <var>shell</var> characters.  The backslash tells the shell not to interpret
 these characters, but to pass them directly to the command being executed. Do
@@ -525,11 +526,9 @@ above.</p>
 
 <p>In addition to the image operators already discussed, the following image operators are most useful when processing images in an image stack:</p>
 
-<p class="options">
-<span class='bull'> • </span>
+<ul>
 <?php options("clone", "delete", "insert", "swap");?>
-<span class='bull'> • </span>
-</p>
+</ul>
 
 <p>The arguments to these operators are indexes into the image sequence by number, starting with zero, for the first image, and so on. However if you give a negative index, the images are indexed from the end (last image added). That is, an index of -1 is the last image in the current image sequence, -2 gives the second-to-last, and so on.</p>
 
@@ -578,8 +577,7 @@ image-2.jpg
 </p>
 
 <pre>
-convert rose: -set filename:area '%wx%h' \ 
-  'rose-%[filename:area].png'
+convert rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
 </pre>
 
 <p>writes an image with this filename:
