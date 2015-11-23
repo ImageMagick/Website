@@ -1432,7 +1432,7 @@ command.  </p>
 <p>Take the first image 'destination' and overlay the second 'source' image
 according to the current <a href="#compose">-compose</a> setting. The location
 of the 'source' or 'overlay' image is controlled according to <a
-href="#geometry" >-geometry</a>, and <a href="#geometry" >-geometry</a>
+href="#gravity" >-gravity</a>, and <a href="#geometry" >-geometry</a>
 settings. </p>
 
 <p>If a third image is given this is treated as a gray-scale blending 'mask' image
