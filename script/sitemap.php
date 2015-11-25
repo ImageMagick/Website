@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools';
+  $title='Site Map';
   include('session.php');
 ?>
