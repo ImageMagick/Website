@@ -1499,7 +1499,7 @@ the chroma channels.</p>
   <h3 class="magick-header"><a id="connected-components"></a>-connected-components <var>connectivity</var></h3>
 </div>
 
-<p class="magick-description">connected-components uniquely labeled, choose from 4 or 8 way connectivity.</p>
+<p class="magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">connected-components</a> uniquely labeled, choose from 4 or 8 way connectivity.</p>
 
 <p>Use <code><a href="#define" >-define</a> connected-components:verbose=true</code> to output statistics associated with each unique label.</p>
 
