@@ -36,8 +36,6 @@
         $status="Message not sent: e-mail address is required.";
       if (strpos($address,'@') == false)
         $status="Message not sent: malformed e-mail address.";
-      if (preg_match("/mgorton/i",$address) != 0)
-        $status="Message not sent: authentication code does not match.";
       if (!$name)
         $status="Message not sent: name is required.";
       if (strlen($issue) == 0)
