@@ -43,7 +43,7 @@ Windows.
 <p>A helper script named <code>Magick++-config</code> is installed
 under Unix which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
-following command will compile and link the source file <code>demo.cpp</code>
+following command compiles and links the source file <code>demo.cpp</code>
 to produce the executable <code>demo</code> (notice that quotes are
 backward quotes): 
 </p>
@@ -51,6 +51,12 @@ backward quotes):
 c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
   `Magick++-config --ldflags --libs`
 </pre>
+<p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
+
+<pre>
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+</pre>
+
 <p>Windows users may get started by manually editing a project file
 for one of the Magick++ demo programs. 
 </p>
@@ -62,8 +68,42 @@ int main( int argc, char ** argv) {
 </pre>
 <p>This initialization step is not required under Unix, Linux,
 Cygwin, or any other operating environment that supports the notion
-of <var>installing</var> ImageMagick in a known location. 
-</p>
+of <var>installing</var> ImageMagick in a known location.  </p>
+<p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
+
+<pre class="pre-scrollable">
+#include &lt;Magick++.h> 
+#include &lt;iostream> 
+
+using namespace std; 
+using namespace Magick; 
+
+int main(int argc,char **argv) 
+{ 
+  InitializeMagick(*argv);
+
+  // Construct the image object. Seperating image construction from the 
+  // the read operation ensures that a failure to read the image file 
+  // doesn't render the image object useless. 
+  Image image;
+  try { 
+    // Read a file into image object 
+    image.read( "logo:" );
+
+    // Crop the image to specified size (width, height, xOffset, yOffset)
+    image.crop( Geometry(100,100, 100, 100) );
+
+    // Write the image to a file 
+    image.write( "logo.png" ); 
+  } 
+  catch( Exception &amp;error_ ) 
+    { 
+      cout &lt;&lt; "Caught exception: " &lt;&lt; error_.what() &lt;&lt; endl; 
+      return 1; 
+    } 
+  return 0; 
+}
+</pre>
 <h2 class="magick-header">Reporting Bugs</h2>
 <a id="bugs"></a>
 <p>Questions regarding usage should be directed to or to report any bugs go to
