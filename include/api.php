@@ -21,7 +21,7 @@
 
   <dt><a id="c__"></a>C++</dt>
 
-<dd><a href="http://www.imagemagick.org/Magick++">Magick++</a> provides an object-oriented C++ interface to ImageMagick.  See <a href="http://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="http://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
+<dd><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick++.php">magick++</a> provides an object-oriented C++ interface to ImageMagick.  See <a href="http://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="http://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
 
   <dt><a id="go"></a>GO</dt>
   <dd><a href="https://github.com/gographics/imagick">GoImagick</a> is a set of Go bindings to ImageMagick's MagickWand and MagickCore C APIs.</dd>
