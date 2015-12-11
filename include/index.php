@@ -27,6 +27,10 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
     <td>accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</td>
   </tr>
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a></td>
+    <td>utilize ImageMagick from the command-line.</td>
+  </tr>
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a></td>
     <td>overlap one image over another.</td>
   </tr>
