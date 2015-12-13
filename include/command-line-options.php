@@ -1795,6 +1795,21 @@ available:</p>
   </tr>
 
   <tr>
+    <td>connected-components:area-threshold=<var>value</var></td>
+    <td>Merges any region with area smaller than <var>value</var> into its surrounding region or largest neighbor.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:mean-color=<var>true</var></td>
+    <td>Changes the output image from id values to mean color values.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:verbose=<var>true</var></td>
+    <td>Lists id, bounding box, centroid, area, mean color for each region.</td>
+  </tr>
+
+  <tr>
     <td>convolve:scale=<var>{kernel_scale}[!^] [,{origin_addition}] [%]</var></td>
      <td>Defines the kernel scaling. The special flag ! automatically scales to 
     full dynamic range. The ! flag can be used in combination with a factor or 
