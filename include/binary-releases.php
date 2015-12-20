@@ -18,6 +18,15 @@
   </tr>
 
   <tr>
+  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
+  ?>
+    <td><?php echo $filename; ?></td>
+      <td><a href= "http://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
+    <td>Redhat / CentOS 7.1 x86_64 RPM</td>
+  </tr>
+
+  <tr>
   <?php
   // The filename gets used three times, so let php do it.
     $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".i386.rpm";
@@ -26,15 +35,6 @@
     <td><a href= "http://www.imagemagick.org/download/linux/CentOS/i386/<?php echo $filename; ?>">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/i386/<?php echo $filename; ?>">download</a></td>
     <td>Redhat / CentOS 5.11 i386 RPM</td>
-  </tr>
-
-  <tr>
-  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
-  ?>
-    <td><?php echo $filename; ?></td>
-      <td><a href= "http://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
-    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
-    <td>Redhat / CentOS 7.1 x86_64 RPM</td>
   </tr>
 
   <tr>
