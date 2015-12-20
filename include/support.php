@@ -62,7 +62,7 @@
 </ul>
 <h3>Check</h3>
 <p>Check, in USD funds, made payable to
-  <a href="http://www.imagemagick.org/">ImageMagick Studio LLC</a>, and sent to:</p>
+  <a href="http://www.imagemagick.org/">ImageMagick Studio LLC</a>, and send to:</p>
 <ul>
 <pre>
 ImageMagick Studio LLC
