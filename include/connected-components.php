@@ -42,5 +42,5 @@ Objects (id: bounding-box centroid area mean-color):
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)
 </pre>
 <p>By default, the labeled image is grayscale.  You can instead replace the object color in the labeled image with the mean-color from the source image. Simply add this setting, <code>-define connected-components:mean-color=true</code>, to your command line.</p>
-<p>Finally, you may want to remove certain objects by making them transparent.  Use <code>-define connected-components:remove=<em>list-of-ids</em></code> (e.g. -define connected-components:remove=2,4-5)</p>
+<p>You may want to remove certain objects by making them transparent.  Use <code>-define connected-components:remove=<em>list-of-ids</em></code> (e.g. -define connected-components:remove=2,4-5).  Or use <code>-define connected-components:keep=<em>list-of-ids</em></code> to keep these objects and make all others transparent.</p>
 </div>
