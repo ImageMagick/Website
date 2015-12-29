@@ -15,7 +15,7 @@ convert objects.gif -connected-components 4 -auto-level -depth 8 objects.png
 <pre>
 convert objects.gif -verbose -connected-components 4 objects.png
 </pre>
-<p>Use <code>-define connected-components:verbose=true</code> for verbose output in ImageMagick releases prior to 6.3.0.</p>
+<p>Use <code>-define connected-components:verbose=true</code> for verbose output in ImageMagick releases prior to version 6.3.0.</p>
 <p>Five objects were detected in the source image with these statistics:</p>
 <pre>
 Objects (id: bounding-box centroid area mean-color):
