@@ -1800,8 +1800,18 @@ available:</p>
   </tr>
 
   <tr>
+    <td>connected-components:keep=<var>list-of-ids</var></td>
+    <td>Command and/or hyphenated list of id values to keep in the output. Supported in Imagemagick 6.9.3-0.</td>
+  </tr>
+
+  <tr>
     <td>connected-components:mean-color=<var>true</var></td>
-    <td>Changes the output image from id values to mean color values.</td>
+    <td>Changes the output image from id values to mean color values. Supported in Imagemagick 6.9.2-8.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:remove=<var>list-of-ids</var></td>
+    <td>Command and/or hyphenated list of id values to remove from the output. Supported in Imagemagick 6.9.2-9.</td>
   </tr>
 
   <tr>
