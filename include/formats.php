@@ -1306,7 +1306,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
     <td>TILE</td>
     <td>R</td>
     <td>Tiled image</td>
-    <td>Create a tiled version of an image at by tiling a image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the tiled image size. The image is specified similar to
+    <td>Create a tiled version of an image at by tiling a image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the tiled image size. Tiles are composited on an image background and therefore is responsive to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose">-compose</a> option.  The image is specified similar to
     <code>TILE:image.miff</code>.</td>
   </tr>
 
