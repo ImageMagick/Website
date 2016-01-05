@@ -697,7 +697,7 @@ functionality.</p>
 <p class="magick-description">Set the border width.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="brightness-contrast"></a>-brightness-contrast <var>brightness</var><br />-brightness-contrast <var>brightness</var>{x<var>contrast</var>}{<var>%</var>}}</h3>
+  <h3 class="magick-header"><a id="brightness-contrast"></a>-brightness-contrast <var>brightness</var><br />-brightness-contrast <var>brightness</var>{x<var>contrast</var>}{<var>%</var>}</h3>
 </div>
 
 <p class="magick-description">Adjust the brightness and/or contrast of the image.</p>
@@ -1521,7 +1521,7 @@ convert rose: -contrast -contrast rose_c2.png
 </pre>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="contrast-stretch"></a>-contrast-stretch <var>black-point</var><br />-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}}</h3>
+  <h3 class="magick-header"><a id="contrast-stretch"></a>-contrast-stretch <var>black-point</var><br />-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h3>
 </div>
 
 <p class="magick-description">Increase the contrast in an image by <var>stretching</var> the range of intensity values.</p>
@@ -5355,7 +5355,7 @@ $_SESSION['RelativePath'] ?>/../script/architecture.php#cache
 ">Architecture</a> page.  </p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="linear-stretch"></a>-linear-stretch <var>black-point</var><br />-linear-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}}</h3>
+  <h3 class="magick-header"><a id="linear-stretch"></a>-linear-stretch <var>black-point</var><br />-linear-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h3>
 </div>
 
 <p class="magick-description">Linear with saturation stretch.</p>
@@ -5637,7 +5637,7 @@ name. </p>
 name. </p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="mean-shift"></a>-mean-shift <var>width</var>x<var>height</var>{<var>+distance</var>{%}}</h3>
+  <h3 class="magick-header"><a id="mean-shift"></a>-mean-shift <var>width</var>x<var>height</var>{<var>+distance</var>{%}</h3>
 </div>
 
 <p class="magick-description">image noise removal and color reduction/segmentation (e.g. -mean-shift 7x7+10%).</p>
