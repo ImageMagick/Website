@@ -247,15 +247,15 @@ channel data, to create an alpha channel, or to perform other operations on the 
     <dd>
        Copies the alpha channel values into all the color channels and turns
        'Off' the the image's transparency, so as to generate
-       a gray-scale mask of the image's shape. The alpha channel data is left
+       a grayscale mask of the image's shape. The alpha channel data is left
        intact just deactivated.  This is the inverse of 'Copy'.
        </dd>
 
     <dt>Copy</dt>
     <dd>
        Turns 'On' the alpha/matte channel, then copies the
-       gray-scale intensity of the image, into the alpha channel, converting
-       a gray-scale mask into a transparent shaped mask ready to be colored
+       grayscale intensity of the image, into the alpha channel, converting
+       a grayscale mask into a transparent shaped mask ready to be colored
        appropriately. The color channels are not modified.  </dd>
 
     <dt>Shape</dt>
@@ -914,7 +914,7 @@ href="#channel" >-channel</a> setting (including the equivalent of the
 default). These operators have yet to be made to understand the newer 'Sync'
 flag. </p>
 
-<p>For example <a href="#threshold">-threshold</a> will by default gray-scale
+<p>For example <a href="#threshold">-threshold</a> will by default grayscale
 the image before thresholding, if no <a href="#channel" >-channel</a> setting
 has been defined. This is not 'Sync flag controlled, yet. </p>
 
@@ -1080,9 +1080,9 @@ alpha/matte values of the original image. </p>
 <p>If either the image being modified, or the lookup image, contains no
 transparency (i.e. <a href="#alpha" >-alpha</a> is turned 'off') but the <a
 href="#channel">-channel</a> setting includes alpha replacement, then it is
-assumed that image represents a gray-scale gradient which is used for the
-replacement alpha values.  That is you can use a gray-scale CLUT image to
-adjust a existing images alpha channel, or you can color a gray-scale image
+assumed that image represents a grayscale gradient which is used for the
+replacement alpha values.  That is you can use a grayscale CLUT image to
+adjust a existing images alpha channel, or you can color a grayscale image
 using colors form CLUT containing the desired colors, including transparency.
 </p>
 
@@ -1435,7 +1435,7 @@ of the 'source' or 'overlay' image is controlled according to <a
 href="#gravity" >-gravity</a>, and <a href="#geometry" >-geometry</a>
 settings. </p>
 
-<p>If a third image is given this is treated as a gray-scale blending 'mask' image
+<p>If a third image is given this is treated as a grayscale blending 'mask' image
 relative to the first 'destination' image. This mask is blended with the
 source image.  However for the '<code>displace</code>' compose method, the
 mask is used to provide a separate Y-displacement image instead. </p>
@@ -1543,7 +1543,7 @@ prior to ImageMagick 6.4.7-0, <code>-contrast-stretch 2%x99%</code>).</p>
 bin to modify the image. As such some colors may be merged together when they
 originally fell into the same 'bin'. </p>
 
-<p>All the channels are normalized in concert by the came amount so as to
+<p>All the channels are normalized in concert by the same amount so as to
 preserve color integrity, when the default <a href="#channel" >+channel</a>
 setting is in use.  Specifying any other <a href="#channel" >-channel</a>
 setting will normalize the RGB channels independently.</p>
@@ -2455,7 +2455,7 @@ or CMYK, or to change the depth of any image after it has been read.</p>
 <p class="magick-description">obtain image by descending window hierarchy.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="deskew"></a>-deskew <var>threshold</var></h3>
+  <h3 class="magick-header"><a id="deskew"></a>-deskew <var>threshold{%}</var></h3>
 </div>
 
 <p class="magick-description">straighten an image.  A threshold of 40% works for most images.</p>
@@ -2477,7 +2477,7 @@ width of the image background (e.g 40).</p>
 <p class="magick-description">render text right-to-left or left-to-right.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="displace"></a>-displace <var>horizontal-scale</var><br />-displace <var>horizontal-scale</var>x<var>vertical-scale</var></h3>
+  <h3 class="magick-header"><a id="displace"></a>-displace <var>horizontal-scale</var>{%}{!}<br />-displace <var>horizontal-scale</var>x<var>vertical-scale</var>{%}{!}</h3>
 </div>
 
 <p class="magick-description">shift image pixels as defined by a displacement map.</p>
@@ -2976,7 +2976,7 @@ specify the size and the offset of the generated 'viewport' image of the
 distorted image space.</p>
 
 <p>Setting a "<code><a href="#define" >-define</a>
-distort:scale={scale_factor}</code>" will scale the output image (viewport or
+distort:scale=<var>scale_factor</var></code>" will scale the output image (viewport or
 otherwise) by that factor without changing the viewed contents of the
 distorted image. This can be used either for 'super-sampling' the image for
 a higher quality result, or for panning and zooming around the image (with
@@ -4500,8 +4500,8 @@ href="#channel" >-channel</a> setting effected, nor can it adjust or modify an
 images transparency or alpha/matte channel.</p>
 
 <p>See also <a href="#clut" >-clut</a> which provides color value replacement
-of the individual color channels, usually involving a simpler gray-scale
-image. E.g:  gray-scale to color replacement, or modification by a histogram
+of the individual color channels, usually involving a simpler grayscale
+image. E.g:  grayscale to color replacement, or modification by a histogram
 mapping. </p>
 
 
@@ -5232,7 +5232,7 @@ adjusted separately using the channel values of the colors specified. </p>
 <p>On the other hand the plus form of the operator (<code>+level-colors</code>)
 will map the image color 'black' and 'white' to the given colors
 respectively, resulting in a gradient (de-contrasting) tint of the image to
-those colors. This can also be used to convert a plain gray-scale image into a
+those colors. This can also be used to convert a plain grayscale image into a
 one using the gradient of colors specified. </p>
 
 <p>By supplying a single color with a comma separator either before or after
@@ -5896,7 +5896,7 @@ is equivalent to <a href="#contrast-stretch" >-contrast-stretch 2%x1%</a>.
 (Before this version, it was equivalent to <a href="#contrast-stretch"
 >-contrast-stretch 2%x99%</a>).</p>
 
-<p>All the channels are normalized in concert by the came amount so as to
+<p>All the channels are normalized in concert by the same amount so as to
 preserve color integrity, when the default <a href="#channel" >+channel</a>
 setting is in use.  Specifying any other <a href="#channel" >-channel</a>
 setting will normalize the RGB channels independently.</p>
@@ -6760,7 +6760,7 @@ contrast. The threshold may be expressed as a fraction of <var>QuantumRange</var
 <p class="magick-description">separate an image channel into a grayscale image.  Specify the channel with <a href="#channel">-channel</a>.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="sepia-tone"></a>-sepia-tone <var>threshold</var></h3>
+  <h3 class="magick-header"><a id="sepia-tone"></a>-sepia-tone <var>percent-threshold</var></h3>
 </div>
 
 <p class="magick-description">simulate a sepia-toned photo.</p>
@@ -7072,7 +7072,7 @@ direction people would consider the object is coming from.  </p>
 <p>Use this option to grab more than one image from the X server screen, to create an animation sequence.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="solarize"></a>-solarize <var>threshold</var></h3>
+  <h3 class="magick-header"><a id="solarize"></a>-solarize <var>percent-threshold</var></h3>
 </div>
 
 <p class="magick-description">negate all pixels above the threshold level.</p>
