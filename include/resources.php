@@ -115,8 +115,8 @@ $MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick/
-&lt;<var>client path</var>&gt;/etc/ImageMagick/
+$HOME/.config/ImageMagick
+&lt;<var>client path</var>&gt;/etc/ImageMagick
 </pre>
 
 <p>The environmental variable $PREFIX is the default install path (e.g. <code>/usr/local</code>). The <var>client path</var> is the execution path of your ImageMagick client (e.g. <code>/usr/local</code>) .</p>
@@ -125,12 +125,12 @@ $HOME/.config/ImageMagick/
 
 <pre>
 $MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?> 
-$PREFIX/share/ImageMagick-<?php echo(MagickLibVersionText); ?> 
+$MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
+$PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick/
-&lt;<var>client path</var>&gt;/etc/ImageMagick/
+&lt;<var>client path</var>&gt;/etc/ImageMagick
 &lt;<var>current directory</var>&gt;
 </pre>
 
@@ -140,7 +140,7 @@ $HOME/.config/ImageMagick/
 $MAGICK_CONFIGURE_PATH
 &lt;<var>windows registry</var>&gt;
 $PREFIX/config
-$USERPROFILE/.config/ImageMagick/
+$USERPROFILE/.config/ImageMagick
 &lt;<var>client path</var>&gt;
 </pre>
 
@@ -151,7 +151,7 @@ $USERPROFILE/.config/ImageMagick/
 <pre>
 $MAGICK_CONFIGURE_PATH
 $MAGICK_HOME
-$USERPROFILE/.config/ImageMagick/
+$USERPROFILE/.config/ImageMagick
 <var>client path</var>
 &lt;<var>current directory</var>&gt;
 </pre>
@@ -164,24 +164,24 @@ $USERPROFILE/.config/ImageMagick/
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
 <pre>
-$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders/
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders/
+$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
+&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick/
+$HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 </pre>
 
 <h4>Filters</h4>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
 <pre>
-$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters/
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters/
+$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
+&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick/
+$HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 </pre>
 
@@ -191,11 +191,11 @@ $HOME/.config/ImageMagick/
 
 <pre>
 $MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick/
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/
+$MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
 $XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick/
-&lt;<var>client path</var>&gt;/etc/ImageMagick/
+$HOME/.config/ImageMagick
+&lt;<var>client path</var>&gt;/etc/ImageMagick
 $MAGICK_FONT_PATH
 </pre>
 
