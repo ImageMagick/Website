@@ -125,7 +125,7 @@ $HOME/.config/ImageMagick
 
 <pre>
 $MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
+$MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
