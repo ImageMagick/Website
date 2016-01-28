@@ -5,7 +5,7 @@
 
 <h2 class="magick-header"><a id="overview"></a>Architecture Overview</h2>
 
-<p>An image typically consists of a rectangular region of pixels and metadata.  To convert, edit, or compose an image in an efficient manner we need convenient access to any pixel anywhere within the region (and sometimes outside the region).  And in the case of an image sequence, we need access to any pixel of any region of any image in the sequence.  However, there are hundreds of image formats such JPEG, TIFF, PNG, GIF, etc., that makes it difficult to access pixels on demand.  Within these formats we find differences in:</p>
+<p>An image typically consists of a rectangular region of pixels and metadata.  To convert, edit, or compose an image in an efficient manner, we need convenient access to any pixel anywhere within the region (and sometimes outside the region).  And in the case of an image sequence, we need access to any pixel of any region of any image in the sequence.  However, there are hundreds of image formats such JPEG, TIFF, PNG, GIF, etc., that makes it difficult to access pixels on demand.  Within these formats we find differences in:</p>
 
 <ul>
   <li>colorspace (e.g sRGB, linear RGB, linear GRAY, CMYK, YUV, Lab, etc.)</li>
