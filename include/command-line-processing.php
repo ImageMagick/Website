@@ -480,7 +480,7 @@ convert logo: -resize '100x200&lt;' wiz4.png
 <p>Finally, use <code>@</code> to specify the maximum area in pixels of an image, again while attempting to preserve aspect ratio. (Pixels take only integer values, so some approximation is always at work.) In the following example, an area of 10000 pixels is requested. The resulting file has dimensions 115x86, which has 9890 pixels. </p>
 
 <pre>
-convert logo: -resize '@10000' wiz10000.png
+convert logo: -resize '10000@' wiz10000.png
 </pre>
 
 <p class="bg-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <code>&lt;</code> or <code>&gt;</code> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <code>^</code>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
