@@ -5253,8 +5253,7 @@ color (+ form). </p>
 
 <p class="magick-description">Set the pixel cache resource limit.</p>
 
-<p>Choose from: <code>area</code>, <code>disk</code>, <code>file</code>,
-<code>map</code>, <code>memory</code>, <code>thread</code>, or <code>time</code>.</p>
+<p>Choose from: <code>width</code>, <code>height</code>, <code>area</code>, <code>memory</code>, <code>map</code>, <code>disk</code>, <code>file</code>, <code>thread</code>,  <code>throttle</code>, or <code>time</code>.</p>
 
 <p>The value for <code>file</code> is in number of files. The other limits are
 in bytes. Define arguments for the memory, map, area, and disk resource limits
