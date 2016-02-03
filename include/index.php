@@ -12,7 +12,7 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
 
 <p>The current release is ImageMagick <a href="http://www.imagemagick.org/script/binary-releases.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="http://www.imagemagick.org/script/binary-releases.php#unix">Linux</a>, <a href="http://www.imagemagick.org/script/binary-releases.php#windows">Windows</a>, <a href="http://www.imagemagick.org/script/binary-releases.php#macosx">Mac Os X</a>, <a href="http://www.imagemagick.org/script/binary-releases.php#iOS">iOS</a>, Android OS, and others.</p>
 
-<p>The authoritative ImageMagick web site is <a href="http://www.imagemagick.org/">http://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
+<p>The authoritative ImageMagick web site is <a href="http://www.imagemagick.org/">http://www.imagemagick.org</a>. The authoritative source code repository is <a href="https://git.imagemagick.org/repos/ImageMagick">https://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
 
 <h2 class="magick-header"><a id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
