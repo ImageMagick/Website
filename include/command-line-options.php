@@ -2357,6 +2357,16 @@ available:</p>
     <td>Sets the tile size for pyramid tiffs. Requires the suffix
         PTIF: before the outputname</td>
   </tr>
+
+  <tr>
+    <td>type:features=<var>string</var></td>
+    <td>&nbsp</td>
+  </tr>
+
+  <tr>
+    <td>type:hinting=<var>off</var></td>
+    <td>&nbsp</td>
+  </tr>
 </table>
 
 <p>For example, to create a postscript file that will render only the black
