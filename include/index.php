@@ -31,6 +31,10 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
     <td>utilize ImageMagick from the command-line.</td>
   </tr>
   <tr>
+    <td><a href="https://en.wikipedia.org/wiki/Complex_text_layout">Complex text layout</a></td>
+    <td>bidirectional text support and shaping.</td>
+  </tr>
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a></td>
     <td>overlap one image over another.</td>
   </tr>
