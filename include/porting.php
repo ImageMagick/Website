@@ -537,7 +537,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>
 <h4>High Dynamic Range Imaging</h4>
 <ul>
-<li>ImageMagick version 7 enables HDRI by default.  Expect more accurate image processing results with higher memory requirement and possible slower processing times.</li>
+<li>ImageMagick version 7 enables HDRI by default.  Expect more accurate image processing results with higher memory requirements and possible slower processing times.  You can disable this feature for resource constrained system such as a cell phone with a slight loss of accuracy for certain algorithms (e.g. resizing).</li>
 </ul>
 <h4>Pixels</h4>
 <ul>
