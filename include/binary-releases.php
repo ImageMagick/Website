@@ -45,10 +45,10 @@
   </tr>
 
   <tr>
-    <td>ImageMagick-sparc-sun-solaris2.10.tar.gz</td>
-    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-sparc-sun-solaris2.10.tar.gz">download</a></td>
-    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-sparc-sun-solaris2.10.tar.gz">download</a></td>
-    <td>Solaris Sparc 2.10</td>
+    <td>ImageMagick-i386-pc-solaris2.11.tar.gz</td>
+    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">download</a></td>
+    <td>Solaris Sparc 2.11</td>
   </tr>
 
   <tr>
