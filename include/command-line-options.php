@@ -46,7 +46,7 @@
 "transparent-color", "transpose", "transverse", "treedepth", "trim", "type",
 "undercolor", "unique-colors", "units", "unsharp", "update", "verbose",
 "version", "view", "vignette", "virtual-pixel", "visual", "watermark",
-"wave", "weight", "white-point", "white-threshold", "window", "window-group",
+"wave", "wavelet-denois", "weight", "white-point", "white-threshold", "window", "window-group",
 "write"); ?> </p>
 
 <p class="lead magick-description">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
@@ -7845,6 +7845,12 @@ percentage, which defaults to 100 percent (no color change). </p>
 </div>
 
 <p class="magick-description">Shear the columns of an image into a sine wave.</p>
+
+<div style="margin: auto;">
+  <h3 class="magick-header"><a id="wavelet-denoise"></a>-wavelet-denoise <var>threshold</var>{<var>%</var>}</h3>
+</div>
+
+<p class="magick-description">removes noise from the image using a wavelet transform.</p>
 
 <p>Specify <var>amplitude</var> and <var>wavelength</var>
 of the wave.</p>

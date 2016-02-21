@@ -403,7 +403,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>BlackThreshold</td>
-    <td>threshold=&gt;<i>string</i>, , channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
     <td>force all pixels below the threshold intensity into black</td>
   </tr>
 
@@ -1162,6 +1162,12 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
     <td>Wave</td>
     <td>geometry=&gt;<i>geometry</i>, amplitude=&gt;<i>double</i>, wavelength=&gt;<i>double</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, mesh, nearest-neighbor, spline}</td>
     <td>alter an image along a sine wave</td>
+  </tr>
+
+  <tr>
+    <td>WaveDenoise</td>
+    <td>threshold=&gt;<i>string</i></td>
+    <td>removes noise from the image using a wavelet transform</td>
   </tr>
 
   <tr>

@@ -1213,6 +1213,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#wavelet">-wavelet-denoise <var>threshold</var></a></td>
+    <td>removes noise from the image using a wavelet transform</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#weight">-weight <var>type</var></a></td>
     <td>render text with this font weight</td>
   </tr>
