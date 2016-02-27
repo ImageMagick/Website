@@ -1166,7 +1166,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>WaveDenoise</td>
-    <td>threshold=&gt;<i>string</i></td>
+    <td>geometry=&gt;<i>geometry</i>, threshold=&gt;<i>double</i>, threshold=&gt;<i>double</i></td>
     <td>removes noise from the image using a wavelet transform</td>
   </tr>
 

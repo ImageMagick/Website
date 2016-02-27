@@ -7847,10 +7847,10 @@ percentage, which defaults to 100 percent (no color change). </p>
 <p class="magick-description">Shear the columns of an image into a sine wave.</p>
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="wavelet-denoise"></a>-wavelet-denoise <var>threshold</var>{<var>%</var>}</h3>
+  <h3 class="magick-header"><a id="wavelet-denoise"></a>-wavelet-denoise <var>threshold</var><br />-wavelet-denoise <var>threshold</var>x<var>softness</var></h3>
 </div>
 
-<p class="magick-description">removes noise from the image using a wavelet transform.</p>
+<p class="magick-description">removes noise from the image using a wavelet transform (e.g. -wavelet-denoise 0.2x0.1).</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="weight"></a>-weight <var>fontWeight</var></h3>
