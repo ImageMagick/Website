@@ -36,7 +36,7 @@
 
 <h2 class="magick-header"><a id="install"></a>Install ImageMagick</h2>
 
-  <p>You can install ImageMagick from source. However, if don't have a proper development environment or if you're anxious to get started, download a ready-to-run Unix or Windows executable.</p>
+  <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Unix or Windows executable.</p>
 <dl class="magick-list-unstyled">
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php">Install from a binary distribution</a>: install a ready-to-run Unix or Windows executable.</li>
