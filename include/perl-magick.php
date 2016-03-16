@@ -597,7 +597,7 @@ ay connectivity.</td>
 
   <tr>
     <td>Distort</td>
-    <td>points=&gt;<i>array of float values</i>, method=&gt;{Affine, AffineProjection, Bilinear, Perspective, Resize, ScaleRotateTranslate}, 'virtual-pixel'=&gt;{Background Black Constant Dither Edge Gray Mirror Random Tile Transparent White}, 'best-fit'=&gt;{True, False}</td>
+    <td>points=&gt;<i>array of float values</i>, method=&gt;{Affine, AffineProjection, ScaleRotateTranslate, SRT, Perspective, PerspectiveProjection, BilinearForward, BilinearReverse, Polynomial, Arc, Polar, DePolar, Barrel, BarrelInverse, Shepards, Resize}, 'virtual-pixel'=&gt;{Background Black Constant Dither Edge Gray Mirror Random Tile Transparent White}, 'best-fit'=&gt;{True, False}</td>
     <td>distort image</td>
   </tr>
 
