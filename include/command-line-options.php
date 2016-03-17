@@ -7025,9 +7025,12 @@ effects) of a true threshold, but with tapered gray-levels around the threshold
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="silent"></a>-silent</h3>
+
+
 </div>
 
-<p class="magick-description">operate silently.</p>
+<p class="magick-description">operate silently. This option is only used
+by the <?php cmd("import"); ?> tool.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="similarity-threshold"></a>-similarity-threshold <var>value</var></h3>
