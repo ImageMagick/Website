@@ -262,7 +262,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win64 dynamic at 16 bits-per-pixel</td>
+    <td>Win64 dynamic at 16 bits-per-pixel component</td>
   </tr>
 </table></div>
 
@@ -284,7 +284,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-   <td>Win64 static at 16 bits-per-pixel</td>
+   <td>Win64 static at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -293,7 +293,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-   <td>Win64 dynamic at 8 bits-per-pixel</td>
+   <td>Win64 dynamic at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -302,7 +302,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win64 static at 8 bits-per-pixel</td>
+    <td>Win64 static at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -311,7 +311,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win64 dynamic at 16 bits-per-pixel with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -320,7 +320,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win64 static at 16 bits-per-pixel with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -329,7 +329,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 dynamic at 16 bits-per-pixel</td>
+    <td>Win32 dynamic at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -338,7 +338,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 static at 16 bits-per-pixel</td>
+    <td>Win32 static at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -347,7 +347,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 dynamic at 8 bits-per-pixel</td>
+    <td>Win32 dynamic at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -356,7 +356,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 static at 8 bits-per-pixel</td>
+    <td>Win32 static at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
@@ -365,7 +365,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 dynamic at 16 bits-per-pixel with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -374,7 +374,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Win32 static at 16 bits-per-pixel with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -383,7 +383,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Portable Win32 static at 16 bits-per-pixel.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
@@ -392,7 +392,7 @@ display logo.gif
       <td><?php echo $filename; ?></td>
         <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
-    <td>Portable Win64 static at 16 bits-per-pixel.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 </table></div>
 
