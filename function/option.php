@@ -5,12 +5,12 @@ function bull()
 	echo(" • ");
 }
 
-function option($opt, $sign="&#x2011;")  // note the non-breaking hyphen
+function option($opt, $sign="-")
 {
-	$odisp = str_replace(array("-", "[", "]"), array("&#x2011;", "[", "]"), $opt);
+	$odisp = str_replace(array("-", "[", "]"), array("-", "[", "]"), $opt);
 	$oref = str_replace(array("[", "]"), "_", $opt);
 	$href = $_SESSION['RelativePath'];
-	printf("<a href=\"%s/../script/command-line-options.php#%s\">%s%s</a>",
+	printf("<a class=\"text-nowrap\" href=\"%s/../script/command-line-options.php#%s\">%s%s</a>",
 	$href, $oref,$sign,$odisp);
 }
 
