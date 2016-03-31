@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#setting">Image Setting</a> • <a href="#operator">Image Operator</a> • <a href="#sequence">Image Sequence Operator</a> • <a href="#geometry">Image Geometry</a> •  <a href="#stack">Image Stack</a> • <a href="#output">Output Filename</a></p>
+<p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#option">Command-line Options</a> • <a href="#output">Output Filename</a></p>
 
 <p class="lead magick-description">The ImageMagick command-line can be as simple as this:</p>
 
@@ -300,7 +300,19 @@ image-5.jpg
 convert logo: gif:- | display -define stream:buffer-size=0 gif:-
 </pre>
 
-<h2 class="magick-header"><a id="setting"></a>Image Setting</h2>
+<h2 class="magick-header"><a id="option"></a>Command-line Options</h2>
+
+<p>You can direct the behavior of ImageMagick utilities with these command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a>.  The behavior of an option falls into one of these categories:</p>
+
+<ul>
+<li><a href="#setting">Image Setting</a></li>
+<li><a href="#operator">Image Operator</a></li>
+<li><a href="#sequence">Image Sequence Operator</a></li>
+<li><a href="#geometry">Image Geometry</a></li>
+<li><a href="#stack">Image Stack</a></li>
+</ul>
+
+<h3 class="magick-header"><a id="setting"></a>Image Setting</h3>
 
 <p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
@@ -308,7 +320,7 @@ writing an image as appropriate.  An image setting stays in effect until it
 is reset or the command-line terminates.  The image settings include:</p>
 
 <ul>
-<?php options("adjoin", "affine", "alpha", "antialias", "authenticate", "background", "bias", "black-point-compensation", "blue-primary", "bordercolor", "caption", "channel", "comment", "compress", "debug", "define", "delay", "density", "depth", "direction", "display", "dispose", "dither", "encoding", "endian", "extract", "family", "fill", "filter", "font", "format", "fuzz", "geometry", "gravity", "green-primary", "interlace", "intent", "interpolate", "label", "limit", "linewidth", "log", "loop", "mask", "mattecolor", "monitor", "orient", "page", "pointsize", "preview", "quality", "quiet", "red-primary", "region", "render", "repage", "sampling-factor", "scene", "seed", "size", "stretch", "stroke",  "strokewidth", "style", "texture", "tile", "transparent-color", "treedepth", "type", "undercolor", "units", "verbose", "virtual-pixel", "weight");
+<?php options("adjoin", "affine", "alpha", "alpha-color", "antialias", "authenticate", "background", "bias", "black-point-compensation", "blue-primary", "bordercolor", "caption", "channel", "comment", "compress", "debug", "define", "delay", "density", "depth", "direction", "display", "dispose", "dither", "encoding", "endian", "extract", "family", "fill", "filter", "font", "format", "fuzz", "geometry", "gravity", "green-primary", "interlace", "intent", "interpolate", "label", "limit", "linewidth", "log", "loop", "mask", "mattecolor", "monitor", "orient", "page", "pointsize", "preview", "quality", "quiet", "red-primary", "region", "render", "repage", "sampling-factor", "scene", "seed", "size", "stretch", "stroke",  "strokewidth", "style", "texture", "tile", "transparent-color", "treedepth", "type", "undercolor", "units", "verbose", "virtual-pixel", "weight");
 ?>
 </ul>
 
@@ -319,7 +331,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 convert -channel RGB wand.png wizard.png images.png
 </pre>
 
-<h2 class="magick-header"><a id="operator"></a>Image Operator</h2>
+<h3 class="magick-header"><a id="operator"></a>Image Operator</h3>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
@@ -341,7 +353,7 @@ include:</p>
 convert wand.png -negate wizard.png images.png
 </pre>
 
-<h2 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h2>
+<h3 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h3>
 
 <p>An image sequence operator differs from a setting in that it affects an
 image sequence immediately as it appears on the command-line.  Choose from
@@ -352,7 +364,7 @@ these image sequence operators:</p>
 ?>
 </ul>
 
-<h2 class="magick-header"><a id="geometry"></a>Image Geometry</h2>
+<h3 class="magick-header"><a id="geometry"></a>Image Geometry</h3>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
@@ -507,7 +519,7 @@ convert logo: -gravity center -region '100x200-10+20' \
 </p>
 
 
-<h2 class="magick-header"><a id="stack"></a>Image Stack</h2>
+<h3 class="magick-header"><a id="stack"></a>Image Stack</h3>
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
