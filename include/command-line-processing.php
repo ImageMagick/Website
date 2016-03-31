@@ -7,7 +7,7 @@
 convert image.jpg image.png
 </pre>
 
-<p>Or it can be complex with a plethora of <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a>, as in the following:</p>
+<p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
 <pre>
 convert label.gif +matte \
