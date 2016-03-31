@@ -1,6 +1,6 @@
 <div class="magick-header">
 <p class="text-center"><?php options("adaptive-blur", "adaptive-resize", "adaptive-sharpen",
-"adjoin", "affine", "alpha", "annotate", "antialias", "append",
+"adjoin", "affine", "alpha", "alpha-color", "annotate", "antialias", "append",
 "attenuate", "authenticate", "auto-gamma", "auto-level",
 "auto-orient", "backdrop", "background", "bench", "bias",
 "black-point-compensation", "black-threshold", "blend", "blue-primary",
@@ -283,6 +283,19 @@ channel data, to create an alpha channel, or to perform other operations on the 
 same as "<code><a href="#alpha" >-alpha</a> Off</code>", the <code>
 >-matte</code> operation was the same as "<code><a href="#alpha" >-alpha</a>
 Set</code>" and not "<code><a href="#alpha" >-alpha</a> On</code>".  </p>
+
+<div style="margin: auto;">
+  <h3 class="magick-header"><a id="alpha-color"></a>-alpha-color <var>color</var></h3>
+</div>
+
+<p class="magick-description">Specify the color to be used with the <a href="#frame">-frame</a> option.</p>
+
+<p>The color is specified using the format described under the <a href="#fill">-fill</a> option.</p>
+
+<p>The default matte color is <code>#BDBDBD</code>, <span
+style="background-color: #bdbdbd;">this shade of gray</span>.</p>
+
+<p>This is an IMv7 option, use <a href="#mattecolor">mattecolor</a> with IMv6.</p>
 
 
 <div style="margin: auto;">
@@ -2718,7 +2731,7 @@ and meaning of the floating point values depends on the distortion <var>method</
        in each case.  <br/>
 
        Note that 'BilinearForward' can generate invalid pixels
-       which will be colored using the <a href="#mattecolor" >-mattecolor</a>
+       which will be colored using the <a href="#alpha-color" >-alpha-color</a>
        color setting.  Also if the quadrilateral becomes 'flipped' the image
        may disappear. <br/>
 
@@ -2742,7 +2755,7 @@ and meaning of the floating point values depends on the distortion <var>method</
        Perspective Distorted images ensures that straight lines remain
        straight, but the scale of the distorted image will vary. The horizon
        is anti-aliased, and the 'sky' color may be set using the
-       <a href="#mattecolor" >-mattecolor</a> setting. </td>
+       <a href="#alpha-color" >-alpha-color</a> setting. </td>
   </tr>
 
   <tr>
@@ -2966,7 +2979,7 @@ resampling, by specifying the special <a href="#filter" >-filter</a> setting of
 
 <p>If an image generates <i>invalid pixels</i>, such as the 'sky' in the last
 example, <a href="#distort" >-distort</a> will use the current <a
-href="#mattecolor" >-mattecolor</a> setting for these pixels. If you do not
+href="#alpha-color" >-alpha-color</a> setting for these pixels. If you do not
 what these pixels to be visible, set the color to match the rest of the
 ground. </p>
 
@@ -4066,8 +4079,8 @@ option.</p>
 
 <p class="magick-description">Surround the image with a border or beveled frame.</p>
 
-<p>The color of the border is specified with the <a href="#mattecolor"
->-mattecolor</a> command line option. </p>
+<p>The color of the border is specified with the <a href="#alpha-color"
+>-alpha-color</a> command line option. </p>
 
 <p><?php seeGeometry(); ?> The <var>size</var> portion of the <var>geometry</var> argument indicates the amount of extra width and
 height that is added to the dimensions of the image. If no offsets are given
@@ -4083,7 +4096,7 @@ href="#compose">-compose</a> setting and assumes that this is using the default
 '<code>Over</code>' composition method.  It generates an image of the appropriate
 size with the current <a href="#bordercolor">-bordercolor</a> setting, and then
 draws the frame of four distinct colors close to the current <a
-href="#mattecolor">-mattecolor</a>.  The original image is then overlaid onto
+href="#alpha-color">-alpha-color</a>.  The original image is then overlaid onto
 center of this image.  This means that with the default compose method of
 '<code>Over</code>' any transparent parts may be replaced by the current <a
 href="#bordercolor">-bordercolor</a> setting.</p>
@@ -5626,6 +5639,8 @@ but with strict boolean masking. </p>
 
 <p>The default matte color is <code>#BDBDBD</code>, <span
 style="background-color: #bdbdbd;">this shade of gray</span>.</p>
+
+<p>This is an IMv6 option, use <a href="#alpha-color">-alpha-color</a> with IMv7.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="maximum"></a>-maximum</h3>
