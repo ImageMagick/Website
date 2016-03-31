@@ -352,7 +352,8 @@ be applied to expand the one channel into separate RGB (or other) channels.
     on the users command "<code>PATH</code>".  This is required to get around
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
-
+<dt>animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
+<dd>To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.</p>
 </dl>
 
 <h3>Behavioral Changes</h3>
