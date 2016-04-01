@@ -93,7 +93,7 @@ convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-s
 
 <p>These extensions are explained in the next few paragraphs.</p>
 
-<h3>Filename Globbing</h3>
+<h4>Filename Globbing</h4>
 <p>In Unix shells, certain characters such as the asterisk (<code>*</code>) and question mark (<code>?</code>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <code>1.jpg</code>, <code>2.jpg</code>, <code>3.jpg</code>, <code>4.jpg</code>, and <code>5.jpg</code> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
 </p>
 
@@ -101,7 +101,7 @@ convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-s
 convert *.jpg images.gif
 </pre>
 
-<h3>Explicit Image Format</h3>
+<h4>Explicit Image Format</h4>
 <p>Images are stored in a myriad of image formats including
 the better known JPEG, PNG, TIFF and others.  ImageMagick must know the format
 of the image before it can be read and processed.  Most formats have a
@@ -122,7 +122,7 @@ so we explicitly set one:
 convert -size 640x480 -depth 8 rgb:image image.png
 </pre>
 
-<h3>Built-in Images and Patterns</h3>
+<h4>Built-in Images and Patterns</h4>
 
 <p>ImageMagick has a number of built-in <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-images">images</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
 </p>
@@ -131,7 +131,7 @@ convert -size 640x480 -depth 8 rgb:image image.png
 convert -size 640x480 pattern:checkerboard checkerboard.png
 </pre>
 
-<h3>STDIN, STDOUT, and file descriptors</h3>
+<h4>STDIN, STDOUT, and file descriptors</h4>
 <p>Unix and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <code>-</code>.  In this example we pipe the output of
   <?php cmd("convert"); ?> to the <?php cmd("display"); ?> program:
 </p>
@@ -162,7 +162,7 @@ convert fd:3 fd:4 -append fd:5
 convert gif:fd:3 jpg:fd:4 -append tif:fd:5
 </pre>
 
-<h3>Selecting Frames</h3>
+<h4>Selecting Frames</h4>
 <p>Some images formats contain more than one image frame.  Perhaps you only want the first image, or the last, or some number of images in-between.  You can specify which image frames to read by appending the image filename with the frame range enclosed in brackets.  Here our image (an animated GIF) contains more than one frame but we only want the first:
 </p>
 
@@ -191,7 +191,7 @@ convert 'images.gif[3,2,4]' images.mng
 <p>Notice that in the last two commands, a single image is written. The output in this case, where the image type is MNG, is a multi-frame file because the MNG format supports multiple frames. Had the output format been JPG, which only supports single frames, the output would have consisted of separate frames. More about that below, in the section about the <a href="#output">Output Filename</a>.
 </p>
 
-<h3>Selecting an Image Region</h3>
+<h4>Selecting an Image Region</h4>
 <p>Raw images are a sequence of color intensities without additional meta information such as width, height, or image signature.  With raw image formats, you must specify the image width and height but you can also specify a region of the image to read.  In our example, the image is in the raw 8-bit RGB format and is 6000 pixels wide and 4000 pixels high.  However, we only want a region of 600 by 400 near the center of the image:
 </p>
 
@@ -209,7 +209,7 @@ convert -size 6000x4000 -depth 8 \
   -extract 600x400+1900+2900 rgb:image image.jpg
 </pre>
 
-<h3>Inline Image Resize</h3>
+<h4>Inline Image Resize</h4>
 <p>It is sometimes convenient to resize an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
@@ -226,7 +226,7 @@ is read:
 convert '*.jpg[120x120]' thumbnail%03d.png
 </pre>
 
-<h3>Inline Image Crop</h3>
+<h4>Inline Image Crop</h4>
 <p>It is sometimes convenient to crop an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
@@ -242,7 +242,7 @@ convert '*.jpg[120x120+10+5]' thumbnail%03d.png
 </pre>
 
 
-<h3>Filename References</h3>
+<h4>Filename References</h4>
 
 <p>There are two methods to use a filename to reference other image filenames.
 The first is with '<code>@</code>' which reads image filenames separated by white space from the specified file.  Assume the file <code>myimages.txt</code> consists of a list of filenames, like so:
@@ -293,7 +293,7 @@ image-4.jpg
 image-5.jpg
 </pre>
 
-<h3>Stream Buffering</h3>
+<h4>Stream Buffering</h4>
 <p>By default, the input stream is buffered.  To ensure information on the source file or terminal is read as soon as its available, set the buffer size to 0:</p>
 
 <pre>
@@ -312,7 +312,7 @@ convert logo: gif:- | display -define stream:buffer-size=0 gif:-
 <li><a href="#stack">Image Stack</a></li>
 </ul>
 
-<h3 class="magick-header"><a id="setting"></a>Image Setting</h3>
+<h4 class="magick-header"><a id="setting"></a>Image Setting</h4>
 
 <p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
@@ -331,7 +331,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 convert -channel RGB wand.png wizard.png images.png
 </pre>
 
-<h3 class="magick-header"><a id="operator"></a>Image Operator</h3>
+<h4 class="magick-header"><a id="operator"></a>Image Operator</h4>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
@@ -353,7 +353,7 @@ include:</p>
 convert wand.png -negate wizard.png images.png
 </pre>
 
-<h3 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h3>
+<h4 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h4>
 
 <p>An image sequence operator differs from a setting in that it affects an
 image sequence immediately as it appears on the command-line.  Choose from
@@ -364,7 +364,7 @@ these image sequence operators:</p>
 ?>
 </ul>
 
-<h3 class="magick-header"><a id="geometry"></a>Image Geometry</h3>
+<h4 class="magick-header"><a id="geometry"></a>Image Geometry</h4>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
@@ -449,7 +449,7 @@ setting for more specifics.</p>
 </table></div>
 
 
-<h3>Basic adjustments to width and height; the operators <code>%</code>, <code>^</code>, and <code>!</code> </h3>
+<h4>Basic adjustments to width and height; the operators <code>%</code>, <code>^</code>, and <code>!</code> </h4>
 <p>Here, just below, are a few simple examples of <var>geometry</var>, showing how it might be used as an argument to the <?php option("resize")?> option. We'll use the internal image <code>logo:</code> for our input image.
 <a href="<?php echo $_SESSION['RelativePath']?>/../images/logo.png">
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
@@ -472,7 +472,7 @@ convert logo: -resize '100x200!' dochThinWiz.png
 
 <p>We see that ImageMagick is very good about preserving aspect ratios of images, to prevent distortion of your favorite photos and images. But you might really want the dimensions to be <code>100x200</code>, thereby stretching the image. In this case just tell ImageMagick you really mean it (!) by appending an exclamation operator to the geometry. This will force the image size to exactly what you specify. So, for example, if you specify <code>100x200!</code> the dimensions will become exactly 100x200 (giving a small, vertically elongated wizard).</p>
 
-<h3>Bounding the width, height, and area; the operators <code>&gt;</code>, <code>&lt;</code>, and <code>@</code> </h3>
+<h4>Bounding the width, height, and area; the operators <code>&gt;</code>, <code>&lt;</code>, and <code>@</code> </h4>
 <p>
 Here are a few more examples:
 </p>
@@ -498,7 +498,7 @@ convert logo: -resize '10000@' wiz10000.png
 <p class="bg-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <code>&lt;</code> or <code>&gt;</code> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <code>^</code>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
 </p>
 
-<h3>Offsets in geometry</h3>
+<h4>Offsets in geometry</h4>
 <p>
 Here are some examples to illustrate the use of <var>offsets</var> in <var>geometry</var> arguments. One typical use of offsets is in conjunction with the
 <?php option("region")?> option. This option allows many other options to modify the pixels within a specified rectangular subregion of an image. As such, it needs to be given the width and height of that region, and also an <var>offset</var> into the image, which is a pair of coordinates that indicate the location of the region within the larger image. Below, in the first example, we specify a region of size <code>100x200</code> to be located at the <var>xy</var>–coordinates <var>x</var>=10, <var>y</var>=20. Let's use the usual algebraic notation (<var>x</var>,<var>y</var>)=(10,20), for convenience.
@@ -519,7 +519,7 @@ convert logo: -gravity center -region '100x200-10+20' \
 </p>
 
 
-<h3 class="magick-header"><a id="stack"></a>Image Stack</h3>
+<h4 class="magick-header"><a id="stack"></a>Image Stack</h4>
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
@@ -556,7 +556,7 @@ above.</p>
 
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
-<h3>Explicit Image Format</h3>
+<h4>Explicit Image Format</h4>
   <p>Images can be stored in a mryiad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <code>image.jpg</code> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <code>image</code> in the raw red, green, and blue intensity format:
   </p>
 
@@ -565,7 +565,7 @@ convert image.jpg rgb:image
 </pre>
 
 
-<h3>Standard Out</h3>
+<h4>Standard Out</h4>
   <p>Unix permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
@@ -575,7 +575,7 @@ convert logo: gif:- | display gif:-
 
 <p>Here the explicit format is optional.  The GIF image format has a signature that uniquely identifies it so ImageMagick can readily recognize the format as GIF.</p>
 
-<h3>Filename References</h3>
+<h4>Filename References</h4>
 <p>Optionally, use an embedded formatting character to write a sequential image list.  Suppose our output filename is <code>image-%d.jpg</code> and our image list includes 3 images.  You can expect these images files to be written:
 </p>
 
@@ -605,7 +605,7 @@ convert rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
   convert *.jpg +adjoin page-%d.pdf
 </pre>
 
-<h3>Stream Buffering</h3>
+<h4>Stream Buffering</h4>
 
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
 
