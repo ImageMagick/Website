@@ -7290,7 +7290,7 @@ href="#style">-style</a>, and <a href="#weight">-weight</a>. </p>
   <h3 class="magick-header"><a id="strip"></a>-strip</h3>
 </div>
 
-<p class="magick-description">strip the image of any profiles or comments.</p>
+<p class="magick-description">strip the image of any profiles, comments or these PNG chunks: bKGD,cHRM,EXIF,gAMA,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="stroke"></a>-stroke <var>color</var></h3>
