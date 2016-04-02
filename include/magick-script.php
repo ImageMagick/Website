@@ -1,57 +1,15 @@
 <div class="magick-header">
-<p class="lead magick-description">Use the <code>magick</code> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>convert</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <code>magick-script</code> scripting language to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>convert</code> command or see below for example usages of the command.</p>
 
-<p>We list a few examples of the <code>magick</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
+<p>Here is an example script:</p>
 
-<pre>
-magick rose.jpg rose.png
+<pre class="code">
+    #!/bin/env magick-script
+    -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </pre>
 
-<p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<pre>
-magick rose.jpg -resize 50% rose.png
-</pre>
-
-<ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" />
-  </a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.png">
-  <img style="margin-top:11px; margin-bottom:12px;" src="<?php echo $_SESSION['RelativePath']?>/../image/rose.png" width="35" height="23" alt="rose" />
-  </a>
-</ul>
-
-<p>You can combine multiple image-processing operations to produce complex results:</p>
-
-<pre>
-magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
-  -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
-  -draw "text 20,55 \'Magick\'" fuzzy-magick.png
-</pre>
-
-<ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png" width="320" height="85" alt="fuzzy-magick" /></a>
-</ul>
-
-<p>or here we resize an image with improved quality:</p>
-
-<pre>
-magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
-  -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
-  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
-</pre>
-
-<p>Utilize other command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> from the <code>magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</code> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
-
-<pre>
-ln -s magick convert
-convert rose.jpg rose.png
-magick convert rose.jpg rose.png
-</pre>
-
-<p>You can find additional examples of using <code>magick</code> in <a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>magick-script</code> in <a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2 class="magick-header"><a id="options"></a>Option Summary</h2>
 

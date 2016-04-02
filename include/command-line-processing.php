@@ -1,7 +1,7 @@
 <div class="magick-header">
 <p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#option">Command-line Options</a> • <a href="#output">Output Filename</a></p>
 
-<p class="lead magick-description">The ImageMagick command-line can be as simple as this:</p>
+<p class="lead magick-description">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
 
 <pre>
 convert image.jpg image.png
