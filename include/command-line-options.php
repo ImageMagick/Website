@@ -4412,7 +4412,7 @@ installation.</p>
 
 <p>The direction you choose specifies where to position text or subimages. For
 example, a gravity of <code>Center</code> forces the text to be centered within
-the image. By default, the image gravity is <code>NorthWest</code>. See <a
+the image. By default, the image gravity is <code>undefined</code>. See <a
 href="#draw">-draw</a> for more details about graphic primitives.  Only the
 text primitive of <a href="#draw">-draw</a> is affected by the <a
 href="#gravity">-gravity</a> option.</p>
