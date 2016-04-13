@@ -403,7 +403,7 @@ display logo.gif
 <pre>
 convert logo: logo.gif
 identify logo.gif
-imdisplay
+imdisplay logo.gif
 </pre>
 
 <p>If you have any problems, you likely need <code>vcomp120.dll</code>.  To install it, download <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ 2013 Redistributable Package</a>.</p>
