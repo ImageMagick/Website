@@ -2297,6 +2297,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>preserve-timestamp=<var>{True, False}</var></td>
+     <td>Preserve file timestamp (<code>mogrify</code> only).</td>
+  </tr>
+
+  <tr>
     <td>quantum:format=<var>type</var></td>
      <td>Set the type to <code>floating-point</code> to specify a floating-point
     format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
