@@ -14,6 +14,8 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
 
 <p>The authoritative ImageMagick web site is <a href="http://www.imagemagick.org/">http://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
 
+<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.</p>
+
 <h2 class="magick-header"><a id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
 <div class="table-responsive">
@@ -153,7 +155,7 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
 
 <h2 class="magick-header"><a id="news"></a>News</h2>
 
-<p>The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other.  With <a href="http://nextgen.imagemagick.org">ImageMagick version 7</a>, we aim to improve the design based on lessons learned from the version 6 implementation.  See the <a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">porting</a> guide to track the progress of the version 7 development effort.</p>
+<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.</p>
 
 <h2 class="magick-header"><a id="community"></a>Community</h2>
 <p>To join the ImageMagick community, try the <a href="http://www.imagemagick.org/discourse-server/">discourse server</a>.  You can review questions or comments (with informed responses) posed by ImageMagick users or ask your own questions. If you want to contribute image processing algorithms, other enhancements, or bug fixes, open an <a href="http://git.imagemagick.org/repos/ImageMagick/issues">issue</a>. </p>

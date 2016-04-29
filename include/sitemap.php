@@ -156,5 +156,7 @@
   <li><a href="http://www.imagemagick.org/Usage/masking/">Transparency</a>: render portions of an image invisible.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a>: convenient access to pixels outside the image region.</li>
 </dl>
+<h2 class="magick-header"><a id="legacy"></a>ImageMagick Legacy</h2>
+<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a></p>
 </div>
 
