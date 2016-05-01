@@ -1,6 +1,7 @@
 <div class="magick-header">
 <p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#stream">Streaming Pixels</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
 
+
 <p class="lead magick-description">The citizens of Oz were quite content with their benefactor, the all-powerful Wizard.  They accepted his wisdom and benevolence without ever questioning the who, why, and where of his power.  Like the citizens of Oz, if you feel comfortable that ImageMagick can help you convert, edit, or compose your images without knowing what goes on behind the curtain, feel free to skip this section.  However, if you want to know more about the software and algorithms behind ImageMagick, read on.  To fully benefit from this discussion, you should be comfortable with image nomenclature and be familiar with computer programming.</p>
 
 <h2 class="magick-header"><a id="overview"></a>Architecture Overview</h2>
@@ -254,9 +255,10 @@ Resource limits:
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="cache" name="shared-secret" value="replace with your secret phrase"/>
+  &lt;policy domain="path" rights="none" pattern="@*" />
 &lt;/policymap>
 </pre>
-<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.  Instead large images are cached to disk.  If the image is too large and exceeds the pixel cache disk limit, the program exits.  In addition, we place a time limit to prevent any run-away processing tasks.</p>
+<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.  Instead large images are cached to disk.  If the image is too large and exceeds the pixel cache disk limit, the program exits.  In addition, we place a time limit to prevent any run-away processing tasks.  Let's prevent possible exploits by removing the right to use indirect reads.</p>
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
