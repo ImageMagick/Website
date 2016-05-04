@@ -254,10 +254,15 @@ Resource limits:
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="cache" name="shared-secret" value="replace with your secret phrase"/>
+  &lt;policy domain="coder" rights="none" pattern="EPHEMERAL" />
+  &lt;policy domain="coder" rights="none" pattern="HTTPS" />
+  &lt;policy domain="coder" rights="none" pattern="MVG" />
+  &lt;policy domain="coder" rights="none" pattern="MSL" />
+  &lt;policy domain="coder" rights="none" pattern="TEXT" />
   &lt;policy domain="path" rights="none" pattern="@*" />
 &lt;/policymap>
 </pre>
-<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.  Instead large images are cached to disk.  If the image is too large and exceeds the pixel cache disk limit, the program exits.  In addition, we place a time limit to prevent any run-away processing tasks.  Let's prevent possible exploits by removing the right to use indirect reads.</p>
+<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.  Instead large images are cached to disk.  If the image is too large and exceeds the pixel cache disk limit, the program exits.  In addition, we place a time limit to prevent any run-away processing tasks.  Let's prevent possible exploits by removing the right to use certain image coders and indirect reads.</p>
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
