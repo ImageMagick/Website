@@ -155,7 +155,7 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
 
 <h2 class="magick-header"><a id="news"></a>News</h2>
 
-<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.</p>
+<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.</p>
 <p>ImageMagick best practices strongly encourages you to configure a <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=26801">policy</a> that suits your local environment.</p>
 
 <h2 class="magick-header"><a id="community"></a>Community</h2>
