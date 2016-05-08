@@ -155,7 +155,7 @@ ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;en
 
 <h2 class="magick-header"><a id="news"></a>News</h2>
 
-<p>ImageMagick best practices strongly encourages you to configure a <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=26801">policy</a> that suits your local environment.</p>
+<p>ImageMagick best practices <strong>strongly</strong> encourages you to configure a <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=26801">policy</a> that suits your local environment.</p>
 
 <h2 class="magick-header"><a id="community"></a>Community</h2>
 <p>To join the ImageMagick community, try the <a href="http://www.imagemagick.org/discourse-server/">discourse server</a>.  You can review questions or comments (with informed responses) posed by ImageMagick users or ask your own questions. If you want to contribute image processing algorithms, other enhancements, or bug fixes, open an <a href="http://git.imagemagick.org/repos/ImageMagick/issues">issue</a>. </p>
