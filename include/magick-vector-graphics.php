@@ -173,7 +173,7 @@ pop graphic-context
 <p>to render a pie chart with this command:</p>
 
 <pre>
-convert piechart.mvg piechart.png
+convert mvg:piechart.mvg piechart.png
 </pre>
 
 <p>which produces this rendering:</p>
@@ -185,7 +185,7 @@ convert piechart.mvg piechart.png
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
 <pre>
-convert piechart.svg piechart.jpg
+convert mvg:piechart.svg piechart.jpg
 </pre>
 
 
