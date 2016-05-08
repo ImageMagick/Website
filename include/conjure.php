@@ -8,7 +8,7 @@
 <p>We list a few examples of the <code>conjure</code> command here to illustrate its usefulness and ease of use. To get started, here is simple <code>conjure</code> command:</p>
 
 <pre>
-conjure -dimensions 400x400 incantation.msl
+conjure -dimensions 400x400 msl:incantation.msl
 </pre>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
