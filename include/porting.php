@@ -527,6 +527,8 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <h3>Removed / Replaced Options ("no such option" error and abort)</h3>
 
 <dl class="dl-horizontal">
+<dt>-interpolate filter</dt>
+<dd>remove slow and useless interpolation method</dd>
 <dt>-origin</dt>
 <dd>old option, unknown meaning.</dd>
 <dt>-pen</dt>
