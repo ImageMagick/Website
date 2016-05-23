@@ -192,7 +192,9 @@ $HOME/.config/ImageMagick
 <pre>
 $MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
+
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
+
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/etc/ImageMagick
