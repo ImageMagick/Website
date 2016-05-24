@@ -193,7 +193,7 @@ C:\ImageMagick\coders
 <p>To view any image in a Microsoft window, type</p>
 
 <pre>
-convert image.ext win:
+magick image.ext win:
 </pre>
 
 <p>Make sure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> is installed, otherwise, you will be unable to convert or view a Postscript document, and Postscript standard fonts will not be available.</p>

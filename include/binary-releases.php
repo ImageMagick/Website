@@ -105,7 +105,7 @@ export LD_LIBRARY_PATH
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
 <pre>
-convert logo: logo.gif
+magick logo: logo.gif
 identify logo.gif
 display logo.gif
 </pre>
@@ -174,7 +174,7 @@ export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
 <pre>
-convert logo: logo.gif
+magick logo: logo.gif
 identify logo.gif
 display logo.gif
 </pre>
@@ -401,9 +401,9 @@ display logo.gif
 <p>To verify ImageMagick is working properly, type the following in an Command Prompt window:</p>
 
 <pre>
-convert logo: logo.gif
-identify logo.gif
-imdisplay logo.gif
+magick logo: logo.gif
+magick identify logo.gif
+magick display logo.gif
 </pre>
 
 <p>If you have any problems, you likely need <code>vcomp120.dll</code>.  To install it, download <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ 2013 Redistributable Package</a>.</p>
@@ -411,12 +411,12 @@ imdisplay logo.gif
 <p>Note, use a double quote (<code>"</code>) rather than a single quote (<code>'</code>) for the ImageMagick command line under Windows:</p>
 
 <pre>
-convert "e:/myimages/image.png" "e:/myimages/image.jpg"
+magick "e:/myimages/image.png" "e:/myimages/image.jpg"
 </pre>
 <p>Use two double quotes for VBScript scripts:</p>
 <pre>
 Set objShell = wscript.createobject("wscript.shell")
-objShell.Exec("convert ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")
+objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")
 </pre>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="http://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
