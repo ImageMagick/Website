@@ -29,7 +29,7 @@
   <dd><a href="http://www.ioncannon.net/php/61/php-imagemagick-magickwand-examples/">PHP ImageMagick MagickWand Examples</a></dd>
   <dd><a href="https://rmagick.github.io/rvgtut.html">RVG - Ruby Vector Graphics</a></dd>
   <dd><a href="http://www.devshed.com/c/a/PHP/Security-Images-with-PHP-and-ImageMagick/">Security Images with PHP and ImageMagick</a></dd>
-  <dd><a href="http://www.rubblewebs.co.uk/imagemagick/imagemagick_index.php">Simple Uses of ImageMagick With PHP</a></dd>
+  <dd><a href="http://php.net/manual/en/imagick.examples-1.php">Basic Uses of ImageMagick With PHP</a></dd>
 </ul>
 
 <h2 class="magick-header"><a id="install"></a>Installation Tutorials</h2>
