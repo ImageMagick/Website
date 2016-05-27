@@ -89,7 +89,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
      &amp;&amp; (logical AND),  || (logical OR),
      ~ (logical NOT),  ?: (ternary conditional)</dd>
   <dt> math functions: </dt>
-     <dd> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
+     <dd> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
   <dt> channel functions: </dt>
     <dd> channel(r,g,b,a), channel(c,m,y,k,a)</dd>
   <dt> color names:</dt>
