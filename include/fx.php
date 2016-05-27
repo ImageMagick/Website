@@ -212,6 +212,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 <dt> <code>cosh(</code><var>x</var><code>)</code></dt><dd> hyperbolic cosine function</dd>
 <dt> <code>debug(</code><var>x</var><code>)</code></dt><dd> print <var>x</var> (useful for debugging your expression)</dd>
 <dt> <code>drc(</code><var>x</var>,<var>y</var><code>)</code></dt><dd> dynamic range compression (knee curve); drc(<var>x</var>,<var>y</var>)=(<var>x</var>)/(<var>y</var>*(<var>x</var>-1)+1); -1&lt;<var>y</var>&lt;1 </dd>
+<dt> <code>erf(</code><var>x</var><code>)</code></dt><dd> error function</dd>
 <dt> <code>exp(</code><var>x</var><code>)</code></dt><dd> natural exponential function (<var>e<sup>x</sup></var>)</dd>
 <dt> <code>floor(</code><var>x</var><code>)</code></dt><dd> largest integral value not greater than argument</dd>
 <dt> <code>gauss(</code><var>x</var><code>)</code></dt><dd> gaussian function; gauss(<var>x</var>)=exp(<var>-x*x/2</var>)/sqrt(2*pi)</dd>
