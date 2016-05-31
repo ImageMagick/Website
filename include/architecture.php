@@ -255,32 +255,29 @@ Resource limits:
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="cache" name="shared-secret" value="replace with your secret phrase" stealth="true"/>
   &lt;policy domain="delegate" rights="none" pattern="HTTPS" />
-  &lt;policy domain="coder" rights="none" pattern="MVG" />
-  &lt;policy domain="path" rights="none" pattern="@*" />
-  &lt;policy domain="path" rights="none" pattern="|*" />
 &lt;/policymap>
 </pre>
-<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-4 you can prevent the use of any delegate or all delegates (set the pattern to "*") or remove the right to use indirect reads or pipes. Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS").</p>
+<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8 you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS").</p>
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
 <pre>-> convert -debug cache logo: -sharpen 3x2 null:
-2013-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
   destroy 
-2013-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x4 4.688MiB)
-2013-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x3 3.516MiB)
-2013-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
+2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
   Memory => Memory
-2013-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
+2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
   Memory => Memory
-2013-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x3 3.516MiB)
-2013-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
-2013-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
 </pre>
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
