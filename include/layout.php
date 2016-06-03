@@ -25,11 +25,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4" />
   <?php echo $meta->metadata($title); ?>
+  <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4" />
   <link rel="icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png"/>
   <link rel="shortcut icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/>
-  <link rel="stylesheet" href="<?php echo $_SESSION['RelativePath']?>/../css/magick.php"/>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:900,400,400italic,700,700italic,300,300italic|Open+Sans:300italic,400italic,700italic,300,400,600,700"  >
+  <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['RelativePath']?>/../css/magick.php"/>
 </head>
 <?php flush(); ?>
 <body>
