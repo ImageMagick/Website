@@ -27,17 +27,6 @@
   </tr>
 
   <tr>
-  <?php
-  // The filename gets used three times, so let php do it.
-    $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".i386.rpm";
-  ?>
-    <td><?php echo $filename; ?></td>
-    <td><a href= "http://www.imagemagick.org/download/linux/CentOS/i386/<?php echo $filename; ?>">download</a></td>
-    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/i386/<?php echo $filename; ?>">download</a></td>
-    <td>Redhat / CentOS 5.11 i386 RPM</td>
-  </tr>
-
-  <tr>
     <td>ImageMagick RPM's</td>
     <td><a href="http://www.imagemagick.org/download/linux/CentOS">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS">download</a></td>
@@ -70,7 +59,7 @@
 
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
 
-<?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".i386.rpm"); ?>
+<?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
