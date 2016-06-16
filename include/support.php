@@ -10,7 +10,7 @@
   <dt><a href="http://www.networkredux.com"> <img class="clearfix" src="http://www.imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
   <dt><a href="http://www.amd.com"> <img class="clearfix" src="http://www.imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
   <dt><a href="http://www.transloadit.com"> <img class="clearfix" src="http://www.imagemagick.org/image/transloadit.png" width="205" height="52" alt="[TransloadIt]" /></a>   The world's most versatile file uploading and processing service</dt><br/>
-  <dt><a href="http://knovo.tech"> <img class="clearfix" src="http://www.imagemagick.org/image/knovotech.png" width="215" height="72" alt="[Knovotech]" /></a>     The world's most most advanced nutrition &amp; health database</dt><br/>
+   <dt><a href="http://nutrition.report"> <img class="clearfix" src="http://www.imagemagick.org/image/nutrition.png" width="299" height="59" alt="[Nutrition Report]" /></a>The world's most most advanced nutrition &amp; health database</dt><br/>
 </dl>
 
 <h2 class="magick-header"><a id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
