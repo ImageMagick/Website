@@ -69,6 +69,7 @@
     <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>
 </p>
     <p><a href="#">Back to top</a> •
