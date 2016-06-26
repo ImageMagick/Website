@@ -1818,7 +1818,7 @@ available:</p>
 
   <tr>
     <td>connected-components:keep=<var>list-of-ids</var></td>
-    <td>Command and/or hyphenated list of id values to keep in the output. Supported in Imagemagick 6.9.3-0.</td>
+    <td>Comma and/or hyphenated list of id values to keep in the output. Supported in Imagemagick 6.9.3-0.</td>
   </tr>
 
   <tr>
@@ -1828,7 +1828,7 @@ available:</p>
 
   <tr>
     <td>connected-components:remove=<var>list-of-ids</var></td>
-    <td>Command and/or hyphenated list of id values to remove from the output. Supported in Imagemagick 6.9.2-9.</td>
+    <td>Comma and/or hyphenated list of id values to remove from the output. Supported in Imagemagick 6.9.2-9.</td>
   </tr>
 
   <tr>
