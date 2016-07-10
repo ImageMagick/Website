@@ -6,8 +6,8 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
 
 <pre>
 convert -size 100x60 canvas:skyblue -fill white -stroke black \
-  -draw "path \'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z \'" \
-  arc.png');
+  -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
+  arc.png
 </pre>
 
 <p>and here is the result:</p>
