@@ -1778,6 +1778,11 @@ available:</p>
 
 <table class="table table-condensed table-striped">
   <tr>
+    <td>bmp:alpha=<var>true|false</var></td>
+    <td>include any alpha channel when writing in the BMP image format.</td>
+  </tr>
+
+  <tr>
     <td>bmp:format=<var>value</var></td>
     <td> valid values are <var>bmp2</var>, <var>bmp3</var>,
    and <var>bmp4</var>.  This option can be useful when the

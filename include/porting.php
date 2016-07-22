@@ -323,7 +323,7 @@ specific </p>
 <p>Most algorithms update the red, green, blue, black (for CMYK), and alpha
 channels.  Most operators will blend alpha the other color channels, but other
 operators (and situations) may require this blending to be disabled, and is
-currently done by removing alpha from teh active channels via
+currently done by removing alpha from the active channels via
 <code>-channel</code> option.  (e.g. <code>convert castle.gif -channel RGB
 -negate castle.png</code>). </p>
 
