@@ -461,7 +461,7 @@ convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
 <dd>prevent updates to image pixels specified by the mask</dd>
 
 <dt>-region</dt>
-<dd>not yet implemented in "<code>magick</code>". (very soon)</dd>
+<dd>supported in ImageMagick 7.0.2-6 and above</dd>
 
 <dt>-script {file}</dt>
 <dd>In "<code>magick</code>", stop the processing of command line arguments as

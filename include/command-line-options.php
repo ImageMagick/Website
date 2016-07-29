@@ -25,17 +25,17 @@
 "interpolate", "interline-spacing", "interword-spacing", "kerning", "kuwahara",
 "label", "lat", "layers", "level", "level-colors", "limit", "linear-stretch",
 "linewidth", "liquid-rescale", "list", "log", "loop", "lowlight-color",
-"magnify", "map", "map[stream]", "mask", "mattecolor", "median", "mean-shift",
+"magnify", "map", "map[stream]", "mattecolor", "median", "mean-shift",
 "metric", "mode", "modulate", "moments", "monitor", "monochrome", "morph",
 "morphology", "mosaic", "motion-blur", "name", "negate", "noise", "normalize",
 "opaque", "ordered-dither", "orient", "page", "paint", "path", "pause[animate]",
 "pause[import]", "perceptible", "ping", "pointsize", "polaroid", "poly",
 "posterize", "precision", "preview", "print", "process", "profile", "quality",
-"quantize", "quiet", "radial-blur", "raise", "random-threshold", "red-primary",
-"regard-warnings", "region", "remap", "remote", "render", "repage",
-"resample", "resize", "respect-parentheses", "reverse", "roll", "rotate",
-"sample", "sampling-factor", "scale", "scene", "screen", "seed", "segment",
-"selective-blur", "separate", "sepia-tone", "set", "shade", "shadow",
+"quantize", "quiet", "radial-blur", "raise", "random-threshold", "read-mask",
+"red-primary", "regard-warnings", "region", "remap", "remote", "render",
+"repage", "resample", "resize", "respect-parentheses", "reverse", "roll",
+"rotate", "sample", "sampling-factor", "scale", "scene", "screen", "seed",
+"segment", "selective-blur", "separate", "sepia-tone", "set", "shade", "shadow",
 "shared-memory", "sharpen", "shave", "shear", "sigmoidal-contrast", "silent",
 "similarity-threshold", "size", "sketch", "smush", "snaps", "solarize",
 "sparse-color", "splice", "spread", "statistic", "stegano", "stereo",
@@ -46,8 +46,7 @@
 "transparent-color", "transpose", "transverse", "treedepth", "trim", "type",
 "undercolor", "unique-colors", "units", "unsharp", "update", "verbose",
 "version", "view", "vignette", "virtual-pixel", "visual", "watermark",
-"wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group",
-"write"); ?> </p>
+"wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group", "write", "write-mask"); ?> </p>
 
 <p class="lead magick-description">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
 
@@ -5624,22 +5623,6 @@ bgr).  The components can repeat as well (e.g. rgbr).</p>
 
 
 <div style="margin: auto;">
-  <h3 class="magick-header"><a id="mask"></a>-mask
-<var>filename</var></h3>
-</div>
-
-<p class="magick-description">Prevent updates to image pixels specified by the mask.</p>
-
-<p>This the same as using a mask used for composite masking operations, with
-grayscale values causing blended updates of the image the mask is attached to.
-</p>
-
-<p>Use <a href="#mask">+mask</a> to remove the mask from images.</p>
-
-<p>Also see <a href="#clip-mask">-clip-mask</a> which work in the same way,
-but with strict boolean masking. </p>
-
-<div style="margin: auto;">
   <h3 class="magick-header"><a id="mattecolor"></a>-mattecolor <var>color</var></h3>
 </div>
 
@@ -6465,6 +6448,22 @@ href="#raise">-raise</a> does not alter the dimensions of the image.</p>
 </div>
 
 <p class="magick-description">Apply a random threshold to the image.</p>
+
+<div style="margin: auto;">
+  <h3 class="magick-header"><a id="read-mask"></a>-read-mask
+<var>filename</var></h3>
+</div>
+
+<p class="magick-description">Prevent updates to image pixels specified by the mask.</p>
+
+<p>This the same as using a mask used for composite masking operations, with
+grayscale values causing blended updates of the image the mask is attached to.
+</p>
+
+<p>Use <a href="#read-mask">+read-mask</a> to remove the mask from images.</p>
+
+<p>Also see <a href="#clip-mask">-clip-mask</a> which work in the same way,
+but with strict boolean masking. </p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="red-primary"></a>-red-primary <var>x,y</var></h3>
@@ -7968,6 +7967,21 @@ href="#colors">-colors</a> to reduce the number of colors.</p>
 <p>The image sequence preceding the <a href="#write">-write</a> <var>filename</var> option is written out, and processing continues with the same image in its current state if there are additional options. To restore the image to its original state after writing it, use the <a href="#write">+write</a> <var>filename</var> option.</p>
 
 <p>Use <a href="#compress">-compress</a> to specify the type of image compression.</p>
+
+<div style="margin: auto;">
+  <h3 class="magick-header"><a id="write-mask"></a>-write-mask <var>filename</var></h3>
+</div>
+
+<p class="magick-description">Prevent updates to image pixels specified by the mask.</p>
+
+<p>This the same as using a mask used for composite masking operations, with
+grayscale values causing blended updates of the image the mask is attached to.
+</p>
+
+<p>Use <a href="#write-mask">+write-mask</a> to remove the mask from images.</p>
+
+<p>Also see <a href="#clip-mask">-clip-mask</a> which work in the same way,
+but with strict boolean masking. </p>
 </div>
 </div>
 

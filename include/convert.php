@@ -688,11 +688,6 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#mask">-mask <var>filename</var></a></td>
-    <td>associate a mask with the image</td>
-  </tr>
-
-  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#mattecolor">-mattecolor <var>color</var></a></td>
     <td>frame color</td>
   </tr>
@@ -875,6 +870,11 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#random-threshold">-random-threshold <var>low,high</var></a></td>
     <td>random threshold the image</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#read-mask">-read-mask <var>filename</var></a></td>
+    <td>associate a read mask with the image</td>
   </tr>
 
   <tr>
@@ -1236,6 +1236,12 @@ transparent, extract, background, or shape the alpha channel</td>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write">-write <var>filename</var></a></td>
     <td>write images to this file</td>
   </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-write-mask <var>filename</var></a></td>
+    <td>associate a write mask with the image</td>
+  </tr>
+
 </table>
 </div>
 </div>
