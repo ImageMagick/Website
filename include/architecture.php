@@ -77,7 +77,7 @@ if (image == (Image *) NULL)
 
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to a 4 channel 8-bit RGBA image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <?php option("version"); ?> option: </p>
 
-<?php crt("identify -version",
+<?php crt("identify -version","<br/>",
 "Version: ImageMagick " .MagickLibVersionText . MagickLibSubversion . " " . MagickReleaseDate . " Q16 http://www.imagemagick.org"); ?>
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit RGBA is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
@@ -221,6 +221,9 @@ if (y &lt; (ssize_t) source-&gt;rows)
   <dd>maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
 </dl>
 
+<p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external deleg
+ate libraries (e.g. JPEG, TIFF, etc.).</p>
+
 <p>To determine the current setting of these limits, use this command:</p>
 
 <pre>
@@ -238,7 +241,7 @@ Resource limits:
   Time: unlimited
 </pre>
 
-<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre>
 &lt;policymap>
   &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
