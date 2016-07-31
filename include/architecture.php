@@ -77,7 +77,7 @@ if (image == (Image *) NULL)
 
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <?php option("version"); ?> option: </p>
 
-<?php crt("identify -version",
+<?php crt("identify -version", "<br/>",
 "Version: ImageMagick " .MagickLibVersionText . MagickLibSubversion . " " . MagickReleaseDate . " Q16 http://www.imagemagick.org"); ?>
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
@@ -132,19 +132,18 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>When we first create the destination image by cloning the source image, the pixel cache pixels are not copied.  They are only copied when you signal your intentions to modify or set the pixel cache by calling <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetAuthenticPixels">GetAuthenticPixels()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a> if you want to set new pixel values rather than update existing ones.  You could use GetAuthenticPixels() to set pixel values but it is slightly more efficient to use QueueAuthenticPixels() instead. Finally, use <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SyncAuthenticPixels">SyncAuthenticPixels()</a> to ensure any updated pixels are pushed to the pixel cache.</p>
 
-<p>Recall how we mentioned that the indexes of a colormapped image or the black channel of a CMYK image are stored separately.  Use  <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetVirtualIndexQueue">GetVirtualIndexQueue()</a> (to read the indexes) or <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetAuthenticIndexQueue">GetAuthenticIndexQueue()</a> (to update the indexes) to gain access to this channel.  For example, to print the colormap indexes, use:</p>
+<p>You can associate arbitrary content with each pixel, called <em>meta</em> content.  Use  <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetVirtualMetacontent">GetVirtualMetacontent()</a> (to read the content) or <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetAuthenticMetacontent">GetAuthenticMetacontent()</a> (to update the content) to gain access to this content.  For example, to print the metacontent, use:</p>
 
-<pre>const IndexPacket
-  *indexes;
+<pre>const void
+  *metacontent;
 
 for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
 {
   p=GetVirtualPixels(source,0,y,source-&gt;columns,1);
   if (p == (const Quantum *) NULL)
     break;
-  indexes=GetVirtualIndexQueue(source);
-  for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)
-    (void) printf("%d\n",GetPixelIndex(indexes+x));
+  metacontent=GetVirtualMetacontent(source);
+  /* print meta content here */
 }
 if (y &lt; (ssize_t) source-&gt;rows)
   /* an exception was thrown */
@@ -198,7 +197,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <h3>Cache Storage and Resource Requirements</h3>
 
-<p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is cheap but it is also very slow, upwards of 1000 times slower than memory.  We can get some speed improvements, up to 5 times, if we use memory mapping to the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
+<p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is cheap but it is also very slow, upwards of 1000 times slower than memory.  We can get some speed improvements, up to 5 times, if we use memory mapping to the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
 <dl class="dl-horizontal">
   <dt>width</dt>
@@ -221,6 +220,8 @@ if (y &lt; (ssize_t) source-&gt;rows)
   <dd>maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
 </dl>
 
+<p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external delegate libraries (e.g. JPEG, TIFF, etc.).</p>
+
 <p>To determine the current setting of these limits, use this command:</p>
 
 <pre>
@@ -238,7 +239,7 @@ Resource limits:
   Time: unlimited
 </pre>
 
-<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre>
 &lt;policymap>
   &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
@@ -490,14 +491,14 @@ image_view=AcquireVirtualCacheView(image,exception);
 #pragma omp parallel for schedule(dynamic,4) shared(status)
 for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
 {
-  register IndexPacket
-    *indexes;
-
   register Quantum
     *q;
 
   register ssize_t
     x;
+
+  register void
+    *metacontent;
 
   if (status == MagickFalse)
     continue;
@@ -507,15 +508,15 @@ for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
       status=MagickFalse;
       continue;
     }
-  indexes=GetCacheViewAuthenticIndexQueue(image_view);
+  metacontent=GetCacheViewAuthenticMetacontent(image_view);
   for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
   {
     SetPixelRed(image,...,q);
     SetPixelGreen(image,...,q);
     SetPixelBlue(image,...,q);
     SetPixelAlpha(image,...,q);
-    if (indexes != (IndexPacket *) NULL)
-      SetPixelIndex(indexes+x,...);
+    if (metacontent != NULL)
+      metacontent[indexes+x]=...;
     q+=GetPixelChannels(image);
   }
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
