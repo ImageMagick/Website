@@ -59,7 +59,7 @@ gray(50%)        mid gray
 graya(50%, 0.5)  semi-transparent mid gray
 </pre>
 
-<p>The ImageMagick color model also supports hue-saturation-lightness (HSL) and hue-saturation-brightness (HSB) colors as a complement to numerical sRGB colors. HSL colors are encoding as a triple (hue, saturation, lightness). Likewise HSB colors are encoding as a triple (hue, saturation, brightness). HSL or HSB triples are either direct values (hue 0—360, saturation 0—255, ligthness or brightness 0—255) or as percentage values relative to these ranges.</p>
+<p>The ImageMagick color model also supports hue-saturation-lightness (HSL) and hue-saturation-brightness (HSB) colors as a complement to numerical sRGB colors. HSL colors are encoding as a triple (hue, saturation, lightness). Likewise HSB colors are encoding as a triple (hue, saturation, brightness). HSL or HSB triples are either direct values (hue 0—360, saturation 0—255, lightness or brightness 0—255) or with S,L,B as percentage values relative to these ranges.</p>
 
 <p>The HSB color system is geometrically represented as a cone with its apex pointing downward. Hue is measured around the perimeter. Saturation is measured from the axis outward. Brightness is measured from the apex upward.</p>
 
@@ -67,7 +67,7 @@ graya(50%, 0.5)  semi-transparent mid gray
 
 <p>See <a href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a> for more details on HSL and HSB color systems.</p>
 
-<p>Hue is represented as an angle of the color around the circular perimeter of the cone(s) (i.e. the rainbow represented in a circle). Hue values are either integer or floats in the range 0—360 or integer or float percentage values in the range 0—100%. By definition red=0=360 (or 0%=100%),  and the other colors are spread around the circle,  so green=120 (or 33.3333%),  blue=240 (or (66.6667%), etc. As an angle, it implicitly wraps around such that -120=240 and 480=120, for instance. (Students of trigonometry would say that "coterminal angles are equivalent" here; an angle <var>θ</var> can be standardized by computing the equivalent angle, <var>θ</var> mod 360.)</p>
+<p>Hue is represented as an angle of the color around the circular perimeter of the cone(s) (i.e. the rainbow represented in a circle). Hue values are integers or floats in the range 0—360. By definition red=0=360, and the other colors are spread around the circle, so green=120, blue=240, etc. As an angle, it implicitly wraps around such that -120=240 and 480=120, for instance. (Students of trigonometry would say that "coterminal angles are equivalent" here; an angle <var>θ</var> can be standardized by computing the equivalent angle, <var>θ</var> mod 360.)</p>
 
 <p>Saturation is measure outward from the central axis of the cone(s) toward the perimeter of the cone(s). Saturation may be expressed as an integer or float in the range 0—255 or as an integer or float percentage in the range 0—100. Saturation may be thought of as the absence of any "white" mixed with the base color. Thus 255 or 100% is full saturation and corresponds to a point on the outside surface of the cone (HSB) or double cone (HSL). It will be the most "colorful" region. 0 or 0% is no saturation which results in some shade of gray. It occurs along the central axis of the cone or double cone with black at the bottom apex and white at the top.</p>
 
@@ -76,23 +76,23 @@ graya(50%, 0.5)  semi-transparent mid gray
 <p>The HSB color system is a little easier to understand than the HSL color system. In the HSB color system, black is at the bottom apex and white is at the top center of the cone on the central axis. The most colorful or saturated colors will then be at the outer edge of the top of the cone at the widest part. Thus at Saturation=100% and Brightness=100%</p>
 
 <pre>
-hsb(0%, 100%,  100%)          or    hsb(0, 255,  255)          full red
-hsb(33.3333%, 100%,  100%)    or    hsb(120, 255,   255)       full green
-hsb(33.3333%, 100%,  75%)     or    hsb(120, 255,   191.25)    medium green
-hsb(33.3333%, 100%,  50%)     or    hsb(120, 255,   127.5)     dark green
-hsb(33.3333%, 100%,  25%)     or    hsb(120, 255,   63.75)     very dark green
-hsb(33.3333%, 50%,   50%)     or    hsb(120, 127.5, 127.5)     pastel green
+hsb(0,   100%,  100%)    or    hsb(0,   255,   255)          full red
+hsb(120, 100%,  100%)    or    hsb(120, 255,   255)       full green
+hsb(120, 100%,  75%)     or    hsb(120, 255,   191.25)    medium green
+hsb(120, 100%,  50%)     or    hsb(120, 255,   127.5)     dark green
+hsb(120, 100%,  25%)     or    hsb(120, 255,   63.75)     very dark green
+hsb(120, 50%,   50%)     or    hsb(120, 127.5, 127.5)     pastel green
 </pre>
 
 <p>In the HSL color system, black is at the bottom apex and white is at the top apex. However, saturation is largest at the middle of the double cone on its outer perimeter and thus at a lightness value of 50%. The most colorful or saturated colors will then be at the outer edge of the double cone at its widest part. Thus at Saturation=100% and Brightness=50%</p>
 
 <pre>
-hsl(0%, 100%,  50%)           or    hsl(0, 255,  127.5)        full red
-hsl(33.3333%, 100%,  100%)    or    hsl(120, 255,   255)       white
-hsl(33.3333%, 100%,  75%)     or    hsl(120, 255,   191.25)    pastel green
-hsl(33.3333%, 100%,  50%)     or    hsl(120, 255,   127.5)     full green
-hsl(33.3333%, 100%,  25%)     or    hsl(120, 255,   63.75)     dark green
-hsl(33.3333%, 50%,   50%)     or    hsl(120, 127.5, 127.5)     medium green
+hsl(0,   100%,  50%)     or    hsl(0,   255,   127.5)        full red
+hsl(120, 100%,  100%)    or    hsl(120, 255,   255)       white
+hsl(120, 100%,  75%)     or    hsl(120, 255,   191.25)    pastel green
+hsl(120, 100%,  50%)     or    hsl(120, 255,   127.5)     full green
+hsl(120, 100%,  25%)     or    hsl(120, 255,   63.75)     dark green
+hsl(120, 50%,   50%)     or    hsl(120, 127.5, 127.5)     medium green
 </pre>
 
 <p>One advantage of HSB or HSL over RGB is that it can be more intuitive: you can guess at the colors you want, and then tweak. It is also easier to create sets of matching colors (by keeping the hue the same and varying the brightness or lightness and saturation, for example).</p>
@@ -100,18 +100,18 @@ hsl(33.3333%, 50%,   50%)     or    hsl(120, 127.5, 127.5)     medium green
 <p>Just as the 'rgb()' functional notation has the 'rgba()' alpha counterpart, the 'hsl()' and 'hsb()' functional notations have their 'hsla()' 'hsba()' alpha counterparts. These examples specify the same color:</p>
 
 <pre>
-hsb(33.3333%, 100%,  100%)         full green in hsb
-hsba(33.3333%, 100%,  100%,  1.0)  the same, with an alpha value of 1.0
+hsb(120, 100%,  100%)              full green in hsb
+hsba(120, 100%,  100%,  1.0)       the same, with an alpha value of 1.0
 hsb(120, 255,  255)                full green in hsb
 hsba(120, 255,  255,  1.0)         the same, with an alpha value of 1.0
 
-hsl(33.3333%, 100%,  50%)          full green in hsl
-hsla(33.3333%, 100%,  50%,  1.0)   the same, with an alpha value of 1.0
+hsl(120, 100%,  50%)               full green in hsl
+hsla(120, 100%,  50%,  1.0)        the same, with an alpha value of 1.0
 hsl(120, 255,  127.5)              full green in hsl
 hsla(120, 255,  127.5,  1.0)       the same, with an alpha value of 1.0
 </pre>
 
-<p>Prior to ImageMagick 6.5.6-6, HSL (HSB) could only be specified with Hue in range 0—360, but Saturation and Lightness (Brightness) as percent in range 0—100%.</p>
+<p>For ImageMagick between 6.5.6-6 and 6.9.2-0, HSL (HSB) could only be specified with Hue as percent in range 0—100%, when Saturation and Lightness (Brightness) were also specified as percent in range 0—100%.</p>
 
 <p>Specify the Lab colors like this:</p>
 <pre>
