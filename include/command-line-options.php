@@ -1889,6 +1889,12 @@ available:</p>
   </tr>
 
   <tr>
+    <td>deskew:auto-crop=<var>true</var></td>
+    <td>auto crop the image after deskewing.</td>
+  </tr>
+
+
+  <tr>
     <td>delegate:bimodal=<var>true</var></td>
      <td>Specifies direct conversion from Postscript to PDF.</td>
   </tr>
