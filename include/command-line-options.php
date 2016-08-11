@@ -2504,8 +2504,7 @@ or CMYK, or to change the depth of any image after it has been read.</p>
 <p class="magick-description">straighten an image.  A threshold of 40% works for most images.</p>
 
 <p>Use <a href="#set">-set</a> <code>option:deskew:auto-crop
-<var>width</var></code> to auto crop the image.  The set argument is the pixel
-width of the image background (e.g 40).</p>
+<var>true | false</var></code> to auto crop the image.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="despeckle"></a>-despeckle</h3>
