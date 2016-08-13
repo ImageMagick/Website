@@ -625,26 +625,6 @@ pixels which are outside the image proper are blurred into the final result.
 
 
 <div style="margin: auto;">
-  <h3 class="magick-header">-blur <var>Width</var>[x<var>Height</var>[+<var>Angle</var>]]</h3>
-</div>
-
-<p class="magick-description">Variably blur an image according to the overlay mapping.</p>
-
-<p>Each pixel in the overlaid region is replaced with an Elliptical Weighted
-Average (EWA) of the source image, scaled according to the grayscale
-mapping. </p>
-
-<p>The ellipse is weighted with sigma set to the given <var>Width</var> and <var >Height</var>. The <var >Height</var>
-defaults to the <var >Width</var> for a normal circular Gaussian
-weighting.  The <var >Angle</var> will rotate the ellipse from
-horizontal clock-wise.  </p>
-
-<p>The <a href="#virtual-pixel">-virtual-pixel</a> setting will determine how
-pixels which are outside the image proper are blurred into the final result.
-</p>
-
-
-<div style="margin: auto;">
   <h3 class="magick-header"><a id="border"></a>-border <var>geometry</var></h3>
 </div>
 
