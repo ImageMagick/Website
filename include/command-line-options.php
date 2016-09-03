@@ -1863,7 +1863,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>dds:weight-by-alpha=<var>true|false</var></td>
+     <td>dds:weight-by-alpha=<var>true|false</var></td>
      <td>Enables the dds alpha weighting.</td>
   </tr>
 
@@ -2088,9 +2088,15 @@ available:</p>
   </tr>
 
   <tr>
+    <td>phash:colorspaces=<var>colorspace,colorspace,...</var></td>
+    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  Use this define, you can specify up to six alternative colorspaces.</td>
+  </tr>
+
+  <tr>
     <td>png:bit-depth=<var>value</var></td>
     <td>&nbsp</td>
   </tr>
+
   <tr>
     <td>png:color-type=<var>value</var></td>
      <td>desired bit-depth and color-type for PNG output.  You can force the PNG
@@ -5667,7 +5673,7 @@ name. </p>
 <dt>MSE</dt><dd>   mean error squared, average of the channel error squared</dd>
 <dt>NCC</dt><dd>   normalized cross correlation</dd>
 <dt>PAE</dt><dd>   peak absolute (normalized peak absolute)</dd>
-<dt>PHASH</dt><dd> perceptual hash</dd>
+<dt>PHASH</dt><dd> perceptual hash for the sRGB and HCLp colorspaces.  Specify an alternative colorspace with <code>-define phash:colorspaces=<var>colorspace,colorspace,...</var></code></dd>
 <dt>PSNR</dt><dd>  peak signal to noise ratio</dd>
 <dt>RMSE</dt><dd>  root mean squared (normalized root mean squared)</dd>
 </dl>
