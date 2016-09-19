@@ -75,7 +75,7 @@
     <li><a href="https://gna.org/projects/g2f/">G2F</a>: implements an Ada 95 binding to a subset of the low-level MagickCore library.</li>
     <li><a href="http://www.imagemagick.org/Magick++">Magick++</a>: provides an object-oriented C++ interface to ImageMagick.</li>
     <li><a href="http://pecl.php.net/package/imagick">IMagick</a>: is a native PHP extension to create and modify images using the ImageMagick API.</li>
-    <li><a href="http://www.yeo.id.au/jmagick/">JMagick</a>: provides an object-oriented Java interface to ImageMagick.</li>
+    <li><a href="https://github.com/techblue/jmagick">JMagick</a>: provides an object-oriented Java interface to ImageMagick.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a>: C API, recommended for wizard-level developers.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a>: convert, compose, and edit images from the C language.</li>
     <li><a href="http://www.magickwand.org/">MagickWand for PHP</a>: a native PHP-extension to the ImageMagick MagickWand API.</li>
