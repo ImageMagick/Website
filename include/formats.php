@@ -835,7 +835,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
     <td><a href="http://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">PSD</a></td>
     <td>RW</td>
     <td>Adobe Photoshop bitmap file</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
   </tr>
 
   <tr>
