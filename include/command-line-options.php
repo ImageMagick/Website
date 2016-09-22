@@ -2278,13 +2278,25 @@ available:</p>
   </tr>
 
   <tr>
+    <td>psd:additional-info=all|selective</td>
+     <td>This option should only be used when converting from a PSD file to another PSD file. This should be placed after the image is read. The two options are 'all' and 'selective'. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. If this option is not used, the additional information will not be preserved. This define is available as of Imagemagick version 6.9.5-8.
+</td>
+  </tr>
+
+  <tr>
     <td>psd:alpha-unblend=off</td>
      <td>Disables new automatic un-blending of transparency with the base image 
      for the flattened layer 0 before adding the alpha channel to the output  
      image. This define must be placed before the input psd image. (Available 
      as of IM 6.9.2.5). The automatic un-blending is new to IM 6.9.2.5 and 
      prevents the transparency from being applied twice in the output 
-     image.</td>
+     image. This option should be set before reading the image.</td>
+  </tr>
+
+  <tr>
+    <td>psd:preserve-opacity-mask=true</td>
+     <td>This option should only be used when converting from a PSD file to another PSD file. It will preserve the opacity mask of a layer and add it back to the layer when the image is saved. Setting this to 'true' will enable this feature. This define is available as of Imagemagick version 6.9.5-10.
+</td>
   </tr>
 
   <tr>
