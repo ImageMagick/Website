@@ -46,7 +46,7 @@ sudo ldconfig /usr/local/lib
 <p>Finally, verify the PerlMagick install worked properly, type</p>
 
 <pre>
-perl -e \"use Image::Magick; print Image::Magick->QuantumDepth\"
+perl -MImage::Magick -le 'print Image::Magick->QuantumDepth'
 </pre>
 
 <p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="http://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images.</p>

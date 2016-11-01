@@ -14,12 +14,13 @@
       $keywords=str_replace(',','',$keywords);
       $keywords=str_replace('and ','',$keywords);
       $meta_words=str_replace(' ',', ',$keywords);
-      $meta="<title>$this->sitename: $this->slogan</title>\n";
-      if (!empty($title))
-        $meta="  <title>$this->sitename: $title</title>\n";
-      $meta.="  <meta charset=\"utf-8\" />\n";
-      $meta.="  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n";
-      $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n";
+      $meta="<meta charset=\"utf-8\" />\n";
+      $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />\n";
+      $meta.="  <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\" />\n";
+      if (empty($title))
+        $meta.="  <title>$this->sitename: $this->slogan</title>\n";
+      else
+        $meta.="  <title>$this->sitename: $title</title>\n";
       $meta.="  <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/>\n";
       $meta.="  <meta name=\"application-name\" content=\"$this->application_name\"/>\n";
       $meta.="  <meta name=\"description\" content=\"$this->description\"/>\n";
