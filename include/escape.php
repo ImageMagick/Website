@@ -305,6 +305,14 @@ when enclosed in braces (long form):</p>
     <td>base filename, no suffixes (as %t)</td>
   </tr>
   <tr>
+    <td>%[caption]</td>
+    <td>caption meta-data property</td>
+  </tr>
+   <tr>
+    <td>%[caption:pointsize]</td>
+    <td>returns the pointsize computed during caption: processing (as of IM 6.9.1-0)</td>
+  </tr>
+  <tr>
     <td>%[channels]</td>
     <td>??? channels in use - colorspace ???</td>
   </tr>
@@ -359,6 +367,10 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[label]</td>
     <td>label meta-data property</td>
+  </tr>
+   <tr>
+    <td>%[label:pointsize]</td>
+    <td>returns the pointsize computed during label: processing (as of IM 6.9.1-0)</td>
   </tr>
   <tr>
     <td>%[magick]</td>
