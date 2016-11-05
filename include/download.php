@@ -21,7 +21,7 @@
   <dt>South Africa</dt>
     <dd><a href="http://imagemagick.afri.cc/">http://imagemagick.afri.cc/</a></dd>
   <dt>United States</dt>
-    <dd><a href="http://www.imagemagick.org/download/">http://www.imagemagick.org/download</a></dd>
+    <dd><a href="https://www.imagemagick.org/download/">https://www.imagemagick.org/download</a></dd>
     <dd><a href="http://transloadit.imagemagick.org/download">http://transloadit.imagemagick.org/download</a></dd>
     <dd><a href="ftp://transloadit.imagemagick.org/ImageMagick">ftp://transloadit.imagemagick.org/pub/ImageMagick (ftp)</a></dd>
     <dd><a href="ftp://ftp.fifi.org/pub/ImageMagick/">ftp://ftp.fifi.org/pub/ImageMagick/</a> (ftp)</dd>

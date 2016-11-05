@@ -67,7 +67,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
   channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)\' noisy.png
 </pre>
 
-<p>See <a href="http://www.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
+<p>See <a href="https://www.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
 <p>The next section discusses the Fx expression language.</p>
 

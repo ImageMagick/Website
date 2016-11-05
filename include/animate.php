@@ -17,7 +17,7 @@ animate movie.gif
 animate *.jpg
 </pre>
 
-<p>You can find additional examples of using <code>animate</code> in <a href="http://www.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>animate</code> in <a href="https://www.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2 class="magick-header"><a id="options"></a>Option Summary</h2>

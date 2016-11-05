@@ -15,7 +15,7 @@
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
     $meta->description="ImageMagick® is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of formats (over 200) including PNG, JPEG, JPEG-2000, GIF, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.";
-    $meta->application_url="http://www.imagemagick.org";
+    $meta->application_url="https://www.imagemagick.org";
     $meta->keywords2="ImageMagick, PerlMagick, image processing, image, photo, software, Magick++, OpenMP, convert";
     $meta->sitename="ImageMagick";
     $meta->slogan="Digital image manipulation that works like magick!";
@@ -27,7 +27,7 @@
 <head>
   <?php echo $meta->metadata($title); ?>
   <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4" />
-  <link rel="canonical" href="http://www.imagemagick.org<?php echo $_SERVER['REQUEST_URI']?>"/>
+  <link rel="canonical" href="https://www.imagemagick.org<?php echo $_SERVER['REQUEST_URI']?>"/>
   <link rel="icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png"/>
   <link rel="shortcut icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:900,400,400italic,700,700italic,300,300italic|Open+Sans:300italic,400italic,700italic,300,400,600,700">

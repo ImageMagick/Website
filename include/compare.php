@@ -54,7 +54,7 @@ Image: rose.jpg
 85.05 (0.00129778) @ 353,157
 </pre>
 
-<p>You can find additional examples of using <code>compare</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>compare</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <p>The compare program returns 2 on error otherwise 0 if the images are similar or 1 if they are dissimilar.</p>
 

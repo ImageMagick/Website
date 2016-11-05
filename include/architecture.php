@@ -78,7 +78,7 @@ if (image == (Image *) NULL)
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <?php option("version"); ?> option: </p>
 
 <?php crt("identify -version", "<br/>",
-"Version: ImageMagick " .MagickLibVersionText . MagickLibSubversion . " " . MagickReleaseDate . " Q16 http://www.imagemagick.org"); ?>
+"Version: ImageMagick " .MagickLibVersionText . MagickLibSubversion . " " . MagickReleaseDate . " Q16 https://www.imagemagick.org"); ?>
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
 
@@ -239,7 +239,7 @@ Resource limits:
   Time: unlimited
 </pre>
 
-<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre>
 &lt;policymap>
   &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
@@ -361,7 +361,7 @@ convert image.mpc -crop 100x100+100+0 +repage 2.png
 convert image.mpc -crop 100x100+200+0 +repage 3.png
 </pre>
 
-<p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="http://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
+<p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
 
 <h2 class="magick-header"><a id="stream"></a>Streaming Pixels</h2>
 
@@ -1119,7 +1119,7 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
 display logo.mgk
 </pre>
 
-<p>We provide the <a href="http://www.imagemagick.org/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
+<p>We provide the <a href="https://www.imagemagick.org/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
 
 <h2 class="magick-header"><a id="filters"></a>Custom Image Filters</h2>
 
@@ -1345,6 +1345,6 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
 </pre>
 
 
-<p>We provide the <a href="http://www.imagemagick.org/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
+<p>We provide the <a href="https://www.imagemagick.org/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
 
 </div>

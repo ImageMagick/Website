@@ -11,7 +11,7 @@
 
 <h2 class="magick-header"><a id="command-line"></a>Command-line Tutorials</h2>
 <ul>
-  <dd><a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
+  <dd><a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
   <dd><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/">Efficient Image Resizing With ImageMagick</a></dd>
   <dd><a href="http://www.jpeek.com/articles/linuxmag/0606.pdf">ImageMagick, Part One</a></dd>
   <dd><a href="http://www.jpeek.com/articles/linuxmag/0607.pdf">ImageMagick, Part Two</a></dd>
@@ -69,19 +69,19 @@
   <dt>Denmark</dt>
     <dd><a href="http://imagemagick.europnews.de/">http://imagemagick.europnews.de</a></dd>
   <dt>United States</dt>
-    <dd><a href="http://www.imagemagick.org/">http://www.imagemagick.org</a></dd>
+    <dd><a href="https://www.imagemagick.org/">https://www.imagemagick.org</a></dd>
 </ul>
 
 <h2 class="magick-header"><a id="bank"></a>Image Bank</h2>
 
 <ul>
-  <dd><a href="http://www.imagemagick.org/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
+  <dd><a href="https://www.imagemagick.org/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
 </ul>
 
 <h2 class="magick-header"><a id="other-projects"></a>Other Projects</h2>
 <ul>
   <dd><a href="https://github.com/puelocesar/android-lib-magick">ImageMagick API on the Android Platform</a></dd>
-  <dd><a href="http://www.imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
+  <dd><a href="https://www.imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
   <dd><a href="http://www.wizards-toolkit.org/">Wizard's Toolkit</a></dd>
   <dd><a href="http://www.multipole.org/">Computational Simulation of Multi-Body Interactions with O(n) Scaling</a></dd>
 </ul>

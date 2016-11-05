@@ -4,7 +4,7 @@
 
 <p>The ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> tools exit with a status of 0 if the command line arguments have a proper syntax and no problems are encountered.  Expect a descriptive message and an exit status of 1 if any exception occurs such as improper syntax, a problem reading or writing an image, or any other problem that prevents the command from completing successfully.</p>
 
-<p>Here is a short description for each command-line tool. Click on the program name to get details about the program usage and a list of command-line options that alters how the program behaves.  If you are just getting acquainted with ImageMagick, start with the <a href="#magick">magick</a> program.  Be sure to peruse Anthony Thyssen's tutorial on how to use ImageMagick utilities to <a href="http://www.imagemagick.org/Usage/">create, edit, compose, or convert</a> images from the command-line.</p>
+<p>Here is a short description for each command-line tool. Click on the program name to get details about the program usage and a list of command-line options that alters how the program behaves.  If you are just getting acquainted with ImageMagick, start with the <a href="#magick">magick</a> program.  Be sure to peruse Anthony Thyssen's tutorial on how to use ImageMagick utilities to <a href="https://www.imagemagick.org/Usage/">create, edit, compose, or convert</a> images from the command-line.</p>
 
 <dl class="dl-horizontal">
   <dt><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">animate</a></dt><dd>animate an image sequence on any X server.</dd>

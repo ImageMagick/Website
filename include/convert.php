@@ -43,7 +43,7 @@ convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
 </pre>
 
-<p>You can find additional examples of using <code>convert</code> in <a href="http://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>convert</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2 class="magick-header"><a id="options"></a>Option Summary</h2>
 
