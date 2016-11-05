@@ -21,41 +21,41 @@
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
     <td><?php echo $filename; ?></td>
-      <td><a href= "http://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
+      <td><a href= "https://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
     <td>Redhat / CentOS 7.1 x86_64 RPM</td>
   </tr>
 
   <tr>
     <td>ImageMagick RPM's</td>
-    <td><a href="http://www.imagemagick.org/download/linux/CentOS">download</a></td>
+    <td><a href="https://www.imagemagick.org/download/linux/CentOS">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS">download</a></td>
     <td>Development, Perl, C++, and documentation RPM's.</td>
   </tr>
 
   <tr>
     <td>ImageMagick-i386-pc-solaris2.11.tar.gz</td>
-    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">download</a></td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">download</a></td>
     <td>Solaris Sparc 2.11</td>
   </tr>
 
   <tr>
     <td>ImageMagick-i686-pc-cygwin.tar.gz</td>
-    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-i686-pc-cygwin.tar.gz">download</a></td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-i686-pc-cygwin.tar.gz">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-i686-pc-cygwin.tar.gz">download</a></td>
     <td>Cygwin</td>
   </tr>
 
   <tr>
     <td>ImageMagick-i686-pc-mingw32.tar.gz</td>
-    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-i686-pc-mingw32.tar.gz">download</a></td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-i686-pc-mingw32.tar.gz">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-i686-pc-mingw32.tar.gz">download</a></td>
     <td>MinGW</td>
   </tr>
 </table></div>
 
-<p>Verify its <a href="http://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
 
@@ -99,7 +99,7 @@ identify logo.gif
 display logo.gif
 </pre>
 
-<p>Congratulations, you have a working ImageMagick distribution under Unix or Linux and you are ready to use ImageMagick to <a href="http://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Unix or Linux and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2 class="magick-header"><a id="macosx"></a>Mac OS X Binary Release</h2>
 
@@ -123,13 +123,13 @@ sudo port install ImageMagick
 
   <tr>
     <td>ImageMagick-x86_64-apple-darwin15.6.0.tar.gz</td>
-    <td><a href="http://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin15.6.0.tar.gz">download</a></td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin15.6.0.tar.gz">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin15.6.0.tar.gz">download</a></td>
     <td>Mac OS X El Capitan</td>
   </tr>
 </table></div>
 
-<p>Verify its <a href="http://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>Create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
@@ -172,7 +172,7 @@ display logo.gif
 
 <p>The best way to deal with all the exports is to put them at the end of your .profile file</p>
 
-<p>Congratulations, you have a working ImageMagick distribution under Mac OS X and you are ready to use ImageMagick to <a href="http://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Mac OS X and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2 class="magick-header"><a id="iOS"></a>iOS Binary Release</h2>
 
@@ -180,7 +180,7 @@ display logo.gif
 
 <h4>Download iOS Distribution</h4>
 
-<p>You can download the iOS distribution directly from ImageMagick's <a href="http://www.imagemagick.org/download/iOS">repository</a>.</p>
+<p>You can download the iOS distribution directly from ImageMagick's <a href="https://www.imagemagick.org/download/iOS">repository</a>.</p>
 
 <p>There are always 2 packages for the compiled ImageMagick:</p>
 
@@ -249,7 +249,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win64 dynamic at 16 bits-per-pixel component</td>
   </tr>
@@ -271,7 +271,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
    <td>Win64 static at 16 bits-per-pixel component</td>
   </tr>
@@ -280,7 +280,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x64-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
    <td>Win64 dynamic at 8 bits-per-pixel component</td>
   </tr>
@@ -289,7 +289,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x64-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win64 static at 8 bits-per-pixel component</td>
   </tr>
@@ -298,7 +298,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
@@ -307,7 +307,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
@@ -316,7 +316,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x86-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 dynamic at 16 bits-per-pixel component</td>
   </tr>
@@ -325,7 +325,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x86-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 static at 16 bits-per-pixel component</td>
   </tr>
@@ -334,7 +334,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x86-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 dynamic at 8 bits-per-pixel component</td>
   </tr>
@@ -343,7 +343,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x86-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 static at 8 bits-per-pixel component</td>
   </tr>
@@ -352,7 +352,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
@@ -361,7 +361,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-static.exe";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
@@ -370,7 +370,7 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-x86.zip";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
@@ -379,13 +379,13 @@ display logo.gif
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-x64.zip";
   ?>
       <td><?php echo $filename; ?></td>
-        <td><a href= "http://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
+        <td><a href= "https://www.imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
       <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/<?php echo $filename; ?>">download</a></td>
     <td>Portable Win64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 </table></div>
 
-<p>Verify its <a href="http://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://www.imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>To verify ImageMagick is working properly, type the following in an Command Prompt window:</p>
 
@@ -408,7 +408,7 @@ Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("convert ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")
 </pre>
 
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="http://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 </div>
 

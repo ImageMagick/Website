@@ -7,14 +7,14 @@
 <p class="lead magick-description">We want to thank the following sponsors of the ImageMagick project, including:</p>
 
 <dl>
-  <dt><a href="http://www.networkredux.com"> <img class="clearfix" src="http://www.imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
-  <dt><a href="http://www.amd.com"> <img class="clearfix" src="http://www.imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
-  <dt><a href="http://www.transloadit.com"> <img class="clearfix" src="http://www.imagemagick.org/image/transloadit.png" width="205" height="52" alt="[TransloadIt]" /></a>   The world's most versatile file uploading and processing service</dt><br/>
-   <dt><a href="http://nutrition.report"> <img class="clearfix" src="http://www.imagemagick.org/image/nutrition.png" width="299" height="59" alt="[Nutrition Report]" /></a>The world's most most advanced nutrition &amp; health database</dt><br/>
+  <dt><a href="http://www.networkredux.com"> <img class="clearfix" src="https://www.imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
+  <dt><a href="http://www.amd.com"> <img class="clearfix" src="https://www.imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
+  <dt><a href="http://www.transloadit.com"> <img class="clearfix" src="https://www.imagemagick.org/image/transloadit.png" width="205" height="52" alt="[TransloadIt]" /></a>   The world's most versatile file uploading and processing service</dt><br/>
+   <dt><a href="http://nutrition.report"> <img class="clearfix" src="https://www.imagemagick.org/image/nutrition.png" width="299" height="59" alt="[Nutrition Report]" /></a>The world's most most advanced nutrition &amp; health database</dt><br/>
 </dl>
 
 <h2 class="magick-header"><a id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
-<p>Post any ImageMagick patches to the <a href="https://github.com/ImageMagick/ImageMagick/issues">Issues</a> forum if you think you have found and fixed a bug or security vulnerability. Post to the <a href="http://www.imagemagick.org/discourse-server/viewforum.php?f=2">Developers</a> forum if you want to propose an enhancement for discussion.</p>
+<p>Post any ImageMagick patches to the <a href="https://github.com/ImageMagick/ImageMagick/issues">Issues</a> forum if you think you have found and fixed a bug or security vulnerability. Post to the <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=2">Developers</a> forum if you want to propose an enhancement for discussion.</p>
 
 <h2 class="magick-header"><a id="support"></a>Support the ImageMagick Project</h2>
 
@@ -44,7 +44,7 @@
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="E4UZGVA6PU7RC" />
-<input type="image" src="http://www.imagemagick.org/image/donate.png" border="0" name="submit" alt="Support ImageMagick" width="92" height="26" />
+<input type="image" src="https://www.imagemagick.org/image/donate.png" border="0" name="submit" alt="Support ImageMagick" width="92" height="26" />
 </form>
 </ul>
 
@@ -62,7 +62,7 @@
 </ul>
 <h3>Check</h3>
 <p>Check, in USD funds, made payable to
-  <a href="http://www.imagemagick.org/">ImageMagick Studio LLC</a>, and send to:</p>
+  <a href="https://www.imagemagick.org/">ImageMagick Studio LLC</a>, and send to:</p>
 <ul>
 <pre>
 ImageMagick Studio LLC
