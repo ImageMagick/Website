@@ -1,4 +1,4 @@
 <?php
-  $title='MagickWand, C API for ImageMagick';
+  $title='MagickWand, C API';
   include('session.php');
 ?>

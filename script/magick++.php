@@ -1,4 +1,4 @@
 <?php
-  $title='Magick++, C++ API for ImageMagick';
+  $title='Magick++, C++ API';
   include('session.php');
 ?>
