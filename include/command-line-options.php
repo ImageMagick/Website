@@ -7101,6 +7101,12 @@ direction people would consider the object is coming from.  </p>
 
 <p class="magick-description">smush an image sequence together.</p>
 
+<p>Smush is a more flexible version of <a href="#append">-append</a>, joining the images in the sequence top-to-bottom (<a href="#smush">-smush</a>) or left-to-right (<a href="#smush">+smush</a>), with a gap between images according to the specified offset.</p>
+
+<p>If the offset is negative, images will overlap by that amount.</p>
+
+<p><a href="#smush">-smush</a> respects <a href="#gravity">-gravity</a>. Any empty space will be filled with the <a href="#background">-background</a> color.</p>
+
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="snaps"></a>-snaps <var>value</var></h3>
 </div>
