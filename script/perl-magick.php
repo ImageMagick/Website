@@ -1,4 +1,4 @@
 <?php
-  $title='PerlMagick, Perl API for ImageMagick';
+  $title='PerlMagick, Perl API';
   include('session.php');
 ?>

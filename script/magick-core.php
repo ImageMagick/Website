@@ -1,4 +1,4 @@
 <?php
-  $title='MagickCore, Low-level C API for ImageMagick';
+  $title='MagickCore, Low-level C API';
   include('session.php');
 ?>
