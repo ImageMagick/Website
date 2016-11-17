@@ -1792,7 +1792,10 @@ available:</p>
 
   <tr>
     <td>compose:clamp=<var>on|off</var></td>
-    <td>set each pixel whose value is below zero to zero and any the pixel whose value is above the quantum range to the quantum range (e.g. 65535) otherwise the pixel value remains unchanged.  Define supported in ImageMagick 6.9.1-3 and above.</td>
+    <td>set each pixel whose value is below zero to zero and any the pixel 
+    whose value is above the quantum range to the quantum range (e.g. 65535) 
+    otherwise the pixel value remains unchanged.  Define supported in 
+    ImageMagick 6.9.1-3 and above.</td>
   </tr>
 
   <tr>
@@ -1802,17 +1805,20 @@ available:</p>
 
   <tr>
     <td>connected-components:keep=<var>list-of-ids</var></td>
-    <td>Comma and/or hyphenated list of id values to keep in the output. Supported in Imagemagick 6.9.3-0.</td>
+    <td>Comma and/or hyphenated list of id values to keep in the output. 
+    Supported in Imagemagick 6.9.3-0.</td>
   </tr>
 
   <tr>
     <td>connected-components:mean-color=<var>true</var></td>
-    <td>Changes the output image from id values to mean color values. Supported in Imagemagick 6.9.2-8.</td>
+    <td>Changes the output image from id values to mean color values. Supported 
+    in Imagemagick 6.9.2-8.</td>
   </tr>
 
   <tr>
     <td>connected-components:remove=<var>list-of-ids</var></td>
-    <td>Comma and/or hyphenated list of id values to remove from the output. Supported in Imagemagick 6.9.2-9.</td>
+    <td>Comma and/or hyphenated list of id values to remove from the output.
+     Supported in Imagemagick 6.9.2-9.</td>
   </tr>
 
   <tr>
@@ -1930,7 +1936,8 @@ available:</p>
 
   <tr>
     <td>jp2:number-resolutions=<var>value</var></td>
-     <td>Sets the number of resolutions to encode.Same for JPT, JC2, and J2K</td>
+     <td>Sets the number of resolutions to encode.Same for JPT, JC2, and 
+     J2K</td>
   </tr>
 
   <tr>
@@ -1948,11 +1955,11 @@ available:</p>
 
   <tr>
     <td>jp2:rate=<var>value</var></td>
-     <td>Specify the compression factor to use while writing JPEG-2000 files. The
-    compression factor is the reciprocal of the compression ratio. The valid
-    range is 0.0 to 1.0, with 1.0 indicating lossless compression. If defined,
-    this value overrides the -quality setting.  A quality setting of 75
-    results in a rate value of 0.06641. Same for JPT, JC2, and J2K</td>
+     <td>Specify the compression factor to use while writing JPEG-2000 files. 
+     The compression factor is the reciprocal of the compression ratio. The 
+     valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If 
+     defined, this value overrides the -quality setting.  A quality setting 
+     of 75 results in a rate value of 0.06641. Same for JPT, JC2, and J2K</td>
   </tr>
 
   <tr>
@@ -2089,7 +2096,16 @@ available:</p>
 
   <tr>
     <td>phash:colorspaces=<var>colorspace,colorspace,...</var></td>
-    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  Use this define, you can specify up to six alternative colorspaces.</td>
+    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  When 
+    using this define, you can specify up to six alternative colorspaces. (as 
+    of IM 7.0.3-8)</td>
+  </tr>
+
+  <tr>
+    <td>phash:normalize=<var>true</var></td>
+    <td>normalizes the phash metric by dividing by the number of channels 
+    specified by <code>-define phash:colorspaces</code> when using compare 
+    -metric phash. (as of IM 7.0.3-8)</td>
   </tr>
 
   <tr>
@@ -2283,7 +2299,16 @@ available:</p>
 
   <tr>
     <td>psd:additional-info=all|selective</td>
-     <td>This option should only be used when converting from a PSD file to another PSD file. This should be placed after the image is read. The two options are 'all' and 'selective'. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. If this option is not used, the additional information will not be preserved. This define is available as of Imagemagick version 6.9.5-8.
+     <td>This option should only be used when converting from a PSD file to 
+     another PSD file. This should be placed after the image is read. The two
+     options are 'all' and 'selective'. The 'selective' option will preserve 
+     all additional information that is not related to the geometry of the 
+     image. The 'all' option should only be used when the geometry of the 
+     image has not been changed. This option is helpful when transferring 
+     non-simple layers, such as adjustment layers from the input PSD file to 
+     the output PSD file. If this option is not used, the additional 
+     information will not be preserved. This define is available as of 
+     Imagemagick version 6.9.5-8.
 </td>
   </tr>
 
@@ -2299,7 +2324,11 @@ available:</p>
 
   <tr>
     <td>psd:preserve-opacity-mask=true</td>
-     <td>This option should only be used when converting from a PSD file to another PSD file. It will preserve the opacity mask of a layer and add it back to the layer when the image is saved. Setting this to 'true' will enable this feature. This define is available as of Imagemagick version 6.9.5-10.
+     <td>This option should only be used when converting from a PSD file to 
+     another PSD file. It will preserve the opacity mask of a layer and add it 
+     back to the layer when the image is saved. Setting this to 'true' will 
+     enable this feature. This define is available as of Imagemagick version 
+     6.9.5-10.
 </td>
   </tr>
 
@@ -2320,8 +2349,8 @@ available:</p>
 
   <tr>
     <td>quantum:polarity=<var>photometric-interpretation</var></td>
-     <td>Set the photometric-interpretation of an image (typically for TIFF image
-    file format) to either <code>min-is-black</code> (default) or
+     <td>Set the photometric-interpretation of an image (typically for TIFF 
+     image file format) to either <code>min-is-black</code> (default) or
     <code>min-is-white</code>.</td>
   </tr>
 
@@ -2344,7 +2373,8 @@ available:</p>
 
   <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
-    <td>Specify the alpha extra samples as associated, unassociated or unspecified </td>
+    <td>Specify the alpha extra samples as associated, unassociated or 
+    unspecified </td>
   </tr>
 
   <tr>
