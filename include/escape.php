@@ -317,8 +317,16 @@ when enclosed in braces (long form):</p>
     <td>??? channels in use - colorspace ???</td>
   </tr>
   <tr>
+    <td>%[colors]</td>
+    <td>Number of unique colors in the image (as of IM 6.9.6-6)</td>
+  </tr>
+  <tr>
     <td>%[colorspace]</td>
     <td>Colorspace of Image Data (excluding transparency)</td>
+  </tr>
+  <tr>
+    <td>%[compression]</td>
+    <td>Image compression type (as of IM 6.9.6-6)</td>
   </tr>
   <tr>
     <td>%[copyright]</td>
@@ -359,6 +367,10 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[height]</td>
     <td>original height of image (when it was read in)</td>
+  </tr>
+  <tr>
+    <td>%[interlace]</td>
+    <td>Image interlace mode (as of IM 6.9.6-6)</td>
   </tr>
   <tr>
     <td>%[kurtosis]</td>
@@ -415,6 +427,14 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[profiles]</td>
     <td>list of any embedded profiles</td>
+  </tr>
+  <tr>
+    <td>%[quality]</td>
+    <td>Image quality value (as of IM 6.9.6-6)</td>
+  </tr>
+  <tr>
+    <td>%[rendering-intent]</td>
+    <td>Image rendering intent (as of IM 6.9.6-6)</td>
   </tr>
   <tr>
     <td>%[resolution.x]</td>
