@@ -35,7 +35,7 @@
     $_SESSION['RelativePath']='';
   if ($_SERVER['SERVER_NAME'] == 'www.imagemagick.com')
     {
-      header("Location: http://www.imagemagick.org/index.php");
+      header("Location: https://www.imagemagick.org/index.php");
       exit();
     }
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
