@@ -50,7 +50,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="https://www.imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
-    <td><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=25405">Canny edge detection</a>, <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=25476">Hough lines</a>.</td>
+    <td><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>, <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=25476">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://www.imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
@@ -118,7 +118,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="https://www.imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
-    <td><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=26480">Kuwahara Filter</a>, <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=25504">mean-shift</a>.</td>
+    <td><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara Filter</a>, <a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
     <td><a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html">Perceptual hash</a></td>

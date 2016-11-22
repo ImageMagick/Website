@@ -228,10 +228,10 @@ $p-&gt;Convolve([1, 2, 1, 2, 4, 2, 1, 2, 1]);   # 3x3 Gaussian kernel
 <table class="table table-condensed table-striped">
 <caption>Read or Write Methods</caption>
 <colgroup>
-  <col width="20%"></col>
-  <col width="20%"></col>
-  <col width="20%"></col>
-  <col width="40%"></col>
+  <col width="20%" />
+  <col width="20%" />
+  <col width="20%" />
+  <col width="40%" />
 </colgroup>
 <tbody>
 

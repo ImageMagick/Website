@@ -353,8 +353,8 @@ be applied to expand the one channel into separate RGB (or other) channels.
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
 <dt>animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
-<dd>To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>convert</code> utility.</p>
-</dl>
+<dd>To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>convert</code> utility.
+</dd></dl>
 
 <h3>Behavioral Changes</h3>
 <p>Image settings are applied to each image on the command line.  To associate a setting with a particular image, use parenthesis to remove ambiguity.  In this example we assign a unique page offset to each image:</p>
