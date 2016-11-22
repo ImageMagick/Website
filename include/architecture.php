@@ -701,7 +701,7 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
   destination[index].w=ClampToQuantum(sum.w);
 };</pre>
 
-<p>See <a href="https://github.com/ImageMagick/ImageMagick/tree/ImageMagick-6/magick/accelerate.c">magick/accelerate.c</a> for a complete implementation of image convolution with an OpenCL kernel.</p>
+<p>See <a href="https://github.com/ImageMagick/ImageMagick/tree/ImageMagick-7/magick/accelerate.c">magick/accelerate.c</a> for a complete implementation of image convolution with an OpenCL kernel.</p>
 
 <p>Note, that under Windows, you might have an issue with TDR (Timeout Detection and Recovery of GPUs). Its purpose is to detect runaway tasks hanging the GPU by using an execution time threshold.  For some older low-end GPUs running the OpenCL filters in ImageMagick, longer execution times might trigger the TDR mechanism and pre-empt the GPU image filter.  When this happens, ImageMagick automatically falls back to the CPU code path and returns the expected results.  To avoid pre-emption, increase the <a href="http://msdn.microsoft.com/en-us/library/windows/hardware/gg487368.aspx">TdrDelay</a> registry key.</p>
 
