@@ -42,7 +42,7 @@ convert -size 256x256 radial-gradient:white-black radial_gradient.png
 
 <table class="table table-condensed table-striped">
   <tr>
-    <td><code>-define gradient:vector=<var>x1</var>,<var>y1</var>, <var>x2</var>,<var>y2</var></code> <code></td>
+    <td><code>-define gradient:vector=<var>x1</var>,<var>y1</var>, <var>x2</var>,<var>y2</var></code></td>
     <td>Specifies the direction of the linear gradient going from vector1 
     (x1,y1) to vector2 (x2,y2). Color1 (fromColor) will be located at vector 
     position x1,y1 and color2 (toColor) will be located at vector position 
@@ -91,7 +91,7 @@ convert -size 256x256 radial-gradient:white-black radial_gradient.png
   </tr>
 
   <tr>
-    <td><code>-define gradient:extent=<em>{Circle, Diagonal, Ellipse, Maximum, Minimum}</code></td>
+    <td><code>-define gradient:extent=<em>{Circle, Diagonal, Ellipse, Maximum, Minimum}</em></code></td>
     <td>Specifies the shape of an image centered radial gradient. Circle and 
     Maximum draw a circular radial gradient even for rectangular shaped images 
     of radius equal to the larger of the half-width and half-height of the 

@@ -1965,7 +1965,7 @@ available:</p>
 
   <tr>
     <td>jpeg:block-smoothing=<var>on|off</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
@@ -1993,22 +1993,22 @@ available:</p>
 
   <tr>
     <td>jpeg:fancy-upsampling=<var>on|off</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>jpeg:optimize-coding=<var>on|off</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>jpeg:q-table=<var>table</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>jpeg:sampling-factor=<var>sampling-factor-string</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
@@ -2026,12 +2026,12 @@ available:</p>
 
   <tr>
     <td>json:limit</td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>json:locate</td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
@@ -2076,22 +2076,22 @@ available:</p>
 
   <tr>
     <td>pdf:fit-to-page=<var>true</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>pdf:use-cropbox=<var>true</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>pdf:use-trimbox=<var>true</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>png:bit-depth=<var>value</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
   <tr>
     <td>png:color-type=<var>value</var></td>
@@ -2345,7 +2345,7 @@ available:</p>
 
   <tr>
     <td>tiff:endian=<var>msb|lsb</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
@@ -2355,7 +2355,7 @@ available:</p>
 
   <tr>
     <td>tiff:fill-order=<var>msb|lsb</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
@@ -2381,12 +2381,12 @@ available:</p>
 
   <tr>
     <td>type:features=<var>string</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 
   <tr>
     <td>type:hinting=<var>off</var></td>
-    <td>&nbsp</td>
+    <td> </td>
   </tr>
 </table>
 
