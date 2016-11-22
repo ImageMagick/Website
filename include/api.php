@@ -30,6 +30,10 @@
 
 <dd><a href="http://www.jmagick.org">JMagick</a> provides an object-oriented Java interface to ImageMagick.  <a href="http://im4java.sourceforge.net">Im4java</a> is a pure-java interface to the ImageMagick command-line.</dd>
 
+  <dt><a id="julia"></a>Julia</dt>
+
+<dd><a href="https://github.com/JuliaIO/ImageMagick.jl">Julia</a> bindings to ImageMagick.</dd>
+
   <dt><a id="labview"></a>LabVIEW</dt>
 
 <dd><a href="http://forums.lavag.org/downloads-file90.html">LVOOP ImageMagick</a> is an object-oriented LabVIEW interface to ImageMagick.</dd>
