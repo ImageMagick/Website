@@ -32,7 +32,7 @@
 
   <dt><a id="julia"></a>Julia</dt>
 
-<dd><a href="https://github.com/JuliaIO/ImageMagick.jl">JuliaIO</a> rovides an object-oriented Julia interface to ImageMagick.</dd>
+<dd><a href="https://github.com/JuliaIO/ImageMagick.jl">JuliaIO</a> provides an object-oriented Julia interface to ImageMagick.</dd>
 
   <dt><a id="labview"></a>LabVIEW</dt>
 
