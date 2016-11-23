@@ -27,6 +27,15 @@
   </tr>
 
   <tr>
+  <?php $filename = "ImageMagick-libs" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
+  ?>
+    <td><?php echo $filename; ?></td>
+      <td><a href= "https://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
+    <td>Redhat / CentOS 7.1 x86_64 RPM</td>
+  </tr>
+
+  <tr>
     <td>ImageMagick RPM's</td>
     <td><a href="https://www.imagemagick.org/download/linux/CentOS">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/linux/CentOS">download</a></td>
@@ -60,6 +69,8 @@
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
 
 <?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
+<p>You'll need the libraries as well:</p>
+<?php crt("rpm -Uvh ImageMagick-libs" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
