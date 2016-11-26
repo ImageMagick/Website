@@ -1913,9 +1913,10 @@ available:</p>
     <td>h:format=<var>value</var></td>
      <td>Set the image encoding format use when writing a C-style header.
          <var>format</var> can be any output format supported by ImageMagick
-         except for <var>h</var> and <var>magick</var></td>.  If this
+         except for <var>h</var> and <var>magick</var>.  If this
          option is omitted, the default is <var>GIF</var> for PseudoClass
          images and <var>PNM</var> for DirectClass images.
+    </td>
   </tr>
 
   <tr>
@@ -2042,7 +2043,7 @@ available:</p>
   <tr>
     <td>magick:format=<var>value</var></td>
      <td>Set the image encoding format use when writing a C-style header.
-         This is the same as "h:format=format" described above.</td>. 
+         This is the same as "h:format=format" described above.</td>
   </tr>
 
   <tr>
@@ -2066,6 +2067,7 @@ available:</p>
 
   <tr>
     <td>pcl:fit-to-page=<var>true</var></td>
+  </tr>
 
   <tr>
     <td>pdf:fit-page=<var>geometry</var></td>
@@ -2783,7 +2785,7 @@ and meaning of the floating point values depends on the distortion <var>method</
        Arc the image (variation of polar mapping) over the angle given around
        a circle.
 
-       <p><dl class="dl-horizontal">
+       <dl class="dl-horizontal">
        <dt>arc_angle</dt>
            <dd>The angle over which to arc the image side-to-side</dd>
        <dt>rotate_angle</dt>
@@ -2792,7 +2794,7 @@ and meaning of the floating point values depends on the distortion <var>method</
            <dd>Set top edge of source image at this radius</dd>
        <dt>bottom_radius </dt>
            <dd>Set bottom edge to this radius (radial scaling)</dd>
-       </dl></p>
+       </dl>
 
        The resulting image is always resized to best fit the resulting image,
        (as if using <a href="#distort" >+distort</a>) while attempting to
@@ -3860,6 +3862,8 @@ href="#set" >-set</a>):-</p>
 
   <tr>
     <td>-define filter:b=<var>b-spline_factor</var></td>
+  </tr>
+
   <tr>
     <td>-define filter:c=<var>keys_alpha_factor</var></td>
     <td>Redefine the values used for cubic filters such as <code>Cubic</code>,
@@ -4283,7 +4287,6 @@ All these values can be adjusted via the arguments.</p>
 <var>range</var>/π * atan( <var>slope</var>*π * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
 </pre>
   </dd>
-  </tr>
 </dl>
 
 
@@ -7975,6 +7978,3 @@ href="#colors">-colors</a> to reduce the number of colors.</p>
 <p>Use <a href="#compress">-compress</a> to specify the type of image compression.</p>
 </div>
 </div>
-
-
-
