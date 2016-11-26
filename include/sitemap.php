@@ -117,7 +117,7 @@
 
 <dl class="magick-list-unstyled">
   <li><a href="https://www.imagemagick.org/Usage/anim_basics/">Animation</a>: create a GIF animation sequence from a group of images.</li>
-  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=amp;t=25405">Canny edge detection</a>: extract edges from an image using the Canny technique.</li>
+  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>: extract edges from an image using the Canny technique.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a>: utilize ImageMagick from the command line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected Component Labeling</a>: uniquely label connected regions in an image.</li>
@@ -138,14 +138,14 @@
   <li><a href="https://www.imagemagick.org/Usage/distorts/">Generalized pixel distortion</a>: correct for, or induce image distortions including perspective.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a>: <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">certain algorithms</a> are <a href="http://en.wikipedia.org/wiki/OpenCL" target="_blank">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
-  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=amp;t=25476">Hough lines</a>: fit straight lines to edges in an image using the Hough transform technique.</li>
+  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25476">Hough lines</a>: fit straight lines to edges in an image using the Hough transform technique.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a>: create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a>: describe the format and attributes of an image.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#iOS">ImageMagick on the iPhone</a>: convert, edit, or compose images on your iPhone.</li>
-  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=amp;t=26480">Kuwahara Filter</a>: apply an edge perserving noise and color reduction filter to an image.</li>
+  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara Filter</a>: apply an edge perserving noise and color reduction filter to an image.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a>: read, process, or write mega-, giga-, or tera-pixel image sizes.</li>
-  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&t=amp;t=25504">Mean-shift</a>: apply a color reduction technique to an image.</li>
+  <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25504">Mean-shift</a>: apply a color reduction technique to an image.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">Montage</a>: juxtapose image thumbnails on an image canvas.</li>
   <li><a href="https://www.imagemagick.org/Usage/morphology/">Morphology of shapes</a>: extract features, describe shapes and recognize patterns in images.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a>: read and write the common image formats used in digital film work.</li>
