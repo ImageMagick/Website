@@ -27,7 +27,7 @@
   </tr>
 
   <tr>
-  <?php $filename = "ImageMagick-libs" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
+  <?php $filename = "ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
     <td><?php echo $filename; ?></td>
       <td><a href= "https://www.imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>">download</a></td>
@@ -70,7 +70,7 @@
 
 <?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 <p>You'll need the libraries as well:</p>
-<?php crt("rpm -Uvh ImageMagick-libs" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
+<?php crt("rpm -Uvh ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
