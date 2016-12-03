@@ -280,6 +280,11 @@ transparent, extract, background, or shape the alpha channel</td>
     <td>access method for pixels outside the boundaries of the image</td>
   </tr>
 
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-read-mask <var>filename</var></a></td>
+    <td>associate a write mask with the image</td>
+  </tr>
+
   </tbody>
 </table>
 </div>
