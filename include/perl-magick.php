@@ -498,6 +498,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
+    <td>Colorspace</td>
+    <td>colorspace=&gt;{RGB, Gray, Transparent, OHTA, XYZ, YCbCr, YCC, YIQ, YPbPr, YUV, CMYK}</td>
+    <td> set the image colorspace</td>
+  </tr>
+
+  <tr>
     <td>Comment</td>
     <td>string</td>
     <td>add a comment to your image</td>
