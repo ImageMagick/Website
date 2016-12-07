@@ -3,8 +3,8 @@
 <p class="lead magick-description">Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips and <a href="http://www.openmp.org">OpenMP</a>. OpenMP, is an API specification for parallel programming. If your compiler supports OpenMP (e.g. gcc, Visual Studio 2005) directives, ImageMagick automatically includes support. To verify, look for the OpenMP feature of ImageMagick with this command:</p>
 <pre>
 -> identify -version
-Version: ImageMagick 6.9.1-2 2015-10-14 Q16 https://www.imagemagick.org
-Copyright: Copyright (C) 1999-2016 ImageMagick Studio LLC
+Version: ImageMagick 6.9.6-2 2016-10-14 Q16 https://www.imagemagick.org
+Copyright: Copyright (C) 1999-2017 ImageMagick Studio LLC
 Features: OpenMP
 </pre>
 <p>With OpenMP enabled, most ImageMagick algorithms execute on all the cores on your system in parallel.  ImageMagick typically divides the work so that each thread processes four rows of pixels. As rows are completed, OpenMP assigns more chunks of pixel rows to each thread until the algorithm completes. For example, if you have a quad-core system, and attempt to resize an image, the resizing takes place on 4 cores (8 if hyperthreading is enabled).</p>
