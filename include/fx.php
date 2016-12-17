@@ -181,7 +181,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 <dt> <var>x</var> <code>=</code> <var>y</var></dt><dd>assignment; assignment variables are restricted to letter combinations only (e.g. Xi not X1)</dd>
 <dt> <var>x</var> <code>;</code> <var>y</var></dt><dd>statement separator </dd>
 <dt> <code>phi</code></dt><dd> constant (1.618034...)</dd>
-<dt> <code>pi</code></dt><dd> constant (3.141659...)</dd>
+<dt> <code>pi</code></dt><dd> constant (3.14159265359...)</dd>
 <dt> <code>e</code></dt><dd> constant (2.71828...)</dd>
 <dt> <code>QuantumRange</code></dt><dd> constant maximum pixel value (255 for Q8, 65535 for Q16)</dd>
 <dt> <code>QuantumScale</code></dt><dd> constant 1.0/<code>QuantumRange</code></dd>
