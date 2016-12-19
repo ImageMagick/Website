@@ -142,7 +142,7 @@ class=PseudoClass  colors=256  matte=False
 columns=1280  rows=1024  depth=8
 compression=RLE
 colorspace=RGB
-copyright={Copyright (c) 1999-2017 ImageMagick Studio LLC}
+copyright={Copyright © 1999-2017 ImageMagick Studio LLC}
 &#8942;
 </pre>
 
