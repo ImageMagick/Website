@@ -3,9 +3,9 @@
   require_once($_SESSION['AbsolutePath'] . '/../function/exception.php');
 
   $action=isset($_POST['action']) ? $_POST['action'] : '';
-  $authenticate=isset($_POST['authenticate']) ? $_POST['authenticate'] : '';
-  $name=isset($_POST['name']) ? $_POST['name'] : '';
-  $address=isset($_POST['address']) ? $_POST['address'] : '';
+  $authenticate=isset($_POST['authenticate']) ? htmlspecialchars($_POST['authenticate']) : '';
+  $name=isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+  $address=isset($_POST['address']) ? htmlspecialchars($_POST['address']) : '';
   $issue=isset($_POST['issue']) ? $_POST['issue'] : '';
   $message=isset($_POST['message']) ? $_POST['message'] : '';
   $status='';
@@ -46,7 +46,7 @@
         $status="Message not sent: authentication code does not match.";
       if ($status)
         break;
-      $mail=&new Mail;
+      $mail=new Mail;
       $mail->authenticate=$authenticate;
       $mail->to=DevelopmentTeam;
       $mail->from=$address;
