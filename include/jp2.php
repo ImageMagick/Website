@@ -56,7 +56,7 @@ convert wizard.png -resize 4096x2160! -depth 12 wizard.jp2
 <div class="table-responsive">
 <table class="table table-condensed table-striped">
   <tr>
-    <td>jp2:layer-number=<var>x</var></td>
+    <td>jp2:quality-layers=<var>x</var></td>
     <td>set the maximum number of quality layers to decode.</td>
   </tr>
   <tr>
@@ -70,8 +70,8 @@ convert wizard.png -resize 4096x2160! -depth 12 wizard.jp2
 <div class="table-responsive">
 <table class="table table-condensed table-striped">
   <tr>
-    <dt>jp2:number-resolutions=<var>x</var></dt>
-    <dd>number of resolutions to encode.</dd>
+    <td>jp2:number-resolutions=<var>x</var></td>
+    <td>number of resolutions to encode.</td>
   </tr>
   <tr>
     <td>jp2:quality=<var>x</var>,<var>x</var>,...</td>
