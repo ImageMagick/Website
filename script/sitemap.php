@@ -1,4 +1,4 @@
 <?php
-  $title='Site Map';
+  $title='Sitemap';
   include('session.php');
 ?>
