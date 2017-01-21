@@ -39,7 +39,7 @@
   <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Unix or Windows executable.</p>
 <dl class="magick-list-unstyled">
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php">Install from a binary distribution</a>: install a ready-to-run Unix or Windows executable.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Install from a binary distribution</a>: install a ready-to-run Unix or Windows executable.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/ImageMagickObject.php">Install ImageMagickObject COM+ component</a>: install the Windows ImageMagick COM+ component.</li>
 </dl>
 
@@ -142,7 +142,7 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a>: create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a>: describe the format and attributes of an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#iOS">ImageMagick on the iPhone</a>: convert, edit, or compose images on your iPhone.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a>: convert, edit, or compose images on your iPhone.</li>
   <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara Filter</a>: apply an edge perserving noise and color reduction filter to an image.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a>: read, process, or write mega-, giga-, or tera-pixel image sizes.</li>
   <li><a href="https://www.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25504">Mean-shift</a>: apply a color reduction technique to an image.</li>

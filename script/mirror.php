@@ -1,4 +1,4 @@
 <?php
-  $title='Downloads';
+  $title='Mirror';
   include('session.php');
 ?>
