@@ -68,7 +68,7 @@
 <h2 class="magick-header"><a id="program-interfaces"></a>Program Interfaces</h2>
 
 <dl class="magick-list-unstyled">
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/api.php">Program interfaces</a>: application programming interfaces.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.</li>
   <li> <dl class="magick-list-unstyled">
     <li><a href="https://www.imagemagick.org/ChMagick">ChMagick</a>: is a <a href="http://www.softintegration.com/">Ch</a> an embeddable MagickCore C/C++ interpreter for cross-platform scripting.</li>
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
