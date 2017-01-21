@@ -1,4 +1,4 @@
 <?php
-  $title='Downloads';
+  $title='Install from Binary Distribution';
   include('session.php');
 ?>
