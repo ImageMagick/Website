@@ -1,13 +1,13 @@
 <div class="magick-header">
 <p class="text-center"><a href="#download">Download &amp; Unpack</a> • <a href="#configure">Configure</a>  • <a href="#build">Build</a> • <a href="#install">Install</a> • <a href="#binary">Create a Self-installing Binary Distribution</a> • <a href="#problems">Dealing with Unexpected Problems</a> • <a href="#project">Building Your Custom Project</a></p>
 
-<p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Windows.  If so, you also have the option of installing a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#windows">binary release</a> or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#windows">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Windows, lets begin.</p>
+<p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Windows.  If so, you also have the option of installing a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">binary release</a> or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#windows">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Windows, lets begin.</p>
 
 <h2 class="magick-header"><a id="download"></a>Download &amp; Unpack</h2>
 
-<p>Building ImageMagick source for Windows requires a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#windows">binary release</a>.</p>
+<p>Building ImageMagick source for Windows requires a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">binary release</a>.</p>
 
-<p>Download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> from <a href="https://www.imagemagick.org/download/windows">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> from <a href="https://www.imagemagick.org/download/windows">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.</p>
 
 <p>You can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any Command Prompt window:</p>
 
@@ -311,7 +311,7 @@ run_demos.bat
 
 <h2 class="magick-header"><a id="project"></a>Building Your Custom Project</h2>
 
-<p>The Windows <a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#windows">binary</a> distribution includes a number of demo projects that you can use as a template for your own custom project.  For example, start with the Button project, generally located in the <code>c:/Program Files/ImageMagick-6.5.5-0/Magick++_demos</code> folder.  If not, be sure to select <code>Configuration Properties->C/C++->Preprocessor</code> and set these definitions:</p>
+<p>The Windows <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">binary</a> distribution includes a number of demo projects that you can use as a template for your own custom project.  For example, start with the Button project, generally located in the <code>c:/Program Files/ImageMagick-6.5.5-0/Magick++_demos</code> folder.  If not, be sure to select <code>Configuration Properties->C/C++->Preprocessor</code> and set these definitions:</p>
 
 <pre>
 NDEBUG

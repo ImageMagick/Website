@@ -1,11 +1,11 @@
 <div class="magick-header">
 <p class="text-center"><a href="#download">Download &amp; Unpack</a> • <a href="#configure">Configure</a>  • <a href="#build">Build</a> • <a href="#install">Install</a> • <a href="#linux">Linux-specific Build Instructions</a> • <a href="#macosx">Mac OS X-specific Build Instructions</a> • <a href="#mingw">MinGW-specific Build Instructions</a> • <a href="#problems">Dealing with Unexpected Problems</a></p>
 
-<p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Unix or Linux systems.  If so, you also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#unix">binary release</a>  or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#unix">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Unix or Linux systems, lets begin.</p>
+<p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Unix or Linux systems.  If so, you also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#unix">binary release</a>  or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#unix">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Unix or Linux systems, lets begin.</p>
 
 <h2 class="magick-header"><a id="download"></a>Download &amp; Unpack</h2>
 
-<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
 <p>Unpack the distribution it with this command:</p>
 
@@ -441,7 +441,7 @@ make check
 
 <h2 class="magick-header"><a id="linux"></a>Linux-specific Build instructions</h2>
 
-<p>Download <a href="https://www.imagemagick.org/download/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/linux/SRPMS/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://www.imagemagick.org/download/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/linux/SRPMS/digest.rdf">message digest</a>.</p>
 
 <p>Build ImageMagick with this command:</p>
 
@@ -477,7 +477,7 @@ sudo port install jpeg
 
 <p>Now lets build ImageMagick:</p>
 
-	  <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
+	  <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
 	  <p>Unpack and change into the top-level ImageMagick directory:</p>
 		<?php crt("tar xvzf ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".tar.gz",
 				"",

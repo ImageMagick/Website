@@ -10,7 +10,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p>The ImageMagick development process ensures a stable API and <a href="http://abi-laboratory.pro/tracker/timeline/imagemagick/">ABI</a>. Before each ImageMagick release, we perform a comprehensive security assessment that includes <a href="https://code.google.com/p/address-sanitizer/">memory error</a> and <a href="https://code.google.com/p/data-race-test/wiki/ThreadSanitizer">thread data race</a> detection to prevent security vulnerabilities.</p>
 
-<p>The current release is ImageMagick <a href="https://www.imagemagick.org/script/binary-releases.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="https://www.imagemagick.org/script/binary-releases.php#unix">Linux</a>, <a href="https://www.imagemagick.org/script/binary-releases.php#windows">Windows</a>, <a href="https://www.imagemagick.org/script/binary-releases.php#macosx">Mac Os X</a>, <a href="https://www.imagemagick.org/script/binary-releases.php#iOS">iOS</a>, Android OS, and others.</p>
+<p>The current release is ImageMagick <a href="https://www.imagemagick.org/script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="https://www.imagemagick.org/script/download.php#unix">Linux</a>, <a href="https://www.imagemagick.org/script/download.php#windows">Windows</a>, <a href="https://www.imagemagick.org/script/download.php#macosx">Mac Os X</a>, <a href="https://www.imagemagick.org/script/download.php#iOS">iOS</a>, Android OS, and others.</p>
 
 <p>The authoritative ImageMagick web site is <a href="https://www.imagemagick.org/">https://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
 
@@ -97,7 +97,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>describe the format and attributes of an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/binary-releases.php#iOS">ImageMagick on the iPhone</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
     <td>convert, edit, or compose images on your <a href="http://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>

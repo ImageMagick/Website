@@ -30,7 +30,7 @@ functions which comprise the API.  See a <a href="https://www.imagemagick.org/Ma
 <h2 class="magick-header">Obtaining Magick++</h2>
 <a id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
-source releases and may be retrieved via <a href="https://www.imagemagick.org/script/download.php">ftp</a>
+source releases and may be retrieved via <a href="https://www.imagemagick.org/script/mirror.php">ftp</a>
 or <a href="http://git.imagemagick.org/repos/ImageMagick/Magick++">GIT</a>.
 </p>
 <h2 class="magick-header">Installation</h2>
