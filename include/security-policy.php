@@ -38,11 +38,11 @@ convert: unable to open file: No such file or directory
 convert: no images defined `wizard.jpg'
 </pre>
 
-<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all coders except for a small subset of proven safe image types.  For example,</p>
+<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all coders except for a small subset of proven web-safe image types.  For example,</p>
 
 <pre>
   &lt;policy domain="coder" rights="none" pattern="*" />
-  &lt;policy domain="coder" rights="all" pattern="{MAGICK,GIF,JPEG,PNG}" />
+  &lt;policy domain="coder" rights="all" pattern="{GIF,JPEG,PNG,WEBP}" />
 </pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
