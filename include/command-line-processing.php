@@ -307,6 +307,7 @@ convert logo: gif:- | display -define stream:buffer-size=0 gif:-
 <ul>
 <li><a href="#setting">Image Setting</a></li>
 <li><a href="#operator">Image Operator</a></li>
+<li><a href="#channel">Image Channel Operator</a></li>
 <li><a href="#sequence">Image Sequence Operator</a></li>
 <li><a href="#geometry">Image Geometry</a></li>
 <li><a href="#stack">Image Stack</a></li>
@@ -353,6 +354,13 @@ include:</p>
 convert wand.png -negate wizard.png images.png
 </pre>
 
+<h4 class="magick-header"><a id="channel"></a>Image Channel Operator</h4>
+<p>Operate directly on image channels:</p>
+<ul>
+<?php options("channel-fx", "separate");
+?>
+</ul>
+
 <h4 class="magick-header"><a id="sequence"></a>Image Sequence Operator</h4>
 
 <p>An image sequence operator differs from a setting in that it affects an
@@ -360,7 +368,7 @@ image sequence immediately as it appears on the command-line.  Choose from
 these image sequence operators:</p>
 
 <ul>
-<?php options("append", "affinity", "average", "channel-fx", "clut", "coalesce", "combine", "compare", "complex", "composite", "copy", "crop", "debug", "deconstruct", "delete", "evaluate-sequence", "fft", "flatten", "fx", "hald-clut", "ift", "identify", "insert", "layers", "limit", "map", "maximum", "minimum", "morph", "mosaic", "optimize", "print", "process", "quiet", "separate", "swap", "write");
+<?php options("append", "affinity", "average", "clut", "coalesce", "combine", "compare", "complex", "composite", "copy", "crop", "debug", "deconstruct", "delete", "evaluate-sequence", "fft", "flatten", "fx", "hald-clut", "ift", "identify", "insert", "layers", "limit", "map", "maximum", "minimum", "morph", "mosaic", "optimize", "print", "process", "quiet", "swap", "write");
 ?>
 </ul>
 <p>In this example, <var>-append</var> appends three images into one:</p>

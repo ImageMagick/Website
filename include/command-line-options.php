@@ -1,53 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><?php options("adaptive-blur", "adaptive-resize", "adaptive-sharpen",
-"adjoin", "affine", "alpha", "alpha-color", "annotate", "antialias", "append",
-"attenuate", "authenticate", "auto-gamma", "auto-level",
-"auto-orient", "backdrop", "background", "bench", "bias",
-"black-point-compensation", "black-threshold", "blend", "blue-primary",
-"blue-shift", "blur", "border", "bordercolor", "borderwidth",
-"brightness-contrast", "cache", "canny", "caption", "cdl", "channel",
-"charcoal", "chop", "clamp", "clip", "clip-mask", "clip-path", "clone",
-"clut", "coalesce", "colorize", "colormap", "color-matrix", "colors",
-"colorspace", "combine", "comment", "compare", "complex", "compose",
-"composite", "compress", "connected-components", "contrast", "contrast-stretch",
-"convolve", "copy", "crop", "cycle", "debug", "decipher", "deconstruct",
-"define", "delay", "delete", "density", "depth", "descend", "deskew",
-"despeckle", "direction", "displace", "display", "dispose",
-"dissimilarity-threshold", "dissolve", "distort", "distribute-cache", "dither",
-"draw", "duplicate", "edge", "emboss", "encipher", "encoding", "endian",
-"enhance", "equalize", "evaluate", "evaluate-sequence", "extent", "extract",
-"family", "features", "fft", "fill", "filter", "flatten", "flip", "floodfill",
-"flop", "font", "foreground", "format", "format[identify]", "frame",
-"frame[import]", "function", "fuzz", "fx", "gamma", "gaussian-blur", "geometry",
-"gravity", "grayscale", "green-primary", "hald-clut", "help",
-"highlight-color", "hough-lines", "iconGeometry", "iconic", "identify", "ift",
-"immutable", "implode", "insert", "intensity", "intent", "interlace",
-"interpolate", "interline-spacing", "interword-spacing", "kerning", "kuwahara",
-"label", "lat", "layers", "level", "level-colors", "limit", "linear-stretch",
-"linewidth", "liquid-rescale", "list", "log", "loop", "lowlight-color",
-"magnify", "map", "map[stream]", "mattecolor", "median", "mean-shift",
-"metric", "mode", "modulate", "moments", "monitor", "monochrome", "morph",
-"morphology", "mosaic", "motion-blur", "name", "negate", "noise", "normalize",
-"opaque", "ordered-dither", "orient", "page", "paint", "path", "pause[animate]",
-"pause[import]", "perceptible", "ping", "pointsize", "polaroid", "poly",
-"posterize", "precision", "preview", "print", "process", "profile", "quality",
-"quantize", "quiet", "radial-blur", "raise", "random-threshold", "read-mask",
-"red-primary", "regard-warnings", "region", "remap", "remote", "render",
-"repage", "resample", "resize", "respect-parentheses", "reverse", "roll",
-"rotate", "sample", "sampling-factor", "scale", "scene", "screen", "seed",
-"segment", "selective-blur", "separate", "sepia-tone", "set", "shade", "shadow",
-"shared-memory", "sharpen", "shave", "shear", "sigmoidal-contrast", "silent",
-"similarity-threshold", "size", "sketch", "smush", "snaps", "solarize",
-"sparse-color", "splice", "spread", "statistic", "stegano", "stereo",
-"storage-type", "stretch", "strip", "stroke",
-"strokewidth", "style", "subimage-search", "swap", "swirl", "synchronize",
-"taint", "text-font", "texture", "threshold", "thumbnail",
-"tile", "tile-offset", "tint", "title", "transform", "transparent",
-"transparent-color", "transpose", "transverse", "treedepth", "trim", "type",
-"undercolor", "unique-colors", "units", "unsharp", "update", "verbose",
-"version", "view", "vignette", "virtual-pixel", "visual", "watermark",
-"wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group", "write", "write-mask"); ?> </p>
-
+<p class="text-center"><?php options("adaptive-blur", "adaptive-resize", "adaptive-sharpen", "adjoin", "affine", "alpha", "alpha-color", "annotate", "antialias", "append", "attenuate", "authenticate", "auto-gamma", "auto-level", "auto-orient", "backdrop", "background", "bench", "bias", "black-point-compensation", "black-threshold", "blend", "blue-primary", "blue-shift", "blur", "border", "bordercolor", "borderwidth", "brightness-contrast", "cache", "canny", "caption", "cdl", "channel", "charcoal", "channel-fx", "chop", "clamp", "clip", "clip-mask", "clip-path", "clone", "clut", "coalesce", "colorize", "colormap", "color-matrix", "colors", "colorspace", "combine", "comment", "compare", "complex", "compose", "composite", "compress", "connected-components", "contrast", "contrast-stretch", "convolve", "copy", "crop", "cycle", "debug", "decipher", "deconstruct", "define", "delay", "delete", "density", "depth", "descend", "deskew", "despeckle", "direction", "displace", "display", "dispose", "dissimilarity-threshold", "dissolve", "distort", "distribute-cache", "dither", "draw", "duplicate", "edge", "emboss", "encipher", "encoding", "endian", "enhance", "equalize", "evaluate", "evaluate-sequence", "extent", "extract", "family", "features", "fft", "fill", "filter", "flatten", "flip", "floodfill", "flop", "font", "foreground", "format", "format[identify]", "frame", "frame[import]", "function", "fuzz", "fx", "gamma", "gaussian-blur", "geometry", "gravity", "grayscale", "green-primary", "hald-clut", "help", "highlight-color", "hough-lines", "iconGeometry", "iconic", "identify", "ift", "immutable", "implode", "insert", "intensity", "intent", "interlace", "interpolate", "interline-spacing", "interword-spacing", "kerning", "kuwahara", "label", "lat", "layers", "level", "level-colors", "limit", "linear-stretch", "linewidth", "liquid-rescale", "list", "log", "loop", "lowlight-color", "magnify", "map", "map[stream]", "mattecolor", "median", "mean-shift", "metric", "mode", "modulate", "moments", "monitor", "monochrome", "morph", "morphology", "mosaic", "motion-blur", "name", "negate", "noise", "normalize", "opaque", "ordered-dither", "orient", "page", "paint", "path", "pause[animate]", "pause[import]", "perceptible", "ping", "pointsize", "polaroid", "poly", "posterize", "precision", "preview", "print", "process", "profile", "quality", "quantize", "quiet", "radial-blur", "raise", "random-threshold", "read-mask", "red-primary", "regard-warnings", "region", "remap", "remote", "render", "repage", "resample", "resize", "respect-parentheses", "reverse", "roll", "rotate", "sample", "sampling-factor", "scale", "scene", "screen", "seed", "segment", "selective-blur", "separate", "sepia-tone", "set", "shade", "shadow", "shared-memory", "sharpen", "shave", "shear", "sigmoidal-contrast", "silent", "similarity-threshold", "size", "sketch", "smush", "snaps", "solarize", "sparse-color", "splice", "spread", "statistic", "stegano", "stereo", "storage-type", "stretch", "strip", "stroke", "strokewidth", "style", "subimage-search", "swap", "swirl", "synchronize", "taint", "text-font", "texture", "threshold", "thumbnail", "tile", "tile-offset", "tint", "title", "transform", "transparent", "transparent-color", "transpose", "transverse", "treedepth", "trim", "type", "undercolor", "unique-colors", "units", "unsharp", "update", "verbose", "version", "view", "vignette", "virtual-pixel", "visual", "watermark", "wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group", "write", "write-mask"); ?> </p> 
 <p class="lead magick-description">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
 
 <div style="margin: auto;">
@@ -930,13 +882,48 @@ alpha channel present, and the <a href="#channel" >-channel</a> setting tells
 the operator to apply the operation using alpha channels. The <a
 href="#clut">-clut</a> operator is a good example of this. </p>
 
+<div style="margin: auto;">
+  <h3 class="magick-header"><a id="channel-fx"></a>-channel-fx <var>expression</var></h3>
+</div>
 
+<p class="magick-description">exchange, extract, or copy one or more image channels.</p>
+
+<p>The expression consists of one or more channels, either mnemonic or numeric (e.g. red or 0, green or 1, etc.), separated by certain operation symbols as follows:</p>
+
+<pre>
+&lt;=&gt;  exchange two channels (e.g. red&lt;=&gt;blue)
+=&gt;   copy one channel to another channel (e.g. red=&gt;green)
+=    assign a constant value to a channel (e.g. red=50%)
+,    write new image with channels in the specified order (e.g. red, green)
+;    add a new output image for the next set of channel operations (e.g. red; green; blue)
+|    move to the next input image for the source of channel data (e.g. | gray=>alpha)
+</pre>
+
+<p>For example, to create 3 grayscale images from the red, green, and blue channels of an image, use:</p>
+
+<pre>
+-channel-fx "red; green; blue"
+</pre>
+
+<p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
+
+<p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
+<pre>
+convert wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
+</pre>
+<p>Use a similar command to define a read mask:</p>
+<pre>
+convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
+</pre>
+
+<p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="charcoal"></a>-charcoal <var>factor</var></h3>
 </div>
 
 <p class="magick-description">Simulate a charcoal drawing.</p>
+
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="chop"></a>-chop <var>geometry</var></h3>
@@ -1772,10 +1759,10 @@ available:</p>
 
   <tr>
     <td>colorspace:auto-grayscale=<var>on|off</var></td>
-    <td>prevent automatic conversion to grayscale inside coders that support 
-    grayscale. This should be accompanied by -type truecolor. PNG and TIF do 
-    not need this define. With PNG, just use PNG24:image. With TIF, just use 
-    -type truecolor. JPG and PSD will need this define.</td> 
+    <td>prevent automatic conversion to grayscale inside coders that support
+    grayscale. This should be accompanied by -type truecolor. PNG and TIF do
+    not need this define. With PNG, just use PNG24:image. With TIF, just use
+    -type truecolor. JPG and PSD will need this define.</td>
   </tr>
 
   <tr>
@@ -1792,9 +1779,9 @@ available:</p>
 
   <tr>
     <td>compose:clamp=<var>on|off</var></td>
-    <td>set each pixel whose value is below zero to zero and any the pixel 
-    whose value is above the quantum range to the quantum range (e.g. 65535) 
-    otherwise the pixel value remains unchanged.  Define supported in 
+    <td>set each pixel whose value is below zero to zero and any the pixel
+    whose value is above the quantum range to the quantum range (e.g. 65535)
+    otherwise the pixel value remains unchanged.  Define supported in
     ImageMagick 6.9.1-3 and above.</td>
   </tr>
 
