@@ -360,7 +360,7 @@ image sequence immediately as it appears on the command-line.  Choose from
 these image sequence operators:</p>
 
 <ul>
-<?php options("append", "affinity", "average", "clut", "coalesce", "combine", "compare", "complex", "composite", "copy", "crop", "debug", "deconstruct", "delete", "evaluate-sequence", "fft", "flatten", "fx", "hald-clut", "ift", "identify", "insert", "layers", "limit", "map", "maximum", "minimum", "morph", "mosaic", "optimize", "print", "process", "quiet", "separate", "swap", "write");
+<?php options("append", "affinity", "average", "channel-fx", "clut", "coalesce", "combine", "compare", "complex", "composite", "copy", "crop", "debug", "deconstruct", "delete", "evaluate-sequence", "fft", "flatten", "fx", "hald-clut", "ift", "identify", "insert", "layers", "limit", "map", "maximum", "minimum", "morph", "mosaic", "optimize", "print", "process", "quiet", "separate", "swap", "write");
 ?>
 </ul>
 <p>In this example, <var>-append</var> appends three images into one:</p>
