@@ -1179,7 +1179,7 @@ LCHuv        LMS          Log          Luv
 OHTA         Rec601YCbCr  Rec709YCbCr  RGB
 scRGB        sRGB         Transparent  xyY
 XYZ          YCbCr        YCC          YDbDr
-YIQ          YPbPr        YUV
+YIQ          YPbPr        YUV          Undefined
 </pre>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
@@ -1284,6 +1284,8 @@ YIQ          YPbPr        YUV
 </table>
 
 <p>Note the scRGB colorspace requires HDRI support otherwise it behaves just like linear RGB.</p>
+
+<p>Use the <code>Undefined</code> colorspace to identify multi-spectral images.</p>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="combine"></a>-combine</h3>
