@@ -14,7 +14,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p>The authoritative ImageMagick web site is <a href="https://www.imagemagick.org/">https://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
 
-<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.</p>
+<p>The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other. With <a href="https://www.imagemagick.org/">ImageMagick version 7</a> we aim to improve the design based on lessons learned from the version 6 implementation.</p>
 
 <h2 class="magick-header"><a id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
