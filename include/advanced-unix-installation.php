@@ -380,7 +380,7 @@ Quantum Depth   Virtual Memory
 <dt>sudo make install</dt>
   <dd>Install ImageMagick.</dd>
 <dt>make check</dt>
-  <dd>Run tests using the installed ImageMagick (<code>sudo make install</code> must be done first). Freetype and Ghostscript is a prerequisite, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will fail.</dd>
+  <dd>Run tests using the installed ImageMagick (<code>sudo make install</code> must be done first). Freetype and Ghostscript are a prerequisite, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will fail.</dd>
 <dt>make clean</dt>
   <dd> Remove everything in the build directory created by <code>make</code>.</dd>
 <dt>make distclean</dt>
