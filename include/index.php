@@ -14,7 +14,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p>The authoritative ImageMagick web site is <a href="https://www.imagemagick.org/">https://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
 
-<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.</p>
+<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.</p>
 
 <h2 class="magick-header"><a id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
@@ -155,7 +155,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <h2 class="magick-header"><a id="news"></a>News</h2>
 
-<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="http://legacy.imagemagick.org/">http://legacy.imagemagick.org</a>.  Learn how ImageMagick version 7 differs from previous versions with our <a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">porting guide</a>.</p>
+<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.  Learn how ImageMagick version 7 differs from previous versions with our <a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">porting guide</a>.</p>
 
 <p>ImageMagick best practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
 
