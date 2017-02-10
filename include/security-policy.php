@@ -43,7 +43,7 @@ convert: no images defined `wizard.jpg'
 <pre>
   &lt;policy domain="delegate" rights="none" pattern="*" />
   &lt;policy domain="coder" rights="none" pattern="*" />
-  &lt;policy domain="coder" rights="all" pattern="{GIF,JPEG,PNG,WEBP}" />
+  &lt;policy domain="coder" rights="read|write" pattern="{GIF,JPEG,PNG,WEBP}" />
 </pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
