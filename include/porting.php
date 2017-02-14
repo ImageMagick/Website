@@ -369,6 +369,8 @@ convert ... -alpha discrete -blur 0x1 ...
 <p>To remove the alpha values from your image, use <code>-alpha off</code>.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
+<dt>-channel</dt>
+<dd>the default is to update the RGBA channels, previously, in IMv6, the default was RGB.  If you get results that differ from IMv6, you may need to specify <code>-channel RGB</code> on your command line (e.g. -level-colors option).</dd>
 <dt>+combine</dt>
 <dd>This option now requires an argument, the image colorspace (e.g. +combine sRGB).</dd>
 </dl>
