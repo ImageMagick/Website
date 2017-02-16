@@ -48,7 +48,7 @@ convert: no images defined `wizard.jpg'
 
 <p>As of ImageMagick 7.0.4-10, you can allocate the pixel cache with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero with some performance degradation.  You can also shred any temporary files for increased security.  The value is the number of times to shred a temporary file.  For example,</p>
 <pre>
-  &lt;policy domain="system" name="pixel-cache" value="anonymous"/>
+  &lt;policy domain="system" name="pixel-cache-memory" value="anonymous"/>
   &lt;policy domain="system" name="shred" value="1"/>
 </pre>
 
