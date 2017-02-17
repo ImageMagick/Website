@@ -4,13 +4,13 @@
 <p class="lead magick-description">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
 
 <pre>
-convert image.jpg image.png
+magick image.jpg image.png
 </pre>
 
 <p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
 <pre>
-convert label.gif +matte \
+magick label.gif +matte \
   \( +clone  -shade 110x90 -normalize -negate +clone  -compose Plus -composite \) \
   \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -matte \) \
   -delete 0 +swap  -compose Multiply -composite  button.gif");
@@ -37,7 +37,7 @@ convert label.gif +matte \
 <p>Given the complexity of the rendering, you might be surprised it is accomplished by a single command-line:</p>
 
 <pre>
-convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
+magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
   -draw 'roundrectangle 16, 5, 304, 85 20,40' +tile -fill snow \
   -draw 'roundrectangle 264, 5, 304, 85  20,40' -tile gradient:chartreuse-green \
   -draw 'roundrectangle 16,  5, 180, 85  20,40' -tile gradient:chartreuse1-chartreuse3 \
@@ -98,7 +98,7 @@ convert -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-s
 </p>
 
 <pre>
-convert *.jpg images.gif
+magick *.jpg images.gif
 </pre>
 
 <h4>Explicit Image Format</h4>
@@ -119,7 +119,7 @@ so we explicitly set one:
 </p>
 
 <pre>
-convert -size 640x480 -depth 8 rgb:image image.png
+magick -size 640x480 -depth 8 rgb:image image.png
 </pre>
 
 <h4>Built-in Images and Patterns</h4>
@@ -128,7 +128,7 @@ convert -size 640x480 -depth 8 rgb:image image.png
 </p>
 
 <pre>
-convert -size 640x480 pattern:checkerboard checkerboard.png
+magick -size 640x480 pattern:checkerboard checkerboard.png
 </pre>
 
 <h4>STDIN, STDOUT, and file descriptors</h4>
@@ -137,7 +137,7 @@ convert -size 640x480 pattern:checkerboard checkerboard.png
 </p>
 
 <pre>
-convert logo: gif:- | display gif:-
+magick logo: gif:- | display gif:-
 </pre>
 
 <p>The second explicit format "<code>gif:</code>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <?php cmd("display"); ?>
@@ -145,21 +145,21 @@ convert logo: gif:- | display gif:-
 </p>
 
 <pre>
-convert rose: gif:- | convert - -resize "200%" bigrose.jpg'
+magick rose: gif:- | magick - -resize "200%" bigrose.jpg'
 </pre>
 
 <p>Other pipes can be accessed via their <var>file descriptors</var> (as of version 6.4.9-3). The file descriptors 0, 1, and 2 are reserved for the standard streams STDIN, STDOUT, and STDERR, respectively, but a pipe associated with a file descriptor number <var>N</var>&gt;2 can be accessed using the pseudonym <code>fd:</code><var>N</var>. (The pseudonyms <code>fd:0</code> and <code>fd:1</code> can be used for STDIN and STDOUT.) The next example shows how to append image data piped from files with  descriptors 3 and 4 and direct the result to the file with descriptor number 5.
 </p>
 
 <pre>
-convert fd:3 fd:4 -append fd:5
+magick fd:3 fd:4 -append fd:5
 </pre>
 
 <p>When needed, explicit image formats can be given as mentioned earlier, as in the following.
 </p>
 
 <pre>
-convert gif:fd:3 jpg:fd:4 -append tif:fd:5
+magick gif:fd:3 jpg:fd:4 -append tif:fd:5
 </pre>
 
 <h4>Selecting Frames</h4>
@@ -167,7 +167,7 @@ convert gif:fd:3 jpg:fd:4 -append tif:fd:5
 </p>
 
 <pre>
-convert 'images.gif[0]' image.png
+magick 'images.gif[0]' image.png
 </pre>
 
 <p class="bg-info">Unix shells generally interpret brackets so we enclosed the filename in quotes above.
@@ -178,14 +178,14 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 </p>
 
 <pre>
-convert 'images.gif[0-3]' images.mng
+magick 'images.gif[0-3]' images.mng
 </pre>
 
 <p>Finally, you can read more than one image from a sequence, out-of-order. The next command gets the third image in the sequence, followed by the second, and then the fourth:
 </p>
 
 <pre>
-convert 'images.gif[3,2,4]' images.mng
+magick 'images.gif[3,2,4]' images.mng
 </pre>
 
 <p>Notice that in the last two commands, a single image is written. The output in this case, where the image type is MNG, is a multi-frame file because the MNG format supports multiple frames. Had the output format been JPG, which only supports single frames, the output would have consisted of separate frames. More about that below, in the section about the <a href="#output">Output Filename</a>.
@@ -196,8 +196,7 @@ convert 'images.gif[3,2,4]' images.mng
 </p>
 
 <pre>
-convert -size 6000x4000 -depth 8 \
-  'rgb:image[600x400+1900+2900]' image.jpg
+magick -size 6000x4000 -depth 8 'rgb:image[600x400+1900+2900]' image.jpg
 </pre>
 
 <p>
@@ -205,8 +204,7 @@ convert -size 6000x4000 -depth 8 \
 </p>
 
 <pre>
-convert -size 6000x4000 -depth 8 \
-  -extract 600x400+1900+2900 rgb:image image.jpg
+magick -size 6000x4000 -depth 8 -extract 600x400+1900+2900 rgb:image image.jpg
 </pre>
 
 <h4>Inline Image Resize</h4>
@@ -214,7 +212,7 @@ convert -size 6000x4000 -depth 8 \
 </p>
 
 <pre>
-convert '*.jpg' -resize 120x120 thumbnail%03d.png
+magick '*.jpg' -resize 120x120 thumbnail%03d.png
 </pre>
 
 <p>Here <var>all</var> the images are read and subsequently
@@ -223,7 +221,7 @@ is read:
 </p>
 
 <pre>
-convert '*.jpg[120x120]' thumbnail%03d.png
+magick '*.jpg[120x120]' thumbnail%03d.png
 </pre>
 
 <h4>Inline Image Crop</h4>
@@ -231,14 +229,14 @@ convert '*.jpg[120x120]' thumbnail%03d.png
 </p>
 
 <pre>
-convert '*.jpg' -crop 120x120+10+5 thumbnail%03d.png
+magick '*.jpg' -crop 120x120+10+5 thumbnail%03d.png
 </pre>
 
 <p>Here <var>all</var> the images are read and subsequently cropped.  It is faster and less resource-intensive to crop each image as it is read:
 </p>
 
 <pre>
-convert '*.jpg[120x120+10+5]' thumbnail%03d.png
+magick '*.jpg[120x120+10+5]' thumbnail%03d.png
 </pre>
 
 
@@ -257,7 +255,7 @@ frame003.jpg
 <p>We then expect this command:</p>
 
 <pre>
-convert @myimages.txt mymovie.gif
+magick @myimages.txt mymovie.gif
 </pre>
 
 <p>to read the images <code>frame001.jpg</code>, <code>frame002.jpg</code>, and <code>frame003.jpg</code> and convert them to a GIF image sequence.  </p>
@@ -279,7 +277,7 @@ embedding a formatting character in the filename with a scene range.  Consider
 the filename <code>image-%d.jpg[1-5]</code>. The command</p>
 
 <pre>
-convert image-%d.jpg[1-5]
+magick image-%d.jpg[1-5]
 </pre>
 
 <p>causes ImageMagick to attempt to read images with these filenames:
@@ -297,7 +295,7 @@ image-5.jpg
 <p>By default, the input stream is buffered.  To ensure information on the source file or terminal is read as soon as its available, set the buffer size to 0:</p>
 
 <pre>
-convert logo: gif:- | display -define stream:buffer-size=0 gif:-
+magick logo: gif:- | display -define stream:buffer-size=0 gif:-
 </pre>
 
 <h2 class="magick-header"><a id="option"></a>Command-line Options</h2>
@@ -329,7 +327,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 </p>
 
 <pre>
-convert -channel RGB wand.png wizard.png images.png
+magick -channel RGB wand.png wizard.png images.png
 </pre>
 
 <h4 class="magick-header"><a id="operator"></a>Image Operator</h4>
@@ -351,7 +349,7 @@ include:</p>
 <p>In this example, <var>-negate</var> negates the wand image but not the wizard:</p>
 
 <pre>
-convert wand.png -negate wizard.png images.png
+magick wand.png -negate wizard.png images.png
 </pre>
 
 <h4 class="magick-header"><a id="channel"></a>Image Channel Operator</h4>
@@ -374,7 +372,7 @@ these image sequence operators:</p>
 <p>In this example, <var>-append</var> appends three images into one:</p>
 
 <pre>
-convert mikayla.png picnic.png beach.png -append vacation.png
+magick mikayla.png picnic.png beach.png -append vacation.png
 </pre>
 
 <h4 class="magick-header"><a id="geometry"></a>Image Geometry</h4>
@@ -469,11 +467,11 @@ This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dime
 </p>
 
 <pre>
-convert logo: -resize '200%' bigWiz.png
-convert logo: -resize '200x50%' longShortWiz.png
-convert logo: -resize '100x200' notThinWiz.png
-convert logo: -resize '100x200^' biggerNotThinWiz.png
-convert logo: -resize '100x200!' dochThinWiz.png
+magick logo: -resize '200%' bigWiz.png
+magick logo: -resize '200x50%' longShortWiz.png
+magick logo: -resize '100x200' notThinWiz.png
+magick logo: -resize '100x200^' biggerNotThinWiz.png
+magick logo: -resize '100x200!' dochThinWiz.png
 </pre>
 
 <p>The first of the four commands is simple—it stretches both the width and height of the input image by <code>200%</code> in each direction; it magnifies the whole thing by a factor of two. The second command specifies different percentages for each direction, stretching the width to <code>200</code>% and squashing the height to <code>50%</code>. The resulting image (in this example) has dimensions 1280x240. Notice that the percent symbol needn't be repeated; the following are equivalent: <code>200x50%</code>, <code>200%x50</code>, <code>200%x50%</code>.
@@ -491,10 +489,10 @@ Here are a few more examples:
 </p>
 
 <pre>
-convert logo: -resize '100' wiz1.png
-convert logo: -resize 'x200' wiz2.png
-convert logo: -resize '100x200&gt;' wiz3.png
-convert logo: -resize '100x200&lt;' wiz4.png
+magick logo: -resize '100' wiz1.png
+magick logo: -resize 'x200' wiz2.png
+magick logo: -resize '100x200&gt;' wiz3.png
+magick logo: -resize '100x200&lt;' wiz4.png
 </pre>
 
 <p>If only one dimension is given it is taken to be the width. When only the width is specified, as in the first example above, the width is accepted as given and the height is chosen to maintain the aspect ratio of the input image. Similarly, if only the height is specified, as in the second example above, the height is accepted and the width is chosen to maintain the aspect ratio.</p>
@@ -505,7 +503,7 @@ convert logo: -resize '100x200&lt;' wiz4.png
 <p>Finally, use <code>@</code> to specify the maximum area in pixels of an image, again while attempting to preserve aspect ratio. (Pixels take only integer values, so some approximation is always at work.) In the following example, an area of 10000 pixels is requested. The resulting file has dimensions 115x86, which has 9890 pixels. </p>
 
 <pre>
-convert logo: -resize '10000@' wiz10000.png
+magick logo: -resize '10000@' wiz10000.png
 </pre>
 
 <p class="bg-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <code>&lt;</code> or <code>&gt;</code> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <code>^</code>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
@@ -518,10 +516,9 @@ Here are some examples to illustrate the use of <var>offsets</var> in <var>geome
 </p>
 
 <pre>
-convert logo: -region '100x200+10+20' -negate wizNeg1.png
-convert logo: -region '100x200-10+20' -negate wizNeg2.png
-convert logo: -gravity center -region '100x200-10+20' \
-  -negate wizNeg3.png
+magick logo: -region '100x200+10+20' -negate wizNeg1.png
+magick logo: -region '100x200-10+20' -negate wizNeg2.png
+magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png
 </pre>
 
 <p>Note that offsets always require +/− signs. The offset is not actually a true location within the image; its coordinates must be added to some other location. Let's refer to that as the <var>current location</var>. In the first two examples above, though, that location is the upper-left hand corner of the image, which has coordinates (0,0). (That is the default situation when there are no other directives given to change it.) The first example above puts the <code>100x200</code> rectangle's own upper-left corner at (10,20). </p>
@@ -537,7 +534,7 @@ convert logo: -gravity center -region '100x200-10+20' \
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
 <pre>
-convert wand.gif \( wizard.gif -rotate 30 \) +append images.gif
+magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif
 </pre>
 
 
@@ -574,7 +571,7 @@ above.</p>
   </p>
 
 <pre>
-convert image.jpg rgb:image
+magick image.jpg rgb:image
 </pre>
 
 
@@ -583,7 +580,7 @@ convert image.jpg rgb:image
   </p>
 
 <pre>
-convert logo: gif:- | display gif:-
+magick logo: gif:- | display gif:-
 </pre>
 
 <p>Here the explicit format is optional.  The GIF image format has a signature that uniquely identifies it so ImageMagick can readily recognize the format as GIF.</p>
@@ -602,7 +599,7 @@ image-2.jpg
 </p>
 
 <pre>
-convert rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
+magick rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
 </pre>
 
 <p>writes an image with this filename:
@@ -615,7 +612,7 @@ convert rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
 <p>Finally to convert multiple JPEG images to individual PDF pages, use:</p>
 
 <pre>
-  convert *.jpg +adjoin page-%d.pdf
+magick *.jpg +adjoin page-%d.pdf
 </pre>
 
 <h4>Stream Buffering</h4>
@@ -623,6 +620,6 @@ convert rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
 
 <pre>
-convert -define stream:buffer-size=0 logo: gif:- | display gif:-
+magick -define stream:buffer-size=0 logo: gif:- | display gif:-
 </pre>
 </div>
