@@ -93,9 +93,6 @@ Path: ImageMagick/policy.xml
   Policy: System
     name: precision
     value: 6
-  Policy: Cache
-    name: shared-secret
-    value: replace with your secret phrase
   Policy: Path
     rights: None 
     pattern: @*
@@ -104,6 +101,7 @@ Path: [built-in]
   Policy: Undefined
     rights: None 
 </pre>
+<p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
 
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
