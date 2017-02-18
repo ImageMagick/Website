@@ -8,7 +8,7 @@
 
 <dl class="dl-horizontal">
   <dt><a id="magick"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></dt><dd>convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
-  <dt><a id="magick-script"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-script.php">magick-script</a></dt><dd>use this scripting language convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
+  <dt><a id="magick-script"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-script.php">magick-script</a></dt><dd>use this scripting language interpreter to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
 </dl>
 <p>We also support tools for compatibility with ImageMagick <a href="http://legacy.imagemagick.org">version 6</a>:</p>
 <dl class="dl-horizontal">
