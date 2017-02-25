@@ -81,7 +81,7 @@
   </footer>
 </div><!-- /.container -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="<?php echo $_SESSION['RelativePath']?>/../js/magick.php"></script>
 </div>
 </body>
