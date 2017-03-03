@@ -292,7 +292,7 @@ $MAGICK_FONT_PATH
     <td>Set maximum parallel threads.  Many ImageMagick algorithms run in parallel on multi-processor systems.  Use this environment variable to set the maximum number of threads that are permitted to run in parallel.</td>
   </tr>
   <tr>
-    <td>MAGICK_THROTTLE</td>
+    <td>MAGICK_THROTTLE_LIMIT</td>
     <td>Periodically yield the CPU for at least the time specified in milliseconds.</td>
   </tr>
   <tr>
