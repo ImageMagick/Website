@@ -138,7 +138,7 @@ sudo port install ImageMagick
     <td>ImageMagick-x86_64-apple-darwin16.4.0.tar.gz</td>
     <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin16.4.0.tar.gz">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin16.4.0.tar.gz">download</a></td>
-    <td>Mac OS X El Capitan</td>
+    <td>MacOS Sierra</td>
   </tr>
 </table></div>
 
