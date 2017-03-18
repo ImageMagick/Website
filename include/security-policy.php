@@ -80,7 +80,7 @@ Path: ImageMagick/policy.xml
     value: 256MiB
   Policy: Resource
     name: area
-    value: 128KP
+    value: 16KP
   Policy: Resource
     name: height
     value: 8KP
