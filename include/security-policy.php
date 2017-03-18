@@ -13,7 +13,7 @@
   &lt;policy domain="resource" name="map" value="512MiB"/>
   &lt;policy domain="resource" name="width" value="8KP"/>
   &lt;policy domain="resource" name="height" value="8KP"/>
-  &lt;policy domain="resource" name="area" value="128MB"/>
+  &lt;policy domain="resource" name="area" value="16KP"/>
   &lt;policy domain="resource" name="disk" value="1GiB"/>
   &lt;policy domain="resource" name="file" value="768"/>
   &lt;policy domain="resource" name="thread" value="2"/>
@@ -80,7 +80,7 @@ Path: ImageMagick/policy.xml
     value: 256MiB
   Policy: Resource
     name: area
-    value: 128MB
+    value: 128KP
   Policy: Resource
     name: height
     value: 8KP
