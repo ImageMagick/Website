@@ -1876,6 +1876,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>exr:color-type=<var>value</var></td>
+     <td>Specifies the color type for the EXR format: RGB, RGBA, YC, YCA, Y, YA, R, G, B, A).</td>
+  </tr>
+
+  <tr>
     <td>filter:option=<var>value</var></td>
      <td>Set a filter option for use with <a href="#resize">-resize</a>.
     See <a href="#filter">-filter</a> for details.</td>
@@ -2068,6 +2073,16 @@ available:</p>
 
   <tr>
     <td>pdf:use-trimbox=<var>true</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:stop-on-error=<var>true</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:pdf:page-direction=<var>right-to-left</var></td>
     <td> </td>
   </tr>
 
@@ -2398,6 +2413,21 @@ available:</p>
   <tr>
     <td>type:hinting=<var>off</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>txt:compliance=<var>css</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>x:screen=<var>true</var></td>
+    <td>Obtains the image from the root window </td>
+  </tr>
+
+  <tr>
+    <td>x:silent=<var>true</var></td>
+    <td>Turns off the beep when importing an image </td>
   </tr>
 </table>
 
