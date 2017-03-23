@@ -1897,6 +1897,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>exr:color-type=<var>value</var></td>
+     <td>Specifies the color type for the EXR format: RGB, RGBA, YC, YCA, Y, YA, R, G, B, A).</td>
+  </tr>
+
+  <tr>
     <td>filter:option=<var>value</var></td>
      <td>Set a filter option for use with <a href="#resize">-resize</a>.
     See <a href="#filter">-filter</a> for details.</td>
@@ -1951,8 +1956,7 @@ available:</p>
 
   <tr>
     <td>jp2:rate=<var>value</var></td>
-     <td>Specify the compression factor to use while writing JPEG-2000 files. The
-    compression factor is the reciprocal of the compression ratio. The valid
+     <td>Specify the compression factor to use while writing JPEG-2000 files. The compression factor is the reciprocal of the compression ratio. The valid
     range is 0.0 to 1.0, with 1.0 indicating lossless compression. If defined,
     this value overrides the -quality setting.  A quality setting of 75
     results in a rate value of 0.06641. Same for JPT, JC2, and J2K</td>
@@ -2092,13 +2096,23 @@ available:</p>
   </tr>
 
   <tr>
+    <td>pdf:stop-on-error=<var>true</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:pdf:page-direction=<var>right-to-left</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>
+  
   <tr>
     <td>png:color-type=<var>value</var></td>
-     <td>desired bit-depth and color-type for PNG output.  You can force the PNG
-    encoder to use a different bit-depth and color-type than it would have
+     <td>desired bit-depth and color-type for PNG output. You can force the PNG encoder to use a different bit-depth and color-type than it would have
     normally selected, but only if this does not cause any loss of image
     quality. Any attempt to reduce image quality is treated as an error and no
     PNG file is written.  E.g., if you have a 1-bit black-and-white image, you
@@ -2257,8 +2271,7 @@ available:</p>
 
   <tr>
     <td>png:swap-bytes[=<var>true</var>]</td>
-     <td>The PNG specification requires that any multi-byte integers be stored in
-    network byte order (MSB-LSB endian).  This option allows you to
+     <td>The PNG specification requires that any multi-byte integers be stored in network byte order (MSB-LSB endian).  This option allows you to
     fix any invalid PNG files that have 16-bit samples stored incorrectly
     in little-endian order (LSB-MSB).  The "-define png:swap-bytes" option
     must appear before the input filename on the commandline.  The swapping
@@ -2318,8 +2331,8 @@ available:</p>
 
   <tr>
     <td>quantum:polarity=<var>photometric-interpretation</var></td>
-     <td>Set the photometric-interpretation of an image (typically for TIFF image
-    file format) to either <code>min-is-black</code> (default) or
+     <td>Set the photometric-interpretation of an image (typically for TIFF 
+     image file format) to either <code>min-is-black</code> (default) or
     <code>min-is-white</code>.</td>
   </tr>
 
@@ -2342,7 +2355,8 @@ available:</p>
 
   <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
-    <td>Specify the alpha extra samples as associated, unassociated or unspecified </td>
+    <td>Specify the alpha extra samples as associated, unassociated or
+     unspecified </td>
   </tr>
 
   <tr>
@@ -2387,8 +2401,23 @@ available:</p>
   </tr>
 
   <tr>
-    <td>type:hinting=<var>off</var></td>
+    <td>type:features=<var>string</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>txt:compliance=<var>css</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>x:screen=<var>true</var></td>
+    <td>Obtains the image from the root window </td>
+  </tr>
+
+  <tr>
+    <td>x:silent=<var>true</var></td>
+    <td>Turns off the beep when importing an image </td>
   </tr>
 </table>
 
