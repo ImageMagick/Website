@@ -1910,6 +1910,16 @@ available:</p>
   </tr>
 
   <tr>
+    <td>identify:locate=<var>minimum|maximum</var></td>
+     <td>Locates the coordinates of one or more image minimum or maximum</td>
+  </tr>
+
+  <tr>
+    <td>identify:limit=<var>number</var></td>
+     <td>Locates the coordinates for the number of minima or maxima specified</td>
+  </tr>
+
+  <tr>
     <td>jp2:layer-number=<var>value</var></td>
      <td>Sets the maximum number of quality layers to decode. Same for JPT, JC2,
     and J2K</td>
