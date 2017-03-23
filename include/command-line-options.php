@@ -1873,7 +1873,6 @@ available:</p>
     <td>auto crop the image after deskewing.</td>
   </tr>
 
-
   <tr>
     <td>delegate:bimodal=<var>true</var></td>
      <td>Specifies direct conversion from Postscript to PDF.</td>
@@ -2109,7 +2108,7 @@ available:</p>
     <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>
-  
+
   <tr>
     <td>png:color-type=<var>value</var></td>
      <td>desired bit-depth and color-type for PNG output. You can force the PNG encoder to use a different bit-depth and color-type than it would have
@@ -2401,7 +2400,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>type:features=<var>string</var></td>
+    <td>type:hinting=<var>off</var></td>
     <td> </td>
   </tr>
 
