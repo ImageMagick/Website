@@ -46,7 +46,7 @@ convert: no images defined `wizard.jpg'
   &lt;policy domain="coder" rights="read|write" pattern="{GIF,JPEG,PNG,WEBP}" />
 </pre>
 
-<p>As of ImageMagick 6.9.8-2, you can allocate the pixel cache with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also shred any temporary files for increased security.  The value is the number of times to shred a temporary file. For example,</p>
+<p>As of ImageMagick 6.9.8-3, you can allocate the pixel cache with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also shred any temporary files for increased security.  The value is the number of times to shred a temporary file. For example,</p>
 <pre>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="system" name="shred" value="1"/>
