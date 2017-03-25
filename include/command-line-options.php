@@ -2374,8 +2374,8 @@ available:</p>
   </tr>
 
   <tr>
-    <td>tiff:exif-properties=<var>false</var></td>
-    <td>Skips reading the EXIF properties.</td>
+    <td>tiff:exif-properties=<var>true</var></td>
+    <td>Enables reading the EXIF properties.</td>
   </tr>
 
   <tr>
