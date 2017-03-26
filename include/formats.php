@@ -667,7 +667,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
     <td>PCD</td>
     <td>RW</td>
     <td>Photo CD</td>
-    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported).</td>
+    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bordercolor">-bordercolor</a> to specify the border color (e.g. <code>-bordercolor black</code>).</td>
   </tr>
 
   <tr>
