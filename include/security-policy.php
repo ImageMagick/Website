@@ -2,9 +2,9 @@
 <p class="text-center"><a href="#policy">Security Policy </a> • <a href="#other">Other Security Considerations</a></p>
 
 
-<p class="lead magick-description">ImageMagick includes a security policy configuration file, <code>policy.xml</code>. It is useful for limiting the resources consumed by ImageMagick and can help prevent a denial-of-service or other exploits.</p>
+<p class="lead magick-description">ImageMagick includes a security policy configuration file, <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>. It is useful for limiting the resources consumed by ImageMagick and can help prevent a denial-of-service or other exploits.</p>
 
-<p>As an example, suppose you download an image from the internet and unbeknownst to you its been crafted to generate a 20000 by 20000 pixel image. ImageMagick attempts to allocate enough resources (memory, disk) and your system will likely deny the resource request and exit. However, its also possible that your computer might be temporarily sluggish or unavailable or ImageMagick may abort. To prevent such a scenario, you can set limits in the <code>policy.xml</code> configuration file. You may ask why ImageMagick does not already include reasonable limits? Simply because what is reasonable in your environment, might not be reasonable to someone else. For example, one user has access to a host with 1TB of memory whereas another user is running ImageMagick on an iPhone. By policy, permitting giga-pixel image processing on the large memory host makes sense, not so much for the resource constrained iPhone. If you utilize ImageMagick from a public website, you may want to increase security by preventing usage of the MVG or HTTPS coders. Only you can decide what are reasonable limits taking in consideration your environment. We provide this policy with reasonable limits and encourage you to modify it to suit your local environment:</p>
+<p>As an example, suppose you download an image from the internet and unbeknownst to you its been crafted to generate a 20000 by 20000 pixel image. ImageMagick attempts to allocate enough resources (memory, disk) and your system will likely deny the resource request and exit. However, its also possible that your computer might be temporarily sluggish or unavailable or ImageMagick may abort. To prevent such a scenario, you can set limits in the <code>policy.xml</code> configuration file. You may ask why ImageMagick does not already include reasonable limits? Simply because what is reasonable in your environment, might not be reasonable to someone else. For example, you may have ImageMagick sandboxed where security is not a concern, whereas another user may use ImageMagick to process images on their publically accessible website.  Or ImageMagick is running on a host with 1TB of memory whereas another ImageMagick instance is running on an iPhone. By policy, permitting giga-pixel image processing on the large memory host makes sense, not so much for the resource constrained iPhone. If you utilize ImageMagick from a public website, you may want to increase security by preventing usage of the MVG or HTTPS coders. Only you can decide what are reasonable limits taking in consideration your environment. We provide this policy with reasonable limits and encourage you to modify it to suit your local environment:</p>
 
 <pre class="pre-scrollable">
 &lt;policymap>
@@ -38,7 +38,7 @@ convert: unable to open file: No such file or directory
 convert: no images defined `wizard.jpg'
 </pre>
 
-<p>As of ImageMagick 6.9.7-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
+<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
 <pre>
   &lt;policy domain="delegate" rights="none" pattern="*" />
@@ -46,7 +46,7 @@ convert: no images defined `wizard.jpg'
   &lt;policy domain="coder" rights="read|write" pattern="{GIF,JPEG,PNG,WEBP}" />
 </pre>
 
-<p>As of ImageMagick 6.9.8-3, you can allocate the pixel cache with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also shred any temporary files for increased security.  The value is the number of times to shred a temporary file. For example,</p>
+<p>As of ImageMagick 7.0.5-4, you can allocate the pixel cache with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data before deleting) a temporary file.  For example,</p>
 <pre>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="system" name="shred" value="1"/>
