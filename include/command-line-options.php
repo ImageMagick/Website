@@ -1275,6 +1275,7 @@ YIQ          YPbPr        YUV          Undefined
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="combine"></a>-combine</h3>
+  <h3 class="magick-header">+combine <var>colorspace</var></h3>
 </div>
 
 <p class="magick-description">Combine one or more images into a single image.</p>
