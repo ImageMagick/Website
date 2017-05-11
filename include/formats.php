@@ -207,7 +207,7 @@ the supported image formats.</p>
     <td>DCM</td>
     <td>R</td>
     <td>Digital Imaging and Communications in Medicine (DICOM) image</td>
-    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values.</td>
+    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:rescale=true</a> to enable interpretation of the rescale slope and intercept settings in the file. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:window=centerXwidth</a> to override the center and width settings in the file with your own values.</td>
   </tr>
 
   <tr>
