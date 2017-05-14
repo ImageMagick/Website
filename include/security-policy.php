@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#other">Other Security Considerations</a></p>
+<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#zer-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
 
 <p class="lead magick-description">ImageMagick includes a security policy configuration file, <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>. It is useful for limiting the resources consumed by ImageMagick and can help prevent a denial-of-service or other exploits.</p>
@@ -105,6 +105,19 @@ Path: [built-in]
 <p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
 
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
+
+<h2 class="magick-header"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
+
+<p>A zero configuration build of ImageMagick does not permit external configurat
+ion files.  To define your security policy, you must edit the <code>magick/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
+
+<pre>
+static const char
+  *ZeroConfigurationPolicy = \
+"&lt;policymap> \
+  &lt;policy domain=\"coder\" rights=\"none\" pattern=\"MVG\"/> \
+&lt;/policymap>";
+</pre>
 
 <h2 class="magick-header"><a id="other"></a>Other Security Considerations</h2>
 
