@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#zer-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
+<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
 
 <p class="lead magick-description">ImageMagick includes a security policy configuration file, <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>. It is useful for limiting the resources consumed by ImageMagick and can help prevent a denial-of-service or other exploits.</p>
