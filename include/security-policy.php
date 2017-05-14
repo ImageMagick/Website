@@ -109,7 +109,7 @@ Path: [built-in]
 <h2 class="magick-header"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
 
 <p>A zero configuration build of ImageMagick does not permit external configurat
-ion files.  To define your security policy, you must edit the <code>magick/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
+ion files.  To define your security policy, you must instead edit the <code>magick/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
 
 <pre>
 static const char
