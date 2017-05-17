@@ -8,7 +8,7 @@
 <p>We list a few examples of the <code>montage</code> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
 <pre>
-montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
+magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
 </pre>
 
 <ul>
@@ -27,7 +27,7 @@ montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
 <p>Ok, let's add some decorations:</p>
 
 <pre>
-montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
+magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
 </pre>
 
 <ul>

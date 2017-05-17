@@ -8,7 +8,7 @@
 <p>We list a few examples of the <code>composite</code> command here to illustrate its usefulness and ease of use.  To get started, lets overlay a smiley face over a rose:</p>
 
 <pre>
-composite -gravity center smile.gif  rose: rose-over.png
+magick composite -gravity center smile.gif  rose: rose-over.png
 </pre>
 
 <ul>
@@ -22,10 +22,10 @@ composite -gravity center smile.gif  rose: rose-over.png
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
 <pre>
-convert -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
-convert -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
+magick convert -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
+magick convert -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
 -channel A -gaussian-blur 0x8 white-highlight.png
-composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png
+magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png
 </pre>
 
 <ul>

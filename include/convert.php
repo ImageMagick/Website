@@ -4,13 +4,13 @@
 <p>We list a few examples of the <code>convert</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
 <pre>
-convert rose.jpg rose.png
+magick convert rose.jpg rose.png
 </pre>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
 <pre>
-convert rose.jpg -resize 50% rose.png
+magick convert rose.jpg -resize 50% rose.png
 </pre>
 
 <ul>
@@ -26,7 +26,7 @@ convert rose.jpg -resize 50% rose.png
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
 <pre>
-convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
+magick convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
   -draw "text 20,55 \'Magick\'" fuzzy-magick.png
 </pre>
@@ -38,7 +38,7 @@ convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
 <p>or here we resize an image with improved quality:</p>
 
 <pre>
-convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
+magick convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
 </pre>

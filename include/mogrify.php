@@ -9,7 +9,7 @@
 rose:</p>
 
 <pre>
-mogrify -resize 50% rose.jpg
+magick mogrify -resize 50% rose.jpg
 </pre>
 
 <ul>
@@ -25,13 +25,13 @@ mogrify -resize 50% rose.jpg
 <p>You can resize all your JPEG images in a folder to a maximum dimension of 256x256 with this command:</p>
 
 <pre>
-mogrify -resize 256x256 *.jpg
+magick mogrify -resize 256x256 *.jpg
 </pre>
 
 <p>Finally, we convert all our PNG images in a folder to the JPEG format:</p>
 
 <pre>
-mogrify -format jpg *.png
+magick mogrify -format jpg *.png
 </pre>
 
 <p>Here image files 1.png, 2.png, etc., are left untouched and files 1.jpg, 2.jpg, etc., are created.  They are copies of their respective PNG images except are stored  in the JPEG image format.</p>
