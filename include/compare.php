@@ -81,6 +81,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#background">-background <var>color</var></a></td>
+    <td>background color</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#brightness-contrast">-brightness-contrast <var>geometry</var></a></td>
     <td>improve brightness / contrast of the image</td>
   </tr>
