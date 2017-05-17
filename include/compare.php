@@ -81,6 +81,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#brightness-contrast">-brightness-contrast <var>geometry</var></a></td>
+    <td>improve brightness / contrast of the image</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel <var>type</var></a></td>
     <td>apply option to select image channels</td>
   </tr>
@@ -93,6 +98,11 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose">-compose <var>operator</var></a></td>
     <td>set image composite operator</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#crop">-crop <var>geometry</var></a></td>
+    <td>crop the image</td>
   </tr>
 
   <tr>
@@ -123,6 +133,11 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dissimilarity-threshold">-dissimilarity-threshold <var>value</var></a></td>
     <td>maximum distortion for (sub)image match (default 0.2)</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort">-distort <var>type coefficients</var></a></td>
+    <td>distort image</td>
   </tr>
 
   <tr>
@@ -161,6 +176,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#level">-level <var>value</var></a></td>
+    <td>adjust the level of image contrast</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit <var>type value</var></a></td>
     <td>pixel cache resource limit</td>
   </tr>
@@ -173,11 +193,6 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#lowlight-color">-lowlight-color <var>color</var></a></td>
     <td>de-emphasize pixel differences with this color</td>
-  </tr>
-
-  <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#mask">-mask <var>filename</var></a></td>
-    <td>associate a mask with the image</td>
   </tr>
 
   <tr>
@@ -211,13 +226,28 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#read-mask">-read-mask <var>filename</var></a></td>
+    <td>associate a read mask with the image</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
     <td>pay attention to warning messages.</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#resize">-resize <var>geometry</var></a></td>
+    <td>resize the image</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#respect-parentheses">-respect-parentheses</a></td>
     <td>settings remain in effect until parenthesis boundary.</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#rotate">-rotate <var>degrees</var></a></td>
+    <td>apply Paeth rotation to the image</td>
   </tr>
 
   <tr>
@@ -233,6 +263,11 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set <var>attribute value</var></a></td>
     <td>set an image attribute</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sigmoidal">-sigmoidal-contrast <var>geometry</var></a></td>
+    <td>increase the contrast without saturating highlights or shadows</td>
   </tr>
 
   <tr>
@@ -266,6 +301,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#trim">-trim</a></td>
+    <td>trim image edges</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a></td>
     <td>print detailed information about the image</td>
   </tr>
@@ -278,6 +318,11 @@ transparent, extract, background, or shape the alpha channel</td>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#virtual-pixel">-virtual-pixel <var>method</var></a></td>
     <td>access method for pixels outside the boundaries of the image</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-read-mask <var>filename</var></a></td>
+    <td>associate a write mask with the image</td>
   </tr>
 
   </tbody>
