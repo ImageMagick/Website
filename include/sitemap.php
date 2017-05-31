@@ -74,6 +74,7 @@
     <li><a href="https://www.imagemagick.org/ChMagick">ChMagick</a>: is a <a href="http://www.softintegration.com/">Ch</a> an embeddable MagickCore C/C++ interpreter for cross-platform scripting.</li>
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
     <li><a href="https://gna.org/projects/g2f/">G2F</a>: implements an Ada 95 binding to a subset of the low-level MagickCore library.</li>
+    <li><a href="https://www.imagemagick.org/script/develop.php#dot-net">Magick.NT</a>: Use Magick.NET to convert, compose, and edit images from Windows .NET.</li>
     <li><a href="https://www.imagemagick.org/Magick++">Magick++</a>: provides an object-oriented C++ interface to ImageMagick.</li>
     <li><a href="http://pecl.php.net/package/imagick">IMagick</a>: is a native PHP extension to create and modify images using the ImageMagick API.</li>
     <li><a href="https://github.com/techblue/jmagick">JMagick</a>: provides an object-oriented Java interface to ImageMagick.</li>
