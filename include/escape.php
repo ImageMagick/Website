@@ -610,7 +610,7 @@ $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 %[fx:<var>expression</var>]
 </pre>
 
-<p>Use <code>pixel:</code> to evaluate a pixel color as defined by the <a
+<p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
