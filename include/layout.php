@@ -55,7 +55,7 @@
       <a class="magick-nav-item <?php IsActive($title,"Resources"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
       <a class="magick-nav-item <?php IsActive($title,"Application Program Interfaces"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
       <a class="magick-nav-item <?php IsActive($title,"Search"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/search.php">Search</a>
-      <a class="magick-nav-item pull-right" href="https://www.imagemagick.org/discourse-server/">Community</a>
+      <a class="magick-nav-item float-right" href="https://www.imagemagick.org/discourse-server/">Community</a>
     </nav>
   </div>
 </div>
