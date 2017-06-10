@@ -81,7 +81,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
-#include &lt;magick/MagickCore.h>
+#include &lt;MagickCore/MagickCore.h>
 
 int main(int argc,char **argv)
 {
