@@ -52,8 +52,7 @@
 <p>Flattr is a microdonation system. You donate a small amount every month and
  click Flattr buttons on worthy sites to share the donation among those sites, similar to a tip jar (for more details see Wikipedia's <a href="http://en.wikipedia.org/wiki/Flattr">Flattr</a> article).</p>
 <ul>
-<dt><a href="https://flattr.com/submit/auto?user_id=magick&amp;url=http%3A%2F%2Fwww.imagemagick.org" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"/></a>
-</dt>
+<dt><a href="https://flattr.com/submit/auto?fid=8oev2q&url=https%3A%2F%2Fwww.imagemagick.org" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></dt>
 </ul>
 <h3>Litecoin</h3>
 <p>Our Litecoin Address is: <kbd>LcZLAmym4EMvUPc9koagkccRLYQbsgGwmj</kbd>.  Or you can reference the below QR code:</p>
