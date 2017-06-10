@@ -119,6 +119,10 @@ static const char
 &lt;/policymap>";
 </pre>
 
+<p>As of ImageMagick 6.9.8-10, you can programmatically set the ImageMagick secur
+ity policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolic
+y() (MagickWand).</p>
+
 <h2 class="magick-header"><a id="other"></a>Other Security Considerations</h2>
 
 <p>If you spot a security flaw in ImageMagick, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.  Alternatively, post your concern to <a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.</p>
