@@ -60,12 +60,6 @@
 <p>After you write your MagickCore program, compile it like this:</p>
 
 <pre>
-cc -o core core.c `pkg-config --cflags --libs MagickCore`
-</pre>
-
-<p>Note, if your instance of ImageMagick does not support modules but does include support for the WMF image format, you'll need to link with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> library instead (since it is a dependency of the WMF image format):</p>
-
-<pre>
 cc -o core core.c `pkg-config --cflags --libs MagickWand`
 </pre>
 
@@ -120,7 +114,7 @@ int main(int argc,char **argv)
   thumbnails=NewImageList();
   while ((image=RemoveFirstImageFromList(&amp;images)) != (Image *) NULL)
   {
-    resize_image=ResizeImage(image,106,80,LanczosFilter,1.0,exception);
+    resize_image=ResizeImage(image,106,80,LanczosFilter,exception);
     if (resize_image == (Image *) NULL)
       MagickError(exception-&gt;severity,exception-&gt;reason,exception-&gt;description);
     (void) AppendImageToList(&amp;thumbnails,resize_image);
@@ -130,7 +124,7 @@ int main(int argc,char **argv)
     Write the image thumbnail.
   */
   (void) strcpy(thumbnails-&gt;filename,argv[2]);
-  WriteImage(image_info,thumbnails);
+  WriteImage(image_info,thumbnails,exception);
   /*
     Destroy the image thumbnail and exit.
   */
