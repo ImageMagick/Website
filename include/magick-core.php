@@ -139,7 +139,7 @@ int main(int argc,char **argv)
 <pre class="pre-scrollable">#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
-#include &lt;magick/MagickCore.h>
+#include &lt;MagickCore/MagickCore.h>
 
 static MagickBooleanType SigmoidalContrast(ImageView *contrast_view,
   const ssize_t y,const int id,void *context)
