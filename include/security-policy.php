@@ -104,6 +104,8 @@ Path: [built-in]
 </pre>
 <p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
 
+<p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
+
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
 <h2 class="magick-header"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
@@ -118,7 +120,6 @@ static const char
 &lt;/policymap>";
 </pre>
 
-<p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
 
 <h2 class="magick-header"><a id="other"></a>Other Security Considerations</h2>
 
