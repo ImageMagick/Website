@@ -53,7 +53,7 @@
 
   <dt><a id="dot-net"></a>.NET</dt>
 
-<dd>Use <a href="http://magick.codeplex.com/">Magick.NET</a> to convert, compose, and edit images from Windows .NET.</dd>
+<dd>Use <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a> to convert, compose, and edit images from Windows .NET.</dd>
 
 <dd><a href="http://sourceforge.net/projects/imagemagickapp/">ImageMagickApp</a> is a .NET application written in C# that utilizes the ImageMagick command line to allow conversion of multiple image formats to different formats.</dd>
 
