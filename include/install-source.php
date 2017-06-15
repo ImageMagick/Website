@@ -13,7 +13,7 @@ identify -version
 
 <h2 class="magick-header"><a id="unix"></a>Install from Unix Source</h2>
 
-<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://www.imagemagick.org/download">www.imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://www.imagemagick.org/download">www.imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> and verify its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
 <p>Unpack the distribution with this command:</p>
 
@@ -57,7 +57,7 @@ make check
 
 <p>Building ImageMagick source for Windows requires a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
 
-<p>Download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> from <a href="https://www.imagemagick.org/download/windows">www.imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> from <a href="https://www.imagemagick.org/download/windows">www.imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> and verify its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.</p>
 
 <p>You can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
 
