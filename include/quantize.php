@@ -53,15 +53,15 @@ maximum tree depth = log<sub>2</sub>(256)
 
 <p>For each pixel in the input image, classification scans downward from the root of the color description tree. At each level of the tree, it identifies the single node which represents a cube in RGB space containing the pixels' color. It updates the following data for each such node:</p>
 
-<dl class="dl-horizontal">
-<dt>n1</dt>
-	<dd>number of pixels whose color is contained in the RGB cube which this node represents;</dd>
-<dt>n2</dt>
-  <dd>number of pixels whose color is not represented in a node at lower depth in the tree; initially, <var>n2=0</var> for all nodes except leaves of the tree.</dd>
-<dt>Sr,Sg,Sb</dt>
-  <dd>sums of the <var>red</var>, <var>green</var>, and <var>blue</var> component values for all pixels not classified at a lower depth. The combination of these sums and <var>n2</var> will ultimately characterize the mean color of a set of pixels represented by this node.</dd>
-<dt>E</dt>
-  <dd>the distance squared in RGB space between each pixel contained within a node and the nodes' center. This represents the quantization error for a node.</dd>
+<dl class="row">
+<dt class="col-md-4">n1</dt>
+	<dd class="col-md-8">number of pixels whose color is contained in the RGB cube which this node represents;</dd>
+<dt class="col-md-4">n2</dt>
+  <dd class="col-md-8">number of pixels whose color is not represented in a node at lower depth in the tree; initially, <var>n2=0</var> for all nodes except leaves of the tree.</dd>
+<dt class="col-md-4">Sr,Sg,Sb</dt>
+  <dd class="col-md-8">sums of the <var>red</var>, <var>green</var>, and <var>blue</var> component values for all pixels not classified at a lower depth. The combination of these sums and <var>n2</var> will ultimately characterize the mean color of a set of pixels represented by this node.</dd>
+<dt class="col-md-4">E</dt>
+  <dd class="col-md-8">the distance squared in RGB space between each pixel contained within a node and the nodes' center. This represents the quantization error for a node.</dd>
 </dl>
 
 <p><b>Reduction</b></p>
@@ -109,7 +109,7 @@ while number of nodes with (n2 &gt; 0) &gt; required maximum number of colors
 <p>These errors are measured and printed when the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-colors</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> options are specified on the <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a> command line:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>mean error per pixel</td>
     <td>is the mean error for any single pixel in the image.</td>

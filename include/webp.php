@@ -15,7 +15,7 @@ convert wizard.png -quality 50 -define webp:lossless=true wizard.webp
 <p>Here is a complete list of WebP encoding options:</p>
 
 <div class=" able-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>alpha-compression=<var>value</var></td>
     <td>encode the alpha plane: 0 = none, 1 = compressed.</td>

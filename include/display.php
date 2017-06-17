@@ -35,7 +35,7 @@ magick display -density 72 drawing.svg
 
 <p>The <code>display</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th align="left">Option</th>

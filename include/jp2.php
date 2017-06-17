@@ -54,7 +54,7 @@ convert wizard.png -resize 4096x2160! -depth 12 wizard.jp2
 <p>Here is a complete list of JPEG-2000 decoding options:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>jp2:quality-layers=<var>x</var></td>
     <td>set the maximum number of quality layers to decode.</td>
@@ -68,7 +68,7 @@ convert wizard.png -resize 4096x2160! -depth 12 wizard.jp2
 <p>Here is a complete list of JPEG-2000 encoding options:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>jp2:number-resolutions=<var>x</var></td>
     <td>number of resolutions to encode.</td>

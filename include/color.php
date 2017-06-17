@@ -143,7 +143,7 @@ device-cmyk(0.11, 0.48, 0.83, 0.00)
 
 <p>The table below provides a list of named colors recognized by ImageMagick:</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
 <tbody>
   <tr>
     <th align="right">Name</th>

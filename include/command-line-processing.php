@@ -399,7 +399,7 @@ setting for more specifics.</p>
 
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <col width="20%"/> <col width="80%"/>
   <thead>
   <tr>
