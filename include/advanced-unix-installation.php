@@ -100,21 +100,21 @@ Options used to compile and link:
 
 <p>You can influence choice of compiler, compilation flags, or libraries of the configure script by setting initial values for variables in the configure command line. These include, among others:</p>
 
-<dl class="dl-horizontal">
-<dt>CC</dt>
-  <dd>Name of C compiler (e.g. <code>cc -Xa</code>) to use.</dd>
-<dt>CXX</dt>
-  <dd>Name of C++ compiler to use (e.g. <code>CC</code>).</dd>
-<dt>CFLAGS</dt>
-  <dd>Compiler flags (e.g. <code>-g -O2</code>) to compile C code.</dd>
-<dt>CXXFLAGS</dt>
-  <dd>Compiler flags (e.g. <code>-g -O2</code>) to compile C++ code.</dd>
-<dt>CPPFLAGS</dt>
-  <dd>Include paths (.e.g. <code>-I/usr/local</code>) to look for header files.</dd>
-<dt>LDFLAGS</dt>
-  <dd>Library paths (.e.g. <code>-L/usr/local</code>) to look for libraries systems that support the notion of a library run-path may require an additional argument in order to find shared libraries at run time. For example, the Solaris linker requires an argument of the form <var>-R/path</var>.  Some Linux systems will work with <code>-rpath /usr/local/lib</code>, while some other Linux systems who's gcc does not pass <code>-rpath</code> to the linker, require an argument of the form <code>-Wl,-rpath,/usr/local/lib</code>.</dd>
-<dt>LIBS</dt>
-  <dd>Extra libraries (.e.g. <code>-l/usr/local/lib</code>) required to link.</dd>
+<dl class="row">
+<dt class="col-md-4">CC</dt>
+  <dd class="col-md-8">Name of C compiler (e.g. <code>cc -Xa</code>) to use.</dd>
+<dt class="col-md-4">CXX</dt>
+  <dd class="col-md-8">Name of C++ compiler to use (e.g. <code>CC</code>).</dd>
+<dt class="col-md-4">CFLAGS</dt>
+  <dd class="col-md-8">Compiler flags (e.g. <code>-g -O2</code>) to compile C code.</dd>
+<dt class="col-md-4">CXXFLAGS</dt>
+  <dd class="col-md-8">Compiler flags (e.g. <code>-g -O2</code>) to compile C++ code.</dd>
+<dt class="col-md-4">CPPFLAGS</dt>
+  <dd class="col-md-8">Include paths (.e.g. <code>-I/usr/local</code>) to look for header files.</dd>
+<dt class="col-md-4">LDFLAGS</dt>
+  <dd class="col-md-8">Library paths (.e.g. <code>-L/usr/local</code>) to look for libraries systems that support the notion of a library run-path may require an additional argument in order to find shared libraries at run time. For example, the Solaris linker requires an argument of the form <var>-R/path</var>.  Some Linux systems will work with <code>-rpath /usr/local/lib</code>, while some other Linux systems who's gcc does not pass <code>-rpath</code> to the linker, require an argument of the form <code>-Wl,-rpath,/usr/local/lib</code>.</dd>
+<dt class="col-md-4">LIBS</dt>
+  <dd class="col-md-8">Extra libraries (.e.g. <code>-l/usr/local/lib</code>) required to link.</dd>
 </dl>
 
 <p>Here is an example of setting configure variables from the command line:</p>
@@ -134,7 +134,7 @@ configure CC=c99 CFLAGS=-O2 LDFLAGS='-L/usr/local/lib -R/usr/local/lib' LIBS=-lp
 <p>Here are the optional features you can configure:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>--enable-shared</td>
     <td>build the  shared libraries and support for loading coder and process modules. Shared libraries are preferred because they allow programs to share common code, making the individual programs much smaller. In addition shared libraries are required in order for PerlMagick to be dynamically loaded by an installed PERL (otherwise an additional PERL (PerlMagick) must be installed.
@@ -188,7 +188,7 @@ configure CC=c99 CFLAGS=-O2 LDFLAGS='-L/usr/local/lib -R/usr/local/lib' LIBS=-lp
 <p>Here are the optional packages you can configure:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>--with-quantum-depth</td>
     <td>number of bits in a pixel quantum (default 16).
@@ -374,19 +374,19 @@ Quantum Depth   Virtual Memory
 
 <p>Once ImageMagick is configured, these standard build targets are available from the generated <code>make</code> files:</p>
 
-<dl class="dl-horizontal">
-<dt>make</dt>
-  <dd>Build ImageMagick.</dd>
-<dt>sudo make install</dt>
-  <dd>Install ImageMagick.</dd>
-<dt>make check</dt>
-  <dd>Run tests using the installed ImageMagick (<code>sudo make install</code> must be done first).  Ghostscript is a prerequisite, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will likely fail.</dd>
-<dt>make clean</dt>
-  <dd> Remove everything in the build directory created by <code>make</code>.</dd>
-<dt>make distclean</dt>
-  <dd>remove everything in the build directory created by <code>configure</code> and <code>make</code>.  This useful if you want to start over from scratch.</dd>
-<dt>make uninstall</dt>
-  <dd>Remove all files from the system which are (or would be) installed by <code>sudo make install</code> using the current configuration.  Note that this target is imperfect for PerlMagick since Perl no longer supports an <var>uninstall</var> target.</dd>
+<dl class="row">
+<dt class="col-md-4">make</dt>
+  <dd class="col-md-8">Build ImageMagick.</dd>
+<dt class="col-md-4">sudo make install</dt>
+  <dd class="col-md-8">Install ImageMagick.</dd>
+<dt class="col-md-4">make check</dt>
+  <dd class="col-md-8">Run tests using the installed ImageMagick (<code>sudo make install</code> must be done first).  Ghostscript is a prerequisite, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will likely fail.</dd>
+<dt class="col-md-4">make clean</dt>
+  <dd class="col-md-8"> Remove everything in the build directory created by <code>make</code>.</dd>
+<dt class="col-md-4">make distclean</dt>
+  <dd class="col-md-8">remove everything in the build directory created by <code>configure</code> and <code>make</code>.  This useful if you want to start over from scratch.</dd>
+<dt class="col-md-4">make uninstall</dt>
+  <dd class="col-md-8">Remove all files from the system which are (or would be) installed by <code>sudo make install</code> using the current configuration.  Note that this target is imperfect for PerlMagick since Perl no longer supports an <var>uninstall</var> target.</dd>
 </dl>
 
 <p>In most cases you will simply wand to compile ImageMagick with this command:</p>

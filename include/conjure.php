@@ -87,7 +87,7 @@ msl:font-metrics.origin.y
 
 <p>The <code>conjure</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th align="left">Option</th>
@@ -144,7 +144,7 @@ msl:font-metrics.origin.y
 
 <h2 class="magick-header"><a id="msl"></a>Magick Scripting Language</h2>
 <p>The <code>conjure</code> command recognizes these MSL elements.  Any element with a strike-thru is not supported yet.</p>
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
 <caption>Magick Scripting Language (MSL)</caption>
 <tbody>
   <tr>

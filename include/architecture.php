@@ -52,22 +52,22 @@
 <p>The pixel cache is associated with an image when it is created and it is initialized when you try to get or put pixels.  Here are three common methods to associate a pixel cache with an image:</p>
 
 <dl>
-<dt>Create an image canvas initialized to the background color:</dt><br/>
-<dd><pre>image=AllocateImage(image_info);
+<dt class="col-md-4">Create an image canvas initialized to the background color:</dt><br/>
+<dd class="col-md-8"><pre>image=AllocateImage(image_info);
 if (SetImageExtent(image,640,480) == MagickFalse)
   { /* an exception was thrown */ }
 (void) QueryMagickColor("red",&amp;image-&gt;background_color,&amp;image-&gt;exception);
 SetImageBackgroundColor(image);
 </pre></dd>
 
-<dt>Create an image from a JPEG image on disk:</dt><br/>
-<dd><pre>(void) strcpy(image_info-&gt;filename,"image.jpg"):
+<dt class="col-md-4">Create an image from a JPEG image on disk:</dt><br/>
+<dd class="col-md-8"><pre>(void) strcpy(image_info-&gt;filename,"image.jpg"):
 image=ReadImage(image_info,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
 </pre></dd>
-<dt>Create an image from a memory based image:</dt><br/>
-<dd><pre>image=BlobToImage(blob_info,blob,extent,exception);
+<dt class="col-md-4">Create an image from a memory based image:</dt><br/>
+<dd class="col-md-8"><pre>image=BlobToImage(blob_info,blob,extent,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
 </pre></dd>
@@ -162,37 +162,37 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
  <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <?php option("virtual-pixel"); ?> option from the command line.  The methods include:</p>
 
-<dl class="dl-horizontal">
-<dt>background</dt>
-<dd>the area surrounding the image is the background color</dd>
-<dt>black</dt>
-<dd>the area surrounding the image is black</dd>
-<dt>checker-tile</dt>
-<dd>alternate squares with image and background color</dd>
-<dt>dither</dt>
-<dd>non-random 32x32 dithered pattern</dd>
-<dt>edge</dt>
-<dd>extend the edge pixel toward infinity (default)</dd>
-<dt>gray</dt>
-<dd>the area surrounding the image is gray</dd>
-<dt>horizontal-tile</dt>
-<dd>horizontally tile the image, background color above/below</dd>
-<dt>horizontal-tile-edge</dt>
-<dd>horizontally tile the image and replicate the side edge pixels</dd>
-<dt>mirror</dt>
-<dd>mirror tile the image</dd>
-<dt>random</dt>
-<dd>choose a random pixel from the image</dd>
-<dt>tile</dt>
-<dd>tile the image</dd>
-<dt>transparent</dt>
-<dd>the area surrounding the image is transparent blackness</dd>
-<dt>vertical-tile</dt>
-<dd>vertically tile the image, sides are background color</dd>
-<dt>vertical-tile-edge</dt>
-<dd>vertically tile the image and replicate the side edge pixels</dd>
-<dt>white</dt>
-<dd>the area surrounding the image is white</dd>
+<dl class="row">
+<dt class="col-md-4">background</dt>
+<dd class="col-md-8">the area surrounding the image is the background color</dd>
+<dt class="col-md-4">black</dt>
+<dd class="col-md-8">the area surrounding the image is black</dd>
+<dt class="col-md-4">checker-tile</dt>
+<dd class="col-md-8">alternate squares with image and background color</dd>
+<dt class="col-md-4">dither</dt>
+<dd class="col-md-8">non-random 32x32 dithered pattern</dd>
+<dt class="col-md-4">edge</dt>
+<dd class="col-md-8">extend the edge pixel toward infinity (default)</dd>
+<dt class="col-md-4">gray</dt>
+<dd class="col-md-8">the area surrounding the image is gray</dd>
+<dt class="col-md-4">horizontal-tile</dt>
+<dd class="col-md-8">horizontally tile the image, background color above/below</dd>
+<dt class="col-md-4">horizontal-tile-edge</dt>
+<dd class="col-md-8">horizontally tile the image and replicate the side edge pixels</dd>
+<dt class="col-md-4">mirror</dt>
+<dd class="col-md-8">mirror tile the image</dd>
+<dt class="col-md-4">random</dt>
+<dd class="col-md-8">choose a random pixel from the image</dd>
+<dt class="col-md-4">tile</dt>
+<dd class="col-md-8">tile the image</dd>
+<dt class="col-md-4">transparent</dt>
+<dd class="col-md-8">the area surrounding the image is transparent blackness</dd>
+<dt class="col-md-4">vertical-tile</dt>
+<dd class="col-md-8">vertically tile the image, sides are background color</dd>
+<dt class="col-md-4">vertical-tile-edge</dt>
+<dd class="col-md-8">vertically tile the image and replicate the side edge pixels</dd>
+<dt class="col-md-4">white</dt>
+<dd class="col-md-8">the area surrounding the image is white</dd>
 </dl>
 
 
@@ -200,25 +200,25 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is cheap but it is also very slow, upwards of 1000 times slower than memory.  We can get some speed improvements, up to 5 times, if we use memory mapping to the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
-<dl class="dl-horizontal">
-  <dt>width</dt>
-  <dd>maximum width of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
-  <dt>height</dt>
-  <dd>maximum height of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
-  <dt>area</dt>
-  <dd>maximum area in bytes of any one image that can reside in the pixel cache memory.  If this limit is exceeded, the image is automagically cached to disk and optionally memory-mapped.</dd>
-  <dt>memory</dt>
-  <dd>maximum amount of memory in bytes to allocate for the pixel cache from the heap.</dd>
-  <dt>map</dt>
-  <dd>maximum amount of memory map in bytes to allocate for the pixel cache.</dd>
-  <dt>disk</dt>
-  <dd>maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, the pixel cache is not created and a fatal exception is thrown.</dd>
-  <dt>files</dt>
-  <dd>maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk, but without a speed penalty due to repeated open/close calls.</dd>
-  <dt>thread</dt>
-  <dd>maximum number of threads that are permitted to run in parallel.</dd>
-  <dt>time</dt>
-  <dd>maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
+<dl class="row">
+  <dt class="col-md-4">width</dt>
+  <dd class="col-md-8">maximum width of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
+  <dt class="col-md-4">height</dt>
+  <dd class="col-md-8">maximum height of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
+  <dt class="col-md-4">area</dt>
+  <dd class="col-md-8">maximum area in bytes of any one image that can reside in the pixel cache memory.  If this limit is exceeded, the image is automagically cached to disk and optionally memory-mapped.</dd>
+  <dt class="col-md-4">memory</dt>
+  <dd class="col-md-8">maximum amount of memory in bytes to allocate for the pixel cache from the heap.</dd>
+  <dt class="col-md-4">map</dt>
+  <dd class="col-md-8">maximum amount of memory map in bytes to allocate for the pixel cache.</dd>
+  <dt class="col-md-4">disk</dt>
+  <dd class="col-md-8">maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, the pixel cache is not created and a fatal exception is thrown.</dd>
+  <dt class="col-md-4">files</dt>
+  <dd class="col-md-8">maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk, but without a speed penalty due to repeated open/close calls.</dd>
+  <dt class="col-md-4">thread</dt>
+  <dd class="col-md-8">maximum number of threads that are permitted to run in parallel.</dd>
+  <dt class="col-md-4">time</dt>
+  <dd class="col-md-8">maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
 </dl>
 
 <p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external deleg

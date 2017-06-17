@@ -173,15 +173,15 @@ GetPixelY()                  SetPixelY()
 
 <h4>Pixel Traits</h4>
 <p>Each pixel channel includes one or more of these traits:</p>
-<dl class="dl-horizontal">
-<dt>Undefined</dt>
-<dd>no traits associated with this pixel channel</dd>
-<dt>Copy</dt>
-<dd>do not update this pixel channel, just copy it</dd>
-<dt>Update</dt>
-<dd>update this pixel channel</dd>
-<dt>Blend</dt>
-<dd>blend this pixel channel with the alpha mask if it's enabled</dd>
+<dl class="row">
+<dt class="col-md-4">Undefined</dt>
+<dd class="col-md-8">no traits associated with this pixel channel</dd>
+<dt class="col-md-4">Copy</dt>
+<dd class="col-md-8">do not update this pixel channel, just copy it</dd>
+<dt class="col-md-4">Update</dt>
+<dd class="col-md-8">update this pixel channel</dd>
+<dt class="col-md-4">Blend</dt>
+<dd class="col-md-8">blend this pixel channel with the alpha mask if it's enabled</dd>
 </dl>
 <p>We provide these methods to set and get pixel traits:</p>
 <pre>
@@ -339,16 +339,16 @@ be applied to expand the one channel into separate RGB (or other) channels.
 
 <h3>Command Changes</h3>
 <p>Here are a list of changes to the ImageMagick commands:</p>
-<dl class="dl-horizontal">
-<dt>magick</dt>
-<dd>The "<code>magick</code>" command is the new primary command of the Shell
+<dl class="row">
+<dt class="col-md-4">magick</dt>
+<dd class="col-md-8">The "<code>magick</code>" command is the new primary command of the Shell
     API, replacing the old "<code>convert</code>" command. This allows you to
     create a 'magick script' of the form  "<code>#!/path/to/command/magick
     -script</code>", or pipe options into a command "<code>magick -script
     -</code>, as abackground process. </dd>
 
-<dt>magick-script</dt>
-<dd>This the same as "<code>magick</code>", (only command name is different)
+<dt class="col-md-4">magick-script</dt>
+<dd class="col-md-8">This the same as "<code>magick</code>", (only command name is different)
     but which has an implicit "<code>-script</code>" option.  This allows you to
     use it in an "<code>env</code>" style script form.  That is a magick script
     starts with the 'she-bang' line of "<code>#!/usr/bin/env
@@ -356,8 +356,8 @@ be applied to expand the one channel into separate RGB (or other) channels.
     on the users command "<code>PATH</code>".  This is required to get around
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
-<dt>animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
-<dd>To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>convert</code> utility.
+<dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
+<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>convert</code> utility.
 </dd></dl>
 
 <h3>Behavioral Changes</h3>
@@ -373,10 +373,10 @@ convert ... -alpha discrete -blur 0x1 ...
 <p>To remove the alpha values from your image, use <code>-alpha off</code>.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
-<dt>-channel</dt>
-<dd>the default is to update the RGBA channels, previously, in IMv6, the default was RGB.  If you get results that differ from IMv6, you may need to specify <code>-channel RGB</code> on your command line (e.g. -level-colors option).</dd>
-<dt>+combine</dt>
-<dd>This option now requires an argument, the image colorspace (e.g. +combine sRGB).</dd>
+<dt class="col-md-4">-channel</dt>
+<dd class="col-md-8">the default is to update the RGBA channels, previously, in IMv6, the default was RGB.  If you get results that differ from IMv6, you may need to specify <code>-channel RGB</code> on your command line (e.g. -level-colors option).</dd>
+<dt class="col-md-4">+combine</dt>
+<dd class="col-md-8">This option now requires an argument, the image colorspace (e.g. +combine sRGB).</dd>
 </dl>
 
 <h3>New Options</h3>
@@ -384,31 +384,31 @@ convert ... -alpha discrete -blur 0x1 ...
 to the "<code>magick</code>" command, or to use in "<code>magick</code>"
 scripts.</p>
 
-<dl class="dl-horizontal">
-<dt>{ ... }</dt>
-<dd>Save (and restore) the current image settings (internally known as the
+<dl class="row">
+<dt class="col-md-4">{ ... }</dt>
+<dd class="col-md-8">Save (and restore) the current image settings (internally known as the
     "image_info" structure).  This is automatically done with parenthesis (EG:
     '<code>(</code>' and '<code>)</code>') is "<code>-regard-parenthesis</code>" has
     been set, just as in IMv6.  Caution is advised to prevent un-balanced
     braces errors.</dd>
 
-<dt>--</dt>
-<dd>End of options, to be used in IMv7 "<code>mogrify</code>" command to
+<dt class="col-md-4">--</dt>
+<dd class="col-md-8">End of options, to be used in IMv7 "<code>mogrify</code>" command to
     explicitly separate the operations to be applied and the images that
     are to be processed 'in-place'.  (not yet implemented).  However if
     not provided, "<code>-read</code>" can still be used to differentiate
     secondary image reads (for use in things like alpha composition) from
     the 'in-place' image being processed. </dd>
 
-<dd>In other commands (such as "magick") it is equivalent to a explicit
+<dd class="col-md-8">In other commands (such as "magick") it is equivalent to a explicit
     "<code>-read</code>" (see below) of the next option as a image (as it was in
     IMv6).  </dd>
 
-<dt>-alpha discrete</dt>
-<dd>treat the alpha channel independently (do not blend).</dd>
+<dt class="col-md-4">-alpha discrete</dt>
+<dd class="col-md-8">treat the alpha channel independently (do not blend).</dd>
 
-<dt>-channel-fx <var>expression</var> </dt>
-<dd>
+<dt class="col-md-4">-channel-fx <var>expression</var> </dt>
+<dd class="col-md-8">
 <p>exchange, extract, or copy one or more image channels.</p>
 
 <p>The expression consists of one or more channels, either mnemonic or numeric (e.g. red or 0, green or 1, etc.), separated by certain operation symbols as follows:</p>
@@ -443,73 +443,73 @@ convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
 
 </dd>
 
-<dt>-exit</dt>
-<dd>Stop processing at this point. No further options will be processed after
+<dt class="col-md-4">-exit</dt>
+<dd class="col-md-8">Stop processing at this point. No further options will be processed after
     this option. Can be used in a script to force the "<code>magick</code>"
     command to exit, without actually closing the pipeline that it is
     processing options from. </dd>
 
-<dd>May also be used as a 'final' option on the "<code>magick</code>" command
+<dd class="col-md-8">May also be used as a 'final' option on the "<code>magick</code>" command
     line, instead of a implicit output image, to completely prevent any image
     write. ASIDE: even the "<code>NULL:</code>" coder requires at least one
     image, for it to 'not write'! This option does not require any images at
     all. </dd>
 
-<dt>-read {image}</dt>
-<dd>Explicit read of an image, rather than an implicit read.  This allows you
+<dt class="col-md-4">-read {image}</dt>
+<dd class="col-md-8">Explicit read of an image, rather than an implicit read.  This allows you
     to read from filenames that start with an 'option' character, and which
     otherwise could be mistaken as an option (unknown or otherwise). This will
     eventually be used in "<code>mogrify</code>" to allow the reading of
     secondary images, and allow the use of image list operations within that
     command. </dd>
 
-<dt>-read-mask</dt>
-<dd>prevent updates to image pixels specified by the mask</dd>
+<dt class="col-md-4">-read-mask</dt>
+<dd class="col-md-8">prevent updates to image pixels specified by the mask</dd>
 
-<dt>-region</dt>
-<dd>supported in ImageMagick 7.0.2-6 and above</dd>
+<dt class="col-md-4">-region</dt>
+<dd class="col-md-8">supported in ImageMagick 7.0.2-6 and above</dd>
 
-<dt>-script {file}</dt>
-<dd>In "<code>magick</code>", stop the processing of command line arguments as
+<dt class="col-md-4">-script {file}</dt>
+<dd class="col-md-8">In "<code>magick</code>", stop the processing of command line arguments as
     image operations, and read all further options from the given file or
     pipeline.</dd>
-<dt>-write-mask</dt>
-<dd>prevent pixels from being written.</dd>
+<dt class="col-md-4">-write-mask</dt>
+<dd class="col-md-8">prevent pixels from being written.</dd>
 
 </dl>
 
 <h3>Changed Options</h3>
 <p>These options are known to have changed, in some way.</p>
-<dl class="dl-horizontal">
-<dt>-bias</dt>
-<dd>The option is no longer recognized.  Use <code>-define convolve:bias=<var>value</var></code> instead.</dd>
-<dt>-draw</dt>
-<dd>The <code>matte</code> primitive is now <code>alpha</code> (e.g. <code>-draw 'alpha 0,0 floodfill'</code>).</dd>
-<dt>-negate</dt>
-<dd>currently negates all channels, including alpha if present.  As such you
+<dl class="row">
+<dt class="col-md-4">-bias</dt>
+<dd class="col-md-8">The option is no longer recognized.  Use <code>-define convolve:bias=<var>value</var></code> instead.</dd>
+<dt class="col-md-4">-draw</dt>
+<dd class="col-md-8">The <code>matte</code> primitive is now <code>alpha</code> (e.g. <code>-draw 'alpha 0,0 floodfill'</code>).</dd>
+<dt class="col-md-4">-negate</dt>
+<dd class="col-md-8">currently negates all channels, including alpha if present.  As such you
     may need to use the -channel option to prevent alpha negation.  </dd>
 </dl>
 
 <h3>Deprecated warning given, but will work (for now)</h3>
-<dl class="dl-horizontal">
-<dt>-affine</dt>
-<dd>Replaced by <code>-draw "affine ..."</code>. (see transform)</dd>
-<dt>-average</dt>
-<dd>Replaced by <code>-evaluate-sequence Mean</code>.</dd>
-<dt>-box</dt>
-<dd>Replaced by <code>-undercolor</code>.</dd>
-<dt>-deconstruct</dt>
-<dd>Replaced by <code>-layers CompareAny</code>.</dd>
-<dt>-gaussian</dt>
-<dd>Replaced by <code>-gaussian-blur</code>.</dd>
-<dt>-/+map</dt>
-<dd>Replaced by <code>-/+remap</code>.</dd>
-<dt>-/+mask</dt>
-<dd>Replaced by <code>-/+read-mask</code>, <code>-/+write-mask</code>.</dd>
-<dt>-/+matte</dt>
-<dd>Replaced by <code>-alpha Set/Off</code>.</dd>
-<dt>-transform</dt>
-<dd>Replaced by <code>-distort Affine "..."</code>.</dd>
+<dl class="row">
+<dt class="col-md-4">-affine</dt>
+<dd class="col-md-8">Replaced by <code>-draw "affine ..."</code>. (see transform)</dd>
+<dt class="col-md-4">-average</dt>
+<dd class="col-md-8">Replaced by <code>-evaluate-sequence Mean</code>.</dd>
+<dt class="col-md-4">-box</dt>
+<dd class="col-md-8">Replaced by <code>-undercolor</code>.</dd>
+<dt class="col-md-4">-deconstruct</dt>
+<dd class="col-md-8">Replaced by <code>-layers CompareAny</code>.</dd>
+<dt class="col-md-4">-gaussian</dt>
+<dd class="col-md-8">Replaced by <code>-gaussian-blur</code>.</dd>
+<dt class="col-md-4">-/+map</dt>
+<dd class="col-md-8">Replaced by <code>-/+remap</code>.</dd>
+<dt class="col-md-4">-/+mask</dt>
+<dd class="col-md-8">Replaced by <code>-/+read-mask</code>, <code>-/+write-mask</code>.</dd>
+<dt class="col-md-4">-/+matte</dt>
+<dd class="col-md-8">Replaced by <code>-alpha Set/Off</code>.</dd>
+<dt class="col-md-4">-transform</dt>
+<dd class="col-md-8">Replaced by <code>-distort Affine "..."</code>.</dd>
 </dl>
 
 <h3>Deprecated warning given, and ignored (for now)</h3>
@@ -517,30 +517,30 @@ convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
 deprecated, and does nothing. It does not even have associated code.  For
 example "+annotate", "+resize", "+clut", and "+draw" .</p>
 
-<dl class="dl-horizontal">
-<dt>-affinity</dt>
-<dd>Replaced by <code>-remap</code>.</dd>
-<dt>-maximum</dt>
-<dd>Replaced by <code>-evaluate-sequence Max</code>.</dd>
-<dt>-median</dt>
-<dd>Replaced by <code>-evaluate-sequence Median</code>.</dd>
-<dt>-minimum</dt>
-<dd>Replaced by <code>-evaluate-sequence Min</code>.</dd>
-<dt>-recolor</dt>
-<dd>Replaced by <code>-color-matrix</code>.</dd>
+<dl class="row">
+<dt class="col-md-4">-affinity</dt>
+<dd class="col-md-8">Replaced by <code>-remap</code>.</dd>
+<dt class="col-md-4">-maximum</dt>
+<dd class="col-md-8">Replaced by <code>-evaluate-sequence Max</code>.</dd>
+<dt class="col-md-4">-median</dt>
+<dd class="col-md-8">Replaced by <code>-evaluate-sequence Median</code>.</dd>
+<dt class="col-md-4">-minimum</dt>
+<dd class="col-md-8">Replaced by <code>-evaluate-sequence Min</code>.</dd>
+<dt class="col-md-4">-recolor</dt>
+<dd class="col-md-8">Replaced by <code>-color-matrix</code>.</dd>
 </dl>
 
 <h3>Removed / Replaced Options ("no such option" error and abort)</h3>
 
-<dl class="dl-horizontal">
-<dt>-interpolate filter</dt>
-<dd>remove slow and useless interpolation method</dd>
-<dt>-origin</dt>
-<dd>old option, unknown meaning.</dd>
-<dt>-pen</dt>
-<dd>Replaced by <code>-fill</code>.</dd>
-<dt>-passphrase</dt>
-<dd>old option, unknown meaning</dd>
+<dl class="row">
+<dt class="col-md-4">-interpolate filter</dt>
+<dd class="col-md-8">remove slow and useless interpolation method</dd>
+<dt class="col-md-4">-origin</dt>
+<dd class="col-md-8">old option, unknown meaning.</dd>
+<dt class="col-md-4">-pen</dt>
+<dd class="col-md-8">Replaced by <code>-fill</code>.</dd>
+<dt class="col-md-4">-passphrase</dt>
+<dd class="col-md-8">old option, unknown meaning</dd>
 </dl>
 <h2 class="magick-header"><a id="summary"></a>Version 7 Change Summary</h2>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>

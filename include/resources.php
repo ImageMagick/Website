@@ -7,55 +7,55 @@
 
 <p>ImageMagick depends on a number of external configuration files detailed here:</p>
 
-<dl class="dl-horizontal">
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/coder.xml">coder.xml</a></dt>
-  <dd>Associate an image format with the specified coder module.
+<dl class="row">
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/coder.xml">coder.xml</a></dt>
+  <dd class="col-md-8">Associate an image format with the specified coder module.
 
   ImageMagick has a number of coder modules to support the reading and/or writing of an image format (e.g. JPEG).  Some coder modules support more than one associated image format and the mapping between an associated format and its respective coder module is defined in this configuration file.  For example, the PNG coder module not only supports the PNG image format, but the JNG and MNG formats as well.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/colors.xml">colors.xml</a></dt>
-  <dd>Associate a color name with its red, green, blue, and alpha intensities.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/colors.xml">colors.xml</a></dt>
+  <dd class="col-md-8">Associate a color name with its red, green, blue, and alpha intensities.
 
   A number of command line options require a <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
   </dd>
 
-<dt><a id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
-  <dd>Set ImageMagick build parameters and system-wide environment variables (e.g. MAGICK_TEMPORARY_PATH).
+<dt class="col-md-4"><a id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
+  <dd class="col-md-8">Set ImageMagick build parameters and system-wide environment variables (e.g. MAGICK_TEMPORARY_PATH).
   As ImageMagick is built, a number of build parameters are saved to this configuration file.  They include the version, release date, dependent delegate libraries, and quantum depth among others.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/delegates.xml">delegates.xml</a></dt>
-  <dd>Associate delegate programs with certain image formats.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/delegates.xml">delegates.xml</a></dt>
+  <dd class="col-md-8">Associate delegate programs with certain image formats.
 
   ImageMagick relies on a number of delegate programs to support certain image formats such as <a href="http://ufraw.sourceforge.net/">ufraw-batch</a> to read raw camera formats or <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> to read Postscript images.  Use this configuration file to map an input or output format to an external delegate program.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/english.xml">english.xml</a></dt>
-  <dd>Associate message tags with English translations.</dd>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/english.xml">english.xml</a></dt>
+  <dd class="col-md-8">Associate message tags with English translations.</dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/francais.xml">francais.xml</a></dt>
-  <dd>Associate message tags with French translations.  </dd>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/francais.xml">francais.xml</a></dt>
+  <dd class="col-md-8">Associate message tags with French translations.  </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/locale.xml">locale.xml</a></dt>
-  <dd>Associate message tags with a  translation for your locale.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/locale.xml">locale.xml</a></dt>
+  <dd class="col-md-8">Associate message tags with a  translation for your locale.
 
   ImageMagick has a number of informational, warning, and error messages that are represented as tags.  Tags are short descriptions of a message such as
   <var>FileNotFound</var> or <var>MemoryAllocationFailed</var>.  This configuration file lists locales that have a translation for each tag recognized by ImageMagick.  Currently only English and French translations are available in the <code>english.xml</code> and <code>francais.xml</code> configuration files.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/log.xml">log.xml</a></dt>
-  <dd>Configure logging parameters.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/log.xml">log.xml</a></dt>
+  <dd class="col-md-8">Configure logging parameters.
   ImageMagick is capable of spewing copious amounts of informational or debugging statements.  Use this file to configure how the information will appear in a log message and where you want the logging messages posted.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/magic.xml">magic.xml</a></dt>
-  <dd>Associate an image format with a unique identifier.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/magic.xml">magic.xml</a></dt>
+  <dd class="col-md-8">Associate an image format with a unique identifier.
   Many image formats have identifiers that uniquely identify a particular image format.  For example, the GIF image format always begins with <code>GIF8</code> as the first 4 characters of the image.  ImageMagick uses this information to quickly determine the type of image it is dealing with when it reads an image.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/mime.xml">mime.xml</a></dt>
-  <dd>Associate an internet media type with a unique identifier.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/mime.xml">mime.xml</a></dt>
+  <dd class="col-md-8">Associate an internet media type with a unique identifier.
   Many files and data streams have identifiers that uniquely identify a
 particular internet media type. For example, files in the "Corel Draw
 drawing" format (mime type="application/vnd.corel-draw") are associated with
@@ -65,8 +65,8 @@ when available, to attempt to quickly determine the internet media type of a
 file or data stream.
 </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a></dt>
-  <dd>Configure ImageMagick policies.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a></dt>
+  <dd class="col-md-8">Configure ImageMagick policies.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
 <pre>
@@ -88,24 +88,24 @@ To limit the elapsed time of any ImageMagick command to 5 minutes, use this poli
 </pre>
 Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
-  <dd>Custom JPEG quantization tables. Activate with <code>-define:q-table=quantization-table.xml</code>.</dd>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
+  <dd class="col-md-8">Custom JPEG quantization tables. Activate with <code>-define:q-table=quantization-table.xml</code>.</dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/thresholds.xml">thresholds.xml</a></dt>
-  <dd>Set threshold maps for ordered posterized dither.</dd>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/thresholds.xml">thresholds.xml</a></dt>
+  <dd class="col-md-8">Set threshold maps for ordered posterized dither.</dd>
 
-<dt><a id="type.xml"></a><a href="<?php echo $_SESSION['RelativePath']?>/../source/type.xml">type.xml</a></dt>
-  <dd>Configure fonts.
+<dt class="col-md-4"><a id="type.xml"></a><a href="<?php echo $_SESSION['RelativePath']?>/../source/type.xml">type.xml</a></dt>
+  <dd class="col-md-8">Configure fonts.
   Define the font name, family, foundry, style, format, metrics, and glyphs for any font you want to use within ImageMagick.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-ghostscript.xml">type-ghostscript.xml</a></dt>
-  <dd>Configure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> fonts.
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-ghostscript.xml">type-ghostscript.xml</a></dt>
+  <dd class="col-md-8">Configure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> fonts.
   The Ghostscript package includes a number of <a href="https://sourceforge.net/projects/gs-fonts/">fonts</a> that can be accessed with ImageMagick.
   </dd>
 
-<dt><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-windows.xml">type-windows.xml</a></dt>
-  <dd>Associate names with Windows font glyphs.</dd>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-windows.xml">type-windows.xml</a></dt>
+  <dd class="col-md-8">Associate names with Windows font glyphs.</dd>
 </dl>
 
 <p>Under Unix and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
@@ -206,7 +206,7 @@ $MAGICK_FONT_PATH
 <p>Environment variables recognized by ImageMagick include:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>HOME</td>
     <td>Set path to search for configuration files in <code>$HOME/.config/ImageMagick</code> if the directory exists.</td>

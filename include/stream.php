@@ -29,7 +29,7 @@ stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
 
 <p>The <code>stream</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th align="left">Option</th>

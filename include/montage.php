@@ -49,7 +49,7 @@ montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-bal
 
 <p>The <code>montage</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th align="left">Option</th>

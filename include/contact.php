@@ -77,7 +77,7 @@
   <br/>
   <form method="post" name="post" id="post" action="<?php echo $_SESSION['RelativePath']?>/../script/contact.php" enctype="application/x-www-form-urlencoded">
   <div class="table-responsive">
-  <table class="table table-condensed table-striped">
+  <table class="table table-sm table-striped">
     <tr>
       <td><label id="authenticate" title="Your authentication code">Authenticate</label></td>
 <?php

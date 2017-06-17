@@ -204,74 +204,74 @@ matrix determinant has a sufficiently small absolute value it is rejected.</p>
 <p>Used to set a flag on an image indicating whether or not to use existing alpha
 channel data, to create an alpha channel, or to perform other operations on the alpha channel.  Choose the argument <var>type</var> from the list below.</p>
 
-<dl class="dl-horizontal">
-    <dt>Activate</dt>
-    <dd>
+<dl class="row">
+    <dt class="col-md-4">Activate</dt>
+    <dd class="col-md-8">
        Enable the image's transparency channel. Note normally Set
        should be used instead of this, unless you specifically need to
        preserve existing (but specifically turned Off) transparency
        channel. </dd>
 
-    <dt>Associate</dt>
-    <dd>
+    <dt class="col-md-4">Associate</dt>
+    <dd class="col-md-8">
        associate the alpha channel with the image.</dd>
 
-    <dt>Deactivate</dt>
-    <dd>
+    <dt class="col-md-4">Deactivate</dt>
+    <dd class="col-md-8">
        Disables the image's transparency channel. Does not delete or change the
        existing data, just turns off the use of that data.</dd>
 
-    <dt>Disassociate</dt>
-    <dd>
+    <dt class="col-md-4">Disassociate</dt>
+    <dd class="col-md-8">
        disassociate the alpha channel from the image.</dd>
 
-    <dt>Set</dt>
-    <dd>
+    <dt class="col-md-4">Set</dt>
+    <dd class="col-md-8">
        Activates the alpha/matte channel. If it was previously turned off
        then it also resets the channel to opaque.  If the image already had
        the alpha channel turned on, it will have no effect.</dd>
 
-    <dt>Opaque</dt>
-    <dd>
+    <dt class="col-md-4">Opaque</dt>
+    <dd class="col-md-8">
        Enables the alpha/matte channel and forces it to be fully opaque.
        </dd>
 
-    <dt>Transparent</dt>
-    <dd>
+    <dt class="col-md-4">Transparent</dt>
+    <dd class="col-md-8">
        Activates the alpha/matte channel and forces it to be fully
        transparent. This effectively creates a fully transparent image the
        same size as the original and with all its original RGB data still
        intact, but fully transparent. </dd>
 
-    <dt>Extract</dt>
-    <dd>
+    <dt class="col-md-4">Extract</dt>
+    <dd class="col-md-8">
        Copies the alpha channel values into all the color channels and turns
        'Off' the the image's transparency, so as to generate
        a grayscale mask of the image's shape. The alpha channel data is left
        intact just deactivated.  This is the inverse of 'Copy'.
        </dd>
 
-    <dt>Copy</dt>
-    <dd>
+    <dt class="col-md-4">Copy</dt>
+    <dd class="col-md-8">
        Turns 'On' the alpha/matte channel, then copies the
        grayscale intensity of the image, into the alpha channel, converting
        a grayscale mask into a transparent shaped mask ready to be colored
        appropriately. The color channels are not modified.  </dd>
 
-    <dt>Shape</dt>
-    <dd>
+    <dt class="col-md-4">Shape</dt>
+    <dd class="col-md-8">
        As per 'Copy' but also colors the resulting shape mask with
        the current background color.  That is the RGB color channels is
        replaced, with appropriate alpha shape.
        </dd>
 
-    <dt>Remove</dt>
-    <dd>
+    <dt class="col-md-4">Remove</dt>
+    <dd class="col-md-8">
        Composite the image over the background color.
        </dd>
 
-    <dt>Background</dt>
-    <dd>
+    <dt class="col-md-4">Background</dt>
+    <dd class="col-md-8">
        Set any fully-transparent pixel to the background color, while leaving
        it fully-transparent.  This can make some image file formats, such as
        PNG, smaller as the RGB values of transparent pixels are more uniform,
@@ -637,31 +637,31 @@ ignored. </p>
 
 <p>As of IM 6.7.8-8, the <var>geometry</var> arguments behave as follows:</p>
 
-<dl class="dl-horizontal">
-<dt><var>value</var></dt>
-<dd>value is added to both left/right and top/bottom</dd>
-<dt><var>value-x</var><kbd>x</kbd></dt>
-<dd>value-x is added only to left/right and top/bottom are unchanged</dd>
-<dt><kbd>x</kbd><var>value-y</var></dt>
-<dd>value-y is added only to top/bottom and left/right are unchanged</dd>
-<dt><var>value-x</var><kbd>x</kbd><var>value-y</var></dt>
-<dd>value-x is added to left/right and value-y added to top/bottom</dd>
-<dt><var>value-x</var><kbd>x</kbd>0</dt>
-<dd>value-x is added only to left/right and top/bottom are unchanged</dd>
-<dt>0<kbd>x</kbd><var>value-y</var></dt>
-<dd>value-y is added only to top/bottom and left/right are unchanged</dd>
-<dt><var>value</var>%</dt>
-<dd>value % of width is added to left/right and value % of height is added to top/bottom</dd>
-<dt><var>value-x</var><kbd>x</kbd>%</dt>
-<dd>value-x % of width is added to left/right and to top/bottom</dd>
-<dt>x<var>value-y</var>%</dt>
-<dd>value-y % of height is added to top/bottom and to left/right</dd>
-<dt><var>value-x</var>%<kbd>x</kbd><var>value-y</var>%</dt>
-<dd>value-x % of width is added to left/right and value-y % of height is added to top/bottom</dd>
-<dt><var>value-x</var>%<kbd>x</kbd>0%</dt>
-<dd>value-x % of width is added to left/right and top/bottom are unchanged</dd>
-<dt>0%<kbd>x</kbd><var>value-y</var>%</dt>
-<dd>value-y % of height is added to top/bottom and left/right are unchanged</dd>
+<dl class="row">
+<dt class="col-md-4"><var>value</var></dt>
+<dd class="col-md-8">value is added to both left/right and top/bottom</dd>
+<dt class="col-md-4"><var>value-x</var><kbd>x</kbd></dt>
+<dd class="col-md-8">value-x is added only to left/right and top/bottom are unchanged</dd>
+<dt class="col-md-4"><kbd>x</kbd><var>value-y</var></dt>
+<dd class="col-md-8">value-y is added only to top/bottom and left/right are unchanged</dd>
+<dt class="col-md-4"><var>value-x</var><kbd>x</kbd><var>value-y</var></dt>
+<dd class="col-md-8">value-x is added to left/right and value-y added to top/bottom</dd>
+<dt class="col-md-4"><var>value-x</var><kbd>x</kbd>0</dt>
+<dd class="col-md-8">value-x is added only to left/right and top/bottom are unchanged</dd>
+<dt class="col-md-4">0<kbd>x</kbd><var>value-y</var></dt>
+<dd class="col-md-8">value-y is added only to top/bottom and left/right are unchanged</dd>
+<dt class="col-md-4"><var>value</var>%</dt>
+<dd class="col-md-8">value % of width is added to left/right and value % of height is added to top/bottom</dd>
+<dt class="col-md-4"><var>value-x</var><kbd>x</kbd>%</dt>
+<dd class="col-md-8">value-x % of width is added to left/right and to top/bottom</dd>
+<dt class="col-md-4">x<var>value-y</var>%</dt>
+<dd class="col-md-8">value-y % of height is added to top/bottom and to left/right</dd>
+<dt class="col-md-4"><var>value-x</var>%<kbd>x</kbd><var>value-y</var>%</dt>
+<dd class="col-md-8">value-x % of width is added to left/right and value-y % of height is added to top/bottom</dd>
+<dt class="col-md-4"><var>value-x</var>%<kbd>x</kbd>0%</dt>
+<dd class="col-md-8">value-x % of width is added to left/right and top/bottom are unchanged</dd>
+<dt class="col-md-4">0%<kbd>x</kbd><var>value-y</var>%</dt>
+<dd class="col-md-8">value-y % of height is added to top/bottom and left/right are unchanged</dd>
 </dl>
 
 <p>Set the border color by preceding with the <a
@@ -1200,7 +1200,7 @@ YIQ          YPbPr        YUV
 
 <p>For a more accurate color conversion to or from the linear RGB, CMYK, or grayscale colorspaces, use the <a href="#profile">-profile</a> option.  Note, ImageMagick assumes the sRGB colorspace if the image format does not indicate otherwise.  For colorspace conversion, the gamma function is first removed to produce linear RGB.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
         <caption>Conversion of RGB to Other Color Spaces</caption>
         <tr><th valign="middle">CMY</th></tr>
         <tr><td valign="middle">C=<var>QuantumRange</var>−R</td></tr>
@@ -1756,7 +1756,7 @@ is case-dependent.</p>
 <p>The following definitions are just some of the artifacts that are
 available:</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>bmp:alpha=<var>true|false</var></td>
     <td>include any alpha channel when writing in the BMP image format.</td>
@@ -2632,11 +2632,11 @@ animation is to be overlaid onto the display. </p>
 
 <p>Here are the valid methods:</p>
 
-<dl class="dl-horizontal">
-<dt>Undefined</dt><dd>0:  No disposal specified (equivalent to '<code>none</code>').</dd>
-<dt>None</dt><dd>1:  Do not dispose, just overlay next frame image.</dd>
-<dt>Background</dt><dd>2:  Clear the frame area with the background color.</dd>
-<dt>Previous</dt><dd>3:  Clear to the image prior to this frames overlay.</dd>
+<dl class="row">
+<dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No disposal specified (equivalent to '<code>none</code>').</dd>
+<dt class="col-md-4">None</dt><dd class="col-md-8">1:  Do not dispose, just overlay next frame image.</dd>
+<dt class="col-md-4">Background</dt><dd class="col-md-8">2:  Clear the frame area with the background color.</dd>
+<dt class="col-md-4">Previous</dt><dd class="col-md-8">3:  Clear to the image prior to this frames overlay.</dd>
 </dl>
 
 <p>You can also use the numbers given above, which is what the GIF format
@@ -2685,7 +2685,7 @@ and meaning of the floating point values depends on the distortion <var>method</
 
 <p>Choose from these distortion types:</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <th style="width: 8%">Method</th>
     <th>Description</th>
@@ -2704,13 +2704,13 @@ and meaning of the floating point values depends on the distortion <var>method</
        The number of arguments determine the specific meaning of each
        argument for the scales, rotation, and translation operations. <br/>
 
-       <dl class="dl-horizontal">
-       <dt>2:</dt><dd><var>Scale   Angle</var></dd>
-       <dt>3:</dt><dd><var>X,Y     Angle</var></dd>
-       <dt>4:</dt><dd><var>X,Y   Scale   Angle</var></dd>
-       <dt>5:</dt> <dd><var>X,Y   ScaleX,ScaleY   Angle</var></dd>
-       <dt>6:</dt> <dd><var>X,Y   Scale   Angle   NewX,NewY</var></dd>
-       <dt>7:</dt> <dd><var>X,Y   ScaleX,ScaleY   Angle NewX,NewY</var></dd>
+       <dl class="row">
+       <dt class="col-md-4">2:</dt><dd class="col-md-8"><var>Scale   Angle</var></dd>
+       <dt class="col-md-4">3:</dt><dd class="col-md-8"><var>X,Y     Angle</var></dd>
+       <dt class="col-md-4">4:</dt><dd class="col-md-8"><var>X,Y   Scale   Angle</var></dd>
+       <dt class="col-md-4">5:</dt> <dd class="col-md-8"><var>X,Y   ScaleX,ScaleY   Angle</var></dd>
+       <dt class="col-md-4">6:</dt> <dd class="col-md-8"><var>X,Y   Scale   Angle   NewX,NewY</var></dd>
+       <dt class="col-md-4">7:</dt> <dd class="col-md-8"><var>X,Y   ScaleX,ScaleY   Angle NewX,NewY</var></dd>
        </dl>
 
        This is actually an alternative way of specifying a 2 dimensional linear
@@ -2823,15 +2823,15 @@ and meaning of the floating point values depends on the distortion <var>method</
        Arc the image (variation of polar mapping) over the angle given around
        a circle.
 
-       <dl class="dl-horizontal">
-       <dt>arc_angle</dt>
-           <dd>The angle over which to arc the image side-to-side</dd>
-       <dt>rotate_angle</dt>
-           <dd>Angle to rotate resulting image from vertical center</dd>
-       <dt>top_radius</dt>
-           <dd>Set top edge of source image at this radius</dd>
-       <dt>bottom_radius </dt>
-           <dd>Set bottom edge to this radius (radial scaling)</dd>
+       <dl class="row">
+       <dt class="col-md-4">arc_angle</dt>
+           <dd class="col-md-8">The angle over which to arc the image side-to-side</dd>
+       <dt class="col-md-4">rotate_angle</dt>
+           <dd class="col-md-8">Angle to rotate resulting image from vertical center</dd>
+       <dt class="col-md-4">top_radius</dt>
+           <dd class="col-md-8">Set top edge of source image at this radius</dd>
+       <dt class="col-md-4">bottom_radius </dt>
+           <dd class="col-md-8">Set bottom edge to this radius (radial scaling)</dd>
        </dl>
 
        The resulting image is always resized to best fit the resulting image,
@@ -3115,30 +3115,30 @@ operations.</p>
 
 <p>The shape primitives:</p>
 
-<dl class="dl-horizontal">
-<dt>point</dt><dd>          x,y</dd>
-<dt>line</dt><dd>           x0,y0 x1,y1</dd>
-<dt>rectangle</dt><dd>      x0,y0 x1,y1</dd>
-<dt>roundRectangle</dt><dd> x0,y0 x1,y1 wc,hc</dd>
-<dt>arc</dt><dd>            x0,y0 x1,y1 a0,a1</dd>
-<dt>ellipse</dt><dd>        x0,y0 rx,ry a0,a1</dd>
-<dt>circle</dt><dd>         x0,y0 x1,y1</dd>
-<dt>polyline</dt><dd>       x0,y0  ...  xn,yn</dd>
-<dt>polygon</dt><dd>        x0,y0  ...  xn,yn</dd>
-<dt>bezier</dt><dd>         x0,y0  ...  xn,yn</dd>
-<dt>path</dt><dd>specification  </dd>
-<dt>image</dt><dd>          operator x0,y0 w,h filename</dd>
+<dl class="row">
+<dt class="col-md-4">point</dt><dd class="col-md-8">          x,y</dd>
+<dt class="col-md-4">line</dt><dd class="col-md-8">           x0,y0 x1,y1</dd>
+<dt class="col-md-4">rectangle</dt><dd class="col-md-8">      x0,y0 x1,y1</dd>
+<dt class="col-md-4">roundRectangle</dt><dd class="col-md-8"> x0,y0 x1,y1 wc,hc</dd>
+<dt class="col-md-4">arc</dt><dd class="col-md-8">            x0,y0 x1,y1 a0,a1</dd>
+<dt class="col-md-4">ellipse</dt><dd class="col-md-8">        x0,y0 rx,ry a0,a1</dd>
+<dt class="col-md-4">circle</dt><dd class="col-md-8">         x0,y0 x1,y1</dd>
+<dt class="col-md-4">polyline</dt><dd class="col-md-8">       x0,y0  ...  xn,yn</dd>
+<dt class="col-md-4">polygon</dt><dd class="col-md-8">        x0,y0  ...  xn,yn</dd>
+<dt class="col-md-4">bezier</dt><dd class="col-md-8">         x0,y0  ...  xn,yn</dd>
+<dt class="col-md-4">path</dt><dd class="col-md-8">specification  </dd>
+<dt class="col-md-4">image</dt><dd class="col-md-8">          operator x0,y0 w,h filename</dd>
 </dl>
 
 <p>The text primitive:</p>
 
-<dl class="dl-horizontal">
-<dt>text</dt><dd>x0,y0 string</dd>
+<dl class="row">
+<dt class="col-md-4">text</dt><dd class="col-md-8">x0,y0 string</dd>
 </dl>
 <p>The text gravity primitive:</p>
 
-<dl class="dl-horizontal">
-<dt>gravity</dt><dd>NorthWest, North, NorthEast, West, Center, East, SouthWest, South, or SouthEast</dd>
+<dl class="row">
+<dt class="col-md-4">gravity</dt><dd class="col-md-8">NorthWest, North, NorthEast, West, Center, East, SouthWest, South, or SouthEast</dd>
 </dl>
 
 <p>The text gravity primitive only affects the placement of text and does not
@@ -3148,19 +3148,19 @@ scope to the <a href="#draw">-draw</a> option in which it appears.</p>
 
 <p>The transformation primitives:</p>
 
-<dl class="dl-horizontal">
-<dt>rotate</dt><dd>degrees</dd>
-<dt>translate</dt><dd>dx,dy</dd>
-<dt>scale</dt><dd>sx,sy</dd>
-<dt>skewX</dt><dd>degrees</dd>
-<dt>skewY</dt><dd>degrees</dd>
+<dl class="row">
+<dt class="col-md-4">rotate</dt><dd class="col-md-8">degrees</dd>
+<dt class="col-md-4">translate</dt><dd class="col-md-8">dx,dy</dd>
+<dt class="col-md-4">scale</dt><dd class="col-md-8">sx,sy</dd>
+<dt class="col-md-4">skewX</dt><dd class="col-md-8">degrees</dd>
+<dt class="col-md-4">skewY</dt><dd class="col-md-8">degrees</dd>
 </dl>
 
 <p>The pixel operation primitives:</p>
 
-<dl class="dl-horizontal">
-<dt>color</dt><dd>x0,y0 method</dd>
-<dt>matte</dt><dd>x0,y0 method</dd>
+<dl class="row">
+<dt class="col-md-4">color</dt><dd class="col-md-8">x0,y0 method</dd>
+<dt class="col-md-4">matte</dt><dd class="col-md-8">x0,y0 method</dd>
 </dl>
 
 <p>The shape primitives are drawn in the color specified by the preceding <a
@@ -3452,7 +3452,7 @@ a "normalized pixel" is that number divided by the maximum
 normalized pixels are used, they are restored, following the other
 calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <col width="25%" />
   <col width="75%" />
   <thead>
@@ -3860,7 +3860,7 @@ filter</a> option.</p>
 use of these expert settings (see also <a href="#define" >-define</a> and <a
 href="#set" >-set</a>):-</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>-define filter:blur=<var>factor</var></td>
     <td>Scale the X axis of the filter (and its window). Use &gt; 1.0 for
@@ -4188,9 +4188,9 @@ Arctan
 <p>To print a complete list of <a href="#function">-function</a> operators,
 use <a href="#list">-list function</a>. Descriptions follow.</p>
 
-<dl class="dl-horizontal">
-  <dt>Polynomial</dt>
-  <dd><p>The <code>Polynomial</code> function takes an arbitrary number of parameters,
+<dl class="row">
+  <dt class="col-md-4">Polynomial</dt>
+  <dd class="col-md-8"><p>The <code>Polynomial</code> function takes an arbitrary number of parameters,
 these being the coefficients of a polynomial, in decreasing order of degree.
 That is, entering</p>
 
@@ -4213,7 +4213,7 @@ polynomials) of the <a href="#evaluate">-evaluate</a> operator. The <a
 href="#level">-level</a> operator also affects channels linearly. Some
 correspondences follow.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
         <td>-evaluate Set <var>value</var> </td>
         <td>-function Polynomial <var>value</var></td>
@@ -4243,8 +4243,8 @@ polynomials can be used to fit any continuous curve to any degree of accuracy
 desired.</p>
 
 </dd>
-<dt>Sinusoid</dt>
-<dd>
+<dt class="col-md-4">Sinusoid</dt>
+<dd class="col-md-8">
 <p>The <code>Sinusoid</code> function can be used to vary the channel values
 sinusoidally by setting frequency, phase shift, amplitude, and a bias. These
 values are given as one to four parameters, as follows,</p>
@@ -4277,7 +4277,7 @@ is 0.</p>
 <code>Cos</code> of the <a href="#evaluate">-evaluate</a> operator by allowing
 varying amplitude, phase and bias. The correspondence is as follows.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
         <td>-evaluate Sin <var>freq</var> </td>
         <td>-function Sinusoid <var>freq</var>,0 </td>
@@ -4288,8 +4288,8 @@ varying amplitude, phase and bias. The correspondence is as follows.</p>
   </tr>
 </table>
   </dd>
-<dt>ArcSin</dt>
-<dd>
+<dt class="col-md-4">ArcSin</dt>
+<dd class="col-md-8">
 <p>The <code>ArcSin</code> function generates the inverse curve of a Sinusoid,
 and can be used to generate cylindrical distortion and displacement maps.
 The curve can be adjusted relative to both the input values and output range
@@ -4308,8 +4308,8 @@ for bout input (<var>width</var>), and output (<var>width</var>) values. '<code>
 </pre>
 
 </dd>
-<dt>ArcTan</dt>
-<dd>
+<dt class="col-md-4">ArcTan</dt>
+<dd class="col-md-8">
 <p>The <code>ArcTan</code> function generates a curve that smooth crosses from
 limit values at infinities, though a center using the given slope value.
 All these values can be adjusted via the arguments.</p>
@@ -4737,13 +4737,13 @@ converting images to <code>-colorspace gray</code>. </p>
 the pixel values to linear-RGB or non-linear sRGB colorspace before
 being applied to calculate the final greyscale value. </p>
 
-<dl class="dl-horizontal">
-<dt>Rec601Luma</dt><dd>      0.298839R' + 0.586811G'+ 0.114350B'</dd>
-<dt>Rec601Luminance</dt><dd> 0.298839R + 0.586811G + 0.114350B</dd>
-<dt>Rec709Luma</dt><dd>      0.212656R' + 0.715158G' + 0.072186B'</dd>
-<dt>Rec709Luminance</dt><dd> 0.212656R + 0.715158G + 0.072186B</dd>
-<dt>Brightness</dt><dd>      max(R', G', B')</dd>
-<dt>Lightness</dt><dd>       (min(R', G', B') + max(R', G', B')) / 2.0</dd>
+<dl class="row">
+<dt class="col-md-4">Rec601Luma</dt><dd class="col-md-8">      0.298839R' + 0.586811G'+ 0.114350B'</dd>
+<dt class="col-md-4">Rec601Luminance</dt><dd class="col-md-8"> 0.298839R + 0.586811G + 0.114350B</dd>
+<dt class="col-md-4">Rec709Luma</dt><dd class="col-md-8">      0.212656R' + 0.715158G' + 0.072186B'</dd>
+<dt class="col-md-4">Rec709Luminance</dt><dd class="col-md-8"> 0.212656R + 0.715158G + 0.072186B</dd>
+<dt class="col-md-4">Brightness</dt><dd class="col-md-8">      max(R', G', B')</dd>
+<dt class="col-md-4">Lightness</dt><dd class="col-md-8">       (min(R', G', B') + max(R', G', B')) / 2.0</dd>
 </dl>
 
 <p>Note that the above R,G,B values is the image's linear-RGB values, while
@@ -4753,10 +4753,10 @@ R',G',B' are sRGB non-linear values. </p>
 current value in the images respective R,G,B channel regardless of
 what that is, or what colorspace the image is currently using.</p>
 
-<dl class="dl-horizontal">
-<dt>Average</dt><dd>(R + G + B) / 3.0</dd>
-<dt>MS</dt><dd>(R^2 + G^2 + B^2) / 3.0</dd>
-<dt>RMS</dt><dd>sqrt( (R^2 + G^2 + B^2) / 3.0 )</dd>
+<dl class="row">
+<dt class="col-md-4">Average</dt><dd class="col-md-8">(R + G + B) / 3.0</dd>
+<dt class="col-md-4">MS</dt><dd class="col-md-8">(R^2 + G^2 + B^2) / 3.0</dd>
+<dt class="col-md-4">RMS</dt><dd class="col-md-8">sqrt( (R^2 + G^2 + B^2) / 3.0 )</dd>
 </dl>
 
 <p>These methods are often used for other purposes, such as generating a
@@ -4862,23 +4862,23 @@ image. This setting determines how the color is determined from the colors of
 the pixels surrounding that point.  That is how to determine the color of a
 point that falls between two, or even four different colored pixels. </p>
 
-<dl class="dl-horizontal">
-  <dt>integer</dt>
-  <dd>The color of the top-left pixel (floor function)</dd>
-  <dt>nearest-neighbor</dt>
-  <dd>The nearest pixel to the lookup point (rounded function)</dd>
-  <dt>average</dt>
-  <dd>The average color of the surrounding four pixels</dd>
-  <dt>bilinear</dt>
-  <dd>A double linear interpolation of pixels (the default)</dd>
-  <dt>mesh</dt>
-  <dd>Divide area into two flat triangular interpolations</dd>
-  <dt>bicubic</dt>
-  <dd>Fitted bicubic-spines of surrounding 16 pixels</dd>
-  <dt>spline</dt>
-  <dd>Direct spline curves (colors are blurred)</dd>
-  <dt>filter</dt>
-  <dd>Use resize <a href="#filter">-filter</a> settings</dd>
+<dl class="row">
+  <dt class="col-md-4">integer</dt>
+  <dd class="col-md-8">The color of the top-left pixel (floor function)</dd>
+  <dt class="col-md-4">nearest-neighbor</dt>
+  <dd class="col-md-8">The nearest pixel to the lookup point (rounded function)</dd>
+  <dt class="col-md-4">average</dt>
+  <dd class="col-md-8">The average color of the surrounding four pixels</dd>
+  <dt class="col-md-4">bilinear</dt>
+  <dd class="col-md-8">A double linear interpolation of pixels (the default)</dd>
+  <dt class="col-md-4">mesh</dt>
+  <dd class="col-md-8">Divide area into two flat triangular interpolations</dd>
+  <dt class="col-md-4">bicubic</dt>
+  <dd class="col-md-8">Fitted bicubic-spines of surrounding 16 pixels</dd>
+  <dt class="col-md-4">spline</dt>
+  <dd class="col-md-8">Direct spline curves (colors are blurred)</dd>
+  <dt class="col-md-4">filter</dt>
+  <dd class="col-md-8">Use resize <a href="#filter">-filter</a> settings</dd>
 </dl>
 
 <p>This most important for distortion operators such as <a href="#distort"
@@ -4988,7 +4988,7 @@ the local background color, from which to separate the foreground color. </p>
 which may represent either a set of overlaid 'image layers', a GIF disposal
 animation, or a fully-'coalesced' animation sequence. </p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th style="width: 8%">Method</th>
@@ -5566,19 +5566,19 @@ href="#debug">-debug</a> option is active.</p>
 <p>You can display the following components by embedding special format
 characters:</p>
 
-<dl class="dl-horizontal">
-<dt>%d</dt><dd>domain</dd>
-<dt>%e</dt><dd>event</dd>
-<dt>%f</dt><dd>function</dd>
-<dt>%l</dt><dd>line</dd>
-<dt>%m</dt><dd>module</dd>
-<dt>%p</dt><dd>process ID</dd>
-<dt>%r</dt><dd>real CPU time</dd>
-<dt>%t</dt><dd>wall clock time</dd>
-<dt>%u</dt><dd>user CPU time</dd>
-<dt>%%</dt><dd>percent sign</dd>
-<dt>\n</dt><dd>newline</dd>
-<dt>\r</dt><dd>carriage return</dd>
+<dl class="row">
+<dt class="col-md-4">%d</dt><dd class="col-md-8">domain</dd>
+<dt class="col-md-4">%e</dt><dd class="col-md-8">event</dd>
+<dt class="col-md-4">%f</dt><dd class="col-md-8">function</dd>
+<dt class="col-md-4">%l</dt><dd class="col-md-8">line</dd>
+<dt class="col-md-4">%m</dt><dd class="col-md-8">module</dd>
+<dt class="col-md-4">%p</dt><dd class="col-md-8">process ID</dd>
+<dt class="col-md-4">%r</dt><dd class="col-md-8">real CPU time</dd>
+<dt class="col-md-4">%t</dt><dd class="col-md-8">wall clock time</dd>
+<dt class="col-md-4">%u</dt><dd class="col-md-8">user CPU time</dd>
+<dt class="col-md-4">%%</dt><dd class="col-md-8">percent sign</dd>
+<dt class="col-md-4">\n</dt><dd class="col-md-8">newline</dd>
+<dt class="col-md-4">\r</dt><dd class="col-md-8">carriage return</dd>
 </dl>
 
 <p>For example:</p>
@@ -5643,18 +5643,18 @@ the type and <code>display</code> searches the list of colormap types in
 
 <p>Here are the valid components of a map:</p>
 
-<dl class="dl-horizontal">
-<dt>r</dt><dd>  red pixel component</dd>
-<dt>g</dt><dd>  green pixel component</dd>
-<dt>b</dt><dd>  blue pixel component</dd>
-<dt>a</dt><dd>  alpha pixel component (0 is transparent)</dd>
-<dt>o</dt><dd>  opacity pixel component (0 is opaque)</dd>
-<dt>i</dt><dd>  grayscale intensity pixel component</dd>
-<dt>c</dt><dd>  cyan pixel component</dd>
-<dt>m</dt><dd>  magenta pixel component</dd>
-<dt>y</dt><dd>  yellow pixel component</dd>
-<dt>k</dt><dd>  black pixel component</dd>
-<dt>p</dt><dd>  pad component (always 0)</dd>
+<dl class="row">
+<dt class="col-md-4">r</dt><dd class="col-md-8">  red pixel component</dd>
+<dt class="col-md-4">g</dt><dd class="col-md-8">  green pixel component</dd>
+<dt class="col-md-4">b</dt><dd class="col-md-8">  blue pixel component</dd>
+<dt class="col-md-4">a</dt><dd class="col-md-8">  alpha pixel component (0 is transparent)</dd>
+<dt class="col-md-4">o</dt><dd class="col-md-8">  opacity pixel component (0 is opaque)</dd>
+<dt class="col-md-4">i</dt><dd class="col-md-8">  grayscale intensity pixel component</dd>
+<dt class="col-md-4">c</dt><dd class="col-md-8">  cyan pixel component</dd>
+<dt class="col-md-4">m</dt><dd class="col-md-8">  magenta pixel component</dd>
+<dt class="col-md-4">y</dt><dd class="col-md-8">  yellow pixel component</dd>
+<dt class="col-md-4">k</dt><dd class="col-md-8">  black pixel component</dd>
+<dt class="col-md-4">p</dt><dd class="col-md-8">  pad component (always 0)</dd>
 </dl>
 
 <p>You can specify as many of these components as needed in any order (e.g.
@@ -5730,17 +5730,17 @@ name. </p>
 
 <p>Choose from:</p>
 
-<dl class="dl-horizontal">
-<dt>AE</dt><dd>    absolute error count, number of different pixels (-fuzz effected)</dd>
-<dt>FUZZ</dt><dd>  mean color distance</dd>
-<dt>MAE</dt><dd>   mean absolute error (normalized), average channel error distance</dd>
-<dt>MEPP</dt><dd>  mean error per pixel (normalized mean error, normalized peak error)</dd>
-<dt>MSE</dt><dd>   mean error squared, average of the channel error squared</dd>
-<dt>NCC</dt><dd>   normalized cross correlation</dd>
-<dt>PAE</dt><dd>   peak absolute (normalized peak absolute)</dd>
-<dt>PHASH</dt><dd> perceptual hash</dd>
-<dt>PSNR</dt><dd>  peak signal to noise ratio</dd>
-<dt>RMSE</dt><dd>  root mean squared (normalized root mean squared)</dd>
+<dl class="row">
+<dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz effected)</dd>
+<dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
+<dt class="col-md-4">MAE</dt><dd class="col-md-8">   mean absolute error (normalized), average channel error distance</dd>
+<dt class="col-md-4">MEPP</dt><dd class="col-md-8">  mean error per pixel (normalized mean error, normalized peak error)</dd>
+<dt class="col-md-4">MSE</dt><dd class="col-md-8">   mean error squared, average of the channel error squared</dd>
+<dt class="col-md-4">NCC</dt><dd class="col-md-8">   normalized cross correlation</dd>
+<dt class="col-md-4">PAE</dt><dd class="col-md-8">   peak absolute (normalized peak absolute)</dd>
+<dt class="col-md-4">PHASH</dt><dd class="col-md-8"> perceptual hash</dd>
+<dt class="col-md-4">PSNR</dt><dd class="col-md-8">  peak signal to noise ratio</dd>
+<dt class="col-md-4">RMSE</dt><dd class="col-md-8">  root mean squared (normalized root mean squared)</dd>
 </dl>
 
 <p>Control the '<code>AE</code>', or absolute count of pixels that are different,
@@ -6104,45 +6104,45 @@ href="#page">-page</a> <code>Letter+43+43</code>).</p>
 <p>Use <var>media</var> as shorthand to specify the dimensions (<var>width</var>x<var>height</var>) of the <var>PostScript</var> page in dots per inch or a TEXT page in pixels.
 The choices for a PostScript page are:</p>
 
-<dl class="dl-horizontal">
-<dt> 11x17      </dt> <dd>  792 x 1224</dd> 
-<dt> Ledger     </dt> <dd> 1224 x  792</dd> 
-<dt> Legal      </dt> <dd>  612 x 1008</dd> 
-<dt> Letter     </dt> <dd>  612 x  792</dd> 
-<dt> LetterSmall</dt> <dd>  612 x  792</dd> 
-<dt> ArchE      </dt> <dd> 2592 x 3456</dd> 
-<dt> ArchD      </dt> <dd> 1728 x 2592</dd> 
-<dt> ArchC      </dt> <dd> 1296 x 1728</dd> 
-<dt> ArchB      </dt> <dd>  864 x 1296</dd> 
-<dt> ArchA      </dt> <dd>  648 x  864</dd> 
-<dt> A0         </dt> <dd> 2380 x 3368</dd> 
-<dt> A1         </dt> <dd> 1684 x 2380</dd> 
-<dt> A2         </dt> <dd> 1190 x 1684</dd> 
-<dt> A3         </dt> <dd>  842 x 1190</dd> 
-<dt> A4         </dt> <dd>  595 x  842</dd> 
-<dt> A4Small    </dt> <dd>  595 x  842</dd> 
-<dt> A5         </dt> <dd>  421 x  595</dd> 
-<dt> A6         </dt> <dd>  297 x  421</dd> 
-<dt> A7         </dt> <dd>  210 x  297</dd> 
-<dt> A8         </dt> <dd>  148 x  210</dd> 
-<dt> A9         </dt> <dd>  105 x  148</dd> 
-<dt> A10        </dt> <dd>   74 x  105</dd> 
-<dt> B0         </dt> <dd> 2836 x 4008</dd> 
-<dt> B1         </dt> <dd> 2004 x 2836</dd> 
-<dt> B2         </dt> <dd> 1418 x 2004</dd> 
-<dt> B3         </dt> <dd> 1002 x 1418</dd> 
-<dt> B4         </dt> <dd>  709 x 1002</dd> 
-<dt> B5         </dt> <dd>  501 x  709</dd> 
-<dt> C0         </dt> <dd> 2600 x 3677</dd> 
-<dt> C1         </dt> <dd> 1837 x 2600</dd> 
-<dt> C2         </dt> <dd> 1298 x 1837</dd> 
-<dt> C3         </dt> <dd>  918 x 1298</dd> 
-<dt> C4         </dt> <dd>  649 x  918</dd> 
-<dt> C5         </dt> <dd>  459 x  649</dd> 
-<dt> C6         </dt> <dd>  323 x  459</dd> 
-<dt> Flsa       </dt> <dd>  612 x  936</dd> 
-<dt> Flse       </dt> <dd>  612 x  936</dd> 
-<dt> HalfLetter </dt> <dd>  396 x  612</dd> 
+<dl class="row">
+<dt class="col-md-4"> 11x17      </dt> <dd class="col-md-8">  792 x 1224</dd> 
+<dt class="col-md-4"> Ledger     </dt> <dd class="col-md-8"> 1224 x  792</dd> 
+<dt class="col-md-4"> Legal      </dt> <dd class="col-md-8">  612 x 1008</dd> 
+<dt class="col-md-4"> Letter     </dt> <dd class="col-md-8">  612 x  792</dd> 
+<dt class="col-md-4"> LetterSmall</dt> <dd class="col-md-8">  612 x  792</dd> 
+<dt class="col-md-4"> ArchE      </dt> <dd class="col-md-8"> 2592 x 3456</dd> 
+<dt class="col-md-4"> ArchD      </dt> <dd class="col-md-8"> 1728 x 2592</dd> 
+<dt class="col-md-4"> ArchC      </dt> <dd class="col-md-8"> 1296 x 1728</dd> 
+<dt class="col-md-4"> ArchB      </dt> <dd class="col-md-8">  864 x 1296</dd> 
+<dt class="col-md-4"> ArchA      </dt> <dd class="col-md-8">  648 x  864</dd> 
+<dt class="col-md-4"> A0         </dt> <dd class="col-md-8"> 2380 x 3368</dd> 
+<dt class="col-md-4"> A1         </dt> <dd class="col-md-8"> 1684 x 2380</dd> 
+<dt class="col-md-4"> A2         </dt> <dd class="col-md-8"> 1190 x 1684</dd> 
+<dt class="col-md-4"> A3         </dt> <dd class="col-md-8">  842 x 1190</dd> 
+<dt class="col-md-4"> A4         </dt> <dd class="col-md-8">  595 x  842</dd> 
+<dt class="col-md-4"> A4Small    </dt> <dd class="col-md-8">  595 x  842</dd> 
+<dt class="col-md-4"> A5         </dt> <dd class="col-md-8">  421 x  595</dd> 
+<dt class="col-md-4"> A6         </dt> <dd class="col-md-8">  297 x  421</dd> 
+<dt class="col-md-4"> A7         </dt> <dd class="col-md-8">  210 x  297</dd> 
+<dt class="col-md-4"> A8         </dt> <dd class="col-md-8">  148 x  210</dd> 
+<dt class="col-md-4"> A9         </dt> <dd class="col-md-8">  105 x  148</dd> 
+<dt class="col-md-4"> A10        </dt> <dd class="col-md-8">   74 x  105</dd> 
+<dt class="col-md-4"> B0         </dt> <dd class="col-md-8"> 2836 x 4008</dd> 
+<dt class="col-md-4"> B1         </dt> <dd class="col-md-8"> 2004 x 2836</dd> 
+<dt class="col-md-4"> B2         </dt> <dd class="col-md-8"> 1418 x 2004</dd> 
+<dt class="col-md-4"> B3         </dt> <dd class="col-md-8"> 1002 x 1418</dd> 
+<dt class="col-md-4"> B4         </dt> <dd class="col-md-8">  709 x 1002</dd> 
+<dt class="col-md-4"> B5         </dt> <dd class="col-md-8">  501 x  709</dd> 
+<dt class="col-md-4"> C0         </dt> <dd class="col-md-8"> 2600 x 3677</dd> 
+<dt class="col-md-4"> C1         </dt> <dd class="col-md-8"> 1837 x 2600</dd> 
+<dt class="col-md-4"> C2         </dt> <dd class="col-md-8"> 1298 x 1837</dd> 
+<dt class="col-md-4"> C3         </dt> <dd class="col-md-8">  918 x 1298</dd> 
+<dt class="col-md-4"> C4         </dt> <dd class="col-md-8">  649 x  918</dd> 
+<dt class="col-md-4"> C5         </dt> <dd class="col-md-8">  459 x  649</dd> 
+<dt class="col-md-4"> C6         </dt> <dd class="col-md-8">  323 x  459</dd> 
+<dt class="col-md-4"> Flsa       </dt> <dd class="col-md-8">  612 x  936</dd> 
+<dt class="col-md-4"> Flse       </dt> <dd class="col-md-8">  612 x  936</dd> 
+<dt class="col-md-4"> HalfLetter </dt> <dd class="col-md-8">  396 x  612</dd> 
 </dl>
 
 <p>This option is also used to place subimages when writing to a multi-image
@@ -6409,12 +6409,12 @@ compression.</p>
 <p>If filter-type is 4 or less, the specified PNG filter-type is used for
 all scanlines:</p>
 
-<dl class="dl-horizontal">
-<dt>0</dt><dd>none</dd>
-<dt>1</dt><dd>sub</dd>
-<dt>2</dt><dd>up</dd>
-<dt>3</dt><dd>average</dd>
-<dt>4</dt><dd>Paeth</dd>
+<dl class="row">
+<dt class="col-md-4">0</dt><dd class="col-md-8">none</dd>
+<dt class="col-md-4">1</dt><dd class="col-md-8">sub</dd>
+<dt class="col-md-4">2</dt><dd class="col-md-8">up</dd>
+<dt class="col-md-4">3</dt><dd class="col-md-8">average</dd>
+<dt class="col-md-4">4</dt><dd class="col-md-8">Paeth</dd>
 </dl>
 
 <p>If filter-type is 5, adaptive filtering is used when quality is greater
@@ -7176,26 +7176,26 @@ exposing a photographic film to light during the development process.</p>
 <p class="magick-description"> color the given image using the specified points of color, and filling the other intervening colors using the given methods. </p>
 
 
-<dl class="dl-horizontal">
-    <dt>barycentric</dt>
-    <dd>three point triangle of color given 3 points.
+<dl class="row">
+    <dt class="col-md-4">barycentric</dt>
+    <dd class="col-md-8">three point triangle of color given 3 points.
         Giving only 2 points will form a linear gradient between those points.
         The gradient generated extends beyond the triangle created by those
         3 points. </dd>
-    <dt>bilinear</dt>
-    <dd>Like barycentric but for 4 points. Less than 4 points
+    <dt class="col-md-4">bilinear</dt>
+    <dd class="col-md-8">Like barycentric but for 4 points. Less than 4 points
         fall back to barycentric. </dd>
-    <dt>voronoi</dt>
-    <dd>Simply map each pixel to the to nearest color point
+    <dt class="col-md-4">voronoi</dt>
+    <dd class="col-md-8">Simply map each pixel to the to nearest color point
         given. The result are polygonal 'cells' of solid color. </dd>
-    <dt>manhatten</dt>
-    <dd>Like voronoi, but resulting polygonal 'cells' are mapped to a fixed coordinate system.</dd>
-    <dt>shepards</dt>
-    <dd>Colors points biased on the ratio of inverse distance
+    <dt class="col-md-4">manhatten</dt>
+    <dd class="col-md-8">Like voronoi, but resulting polygonal 'cells' are mapped to a fixed coordinate system.</dd>
+    <dt class="col-md-4">shepards</dt>
+    <dd class="col-md-8">Colors points biased on the ratio of inverse distance
         squared. Generating spots of color in a sea of the average of
         colors. </dd>
-    <dt>inverse</dt>
-    <dd>Colors points biased on the ratio of inverse distance.
+    <dt class="col-md-4">inverse</dt>
+    <dd class="col-md-8">Colors points biased on the ratio of inverse distance.
         This generates sharper points of color rather than rounded spots of
         '<code>shepards</code>'  Generating spots of color in a sea of the
         average of colors. </dd>
@@ -7263,16 +7263,16 @@ blend.</p>
 <p class="magick-description">replace each pixel with corresponding statistic from the neighborhood.</p>
 
 <p>Choose from these statistic types:</p>
-<dl class="dl-horizontal">
-<dt>Gradient</dt><dd>maximum difference (max - min) value in neighborhood</dd>
-<dt>Maximum</dt><dd>maximum value per channel in neighborhood</dd>
-<dt>Minimum</dt><dd>minimum value per channel in neighborhood</dd>
-<dt>Mean</dt><dd>average value per channel in neighborhood</dd>
-<dt>Median</dt><dd>median value per channel in neighborhood</dd>
-<dt>Mode</dt><dd>mode (most frequent) value per channel in neighborhood</dd>
-<dt>Nonpeak</dt><dd>value just before or after the median value per channel in neighborhood</dd>
-<dt>RMS</dt><dd>root mean square value per channel in neighborhood</dd>
-<dt>StandardDeviation</dt><dd> standard deviation value per channel in neighborhood</dd>
+<dl class="row">
+<dt class="col-md-4">Gradient</dt><dd class="col-md-8">maximum difference (max - min) value in neighborhood</dd>
+<dt class="col-md-4">Maximum</dt><dd class="col-md-8">maximum value per channel in neighborhood</dd>
+<dt class="col-md-4">Minimum</dt><dd class="col-md-8">minimum value per channel in neighborhood</dd>
+<dt class="col-md-4">Mean</dt><dd class="col-md-8">average value per channel in neighborhood</dd>
+<dt class="col-md-4">Median</dt><dd class="col-md-8">median value per channel in neighborhood</dd>
+<dt class="col-md-4">Mode</dt><dd class="col-md-8">mode (most frequent) value per channel in neighborhood</dd>
+<dt class="col-md-4">Nonpeak</dt><dd class="col-md-8">value just before or after the median value per channel in neighborhood</dd>
+<dt class="col-md-4">RMS</dt><dd class="col-md-8">root mean square value per channel in neighborhood</dd>
+<dt class="col-md-4">StandardDeviation</dt><dd class="col-md-8"> standard deviation value per channel in neighborhood</dd>
 </dl>
 
 <div style="margin: auto;">
@@ -7300,14 +7300,14 @@ this information to recover the steganographic image (e.g. display -size
 
 <p class="magick-description">pixel storage type.  Here are the valid types:</p>
 
-<dl class="dl-horizontal">
-<dt>char</dt><dd>unsigned characters</dd>
-<dt>double</dt><dd>doubles</dd>
-<dt>float</dt><dd>floats</dd>
-<dt>integer</dt><dd>integers</dd>
-<dt>long</dt><dd>longs</dd>
-<dt>quantum</dt><dd>pixels in the native depth of your ImageMagick distribution</dd>
-<dt>short</dt><dd>unsigned shorts</dd>
+<dl class="row">
+<dt class="col-md-4">char</dt><dd class="col-md-8">unsigned characters</dd>
+<dt class="col-md-4">double</dt><dd class="col-md-8">doubles</dd>
+<dt class="col-md-4">float</dt><dd class="col-md-8">floats</dd>
+<dt class="col-md-4">integer</dt><dd class="col-md-8">integers</dd>
+<dt class="col-md-4">long</dt><dd class="col-md-8">longs</dd>
+<dt class="col-md-4">quantum</dt><dd class="col-md-8">pixels in the native depth of your ImageMagick distribution</dd>
+<dt class="col-md-4">short</dt><dd class="col-md-8">unsigned shorts</dd>
 </dl>
 
 <p>Float and double types are normalized from 0.0 to 1.0 otherwise the pixels
@@ -7798,15 +7798,15 @@ a radius of 0 to have the method select a suitable radius.</p>
 
 <p>The parameters are:</p>
 
-<dl class="dl-horizontal">
-<dt>radius</dt>
-<dd>The radius of the Gaussian, in pixels,  not counting the center pixel (default 0).</dd>
-<dt>sigma</dt>
-<dd>The standard deviation of the Gaussian, in pixels (default 1.0).</dd>
-<dt>gain</dt>
-<dd>The fraction of the difference between the original and the blur image that is added back into the original (default 1.0).</dd>
-<dt>threshold</dt>
-<dd>The threshold, as a fraction of <var>QuantumRange</var>, needed to apply the difference amount (default 0.05).</dd>
+<dl class="row">
+<dt class="col-md-4">radius</dt>
+<dd class="col-md-8">The radius of the Gaussian, in pixels,  not counting the center pixel (default 0).</dd>
+<dt class="col-md-4">sigma</dt>
+<dd class="col-md-8">The standard deviation of the Gaussian, in pixels (default 1.0).</dd>
+<dt class="col-md-4">gain</dt>
+<dd class="col-md-8">The fraction of the difference between the original and the blur image that is added back into the original (default 1.0).</dd>
+<dt class="col-md-4">threshold</dt>
+<dd class="col-md-8">The threshold, as a fraction of <var>QuantumRange</var>, needed to apply the difference amount (default 0.05).</dd>
 </dl>
 
 <div style="margin: auto;">
@@ -7851,22 +7851,22 @@ image, but could also be set to a specify background color. </p>
 
 <p>Choose from these methods:</p>
 
-<dl class="dl-horizontal">
-<dt>background</dt><dd>the area surrounding the image is the background color</dd>
-<dt>black</dt><dd>the area surrounding the image is black</dd>
-<dt>checker-tile</dt><dd>alternate squares with image and background color</dd>
-<dt>dither</dt><dd>non-random 32x32 dithered pattern</dd>
-<dt>edge</dt><dd>extend the edge pixel toward infinity</dd>
-<dt>gray</dt><dd>the area surrounding the image is gray</dd>
-<dt>horizontal-tile</dt><dd>horizontally tile the image, background color above/below</dd>
-<dt>horizontal-tile-edge</dt><dd>horizontally tile the image and replicate the side edge pixels</dd>
-<dt>mirror</dt><dd>mirror tile the image</dd>
-<dt>random</dt><dd>choose a random pixel from the image</dd>
-<dt>tile</dt><dd>tile the image (default)</dd>
-<dt>transparent</dt><dd>the area surrounding the image is transparent blackness</dd>
-<dt>vertical-tile</dt><dd>vertically tile the image, sides are background color</dd>
-<dt>vertical-tile-edge</dt><dd>vertically tile the image and replicate the side edge pixels</dd>
-<dt>white</dt><dd>the area surrounding the image is white</dd>
+<dl class="row">
+<dt class="col-md-4">background</dt><dd class="col-md-8">the area surrounding the image is the background color</dd>
+<dt class="col-md-4">black</dt><dd class="col-md-8">the area surrounding the image is black</dd>
+<dt class="col-md-4">checker-tile</dt><dd class="col-md-8">alternate squares with image and background color</dd>
+<dt class="col-md-4">dither</dt><dd class="col-md-8">non-random 32x32 dithered pattern</dd>
+<dt class="col-md-4">edge</dt><dd class="col-md-8">extend the edge pixel toward infinity</dd>
+<dt class="col-md-4">gray</dt><dd class="col-md-8">the area surrounding the image is gray</dd>
+<dt class="col-md-4">horizontal-tile</dt><dd class="col-md-8">horizontally tile the image, background color above/below</dd>
+<dt class="col-md-4">horizontal-tile-edge</dt><dd class="col-md-8">horizontally tile the image and replicate the side edge pixels</dd>
+<dt class="col-md-4">mirror</dt><dd class="col-md-8">mirror tile the image</dd>
+<dt class="col-md-4">random</dt><dd class="col-md-8">choose a random pixel from the image</dd>
+<dt class="col-md-4">tile</dt><dd class="col-md-8">tile the image (default)</dd>
+<dt class="col-md-4">transparent</dt><dd class="col-md-8">the area surrounding the image is transparent blackness</dd>
+<dt class="col-md-4">vertical-tile</dt><dd class="col-md-8">vertically tile the image, sides are background color</dd>
+<dt class="col-md-4">vertical-tile-edge</dt><dd class="col-md-8">vertically tile the image and replicate the side edge pixels</dd>
+<dt class="col-md-4">white</dt><dd class="col-md-8">the area surrounding the image is white</dd>
 </dl>
 
 <p>The default value is "edge".</p>
@@ -7936,25 +7936,25 @@ percentage, which defaults to 100 percent (no color change). </p>
 the currently selected font family. Use a positive integer for
 <var>fontWeight</var> or select from the following.</p>
 
-<dl class="dl-horizontal">
-<dt>Thin </dt>
-<dd>Same as <var>fontWeight</var> = 100.</dd>
-<dt>ExtraLight </dt>
-<dd>Same as <var>fontWeight</var> = 200.</dd>
-<dt>Light </dt>
-<dd>Same as <var>fontWeight</var> = 300.</dd>
-<dt>Normal </dt>
-<dd>Same as <var>fontWeight</var> = 400.</dd>
-<dt>Medium </dt>
-<dd>Same as <var>fontWeight</var> = 500.</dd>
-<dt>DemiBold </dt>
-<dd>Same as <var>fontWeight</var> = 600.</dd>
-<dt>Bold </dt>
-<dd>Same as <var>fontWeight</var> = 700.</dd>
-<dt>ExtraBold </dt>
-<dd>Same as <var>fontWeight</var> = 800.</dd>
-<dt>Heavy </dt>
-<dd>Same as <var>fontWeight</var> = 900.</dd>
+<dl class="row">
+<dt class="col-md-4">Thin </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 100.</dd>
+<dt class="col-md-4">ExtraLight </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 200.</dd>
+<dt class="col-md-4">Light </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 300.</dd>
+<dt class="col-md-4">Normal </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 400.</dd>
+<dt class="col-md-4">Medium </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 500.</dd>
+<dt class="col-md-4">DemiBold </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 600.</dd>
+<dt class="col-md-4">Bold </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 700.</dd>
+<dt class="col-md-4">ExtraBold </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 800.</dd>
+<dt class="col-md-4">Heavy </dt>
+<dd class="col-md-8">Same as <var>fontWeight</var> = 900.</dd>
 </dl>
 <br/>
 

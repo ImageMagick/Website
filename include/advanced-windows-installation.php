@@ -48,7 +48,7 @@ unzip ImageMagick-windows.zip
 <p>Key user defines in <code>magick_config.h</code> include:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>MAGICKCORE_QUANTUM_DEPTH (default 16)</td>
     <td>Specify the depth of the pixel component depth (8, 16, or 32).  A value of 8 uses half the memory than 16 and may run 30% faster, but provides 256 times less color resolution than a value of 16.  We recommend a quantum depth of 16 because 16-bit images are becoming more prevalent on the Internet.</td>

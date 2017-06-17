@@ -50,7 +50,7 @@ convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
 <p>The <code>convert</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#adaptive-blur">-adaptive-blur <var>geometry</var></a></td>
     <td>adaptively blur pixels; decrease effect near edges</td>

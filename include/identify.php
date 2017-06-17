@@ -134,7 +134,7 @@ identify -precision 5 -define identify:locate=maximum -define identify:limit=3 i
 
 <p>The <code>identify</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tbody>
   <tr>
     <th align="left">Option</th>

@@ -298,7 +298,7 @@ clip-path url(#%s)
 <p>Here is a complete description of the MVG drawing primitives:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <th>Primitive</th>
     <th>Description</th>

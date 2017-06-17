@@ -81,7 +81,7 @@ common attributes and properties of an image, such as: the image filename
 filename, type, width, height. </p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>\n</td>
     <td>newline</td>
@@ -299,7 +299,7 @@ especially for large images.</p>
 when enclosed in braces (long form):</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>%[base]</td>
     <td>base filename, no suffixes (as %t)</td>

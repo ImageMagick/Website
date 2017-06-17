@@ -11,7 +11,7 @@
 <p>The following is a partial list of <var> key = value</var> combinations that are typically be found in a MIFF file:</p>
 
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-sm table-striped">
   <tr>
     <td>background-color = <var>color</var></td>
     <td> </td>
@@ -56,10 +56,10 @@
     <td>dispose = <var>value</var></td>
     <td>layer disposal method.  Here are the valid values:
 	  <ul>
-	    <dd>0. No disposal specified.</dd>
-  	  <dd>1. Do not dispose between frames.</dd>
-  	  <dd>2. Overwrite frame with background color from header.</dd>
-  	  <dd>3. Overwrite with previous frame.</dd>
+	    <dd class="col-md-8">0. No disposal specified.</dd>
+  	  <dd class="col-md-8">1. Do not dispose between frames.</dd>
+  	  <dd class="col-md-8">2. Overwrite frame with background color from header.</dd>
+  	  <dd class="col-md-8">3. Overwrite with previous frame.</dd>
   	</ul>
     </td>
   </tr>
