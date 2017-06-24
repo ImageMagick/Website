@@ -3,6 +3,8 @@
 
 <p class="lead magick-description">You can install ImageMagick from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#unix">Unix</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="<?php echo $_SESSION['RelativePath']?>/../script/changelog.php">changes</a> to the ImageMagick distribution.</p>
 
+<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> around the world.</p>
+
 <h2 class="magick-header"><a id="unix"></a>Unix Binary Release</h2>
 
 <p>These are the Unix variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on dual and quad-core systems reducing run times considerably.</p>
