@@ -68,10 +68,10 @@ insensitive manner. </p>
 free-form string tables directly, allowing you to override the above sequence,
 and avoid accessing an attribute or property of the same name.</p>
 
-<pre>
+<pre><code>
 %[artifact:<var>setting</var>]
 %[option:<var>setting</var>]
-</pre>
+</code></pre>
 
 
 <h3 class="magick-header">Single Letter Attribute Percent Escapes</h3>
@@ -275,10 +275,10 @@ filename, type, width, height. </p>
 <p>Here is a sample command and its output for an image with filename
 <code>bird.miff</code> and whose width is 512 and height is 480.</p>
 
-<pre>
+<pre><code>
 -> identify -format "%m:%f %wx%h" bird.miff
 MIFF:bird.miff 512x480
-</pre>
+</code></pre>
 
 <p>Note that all single letter percent escapes can also be used using long
 form (from IM version 6.7.6-9, see next). For example <code>%[f]</code> is
@@ -585,13 +585,13 @@ Artifact. </p>
 now list all free-form string properties, artifacts, and options, (but not
 specific image attributes) using...</p>
 
-<pre>
+<pre><code>
 convert ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \
    ...
-</pre>
+</code></pre>
 
 <p> The format of glob patterns are very specific and as such is generally
 only used to list specific settings, such as when debugging, rather than being
@@ -606,30 +606,30 @@ example you can do a numerical calculation use <code>%[fx:...]</code> to
 evaluate the given <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 
-<pre>
+<pre><code>
 %[fx:<var>expression</var>]
-</pre>
+</code></pre>
 
 <p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
-<pre>
+<pre><code>
 %[pixel:<var>expression</var>]
-</pre>
+</code></pre>
 
 <h3 class="magick-header">Specific Profile Percent Escape Prefixes</h3>
 
 <p>You can also use the following special formatting syntax to print EXIF
 mage meta-data that was included in the image read in:</p>
 
-<pre>
+<pre><code>
 %[EXIF:<var>tag</var>]
-</pre>
+</code></pre>
 
 <p>Choose <var>tag</var> from the following:</p>
 
-<pre class="pre-scrollable">
+<pre class="pre-scrollable"><code>
 *  (print all EXIF tags, in keyword=data format)
 !  (print all EXIF tags, in tag_number data format)
 #hhhh (print data for EXIF tag #hhhh)
@@ -715,7 +715,7 @@ ExposureIndex
 SensingMethod
 FileSource
 SceneType
-</pre>
+</code></pre>
 <br/>
 <p>Surround the format specification with quotation marks to prevent your
 shell from misinterpreting any spaces and square brackets.</p>
@@ -723,9 +723,9 @@ shell from misinterpreting any spaces and square brackets.</p>
 <p>The following special formatting syntax can be used to print IPTC
 information contained in the file:</p>
 
-<pre>
+<pre><code>
 %[IPTC:<var>dataset</var>:<var>record</var>]
-</pre>
+</code></pre>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
 
@@ -815,5 +815,5 @@ ObjectData Record
 
 Post ObjectData Descriptor Record
   9:10   Confirmed ObjectData Size
-</pre>
+</code></pre>
 </div>

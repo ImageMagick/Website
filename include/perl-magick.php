@@ -14,17 +14,17 @@
 
 <p>Is PerlMagick available from your system RPM repository?  For example, on our CentOS system, we install PerlMagick thusly:</p>
 
-<pre>
+<pre><code>
 yum install ImageMagick-perl
-</pre>
+</code></pre>
 
 <p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">source</a> release.</p>
 
 <p>Unpack the distribution with this command:</p>
 
-<pre>
+<pre><code>
 tar xvzf ImageMagick.tar.gz
-</pre>
+</code></pre>
 
 <p>Next configure and compile ImageMagick:</p>
 
@@ -32,22 +32,22 @@ tar xvzf ImageMagick.tar.gz
 
 <p>If ImageMagick / PerlMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
-<pre>
+<pre><code>
 sudo make install
-</pre>
+</code></pre>
 
 <p>You may need to configure the dynamic linker run-time bindings:</p>
 
-<pre>
+<pre><code>
 sudo ldconfig /usr/local/lib
-</pre>
+</code></pre>
 
 
 <p>Finally, verify the PerlMagick install worked properly, type</p>
 
-<pre>
+<pre><code>
 perl -MImage::Magick -le 'print Image::Magick->QuantumDepth'
-</pre>
+</code></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images.</p>
 
@@ -57,12 +57,12 @@ perl -MImage::Magick -le 'print Image::Magick->QuantumDepth'
 
 <p>Next, type</p>
 
-<pre>
+<pre><code>
 cd PerlMagick
 perl Makefile.nt
 nmake
 nmake install
-</pre>
+</code></pre>
 
 <p>See the <a href="http://www.dylanbeattie.net/magick/">PerlMagick Windows HowTo</a> page for further installation instructions.</p>
 
@@ -70,16 +70,16 @@ nmake install
 
 <p>To verify a correct installation, type</p>
 
-<pre>
+<pre><code>
 make test
-</pre>
+</code></pre>
 
 <p>Use <code>nmake test</code> under Windows. There are a few demonstration scripts available to exercise many of the functions PerlMagick can perform. Type</p>
 
-<pre>
+<pre><code>
 cd demo
 make
-</pre>
+</code></pre>
 
 <p>You are now ready to utilize the PerlMagick methods from within your Perl scripts.</p>
 
@@ -87,59 +87,59 @@ make
 
 <p>Any script that wants to use PerlMagick methods must first define the methods within its namespace and instantiate an image object. Do this with:</p>
 
-<pre>
+<pre><code>
 use Image::Magick;
 
 $image = Image::Magick-&gt;new;
-</pre>
+</code></pre>
 
 <p>PerlMagick is <var>quantum</var> aware.  You can request a specific quantum depth when you instantiate an image object:</p>
 
-<pre>
+<pre><code>
 use Image::Magick::Q16;
 
 $image = Image::Magick::Q16-&gt;new;
-</pre>
+</code></pre>
 
 <p>The new() method takes the same parameters as <a href="#set-attribute">SetAttribute</a> . For example,</p>
 
-<pre>
+<pre><code>
 $image = Image::Magick-&gt;new(size=&gt;'384x256');
-</pre>
+</code></pre>
 
 <p>Next you will want to read an image or image sequence, manipulate it, and then display or write it. The input and output methods for PerlMagick are defined in <a href="#read">Read or Write an Image</a>. See <a href="#set-attribute">Set an Image Attribute</a> for methods that affect the way an image is read or written. Refer to <a href="#manipulate">Manipulate an Image</a> for a list of methods to transform an image. <a href="#get-attribute">Get an Image Attribute</a> describes how to retrieve an attribute for an image. Refer to <a href="#montage">Create an Image Montage</a> for details about tiling your images as thumbnails on a background. Finally, some methods do not neatly fit into any of the categories just mentioned. Review <a href="#misc">Miscellaneous Methods</a> for a list of these methods.</p>
 
 <p>Once you are finished with a PerlMagick object you should consider destroying it. Each image in an image sequence is stored in virtual memory. This can potentially add up to mebibytes of memory. Upon destroying a PerlMagick object, the memory is returned for use by other Perl methods. The recommended way to destroy an object is with <code>undef</code>:</p>
 
-<pre>
+<pre><code>
 undef $image;
-</pre>
+</code></pre>
 
 <p>To delete all the images but retain the <code>Image::Magick</code> object use</p>
 
-<pre>
+<pre><code>
 @$image = ();
-</pre>
+</code></pre>
 
 <p>and finally, to delete a single image from a multi-image sequence, use</p>
 
-<pre>
+<pre><code>
 undef $image-&gt;[$x];
-</pre>
+</code></pre>
 
 <p>The next section illustrates how to use various PerlMagick methods to manipulate an image sequence.</p>
 
 <p>Some of the PerlMagick methods require external programs such as <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a>. This may require an explicit path in your PATH environment variable to work properly. For example (in Unix),</p>
 
-<pre>
+<pre><code>
 $ENV{PATH}' . "='/../bin:/usr/bin:/usr/local/bin';
-</pre>
+</code></pre>
 
 <h2 class="magick-header"><a id="example"></a>Example Script</h2>
 
 <p>Here is an example script to get you started:</p>
 
-<pre>
+<pre><code>
 #!/usr/local/bin/perl
 use Image::Magick;<br />
 my($image, $x);<br />
@@ -150,11 +150,11 @@ $x = $image-&gt;Crop(geometry=&gt;'100x100+100+100');
 warn "$x" if "$x";<br />
 $x = $image-&gt;Write('x.png');
 warn "$x" if "$x";
-</pre>
+</code></pre>
 
 <p>The script reads three images, crops them, and writes a single image as a GIF animation sequence. In many cases you may want to access individual images of a sequence. The next example illustrates how this done:</p>
 
-<pre class="pre-scrollable">#!/usr/local/bin/perl
+<pre class="pre-scrollable"><code>#!/usr/local/bin/perl
 use Image::Magick;<br />
 my($image, $p, $q);<br />
 $image = new Image::Magick;
@@ -172,54 +172,54 @@ $p-&gt;Draw(stroke=&gt;'red', primitive=&gt;'rectangle', points=&gt;20,20 100,10
 $q = $p-&gt;Montage();
 undef $image;
 $q-&gt;Write('x.miff');
-</pre>
+</code></pre>
 
 <p>Suppose you want to start out with a 100 by 100 pixel white canvas with a red pixel in the center. Try</p>
 
-<pre>
+<pre><code>
 $image = Image::Magick-&gt;new;
 $image-&gt;Set(size=&gt;'100x100');
 $image-&gt;ReadImage('canvas:white');
 $image-&gt;Set('pixel[49,49]'=&gt;'red');
-</pre>
+</code></pre>
 
 <p>Here we reduce the intensity of the red component at (1,1) by half:</p>
 
-<pre>
+<pre><code>
 @pixels = $image-&gt;GetPixel(x=&gt;1,y=&gt;1);
 $pixels[0]*=0.5;
 $image-&gt;SetPixel(x=&gt;1,y=&gt;1,color=&gt;\@pixels);
-</pre>
+</code></pre>
 
 <p>Or suppose you want to convert your color image to grayscale:</p>
 
-<pre>
+<pre><code>
 $image-&gt;Quantize(colorspace=&gt;'gray');
-</pre>
+</code></pre>
 
 <p>Let's annotate an image with a Taipai TrueType font:</p>
 
-<pre>
+<pre><code>
 $text = 'Works like magick!';
 $image-&gt;Annotate(font=&gt;'kai.ttf', pointsize=&gt;40, fill=&gt;'green', text=&gt;$text);
-</pre>
+</code></pre>
 
 <p>Perhaps you want to extract all the pixel intensities from an image and write them to STDOUT:</p>
 
-<pre>
+<pre><code>
 @pixels = $image-&gt;GetPixels(map=&gt;'I', height=&gt;$height, width=&gt;$width, normalize=&gt;true);
 binmode STDOUT;
 print pack('B*',join('',@pixels));
-</pre>
+</code></pre>
 
 <p>Other clever things you can do with a PerlMagick objects include</p>
 
-<pre>
+<pre><code>
 $i = $#$p"+1";   # return the number of images associated with object p
 push(@$q, @$p);  # push the images from object p onto object q
 @$p = ();        # delete the images but not the object p
 $p-&gt;Convolve([1, 2, 1, 2, 4, 2, 1, 2, 1]);   # 3x3 Gaussian kernel
-</pre>
+</code></pre>
 
   <h2 class="magick-header"><a id="read"></a>Read or Write an Image</h2>
 
@@ -274,42 +274,42 @@ $p-&gt;Convolve([1, 2, 1, 2, 4, 2, 1, 2, 1]);   # 3x3 Gaussian kernel
 
 <p>For convenience, methods Write(), Display(), and Animate() can take any parameter that <a href="#set-attribute">SetAttribute</a> knows about. For example,</p>
 
-<pre>
+<pre><code>
 $image-&gt;Write(filename=&gt;'image.png', compression=&gt;'None');
-</pre>
+</code></pre>
 
 <p>Use <code>-</code> as the filename to method Read() to read from standard in or to method Write() to write to standard out:</p>
 
-<pre>
+<pre><code>
 binmode STDOUT;
 $image-&gt;Write('png:-');
-</pre>
+</code></pre>
 
 <p>To read an image in the GIF format from a PERL filehandle, use:</p>
 
-<pre>
+<pre><code>
 $image = Image::Magick-&gt;new;
 open(IMAGE, 'image.gif');
 $image-&gt;Read(file=&gt;\*IMAGE);
 close(IMAGE);
-</pre>
+</code></pre>
 
 <p>To write an image in the PNG format to a PERL filehandle, use:</p>
 
-<pre>
+<pre><code>
 $filename = "image.png";
 open(IMAGE, ">$filename");
 $image-&gt;Write(file=&gt;\*IMAGE, filename=&gt;$filename);
 close(IMAGE);
-</pre>
+</code></pre>
 
 <p>Note, reading from or writing to a Perl filehandle may fail under Windows due to different versions of the C-runtime libraries between ImageMagick and the ActiveState Perl distributions or if one of the DLL's is linked with the /MT option.  See <a href="http://msdn.microsoft.com/en-us/library/ms235460.aspx">Potential Errors Passing CRT Objects Across DLL Boundaries</a> for an explanation.</p>
 
 <p>If <code>%0Nd, %0No, or %0Nx</code> appears in the filename, it is interpreted as a printf format specification and the specification is replaced with the specified decimal, octal, or hexadecimal encoding of the scene number. For example,</p>
 
-<pre>
+<pre><code>
 image%03d.miff
-</pre>
+</code></pre>
 
 <p>converts files image000.miff, image001.miff, etc.</p>
 
@@ -319,10 +319,10 @@ image%03d.miff
 
 <p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
 
-<pre>
+<pre><code>
 $image-&gt;Crop(geometry=&gt;'100x100+10+20');
 $image-&gt;[$x]-&gt;Frame("100x200");
-</pre>
+</code></pre>
 
 <p>And here is a list of other image manipulation methods you can call:</p>
 
@@ -1180,28 +1180,28 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
 <p>You can specify <code>@filename</code> in both Annotate() and Draw(). This reads the text or graphic primitive instructions from a file on disk. For example,</p>
 
-<pre>
+<pre><code>
 image-&gt;Draw(fill=&gt;'red', primitive=&gt;'rectangle',
  points=&gt;'20,20 100,100  40,40 200,200  60,60 300,300');
-</pre>
+</code></pre>
 
 <p>Is equivalent to</p>
 
-<pre>
+<pre><code>
 $image-&gt;Draw(fill=&gt;'red', primitive=&gt;'@draw.txt');
-</pre>
+</code></pre>
 
 <p>Where <code>draw.txt</code> is a file on disk that contains this:</p>
 
-<pre>
+<pre><code>
 rectangle 20, 20 100, 100
 rectangle 40, 40 200, 200
 rectangle 60, 60 300, 300
-</pre>
+</code></pre>
 
 <p>The <i>text</i> parameter for methods, Annotate(), Comment(), Draw(), and Label() can include the image filename, type, width, height, or other image attribute by embedding these special format characters:</p>
 
-<pre class="pre-scrollable">%b   file size
+<pre class="pre-scrollable"><code>%b   file size
 %c   comment
 %d   directory
 %e   filename extension
@@ -1237,13 +1237,13 @@ rectangle 60, 60 300, 300
 %%   a percent sign
 \n   newline
 \r   carriage return
-</pre>
+</code></pre>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 text=&gt;"%m:%f %wx%h"
-</pre>
+</code></pre>
 
 <p>produces an annotation of <b>MIFF:bird.miff 512x480</b> for an image titled <b>bird.miff</b> and whose width is 512 and height is 480.</p>
 
@@ -1255,10 +1255,10 @@ text=&gt;"%m:%f %wx%h"
 
 <p>Use method Set() to set an image attribute. For example,</p>
 
-<pre>
+<pre><code>
 $image-&gt;Set(dither=&gt;'True');
 $image-&gt;[$x]-&gt;Set(delay=&gt;3);
-</pre>
+</code></pre>
 
 <p>Where this example uses 'True' and this document says '{True, False}',
 you can use the case-insensitive strings 'True' and 'False', or you
@@ -1669,10 +1669,10 @@ can use the integers 1 and 0.</p>
 
 <p>Use method Get() to get an image attribute. For example,</p>
 
-<pre>
+<pre><code>
 ($a, $b, $c) = $image-&gt;Get('colorspace', 'magick', 'adjoin');
 $width = $image-&gt;[3]-&gt;Get('columns');
-</pre>
+</code></pre>
 
 <p>In addition to all the attributes listed in <a href="#set-attribute">Set an Image Attribute</a> , you can get these additional attributes:</p>
 
@@ -1979,7 +1979,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
 <p>In this example, we compare the ImageMagick logo to a sharpened reconstruction:</p>
 
-<pre>
+<pre><code>
 use Image::Magick;
 
 $logo=Image::Magick->New();
@@ -1990,7 +1990,7 @@ $sharp->Sharpen('0x1');
 $difference=$logo->Compare(image=>$sharp, metric=>'rmse');
 print $difference->Get('error'), "\n";
 $difference->Display();
-</pre>
+</code></pre>
 
 <p>In addition to the reported root mean squared error of around 0.024, a difference image is displayed so you can visually identify the difference between the images.</p>
 
@@ -1998,9 +1998,9 @@ $difference->Display();
 
 <p>Use method Montage() to create a composite image by combining several separate images. The images are tiled on the composite image with the name of the image optionally appearing just below the individual tile. For example,</p>
 
-<pre>
+<pre><code>
 $image-&gt;Montage(geometry=&gt;'160x160', tile=&gt;'2x2', texture=&gt;'granite:');
-</pre>
+</code></pre>
 
 <p>And here is a list of Montage() parameters you can set:</p>
 
@@ -2159,21 +2159,21 @@ blobs in any of these image <a href="<?php echo $_SESSION['RelativePath']?>/../s
 
 <p>ImageToBlob() returns the image data in their respective formats. You can then print it, save it to an ODBC database, write it to a file, or pipe it to a display program:</p>
 
-<pre>
+<pre><code>
 @blobs = $image-&gt;ImageToBlob();
 open(DISPLAY,"| display -") || die;
 binmode DISPLAY;
 print DISPLAY $blobs[0];
 close DISPLAY;
-</pre>
+</code></pre>
 
 <p>Method BlobToImage() returns an image or image sequence converted from the supplied blob:</p>
 
-<pre>
+<pre><code>
 @blob=$db-&gt;GetImage();
 $image=Image::Magick-&gt;new(magick=&gt;'jpg');
 $image-&gt;BlobToImage(@blob);
-</pre>
+</code></pre>
 
 <h2 class="magick-header"><a id="direct-access"></a>Direct-access to Image Pixels</h2>
 
@@ -2225,62 +2225,62 @@ $image-&gt;BlobToImage(@blob);
 
 <p>The Append() method append a set of images. For example,</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Append(stack=&gt;{true,false});
-</pre>
+</code></pre>
 
 <p>appends all the images associated with object <code>$image</code>. By default, images are stacked left-to-right. Set <code>stack</code> to True to stack them top-to-bottom.</p>
 
 <p>The Clone() method copies a set of images. For example,</p>
 
-<pre>
+<pre><code>
 $q = $p-&gt;Clone();
-</pre>
+</code></pre>
 
 <p>copies all the images from object <code>$p</code> to <code>$q</code>. You can use this method for single or multi-image sequences.</p>
 
 <p>The ComplexImages() method performs complex mathematics on an image sequence. For example,</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;ComplexImages('conjugate');
-</pre>
+</code></pre>
 
 <p>The EvaluateImages() method applies an arithmetic, logical or relational expression to a set of images. For example,</p>
 
 
-<pre>
+<pre><code>
 $p = $image-&gt;EvaluateImages('mean');
-</pre>
+</code></pre>
 
 <p>averages all the images associated with object <code>$image</code>.</p>
 
 <p>The Features() method returns features for each channel in the image in each of four directions (horizontal, vertical, left and right diagonals) for the specified distance.  The features include the angular second momentum, contrast, correlation, sum of squares: variance, inverse difference moment, sum average, sum varience, sum entropy, entropy, difference variance, difference entropy, information measures of correlation 1, information measures of correlation 2, and maximum correlation coefficient.  Values in RGB, CMYK, RGBA, or CMYKA order (depending on the image type).</p>
 
-<pre>
+<pre><code>
 @features = $image-&gt;Features(1);
-</pre>
+</code></pre>
 
 <p>Finally, the Transform() method accepts a fully-qualified geometry specification for cropping or resizing one or more images.  For example,</p>
 
-<pre>
+<pre><code>
 $p = $images-&gt;Transform(crop=>'100x100+10+60');
-</pre>
+</code></pre>
 
 <p>The Flatten() method flattens a set of images and returns it. For example,</p>
 
-<pre>
+<pre><code>
 $p = $images-&gt;Flatten(background=&gt;'none');
 $p-&gt;Write('flatten.png');
-</pre>
+</code></pre>
 
 <p>The sequence of images is replaced by a single image created by composing each image after the first over the first image.</p>
 
 <p>The Fx() method applies a mathematical expression to a set of images and returns the results. For example,</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Fx(expression=&gt;'(g+b)/2.0',channel=&gt;'red');
 $p-&gt;Write('fx.miff');
-</pre>
+</code></pre>
 
 <p>replaces the red channel with the average of the green and blue channels.</p>
 
@@ -2290,9 +2290,9 @@ $p-&gt;Write('fx.miff');
 
 <p>The Morph() method morphs a set of images. Both the image pixels and size are linearly interpolated to give the appearance of a meta-morphosis from one image to the next:</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Morph(frames=&gt;<i>integer</i>);
-</pre>
+</code></pre>
 
 <p>where <i>frames</i> is the number of in-between images to generate.  The default is 1.</p>
 
@@ -2300,46 +2300,46 @@ $p = $image-&gt;Morph(frames=&gt;<i>integer</i>);
 
 <p>Method Mogrify() is a single entry point for the image manipulation methods (<a href="#manipulate">Manipulate an Image</a>). The parameters are the name of a method followed by any parameters the method may require. For example, these calls are equivalent:</p>
 
-<pre>
+<pre><code>
 $image-&gt;Crop('340x256+0+0');
 $image-&gt;Mogrify('crop', '340x256+0+0');
-</pre>
+</code></pre>
 
 <p>Method MogrifyRegion() applies a transform to a region of the image. It is similar to Mogrify() but begins with the region geometry. For example, suppose you want to brighten a 100x100 region of your image at location (40, 50):</p>
 
-<pre>
+<pre><code>
 $image-&gt;MogrifyRegion('100x100+40+50', 'modulate', brightness=&gt;50);
-</pre>
+</code></pre>
 
 <p>Ping() is a convenience method that returns information about an image without having to read the image into memory. It returns the width, height, file size in bytes, and the file format of the image. You can specify more than one filename but only one filehandle:</p>
 
-<pre>
+<pre><code>
 ($width, $height, $size, $format) = $image-&gt;Ping('logo.png');
 ($width, $height, $size, $format) = $image-&gt;Ping(file=&gt;\*IMAGE);
 ($width, $height, $size, $format) = $image-&gt;Ping(blob=&gt;$blob);
-</pre>
+</code></pre>
 
 <p>This a more efficient and less memory intensive way to query if an image exists and what its characteristics are.</p>
 
 <p>Poly() builds a polynomial from the image sequence and the corresponding terms (coefficients and degree pairs):</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Poly([0.5,1.0,0.25,2.0,1.0,1.0]);
-</pre>
+</code></pre>
 
 <p>PreviewImage() tiles 9 thumbnails of the specified image with an image processing operation applied at varying strengths. This may be helpful pin-pointing an appropriate parameter for a particular image processing operation. Choose from these operations: <code>Rotate, Shear, Roll, Hue, Saturation, Brightness, Gamma, Spiff, Dull, Grayscale, Quantize, Despeckle, ReduceNoise, AddNoise, Sharpen, Blur, Threshold, EdgeDetect, Spread, Solarize, Shade, Raise, Segment, Swirl, Implode, Wave, OilPaint, CharcoalDrawing, JPEG</code>. Here is an example:</p>
 
-<pre>
+<pre><code>
 $preview = $image-&gt;Preview('Gamma');
 $preview-&gt;Display();
-</pre>
+</code></pre>
 
 <p>To have full control over text positioning you need font metric information. Use</p>
 
-<pre>
+<pre><code>
 ($x_ppem, $y_ppem, $ascender, $descender, $width, $height, $max_advance) =
   $image-&gt;QueryFontMetrics(<i>parameters</i>);
-</pre>
+</code></pre>
 
 <p>Where <i>parameters</i> is any parameter of the <a href="#manipulate">Annotate</a> method. The return values are:</p>
 
@@ -2363,64 +2363,64 @@ $preview-&gt;Display();
 
 <p>Call QueryColor() with no parameters to return a list of known colors names or specify one or more color names to get these attributes: red, green, blue, and opacity value.</p>
 
-<pre>
+<pre><code>
 @colors = $image-&gt;QueryColor();
 ($red, $green, $blue, $opacity) = $image-&gt;QueryColor('cyan');
 ($red, $green, $blue, $opacity) = $image-&gt;QueryColor('#716bae');
-</pre>
+</code></pre>
 
 <p>QueryColorname() accepts a color value and returns its respective name or hex value;</p>
 
-<pre>
+<pre><code>
 $name = $image-&gt;QueryColorname('rgba(80,60,0,0)');
-</pre>
+</code></pre>
 
 <p>Call QueryFont() with no parameters to return a list of known fonts or specify one or more font names to get these attributes: font name, description, family, style, stretch, weight, encoding, foundry, format, metrics, and glyphs values.</p>
 
-<pre>
+<pre><code>
 @fonts = $image-&gt;QueryFont();
 $weight = ($image-&gt;QueryFont('Helvetica'))[5];
-</pre>
+</code></pre>
 
 <p>Call QueryFormat() with no parameters to return a list of known image formats or specify one or more format names to get these attributes: adjoin, blob support, raw, decoder, encoder, description, and module.</p>
 
-<pre>
+<pre><code>
 @formats = $image-&gt;QueryFormat();
 ($adjoin, $blob_support, $raw, $decoder, $encoder, $description, $module) =
   $image-&gt;QueryFormat('gif');
-</pre>
+</code></pre>
 
 <p>Call MagickToMime() with the image format name to get its MIME type such as <code>image/tiff</code> from <code>tif</code>.</p>
 
-<pre>
+<pre><code>
 $mime = $image-&gt;MagickToMime('tif');
-</pre>
+</code></pre>
 
 <p>Use RemoteCommand() to send a command to an already running <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">animate</a> application. The only parameter is the name of the image file to display or animate.</p>
 
-<pre>
+<pre><code>
 $image-&gt;RemoteCommand('image.jpg');
-</pre>
+</code></pre>
 
 <p>The Smush() method smushes a set of images together. For example,</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Smush(stack=&gt;{true,false},offset=&gt;<var>integer</var>);
-</pre>
+</code></pre>
 
 <p>smushes together all the images associated with object <code>$image</code>. By default, images are smushed left-to-right. Set <code>stack</code> to True to smushed them top-to-bottom.</p>
 
 <p>Statistics() returns the image statistics for each channel in the image. The returned values are an array of depth, minima, maxima, mean, standard deviation, kurtosis, skewness, and entropy values in RGB, CMYK, RGBA, or CMYKA order (depending on the image type).</p>
 
-<pre>
+<pre><code>
 @statistics = $image-&gt;Statistics();
-</pre>
+</code></pre>
 
 <p>Finally, the Transform() method accepts a fully-qualified geometry specification for cropping or resizing one or more images.  For example,</p>
 
-<pre>
+<pre><code>
 $p = $image-&gt;Transform(crop=&gt;'100x100+0+0');
-</pre>
+</code></pre>
 
 <p>You can optionally add <i>Image</i> to any method name above. For example, PingImage() is an alias for method Ping().</p>
 
@@ -2430,53 +2430,53 @@ $p = $image-&gt;Transform(crop=&gt;'100x100+0+0');
 
 <p>Methods which return a number (e.g. Read(), Write()):</p>
 
-<pre>
+<pre><code>
 $x = $image-&gt;Read(...);
 warn "$x" if "$x";      # print the error message
 $x =~ /(\d+)/;
 print $1;               # print the error number
 print 0+$x;             # print the number of images read
-</pre>
+</code></pre>
 
 <p>Methods which operate on an image (e.g. Resize(), Crop()):</p>
 
-<pre>
+<pre><code>
 $x = $image-&gt;Crop(...);
 warn "$x" if "$x";      # print the error message
 $x =~ /(\d+)/;
 print $1;               # print the error number
-</pre>
+</code></pre>
 
 <p>Methods which return images (EvaluateSequence(), Montage(), Clone()) should be checked for errors this way:</p>
 
-<pre>
+<pre><code>
 $x = $image-&gt;Montage(...);
 warn "$x" if !ref($x);  # print the error message
 $x =~ /(\d+)/;
 print $1;               # print the error number
-</pre>
+</code></pre>
 
 <p>Here is an example error message:</p>
 
-<pre>
+<pre><code>
 Error 400: Memory allocation failed
-</pre>
+</code></pre>
 
 <p>Review the complete list of <a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">error and warning codes</a>.</p>
 
 <p>The following illustrates how you can use a numeric status code:</p>
 
-<pre>
+<pre><code>
 $x = $image-&gt;Read('rose.png');
 $x =~ /(\d+)/;
 die "unable to continue" if ($1 == ResourceLimitError);
-</pre>
+</code></pre>
 
 <h2 class="magick-header"><a id="constants"></a>Constants</h2>
 
 <p>PerlMagick includes these constants:</p>
 
-<pre class="pre-scrollable">BlobError
+<pre class="pre-scrollable"><code>BlobError
 BlobWarning
 CacheError
 CacheWarning
@@ -2518,12 +2518,12 @@ TypeWarning
 WarningException
 XServerError
 XServerWarning
-</pre>
+</code></pre>
 
 <p>You can access them like this:</p>
 
-<pre>
+<pre><code>
 Image::Magick-&gt;QuantumDepth
-</pre>
+</code></pre>
 
 </div>

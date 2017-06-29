@@ -16,9 +16,9 @@
 
 <p>The expression can be simple:</p>
 
-<pre>
+<pre><code>
 convert -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
-</pre>
+</code></pre>
 
 <p>Here, we convert a black to a navy blue image:</p>
 
@@ -30,11 +30,11 @@ convert -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
 
 <p>Or the expression can be complex:</p>
 
-<pre>
+<pre><code>
 convert rose.jpg \  
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \ 
   rose-sigmoidal.png'
-</pre>
+</code></pre>
 
 <p>This expression results in a high contrast version of the image:</p>
 
@@ -46,11 +46,11 @@ convert rose.jpg \
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
-<pre>
+<pre><code>
 convert -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" 
   radial-gradient.png'
-</pre>
+</code></pre>
 
 <p>The command above returns this image:</p>
 
@@ -60,12 +60,12 @@ convert -size 70x70 canvas: \
 
 <p>This FX expression adds random noise to an image:</p>
 
-<pre>
+<pre><code>
 convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \ 
   channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)\' noisy.png
-</pre>
+</code></pre>
 
 <p>See <a href="https://www.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
@@ -266,17 +266,17 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<pre>
+<pre><code>
 convert image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
-</pre>
+</code></pre>
 
 <p>By default, the image to which <code>p</code>, <code>r</code>, <code>g</code>, <code>b</code>, <code>a</code>, etc., are applied is the current image <code>s</code> in the image list. This is equivalent to <code>u</code> except when used in an escape sequence <code>%[fx:...]</code>. </p>
 
 <p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel red</a> instructs <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> to modify only the red channel; nothing in the green or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
-<pre>
+<pre><code>
 convert -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
@@ -292,17 +292,17 @@ convert -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
 
 <p>The pixels are processed one at a time, but a different pixel of an image can be specified using a pixel index represented by <code>p</code>. For example,</p>
 
-<pre>
+<pre><code>
 p[-1].g      green value of pixel to the immediate left of the current pixel
 p[-1,-1].r   red value of the pixel diagonally left and up from current pixel
-</pre>
+</code></pre>
 
 <p>To specify an absolute position, use braces, rather than brackets.</p>
 
-<pre>
+<pre><code>
 p{0,0}.r     red value of the pixel in the upper left corner of the image
 p{12,34}.b   blue pixel value at column number 12, row 34 of the image
-</pre>
+</code></pre>
 
 <p>Integer values of the position retrieve the color of the pixel referenced, while non-integer position values return a blended color according to the current <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#interpolate">-interpolate</a> setting.</p>
 
@@ -312,9 +312,9 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <code>alpha.png</code> with the average of the green channels from the images <code>alpha.png</code> and <code>beta.png</code>, use:</p>
 
-<pre>
+<pre><code>
 convert alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
-</pre>
+</code></pre>
 
 
 <h3>Results</h3>
@@ -326,19 +326,19 @@ convert alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
 
 <p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <code>%[fx:]</code> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <code>s</code> and <code>t</code> successively refer to the current image and its index, while <code>i</code> and <code>j</code> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
-<pre>
+<pre><code>
 convert  canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \ 
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]' info:
 Red channel of NW corner of image #0 is 0.453758 
 Red channel of NW corner of image #1 is 0.184588
-</pre>
+</code></pre>
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <code>-set</code> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
-<pre>
+<pre><code>
 convert rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
   -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif"
-</pre>
+</code></pre>
 
 <p>The color-escape <code>%[pixel:]</code> or <code>%[hex:]</code> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <code>i</code> and <code>j</code> are set to zero, and <code>s</code> and <code>t</code> refer to each successively current image and index.</p>
 

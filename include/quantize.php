@@ -27,14 +27,14 @@
 
 <p>Classification begins by initializing a color description tree of sufficient depth to represent each possible input color in a leaf. However, it is impractical to generate a fully-formed color description tree in the classification phase for realistic values of <var>Cmax</var>. If color components in the input image are quantized to <var>k</var>-bit precision, so that <var>Cmax</var> = <var>2^k-1</var>, the tree would need <var>k</var> levels below the root node to allow representing each possible input color in a leaf.  This becomes prohibitive because the tree's total number of nodes:</p>
 
-<pre>
+<pre><code>
 total nodes = 1+Sum(8^i), i=1,k
 
 For k=8,
 nodes = 1 + (8^1+8^2+....+8^8)
       = 1 + 8(8^8 - 1)/(8 - 1)
       = 19,173,961
-</pre>
+</code></pre>
 
 <p>Therefore, to avoid building a fully populated tree, ImageMagick:</p>
 
@@ -43,11 +43,11 @@ nodes = 1 + (8^1+8^2+....+8^8)
   <li>chooses a maximum depth for the tree as a function of the desired number of colors in the output image (currently the <var>base-two</var> logarithm of <var>Cmax</var>).</li>
 </ol>
 
-<pre>
+<pre><code>
 For Cmax=255,
 maximum tree depth = log<sub>2</sub>(256)
                    = 8
-</pre>
+</code></pre>
 
 <p>A tree of this depth generally allows the best representation of the source image with the fastest computational speed and the least amount of memory. However, the default depth is inappropriate for some images. Therefore, the caller can request a specific tree depth.</p>
 
@@ -68,12 +68,12 @@ maximum tree depth = log<sub>2</sub>(256)
 
 <p>Reduction repeatedly prunes the tree until the number of nodes with <var>n2</var> &gt; <var>0</var> is less than or equal to the maximum number of colors allowed in the output image. On any given iteration over the tree, it selects those nodes whose <var>E</var> value is minimal for pruning and merges their color statistics upward. It uses a pruning threshold, <var>Ep</var>, to govern node selection as follows:</p>
 
-<pre>
+<pre><code>
 Ep = 0
 while number of nodes with (n2 &gt; 0) &gt; required maximum number of colors
    prune all nodes such that E &lt;= Ep
    Set Ep  to minimum E in remaining nodes
-</pre>
+</code></pre>
 
 <p>This has the effect of minimizing any quantization error when merging two nodes together.</p>
 

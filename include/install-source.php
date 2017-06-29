@@ -3,9 +3,9 @@
 
 <p class="lead magick-description">Chances are, ImageMagick is already installed on your computer if you are using some flavor of Unix, and its likely not installed if you are using some form of Windows.  In either case, you can type the following to find out:</p>
 
-<pre>
+<pre><code>
 identify -version
-</pre>
+</code></pre>
 
 <p>If the <a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#unix">Unix</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="<?php echo $_SESSION['RelativePath']?>/../script/changelog.php">changes</a> to the ImageMagick distribution.</p>
 
@@ -17,9 +17,9 @@ identify -version
 
 <p>Unpack the distribution with this command:</p>
 
-<pre>
+<pre><code>
 tar xvzf ImageMagick.tar.gz
-</pre>
+</code></pre>
 
 <p>Next configure and compile ImageMagick:</p>
 
@@ -27,27 +27,27 @@ tar xvzf ImageMagick.tar.gz
 
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
-<pre>
+<pre><code>
 sudo make install
-</pre>
+</code></pre>
 
 <p>You may need to configure the dynamic linker run-time bindings:</p>
 
-<pre>
+<pre><code>
 sudo ldconfig /usr/local/lib
-</pre>
+</code></pre>
 
 <p>Finally, verify the ImageMagick install worked properly, type</p>
 
-<pre>
+<pre><code>
 /usr/local/bin/convert logo: logo.gif
-</pre>
+</code></pre>
 
 <p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript is a prerequisite, otherwise the EPS, PS, and PDF tests will fail.</p>
 
-<pre>
+<pre><code>
 make check
-</pre>
+</code></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
@@ -61,9 +61,9 @@ make check
 
 <p>You can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
 
-<pre>
+<pre><code>
 unzip ImageMagick-windows.zip
-</pre>
+</code></pre>
 
 <p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and press Open.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
@@ -78,9 +78,9 @@ to compile the program and on completion run the program.</p>
 
 <p>For a more comprehensive test, run the ImageMagick validation suite:</p>
 
-<pre>
+<pre><code>
 validate
-</pre>
+</code></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 

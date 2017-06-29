@@ -4,11 +4,11 @@
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="api.html">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<pre>
+<pre><code>
 convert -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
-</pre>
+</code></pre>
 
 <p>and here is the result:</p>
 
@@ -18,7 +18,7 @@ convert -size 100x60 canvas:skyblue -fill white -stroke black \
 
 <p>When the drawing gets sufficiently complex, we recommend you assemble the graphic primitives into a MVG file. For our example, we use <a href="../source/piechart.mvg">piechart.mvg</a>:</p>
 
-<pre class="pre-scrollable">push graphic-context
+<pre class="pre-scrollable"><code>push graphic-context
   viewbox 0 0 624 369
   affine 0.283636 0 0 0.283846 -0 -0
   push graphic-context
@@ -168,13 +168,13 @@ convert -size 100x60 canvas:skyblue -fill white -stroke black \
     pop graphic-context
   pop graphic-context
 pop graphic-context
-</pre>
+</code></pre>
 
 <p>to render a pie chart with this command:</p>
 
-<pre>
+<pre><code>
 convert mvg:piechart.mvg piechart.png
-</pre>
+</code></pre>
 
 <p>which produces this rendering:</p>
 
@@ -184,16 +184,16 @@ convert mvg:piechart.mvg piechart.png
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<pre>
+<pre><code>
 convert mvg:piechart.svg piechart.jpg
-</pre>
+</code></pre>
 
 
 <p>to produce the same pie chart we created with the MVG language.</p>
 
 <p>Drawing is available from many of the ImageMagick <a href="api.html">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.html">MagickWand</a> language: </p>
 
-<pre class="pre-scrollable">(void) PushDrawingWand(draw_wand);
+<pre class="pre-scrollable"><code>(void) PushDrawingWand(draw_wand);
 {
   const PointInfo points[6] =
   {
@@ -218,7 +218,7 @@ convert mvg:piechart.svg piechart.jpg
   DrawPolygon(draw_wand,6,points);
 }
 (void) PopDrawingWand(draw_wand);
-</pre>
+</code></pre>
 
 <h2 class="magick-header"><a id="overview"></a>MVG Overview</h2>
 
@@ -226,26 +226,26 @@ convert mvg:piechart.svg piechart.jpg
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
-<pre>
+<pre><code>
 push graphic-context
   viewbox 0 0 width height
   [ any other MVG commands ]
 pop graphic-context
-</pre>
+</code></pre>
 
 <p>Pattern syntax (saving and restoring context):</p>
 
-<pre>
+<pre><code>
 push pattern id x,y width,height
  push graphic-context
   [ drawing commands ]
  pop graphic-context
 pop pattern
-</pre>
+</code></pre>
 
 <p>an example is (%s is a identifier string):</p>
 
-<pre>
+<pre><code>
 push defs
  push pattern %s 10,10 20,20
   push graphic-context
@@ -258,31 +258,31 @@ push defs
   pop graphic-context
  pop pattern
 pop defs
-</pre>
+</code></pre>
 
 <p>For image tiling use:</p>
 
-<pre>
+<pre><code>
 push pattern id x,y width,height
  image Copy ...
 pop pattern
-</pre>
+</code></pre>
 
 <p>Note you can use the pattern for either the fill or stroke like:</p>
 
-<pre>
+<pre><code>
 stroke url(#%s)
-</pre>
+</code></pre>
 
 <p>or</p>
 
-<pre>
+<pre><code>
 fill url(#%s)
-</pre>
+</code></pre>
 
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
-<pre>
+<pre><code>
 push defs
  push clip-path %s
   push graphic-context
@@ -291,7 +291,7 @@ push defs
  pop clip-path
 pop defs
 clip-path url(#%s)
-</pre>
+</code></pre>
 
 <h2 class="magick-header"><a id="primitives"></a>Drawing Primitives</h2>
 
@@ -330,32 +330,32 @@ clip-path url(#%s)
   <tr>
     <td><a id="clip-rule"></a>clip-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre>evenodd
-nonzero</pre></td>
+<pre><code>evenodd
+nonzero</code></pre></td>
   </tr>
   <tr>
     <td><a id="clip-units"></a>clip-units <var>units</var></td>
     <td>Choose from these unit types:
-<pre>userSpace
+<pre><code>userSpace
 userSpaceOnUse
-objectBoundingBox</pre></td>
+objectBoundingBox</code></pre></td>
   </tr>
   <tr>
     <td><a id="color"></a>color <var>x</var>,<var>y</var> <var>method</var></td>
     <td>Choose from these method types:
-<pre>point
+<pre><code>point
 replace
 floodfill
 filltoborder
-reset</pre></td>
+reset</code></pre></td>
   </tr>
   <tr>
     <td><a id="decorate"></a>decorate <var>type</var></td>
     <td>Choose from these types of decorations:
-<pre>none
+<pre><code>none
 line-through
 overline
-underline</pre></td>
+underline</code></pre></td>
   </tr>
   <tr>
     <td><a id="ellipse"></a>ellipse <var>center<sub>x</sub></var>,<var>center<sub>y</sub></var>   <var>radius<sub>x</sub></var>,<var>radius<sub>y</sub></var>   <var>arc<sub>start</sub></var>,<var>arc<sub>stop</sub></var></td>
@@ -372,8 +372,8 @@ underline</pre></td>
   <tr>
     <td><a id="fill-rule"></a>fill-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre>evenodd
-nonzero</pre></td>
+<pre><code>evenodd
+nonzero</code></pre></td>
   </tr>
   <tr>
     <td><a id="font"></a>font <var>name</var></td>
@@ -390,7 +390,7 @@ nonzero</pre></td>
   <tr>
     <td><a id="font-stretch"></a>font-stretch <var>type</var></td>
     <td>Choose from these stretch types:
-<pre>all
+<pre><code>all
 normal
 ultra-condensed
 extra-condensed
@@ -399,20 +399,20 @@ semi-condensed
 semi-expanded
 expanded
 extra-expanded
-ultra-expanded</pre></td>
+ultra-expanded</code></pre></td>
   </tr>
   <tr>
     <td><a id="font-style"></a>font-style <var>style</var></td>
     <td>Choose from these styles:
-<pre>all
+<pre><code>all
 normal
 italic
-oblique</pre></td>
+oblique</code></pre></td>
   </tr>
   <tr>
     <td><a id="font-weight"></a>font-weight <var>weight</var></td>
     <td>Choose from these weights:
-<pre>all
+<pre><code>all
 normal
 bold
 100
@@ -423,19 +423,19 @@ bold
 600
 700
 800
-900</pre></td>
+900</code></pre></td>
   </tr>
   <tr>
     <td><a id="gradient-units"></a>gradient-units <var>units</var></td>
     <td>Choose from these units:
-<pre>userSpace
+<pre><code>userSpace
 userSpaceOnUse
-objectBoundingBox</pre></td>
+objectBoundingBox</code></pre></td>
   </tr>
   <tr>
     <td><a id="gravity"></a>gravity <var>type</var></td>
     <td>Choose from these gravity types:
-<pre>NorthWest
+<pre><code>NorthWest
 North
 NorthEast
 West
@@ -443,7 +443,7 @@ Center
 East
 SouthWest
 South
-SouthEast</pre></td>
+SouthEast</code></pre></td>
   </tr>
   <tr>
     <td><a id="compose"></a>image <var>compose x,y width,height 'filename'</var></td>
@@ -638,11 +638,11 @@ SouthEast</pre></td>
   <tr>
     <td><a id="matte"></a>matte <var>x,y method</var></td>
     <td>Choose from these methods:
-<pre>point
+<pre><code>point
 replace
 floodfill
 filltoborder
-reset</pre></td>
+reset</code></pre></td>
   </tr>
   <tr>
     <td><a id="offset"></a>offset <var>offset</var></td>
@@ -759,16 +759,16 @@ reset</pre></td>
   <tr>
     <td><a id="stroke-linecap"></a>stroke-linecap <var>type</var></td>
     <td>Choose from these cap types:
-<pre>butt
+<pre><code>butt
 round
-square</pre></td>
+square</code></pre></td>
   </tr>
   <tr>
     <td><a id="stroke-linejoin"></a>stroke-linejoin <var>type</var></td>
     <td>Choose from these join types:
-<pre>bevel
+<pre><code>bevel
 miter
-round</pre></td>
+round</code></pre></td>
   </tr>
   <tr>
     <td><a id="stroke-miterlimit"></a>stroke-miterlimit <var>limit</var></td>
