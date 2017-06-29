@@ -52,7 +52,7 @@
       <a class="nav-link <?php IsActive($title,"Command-line Tools"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
       <a class="nav-link <?php IsActive($title,"Command-line Processing"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
       <a class="nav-link <?php IsActive($title,"Resources"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
-      <a class="nav-link <?php IsActive($title,"Application Program Interfaces"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
+      <a class="nav-link <?php IsActive($title,"Develop"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
       <a class="nav-link <?php IsActive($title,"Search"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/search.php">Search</a>
       <a class="nav-link float-right" href="https://www.imagemagick.org/discourse-server/">Community</a>
     </nav>
