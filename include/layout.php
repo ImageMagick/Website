@@ -35,7 +35,6 @@
 </head>
 <?php flush(); ?>
 <body>
-<div class="main">
 <div class="magick-masthead">
   <div class="container">
     <?php if ($_SERVER["SERVER_ADDR"] != "10.144.245.30") echo '<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
@@ -60,6 +59,7 @@
   </div>
 </div>
 <div class="container">
+<div class="magick-main">
 <?php
   }
 
