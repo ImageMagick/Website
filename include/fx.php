@@ -177,7 +177,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 <dt class="col-md-4"> <code>~</code><var>x</var></dt><dd class="col-md-8"> logical NOT operator, return value 1.0 if <var>not</var> <var>x</var> &gt; 0,  otherwise 0.0</dd>
 <dt class="col-md-4"> <code>+</code><var>x</var></dt><dd class="col-md-8"> unary plus, return 1.0*value</dd>
 <dt class="col-md-4"> <code>-</code><var>x</var></dt><dd class="col-md-8"> unary minus, return -1.0*value</dd>
-<dt class="col-md-4"> <var>x</var> <code>?</code> <var>y</var> </dt><dd class="col-md-8"><var>z</var>: ternary conditional expression, return value <var>y</var> if <var>x</var> != 0, otherwise <var>z</var>; only one ternary conditional permitted per statement</dd>
+<dt class="col-md-4"> <var>x</var> <code>?</code> <var>y</var> <code>:</code> <var>z</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>y</var> if <var>x</var> != 0, otherwise <var>z</var>; only one ternary conditional permitted per statement</dd>
 <dt class="col-md-4"> <var>x</var> <code>=</code> <var>y</var></dt><dd class="col-md-8">assignment; assignment variables are restricted to letter combinations only (e.g. Xi not X1)</dd>
 <dt class="col-md-4"> <var>x</var> <code>;</code> <var>y</var></dt><dd class="col-md-8">statement separator </dd>
 <dt class="col-md-4"> <code>phi</code></dt><dd class="col-md-8"> constant (1.618034...)</dd>
