@@ -220,7 +220,7 @@ convert mvg:piechart.svg piechart.jpg
 (void) PopDrawingWand(draw_wand);
 </code></pre>
 
-<h2 class="magick-header"><a id="overview"></a>MVG Overview</h2>
+<h2 class="magick-post-title"><a id="overview"></a>MVG Overview</h2>
 
 <p>MVG ignores all white-space between commands. This allows multiple MVG commands per line. It is common convention to terminate each MVG command with a new line to make MVG easier to edit and read. This syntax description uses indentation in MVG sequences to aid with understanding. Indentation is supported but is not required.</p>
 
@@ -293,7 +293,7 @@ pop defs
 clip-path url(#%s)
 </code></pre>
 
-<h2 class="magick-header"><a id="primitives"></a>Drawing Primitives</h2>
+<h2 class="magick-post-title"><a id="primitives"></a>Drawing Primitives</h2>
 
 <p>Here is a complete description of the MVG drawing primitives:</p>
 

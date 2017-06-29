@@ -45,7 +45,7 @@ convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
 
 <p>You can find additional examples of using <code>convert</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
-<h2 class="magick-header"><a id="options"></a>Option Summary</h2>
+<h2 class="magick-post-title"><a id="options"></a>Option Summary</h2>
 
 <p>The <code>convert</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 

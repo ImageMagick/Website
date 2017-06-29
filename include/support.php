@@ -13,10 +13,10 @@
   <dt class="col-md-4"><a href="http://boundforhealth.com"> <img class="clearfix" src="https://www.imagemagick.org/image/boundforhealth.png" width="342" height="105" alt="[Bound for Health]" /></a>  BoundForHealth &#8211; Change Course.  Cure disease.  Be well.</dt><br/>
 </dl>
 
-<h2 class="magick-header"><a id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
+<h2 class="magick-post-title"><a id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
 <p>Post any ImageMagick patches to the <a href="https://github.com/ImageMagick/ImageMagick/issues">Issues</a> forum if you think you have found and fixed a bug or security vulnerability. Post to the <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=2">Developers</a> forum if you want to propose an enhancement for discussion.</p>
 
-<h2 class="magick-header"><a id="support"></a>Support the ImageMagick Project</h2>
+<h2 class="magick-post-title"><a id="support"></a>Support the ImageMagick Project</h2>
 
 <p>ImageMagick has been available for free since the early 1990's. It has consistently been one of the most comprehensive free image processing packages available, but, unlike competing packages, it continues to be supported and enhanced.  Today, ImageMagick is more comprehensive and better supported than ever.</p>
 <p>ImageMagick has enjoyed considerable support from commercial users. Since ImageMagick is not restricted from use in commercial or proprietary applications, it is used to support thousands of commercial web sites and is used in professional digital image and movie studios as well as publishing shops. It is also used as a component of a number of commercial applications. Many of these commercial users have made contributions to ImageMagick, large and small, often anonymous, but always appreciated.</p>

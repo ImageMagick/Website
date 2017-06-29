@@ -16,7 +16,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p>The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other. With <a href="https://www.imagemagick.org/">ImageMagick version 7</a> we aim to improve the design based on lessons learned from the version 6 implementation.</p>
 
-<h2 class="magick-header"><a id="features"></a>Features and Capabilities</h2>
+<h2 class="magick-post-title"><a id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
 <div class="table-responsive">
 <table class="table table-sm table-striped">
@@ -153,10 +153,10 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p><a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a> shows how to use ImageMagick from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> to accomplish any of these tasks and much more. Also, see <a href="http://www.fmwconcepts.com/imagemagick/">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations. With <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>, use ImageMagick without having to install ImageMagick on your server or desktop.</p>
 
-<h2 class="magick-header"><a id="news"></a>News</h2>
+<h2 class="magick-post-title"><a id="news"></a>News</h2>
 
 <p>ImageMagick best practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that best suits your local environment.</p>
 
-<h2 class="magick-header"><a id="community"></a>Community</h2>
+<h2 class="magick-post-title"><a id="community"></a>Community</h2>
 <p>To join the ImageMagick community, try the <a href="https://www.imagemagick.org/discourse-server/">discourse server</a>.  You can review questions or comments (with informed responses) posed by ImageMagick users or ask your own questions. If you want to contribute image processing algorithms, other enhancements, or bug fixes, open an <a href="https://github.com/ImageMagick/ImageMagick">issue</a>. </p>
 </div>

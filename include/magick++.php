@@ -22,24 +22,24 @@ PerlMagick. STL-compatible template versions of ImageMagick's
 list-style operations are provided so that operations may be
 performed on multiple images stored in STL containers. 
 </p>
-<h2 class="magick-header">Documentation</h2>
+<h2 class="magick-post-title">Documentation</h2>
 <a id="documentation"></a>
 <p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../api/magick++-classes.php">documentation</a> is
 provided for all Magick++ classes, class methods, and template
 functions which comprise the API.  See a <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
-<h2 class="magick-header">Obtaining Magick++</h2>
+<h2 class="magick-post-title">Obtaining Magick++</h2>
 <a id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
 source releases and may be retrieved via <a href="https://www.imagemagick.org/script/mirror.php">ftp</a>
 or <a href="http://git.imagemagick.org/repos/ImageMagick/Magick++">GIT</a>.
 </p>
-<h2 class="magick-header">Installation</h2>
+<h2 class="magick-post-title">Installation</h2>
 <a id="install"></a>
 <p>Once you have the Magick++ sources available, follow these detailed
 <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/Install.html">installation instructions</a> for UNIX and
 Windows. 
 </p>
-<h2 class="magick-header">Usage</h2>
+<h2 class="magick-post-title">Usage</h2>
 <p>A helper script named <code>Magick++-config</code> is installed
 under Unix which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
@@ -104,7 +104,7 @@ int main(int argc,char **argv)
   return 0; 
 }
 </code></pre>
-<h2 class="magick-header">Reporting Bugs</h2>
+<h2 class="magick-post-title">Reporting Bugs</h2>
 <a id="bugs"></a>
 <p>Questions regarding usage should be directed to or to report any bugs go to
 <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=23">Magick++ bug tracking forum</a>.

@@ -108,7 +108,7 @@ Path: [built-in]
 
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
-<h2 class="magick-header"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
+<h2 class="magick-post-title"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
 
 <p>A zero configuration build of ImageMagick does not permit external configurat
 ion files.  To define your security policy, you must instead edit the <code>magick/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
@@ -122,7 +122,7 @@ static const char
 </code></pre>
 
 
-<h2 class="magick-header"><a id="other"></a>Other Security Considerations</h2>
+<h2 class="magick-post-title"><a id="other"></a>Other Security Considerations</h2>
 
 <p>If you spot a security flaw in ImageMagick, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.  Alternatively, post your concern to <a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.</p>
 

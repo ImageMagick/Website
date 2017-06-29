@@ -5,7 +5,7 @@
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../contrib/color-converter.php">Color Converter</a> to supply any valid ImageMagick color specification as described below to see a color swatch of that color and to convert to all the other color models.</p>
 
-<h2 class="magick-header"><a id="usage"></a>Example Usage</h2>
+<h2 class="magick-post-title"><a id="usage"></a>Example Usage</h2>
 
 <p>Each of the following commands produces the same <var>lime</var> border around the image. (Use "double quotes" for Windows.)</p>
 
@@ -19,7 +19,7 @@ convert -bordercolor 'rgb(0,100%,0)' -border 10 image.jpg image.png
 
 <p>The list of recognized color names (for example, <var>aqua</var>, <var>black</var>, <var>blue</var>, <var>fuchsia</var>, <var>gray</var>, <var>green</var>, <var>lime</var>, <var>maroon</var>, <var>navy</var>, <var>olive</var>, <var>purple</var>, <var>red</var>, <var>silver</var>, <var>teal</var>, <var>white</var>, <var>yellow</var>, and others) is shown in a table further below.</p>
 
-<h2 class="magick-header"><a id="models"></a>Color Model Specification</h2>
+<h2 class="magick-post-title"><a id="models"></a>Color Model Specification</h2>
 
 <p>The sRGB, CMYK, HSL and HSB color models are used in numerical color specifications. These examples all specify the same red sRGB color:</p>
 
@@ -139,7 +139,7 @@ device-rgb(0.5, 1.0, 0.0)
 device-cmyk(0.11, 0.48, 0.83, 0.00)
 </code></pre>
 
-<h2 class="magick-header"><a id="color_names"></a>List of Color Names</h2>
+<h2 class="magick-post-title"><a id="color_names"></a>List of Color Names</h2>
 
 <p>The table below provides a list of named colors recognized by ImageMagick:</p>
 
