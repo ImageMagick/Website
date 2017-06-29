@@ -185,7 +185,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 <dt class="col-md-4"> <code>e</code></dt><dd class="col-md-8"> constant (2.71828...)</dd>
 <dt class="col-md-4"> <code>QuantumRange</code></dt><dd class="col-md-8"> constant maximum pixel value (255 for Q8, 65535 for Q16)</dd>
 <dt class="col-md-4"> <code>QuantumScale</code></dt><dd class="col-md-8"> constant 1.0/<code>QuantumRange</code></dd>
-<dt class="col-md-4"> <code>intensity</code></dt><dd class="col-md-8"> pixel intensity; equivalent to 0.299*red+0.587*green+0.114*blue</dd>
+<dt class="col-md-4"> <code>intensity</code></dt><dd class="col-md-8"> pixel intensity whose value respects the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#intensity">-intensity</a> option.</dd>
 <dt class="col-md-4"> <code>hue</code></dt><dd class="col-md-8"> pixel hue</dd>
 <dt class="col-md-4"> <code>saturation</code></dt><dd class="col-md-8"> pixel saturation</dd>
 <dt class="col-md-4"> <code>lightness</code></dt><dd class="col-md-8"> pixel lightness; equivalent to 0.5*max(red,green,blue) + 0.5*min(red,green,blue)</dd>
