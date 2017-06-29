@@ -114,15 +114,15 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
      <li><code>z</code>=> channel depth</li>
 
      <li><code>r</code>=> red value (from RGBA), of a specific or current pixel</li>
-     <li><code>g</code>=> green    ''</li>
-     <li><code>b</code>=> blue     ''</li>
-     <li><code>a</code>=> alpha    ''</li>
-     <li><code>o</code>=> opacity  ''</li>
+     <li><code>g</code>=> green</li>
+     <li><code>b</code>=> blue</li>
+     <li><code>a</code>=> alpha</li>
+     <li><code>o</code>=> opacity</li>
 
      <li><code>c</code>=> cyan value of CMYK color of pixel</li>
-     <li><code>y</code>=> yellow   ''</li>
-     <li><code>m</code>=> magenta  ''</li>
-     <li><code>k</code>=> black    ''</li>
+     <li><code>y</code>=> yellow</li>
+     <li><code>m</code>=> magenta</li>
+     <li><code>k</code>=> black</li>
 
      <li><code>intensity</code>=> pixel intensity</li>
 
