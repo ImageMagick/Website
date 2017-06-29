@@ -71,7 +71,7 @@ convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
 
 <p>The next section discusses the Fx expression language.</p>
 
-<h2 class="magick-header"><a id="anatomy"></a>The Anatomy of an Fx Expression</h2>
+<h2 class="magick-post-title"><a id="anatomy"></a>The Anatomy of an Fx Expression</h2>
 
 <h3>The Fx Expression Language</h3>
 

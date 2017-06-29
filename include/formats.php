@@ -11,7 +11,7 @@ identify -list format
 
 <p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Unix compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
 
-<h2 class="magick-header"><a id="colorspace"></a>A Word about Colorspaces</h2>
+<h2 class="magick-post-title"><a id="colorspace"></a>A Word about Colorspaces</h2>
  <p>A majority of the image formats assume an sRGB
 colorspace (e.g. JPEG, PNG, etc.).  A few support only linear RGB (e.g. EXR,
 DPX, CIN, HDR) or only linear GRAY (e.g. PGM).  A few formats support CMYK.
@@ -68,7 +68,7 @@ example,</p>
   convert lab.tif -colorspace RGB -resize 50% -colorspace Lab resize.jpg
 </code></pre>
 
-<h2 class="magick-header"><a id="supported"></a>Supported Image Formats</h2>
+<h2 class="magick-post-title"><a id="supported"></a>Supported Image Formats</h2>
 
 <p>ImageMagick supports reading over 100 major file formats (not
 including sub-formats). The following table provides a summary of
@@ -1156,7 +1156,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
 </table>
 </div>
 
-<h2 class="magick-header"><a id="pseudo"></a>Pseudo-image Formats</h2>
+<h2 class="magick-post-title"><a id="pseudo"></a>Pseudo-image Formats</h2>
 
 <p>ImageMagick supports a number of image format specifications which refer to images prepared via an algorithm, or input/output targets. The following table lists these pseudo-image formats:</p>
 
@@ -1385,7 +1385,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
 </table>
 </div>
 
-<h2 class="magick-header"><a id="builtin-images"></a>Built-in Images</h2>
+<h2 class="magick-post-title"><a id="builtin-images"></a>Built-in Images</h2>
 
 <p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <code>magick:</code> format tag may be used via the syntax <code>magick:</code><var>name</var> to request an embedded image (e.g. <code>magick:logo</code>). For backwards compatibility, the image specifications <code>GRANITE:</code>, <code>LOGO:</code>, <code>NETSCAPE:</code>, and <code>ROSE:</code> may also be used to request images with those names.</p>
 
@@ -1435,7 +1435,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
 
 </table></div>
 
-<h2 class="magick-header"><a id="builtin-patterns"></a>Built-in Patterns</h2>
+<h2 class="magick-post-title"><a id="builtin-patterns"></a>Built-in Patterns</h2>
 
 <p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <code>pattern:</code> format tag may be used via the syntax <code>pattern:</code><var>name</var> to request an embedded pattern (e.g. <code>pattern:checkerboard</code>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
 
@@ -1827,7 +1827,7 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
   </tr>
 </table></div>
 
-<h2 class="magick-header"><a id="embedded"></a>Embedded Image Profiles</h2>
+<h2 class="magick-post-title"><a id="embedded"></a>Embedded Image Profiles</h2>
 
 <p>ImageMagick provides a number of format identifiers which are used to add, remove, and save embedded profiles for images which can support embedded profiles. Image types which may contain embedded profiles are TIFF, JPEG, and PDF.</p>
 

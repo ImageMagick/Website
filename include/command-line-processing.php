@@ -55,7 +55,7 @@ magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-sn
 
 <p>See <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 
-<h2 class="magick-header"><a id="anatomy"></a>The Anatomy of the Command-line</h2>
+<h2 class="magick-post-title"><a id="anatomy"></a>The Anatomy of the Command-line</h2>
 <p>The ImageMagick command-line consists of</p>
 
 <ol>
@@ -76,7 +76,7 @@ magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-sn
 
 <p>You can find a detailed explanation of each of the constituent parts of the command-line in the sections that follow.</p>
 
-<h2 class="magick-header"><a id="input"></a>Input Filename</h2>
+<h2 class="magick-post-title"><a id="input"></a>Input Filename</h2>
 
 <p>ImageMagick extends the concept of an input filename to include:</p>
 <ul>
@@ -298,7 +298,7 @@ image-5.jpg
 magick logo: gif:- | display -define stream:buffer-size=0 gif:-
 </code></pre>
 
-<h2 class="magick-header"><a id="option"></a>Command-line Options</h2>
+<h2 class="magick-post-title"><a id="option"></a>Command-line Options</h2>
 
 <p>You can direct the behavior of ImageMagick utilities with these command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a>.  The behavior of an option falls into one of these categories:</p>
 
@@ -554,7 +554,7 @@ above.</p>
 
 <p>The arguments to these operators are indexes into the image sequence by number, starting with zero, for the first image, and so on. However if you give a negative index, the images are indexed from the end (last image added). That is, an index of -1 is the last image in the current image sequence, -2 gives the second-to-last, and so on.</p>
 
-<h2 class="magick-header"><a id="output"></a>Output Filename</h2>
+<h2 class="magick-post-title"><a id="output"></a>Output Filename</h2>
 
 <p>ImageMagick extends the concept of an output filename to include:</p>
 

@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">Use the <code>composite</code> program to overlap one image over another.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>composite</code> command or see below for example usages of the command.</p>
 
-<h2 class="magick-header"><a id="usage"></a>Example Usage</h2>
+<h2 class="magick-post-title"><a id="usage"></a>Example Usage</h2>
 
 <p>We list a few examples of the <code>composite</code> command here to illustrate its usefulness and ease of use.  To get started, lets overlay a smiley face over a rose:</p>
 
@@ -38,7 +38,7 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
 
 <p>You can find additional examples of using <code>composite</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
 
-<h2 class="magick-header"><a id="options"></a>Option Summary</h2>
+<h2 class="magick-post-title"><a id="options"></a>Option Summary</h2>
 
 <p>The <code>composite</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 

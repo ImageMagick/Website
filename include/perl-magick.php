@@ -8,7 +8,7 @@
 
 <p>You can try PerlMagick from your Web browser at the <a href="https://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick functions.</p>
 
-<h2 class="magick-header"><a id="installation"></a>Installation</h2>
+<h2 class="magick-post-title"><a id="installation"></a>Installation</h2>
 
 <p><b>UNIX</b></p>
 
@@ -83,7 +83,7 @@ make
 
 <p>You are now ready to utilize the PerlMagick methods from within your Perl scripts.</p>
 
-<h2 class="magick-header"><a id="overview"></a>Overview</h2>
+<h2 class="magick-post-title"><a id="overview"></a>Overview</h2>
 
 <p>Any script that wants to use PerlMagick methods must first define the methods within its namespace and instantiate an image object. Do this with:</p>
 
@@ -135,7 +135,7 @@ undef $image-&gt;[$x];
 $ENV{PATH}' . "='/../bin:/usr/bin:/usr/local/bin';
 </code></pre>
 
-<h2 class="magick-header"><a id="example"></a>Example Script</h2>
+<h2 class="magick-post-title"><a id="example"></a>Example Script</h2>
 
 <p>Here is an example script to get you started:</p>
 
@@ -221,7 +221,7 @@ push(@$q, @$p);  # push the images from object p onto object q
 $p-&gt;Convolve([1, 2, 1, 2, 4, 2, 1, 2, 1]);   # 3x3 Gaussian kernel
 </code></pre>
 
-  <h2 class="magick-header"><a id="read"></a>Read or Write an Image</h2>
+  <h2 class="magick-post-title"><a id="read"></a>Read or Write an Image</h2>
 
 <p>Use the methods listed below to either read, write, or display an image or image sequence:</p>
 
@@ -315,7 +315,7 @@ image%03d.miff
 
 <p>You can optionally add <i>Image</i> to any method name. For example, ReadImage() is an alias for method Read().</p>
 
-<h2 class="magick-header"><a id="manipulate"></a>Manipulate an Image</h2>
+<h2 class="magick-post-title"><a id="manipulate"></a>Manipulate an Image</h2>
 
 <p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
 
@@ -1251,7 +1251,7 @@ text=&gt;"%m:%f %wx%h"
 
 <p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
 
-<h2 class="magick-header"><a id="set-attribute"></a>Set an Image Attribute</h2>
+<h2 class="magick-post-title"><a id="set-attribute"></a>Set an Image Attribute</h2>
 
 <p>Use method Set() to set an image attribute. For example,</p>
 
@@ -1665,7 +1665,7 @@ can use the integers 1 and 0.</p>
 <p>Most of the attributes listed above have an analog in
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
 
-<h2 class="magick-header"><a id="get-attribute"></a>Get an Image Attribute</h2>
+<h2 class="magick-post-title"><a id="get-attribute"></a>Get an Image Attribute</h2>
 
 <p>Use method Get() to get an image attribute. For example,</p>
 
@@ -1938,7 +1938,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 <p>Most of the attributes listed above have an analog in
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
 
-<h2 class="magick-header"><a id="compare"></a>Compare an Image to its Reconstruction</h2>
+<h2 class="magick-post-title"><a id="compare"></a>Compare an Image to its Reconstruction</h2>
 
 <p>Mathematically and visually annotate the difference between an image and its reconstruction with the Compare() method.  The method supports these parameters:</p>
 
@@ -1994,7 +1994,7 @@ $difference->Display();
 
 <p>In addition to the reported root mean squared error of around 0.024, a difference image is displayed so you can visually identify the difference between the images.</p>
 
-<h2 class="magick-header"><a id="montage"></a>Create an Image Montage</h2>
+<h2 class="magick-post-title"><a id="montage"></a>Create an Image Montage</h2>
 
 <p>Use method Montage() to create a composite image by combining several separate images. The images are tiled on the composite image with the name of the image optionally appearing just below the individual tile. For example,</p>
 
@@ -2125,7 +2125,7 @@ South, SouthEast</td>
 
 <p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>. See the documentation for a more detailed description of these attributes.</p>
 
-<h2 class="magick-header"><a id="blobs"></a>Working with Blobs</h2>
+<h2 class="magick-post-title"><a id="blobs"></a>Working with Blobs</h2>
 
 <p>A blob contains data that directly represent a particular image
 format in memory instead of on disk. PerlMagick supports
@@ -2175,7 +2175,7 @@ $image=Image::Magick-&gt;new(magick=&gt;'jpg');
 $image-&gt;BlobToImage(@blob);
 </code></pre>
 
-<h2 class="magick-header"><a id="direct-access"></a>Direct-access to Image Pixels</h2>
+<h2 class="magick-post-title"><a id="direct-access"></a>Direct-access to Image Pixels</h2>
 
 <p>Use these methods to obtain direct access to the image pixels:</p>
 
@@ -2221,7 +2221,7 @@ $image-&gt;BlobToImage(@blob);
 </tbody>
 </table>
 
-<h2 class="magick-header"><a id="miscellaneous"></a>Miscellaneous Methods</h2>
+<h2 class="magick-post-title"><a id="miscellaneous"></a>Miscellaneous Methods</h2>
 
 <p>The Append() method append a set of images. For example,</p>
 
@@ -2424,7 +2424,7 @@ $p = $image-&gt;Transform(crop=&gt;'100x100+0+0');
 
 <p>You can optionally add <i>Image</i> to any method name above. For example, PingImage() is an alias for method Ping().</p>
 
-<h2 class="magick-header"><a id="exceptions"></a>Handling Exceptions</h2>
+<h2 class="magick-post-title"><a id="exceptions"></a>Handling Exceptions</h2>
 
 <p>All PerlMagick methods return an undefined string context upon success. If any problems occur, the error is returned as a string with an embedded numeric status code. A status code less than 400 is a warning. This means that the operation did not complete but was recoverable to some degree. A numeric code greater or equal to 400 is an error and indicates the operation failed completely. Here is how exceptions are returned for the different methods:</p>
 
@@ -2472,7 +2472,7 @@ $x =~ /(\d+)/;
 die "unable to continue" if ($1 == ResourceLimitError);
 </code></pre>
 
-<h2 class="magick-header"><a id="constants"></a>Constants</h2>
+<h2 class="magick-post-title"><a id="constants"></a>Constants</h2>
 
 <p>PerlMagick includes these constants:</p>
 
