@@ -58,8 +58,8 @@
     </nav>
   </div>
 </div>
+<div class="magick-header">
 <div class="container">
-<div class="magick-main">
 <?php
   }
 
