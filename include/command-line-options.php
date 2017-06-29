@@ -107,9 +107,9 @@ strings, such as '<code>%d</code>' or '<code>%03d</code>', are familiar to those
 who have used the standard <code>printf()</code>' C-library function. As an
 example, the command</p>
 
-<pre>
+<pre><code>
 convert logo: rose: -morph 15 my%02dmorph.jpg
-</pre>
+</code></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
 <a href="#morph">-morph</a>), named: my00morph.jpg, my01morph.jpg,
@@ -169,23 +169,23 @@ href="#distort">-distort</a> method '<code>Affineprojection</code> for more
 information </p>
 
 
-<pre>
+<pre><code>
 -affine <var>s<sub>x</sub></var>,0,0,<var>s<sub>y</sub></var>
-</pre>
+</code></pre>
 
 <p>Translation by a displacement (<var>t<sub>x</sub></var>, <var>t<sub>y</sub></var>) is accomplished like so:</p>
 
-<pre>
+<pre><code>
 -affine 1,0,0,1,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>
-</pre>
+</code></pre>
 
 <p>Rotate clockwise about the origin (the upper left-hand corner) by an angle
 <var>a</var> by letting <var>c</var> = cos(<var>a</var>), <var>s</var>
 = sin(<var>a</var>), and using the following.</p>
 
-<pre>
+<pre><code>
 -affine <var>c</var>,<var>s</var>,-<var>s</var>,<var>c</var>
-</pre>
+</code></pre>
 
 <p>The cumulative effect of a sequence of <a href="#affine" >-affine</a>
 transformations can be accomplished by instead by a single <a href="#affine"
@@ -502,14 +502,14 @@ consider the following command and its output.  Modify the benchmark with the
 -duration to run the benchmark for a fixed number of seconds and -concurrent
 to run the benchmark in parallel (requires the OpenMP feature).</p>
 
-<pre>
+<pre><code>
 -> convert logo: -resize 200% -bench 5 logo.png
 Performance[1]: 5i 1.344ips 1.000e 3.710u 0:03.720
 Performance[2]: 5i 1.634ips 0.549e 3.890u 0:03.060
 Performance[3]: 5i 2.174ips 0.618e 3.190u 0:02.300
 Performance[4]: 5i 1.678ips 0.555e 3.810u 0:02.980
 Performance[4]: 5i 0.875657ips 6.880u 0:05.710
-</pre>
+</code></pre>
 
 <p>In this example, 5 iterations were completed at 2.174 iterations per
 second, using 3 threads and 3.190 seconds of the user allotted time, for
@@ -770,9 +770,9 @@ instead.</p>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 -caption "%m:%f %wx%h"  bird.miff
-</pre>
+</code></pre>
 
 <p>produces an image caption of <code>MIFF:bird.miff 512x480</code> (assuming
 that the image <code>bird.miff</code> has a width of 512 and a height of
@@ -787,7 +787,7 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
 
 <p>Here is an example color correction collection:</p>
 
-<pre>
+<pre><code>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;ColorCorrectionCollection xmlns="urn:ASC:CDL:v1.2"&gt;
   &lt;ColorCorrection id="cc06668"&gt;
@@ -801,7 +801,7 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
     &lt;/SATNode&gt;
   &lt;/ColorCorrection&gt;
 &lt;/ColorCorrectionCollection&gt;
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="channel"></a>-channel <var>type</var></h3>
@@ -822,13 +822,13 @@ abbreviated as a concatenation of the letters '<code>R</code>', '<code>G</code>'
 
 For example, to only select the <code>Red</code> and <code>Blue</code> channels
 you can either use </p>
-<pre>
+<pre><code>
 -channel Red,Blue
-</pre>
+</code></pre>
 <p>or you can use the short hand form</p>
-<pre>
+<pre><code>
 -channel RB
-</pre>
+</code></pre>
 
 <p>All the channels that are present in an image can be specified using the
 special channel type <code>All</code>. Not all operators are 'channel capable',
@@ -980,9 +980,9 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
 
 <p>For example, in the command</p>
 
-<pre>
+<pre><code>
 convert cockatoo.tif -clip -negate negated.tif
-</pre>
+</code></pre>
 
 <p>only the pixels within the clipping path are negated.</p>
 
@@ -1168,7 +1168,7 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <p>As an example, to add contrast to an image with offsets, try this command:</p>
 
-<pre>
+<pre><code>
 convert kittens.jpg -color-matrix \
   " 1.5 0.0 0.0 0.0, 0.0, -0.157 \
     0.0 1.5 0.0 0.0, 0.0, -0.157 \
@@ -1176,7 +1176,7 @@ convert kittens.jpg -color-matrix \
     0.0 0.0 0.0 1.0, 0.0,  0.0 \
     0.0 0.0 0.0 0.0, 1.0,  0.0 \
     0.0 0.0 0.0 0.0, 0.0,  1.0" kittens.png
-</pre>
+</code></pre>
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="colorspace"></a>-colorspace <var>value</var></h3>
 </div>
@@ -1185,7 +1185,7 @@ convert kittens.jpg -color-matrix \
 
 <p>Choices are:</p>
 
-<pre>
+<pre><code>
 CMY          CMYK         Gray         HCL
 HCLp         HSB          HSI          HSL
 HSV          HWB          Lab          LCHab
@@ -1194,7 +1194,7 @@ OHTA         Rec601YCbCr  Rec709YCbCr  RGB
 scRGB        sRGB         Transparent  xyY
 XYZ          YCbCr        YCC          YDbDr
 YIQ          YPbPr        YUV
-</pre>
+</code></pre>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
 
@@ -1316,11 +1316,11 @@ href="#separate">-separate</a>, so long as the channel settings are the same.
 Thus, in the following example, the final image should be a copy of the
 original.  </p>
 
-<pre>
+<pre><code>
 convert original.png -channel RGB -separate sepimage.png
 convert sepimage-0.png sepimage-1.png sepimage-2.png -channel RGB \
   -combine imagecopy.png
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="comment"></a>-comment <var>string</var></h3>
@@ -1347,9 +1347,9 @@ instead.</p>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 -comment "%m:%f %wx%h"  bird.miff
-</pre>
+</code></pre>
 
 <p>produces an image comment of <code>MIFF:bird.miff 512x480</code> (assuming
 that the image <code>bird.miff</code> has a width of 512 and a height of
@@ -1363,16 +1363,16 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
 
 <p>This is a convert version of "<code>compare</code>" for two same sized images. The syntax is as follows, but other metrics are allowed.</p>
 
-<pre>
+<pre><code>
 convert image.png reference.png -metric RMSE -compare \ <br/> difference.png
-</pre>
+</code></pre>
 
 <p>To get the metric value use the string format "%[distortion]".</p>
 
-<pre>
+<pre><code>
 convert image.png reference.png -metric RMSE -compare -format \
    "%[distortion]" info:
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="complex"></a>-complex <var>operator</var></h3>
@@ -1382,7 +1382,7 @@ convert image.png reference.png -metric RMSE -compare -format \
 
 Choose from these operators:
 
-<pre>
+<pre><code>
 add
 conjugate
 divide
@@ -1390,7 +1390,7 @@ magnitude-phase
 multiply
 real-imaginary
 subtract
-</pre>
+</code></pre>
 
 <p>Optionally specify the <code>divide</code> operator SNR with <code><a href="#define">-define</a> complex:snr=float</code>.</p>
 
@@ -1513,9 +1513,9 @@ contrast.</p>
 
 <p>For a more pronounced effect you can repeat the option:</p>
 
-<pre>
+<pre><code>
 convert rose: -contrast -contrast rose_c2.png
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="contrast-stretch"></a>-contrast-stretch <var>black-point</var><br />-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h3>
@@ -1669,9 +1669,9 @@ a comma-separated list consisting of one or more of the following domains:
 
 <p>For example, to log cache and blob events, use.</p>
 
-<pre>
+<pre><code>
 convert -debug "Cache,Blob" rose: rose.png
-</pre>
+</code></pre>
 
 <p>The <code>User</code> domain is normally empty, but developers can log user
 events in their private copy of ImageMagick.</p>
@@ -2207,9 +2207,9 @@ available:</p>
     the PNG file.  Because the list is processed from left to right, you
     can achieve this with a single define:</p>
 
-<pre>
+<pre><code>
 -define png:include-chunk=none,gAMA
-</pre>
+</code></pre>
 
     <p>As a special case, if the <code>sRGB</code> chunk is not excluded and
     the PNG encoder recognizes that the image contains the sRGB ICC profile,
@@ -2231,9 +2231,9 @@ available:</p>
     <p>The <a href="#strip">-strip</a> option does the equivalent of the
     following for PNG output:</p>
 
-<pre>
+<pre><code>
 -define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date
-</pre>
+</code></pre>
 
     <p>The default behavior is to include all known PNG ancillary chunks
     plus ImageMagick's private <code>vpAg</code> ("virtual page") chunk,
@@ -2433,17 +2433,17 @@ available:</p>
 <p>For example, to create a postscript file that will render only the black
 pixels of a bilevel image, use:</p>
 
-<pre>
+<pre><code>
 convert bilevel.tif -define ps:imagemask eps3:stencil.ps
-</pre>
+</code></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
 <code>registry:</code>.  For example, to set a temporary path to put work files,
 use:</p>
 
-<pre>
+<pre><code>
 -define registry:temporary-path=/data/tmp
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="delay"></a>-delay <var>ticks</var> <br />-delay <var>ticks</var>x<var>ticks-per-second</var> {<var>&lt;</var>} {<var>&gt;</var>}</h3>
@@ -2986,11 +2986,11 @@ perspective distortion of the built-in "rose:" image. Note how spaces were
 used to group the 4 sets of coordinate pairs, to make it easier to read and
 understand.</p>
 
-<pre>
+<pre><code>
 convert rose:  -virtual-pixel black \
   -distort Perspective '0,0,0,0  0,45,0,45  69,0,60,10  69,45,60,35' \
    rose_3d_rotated.gif"
-</pre>
+</code></pre>
 
 <p>If more that the required number of coordinate pairs are given for
 a distortion, the distortion method is 'least squares' fitted to produce the
@@ -3011,11 +3011,11 @@ images become smaller (minified) in the output, which is very common when
 using '<code>perspective</code>' distortion. For example here we view
 a infinitely tiled 'plane' all the way to the horizon. </p>
 
-<pre>
+<pre><code>
 convert -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
   -distort perspective  '0,0,5,45  89,0,45,46  0,89,0,89  89,89,89,89' \
    checks_tiled.jpg
-</pre>
+</code></pre>
 
 <p>Note that a infinitely tiled perspective images involving the horizon can
 be very slow, because of the number of pixels that are compressed to generate
@@ -3212,9 +3212,9 @@ optional comma. </p>
 <p>As an example, to define a circle centered at 100,100 that extends to
 150,150 use:</p>
 
-<pre>
+<pre><code>
 -draw 'circle 100,100 150,150'
-</pre>
+</code></pre>
 
 <p>The <code>Bezier</code> primitive creates a spline curve and requires three
 or points to define its shape. The first and last points are the
@@ -3230,10 +3230,10 @@ to draw complex curves, it is highly recommended either to use the
 <code>path</code> primitive or to draw multiple four-point bezier segments with
 the start and end knots of each successive segment repeated. For example:</p>
 
-<pre>
+<pre><code>
 -draw 'bezier 20,50 45,100 45,0 70,50'
 -draw 'bezier 70,50 95,100 95,0 120,50'
-</pre>
+</code></pre>
 
 <p>A <code>path</code> represents an outline of an object, defined in terms of
 moveto (set a new current point), lineto (draw a straight line), curveto (draw
@@ -3248,9 +3248,9 @@ href="http://www.w3.org/TR/SVG/paths.html">Paths</a>.)</p>
 image keyword with the composite operator, image location, image size, and
 filename:</p>
 
-<pre>
+<pre><code>
 -draw 'image SrcOver 100,100 225,225 image.jpg'
-</pre>
+</code></pre>
 
 <p>You can use 0,0 for the image size, which means to use the actual
 dimensions found in the image header. Otherwise, it is scaled to the given
@@ -3269,9 +3269,9 @@ single or double quotes.</p>
 <p>For example, the following annotates the image with <code>Works like
 magick!</code> for an image titled <code>bird.miff</code>. </p>
 
-<pre>
+<pre><code>
 -draw "text 100,100 'Works like magick!' "
-</pre>
+</code></pre>
 
 <p>See the <a href="#annotate">-annotate</a> option for another convenient way
 to annotate an image with text.</p>
@@ -3302,13 +3302,13 @@ reinitialized from the initial affine matrix.</p>
 fill color (see <a href="#fill">-fill</a>). Follow the pixel coordinate with
 a method:</p>
 
-<pre>
+<pre><code>
 point
 replace
 floodfill
 filltoborder
 reset
-</pre>
+</code></pre>
 
 <p>Consider the target pixel as that specified by your coordinate. The
 <code>point</code> method recolors the target pixel. The <code>replace</code>
@@ -3389,14 +3389,14 @@ Decipher an Image</a>.</p>
 
 <p>Choose from</p>
 
-<pre>
+<pre><code>
 AdobeCustom     AdobeExpert
 AdobeStandard   AppleRoman
 BIG5            GB2312
 Latin 2         None
 SJIScode        Symbol
 Unicode         Wansung
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="endian"></a>-endian <var>type</var></h3>
@@ -3603,10 +3603,10 @@ specify how to compose the image with the background, use <a href="#compose"
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
-<pre>
+<pre><code>
 convert input.jpg -resize 800x600 -background black -compose Copy \ 
   -gravity center -extent 800x600 -quality 92 output.jpg
-</pre>
+</code></pre>
 
 <p><?php seeGeometry(); ?></p>
 
@@ -3619,26 +3619,26 @@ convert input.jpg -resize 800x600 -background black -compose Copy \
 <p>This option is most useful for extracting a subregion of a very large raw
 image.  Note that these two commands are equivalent:</p>
 
-<pre>
+<pre><code>
 convert -size 16000x16000 -depth 8 -extract 640x480+1280+960 \ 
   image.rgb image.png",
 convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
   image.rgb image.png"
-</pre>
+</code></pre>
 
 <p>If you omit the offsets, as in</p>
 
-<pre>
+<pre><code>
 convert -size 16000x16000 -depth 8 -extract 640x480 \ 
   image.rgb image.png
-</pre>
+</code></pre>
 
 <p>the image is <var>resized</var> to the specified dimensions instead,
 equivalent to:</p>
 
-<pre>
+<pre><code>
 convert -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
-</pre>
+</code></pre>
 
 <p><?php seeGeometry(); ?></p>
 
@@ -3663,7 +3663,7 @@ href="#style">-style</a>, and <a href="#weight">-weight</a>.  </p>
 
 <p class="magick-description">display (co-occurrence matrix) texture measure features for each channel in the image in each of four directions (horizontal, vertical, left and right diagonals) for the specified distance.</p>
 
-<pre>
+<pre><code>
 Angular Second Moment       Sum Entropy
 Contrast                    Entropy
 Correlation                 Difference Variance
@@ -3671,7 +3671,7 @@ Sum of Squares Variance     Difference Entropy
 Inverse Difference Moment   Information Measure of Correlation 1
 Sum Average                 Information Measure of Correlation 2
 Sum Variance                Maximum Correlation Coefficient
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="fft"></a>-fft</h3>
@@ -3707,16 +3707,16 @@ formats that do not limit the color or compress the image. Thus, MIFF, TIF,
 PFM, EXR and PNG are the recommended image formats to use. All of these
 formats, except PNG support multi-frame images. So for example,</p>
 
-<pre>
+<pre><code>
 convert image.png -fft fft_image.miff
-</pre>
+</code></pre>
 
 <p>generates a magnitude image as <code>fft_image.miff[0]</code> and a phase
 image as <code>fft_image.miff[1]</code>. Similarly,</p>
 
-<pre>
+<pre><code>
 convert image.png -fft fft_image.png
-</pre>
+</code></pre>
 
 <p>generates a magnitude image as <code>fft_image-0.png</code> and a phase image
 as <code>fft_image-1.png</code>. If you prefer this representation, then you can
@@ -3741,10 +3741,10 @@ function into what is usually called the spectrum. A log function is used to
 enhance the darker values more in comparison to the lighter values. This can
 be done, for example, as follows:</p>
 
-<pre>
+<pre><code>
 convert fft_image.miff[0] -contrast-stretch 0 \
   -evaluate log 1000 fft_image_spectrum.png"
-</pre>
+</code></pre>
 
 <p>where either <a href="#contrast-stretch">-contrast-stretch</a> 0 or <a
 href="#auto-level">-auto-level</a> is used to scale the image to full dynamic
@@ -3801,11 +3801,11 @@ the parentheses from being interpreted by your shell.</p>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 -fill blue
 -fill "#ddddff"
 -fill "rgb(255,255,255)"
-</pre>
+</code></pre>
 
 <p>See <a href="#draw">-draw</a> for further details.</p>
 
@@ -3821,11 +3821,11 @@ the parentheses from being interpreted by your shell.</p>
 operations such as <a href="#resize">-resize</a> and <a href="#distort"
 >-distort</a>. For example you can use a simple resize filter such as:</p>
 
-<pre>
+<pre><code>
 Point       Hermite       Cubic
 Box         Gaussian      Catrom
 Triangle    Quadratic     Mitchell
-</pre>
+</code></pre>
 
 <p>The <code>Bessel</code> and <code>Sinc</code> filter is also provided (as well
 as a faster <code>SincFast</code> equivalent form).  However these filters are
@@ -3838,11 +3838,11 @@ function that the <a href="#filter" >-filter</a> setting defines.   That is
 using these functions will define a 'Windowed' filter, appropriate to the
 operator involved.  Windowed filters include: </p>
 
-<pre>
+<pre><code>
 Lanczos       Hamming       Parzen
 Blackman      Kaiser        Welsh
 Hanning       Bartlett      Bohman
-</pre>
+</code></pre>
 
 <p>Also one special self-windowing filter is also provided
 <code>Lagrange</code>, which will automagically re-adjust its function depending
@@ -3975,28 +3975,28 @@ href="#set" >-set</a>):-</p>
 
 <p>For example, to get a 8 lobe jinc windowed sinc filter (Genseng filter?):</p>
 
-<pre>
+<pre><code>
 convert image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
   -resize 150%   image.jpg"
-</pre>
+</code></pre>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
 
-<pre>
+<pre><code>
 convert image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
   -resize 150%   image.jpg"
-</pre>
+</code></pre>
 
 <p>To extract the data for a raw windowing function, combine it with
 a '<code>Box</code>' filter.  For example the '<code>Welch</code> parabolic
 windowing function. </p>
 
-<pre>
+<pre><code>
 convert null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
@@ -4005,7 +4005,7 @@ convert null: -define filter:filter=Box \
 gnuplot
   set grid
   plot \"window_welch.dat\" with lines
-</pre>
+</code></pre>
 
 <p>Note that the use of expert options is provided for image processing experts
 who have studied and understand how resize filters work. Without this
@@ -4178,12 +4178,12 @@ ImageMagick 6.4.8−8.)</p>
 <p>Here,  <var>parameters</var> is a comma-separated list of
 numerical values. The number of values varies depending on which <var>function</var> is selected. Choose the <var>function</var> from:</p>
 
-<pre>
+<pre><code>
 Polynomial
 Sinusoid
 Arcsin
 Arctan
-</pre>
+</code></pre>
 
 <p>To print a complete list of <a href="#function">-function</a> operators,
 use <a href="#list">-list function</a>. Descriptions follow.</p>
@@ -4194,15 +4194,15 @@ use <a href="#list">-list function</a>. Descriptions follow.</p>
 these being the coefficients of a polynomial, in decreasing order of degree.
 That is, entering</p>
 
-<pre>
+<pre><code>
 -function Polynomial <var>a</var><sub><var>n</var></sub>,<var>a</var><sub><var>n</var>-1</sub>,...<var>a</var><sub>1</sub>,<var>a</var><sub>0</sub>
-</pre>
+</code></pre>
 
 <p>will invoke a polynomial function given by</p>
 
-<pre>
+<pre><code>
 <var>a</var><sub><var>n</var></sub> <b><var>u</var></b><sup><var>n</var></sup> + <var>a</var><sub><var>n</var>-1</sub> <b><var>u</var></b><sup><var>n</var>-1</sup> + ··· <var>a</var><sub>1</sub> <b><var>u</var></b> + <var>a</var><sub>0</sub>,
-</pre>
+</code></pre>
 
 <p>where <b><var>u</var></b> is pixel's original normalized channel value.</p>
 
@@ -4249,26 +4249,26 @@ desired.</p>
 sinusoidally by setting frequency, phase shift, amplitude, and a bias. These
 values are given as one to four parameters, as follows,</p>
 
-<pre>
+<pre><code>
 -function <code>Sinusoid</code> <var>freq</var>,[<var>phase</var>,[<var>amp</var>,[<var>bias</var>]]]
-</pre>
+</code></pre>
 
 <p>where <var>phase</var> is in degrees. (The domain [0,1] of the function
 corresponds to 0 through <var>freq</var>×360 degrees.)
 The result is that if a pixel's normalized channel value is originally
 <b><var>u</var></b>, its resulting normalized value is given by </p>
 
-<pre>
+<pre><code>
 <var>amp</var> * sin(2*π* (<var>freq</var> * <b><var>u</var></b> + <var>phase</var> / 360)) + <var>bias</var>
-</pre>
+</code></pre>
 
 <p> For example, the following generates a curve that starts and ends at 0.9
 (when <b><var>u</var></b>=0 and 1, resp.), oscillating three times between
 .7−.2=.5 and .7+.2=.9. </p>
 
-<pre>
+<pre><code>
 -function Sinusoid 3,-90,.2,.7
-</pre>
+</code></pre>
 
 <p>The default values of <var>amp</var> and <var>bias</var> are both .5. The default for <var>phase</var>
 is 0.</p>
@@ -4295,17 +4295,17 @@ and can be used to generate cylindrical distortion and displacement maps.
 The curve can be adjusted relative to both the input values and output range
 of values.</p>
 
-<pre>
+<pre><code>
 -function <code>ArcSin</code> <var>width</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
-</pre>
+</code></pre>
 
 <p>with all values given in terms of normalized color values (0.0 for black,
 1.0 for white). Defaulting to values covering the full range from 0.0 to 1.0
 for bout input (<var>width</var>), and output (<var>width</var>) values. '<code>1.0,0.5,1.0,0.5</code>' </p>
 
-<pre>
+<pre><code>
 <var>range</var>/π * asin( 2/<var>width</var> * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
-</pre>
+</code></pre>
 
 </dd>
 <dt class="col-md-4">ArcTan</dt>
@@ -4314,16 +4314,16 @@ for bout input (<var>width</var>), and output (<var>width</var>) values. '<code>
 limit values at infinities, though a center using the given slope value.
 All these values can be adjusted via the arguments.</p>
 
-<pre>
+<pre><code>
 -function <code>ArcTan</code> <var>slope</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
-</pre>
+</code></pre>
 
 <p>Defaulting to '<code>1.0,0.5,1.0,0.5</code>'.
 </p>
 
-<pre>
+<pre><code>
 <var>range</var>/π * atan( <var>slope</var>*π * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
-</pre>
+</code></pre>
   </dd>
 </dl>
 
@@ -4394,9 +4394,9 @@ is useful if the image is of a known gamma but not set as an image attribute
 display gamma; e.g., if your image is sRGB and you want to write a PNG gAMA
 chunk, use</p>
 
-<pre>
+<pre><code>
 convert input.png +gamma .45455 output.png
-</pre>
+</code></pre>
 
 <p>(0.45455 is 1/2.2)</p>
 
@@ -4484,10 +4484,10 @@ that point. (In addition, the <a href="#gravity">-gravity</a> affects the
 region itself, which is <var>centered</var> at the pixel
 coordinate (60,70). (<?php seeGeometry();?>)</p>
 
-<pre>
+<pre><code>
 convert image.png -gravity Center -region 10x10-40+20 \ 
   -negate output.png
-</pre>
+</code></pre>
 
 <p>When used as an option to <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/composite.php">composite</a>, <a
@@ -4510,27 +4510,27 @@ convert the given image into a linear-grayscale image. </p>
 
 <p>For example, to convert an image to (linear) Rec709Luminance grayscale,  type:</p>
 
-<pre>
+<pre><code>
 convert in.png -grayscale Rec709Luminance out.png
-</pre>
+</code></pre>
 
 <p>which is equivalent to:</p>
 
-<pre>
+<pre><code>
 convert in.png -colorspace gray out.png
-</pre>
+</code></pre>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
 
-<pre>
+<pre><code>
 convert in.png -grayscale Rec709Luma out.png
-</pre>
+</code></pre>
 
 <p>which is equivalent to:</p>
 
-<pre>
+<pre><code>
 convert in.png -set colorspace RGB -colorspace gray out.png
-</pre>
+</code></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
 regardless of the current colorpsace of the image. But a 'mathematical'
@@ -4560,9 +4560,9 @@ dimensions.  Create it with the <code>HALD:</code> prefix (e.g. HALD:8).  You
 can apply any color transformation to the Hald image and then use this option
 to apply the transform to the image. </p>
 
-<pre>
+<pre><code>
 convert image.png hald.png -hald-clut transform.png
-</pre>
+</code></pre>
 
 <p>This option provides a convenient method for you to use Gimp or Photoshop
 to make color corrections to the Hald CLUT image and subsequently apply them
@@ -4670,15 +4670,15 @@ href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a>,
 <p>For example, depending upon the image format used to store the result of
 the <a href="#fft">-fft</a>, one would use either</p>
 
-<pre>
+<pre><code>
 convert fft_image.miff -ift fft_image_ift.png
-</pre>
+</code></pre>
 
 <p>or</p>
 
-<pre>
+<pre><code>
 convert fft_image-0.png fft_image-1.png -ift fft_image_ift.png
-</pre>
+</code></pre>
 
 <p>The resulting image may need to be cropped due to padding introduced when
 the original image, prior to the <a href="#fft">-fft</a> or <a
@@ -4782,7 +4782,7 @@ function.</p>
 
 <p>Operators affected by the <a href="#intensity" >-intensity</a> setting include:</p>
 
-<pre>
+<pre><code>
 -adaptive-blur
 -adaptive-sharpen
 -black-threshold
@@ -4798,7 +4798,7 @@ function.</p>
 -threshold
 -tint
 -white-threshold
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="intent"></a>-intent <var>type</var></h3>
@@ -4822,7 +4822,7 @@ Perceptual, Relative, Saturation</code>.</p>
 
 <p>Choose from:</p>
 
-<pre>
+<pre><code>
 none
 line
 plane
@@ -4830,7 +4830,7 @@ partition
 JPEG
 GIF
 PNG
-</pre>
+</code></pre>
 
 <p>This option is used to specify the type of interlacing scheme for raw image
 formats such as <code>RGB</code> or <code>YUV</code>.</p>
@@ -4940,9 +4940,9 @@ Properties</a> for details of the percent escape codes.</p>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 -label "%m:%f %wx%h"  bird.miff
-</pre>
+</code></pre>
 
 <p>assigns an image label of <code>MIFF:bird.miff 512x480</code> to the
 "<code>bird.miff</code>" image and whose width is 512 and height is 480, as it
@@ -5337,13 +5337,13 @@ any limit is reached, ImageMagick fails in some fashion but attempts to take
 compensating actions, if possible. For example, the following limits
 memory:</p>
 
-<pre>
+<pre><code>
 -limit memory 32MiB -limit map 64MiB
-</pre>
+</code></pre>
 
 <p>Use <a href="#list">-list resource</a> to list the current limits. For example, our system shows these limits:</p>
 
-<pre>
+<pre><code>
 -> identify -list resource
 Resource limits:
   Width: 100MP
@@ -5356,7 +5356,7 @@ Resource limits:
   Thread: 12
   Throttle: 0
   Time: unlimited
-</pre>
+</code></pre>
 
 <p>Requests for pixel storage to keep intermediate images are satisfied by one
 of three resource categories: in-memory pool, memory-mapped files pool, and
@@ -5389,9 +5389,9 @@ example, assume you have a web interface that processes images uploaded from
 the Internet.  To assure ImageMagick does not exceed 10MiB of memory you can
 simply set the area limit to 10MiB:</p>
 
-<pre>
+<pre><code>
 -limit area 10MB
-</pre>
+</code></pre>
 
 <p>Now whenever a large image is processed, the pixels are automagically
 cached to disk instead of memory.  This of course implies that large images
@@ -5400,9 +5400,9 @@ be an order of magnitude faster than on disk.  Because your web site users
 might inadvertently upload a huge image to process, you should set a disk
 limit as well:</p>
 
-<pre>
+<pre><code>
 -limit area 10MB -limit disk 500MB
-</pre>
+</code></pre>
 
 <p>Here ImageMagick stops processing if an image requires more than 500MB of disk storage.</p>
 
@@ -5473,7 +5473,7 @@ normalization of mathematical images. </p>
 
 <p class="magick-description">Print a list of supported arguments for various options or settings.  Choose from these list types:</p>
 
-<pre class="pre-scrollable">
+<pre class="pre-scrollable"><code>
 Align
 Alpha
 Boolean
@@ -5544,15 +5544,15 @@ Type
 Units
 Validate
 VirtualPixel
-</pre>
+</code></pre>
 
 <p>These lists vary depending on your version of ImageMagick. Use "<code>-list
 list</code>" to get a complete listing of all the "<code>-list</code>" arguments
 available:</p>
 
-<pre>
+<pre><code>
 identify -list list
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="log"></a>-log <var>string</var></h3>
@@ -5583,9 +5583,9 @@ characters:</p>
 
 <p>For example:</p>
 
-<pre>
+<pre><code>
 convert -debug coders -log "%u %m:%l %e" in.gif out.png
-</pre>
+</code></pre>
 
 <p>The default behavior is to print all of the components.</p>
 
@@ -5620,14 +5620,14 @@ times.</p>
 
 <p>Choose from these <var>Standard Colormap</var> types:</p>
 
-<pre>
+<pre><code>
 best
 default
 gray
 red
 green
 blue
-</pre>
+</code></pre>
 
 <p>The <var>X server</var> must support the <var>Standard
 Colormap</var> you choose, otherwise an error occurs.  Use <code>list</code> as
@@ -5824,9 +5824,9 @@ href="#modulate">-modulate 120,90</a>.</p>
 >option:modulate:colorspace</code>' to specify which colorspace to
 modulate.  Choose from <code>HCL</code>, <code>HCLp</code>, <code>HSB</code>, <code>HSI</code>, <code>HSL</code> (the default), <code>HSV</code>, <code>HWB</code>, or <code>LCH</code> (LCHuv).  For example,</p>
 
-<pre>
+<pre><code>
 convert image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="moments"></a>-moments</h3>
@@ -5934,7 +5934,7 @@ which should be used in preference.</p>
 <p>Use <a href="#noise">+noise</a> followed by a noise <var>type</var> to add noise to an image. Choose from these noise
 types:</p>
 
-<pre>
+<pre><code>
 Gaussian
 Impulse
 Laplacian
@@ -5942,7 +5942,7 @@ Multiplicative
 Poisson
 Random
 Uniform
-</pre>
+</code></pre>
 
 <p>The amount of noise added can be controlled by the <code><a
 href="#attenuate" >-attenuate</a></code> setting. If unset the value is
@@ -6016,7 +6016,7 @@ given number of <var>levels</var> per color channel.</p>
 
 <p>You can choose from these standard threshold maps:</p>
 
-<pre class="pre-scrollable">
+<pre class="pre-scrollable"><code>
 threshold   1x1   Threshold 1x1 (non-dither)
 checks      2x1   Checkerboard 2x1 (dither)
 o2x2        2x2   Ordered 2x2 (dispersed)
@@ -6036,7 +6036,7 @@ c6x6b       c6x6  Circles 6x6 (black)
 c6x6w             Circles 6x6 (white)
 c7x7b       c7x7  Circles 7x7 (black)
 c7x7w             Circles 7x7 (white)
-</pre>
+</code></pre>
 
 <p> The <code>threshold</code> generated a simple 50% threshold of the image.
 This could be used with <var >level</var> to do the equivalent of <a
@@ -6074,13 +6074,13 @@ after being created. </p>
 
 <p>Choose from these orientations:</p>
 
-<pre>
+<pre><code>
 bottom-left    right-top
 bottom-right   top-left
 left-bottom    top-right
 left-top       undefined
 right-bottom
-</pre>
+</code></pre>
 
 <p>To print a complete list of orientations, use the <a href="#list" >-list
 orientation</a> option.</p>
@@ -6276,7 +6276,7 @@ visible effect.</p>
 <code>convert file.png -preview Gamma Preview:gamma.png</code>). Choose from
 these previews:</p>
 
-<pre class="pre-scrollable">
+<pre class="pre-scrollable"><code>
 AddNoise
 Blur
 Brightness
@@ -6306,7 +6306,7 @@ Spread
 Swirl
 Threshold
 Wave
-</pre>
+</code></pre>
 
 <p>To print a complete list of previews, use the <a href="#list">-list preview</a> option.</p>
 
@@ -6356,9 +6356,9 @@ used. Instead, simply write the file to an image format such as <var>APP1, 8BIM,
 <p>For example, to extract the Exif data (which is stored in JPEG files in the
 <var>APP1</var> profile), use.</p>
 
-<pre>
+<pre><code>
 convert cockatoo.jpg profile.exif
-</pre>
+</code></pre>
 
 <p>It is important to note that results may depend on whether or not the
 original image already has an included profile. Also, keep in mind that <a
@@ -6367,9 +6367,9 @@ therefore a conversion is made each time it is encountered, in order, in the
 command-line. For instance, in the following example, if the original image is
 CMYK with profile, a CMYK-CMYK-RGB conversion results.</p>
 
-<pre>
+<pre><code>
 convert CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
-</pre>
+</code></pre>
 
 <p>Furthermore, since ICC profiles are not necessarily symmetric, extra
 conversion steps can yield unwanted results.  CMYK profiles are often very
@@ -6652,10 +6652,10 @@ filter.</p>
 coding.  If your image is gamma-corrected, you can remove the nonlinear gamma
 correction, apply the transform, then restore it like this:</p>
 
-<pre>
+<pre><code>
 convert portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
   -quality 92 passport.jpg
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="respect-parentheses"></a>-respect-parentheses</h3>
@@ -6882,21 +6882,21 @@ a global 'artifact' which are automatically assigned (and any <a href="<?php
 echo $_SESSION['RelativePath'] ?>/../script/escape.php" >Format Percent
 Escapes</a> expanded) to images as they are read in.  For example:</p>
 
-<pre>
+<pre><code>
 -> convert rose: -set comment 'Rose is a rose is a rose is a rose' rose.png
 identify -format %c rose.png
 Rose is a rose is a rose is a rose
-</pre>
+</code></pre>
 
 <p>The set value can also make use of <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image
 Properties</a> in the defined value.  For example:</p>
 
-<pre>
+<pre><code>
 -> convert rose: -set origsize '%wx%h' -resize 50% \
   -format 'Old size = %[origsize]  New size = %wx%h' info:
 Old size = 70x46  New size = 35x23
-</pre>
+</code></pre>
 
 <p>Other well known 'properties' that are available include:
 '<code>date:create</code>' and '<code>date:modify</code>' and
@@ -6912,17 +6912,17 @@ attribute. </p>
 <p>This option can also associate a colorspace or profile with your image.
 For example,</p>
 
-<pre>
+<pre><code>
 convert image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
-</pre>
+</code></pre>
 
 <p>Some 'properties' must be defined in a specific way to be used. For
 example only 'properties' prefixed with "<code>filename:</code>" can be used to
 modify the output filename of an image. For example</p>
 
-<pre>
+<pre><code>
 convert rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
-</pre>
+</code></pre>
 
 <p>If the setting value is prefixed with "<code>option:</code>" the setting will
 be saved as a global "Artifact" exactly as if it was set using the <a
@@ -6931,10 +6931,10 @@ can be used to pass 'attributes' and 'properties' of one specific image,
 in a way that allows you to use them in a completely different image, even if
 the original image has long since been modified or destroyed. For example: </p>
 
-<pre>
+<pre><code>
 convert rose:  -set option:rosesize '%wx%h' -delete 0 \
   label:'%[rosesize]'   label_size_of_rose.gif"
-</pre>
+</code></pre>
 
 <p>Note that <a href="<?php echo $_SESSION['RelativePath']
 ?>/../script/escape.php" >Format Percent Escapes</a> will only match
@@ -6949,9 +6949,9 @@ previously-formatted ancillary chunks into the output PNG file, using
 the commandline option as shown below or by setting the profile via a
 programming interface:</p>
 
-<pre>
+<pre><code>
 convert in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
-</pre>
+</code></pre>
 
 <p>where <var>x</var> is a location flag and
 <var>filename</var> is a file containing the chunk
@@ -6965,10 +6965,10 @@ of the same type, then add a short unique string after the "x" to prevent
 subsequent profiles from overwriting the preceding ones, e.g.,</p>
 
 
-<pre>
+<pre><code>
 convert in.png -set profile PNG-chunk-b01:file01 \ 
   -profile PNG-chunk-b02:file02 out.png
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="shade"></a>-shade <var>azimuth</var>x<var>elevation</var></h3>
@@ -7045,18 +7045,18 @@ important to note, since horizontal and vertical shears do not
 <var>commute</var>, i.e., the order matters in a sequence of shears. For
 example, the following two commands are not equivalent.</p>
 
-<pre>
+<pre><code>
 convert logo: -shear 20x0 -shear 0x60 logo-sheared.png
 convert logo: -shear 0x60 -shear 20x0 logo-sheared.png
-</pre>
+</code></pre>
 
 <p>The first of the two commands above is equivalent to the following, except
 for the amount of empty space created; the command that follows generates
 a smaller image, and so is a better choice in terms of time and space.</p>
 
-<pre>
+<pre><code>
 convert logo: -shear 20x60 logo-sheared.png
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="sigmoidal-contrast"></a>-sigmoidal-contrast <var>contrast</var>x<var>mid-point</var></h3>
@@ -7118,13 +7118,13 @@ image or tell the number of colors in a <code>MAP</code> image file, (e.g. -size
 
 <p>For Photo CD images, choose from these sizes:</p>
 
-<pre>
+<pre><code>
 192x128
 384x256
 768x512
 1536x1024
 3072x2048
-</pre>
+</code></pre>
 
 <div style="margin: auto;">
   <h3 class="magick-header"><a id="sketch"></a>-sketch <var>radius</var><br />-sketch <var>radius</var>x<var>sigma</var>+<var>angle</var></h3>
@@ -7322,7 +7322,7 @@ values range from 0 to the maximum value the storage type can support.</p>
 <p>This setting suggests a type of stretch that ImageMagick should try to
 apply to the currently selected font family. Select <var>fontStretch</var> from the following.</p>
 
-<pre>
+<pre><code>
 Any
 Condensed
 Expanded
@@ -7333,7 +7333,7 @@ SemiCondensed
 SemiExpanded
 UltraCondensed
 UltraExpanded
-</pre>
+</code></pre>
 
 <p>To print a complete list of stretch types, use <a href="#list">-list
 stretch</a>.</p>
@@ -7376,12 +7376,12 @@ href="#style">-style</a>, and <a href="#weight">-weight</a>. </p>
 the currently selected font family. Select <var>fontStyle</var> from
 the following.</p>
 
-<pre>
+<pre><code>
 Any
 Italic
 Normal
 Oblique
-</pre>
+</code></pre>
 
 <p>For other settings that affect fonts, see the options <a
 href="#font">-font</a>, <a href="#family">-family</a>, <a
@@ -7496,19 +7496,19 @@ red values, while those at or below 50% red would be set to 0 in the red
 channel. The green, blue, and alpha channels (if present) would be unchanged.
 </p>
 
-<pre>
+<pre><code>
 convert in.png -channel red -threshold 50% out.png
-</pre>
+</code></pre>
 
 <p>As (possibly) impractical but instructive examples, the following would
 generate an all-black and an all-white image with the same dimensions as the
 input image.</p>
 
 
-<pre>
+<pre><code>
 convert in.png -threshold 100% black.png
 convert in.png -threshold -1 white.png
-</pre>
+</code></pre>
 
 <p>Note that the values of the transparency channel is treated as 'matte'
 values (0 is opaque) and not as 'alpha' values (0 is transparent).</p>
@@ -7589,9 +7589,9 @@ under the <a href="#format">-format</a> option.</p>
 
 <p>For example,</p>
 
-<pre>
+<pre><code>
 -title "%m:%f %wx%h"
-</pre>
+</code></pre>
 
 <p>produces an image title of <code>MIFF:bird.miff 512x480</code> for an image
 titled <code>bird.miff</code> and whose width is 512 and height is 480.</p>
@@ -7605,9 +7605,9 @@ titled <code>bird.miff</code> and whose width is 512 and height is 480.</p>
 
 <p>This option applies the transformation matrix from a previous <a href="#affine">-affine</a> option.</p>
 
-<pre>
+<pre><code>
 convert -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
-</pre>
+</code></pre>
 
 
 <p>This operator has been now been superseded by the  <a
@@ -7734,9 +7734,9 @@ href="#type">-type</a> option can be used to override this behavior. For
 example, to prevent a JPEG from being written in grayscale format even though
 only gray pixels are present, use.</p>
 
-<pre>
+<pre><code>
 convert bird.png -type TrueColor bird.jpg
-</pre>
+</code></pre>
 
 <p>Similarly, use <a href="#type">-type TrueColorMatte</a> to force the
 encoder to write an alpha channel even though the image is opaque, if the
@@ -7889,12 +7889,12 @@ href="#list">-list virtual-pixel</a> option.</p>
 
 <p>Choose from these visual classes:</p>
 
-<pre>
+<pre><code>
 StaticGray    TrueColor
 GrayScale     DirectColor
 StaticColor   default
 PseudoColor   visual id
-</pre>
+</code></pre>
 
 <p>The X server must support the visual you choose, otherwise an error occurs.
 If a visual is not specified, the visual class that can display the most

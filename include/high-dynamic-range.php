@@ -17,16 +17,16 @@
 
 <p>To enable the HDRI version of ImageMagick, use this Unix/Linux command:</p>
 
-<pre>
+<pre><code>
 ./configure --enable-hdri
-</pre>
+</code></pre>
 
 <p>Under Windows, set the <code>MAGICKCORE_HDRI_SUPPORT</code> definition in the <code>magick-baseconfig.h</code> configuration file and build.</p>
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
-<pre>
+<pre><code>
 identify -version
 Features: HDRI
-</pre>
+</code></pre>
 </div>

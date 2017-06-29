@@ -3,15 +3,15 @@
 
 <p>We list a few examples of the <code>convert</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
-<pre>
+<pre><code>
 convert rose.jpg rose.png
-</pre>
+</code></pre>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<pre>
+<pre><code>
 convert rose.jpg -resize 50% rose.png
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -25,11 +25,11 @@ convert rose.jpg -resize 50% rose.png
 
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
-<pre>
+<pre><code>
 convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
   -draw "text 20,55 \'Magick\'" fuzzy-magick.png
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png" width="320" height="85" alt="fuzzy-magick" /></a>
@@ -37,11 +37,11 @@ convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
 
 <p>or here we resize an image with improved quality:</p>
 
-<pre>
+<pre><code>
 convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
-</pre>
+</code></pre>
 
 <p>You can find additional examples of using <code>convert</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

@@ -7,27 +7,27 @@
 
 <p>We list a few examples of the <code>display</code> command here to illustrate its usefulness and ease of use.  To get started, lets display an image in the JPEG format:</p>
 
-<pre>
+<pre><code>
 display rose.jpg
-</pre>
+</code></pre>
 
 <p>To tile a slate texture onto the root window, use:</p>
 
-<pre>
+<pre><code>
 display -size 1280x1024 -window root slate.png
-</pre>
+</code></pre>
 
 <p>To display a visual image directory of all your JPEG images, use:</p>
 
-<pre>
+<pre><code>
 display 'vid:*.jpg'
-</pre>
+</code></pre>
 
 <p>The display program defaults to the X screen resolution.  To display vecotr formats at their intended size, override the default resolution:</p>
 
-<pre>
+<pre><code>
 display -density 72 drawing.svg
-</pre>
+</code></pre>
 
 <p>You can find additional examples of using <code>display</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

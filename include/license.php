@@ -108,7 +108,7 @@
 
 <p>To apply the ImageMagick License to your work, attach the following boilerplate notice, with the fields enclosed by brackets "[]" replaced with your own identifying information (don't include the brackets). The text should be enclosed in the appropriate comment syntax for the file format.  We also recommend that a file or class name and description of purpose be included on the same "printed page" as the copyright notice for easier identification within third-party archives.</p>
 
-<pre>
+<pre><code>
    Copyright [yyyy] [name of copyright owner]
 
    Licensed under the ImageMagick License (the "License"); you may not use
@@ -122,6 +122,6 @@
    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
    License for the specific language governing permissions and limitations
    under the License.
-</pre>
+</code></pre>
 
 </div>

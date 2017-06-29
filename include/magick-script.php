@@ -6,7 +6,7 @@
 <pre class="code">
     #!/bin/env magick-script
     -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</pre>
+</code></pre>
 
 
 <p>You can find additional examples of using <code>magick-script</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>

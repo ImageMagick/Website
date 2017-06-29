@@ -7,11 +7,11 @@
 
 <p>We list a few examples of the <code>compare</code> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one thats been sharpened:</p>
 
-<pre>
+<pre><code>
 convert rose.jpg -sharpen 0x1 reconstruct.jpg
 compare rose.jpg reconstruct.jpg difference.png
 compare -compose src rose.jpg reconstruct.jpg difference.png
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
@@ -24,7 +24,7 @@ compare -compose src rose.jpg reconstruct.jpg difference.png
 
 <p>In addition to the visual interpretation of the difference in an image and its reconstruction, we report a mathematical measure of the difference:</p>
 
-<pre>
+<pre><code>
 -> compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
  Channel distortion: MAE
@@ -32,27 +32,27 @@ Image: rose.jpg
   green: 1853.99 (0.0282901)
   blue: 2008.67 (0.0306503)
   all: 1536.39 (0.0234439)
-</pre>
+</code></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
-<pre>
+<pre><code>
 -> compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
 19.63
-</pre>
+</code></pre>
 
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
-<pre>
+<pre><code>
 -> compare -metric PSNR rose.jpg reconstruct.jpg difference.png
 28.31
-</pre>
+</code></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
-<pre>
+<pre><code>
 -> compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.gif
 85.05 (0.00129778) @ 353,157
-</pre>
+</code></pre>
 
 <p>You can find additional examples of using <code>compare</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

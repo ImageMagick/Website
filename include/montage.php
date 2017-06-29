@@ -7,9 +7,9 @@
 
 <p>We list a few examples of the <code>montage</code> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
-<pre>
+<pre><code>
 montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -26,9 +26,9 @@ montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
 
 <p>Ok, let's add some decorations:</p>
 
-<pre>
+<pre><code>
 montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
-</pre>
+</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">

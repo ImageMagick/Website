@@ -59,25 +59,25 @@
 
 <p>After you write your MagickCore program, compile it like this:</p>
 
-<pre>
+<pre><code>
 cc -o core core.c `pkg-config --cflags --libs MagickCore`
-</pre>
+</code></pre>
 
 <p>Note, if your instance of ImageMagick does not support modules but does include support for the WMF image format, you'll need to link with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> library instead (since it is a dependency of the WMF image format):</p>
 
-<pre>
+<pre><code>
 cc -o core core.c `pkg-config --cflags --libs MagickWand`
-</pre>
+</code></pre>
 
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre>
+<pre><code>
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-</pre>
+</code></pre>
 
 <p>Here is a example program that utilizes the MagickCore API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>
 
-<pre class="pre-scrollable">#include &lt;stdio.h>
+<pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
@@ -139,10 +139,10 @@ int main(int argc,char **argv)
   exception=DestroyExceptionInfo(exception);
   MagickCoreTerminus();
   return(0);
-}</pre>
+}</code></pre>
 <p><a id="image-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
-<pre class="pre-scrollable">#include &lt;stdio.h>
+<pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;magick/MagickCore.h>
@@ -258,5 +258,5 @@ int main(int argc,char **argv)
   image_info=DestroyImageInfo(image_info);
   MagickCoreTerminus();
   return(0);
-}</pre>
+}</code></pre>
 </div>
