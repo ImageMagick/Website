@@ -47,15 +47,15 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <nav class="magick-nav">
-      <a class="magick-nav-item <?php IsActive($title,"Convert, Edit, Or Compose Bitmap Images"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../index.php">Home</a>
-      <a class="magick-nav-item <?php IsActive($title,"Install from Binary Distribution"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
-      <a class="magick-nav-item <?php IsActive($title,"Command-line Tools"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
-      <a class="magick-nav-item <?php IsActive($title,"Command-line Processing"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
-      <a class="magick-nav-item <?php IsActive($title,"Resources"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
-      <a class="magick-nav-item <?php IsActive($title,"Application Program Interfaces"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
-      <a class="magick-nav-item <?php IsActive($title,"Search"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/search.php">Search</a>
-      <a class="magick-nav-item float-right" href="https://www.imagemagick.org/discourse-server/">Community</a>
+    <nav class="nav magick-nav">
+      <a class="nav-link <?php IsActive($title,"Convert, Edit, Or Compose Bitmap Images"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../index.php">Home</a>
+      <a class="nav-link <?php IsActive($title,"Install from Binary Distribution"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
+      <a class="nav-link <?php IsActive($title,"Command-line Tools"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
+      <a class="nav-link <?php IsActive($title,"Command-line Processing"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
+      <a class="nav-link <?php IsActive($title,"Resources"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
+      <a class="nav-link <?php IsActive($title,"Application Program Interfaces"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
+      <a class="nav-link <?php IsActive($title,"Search"); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/search.php">Search</a>
+      <a class="nav-link float-right" href="https://www.imagemagick.org/discourse-server/">Community</a>
     </nav>
   </div>
 </div>
