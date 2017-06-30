@@ -30,7 +30,6 @@
   <link rel="canonical" href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>">
   <link rel="icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png">
   <link rel="shortcut icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:900,400,400italic,700,700italic,300,300italic|Open+Sans:300italic,400italic,700italic,300,400,600,700">
   <link rel="stylesheet" href="<?php echo $_SESSION['RelativePath']?>/../css/magick.php">
 </head>
 <?php flush(); ?>
