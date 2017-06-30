@@ -8,7 +8,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 <p>ImageMagick utilizes multiple computational threads to increase performance and can read, process, or write mega-, giga-, or tera-pixel image sizes.</p>
 <p>ImageMagick is free software delivered as a ready-to-run binary distribution or as source code that you may use, copy, modify, and distribute in both open and proprietary applications. It is distributed under the Apache 2.0 <a href="https://www.imagemagick.org/script/license.php">license</a>.</p>
 
-<p>The ImageMagick development process ensures a stable API and <a href="http://abi-laboratory.pro/tracker/timeline/imagemagick/">ABI</a>. Before each ImageMagick release, we perform a comprehensive security assessment that includes <a href="https://github.com/google/sanitizers/wiki/AddressSanitizer">memory error</a> and <a href="ttps://github.com/google/sanitizers/wiki/ThreadSanitizer">thread data race</a> detection to help prevent security vulnerabilities.</p>
+<p>The ImageMagick development process ensures a stable API and <a href="https://abi-laboratory.pro/tracker/timeline/imagemagick/">ABI</a>. Before each ImageMagick release, we perform a comprehensive security assessment that includes <a href="https://github.com/google/sanitizers/wiki/AddressSanitizer">memory error</a> and <a href="ttps://github.com/google/sanitizers/wiki/ThreadSanitizer">thread data race</a> detection to help prevent security vulnerabilities.</p>
 
 <p>The current release is ImageMagick <a href="https://www.imagemagick.org/script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="https://www.imagemagick.org/script/download.php#unix">Linux</a>, <a href="https://www.imagemagick.org/script/download.php#windows">Windows</a>, <a href="https://www.imagemagick.org/script/download.php#macosx">Mac Os X</a>, <a href="https://www.imagemagick.org/script/download.php#iOS">iOS</a>, Android OS, and others.</p>
 
@@ -54,7 +54,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="https://www.imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
-    <td>implements the forward and inverse <a href="http://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
+    <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/distribute-pixel-cache.php">Distributed pixel cache</a></td>
@@ -98,7 +98,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
-    <td>convert, edit, or compose images on your <a href="http://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
+    <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a></td>
