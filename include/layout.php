@@ -27,10 +27,10 @@
 <head>
   <?php echo $meta->metadata($title); ?>
   <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4">
-  <link rel="canonical" href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>">
-  <link rel="icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png">
-  <link rel="shortcut icon" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico">
-  <link rel="stylesheet" href="<?php echo $_SESSION['RelativePath']?>/../css/magick.php">
+  <link href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../css/magick.php" rel="stylesheet">
 </head>
 <?php flush(); ?>
 <body>
