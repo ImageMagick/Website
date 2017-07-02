@@ -118,6 +118,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#auto-threshold">-auto-threshold <var>method</var></a></td>
+    <td>automatically perform image thresholding</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#background">-background <var>color</var></a></td>
     <td>background color</td>
   </tr>

@@ -402,6 +402,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
+    <td>AutoThreshold</td>
+    <td>method=&gt;{Kapur, OTSU, Triangle}</td>
+    <td>automatically perform image thresholding</td>
+  </tr>
+
+  <tr>
     <td>BlackThreshold</td>
     <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
     <td>force all pixels below the threshold intensity into black</td>
