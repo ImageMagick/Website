@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
 
-<pre><code> magick image.jpg image.png </code></pre>
+<pre><code>magick image.jpg image.png </code></pre>
 
 <p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
