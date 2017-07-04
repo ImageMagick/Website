@@ -25,8 +25,6 @@
   <dt class="col-md-4"><a id="stream"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a></dt><dd class="col-md-8">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</dd>
 </dl>
 <p>If these tools are not available, you can simply append them to the <code>magick</code> tool like this:</p>
-<pre><code>
-magick convert logo: logo.jpg
-</code></pre>
+<pre><code>magick convert logo: logo.jpg</code></pre>
 
 </div>
