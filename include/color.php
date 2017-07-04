@@ -27,7 +27,7 @@ magick -bordercolor 'rgb(0,100%,0)' -border 10 image.jpg image.png</code></pre>
 #ffff00000000             #rrrrggggbbbb
 #ffff00000000ffff         #rrrrggggbbbbaaaa
 rgb(255, 0, 0)            an integer in the range 0—255 for each component
-rgb(100.0%, 0.0%, 0.0%)   a float in the range 0—100% for each component</pre >
+rgb(100.0%, 0.0%, 0.0%)   a float in the range 0—100% for each component</code></pre>
 
 <p>The format of an sRGB value in hexadecimal notation is a '#' immediately followed by either three, six, or twelve hexadecimal characters. The three-digit sRGB notation (#rgb) is converted into six-digit form (#rrggbb) by replicating digits, not by adding zeros. For example,  #fb0 expands to #ffbb00. This ensures that white (#ffffff) can be specified with the short notation (#fff) and removes any dependencies on the color depth of the image. Use the hexadecimal notation whenever performance is an issue.  ImageMagick does not need to load the expansive color table to interpret a hexadecimal color, e.g., <code>#000000</code>, but it does if <code>black</code> is used instead.</p>
 
