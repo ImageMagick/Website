@@ -449,6 +449,8 @@ scripts.</p>
 <dt class="col-md-4">-negate</dt>
 <dd class="col-md-8">currently negates all channels, including alpha if present.  As such you
     may need to use the -channel option to prevent alpha negation.  </dd>
+<dt class="col-md-4">-preview</dt>
+<dd class="col-md-8">this option is now an image operator.  The PREVIEW image format has been removed.</dd>
 </dl>
 
 <h3>Deprecated warning given, but will work (for now)</h3>
