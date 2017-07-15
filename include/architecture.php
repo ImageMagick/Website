@@ -711,33 +711,32 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/mgk.c">custom coder</a>.  It reads and writes images in the MGK image format which is simply an ID followed by the image width and height followed by the RGB pixel values.</p>
 
-<pre class="pre-scrollable"><code>/*
-  Include declarations.
-*/
-#include "magick/studio.h"
-#include "magick/blob.h"
-#include "magick/blob-private.h"
-#include "magick/colorspace.h"
-#include "magick/exception.h"
-#include "magick/exception-private.h"
-#include "magick/image.h"
-#include "magick/image-private.h"
-#include "magick/list.h"
-#include "magick/magick.h"
-#include "magick/memory_.h"
-#include "magick/monitor.h"
-#include "magick/monitor-private.h"
-#include "magick/quantum-private.h"
-#include "magick/static.h"
-#include "magick/string_.h"
-#include "magick/module.h"
-
+<pre class="pre-scrollable"><code>
+#include &lt;MagickCore/studio.h>
+#include &lt;MagickCore/blob.h>
+#include &lt;MagickCore/cache.h>
+#include &lt;MagickCore/colorspace.h>
+#include &lt;MagickCore/exception.h>
+#include &lt;MagickCore/image.h>
+#include &lt;MagickCore/list.h>
+#include &lt;MagickCore/magick.h>
+#include &lt;MagickCore/memory_.h>
+#include &lt;MagickCore/monitor.h>
+#include &lt;MagickCore/pixel-accessor.h>
+#include &lt;MagickCore/string_.h>
+#include &lt;MagickCore/module.h>
+#include "filter/blob-private.h"
+#include "filter/exception-private.h"
+#include "filter/image-private.h"
+#include "filter/monitor-private.h"
+#include "filter/quantum-private.h"
+
 /*
   Forward declarations.
 */
 static MagickBooleanType
-  WriteMGKImage(const ImageInfo *,Image *);
-
+  WriteMGKImage(const ImageInfo *,Image *,ExceptionInfo *);
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -772,7 +771,7 @@ static MagickBooleanType IsMGK(const unsigned char *magick,const size_t length)
     return(MagickTrue);
   return(MagickFalse);
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -784,13 +783,14 @@ static MagickBooleanType IsMGK(const unsigned char *magick,const size_t length)
 %                                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  ReadMGKImage() reads a MGK image file and returns it.  It allocates
-%  the memory necessary for the new Image structure and returns a pointer to
-%  the new image.
+%  ReadMGKImage() reads a MGK image file and returns it.  It allocates the
+%  memory necessary for the new Image structure and returns a pointer to the
+%  new image.
 %
 %  The format of the ReadMGKImage method is:
 %
-%      Image *ReadMGKImage(const ImageInfo *image_info,ExceptionInfo *exception)
+%      Image *ReadMGKImage(const ImageInfo *image_info,
+%        ExceptionInfo *exception)
 %
 %  A description of each parameter follows:
 %
@@ -799,8 +799,7 @@ static MagickBooleanType IsMGK(const unsigned char *magick,const size_t length)
 %    o exception: return any errors or warnings in this structure.
 %
 */
-static Image *ReadMGKImage(const ImageInfo *image_info,
-  ExceptionInfo *exception)
+static Image *ReadMGKImage(const ImageInfo *image_info,ExceptionInfo *exception)
 {
   char
     buffer[MaxTextExtent];
@@ -808,21 +807,23 @@ static Image *ReadMGKImage(const ImageInfo *image_info,
   Image
     *image;
 
+  long
+    y;
+
   MagickBooleanType
     status;
 
+  register long
+    x;
+
   register Quantum
     *q;
-
-  register size_t
-    x;
 
   register unsigned char
     *p;
 
   ssize_t
-    count,
-    y;
+    count;
 
   unsigned char
     *pixels;
@@ -835,12 +836,13 @@ static Image *ReadMGKImage(const ImageInfo *image_info,
     Open image file.
   */
   assert(image_info != (const ImageInfo *) NULL);
-  assert(image_info-&gt;signature == MagickSignature);
-  if (image_info-&gt;debug != MagickFalse)
-    (void) LogMagickEvent(TraceEvent,GetMagickModule(),"%s",image_info-&gt;filename);
+  assert(image_info->signature == MagickCoreSignature);
+  if (image_info->debug != MagickFalse)
+    (void) LogMagickEvent(TraceEvent,GetMagickModule(),"%s",
+      image_info->filename);
   assert(exception != (ExceptionInfo *) NULL);
-  assert(exception-&gt;signature == MagickSignature);
-  image=AcquireImage(image_info);
+  assert(exception->signature == MagickCoreSignature);
+  image=AcquireImage(image_info,exception);
   status=OpenBlob(image_info,image,ReadBinaryBlobMode,exception);
   if (status == MagickFalse)
     {
@@ -854,7 +856,7 @@ static Image *ReadMGKImage(const ImageInfo *image_info,
   if (IsMGK(buffer,7) == MagickFalse)
     ThrowReaderException(CorruptImageError,"ImproperImageHeader");
   (void) ReadBlobString(image,buffer);
-  count=(ssize_t) sscanf(buffer,"%lu %lu\n",&amp;columns,&amp;rows);
+  count=(ssize_t) sscanf(buffer,"%lu %lu\n",&columns,&rows);
   if (count &lt;= 0)
     ThrowReaderException(CorruptImageError,"ImproperImageHeader");
   do
@@ -862,33 +864,31 @@ static Image *ReadMGKImage(const ImageInfo *image_info,
     /*
       Initialize image structure.
     */
-    image-&gt;columns=columns;
-    image-&gt;rows=rows;
-    image-&gt;depth=8;
-    if ((image_info-&gt;ping != MagickFalse) &amp;&amp; (image_info-&gt;number_scenes != 0))
-      if (image-&gt;scene >= (image_info-&gt;scene+image_info-&gt;number_scenes-1))
+    image->columns=columns;
+    image->rows=rows;
+    image->depth=8;
+    if ((image_info->ping != MagickFalse) && (image_info->number_scenes != 0))
+      if (image->scene >= (image_info->scene+image_info->number_scenes-1))
         break;
     /*
       Convert MGK raster image to pixel packets.
     */
-    if (SetImageExtent(image,0,0) == MagickFalse)
-      {
-        InheritException(exception,&amp;image-&gt;exception);
-        return(DestroyImageList(image));
-      }
-    pixels=(unsigned char *) AcquireQuantumMemory((size_t) image-&gt;columns,3UL*sizeof(*pixels));
+    if (SetImageExtent(image,image->columns,image->rows,exception) == MagickFalse)
+      return(DestroyImageList(image));
+    pixels=(unsigned char *) AcquireQuantumMemory((size_t) image->columns,
+      3UL*sizeof(*pixels));
     if (pixels == (unsigned char *) NULL)
       ThrowReaderException(ResourceLimitError,"MemoryAllocationFailed");
-    for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
+    for (y=0; y &lt; (long) image->rows; y++)
     {
-      count=(ssize_t) ReadBlob(image,(size_t) (3*image-&gt;columns),pixels);
-      if (count != (ssize_t) (3*image-&gt;columns))
+      count=(ssize_t) ReadBlob(image,(size_t) (3*image->columns),pixels);
+      if (count != (ssize_t) (3*image->columns))
         ThrowReaderException(CorruptImageError,"UnableToReadImageData");
       p=pixels;
-      q=QueueAuthenticPixels(image,0,y,image-&gt;columns,1,exception);
+      q=QueueAuthenticPixels(image,0,y,image->columns,1,exception);
       if (q == (Quantum *) NULL)
         break;
-      for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
+      for (x=0; x &lt; (long) image->columns; x++)
       {
         SetPixelRed(image,ScaleCharToQuantum(*p++),q);
         SetPixelGreen(image,ScaleCharToQuantum(*p++),q);
@@ -897,46 +897,57 @@ static Image *ReadMGKImage(const ImageInfo *image_info,
       }
       if (SyncAuthenticPixels(image,exception) == MagickFalse)
         break;
-      if ((image-&gt;previous == (Image *) NULL) &amp;&amp;
-          (SetImageProgress(image,LoadImageTag,y,image&gt;>rows) == MagickFalse))
-        break;
+      if (image->previous == (Image *) NULL)
+        if ((image->progress_monitor != (MagickProgressMonitor) NULL) &&
+            (QuantumTick(y,image->rows) != MagickFalse))
+          {
+            status=image->progress_monitor(LoadImageTag,y,image->rows,
+              image->client_data);
+            if (status == MagickFalse)
+              break;
+          }
     }
     pixels=(unsigned char *) RelinquishMagickMemory(pixels);
     if (EOFBlob(image) != MagickFalse)
       {
-        ThrowFileException(exception,CorruptImageError,"UnexpectedEndOfFile",image-&gt;filename);
+        ThrowFileException(exception,CorruptImageError,"UnexpectedEndOfFile",
+          image->filename);
         break;
       }
     /*
       Proceed to next image.
     */
-    if (image_info-&gt;number_scenes != 0)
-      if (image-&gt;scene >= (image_info-&gt;scene+image_info-&gt;number_scenes-1))
+    if (image_info->number_scenes != 0)
+      if (image->scene >= (image_info->scene+image_info->number_scenes-1))
         break;
     *buffer='\0';
     (void) ReadBlobString(image,buffer);
-    count=(ssize_t) sscanf(buffer,"%lu %lu\n",&amp;columns,&amp;rows);
-    if (count != 0)
+    count=(ssize_t) sscanf(buffer,"%lu %lu\n",&columns,&rows);
+    if (count > 0)
       {
         /*
           Allocate next image structure.
         */
-        AcquireNextImage(image_info,image);
+        AcquireNextImage(image_info,image,exception);
         if (GetNextImageInList(image) == (Image *) NULL)
           {
             image=DestroyImageList(image);
             return((Image *) NULL);
           }
         image=SyncNextImageInList(image);
-        status=SetImageProgress(image,LoadImageTag,TellBlob(image),GetBlobSize(image));
-        if (status == MagickFalse)
-          break;
+        if (image->progress_monitor != (MagickProgressMonitor) NULL)
+          {
+            status=SetImageProgress(image,LoadImageTag,TellBlob(image),
+              GetBlobSize(image));
+            if (status == MagickFalse)
+              break;
+          }
       }
-  } while (count != 0);
+  } while (count > 0);
   (void) CloseBlob(image);
   return(GetFirstImageInList(image));
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -965,16 +976,14 @@ ModuleExport unsigned long RegisterMGKImage(void)
   MagickInfo
     *entry;
 
-  entry=SetMagickInfo("MGK");
-  entry-&gt;decoder=(DecodeImageHandler *) ReadMGKImage;
-  entry-&gt;encoder=(EncodeImageHandler *) WriteMGKImage;
-  entry-&gt;magick=(IsImageFormatHandler *) IsMGK;
-  entry-&gt;description=ConstantString("MGK");
-  entry-&gt;module=ConstantString("MGK");
+  entry=AcquireMagickInfo("MGK","MGK","MGK image");
+  entry->decoder=(DecodeImageHandler *) ReadMGKImage;
+  entry->encoder=(EncodeImageHandler *) WriteMGKImage;
+  entry->magick=(IsImageFormatHandler *) IsMGK;
   (void) RegisterMagickInfo(entry);
   return(MagickImageCoderSignature);
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -998,7 +1007,7 @@ ModuleExport void UnregisterMGKImage(void)
 {
   (void) UnregisterMagickInfo("MGK");
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1010,12 +1019,13 @@ ModuleExport void UnregisterMGKImage(void)
 %                                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  WriteMGKImage() writes an image to a file in red, green, and blue
-%  MGK rasterfile format.
+%  WriteMGKImage() writes an image to a file in red, green, and blue MGK
+%  rasterfile format.
 %
 %  The format of the WriteMGKImage method is:
 %
-%      MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
+%      MagickBooleanType WriteMGKImage(const ImageInfo *image_info,
+%        Image *image)
 %
 %  A description of each parameter follows.
 %
@@ -1023,11 +1033,17 @@ ModuleExport void UnregisterMGKImage(void)
 %
 %    o image:  The image.
 %
+%    o exception:  return any errors or warnings in this structure.
+%
 */
-static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
+static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
+  ExceptionInfo *exception)
 {
   char
     buffer[MaxTextExtent];
+
+  long
+    y;
 
   MagickBooleanType
     status;
@@ -1038,14 +1054,11 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
   register const Quantum
     *p;
 
-  register ssize_t
+  register long
     x;
 
   register unsigned char
     *q;
-
-  ssize_t
-    y;
 
   unsigned char
     *pixels;
@@ -1054,12 +1067,12 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
     Open output image file.
   */
   assert(image_info != (const ImageInfo *) NULL);
-  assert(image_info-&gt;signature == MagickSignature);
+  assert(image_info->signature == MagickCoreSignature);
   assert(image != (Image *) NULL);
-  assert(image-&gt;signature == MagickSignature);
-  if (image-&gt;debug != MagickFalse)
-    (void) LogMagickEvent(TraceEvent,GetMagickModule(),"%s",image-&gt;filename);
-  status=OpenBlob(image_info,image,WriteBinaryBlobMode,&amp;image-&gt;exception);
+  assert(image->signature == MagickCoreSignature);
+  if (image->debug != MagickFalse)
+    (void) LogMagickEvent(TraceEvent,GetMagickModule(),"%s",image->filename);
+  status=OpenBlob(image_info,image,WriteBinaryBlobMode,exception);
   if (status == MagickFalse)
     return(status);
   scene=0;
@@ -1068,9 +1081,9 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
     /*
       Allocate memory for pixels.
     */
-    if (image-&gt;colorspace != RGBColorspace)
-      (void) SetImageColorspace(image,RGBColorspace);
-    pixels=(unsigned char *) AcquireQuantumMemory((size_t) image-&gt;columns,
+    if (image->colorspace != RGBColorspace)
+      (void) SetImageColorspace(image,RGBColorspace,exception);
+    pixels=(unsigned char *) AcquireQuantumMemory((size_t) image->columns,
       3UL*sizeof(*pixels));
     if (pixels == (unsigned char *) NULL)
       ThrowWriterException(ResourceLimitError,"MemoryAllocationFailed");
@@ -1078,26 +1091,32 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
       Initialize raster file header.
     */
     (void) WriteBlobString(image,"id=mgk\n");
-    (void) FormatLocaleString(buffer,MaxTextExtent,"%lu %lu\n",
-      image-&gt;columns,image-&gt;rows);
+    (void) FormatLocaleString(buffer,MaxTextExtent,"%lu %lu\n",image->columns,
+       image->rows);
     (void) WriteBlobString(image,buffer);
-    for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
+    for (y=0; y &lt; (long) image->rows; y++)
     {
-      p=GetVirtualPixels(image,0,y,image-&gt;columns,1,&amp;image-&gt;exception);
+      p=GetVirtualPixels(image,0,y,image->columns,1,exception);
       if (p == (const Quantum *) NULL)
         break;
       q=pixels;
-      for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
+      for (x=0; x &lt; (long) image->columns; x++)
       {
-        *q++=ScaleQuantumToChar(GetPixelRed(p));
-        *q++=ScaleQuantumToChar(GetPixelGreen(p));
-        *q++=ScaleQuantumToChar(GetPixelBlue(p));
+        *q++=ScaleQuantumToChar(GetPixelRed(image,p));
+        *q++=ScaleQuantumToChar(GetPixelGreen(image,p));
+        *q++=ScaleQuantumToChar(GetPixelBlue(image,p));
         p+=GetPixelChannels(image);
       }
       (void) WriteBlob(image,(size_t) (q-pixels),pixels);
-      if ((image-&gt;previous == (Image *) NULL) &amp;&amp;
-          (SetImageProgress(image,SaveImageTag,y,image-&gt;rows) == MagickFalse))
-        break;
+      if (image->previous == (Image *) NULL)
+        if ((image->progress_monitor != (MagickProgressMonitor) NULL) &&
+            (QuantumTick(y,image->rows) != MagickFalse))
+          {
+            status=image->progress_monitor(SaveImageTag,y,image->rows,
+              image->client_data);
+            if (status == MagickFalse)
+              break;
+          }
     }
     pixels=(unsigned char *) RelinquishMagickMemory(pixels);
     if (GetNextImageInList(image) == (Image *) NULL)
@@ -1108,7 +1127,7 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image)
     if (status == MagickFalse)
       break;
     scene++;
-  } while (image_info-&gt;adjoin != MagickFalse);
+  } while (image_info->adjoin != MagickFalse);
   (void) CloseBlob(image);
   return(MagickTrue);
 }</code></pre>
@@ -1127,14 +1146,15 @@ display logo.mgk
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
 
-<pre class="pre-scrollable"><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;time.h&gt;
-#include &lt;assert.h&gt;
-#include &lt;math.h&gt;
-#include "magick/MagickCore.h"
-
+<pre class="pre-scrollable"><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+#include &lt;time.h>
+#include &lt;assert.h>
+#include &lt;math.h>
+#include &lt;MagickCore/MagickCore.h>
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1147,7 +1167,7 @@ display logo.mgk
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  analyzeImage() computes the brightness and saturation mean,  standard
-%  deviation, kurtosis and skewness and stores these values as attributes
+%  deviation, kurtosis and skewness and stores these values as attributes 
 %  of the image.
 %
 %  The format of the analyzeImage method is:
@@ -1168,8 +1188,51 @@ display logo.mgk
 %    o exception: return any errors or warnings in this structure.
 %
 */
-ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv,
-  ExceptionInfo *exception)
+
+static void ConvertRGBToHSB(const double red,const double green,
+  const double blue,double *hue,double *saturation,double *brightness)
+{
+  double
+    delta,
+    max,
+    min;
+
+  /*
+    Convert RGB to HSB colorspace.
+  */
+  assert(hue != (double *) NULL);
+  assert(saturation != (double *) NULL);
+  assert(brightness != (double *) NULL);
+  *hue=0.0;
+  *saturation=0.0;
+  *brightness=0.0;
+  min=red &lt; green ? red : green;
+  if (blue &lt; min)
+    min=blue;
+  max=red > green ? red : green;
+  if (blue > max)
+    max=blue;
+  if (fabs(max) &lt; MagickEpsilon)
+    return;
+  delta=max-min;
+  *saturation=delta/max;
+  *brightness=QuantumScale*max;
+  if (fabs(delta) &lt; MagickEpsilon)
+    return;
+  if (fabs(red-max) &lt; MagickEpsilon)
+    *hue=(green-blue)/delta;
+  else
+    if (fabs(green-max) &lt; MagickEpsilon)
+      *hue=2.0+(blue-red)/delta;
+    else
+      *hue=4.0+(red-green)/delta;
+  *hue/=6.0;
+  if (*hue &lt; 0.0)
+    *hue+=1.0;
+}
+
+ModuleExport size_t analyzeImage(Image **images,const int argc,
+  const char **argv,ExceptionInfo *exception)
 {
   char
     text[MaxTextExtent];
@@ -1201,7 +1264,7 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
 
   assert(images != (Image **) NULL);
   assert(*images != (Image *) NULL);
-  assert((*images)-&gt;signature == MagickSignature);
+  assert((*images)->signature == MagickCoreSignature);
   (void) argc;
   (void) argv;
   image=(*images);
@@ -1210,11 +1273,11 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
     CacheView
       *image_view;
 
+    long
+      y;
+
     MagickBooleanType
       status;
-
-    ssize_t
-      y;
 
     brightness_sum_x=0.0;
     brightness_sum_x2=0.0;
@@ -1238,25 +1301,26 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
 #if defined(MAGICKCORE_OPENMP_SUPPORT)
     #pragma omp parallel for schedule(dynamic,4) shared(status)
 #endif
-    for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
+    for (y=0; y &lt; (long) image->rows; y++)
     {
       register const Quantum
         *p;
 
-      register ssize_t
+      register long
         x;
 
       if (status == MagickFalse)
         continue;
-      p=GetCacheViewVirtualPixels(image_view,0,y,image-&gt;columns,1,exception);
+      p=GetCacheViewVirtualPixels(image_view,0,y,image->columns,1,exception);
       if (p == (const Quantum *) NULL)
         {
           status=MagickFalse;
           continue;
         }
-      for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
+      for (x=0; x &lt; (long) image->columns; x++)
       {
-        ConvertRGBToHSB(GetPixelRed(p),GetPixelGreen(p),GetPixelBue(p),&amp;hue,&amp;saturation,&amp;brightness);
+        ConvertRGBToHSB(GetPixelRed(image,p),GetPixelGreen(image,p),
+          GetPixelBlue(image,p),&hue,&saturation,&brightness);
         brightness*=QuantumRange;
         brightness_sum_x+=brightness;
         brightness_sum_x2+=brightness*brightness;
@@ -1276,12 +1340,13 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
       break;
     brightness_mean=brightness_sum_x/area;
     (void) FormatLocaleString(text,MaxTextExtent,"%g",brightness_mean);
-    (void) SetImageProperty(image,"filter:brightness:mean",text);
+    (void) SetImageProperty(image,"filter:brightness:mean",text,exception);
     brightness_standard_deviation=sqrt(brightness_sum_x2/area-(brightness_sum_x/
       area*brightness_sum_x/area));
     (void) FormatLocaleString(text,MaxTextExtent,"%g",
       brightness_standard_deviation);
-    (void) SetImageProperty(image,"filter:brightness:standard-deviation",text);
+    (void) SetImageProperty(image,"filter:brightness:standard-deviation",text,
+      exception);
     if (brightness_standard_deviation != 0)
       brightness_kurtosis=(brightness_sum_x4/area-4.0*brightness_mean*
         brightness_sum_x3/area+6.0*brightness_mean*brightness_mean*
@@ -1290,22 +1355,24 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
         brightness_standard_deviation*brightness_standard_deviation*
         brightness_standard_deviation)-3.0;
     (void) FormatLocaleString(text,MaxTextExtent,"%g",brightness_kurtosis);
-    (void) SetImageProperty(image,"filter:brightness:kurtosis",text);
+    (void) SetImageProperty(image,"filter:brightness:kurtosis",text,
+      exception);
     if (brightness_standard_deviation != 0)
       brightness_skewness=(brightness_sum_x3/area-3.0*brightness_mean*
         brightness_sum_x2/area+2.0*brightness_mean*brightness_mean*
         brightness_mean)/(brightness_standard_deviation*
         brightness_standard_deviation*brightness_standard_deviation);
     (void) FormatLocaleString(text,MaxTextExtent,"%g",brightness_skewness);
-    (void) SetImageProperty(image,"filter:brightness:skewness",text);
+    (void) SetImageProperty(image,"filter:brightness:skewness",text,exception);
     saturation_mean=saturation_sum_x/area;
     (void) FormatLocaleString(text,MaxTextExtent,"%g",saturation_mean);
-    (void) SetImageProperty(image,"filter:saturation:mean",text);
+    (void) SetImageProperty(image,"filter:saturation:mean",text,exception);
     saturation_standard_deviation=sqrt(saturation_sum_x2/area-(saturation_sum_x/
       area*saturation_sum_x/area));
     (void) FormatLocaleString(text,MaxTextExtent,"%g",
       saturation_standard_deviation);
-    (void) SetImageProperty(image,"filter:saturation:standard-deviation",text);
+    (void) SetImageProperty(image,"filter:saturation:standard-deviation",text,
+      exception);
     if (saturation_standard_deviation != 0)
       saturation_kurtosis=(saturation_sum_x4/area-4.0*saturation_mean*
         saturation_sum_x3/area+6.0*saturation_mean*saturation_mean*
@@ -1314,17 +1381,18 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,const char **argv
         saturation_standard_deviation*saturation_standard_deviation*
         saturation_standard_deviation)-3.0;
     (void) FormatLocaleString(text,MaxTextExtent,"%g",saturation_kurtosis);
-    (void) SetImageProperty(image,"filter:saturation:kurtosis",text);
+    (void) SetImageProperty(image,"filter:saturation:kurtosis",text,exception);
     if (saturation_standard_deviation != 0)
       saturation_skewness=(saturation_sum_x3/area-3.0*saturation_mean*
         saturation_sum_x2/area+2.0*saturation_mean*saturation_mean*
         saturation_mean)/(saturation_standard_deviation*
         saturation_standard_deviation*saturation_standard_deviation);
     (void) FormatLocaleString(text,MaxTextExtent,"%g",saturation_skewness);
-    (void) SetImageProperty(image,"filter:saturation:skewness",text);
+    (void) SetImageProperty(image,"filter:saturation:skewness",text,exception);
   }
   return(MagickImageFilterSignature);
-}</code></pre>
+}
+</code></pre>
 
 <p>To invoke the custom filter from the command line, use this command:</p>
 
