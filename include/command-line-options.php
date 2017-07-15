@@ -4410,10 +4410,6 @@ a power law, namely, pow(pixel,1/gamma) or pixel^(1/gamma), where pixel is the
 normalized or 0 to 1 color value. For example, using a value of gamma=2 is the
 same as taking the square root of the image.</p>
 
-<p>You can apply separate gamma values to the red, green, and blue channels of
-the image with a gamma value list delimited with commas (e.g.,
-<code>1.7,2.3,1.2</code>).</p>
-
 <p>Use <a href="#gamma">+gamma <var>value</var></a> to set the
 image gamma level without actually adjusting the image pixels. This option
 is useful if the image is of a known gamma but not set as an image attribute
