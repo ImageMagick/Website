@@ -711,8 +711,7 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/mgk.c">custom coder</a>.  It reads and writes images in the MGK image format which is simply an ID followed by the image width and height followed by the RGB pixel values.</p>
 
-<pre class="pre-scrollable"><code>
-#include &lt;MagickCore/studio.h>
+<pre class="pre-scrollable"><code>#include &lt;MagickCore/studio.h>
 #include &lt;MagickCore/blob.h>
 #include &lt;MagickCore/cache.h>
 #include &lt;MagickCore/colorspace.h>
@@ -1146,8 +1145,7 @@ display logo.mgk
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
 
-<pre class="pre-scrollable"><code>
-#include &lt;stdio.h>
+<pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
