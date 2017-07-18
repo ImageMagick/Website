@@ -713,6 +713,13 @@ convert \( -size 15x15 canvas:black canvas:white -append \) \
   </tr>
 
   <tr>
+    <td>PES</td>
+    <td>R</td>
+    <td>Embrid Embroidery Format</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>PFA</td>
     <td>R</td>
     <td>Postscript Type 1 font (ASCII)</td>
