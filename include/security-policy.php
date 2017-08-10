@@ -45,7 +45,7 @@ convert: no images defined `wizard.jpg'</code></pre>
 &lt;policy domain="cache" name="memory-map" value="anonymous"/>
 &lt;policy domain="system" name="shred" value="1"/></code></pre>
 
-<p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the request is memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
+<p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
 <pre><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
