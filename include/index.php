@@ -12,7 +12,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <p>The current release is ImageMagick <a href="https://www.imagemagick.org/script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="https://www.imagemagick.org/script/download.php#unix">Linux</a>, <a href="https://www.imagemagick.org/script/download.php#windows">Windows</a>, <a href="https://www.imagemagick.org/script/download.php#macosx">Mac Os X</a>, <a href="https://www.imagemagick.org/script/download.php#iOS">iOS</a>, Android OS, and others.</p>
 
-<p>The authoritative ImageMagick web site is <a href="https://www.imagemagick.org/">https://www.imagemagick.org</a>. The authoritative source code repository is <a href="http://git.imagemagick.org/repos/ImageMagick">http://git.imagemagick.org/repos/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a> and <a href="https://github.com/ImageMagick/ImageMagick">GitHub</a>.</p>
+<p>The authoritative ImageMagick web site is <a href="https://www.imagemagick.org/">https://www.imagemagick.org</a>. The authoritative source code repository is <a href="https://github.com/ImageMagick/ImageMagick">https://github.com/ImageMagick/ImageMagick</a>.  We maintain a source code mirror at <a href="https://gitlab.com/ImageMagick/ImageMagick">GitLab</a>.</p>
 
 <p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.</p>
 
