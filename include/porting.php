@@ -233,7 +233,7 @@ Rec709Luminance</code></pre>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
 <pre>
-convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +mask -resize 1000x1000 -strip image.png
+convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
 </pre>
 
 <h2 class="magick-post-title"><a id="core"></a>MagickCore API</h2>
