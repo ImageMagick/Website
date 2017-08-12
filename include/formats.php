@@ -228,7 +228,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/DirectDraw_Surface">DDS</a></td>
     <td>RW</td>
     <td>Microsoft Direct Draw Surface</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the compression (e.g. <code>-define dds:compression={dxt1, dxt5, none}</code>). Other defines include <code>dds:cluster-fit={true,false}</code>, <code>dds:weight-by-alpha={true,false}</code>, and use <code>dds:mipmaps</code> to set the number of mipmaps.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the compression (e.g. <code>-define dds:compression={dxt1, dxt5, none}</code>). Other defines include <code>dds:cluster-fit={true,false}</code>, <code>dds:weight-by-alpha={true,false}</code>, <code>dds:fast-mipmaps={true,false}</code>, and use <code>dds:mipmaps</code> to set the number of mipmaps (use <code>fromlist</code> to use the image list).</td>
 
   </tr>
 
