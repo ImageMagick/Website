@@ -3852,6 +3852,7 @@ operations such as <a href="#resize">-resize</a> and <a href="#distort"
 Point       Hermite       Cubic
 Box         Gaussian      Catrom
 Triangle    Quadratic     Mitchell
+Spline16    Spline36      Spline64
 </code></pre>
 
 <p>The <code>Bessel</code> and <code>Sinc</code> filter is also provided (as well
@@ -4007,7 +4008,7 @@ convert image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
-  -resize 150%   image.jpg"
+  -resize 150% image.jpg"
 </code></pre>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
@@ -4016,7 +4017,7 @@ convert image.png \
 convert image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
-  -resize 150%   image.jpg"
+  -resize 150% image.jpg"
 </code></pre>
 
 <p>To extract the data for a raw windowing function, combine it with
@@ -4028,7 +4029,7 @@ convert null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
   -define filter:verbose=1 \
-  -resize 2 null:  > window_welch.dat
+  -resize 2 null: > window_welch.dat
 gnuplot
   set grid
   plot \"window_welch.dat\" with lines
