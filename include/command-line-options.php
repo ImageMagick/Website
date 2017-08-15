@@ -3852,9 +3852,10 @@ operations such as <a href="#resize">-resize</a> and <a href="#distort"
 Point       Hermite       Cubic
 Box         Gaussian      Catrom
 Triangle    Quadratic     Mitchell
+CubicSpline
 </code></pre>
 
-<p>Use <code>-define filter:lobes=<em>n</em></code> with the <code>spline-lobes</code> filter where <em>n</em> is the number of lobes.</p>
+<p>Use <code>-define filter:lobes={2,3,4}</code> to specify the number of lobes in the <code>CubicSpline</code> filter.</p>
 
 <p>The <code>Bessel</code> and <code>Sinc</code> filter is also provided (as well
 as a faster <code>SincFast</code> equivalent form).  However these filters are
