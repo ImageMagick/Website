@@ -5759,9 +5759,13 @@ size of the <a href="#fuzz" >-fuzz</a> factor needed to make all pixels
 'similar', while '<code>MAE</code>' determines the factor needed
 for about half the pixels to be similar. </p>
 
-<p>The '<code>MEPP</code>' metric returns three different metrics
+<p>The <code>MEPP</code> metric returns three different metrics
 ('<code>MAE</code>', '<code>MAE</code>' normalized, and '<code>PAE</code>'
 normalized) from a single comparison run. </p>
+
+<p>The <code>SSIM</code> and <code>DSSUM</code> metrics respect these defines:
+<code>-define compare:radius</code>, <code>-define compare:sigma</code>,
+<code>-define compare:k1</code>, and <code>-define compare:k2</code>.</p>
 
 <p>To print a complete list of metrics, use the <a href="#list">-list
 metric</a> option.</p>
