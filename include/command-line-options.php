@@ -5763,9 +5763,9 @@ for about half the pixels to be similar. </p>
 ('<code>MAE</code>', '<code>MAE</code>' normalized, and '<code>PAE</code>'
 normalized) from a single comparison run. </p>
 
-<p>The <code>SSIM</code> and <code>DSSUM</code> metrics respect these defines:
-<code>-define compare:radius</code>, <code>-define compare:sigma</code>,
-<code>-define compare:k1</code>, and <code>-define compare:k2</code>.</p>
+<p>The <code>SSIM</code> and <code>DSSIM</code> metrics respect these defines:
+<code>-define compare:ssim-radius</code>, <code>-define compare:ssim-sigma</code>,
+<code>-define compare:ssim-k1</code>, and <code>-define compare:ssim-k2</code>.</p>
 
 <p>To print a complete list of metrics, use the <a href="#list">-list
 metric</a> option.</p>
