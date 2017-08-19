@@ -330,7 +330,7 @@ and <a href="#decipher">-decipher</a>. </p>
 
 <p>This calculates the mean values of an image, then applies a calculated  <a
 href="#gamma" >-gamma</a> adjustment so that is the mean color exists in the
-image it will get a have a value of 50%. </p>
+image will get a value of 50%. </p>
 
 <p>This means that any solid 'gray' image becomes 50% gray. </p>
 
