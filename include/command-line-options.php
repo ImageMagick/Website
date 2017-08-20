@@ -329,7 +329,7 @@ and <a href="#decipher">-decipher</a>. </p>
 <p class="magick-description">Automagically adjust gamma level of image.</p>
 
 <p>This calculates the mean values of an image, then applies a calculated  <a
-href="#gamma" >-gamma</a> adjustment so that is the mean color exists in the
+href="#gamma" >-gamma</a> adjustment so that the mean color in the
 image will get a value of 50%. </p>
 
 <p>This means that any solid 'gray' image becomes 50% gray. </p>
