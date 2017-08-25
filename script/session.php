@@ -33,7 +33,9 @@
   $_SESSION['RelativePath']=$path['dirname'];
   if (strlen($_SESSION['RelativePath']) == 1)
     $_SESSION['RelativePath']='';
-  if ($_SERVER['SERVER_NAME'] == 'www.imagemagick.com')
+  if (($_SERVER['SERVER_NAME'] == 'www.imagemagick.com') ||
+      ($_SERVER['SERVER_NAME'] == 'imagemagick.com') ||
+      ($_SERVER['SERVER_NAME'] == 'imagemagick.org'))
     {
       header("Location: https://www.imagemagick.org/index.php");
       exit();
