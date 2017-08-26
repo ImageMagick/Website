@@ -5739,7 +5739,7 @@ name. </p>
 
 <dl class="row">
 <dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz effected)</dd>
-<dt class="col-md-4">DDSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
+<dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
 <dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
 <dt class="col-md-4">MAE</dt><dd class="col-md-8">   mean absolute error (normalized), average channel error distance</dd>
 <dt class="col-md-4">MEPP</dt><dd class="col-md-8">  mean error per pixel (normalized mean error, normalized peak error)</dd>
