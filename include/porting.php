@@ -253,8 +253,20 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <h2 class="magick-post-title"><a id="core"></a>MagickWand API</h2>
 <p>Here are a list of changes to the MagickWand API:</p>
 <ul>
+<li>Almost all image processing algorithms are now channel aware.</li>
 <li>The DrawMatte() method is now called DrawAlpha().</li>
 <li>The MagickSetImageBias() and MagickSetImageClipMask() methods are no longer supported.</li>
+</ul>
+<h2 class="magick-post-title"><a id="core"></a>Magick++ API</h2>
+<p>Here are a list of changes to the Magick++ API:</p>
+<ul>
+<li>Almost all image processing algorithms are now channel aware.</li>
+<li>Use this construct, for example, to avoid operating on the alpha channel:
+<pre><code>
+Magick::ChannelType channels = (Magick::ChannelType)(Magick::CompositeChannels ^ Magick::AlphaChannel);
+image.negateChannel(channels);
+</code></pre>
+</li>
 </ul>
 <h2 class="magick-post-title"><a id="headers"></a>Header Files</h2>
 <p>Prior versions of ImageMagick (4-6) reference the ImageMagick header files as <code>magick/</code> and <code>wand/</code>.  ImageMagick 7 instead uses <code>MagickCore/</code> and <code>MagickWand/</code> respectively.  For example,</p>
@@ -454,8 +466,7 @@ scripts.</p>
 <dt class="col-md-4">-draw</dt>
 <dd class="col-md-8">The <code>matte</code> primitive is now <code>alpha</code> (e.g. <code>-draw 'alpha 0,0 floodfill'</code>).</dd>
 <dt class="col-md-4">-negate</dt>
-<dd class="col-md-8">currently negates all channels, including alpha if present.  As such you
-    may need to use the -channel option to prevent alpha negation.  </dd>
+<dd class="col-md-8">currently negates all channels, including alpha if present.  As such you may need to use the -channel option to prevent alpha negation (e.g. -channel RGB -negate).  </dd>
 <dt class="col-md-4">-preview</dt>
 <dd class="col-md-8">this option is now an image operator.  The PREVIEW image format has been removed.</dd>
 </dl>
