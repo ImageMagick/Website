@@ -348,7 +348,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
 <dt class="col-md-4">-channel</dt>
-<dd class="col-md-8">the default is to update the RGBA channels, previously, in IMv6, the default was RGB.  If you get results that differ from IMv6, you may need to specify <code>-channel RGB</code> on your command line (e.g. -level-colors option).</dd>
+<dd class="col-md-8">the default is to update the RGBA channels, previously, in IMv6, the default was RGB.  If you get results that differ from IMv6, you may need to specify <code>-channel RGB</code> on your command line (e.g. -channel RGB -negate).</dd>
 <dt class="col-md-4">+combine</dt>
 <dd class="col-md-8">This option now requires an argument, the image colorspace (e.g. +combine sRGB).</dd>
 <dt class="col-md-4">-gamma</dt>
