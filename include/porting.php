@@ -263,8 +263,7 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <li>Almost all image processing algorithms are now channel aware.</li>
 <li>Use this construct, for example, to avoid operating on the alpha channel:
 <pre><code>
-Magick::ChannelType channels = (Magick::ChannelType)(Magick::CompositeChannels ^ Magick::AlphaChannel);
-image.negateChannel(channels);
+image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));
 </code></pre>
 </li>
 </ul>
