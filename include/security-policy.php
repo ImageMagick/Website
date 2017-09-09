@@ -29,10 +29,10 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<pre><code>$ convert https://www.imagemagick.org/image/wizard.png wizard.jpg
+<pre>-> convert https://www.imagemagick.org/image/wizard.png wizard.jpg
 convert: not authorized `HTTPS'
 convert: unable to open file: No such file or directory
-convert: no images defined `wizard.jpg'</code></pre>
+convert: no images defined `wizard.jpg'</pre>
 
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
@@ -50,7 +50,7 @@ convert: no images defined `wizard.jpg'</code></pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
 
-<pre class="pre-scrollable"><code>-> identify -list policy
+<pre class="pre-scrollable">-> identify -list policy
 Path: ImageMagick/policy.xml
   Policy: Resource
     name: time
@@ -94,7 +94,7 @@ Path: ImageMagick/policy.xml
 
 Path: [built-in]
   Policy: Undefined
-    rights: None</code></pre>
+    rights: None</pre>
 <p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
