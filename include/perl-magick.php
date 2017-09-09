@@ -337,7 +337,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AdaptiveBlur</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>adaptively blur the image with a Gaussian operator of the given radius and standard deviation (sigma).  Decrease the effect near edges.</td>
   </tr>
 
@@ -349,7 +349,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AdaptiveSharpen</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>adaptively sharpen the image with a Gaussian operator of the given radius and standard deviation (sigma).  Increase the effect near edges.</td>
   </tr>
 
@@ -361,7 +361,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AddNoise</td>
-    <td>noise=&gt;{Uniform, Gaussian, Multiplicative, Impulse, Laplacian, Poisson}, attenuate=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>noise=&gt;{Uniform, Gaussian, Multiplicative, Impulse, Laplacian, Poisson}, attenuate=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>add noise to an image</td>
   </tr>
 
@@ -385,13 +385,13 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AutoGamma</td>
-    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>automagically adjust gamma level of image</td>
   </tr>
 
   <tr>
     <td>AutoLevel</td>
-    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>automagically adjust color levels of image</td>
   </tr>
 
@@ -409,7 +409,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>BlackThreshold</td>
-    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>force all pixels below the threshold intensity into black</td>
   </tr>
 
@@ -421,13 +421,13 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Blur</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>reduce image noise and reduce detail levels with a Gaussian operator of the given radius and standard deviation (sigma).</td>
   </tr>
 
   <tr>
     <td>Border</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyOpacity, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with a border of color</td>
   </tr>
 
@@ -523,7 +523,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Composite</td>
-    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyOpacity, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}</td>
+    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}</td>
     <td>composite one image onto another.  Use the rotate parameter in concert with the tile parameter.</td>
   </tr>
 
@@ -547,7 +547,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Convolve</td>
-    <td>coefficients=&gt;<i>array of float values</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, bias=&gt;<i>double</i></td>
+    <td>coefficients=&gt;<i>array of float values</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, bias=&gt;<i>double</i></td>
     <td>apply a convolution kernel to the image. Given a kernel <i>order</i> , you would supply <i>order*order</i> float values (e.g. 3x3 implies 9 values).</td>
   </tr>
 
@@ -637,7 +637,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Equalize</td>
-    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}<br /></td>
+    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}<br /></td>
     <td>perform histogram equalization to the image</td>
   </tr>
 
@@ -649,13 +649,13 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Evaluate</td>
-    <td>value=&gt;<i>double</i>, operator=&gt;<i>{Add, And, Divide, LeftShift, Max, Min, Multiply, Or, Rightshift, RMS, Subtract, Xor}</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow} </td>
+    <td>value=&gt;<i>double</i>, operator=&gt;<i>{Add, And, Divide, LeftShift, Max, Min, Multiply, Or, Rightshift, RMS, Subtract, Xor}</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow} </td>
     <td>apply an arithmetic, relational, or logical expression to the image</td>
   </tr>
 
   <tr>
     <td>Filter</td>
-    <td>kernel=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, bias=&gt;<i>double</i></td>
+    <td>kernel=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, bias=&gt;<i>double</i></td>
     <td>apply a convolution kernel to the image.</td>
   </tr>
 
@@ -673,7 +673,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>FloodfillPaint</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
     <td>changes the color value of any pixel that matches the color of the target pixel and is a neighbor. If you specify a border color, the color value is changed for any neighbor pixel that is not that color.</td>
   </tr>
 
@@ -685,7 +685,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Frame</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyOpacity, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with an ornamental border</td>
   </tr>
 
@@ -697,19 +697,19 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Gamma</td>
-    <td>gamma=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>gamma=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>gamma correct the image</td>
   </tr>
 
   <tr>
     <td>GaussianBlur</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>reduce image noise and reduce detail levels with a Gaussian operator of the given radius and standard deviation (sigma).</td>
   </tr>
 
   <tr>
     <td>GetPixel</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, normalize=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i></td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, normalize=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i></td>
     <td>get a single pixel. By default normalized pixel values are returned.</td>
   </tr>
 
@@ -757,7 +757,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Kuwahara</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>edge preserving noise reduction filter</td>
   </tr>
 
@@ -769,7 +769,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Layers</td>
-    <td>method=&gt;{coalesce, compare-any, compare-clear, compare-over, composite, dispose, flatten, merge, mosaic, optimize, optimize-image, optimize-plus, optimize-trans, remove-dups, remove-zero},  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyOpacity, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, LinearLight, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, dither=&gt;{true, false}</td>
+    <td>method=&gt;{coalesce, compare-any, compare-clear, compare-over, composite, dispose, flatten, merge, mosaic, optimize, optimize-image, optimize-plus, optimize-trans, remove-dups, remove-zero},  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, LinearLight, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, dither=&gt;{true, false}</td>
     <td>compare each image the GIF disposed forms of the previous image in the sequence.  From this, attempt to select the smallest cropped image to replace each frame, while preserving the results of the animation.</td>
   </tr>
 
@@ -823,7 +823,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>MedianFilter</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>replace each pixel with the median intensity pixel of a neighborhood.</td>
   </tr>
 
@@ -835,7 +835,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Mode</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>make each pixel the <var>predominant color</var> of the neighborhood.</td>
   </tr>
 
@@ -847,25 +847,25 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Morphology</td>
-    <td>kernel=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, iterations=&gt;<i>integer</i></td>
+    <td>kernel=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, iterations=&gt;<i>integer</i></td>
     <td>apply a morphology method to the image.</td>
   </tr>
 
   <tr>
     <td>MotionBlur</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, angle=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, angle=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>reduce image noise and reduce detail levels with a Gaussian operator of the given radius and standard deviation (sigma) at the given angle to simulate the effect of motion</td>
   </tr>
 
   <tr>
     <td>Negate</td>
-    <td>gray=&gt;{True, False}, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>gray=&gt;{True, False}, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>replace each pixel with its complementary color (white becomes black, yellow becomes blue, etc.)</td>
   </tr>
 
   <tr>
     <td>Normalize</td>
-    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}<br /></td>
+    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}<br /></td>
     <td>transform image to span the full range of color values</td>
   </tr>
 
@@ -878,13 +878,13 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   <tr>
     <td>Opaque</td>
     <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,
-fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
+fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
     <td>change this color to the fill color within the image</td>
   </tr>
 
   <tr>
     <td>OrderedDither</td>
-    <td>threshold=&gt;{threshold, checks, o2x2, o3x3, o4x4, o8x8, h4x4a, h6x6a, h8x8a, h4x4o, h6x6o, h8x8o, h16x16o, hlines6x4}, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;{threshold, checks, o2x2, o3x3, o4x4, o8x8, h4x4a, h6x6a, h8x8a, h4x4o, h6x6o, h8x8o, h16x16o, hlines6x4}, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>order dither image</td>
   </tr>
 
@@ -926,7 +926,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>ReduceNoise</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>reduce noise in the image with a noise peak elimination filter</td>
   </tr>
 
@@ -962,7 +962,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>RotationalBlur</td>
-    <td>geometry=&gt;<i>geometry</i>, angle=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, angle=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>radial blur the image.</td>
   </tr>
 
@@ -986,7 +986,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>SelectiveBlur</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, threshold=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, threshold=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>selectively blur pixels within a contrast threshold.</td>
   </tr>
   <tr>
@@ -1003,7 +1003,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>SetPixel</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, color=&gt;<i>array of float values</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, color=&gt;<i>array of float values</i></td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, color=&gt;<i>array of float values</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, color=&gt;<i>array of float values</i></td>
     <td>set a single pixel.  By default normalized pixel values are expected.</td>
   </tr>
 
@@ -1015,7 +1015,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Sharpen</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, bias=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>sharpen the image with a Gaussian operator of the given radius and standard deviation (sigma).</td>
   </tr>
 
@@ -1051,7 +1051,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Solarize</td>
-    <td>geometry=&gt;<i>string</i>, threshold=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>geometry=&gt;<i>string</i>, threshold=&gt;<i>double</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>negate all pixels above the threshold level</td>
   </tr>
 
@@ -1075,7 +1075,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Statistic</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}, type=&gt;{Median, Mode, Mean, Maximum, Minimum, ReduceNoise, RMS}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, type=&gt;{Median, Mode, Mean, Maximum, Minimum, ReduceNoise, RMS}</td>
     <td>replace each pixel with corresponding statistic from the neighborhood.</td>
   </tr>
   <tr>
@@ -1116,7 +1116,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Threshold</td>
-    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>threshold the image</td>
   </tr>
 
@@ -1176,7 +1176,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>WhiteThreshold</td>
-    <td>threshold=&gt;<i>string</i>, , channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;<i>string</i>, , channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>force all pixels above the threshold intensity into white</td>
   </tr>
 </tbody>
