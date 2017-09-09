@@ -114,14 +114,15 @@ Path: [built-in]
 
 <h2 class="magick-post-title"><a id="other"></a>Other Security Considerations</h2>
 
-<p>If you spot a security flaw in ImageMagick, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.  Alternatively, post your concern to <a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.</p>
+<p>If you spot a security flaw in ImageMagick, post your concern to
+<a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.  Alternatively, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.</p>
 
 <p>In addition to the security policy, you can make ImageMagick safer by ...</p>
 <ul>
-<li>keeping ImageMagick up-to-date.  The latest releases have fixes for any security flaws we discovered in the past.</li>
-<li>sanitizing any filenames or command line options you pass to ImageMagick.</li>
-<li>running ImageMagick in a sanitized software container such as Docker.</li>
-<li>running ImageMagick as the least-privileged user (e.g. 'nobody').</li>
+<li>keeping ImageMagick up-to-date.  The latest releases have fixes for any security flaws we discovered in the past;</li>
+<li>sanitizing any filenames or command line options you pass to ImageMagick;</li>
+<li>running ImageMagick in a sanitized software container such as Docker;</li>
+<li>running ImageMagick as the least-privileged user (e.g. 'nobody');</li>
 <li>explicitly setting the image file type.  For example, use the filename <code>png:image.png</code> rather than <code>image.png</code>.  Without an explicit image type in the filename, ImageMagick guesses the image type.</li>
 </ul>
 
