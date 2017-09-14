@@ -410,6 +410,7 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 <dt class="col-md-4">Kapur</dt><dd class="col-md-8">maximum entropy thresholding.</dd>
 <dt class="col-md-4">OTSU</dt><dd class="col-md-8">cluster-based image thresholding.</dd>
 <dt class="col-md-4">Triangle</dt><dd class="col-md-8">a geometric thresholding method.</dd>
+</dl>
 
 <p>The computed threshold is returned as the <kbd>auto-threshold:threshold</kbd> image property.</p>
 
