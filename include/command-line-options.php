@@ -7217,7 +7217,7 @@ exposing a photographic film to light during the development process.</p>
     <dt class="col-md-4">voronoi</dt>
     <dd class="col-md-8">Simply map each pixel to the to nearest color point
         given. The result are polygonal 'cells' of solid color. </dd>
-    <dt class="col-md-4">manhatten</dt>
+    <dt class="col-md-4">manhattan</dt>
     <dd class="col-md-8">Like voronoi, but resulting polygonal 'cells' are mapped to a fixed coordinate system.</dd>
     <dt class="col-md-4">shepards</dt>
     <dd class="col-md-8">Colors points biased on the ratio of inverse distance
