@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><?php options("adaptive-blur", "adaptive-resize", "adaptive-sharpen", "adjoin", "affine", "alpha", "annotate", "antialias", "append", "attenuate", "authenticate", "auto-gamma", "auto-level", "auto-orient", "auto-threshold", "backdrop", "background", "bench", "bias", "black-point-compensation", "black-threshold", "blend", "blue-primary", "blue-shift", "blur", "border", "bordercolor", "borderwidth", "brightness-contrast", "cache", "canny", "caption", "cdl", "channel", "charcoal", "channel-fx", "chop", "clamp", "clip", "clip-mask", "clip-path", "clone", "clut", "coalesce", "colorize", "colormap", "color-matrix", "colors", "colorspace", "combine", "comment", "compare", "complex", "compose", "composite", "compress", "connected-components", "contrast", "contrast-stretch", "convolve", "copy", "crop", "cycle", "debug", "decipher", "deconstruct", "define", "delay", "delete", "density", "depth", "descend", "deskew", "despeckle", "direction", "displace", "display", "dispose", "dissimilarity-threshold", "dissolve", "distort", "distribute-cache", "dither", "draw", "duplicate", "edge", "emboss", "encipher", "encoding", "endian", "enhance", "equalize", "evaluate", "evaluate-sequence", "extent", "extract", "family", "features", "fft", "fill", "filter", "flatten", "flip", "floodfill", "flop", "font", "foreground", "format", "format[identify]", "frame", "frame[import]", "function", "fuzz", "fx", "gamma", "gaussian-blur", "geometry", "gravity", "grayscale", "green-primary", "hald-clut", "help", "highlight-color", "hough-lines", "iconGeometry", "iconic", "identify", "ift", "immutable", "implode", "insert", "intensity", "intent", "interlace", "interpolate", "interline-spacing", "interword-spacing", "kerning", "kuwahara", "label", "lat", "layers", "level", "level-colors", "limit", "linear-stretch", "linewidth", "liquid-rescale", "list", "log", "loop", "lowlight-color", "magnify", "map", "map[stream]", "mattecolor", "median", "mean-shift", "metric", "mode", "modulate", "moments", "monitor", "monochrome", "morph", "morphology", "mosaic", "motion-blur", "name", "negate", "noise", "normalize", "opaque", "ordered-dither", "orient", "page", "paint", "path", "pause[animate]", "pause[import]", "perceptible", "ping", "pointsize", "polaroid", "poly", "posterize", "precision", "preview", "print", "process", "profile", "quality", "quantize", "quiet", "radial-blur", "raise", "random-threshold", "read-mask", "red-primary", "regard-warnings", "region", "remap", "remote", "render", "repage", "resample", "resize", "respect-parentheses", "reverse", "roll", "rotate", "sample", "sampling-factor", "scale", "scene", "screen", "seed", "segment", "selective-blur", "separate", "sepia-tone", "set", "shade", "shadow", "shared-memory", "sharpen", "shave", "shear", "sigmoidal-contrast", "silent", "similarity-threshold", "size", "sketch", "smush", "snaps", "solarize", "sparse-color", "splice", "spread", "statistic", "stegano", "stereo", "storage-type", "stretch", "strip", "stroke", "strokewidth", "style", "subimage-search", "swap", "swirl", "synchronize", "taint", "text-font", "texture", "threshold", "thumbnail", "tile", "tile-offset", "tint", "title", "transform", "transparent", "transparent-color", "transpose", "transverse", "treedepth", "trim", "type", "undercolor", "unique-colors", "units", "unsharp", "update", "verbose", "version", "view", "vignette", "virtual-pixel", "visual", "watermark", "wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group", "write", "write-mask"); ?> </p> 
+<p class="text-center"><?php options("adaptive-blur", "adaptive-resize", "adaptive-sharpen", "adjoin", "affine", "alpha", "annotate", "antialias", "append", "attenuate", "authenticate", "auto-gamma", "auto-level", "auto-orient", "auto-threshold", "backdrop", "background", "bench", "bias", "black-point-compensation", "black-threshold", "blend", "blue-primary", "blue-shift", "blur", "border", "bordercolor", "borderwidth", "brightness-contrast", "cache", "canny", "caption", "cdl", "channel", "charcoal", "channel-fx", "chop", "clamp", "clip", "clip-mask", "clip-path", "clone", "clut", "coalesce", "colorize", "colormap", "color-matrix", "colors", "colorspace", "combine", "comment", "compare", "complex", "compose", "composite", "compress", "connected-components", "contrast", "contrast-stretch", "convolve", "copy", "crop", "cycle", "debug", "decipher", "deconstruct", "define", "delay", "delete", "density", "depth", "descend", "deskew", "despeckle", "direction", "displace", "display", "dispose", "dissimilarity-threshold", "dissolve", "distort", "distribute-cache", "dither", "draw", "duplicate", "edge", "emboss", "encipher", "encoding", "endian", "enhance", "equalize", "evaluate", "evaluate-sequence", "extent", "extract", "family", "features", "fft", "fill", "filter", "flatten", "flip", "floodfill", "flop", "font", "foreground", "format", "format[identify]", "frame", "frame[import]", "function", "fuzz", "fx", "gamma", "gaussian-blur", "geometry", "gravity", "grayscale", "green-primary", "hald-clut", "help", "highlight-color", "hough-lines", "iconGeometry", "iconic", "identify", "ift", "immutable", "implode", "insert", "intensity", "intent", "interlace", "interpolate", "interline-spacing", "interword-spacing", "kerning", "kuwahara", "label", "lat", "layers", "level", "level-colors", "limit", "linear-stretch", "linewidth", "liquid-rescale", "list", "log", "loop", "lowlight-color", "magnify", "map", "map[stream]", "mattecolor", "median", "mean-shift", "metric", "mode", "modulate", "moments", "monitor", "monochrome", "morph", "morphology", "mosaic", "motion-blur", "name", "negate", "noise", "normalize", "opaque", "ordered-dither", "orient", "page", "paint", "path", "pause[animate]", "pause[import]", "perceptible", "ping", "pointsize", "polaroid", "poly", "posterize", "precision", "preview", "print", "process", "profile", "quality", "quantize", "quiet", "radial-blur", "raise", "random-threshold", "read-mask", "red-primary", "regard-warnings", "region", "remap", "remote", "render", "repage", "resample", "resize", "respect-parentheses", "reverse", "roll", "rotate", "sample", "sampling-factor", "scale", "scene", "screen", "seed", "segment", "selective-blur", "separate", "sepia-tone", "set", "shade", "shadow", "shared-memory", "sharpen", "shave", "shear", "sigmoidal-contrast", "silent", "similarity-threshold", "size", "sketch", "smush", "snaps", "solarize", "sparse-color", "splice", "spread", "statistic", "stegano", "stereo", "storage-type", "stretch", "strip", "stroke", "strokewidth", "style", "subimage-search", "swap", "swirl", "synchronize", "taint", "text-font", "texture", "threshold", "thumbnail", "tile", "tile-offset", "tint", "title", "transform", "transparent", "transparent-color", "transpose", "transverse", "treedepth", "trim", "type", "undercolor", "unique-colors", "units", "unsharp", "update", "verbose", "version", "view", "vignette", "virtual-pixel", "visual", "watermark", "wave", "wavelet-denoise", "weight", "white-point", "white-threshold", "window", "window-group", "write", "write-mask"); ?> </p>
 <p class="lead magick-description">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
 
 <div style="margin: auto;">
@@ -98,7 +98,7 @@ image are calculated using the following matrix equation.</p>
 <p class="text-center"><img class="img-thumbnail" alt="affine transformation"  src="<?php echo $_SESSION['RelativePath']?>/../image/affine.png"/> </p>
 
 <p> The size of the resulting image is that of the smallest rectangle that
-contains the transformed source image.  The parameters 
+contains the transformed source image.  The parameters
 <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var>
 subsequently shift the image pixels so that those that are moved out of the
 image area are cut off.</p>
@@ -107,11 +107,11 @@ image area are cut off.</p>
 system: positive <var>x</var> and <var>y</var> directions
 are rightward and downward, resp.; positive rotation is clockwise.</p>
 
-<p> If the translation coefficients <var>t<sub>x</sub></var> and 
+<p> If the translation coefficients <var>t<sub>x</sub></var> and
 <var>t<sub>y</sub></var> are omitted they default to 0,0. Therefore,
 four parameters suffice for rotation and scaling without translation.</p>
 
-<p>Scaling by the factors <var>s<sub>x</sub></var> and 
+<p>Scaling by the factors <var>s<sub>x</sub></var> and
 <var>s<sub>y</sub></var> in the <var>x</var> and <var>y</var> directions,
 respectively, is accomplished with the following.</p>
 
@@ -329,8 +329,8 @@ and <a href="#decipher">-decipher</a>. </p>
 <p class="magick-description">Automagically adjust gamma level of image.</p>
 
 <p>This calculates the mean values of an image, then applies a calculated  <a
-href="#gamma" >-gamma</a> adjustment so that is the mean color exists in the
-image it will get a have a value of 50%. </p>
+href="#gamma" >-gamma</a> adjustment so that the mean color in the
+image will get a value of 50%. </p>
 
 <p>This means that any solid 'gray' image becomes 50% gray. </p>
 
@@ -1796,13 +1796,13 @@ available:</p>
 
   <tr>
     <td>connected-components:keep=<var>list-of-ids</var></td>
-    <td>Comma and/or hyphenated list of id values to keep in the output. 
+    <td>Comma and/or hyphenated list of id values to keep in the output.
     Supported in Imagemagick 6.9.3-0.</td>
   </tr>
 
   <tr>
     <td>connected-components:mean-color=<var>true</var></td>
-    <td>Changes the output image from id values to mean color values. Supported 
+    <td>Changes the output image from id values to mean color values. Supported
     in Imagemagick 6.9.2-8.</td>
   </tr>
 
@@ -1819,11 +1819,11 @@ available:</p>
 
   <tr>
     <td>convolve:scale=<var>{kernel_scale}[!^] [,{origin_addition}] [%]</var></td>
-     <td>Defines the kernel scaling. The special flag ! automatically scales to 
-    full dynamic range. The ! flag can be used in combination with a factor or 
-    percent. The factor or percent is then applied after the automatic scaling. 
-    An example is 50%!. This produces a result 50% darker than full dynamic 
-    range scaling. The ^ flag assures the kernel is 'zero-summing', for 
+     <td>Defines the kernel scaling. The special flag ! automatically scales to
+    full dynamic range. The ! flag can be used in combination with a factor or
+    percent. The factor or percent is then applied after the automatic scaling.
+    An example is 50%!. This produces a result 50% darker than full dynamic
+    range scaling. The ^ flag assures the kernel is 'zero-summing', for
     example when some values are positive and some are negative as in edge 
     detection kernels. The origin addition adds that value to the center 
     pixel of the kernel. This produces and effect that is like adding the image 	
@@ -3852,7 +3852,10 @@ operations such as <a href="#resize">-resize</a> and <a href="#distort"
 Point       Hermite       Cubic
 Box         Gaussian      Catrom
 Triangle    Quadratic     Mitchell
+CubicSpline
 </code></pre>
+
+<p>Use <code>-define filter:lobes={2,3,4}</code> to specify the support size for filtering for the <code>CubicSpline</code> filter.</p>
 
 <p>The <code>Bessel</code> and <code>Sinc</code> filter is also provided (as well
 as a faster <code>SincFast</code> equivalent form).  However these filters are
@@ -4007,7 +4010,7 @@ convert image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
-  -resize 150%   image.jpg"
+  -resize 150% image.jpg"
 </code></pre>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
@@ -4016,7 +4019,7 @@ convert image.png \
 convert image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
-  -resize 150%   image.jpg"
+  -resize 150% image.jpg"
 </code></pre>
 
 <p>To extract the data for a raw windowing function, combine it with
@@ -4028,7 +4031,7 @@ convert null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
   -define filter:verbose=1 \
-  -resize 2 null:  > window_welch.dat
+  -resize 2 null: > window_welch.dat
 gnuplot
   set grid
   plot \"window_welch.dat\" with lines
@@ -4508,7 +4511,7 @@ region itself, which is <var>centered</var> at the pixel
 coordinate (60,70). (<?php seeGeometry();?>)</p>
 
 <pre><code>
-convert image.png -gravity Center -region 10x10-40+20 \ 
+convert image.png -gravity Center -region 10x10-40+20 \
   -negate output.png
 </code></pre>
 
@@ -4560,7 +4563,7 @@ regardless of the current colorpsace of the image. But a 'mathematical'
 intensity method will depend on the current colorspace the image is currently
 using. </p>
 
-<p>While this operation uses an <a href="#intensity" >-intensity</a> method, 
+<p>While this operation uses an <a href="#intensity" >-intensity</a> method,
 it does not use or set the <a href="#intensity" >-intensity</a> setting, so
 will not effect other operations that may use that setting.</p>
 
@@ -4753,8 +4756,7 @@ Consequently this has no effect on the image sequence order.</p>
 <p>ImageMagick provides a number of methods used in situations where an
 operator needs to determine a single grayscale value for some purpose, from
 an image with red, green, and blue pixel components. Typically the linear
-<code>Rec709Luminance</code> formula is used, which is the same formula used when 
-converting images to <code>-colorspace gray</code>. </p>
+<code>Rec709Luminance</code> formula is used, which is the same formula used when converting images to <code>-colorspace gray</code>. </p>
 
 <p>The following formulas are currently provided, and will first convert
 the pixel values to linear-RGB or non-linear sRGB colorspace before
@@ -5737,6 +5739,7 @@ name. </p>
 
 <dl class="row">
 <dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz effected)</dd>
+<dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
 <dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
 <dt class="col-md-4">MAE</dt><dd class="col-md-8">   mean absolute error (normalized), average channel error distance</dd>
 <dt class="col-md-4">MEPP</dt><dd class="col-md-8">  mean error per pixel (normalized mean error, normalized peak error)</dd>
@@ -5746,6 +5749,7 @@ name. </p>
 <dt class="col-md-4">PHASH</dt><dd class="col-md-8"> perceptual hash for the sRGB and HCLp colorspaces.  Specify an alternative colorspace with <code>-define phash:colorspaces=<var>colorspace,colorspace,...</var></code></dd>
 <dt class="col-md-4">PSNR</dt><dd class="col-md-8">  peak signal to noise ratio</dd>
 <dt class="col-md-4">RMSE</dt><dd class="col-md-8">  root mean squared (normalized root mean squared)</dd>
+<dt class="col-md-4">SSIM</dt><dd class="col-md-8">  structural similarity index</dd>
 </dl>
 
 <p>Control the '<code>AE</code>', or absolute count of pixels that are different,
@@ -5755,9 +5759,13 @@ size of the <a href="#fuzz" >-fuzz</a> factor needed to make all pixels
 'similar', while '<code>MAE</code>' determines the factor needed
 for about half the pixels to be similar. </p>
 
-<p>The '<code>MEPP</code>' metric returns three different metrics
+<p>The <code>MEPP</code> metric returns three different metrics
 ('<code>MAE</code>', '<code>MAE</code>' normalized, and '<code>PAE</code>'
 normalized) from a single comparison run. </p>
+
+<p>The <code>SSIM</code> and <code>DSSIM</code> metrics respect these defines:
+<code>-define compare:ssim-radius</code>, <code>-define compare:ssim-sigma</code>,
+<code>-define compare:ssim-k1</code>, and <code>-define compare:ssim-k2</code>.</p>
 
 <p>To print a complete list of metrics, use the <a href="#list">-list
 metric</a> option.</p>
@@ -6110,18 +6118,18 @@ href="#page">-page</a> <code>Letter+43+43</code>).</p>
 The choices for a PostScript page are:</p>
 
 <dl class="row">
-<dt class="col-md-4"> 11x17      </dt> <dd class="col-md-8">  792 x 1224</dd> 
-<dt class="col-md-4"> Ledger     </dt> <dd class="col-md-8"> 1224 x  792</dd> 
-<dt class="col-md-4"> Legal      </dt> <dd class="col-md-8">  612 x 1008</dd> 
-<dt class="col-md-4"> Letter     </dt> <dd class="col-md-8">  612 x  792</dd> 
-<dt class="col-md-4"> LetterSmall</dt> <dd class="col-md-8">  612 x  792</dd> 
-<dt class="col-md-4"> ArchE      </dt> <dd class="col-md-8"> 2592 x 3456</dd> 
-<dt class="col-md-4"> ArchD      </dt> <dd class="col-md-8"> 1728 x 2592</dd> 
-<dt class="col-md-4"> ArchC      </dt> <dd class="col-md-8"> 1296 x 1728</dd> 
-<dt class="col-md-4"> ArchB      </dt> <dd class="col-md-8">  864 x 1296</dd> 
-<dt class="col-md-4"> ArchA      </dt> <dd class="col-md-8">  648 x  864</dd> 
-<dt class="col-md-4"> A0         </dt> <dd class="col-md-8"> 2380 x 3368</dd> 
-<dt class="col-md-4"> A1         </dt> <dd class="col-md-8"> 1684 x 2380</dd> 
+<dt class="col-md-4"> 11x17      </dt> <dd class="col-md-8">  792 x 1224</dd>
+<dt class="col-md-4"> Ledger     </dt> <dd class="col-md-8"> 1224 x  792</dd>
+<dt class="col-md-4"> Legal      </dt> <dd class="col-md-8">  612 x 1008</dd>
+<dt class="col-md-4"> Letter     </dt> <dd class="col-md-8">  612 x  792</dd>
+<dt class="col-md-4"> LetterSmall</dt> <dd class="col-md-8">  612 x  792</dd>
+<dt class="col-md-4"> ArchE      </dt> <dd class="col-md-8"> 2592 x 3456</dd>
+<dt class="col-md-4"> ArchD      </dt> <dd class="col-md-8"> 1728 x 2592</dd>
+<dt class="col-md-4"> ArchC      </dt> <dd class="col-md-8"> 1296 x 1728</dd>
+<dt class="col-md-4"> ArchB      </dt> <dd class="col-md-8">  864 x 1296</dd>
+<dt class="col-md-4"> ArchA      </dt> <dd class="col-md-8">  648 x  864</dd>
+<dt class="col-md-4"> A0         </dt> <dd class="col-md-8"> 2380 x 3368</dd>
+<dt class="col-md-4"> A1         </dt> <dd class="col-md-8"> 1684 x 2380</dd>
 <dt class="col-md-4"> A2         </dt> <dd class="col-md-8"> 1190 x 1684</dd> 
 <dt class="col-md-4"> A3         </dt> <dd class="col-md-8">  842 x 1190</dd> 
 <dt class="col-md-4"> A4         </dt> <dd class="col-md-8">  595 x  842</dd> 
@@ -6987,7 +6995,7 @@ subsequent profiles from overwriting the preceding ones, e.g.,</p>
 
 
 <pre><code>
-convert in.png -set profile PNG-chunk-b01:file01 \ 
+convert in.png -set profile PNG-chunk-b01:file01 \
   -profile PNG-chunk-b02:file02 out.png
 </code></pre>
 
@@ -7097,7 +7105,7 @@ middle-gray; 100% is black). </p>
 
 <p>By default the image contrast is increased, use <var>+sigmoidal-contrast</var> to decrease the contrast.</p>
 
-<p>To achieve the equivalent of a sigmoidal brightness change (similar to 
+<p>To achieve the equivalent of a sigmoidal brightness change (similar to
 a gamma adjustment), you would use <var>-sigmoidal-contrast
 {brightness}x0%</var> to increase brightness and <var>+sigmoidal-contrast {brightness}x0%</var> to decrease brightness.
 Note the use of '0' fo rthe mid-point of the sigmoidal curve. </p>

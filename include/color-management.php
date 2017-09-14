@@ -1,8 +1,6 @@
 <div class="magick-header">
 
-<p class="lead magick-description">Color management has changed significantly between ImageMagick version 6.7.5-5 and 6.8.0-3 in order to better conform to color and grayscale standards.</p>
-
-<p>The first major change was to swap -colorspace RGB and -colorspace sRGB. In earlier versions, RGB really meant non-linear sRGB. With the completion of the changes, RGB now means linear color and sRGB means non-linear color in terms of their respective colorspaces.</p>
+<p class="lead magick-description">Due to the standardization of sRGB on the Internet, most image formats use SRGB as the default working color space.  If the color space of an image is unknown and it is an 8- to 16-bit image format, assuming it is in the sRGB color space is a safe choice.  This extends to grayscale as well.  We assume non-linear grayscale. These assumptions are overridden if a particular image format includes color space and / or gamma metadata.  ImageMagick assumes linear color if the color space is RGB instead of sRGB.  You can also override the default color space assumptions with color profiles or the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> option.</p>
 
 <p>ImageMagick supports color profiles, however, for images without a profile or a declaration of colorspace, ImageMagick assumes non-linear sRGB.  Most image processing algorithms assume a linear colorspace, therefore it might be prudent to convert to linear color or remove the gamma function before certain image processing algorithms are applied. For example,</p>
 
@@ -15,9 +13,11 @@
 <p>Afterwards, the verbose information for the output file lists the colorspace as RGB. This only works on image types containing meta data that distinguishes between linear RGB and non-linear sRGB, such as PNG and GIF. Therefore, if the above command is run with a JPG or TIF output format, the verbose information for the colorspace still shows sRGB. In order to properly have the JPG output know that it is linear RGB, include an appropriate color profile.</p>
 
 
-<p>The second major change treats any grayscale image as linear rather than non-linear, as it was previously.  This change is appropriate, since many types of processing requires a linear colorspace. This means that the conversion of a color image to grayscale via <code>-colorspace gray</code> looks darker relative to previous versions of ImageMagick (note that desaturating to convert to grayscale does not convert the image to linear grayscale). If you prefer to keep the conversion to non-linear grayscale, set the colorspace of the input to linear RGB so that <code>-colorspace gray</code> does not apply the gamma correction during the conversion process. For example, the following produces a non-linear grayscale result.</p>
+<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a> options:</p>
 
-<pre><code>magick myimage.png -set colorspace RGB -colorspace gray myRGBimage.png</code></pre>
+<pre><code>magick myimage.png -set colorspace RGB -colorspace gray myRGBimage.png
+magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
+</code></pre>
 
 <p>The same concept is needed when separating channels. Normally, the conversion to separate each channel of an sRGB color image produces separate linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as non-linear grayscale. For example, the following produces non-linear grayscale channels.</p>
 

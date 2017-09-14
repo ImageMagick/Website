@@ -29,10 +29,10 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<pre><code>$ convert https://www.imagemagick.org/image/wizard.png wizard.jpg
+<pre>-> convert https://www.imagemagick.org/image/wizard.png wizard.jpg
 convert: not authorized `HTTPS'
 convert: unable to open file: No such file or directory
-convert: no images defined `wizard.jpg'</code></pre>
+convert: no images defined `wizard.jpg'</pre>
 
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
@@ -40,17 +40,17 @@ convert: no images defined `wizard.jpg'</code></pre>
 &lt;policy domain="coder" rights="none" pattern="*" />
 &lt;policy domain="coder" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
 
-<p>As of ImageMagick 7.0.5-5, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
+<p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
 <pre><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
 &lt;policy domain="cache" name="memory-map" value="anonymous"/>
 &lt;policy domain="system" name="shred" value="1"/></code></pre>
 
-<p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, an exception is thrown and the processing stops.  Here we limit the maximum memory request by policy:</p>
+<p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
 <pre><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
 
-<pre class="pre-scrollable"><code>-> identify -list policy
+<pre class="pre-scrollable">-> identify -list policy
 Path: ImageMagick/policy.xml
   Policy: Resource
     name: time
@@ -94,7 +94,7 @@ Path: ImageMagick/policy.xml
 
 Path: [built-in]
   Policy: Undefined
-    rights: None</code></pre>
+    rights: None</pre>
 <p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
@@ -114,14 +114,15 @@ Path: [built-in]
 
 <h2 class="magick-post-title"><a id="other"></a>Other Security Considerations</h2>
 
-<p>If you spot a security flaw in ImageMagick, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.  Alternatively, post your concern to <a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.</p>
+<p>If you spot a security flaw in ImageMagick, post your concern to
+<a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.  Alternatively, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select Security Issue as the issue.</p>
 
 <p>In addition to the security policy, you can make ImageMagick safer by ...</p>
 <ul>
-<li>keeping ImageMagick up-to-date.  The latest releases have fixes for any security flaws we discovered in the past.</li>
-<li>sanitizing any filenames or command line options you pass to ImageMagick.</li>
-<li>running ImageMagick in a sanitized software container such as Docker.</li>
-<li>running ImageMagick as the least-privileged user (e.g. 'nobody').</li>
+<li>keeping ImageMagick up-to-date.  The latest releases have fixes for any security flaws we discovered in the past;</li>
+<li>sanitizing any filenames or command line options you pass to ImageMagick;</li>
+<li>running ImageMagick in a sanitized software container such as Docker;</li>
+<li>running ImageMagick as the least-privileged user (e.g. 'nobody');</li>
 <li>explicitly setting the image file type.  For example, use the filename <code>png:image.png</code> rather than <code>image.png</code>.  Without an explicit image type in the filename, ImageMagick guesses the image type.</li>
 </ul>
 
