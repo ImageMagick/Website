@@ -859,7 +859,7 @@ include the following.
 </p>
 
 <p>Warning, some operators behave differently when the <a href="#channel"
->+channel</a> default setting is in effect, verses ANY user defined <a
+>+channel</a> default setting is in effect, versus ANY user defined <a
 href="#channel" >-channel</a> setting (including the equivalent of the
 default). These operators have yet to be made to understand the newer 'Sync'
 flag. </p>
@@ -878,7 +878,7 @@ resulting in 'halo' effects. The newer <a href="#morphology">-morphology</a>
 convolution equivalents however does have a understanding of the 'Sync' flag
 and will thus handle transparency correctly by default. </p>
 
-<p>As a alpha channel is optional within images, some operators will read the
+<p>As an alpha channel is optional within images, some operators will read the
 color channels of an image as a greyscale alpha mask, when the image has no
 alpha channel present, and the <a href="#channel" >-channel</a> setting tells
 the operator to apply the operation using alpha channels. The <a
@@ -1027,7 +1027,7 @@ spaces (e.g. <code>0,2,5</code>).  A value of '<code>0−−1</code> will
 effectively clone all the images. </p>
 
 <p>The <a href="#clone">+clone</a> will simply make a copy of the last image
-in the image sequence, and is thus equivalent to using a argument of
+in the image sequence, and is thus equivalent to using an argument of
 '<code>−1</code>'. </p>
 
 <div style="margin: auto;">
@@ -6900,7 +6900,7 @@ assigned before the image is read in, by using a <var>key</var> of
 the same name. </p>
 
 <p>If the given <var>key</var> does not match a specific known
-'attribute ', such as shown above, the setting is stored as a a free form
+'attribute ', such as shown above, the setting is stored as a free form
 'property' string.  Such settings are listed in <a href="#verbose"
 >-verbose</a> information ("<code>info:</code>" output format) as "Properties".
 </p>
