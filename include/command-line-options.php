@@ -562,7 +562,7 @@ radius that will provide meaningful results for the Gaussian distribution.
 </p>
 
 <p>The larger the <var >Radius</var> the slower the
-operation is. However too small a <var >Radius</var>, and sever
+operation is. However too small a <var >Radius</var>, and severe
 aliasing effects may result.  As a guideline, <var >Radius</var>
 should be at least twice the <var >Sigma</var> value, though three
 times will produce a more accurate result. </p>
@@ -1394,7 +1394,7 @@ subtract
 $_SESSION['RelativePath']?>/../script/compose.php">Alpha Compositing</a> for
 a detailed discussion of alpha compositing.</p>
 
-<p>This setting effects image processing operators that merge two (or more)
+<p>This setting affects image processing operators that merge two (or more)
 images together in some way.  This includes the operators,
 <a href="#composite">-compare</a>,
 <a href="#composite">-composite</a>,
@@ -1826,7 +1826,7 @@ available:</p>
     range scaling. The ^ flag assures the kernel is 'zero-summing', for
     example when some values are positive and some are negative as in edge 
     detection kernels. The origin addition adds that value to the center 
-    pixel of the kernel. This produces and effect that is like adding the image 	
+    pixel of the kernel. This produces an effect that is like adding the image 	
     that many times to the result of the filtered image. The typical value 
     is 1 so that the original image is added to the result of the convolution. 
     The default is 0.</td>
@@ -2634,7 +2634,7 @@ or X displacement, and the 'green' channel for the vertical or Y displacement.
 
 <p>As of IM v6.5.3-5 any alpha channel in the overlay image is used as a
 mask the transparency of the destination image. However areas outside the
-overlaid areas will not be effected. </p>
+overlaid areas will not be affected. </p>
 
 
 <div style="margin: auto;">
@@ -3921,7 +3921,7 @@ href="#set" >-set</a>):-</p>
   <tr>
     <td>-define filter:sigma=<var>value</var></td>
     <td>The 'sigma' value used to define the <code>Gaussian</code> filter.  Default
-    sigma value is '<code>0.5</code>'.  It only effects <code>Gaussian</code> but
+    sigma value is '<code>0.5</code>'.  It only affects <code>Gaussian</code> but
     does not shrink (but may enlarge) the filter's 'support'.  It can be used
     to generate very small blurs but without the filter 'missing' pixels due
     to using a small support setting. A larger value of '<code>0.707</code>'
@@ -3945,8 +3945,8 @@ href="#set" >-set</a>):-</p>
   <tr>
     <td>-define filter:kaiser-beta=<var>value</var></td>
     <td>The 'alpha' value used to as part of the Kaiser Windowing function.
-    Default value is '6.5'.  It only effects Kaiser windowing function, and
-    does not effect any other attributes.
+    Default value is '6.5'.  It only affects Kaiser windowing function, and
+    does not affect any other attributes.
     Before ImageMagick v6.7.6-10, this option was known as "filter:alpha", (an
     inheritance from the very old "zoom" program). It was changed to bring the
     function in line with more modern academic research usage, and better
@@ -3956,8 +3956,8 @@ href="#set" >-set</a>):-</p>
   <tr>
     <td>-define filter:kaiser-alpha=<var>value</var></td>
     <td>This value when multiplied by 'PI' is equivalent to "kaiser-beta", and
-    will override that setting.  It only effects Kaiser windowing function,
-    and does not effect any other attributes. </td>
+    will override that setting.  It only affects Kaiser windowing function,
+    and does not affect any other attributes. </td>
   </tr>
 
   <tr>
@@ -4067,7 +4067,7 @@ upside-down. </p>
 
 <p class="magick-description">floodfill the image with color at the specified offset.</p>
 
-<p>Flood fill starts from the given 'seed point' which is not gravity effected.
+<p>Flood fill starts from the given 'seed point' which is not gravity affected.
 Any color that matches within <a href="#fuzz" >-fuzz</a> color distance of the
 given <var>color</var>  argument, connected to that 'seed point'
 will be replaced with the current <a href="#fill" >-fill</a> color. </p>
@@ -4449,7 +4449,7 @@ radius that will provide meaningful results for the Gaussian distribution.
 </p>
 
 <p>The larger the <var >Radius</var> the radius the slower the
-operation is. However too small a <var >Radius</var>, and sever
+operation is. However too small a <var >Radius</var>, and severe
 aliasing effects may result.  As a guideline, <var >Radius</var>
 should be at least twice the <var >Sigma</var> value, though three
 times will produce a more accurate result. </p>
@@ -4565,7 +4565,7 @@ using. </p>
 
 <p>While this operation uses an <a href="#intensity" >-intensity</a> method,
 it does not use or set the <a href="#intensity" >-intensity</a> setting, so
-will not effect other operations that may use that setting.</p>
+will not affect other operations that may use that setting.</p>
 
 
 <div style="margin: auto;">
@@ -4597,7 +4597,7 @@ to multiple images using an ImageMagick script. </p>
 <p>Note that the representation is only of the normal RGB color space and that
 the whole color value triplet is used for the interpolated lookup of the
 represented Hald color cube image.  Because of this the operation is not <a
-href="#channel" >-channel</a> setting effected, nor can it adjust or modify an
+href="#channel" >-channel</a> setting affected, nor can it adjust or modify an
 images transparency or alpha/matte channel.</p>
 
 <p>See also <a href="#clut" >-clut</a> which provides color value replacement
@@ -5324,7 +5324,7 @@ value value for each color channel is determined by the
 '<code>black_color</code>' and '<code>white_color</code>' colors given (as
 described under the <a href="#fill">-fill</a> option). </p>
 
-<p>This effectually means the colors provided to <code>-level-colors</code>
+<p>This effectively means the colors provided to <code>-level-colors</code>
 is mapped to become 'black' and 'white' respectively, with all the other
 colors linearly adjusted (or clipped) to match that change. Each channel is
 adjusted separately using the channel values of the colors specified. </p>
@@ -5738,7 +5738,7 @@ name. </p>
 <p>Choose from:</p>
 
 <dl class="row">
-<dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz effected)</dd>
+<dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz affected)</dd>
 <dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
 <dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
 <dt class="col-md-4">MAE</dt><dd class="col-md-8">   mean absolute error (normalized), average channel error distance</dd>
@@ -7238,7 +7238,7 @@ some point beyond the edge of the image. All points are floating point values.
 
 <p>Only the color channels defined by the <a href="#channel" >-channel</a> are
 modified, which means that by default matte/alpha transparency channel is not
-effected. Typically transparency channel is turned off either before or after
+affected. Typically transparency channel is turned off either before or after
 the operation. </p>
 
 <p>Of course if some color points are transparent to generate a transparent
@@ -7902,7 +7902,7 @@ image, but could also be set to a specify background color. </p>
 
 <p>This most important for distortion operators such as <a href="#distort"
 >-distort</a>, <a href="#implode" >-implode</a>, and <a href="#fx" >-fx</a>.
-However it also effects operations that may access pixels just outside the
+However it also affects operations that may access pixels just outside the
 image proper, such as <a href="#convolve">-convolve</a>, <a
 href="#blur">-blur</a>, and <a href="#sharpen">-sharpen</a>. </p>
 
