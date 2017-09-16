@@ -4888,22 +4888,30 @@ the pixels surrounding that point.  That is how to determine the color of a
 point that falls between two, or even four different colored pixels. </p>
 
 <dl class="row">
-  <dt class="col-md-4">integer</dt>
-  <dd class="col-md-8">The color of the top-left pixel (floor function)</dd>
-  <dt class="col-md-4">nearest-neighbor</dt>
-  <dd class="col-md-8">The nearest pixel to the lookup point (rounded function)</dd>
   <dt class="col-md-4">average</dt>
   <dd class="col-md-8">The average color of the surrounding four pixels</dd>
+  <dt class="col-md-4">average4</dt>
+  <dd class="col-md-8">The average color of the surrounding four pixels</dd>
+  <dt class="col-md-4">average9</dt>
+  <dd class="col-md-8">The average color of the surrounding nine pixels</dd>
+  <dt class="col-md-4">average16</dt>
+  <dd class="col-md-8">The average color of the surrounding sixteen pixels</dd>
+  <dt class="col-md-4">background</dt>
+  <dd class="col-md-8">&nbsp;</dd>
   <dt class="col-md-4">bilinear</dt>
   <dd class="col-md-8">A double linear interpolation of pixels (the default)</dd>
+  <dt class="col-md-4">blend</dt>
+  <dd class="col-md-8">&nbsp;</dd>
+  <dt class="col-md-4">catrom</dt>
+  <dd class="col-md-8">Fitted bicubic-spines of surrounding 16 pixels</dd>
+  <dt class="col-md-4">integer</dt>
+  <dd class="col-md-8">The color of the top-left pixel (floor function)</dd>
   <dt class="col-md-4">mesh</dt>
   <dd class="col-md-8">Divide area into two flat triangular interpolations</dd>
-  <dt class="col-md-4">bicubic</dt>
-  <dd class="col-md-8">Fitted bicubic-spines of surrounding 16 pixels</dd>
+  <dt class="col-md-4">nearest-neighbor</dt>
+  <dd class="col-md-8">The nearest pixel to the lookup point (rounded function)</dd>
   <dt class="col-md-4">spline</dt>
   <dd class="col-md-8">Direct spline curves (colors are blurred)</dd>
-  <dt class="col-md-4">filter</dt>
-  <dd class="col-md-8">Use resize <a href="#filter">-filter</a> settings</dd>
 </dl>
 
 <p>This most important for distortion operators such as <a href="#distort"
