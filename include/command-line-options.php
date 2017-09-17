@@ -3607,8 +3607,7 @@ multi-value version of evaluate. </p>
   <h3><a id="evaluate-sequence"></a>-evaluate-sequence <var>operator</var></h3>
 </div>
 
-<p class="magick-description">Alter channel pixels by evaluating an arithmetic, relational, or
-logical expression over a sequence of images.</p>
+<p class="magick-description">Alter channel pixels by evaluating an arithmetic, relational, or logical expression over a sequence of images.  Ensure all the images in the sequence are in the same colorspace, otherwise you may get unexpected results, e.g. add <a href="#colorspace" >-colorspace sRGB</a> to your command-line.</p>
 
 <p>To print a complete list of <a
 href="#evaluate-sequence">-evaluate-sequence</a> operators, use <a
