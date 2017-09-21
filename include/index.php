@@ -146,7 +146,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a></td>
-    <td>convenient access to pixels outside the image region.</td>
+    <td>convenient access to pixels outside the image boundaries.</td>
   </tr>
 </table>
 </div>
