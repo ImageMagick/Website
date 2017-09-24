@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
+<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
 
 <p class="lead magick-description">ImageMagick includes a security policy configuration file, <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>. It is useful for limiting the resources consumed by ImageMagick and can help prevent a denial-of-service or other exploits.</p>
@@ -101,6 +101,16 @@ Path: [built-in]
 
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
+<h2 class="magick-post-title"><a id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
+
+<p>When writing image pixels to disk, ImageMagick firsts preallocates the disk file, which is much faster than fully populating the file with zeros.  To further increase performances, we memory-map the file on disk.  With memory-mapping, We get an increase in performance (up to 5x), however, there remains a possibility that as the disk file is populated, it may run out of free space.  The OS then throws a SIGBUS signal which prevents ImageMagick from continuing.  To prevent a SIGBUS, use this security policy:
+
+<pre>
+&lt;policy domain="cache" name="synchronize" value="True"/>
+</pre>
+
+<p>Set to True to ensure all image data is fully flushed and synchronized to disk. There is a performance penalty, however, the benefits include ensuring a valid image file in the event of a system crash and early reporting if there is not enough disk space for the image pixel cache.</p>
+
 <h2 class="magick-post-title"><a id="zero-configuration"></a>Zero Configuration Security Policy</h2>
 
 <p>A zero configuration build of ImageMagick does not permit external configuration files.  To define your security policy, you must instead edit the <code>MagickCore/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
@@ -110,7 +120,6 @@ Path: [built-in]
 "&lt;policymap> \
   &lt;policy domain=\"coder\" rights=\"none\" pattern=\"MVG\"/> \
 &lt;/policymap>";</code></pre>
-
 
 <h2 class="magick-post-title"><a id="other"></a>Other Security Considerations</h2>
 
