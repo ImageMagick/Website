@@ -7,10 +7,11 @@
 <p class="lead magick-description">We want to thank the following sponsors of the ImageMagick project, including:</p>
 
 <dl>
-  <dt class="col-md-4"><a href="http://www.networkredux.com"> <img class="clearfix" src="https://www.imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
-  <dt class="col-md-4"><a href="http://www.amd.com"> <img class="clearfix" src="https://www.imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
-  <dt class="col-md-4"><a href="http://www.transloadit.com"> <img class="clearfix" src="https://www.imagemagick.org/image/transloadit.png" width="205" height="52" alt="[TransloadIt]" /></a>   The world's most versatile file uploading and processing service</dt><br/>
-  <dt class="col-md-4"><a href="http://boundforhealth.com"> <img class="clearfix" src="https://www.imagemagick.org/image/boundforhealth.png" width="342" height="105" alt="[Bound for Health]" /></a>  BoundForHealth &#8211; Change Course.  Cure disease.  Be well.</dt><br/>
+  <dt class="col-md-12"><a href="http://www.networkredux.com"> <img class="clearfix" src="https://www.imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
+  <dt class="col-md-12"><a href="http://www.amd.com"> <img class="clearfix" src="https://www.imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
+  <dt class="col-md-12"><a href="http://www.transloadit.com"> <img class="clearfix" src="https://www.imagemagick.org/image/transloadit.png" width="205" height="52" alt="[TransloadIt]" /></a>   The world's most versatile file uploading and processing service</dt><br/>
+  <dt class="col-md-12"><a href="http://boundforhealth.com"> <img class="clearfix" src="https://www.imagemagick.org/image/boundforhealth.png" width="342" height="105" alt="[Bound for Health]" /></a>  BoundForHealth &#8211; Change Course.  Cure disease.  Be well.</dt><br/>
+  <dt class="col-md-12"><a href="https://www.leaderssl.com"> <img class="clearfix" src="https://www.imagemagick.org/image/leaderssl.png" width="162" height="42" alt="[LeaderSSL]" /></a>  We enable secure connections for websites.</dt><br/>
 </dl>
 
 <h2 class="magick-post-title"><a id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
