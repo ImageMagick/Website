@@ -6,19 +6,19 @@
 
 <p>To support variable pixel channels in the MagickCore API, pixel handling has changed when getting or setting the pixel channels.  You can access channels as an array, <var>pixel[i]</var>, or use an accessor method such as GetPixelRed() or SetPixelRed().  There are some modest changes to the MagickCore and MagickWand API's.   The Magick++ and PerlMagick API's have not changed and matches that of the ImageMagick version 6.</p>
 
-<p>The shell API (command line) of ImageMagick version 7 is also undergoing
+<p>The shell API (command line) of ImageMagick version 7 has undergone
 a major overhaul, with specific emphasis on the ability to read 'options' not
 only from the command line, but also from scripts, and file streams. This
 allows for the use of 'co-processing' programming techniques or performing
 image handling using 'deamon/server backends', and even multi-machine
 distributed processing.</p>
 
-<p>With shell API overhaul other improvements are being made, including:
+<p>With the shell API overhaul other improvements were made, including:
 better reporting of which option failed, the consolidation and deprecation of
 options, and more global use of 'image properties' (more commonly known as
 'percent escapes' in option arguments. </p>
 
-<p>ImageMagick version 7 is available now as an <a href="https://www.imagemagick.org/download/beta/">Beta</a> release.  Look for an official release around 1st Q 2016.  An official ImageMagick version 7 release depends on how smoothly the Beta cycle progresses.  During the Beta cycle, version 6 developers can attempt to port their software to version 7.</p>
+<p>ImageMagick version 7 is available now as a <a href="https://www.imagemagick.org/download/">production</a> release.</p>
 
 <p>Now that ImageMagick version 7 is released, we continue to support and enhance version 6 for a minimum of 10 years.</p>
 
