@@ -32,7 +32,7 @@
 <li>Provide technical writers to assist with the development of commercial-grade technical documentation.</li>
 <li>Donate a quality SWOP or Eurostandard ICC profile to use as a default CMYK to RGB conversion profile.</li>
 <li>Donate a workstation with a modern processor and plenty of memory and disk.  We would use it for our primary development environment.</li>
-<li>Donate an Apple Macbook Pro or desktop so we can build and test ImageMagick in the Apple Development environment.</li>
+<li>Donate a Windows laptop so we can build and test ImageMagick under Windows 10.</li>
 <li>Make a monetary contribution:</li></ul>
 
 <p>Donations can be anonymous, or public.</p>
