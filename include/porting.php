@@ -281,6 +281,8 @@ MagickWand-config</code></pre>
 
 <p>In addition, all deprecated <a href="http://magick.imagemagick.org/api/deprecate.php">MagickCore</a> and <a href="http://magick.imagemagick.org/api/magick-deprecate.php">MagickWand</a> methods are no longer available in version 7.</p>
 
+<p>The Bessel filter was removed as it is an alias for Jinc.  Use -filter Jinc instead.</p>
+
 
 <h2 class="magick-post-title"><a id="cli"></a>Shell API or Command-line Interface</h2>
 
