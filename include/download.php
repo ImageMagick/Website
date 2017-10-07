@@ -138,7 +138,7 @@ display logo.gif</code></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre><code>tar xvzf ImageMagick-x86_64-apple-darwin15.2.0.tar.gz</code></pre>
+<pre><code>tar xvzf ImageMagick-x86_64-apple-darwin16.7.0.tar.gz</code></pre>
 
 <p>Set the <code>MAGICK_HOME</code> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
