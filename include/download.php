@@ -159,7 +159,7 @@ display logo.gif</code></pre>
 identify logo.gif
 display logo.gif</code></pre>
 
-<p><b>Note</b>, the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program requires the X11 server available on your Mac OS X installation DVD. Once that is installed, you will also need to <code>export DISPLAY=:0</code>.</p>
+<p><b>Note</b>, the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program requires the X11 server available on your Mac OS X installation DVD. Once that is installed, you will also need to set <code>export DISPLAY=:0</code>.</p>
 
 <p>The best way to deal with all the exports is to put them at the end of your .profile file</p>
 
