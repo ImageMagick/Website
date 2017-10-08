@@ -7,18 +7,18 @@
 
 <p>We list a few examples of the <code>stream</code> command here to illustrate its usefulness and ease of use. To get started, lets stream the red, green, blue components of a 640x480 JPEG image to disk as unsigned characters:</p>
 
-<pre><code>magick stream -map rgb -storage-type char image.jpg pixels.dat
+<pre class="highlight"><code>magick stream -map rgb -storage-type char image.jpg pixels.dat
 magick display -depth 8 -size 640x480 rgb:pixels.dat
 </code></pre>
 
 <p>Here we extract a 100x100 region from a TIFF image in the grayscale format as doubles:</p>
 
-<pre><code>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
+<pre class="highlight"><code>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
 </code></pre>
 
 <p>You can also associate the region to extract with the image filename:</p>
 
-<pre><code>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
+<pre class="highlight"><code>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
 </code></pre>
 
 

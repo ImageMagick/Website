@@ -76,11 +76,11 @@
 
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
-<pre><code>cd $HOME</code></pre>
+<pre class="highlight"><code>cd $HOME</code></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre><code>tar xvzf ImageMagick.tar.gz</code></pre>
+<pre class="highlight"><code>tar xvzf ImageMagick.tar.gz</code></pre>
 
 <p>Set the <code>MAGICK_HOME</code> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
@@ -88,17 +88,17 @@
 
 <p>If the <code>bin</code> subdirectory of the extracted package is not already in your executable search path, add it to your <code>PATH</code> environment variable. For example:</p>
 
-<pre><code>export PATH="$MAGICK_HOME/bin:$PATH</code></pre>
+<pre class="highlight"><code>export PATH="$MAGICK_HOME/bin:$PATH</code></pre>
 
 
 <p>On Linux and Solaris machines add <code>$MAGICK_HOME/lib</code> to the <code>LD_LIBRARY_PATH</code> environment variable:</p>
 
-<pre><code>LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib
+<pre class="highlight"><code>LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib
 export LD_LIBRARY_PATH</code></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre><code>magick logo: logo.gif
+<pre class="highlight"><code>magick logo: logo.gif
 identify logo.gif
 display logo.gif</code></pre>
 
@@ -108,7 +108,7 @@ display logo.gif</code></pre>
 
 <p>We recommend <a href="http://www.macports.org">MacPorts</a> which custom builds ImageMagick in your environment (some users prefer <a href="http://brew.sh">Homebrew</a>).  Download MacPorts and type:</p>
 
-<pre><code>sudo port install ImageMagick</code></pre>
+<pre class="highlight"><code>sudo port install ImageMagick</code></pre>
 
 <p>The <code>port</code> command downloads ImageMagick and many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc.) and configures, builds, and installs ImageMagick automagically.  Alternatively, you can download the ImageMagick Mac OS X distribution we provide:</p>
 
@@ -134,11 +134,11 @@ display logo.gif</code></pre>
 
 <p>Create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
-<pre><code>cd $HOME</code></pre>
+<pre class="highlight"><code>cd $HOME</code></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre><code>tar xvzf ImageMagick-x86_64-apple-darwin16.7.0.tar.gz</code></pre>
+<pre class="highlight"><code>tar xvzf ImageMagick-x86_64-apple-darwin16.7.0.tar.gz</code></pre>
 
 <p>Set the <code>MAGICK_HOME</code> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
@@ -146,16 +146,16 @@ display logo.gif</code></pre>
 
 <p>If the <code>bin</code> subdirectory of the extracted package is not already in your executable search path, add it to your <code>PATH</code> environment variable. For example:</p>
 
-<pre><code>export PATH="$MAGICK_HOME/bin:$PATH"</code></pre>
+<pre class="highlight"><code>export PATH="$MAGICK_HOME/bin:$PATH"</code></pre>
 
 
 <p>Set the <code>DYLD_LIBRARY_PATH</code> environment variable:</p>
 
-<pre><code>export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"</code></pre>
+<pre class="highlight"><code>export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"</code></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre><code>magick logo: logo.gif
+<pre class="highlight"><code>magick logo: logo.gif
 identify logo.gif
 display logo.gif</code></pre>
 
@@ -185,7 +185,7 @@ display logo.gif</code></pre>
 <h4>ImageMagick compiling script for iOS OS and iOS Simulator</h4>
 
 <p>To run the script:</p>
-<pre><code>./imagemagick_compile.sh <var>VERSION</var></code></pre>
+<pre class="highlight"><code>./imagemagick_compile.sh <var>VERSION</var></code></pre>
 <p>where <var>VERSION</var> is the version of ImageMagick you want to compile (i.e.: <?php echo MagickLibVersionText . MagickLibSubversion; ?>, svn, ...)</p>
 
 <p>This script compiles ImageMagick as a static library to be included in iOS projects and adds support for</p>
@@ -378,7 +378,7 @@ display logo.gif</code></pre>
 
 <p>To verify ImageMagick is working properly, type the following in an Command Prompt window:</p>
 
-<pre><code>magick logo: logo.gif
+<pre class="highlight"><code>magick logo: logo.gif
 magick identify logo.gif
 magick logo.gif win:</code></pre>
 
@@ -386,9 +386,9 @@ magick logo.gif win:</code></pre>
 
 <p>Note, use a double quote (<code>"</code>) rather than a single quote (<code>'</code>) for the ImageMagick command line under Windows:</p>
 
-<pre><code>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</code></pre>
+<pre class="highlight"><code>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</code></pre>
 <p>Use two double quotes for VBScript scripts:</p>
-<pre><code>Set objShell = wscript.createobject("wscript.shell")
+<pre class="highlight"><code>Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</code></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>

@@ -59,12 +59,12 @@
 
 <p>After you write your MagickCore program, compile it like this:</p>
 
-<pre><code>cc -o core core.c `pkg-config --cflags --libs MagickWand`
+<pre class="highlight"><code>cc -o core core.c `pkg-config --cflags --libs MagickWand`
 </code></pre>
 
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+<pre class="highlight"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 </code></pre>
 
 <p>Here is a example program that utilizes the MagickCore API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>

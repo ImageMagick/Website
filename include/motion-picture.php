@@ -87,17 +87,17 @@ dpx:user.data
 
 <p> To determine which properties are associated with your DPX image, use this command for example:</p>
 
-<pre><code>identify -verbose bluebells.dpx
+<pre class="highlight"><code>identify -verbose bluebells.dpx
 </code></pre>
 
 <p>To identify a particular property, try this:</p>
 
-<pre><code>identify -format "%[dpx:television.time.code]" bluebells.dpx
+<pre class="highlight"><code>identify -format "%[dpx:television.time.code]" bluebells.dpx
 </code></pre>
 
 <p>Finally, to set a property:</p>
 
-<pre><code>convert bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
+<pre class="highlight"><code>convert bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
 </code></pre>
 
 <h2 class="magick-post-title"><a id="settings"></a>DPX Settings</h2>
@@ -105,7 +105,7 @@ dpx:user.data
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
 </p>
 
-<pre><code>-set gamma 1.7
+<pre class="highlight"><code>-set gamma 1.7
 -set film-gamma 0.6
 -set reference-black 95
 -set reference-white 685

@@ -11,7 +11,7 @@
 
 <p>You can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any Command Prompt window:</p>
 
-<pre><code>unzip ImageMagick-windows.zip
+<pre class="highlight"><code>unzip ImageMagick-windows.zip
 </code></pre>
 
 <p>Now that you have the ImageMagick Windows source distribution unpacked, let's configure it.</p>
@@ -102,7 +102,7 @@
 
 <p>With this feature enabled, you should be able to nab a copy of</p>
 
-<pre><code>VisualMagick\utilities\UTIL_convert_xxx_exe.dsp  (for C) or
+<pre class="highlight"><code>VisualMagick\utilities\UTIL_convert_xxx_exe.dsp  (for C) or
 VisualMagick\Magick++\demo\UTIL_demo_xxx_exe.dsp (for C++)
 </code></pre>
 
@@ -114,7 +114,7 @@ VisualMagick\Magick++\demo\UTIL_demo_xxx_exe.dsp (for C++)
 
 <p>For straight C API command line applications use something from:</p>
 
-<pre><code>ImageMagick\tests or
+<pre class="highlight"><code>ImageMagick\tests or
 ImageMagick\utilities (source code) or
 ImageMagick\VisualMagick\tests or
 ImageMagick\Visualmagick\utilities (project - DSP)
@@ -122,14 +122,14 @@ ImageMagick\Visualmagick\utilities (project - DSP)
 
 <p>For C++ and Magick++ command line applications use something from:</p>
 
-<pre><code>ImageMagick\Magick++\tests or ImageMagick\Magick++\demo (source code) or
+<pre class="highlight"><code>ImageMagick\Magick++\tests or ImageMagick\Magick++\demo (source code) or
 ImageMagick\VisualMagick\Magick++\tests or  <br/>
 ImageMagick\VisualMagick\Magick++\demo (project - DSP)
 </code></pre>
 
 <p>For C++ and Magick++ and MFC windows applications use:</p>
 
-<pre><code>ImageMagick\contrib\win32\MFC\NtMagick (source code) or
+<pre class="highlight"><code>ImageMagick\contrib\win32\MFC\NtMagick (source code) or
 ImageMagick\VisualMagick\contrib\win32\MFC\NtMagick (project - DSP)
 </code></pre>
 
@@ -162,13 +162,13 @@ ImageMagick\VisualMagick\contrib\win32\MFC\NtMagick (project - DSP)
 		  <p>This environmental variable sets the default list of places were Windows looks for EXE's and DLL's. Windows CMD shell seems to look in the <var>current</var> directory first no matter what, which may make it unnecessary to update the PATH. If you wish to run any of utilities from another location then you must add the path to your <code>bin</code> directory in. For instance, to do this for the default build environment like I do, you might add:</p>
 
 
-<pre><code>C:\ImageMagick\VisualMagick\bin
+<pre class="highlight"><code>C:\ImageMagick\VisualMagick\bin
 </code></pre>
 
 		<h4>MAGICK_HOME</h4>
 		  <p>If all you do is modify the PATH variable, the first problem you will run into is that ImageMagick may not be able to find any of its <var>modules</var>. Modules are all the IM_MOD*.DLL files you see in the distribution. There is one of these for each and every file format that ImageMagick supports. This environment variable tells the system were to look for these DLL's. The compiled in <var>default</var> is <var>execution path</var> - which says - look in the same place that the application is running <var>in</var>. If you are running from somewhere other then <code>bin</code> - this will no longer work and you must use this variable. If you elect to leave the modules in the same place as the EXE's (a good idea) then you can simply set this to the same place as you did the PATH variable. In my case:</p>
 
-<pre><code>C:\ImageMagick\coders
+<pre class="highlight"><code>C:\ImageMagick\coders
 </code></pre>
 
 			<p>This also the place were ImageMagick expects to find the <code>colors.xml</code>, <code>delegates.xml</code>, <code>magic.xml</code>, <code>modules.xml</code>, and <code>type.xml</code> files.</p>
@@ -179,12 +179,12 @@ ImageMagick\VisualMagick\contrib\win32\MFC\NtMagick (project - DSP)
 
 <p>You can elect to changes these things the good old <var>hard-coded</var> way. This define is applicable in <code>magick-config.h</code>:</p>
 
-<pre><code>#define MagickConfigurePath  "C:\\ImageMagick\\"
+<pre class="highlight"><code>#define MagickConfigurePath  "C:\\ImageMagick\\"
 </code></pre>
 
 <p>To view any image in a Microsoft window, type</p>
 
-<pre><code>magick image.ext win:
+<pre class="highlight"><code>magick image.ext win:
 </code></pre>
 
 <p>Make sure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> is installed, otherwise, you will be unable to convert or view a Postscript document, and Postscript standard fonts will not be available.</p>
@@ -236,7 +236,7 @@ ImageMagick\VisualMagick\contrib\win32\MFC\NtMagick (project - DSP)
 	<ol>
 	<li>Launch the Command Prompt application and move to the <code>contrib\win32\ATL7\ImageMagickObject</code> folder.</li>
 	<li>Build ImageMagickObject with these commands:
-<pre><code>BuildImageMagickObject clean
+<pre class="highlight"><code>BuildImageMagickObject clean
 BuildImageMagickObject release
 </code></pre></li>
 	</ol>
@@ -246,7 +246,7 @@ BuildImageMagickObject release
 	<ol>
 	<li>Launch the Command Prompt application and move to the <code>PerlMagick</code> folder.</li>
 	<li>Build PerlMagick with these commands:
-<pre><code>perl Makefile.PL
+<pre class="highlight"><code>perl Makefile.PL
 dmake release
 </code></pre></li>
 	</ol>
@@ -271,17 +271,17 @@ dmake release
 
 	<ol>
 	<li>Launch the Command Prompt application and move to the <code>PerlMagick</code> folder and type
-<pre><code>nmake test
+<pre class="highlight"><code>nmake test
 </code></pre></li>
 
 	<li>Move to the <code>VisualMagick/tests</code> folder and type
-<pre><code>validate
+<pre class="highlight"><code>validate
 </code></pre></li>
 	<li>Move to the <code>VisualMagick/Magick++/tests</code> folder and type
-<pre><code>run_tests.bat
+<pre class="highlight"><code>run_tests.bat
 </code></pre></li>
 	<li>Move to the <code>VisualMagick/Magick++/demo</code> folder and type
-<pre><code>run_demos.bat
+<pre class="highlight"><code>run_demos.bat
 </code></pre></li>
 	</ol>
 
@@ -298,7 +298,7 @@ dmake release
 
 <p>The Windows <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">binary</a> distribution includes a number of demo projects that you can use as a template for your own custom project.  For example, start with the Button project, generally located in the <code>c:/Program Files/ImageMagick-7.5.5-0/Magick++_demos</code> folder.  If not, be sure to select <code>Configuration Properties->C/C++->Preprocessor</code> and set these definitions:</p>
 
-<pre><code>NDEBUG
+<pre class="highlight"><code>NDEBUG
 WIN32
 _CONSOLE
 _VISUALC_

@@ -7,7 +7,7 @@
 
 <p>We list a few examples of the <code>identify</code> command here to illustrate its usefulness and ease of use. To get started, lets identify an image in the JPEG format:</p>
 
-<pre><code>-> magick identify rose.jpg
+<pre class="highlight"><code>-> magick identify rose.jpg
 rose.jpg JPEG 70x46 70x46+0+0 8-bit sRGB 2.36KB 0.000u 0:00.000
 </code></pre>
 
@@ -99,24 +99,24 @@ Image: rose.jpg
 
 <p>To get the print size in inches of an image at 72 DPI, use:</p>
 
-<pre><code>-> magick identify -format "%[fx:w/72] by %[fx:h/72] inches" document.png
+<pre class="highlight"><code>-> magick identify -format "%[fx:w/72] by %[fx:h/72] inches" document.png
 8.5 x 11 inches
 </code></pre>
 
 <p>The depth and dimensions of a raw image must be specified on the command line:</p>
 
-<pre><code>-> magick identify -depth 8 -size 640x480 image.raw
+<pre class="highlight"><code>-> magick identify -depth 8 -size 640x480 image.raw
 image.raw RGB 640x480 sRGB 9kb 0.000u 0:01
 </code></pre>
 
 <p>Here we display the image texture features, moments, perceptual hash, and the number of unique colors in the image:</p>
 
-<pre><code>-> magick identify -verbose -features 1 -moments -unique image.png
+<pre class="highlight"><code>-> magick identify -verbose -features 1 -moments -unique image.png
 </code></pre>
 
 <p>Here is a special define that outputs the location of the minimum or maximum pixel of the image:</p>
 
-<pre><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png
+<pre class="highlight"><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png
 </code></pre>
 
 <p>You can find additional examples of using <code>identify</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>

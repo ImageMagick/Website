@@ -4,7 +4,7 @@
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="api.html">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<pre><code>convert -size 100x60 canvas:skyblue -fill white -stroke black \
+<pre class="highlight"><code>convert -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
 </code></pre>
@@ -171,7 +171,7 @@ pop graphic-context
 
 <p>to render a pie chart with this command:</p>
 
-<pre><code>convert mvg:piechart.mvg piechart.png
+<pre class="highlight"><code>convert mvg:piechart.mvg piechart.png
 </code></pre>
 
 <p>which produces this rendering:</p>
@@ -182,7 +182,7 @@ pop graphic-context
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<pre><code>convert mvg:piechart.svg piechart.jpg
+<pre class="highlight"><code>convert mvg:piechart.svg piechart.jpg
 </code></pre>
 
 
@@ -223,7 +223,7 @@ pop graphic-context
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
-<pre><code>push graphic-context
+<pre class="highlight"><code>push graphic-context
   viewbox 0 0 width height
   [ any other MVG commands ]
 pop graphic-context
@@ -231,7 +231,7 @@ pop graphic-context
 
 <p>Pattern syntax (saving and restoring context):</p>
 
-<pre><code>push pattern id x,y width,height
+<pre class="highlight"><code>push pattern id x,y width,height
  push graphic-context
   [ drawing commands ]
  pop graphic-context
@@ -240,7 +240,7 @@ pop pattern
 
 <p>an example is (%s is a identifier string):</p>
 
-<pre><code>push defs
+<pre class="highlight"><code>push defs
  push pattern %s 10,10 20,20
   push graphic-context
    fill red
@@ -256,24 +256,24 @@ pop defs
 
 <p>For image tiling use:</p>
 
-<pre><code>push pattern id x,y width,height
+<pre class="highlight"><code>push pattern id x,y width,height
  image Copy ...
 pop pattern
 </code></pre>
 
 <p>Note you can use the pattern for either the fill or stroke like:</p>
 
-<pre><code>stroke url(#%s)
+<pre class="highlight"><code>stroke url(#%s)
 </code></pre>
 
 <p>or</p>
 
-<pre><code>fill url(#%s)
+<pre class="highlight"><code>fill url(#%s)
 </code></pre>
 
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
-<pre><code>push defs
+<pre class="highlight"><code>push defs
  push clip-path %s
   push graphic-context
    rectangle 10,10 20,20
@@ -320,20 +320,20 @@ clip-path url(#%s)
   <tr>
     <td><a id="clip-rule"></a>clip-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre><code>evenodd
+<pre class="highlight"><code>evenodd
 nonzero</code></pre></td>
   </tr>
   <tr>
     <td><a id="clip-units"></a>clip-units <var>units</var></td>
     <td>Choose from these unit types:
-<pre><code>userSpace
+<pre class="highlight"><code>userSpace
 userSpaceOnUse
 objectBoundingBox</code></pre></td>
   </tr>
   <tr>
     <td><a id="color"></a>color <var>x</var>,<var>y</var> <var>method</var></td>
     <td>Choose from these method types:
-<pre><code>point
+<pre class="highlight"><code>point
 replace
 floodfill
 filltoborder
@@ -342,7 +342,7 @@ reset</code></pre></td>
   <tr>
     <td><a id="decorate"></a>decorate <var>type</var></td>
     <td>Choose from these types of decorations:
-<pre><code>none
+<pre class="highlight"><code>none
 line-through
 overline
 underline</code></pre></td>
@@ -362,7 +362,7 @@ underline</code></pre></td>
   <tr>
     <td><a id="fill-rule"></a>fill-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre><code>evenodd
+<pre class="highlight"><code>evenodd
 nonzero</code></pre></td>
   </tr>
   <tr>
@@ -380,7 +380,7 @@ nonzero</code></pre></td>
   <tr>
     <td><a id="font-stretch"></a>font-stretch <var>type</var></td>
     <td>Choose from these stretch types:
-<pre><code>all
+<pre class="highlight"><code>all
 normal
 ultra-condensed
 extra-condensed
@@ -394,7 +394,7 @@ ultra-expanded</code></pre></td>
   <tr>
     <td><a id="font-style"></a>font-style <var>style</var></td>
     <td>Choose from these styles:
-<pre><code>all
+<pre class="highlight"><code>all
 normal
 italic
 oblique</code></pre></td>
@@ -402,7 +402,7 @@ oblique</code></pre></td>
   <tr>
     <td><a id="font-weight"></a>font-weight <var>weight</var></td>
     <td>Choose from these weights:
-<pre><code>all
+<pre class="highlight"><code>all
 normal
 bold
 100
@@ -418,14 +418,14 @@ bold
   <tr>
     <td><a id="gradient-units"></a>gradient-units <var>units</var></td>
     <td>Choose from these units:
-<pre><code>userSpace
+<pre class="highlight"><code>userSpace
 userSpaceOnUse
 objectBoundingBox</code></pre></td>
   </tr>
   <tr>
     <td><a id="gravity"></a>gravity <var>type</var></td>
     <td>Choose from these gravity types:
-<pre><code>NorthWest
+<pre class="highlight"><code>NorthWest
 North
 NorthEast
 West
@@ -628,7 +628,7 @@ SouthEast</code></pre></td>
   <tr>
     <td><a id="matte"></a>matte <var>x,y method</var></td>
     <td>Choose from these methods:
-<pre><code>point
+<pre class="highlight"><code>point
 replace
 floodfill
 filltoborder
@@ -749,14 +749,14 @@ reset</code></pre></td>
   <tr>
     <td><a id="stroke-linecap"></a>stroke-linecap <var>type</var></td>
     <td>Choose from these cap types:
-<pre><code>butt
+<pre class="highlight"><code>butt
 round
 square</code></pre></td>
   </tr>
   <tr>
     <td><a id="stroke-linejoin"></a>stroke-linejoin <var>type</var></td>
     <td>Choose from these join types:
-<pre><code>bevel
+<pre class="highlight"><code>bevel
 miter
 round</code></pre></td>
   </tr>

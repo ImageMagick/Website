@@ -29,24 +29,24 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<pre>-> convert https://www.imagemagick.org/image/wizard.png wizard.jpg
+<pre class="highlight">-> convert https://www.imagemagick.org/image/wizard.png wizard.jpg
 convert: not authorized `HTTPS'
 convert: unable to open file: No such file or directory
 convert: no images defined `wizard.jpg'</pre>
 
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
-<pre><code>&lt;policy domain="delegate" rights="none" pattern="*" />
+<pre class="highlight"><code>&lt;policy domain="delegate" rights="none" pattern="*" />
 &lt;policy domain="coder" rights="none" pattern="*" />
 &lt;policy domain="coder" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
 
 <p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
-<pre><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
+<pre class="highlight"><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
 &lt;policy domain="cache" name="memory-map" value="anonymous"/>
 &lt;policy domain="system" name="shred" value="1"/></code></pre>
 
 <p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
-<pre><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
+<pre class="highlight"><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
 
@@ -105,7 +105,7 @@ Path: [built-in]
 
 <p>When writing image pixels to disk, ImageMagick firsts preallocates the disk file, which is much faster than fully populating the file with zeros.  To further increase performance, we memory-map the file on disk.  With memory-mapping, we get an increase in performance (up to 5x), however, there remains a possibility that as the disk file is populated, it may run out of free space.  The OS then throws a SIGBUS signal which prevents ImageMagick from continuing.  To prevent a SIGBUS, use this security policy:
 
-<pre>
+<pre class="highlight">
 &lt;policy domain="cache" name="synchronize" value="True"/>
 </pre>
 
@@ -115,7 +115,7 @@ Path: [built-in]
 
 <p>A zero configuration build of ImageMagick does not permit external configuration files.  To define your security policy, you must instead edit the <code>MagickCore/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
 
-<pre><code>static const char
+<pre class="highlight"><code>static const char
   *ZeroConfigurationPolicy = \
 "&lt;policymap> \
   &lt;policy domain=\"coder\" rights=\"none\" pattern=\"MVG\"/> \

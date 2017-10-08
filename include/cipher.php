@@ -9,19 +9,19 @@
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
 
-<pre><code>convert rose.jpg -encipher passphrase.txt rose.png
+<pre class="highlight"><code>convert rose.jpg -encipher passphrase.txt rose.png
 </code></pre>
 
 <p>Here we encipher an image using another image as the passphrase:</p>
 
-<pre><code>convert rose.jpg -encipher smiley.gif rose.png
+<pre class="highlight"><code>convert rose.jpg -encipher smiley.gif rose.png
 </code></pre>
 
 <h2 class="magick-post-title"><a id="decipher"></a>Decipher an Image</h2>
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
 
-<pre><code>convert rose.png -decipher passphrase.txt rose.jpg
+<pre class="highlight"><code>convert rose.png -decipher passphrase.txt rose.jpg
 </code></pre>
 
 <h2 class="magick-post-title"><a id="caveats"></a>Encipher and Decipher Caveats</h2>

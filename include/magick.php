@@ -3,12 +3,12 @@
 
 <p>We list a few examples of the <code>magick</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
-<pre><code>magick rose.jpg rose.png
+<pre class="highlight"><code>magick rose.jpg rose.png
 </code></pre>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<pre><code>magick rose.jpg -resize 50% rose.png
+<pre class="highlight"><code>magick rose.jpg -resize 50% rose.png
 </code></pre>
 
 <ul>
@@ -23,7 +23,7 @@
 
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
-<pre><code>magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
+<pre class="highlight"><code>magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
   -draw "text 20,55 \'Magick\'" fuzzy-magick.png
 </code></pre>
@@ -34,14 +34,14 @@
 
 <p>or here we resize an image with improved quality:</p>
 
-<pre><code>magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
+<pre class="highlight"><code>magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
 </code></pre>
 
 <p>Utilize other command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> from the <code>magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</code> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
-<pre><code>ln -s magick convert
+<pre class="highlight"><code>ln -s magick convert
 convert rose.jpg rose.png
 magick convert rose.jpg rose.png
 </code></pre>
