@@ -8,8 +8,7 @@
 <p>We list a few examples of the <code>mogrify</code> command here to illustrate its usefulness and ease of use.  To get started, let's reduce the size of our
 rose:</p>
 
-<pre><code>
-magick mogrify -resize 50% rose.jpg
+<pre><code>magick mogrify -resize 50% rose.jpg
 </code></pre>
 
 <ul>
@@ -24,14 +23,12 @@ magick mogrify -resize 50% rose.jpg
 
 <p>You can resize all your JPEG images in a folder to a maximum dimension of 256x256 with this command:</p>
 
-<pre><code>
-magick mogrify -resize 256x256 *.jpg
+<pre><code>magick mogrify -resize 256x256 *.jpg
 </code></pre>
 
 <p>Finally, we convert all our PNG images in a folder to the JPEG format:</p>
 
-<pre><code>
-magick mogrify -format jpg *.png
+<pre><code>magick mogrify -format jpg *.png
 </code></pre>
 
 <p>Here image files 1.png, 2.png, etc., are left untouched and files 1.jpg, 2.jpg, etc., are created.  They are copies of their respective PNG images except are stored  in the JPEG image format.</p>

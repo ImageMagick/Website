@@ -7,14 +7,12 @@
 
 <p>We list a few examples of the <code>conjure</code> command here to illustrate its usefulness and ease of use. To get started, here is simple <code>conjure</code> command:</p>
 
-<pre><code>
-magick conjure -dimensions 400x400 msl:incantation.msl
+<pre><code>magick conjure -dimensions 400x400 msl:incantation.msl
 </code></pre>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
 
-<pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;read filename="image.gif" /&gt;
   &lt;get width="base-width" height="base-height" /&gt;
@@ -27,8 +25,7 @@ magick conjure -dimensions 400x400 msl:incantation.msl
 
 <p>In this example, a family stayed home for their vacation but as far as their friends are concerned they went to a beautiful beach in the Caribbean:</p>
 
-<pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;group>
     &lt;image id="family">
         &lt;read filename="family.gif"/>
@@ -49,8 +46,7 @@ magick conjure -dimensions 400x400 msl:incantation.msl
 
 <p>Here we display the width in pixels of text for a particular font and pointsize.</p>
 
-<pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;query-font-metrics text="ImageMagick" font="helvetica" pointsize="48" /&gt;
   &lt;print output="Text width is %[msl:font-metrics.width] pixels.\n" /&gt;
@@ -59,8 +55,7 @@ magick conjure -dimensions 400x400 msl:incantation.msl
 
 <p>The <code>query-font-metrics</code> tag supports these properties:</p>
 
-<pre><code>
-msl:font-metrics.pixels_per_em.x
+<pre><code>msl:font-metrics.pixels_per_em.x
 msl:font-metrics.pixels_per_em.y
 msl:font-metrics.ascent
 msl:font-metrics.descent

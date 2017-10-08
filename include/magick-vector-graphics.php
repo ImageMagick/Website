@@ -4,8 +4,7 @@
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="api.html">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<pre><code>
-convert -size 100x60 canvas:skyblue -fill white -stroke black \
+<pre><code>convert -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
 </code></pre>
@@ -172,8 +171,7 @@ pop graphic-context
 
 <p>to render a pie chart with this command:</p>
 
-<pre><code>
-convert mvg:piechart.mvg piechart.png
+<pre><code>convert mvg:piechart.mvg piechart.png
 </code></pre>
 
 <p>which produces this rendering:</p>
@@ -184,8 +182,7 @@ convert mvg:piechart.mvg piechart.png
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<pre><code>
-convert mvg:piechart.svg piechart.jpg
+<pre><code>convert mvg:piechart.svg piechart.jpg
 </code></pre>
 
 
@@ -226,8 +223,7 @@ convert mvg:piechart.svg piechart.jpg
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
-<pre><code>
-push graphic-context
+<pre><code>push graphic-context
   viewbox 0 0 width height
   [ any other MVG commands ]
 pop graphic-context
@@ -235,8 +231,7 @@ pop graphic-context
 
 <p>Pattern syntax (saving and restoring context):</p>
 
-<pre><code>
-push pattern id x,y width,height
+<pre><code>push pattern id x,y width,height
  push graphic-context
   [ drawing commands ]
  pop graphic-context
@@ -245,8 +240,7 @@ pop pattern
 
 <p>an example is (%s is a identifier string):</p>
 
-<pre><code>
-push defs
+<pre><code>push defs
  push pattern %s 10,10 20,20
   push graphic-context
    fill red
@@ -262,28 +256,24 @@ pop defs
 
 <p>For image tiling use:</p>
 
-<pre><code>
-push pattern id x,y width,height
+<pre><code>push pattern id x,y width,height
  image Copy ...
 pop pattern
 </code></pre>
 
 <p>Note you can use the pattern for either the fill or stroke like:</p>
 
-<pre><code>
-stroke url(#%s)
+<pre><code>stroke url(#%s)
 </code></pre>
 
 <p>or</p>
 
-<pre><code>
-fill url(#%s)
+<pre><code>fill url(#%s)
 </code></pre>
 
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
-<pre><code>
-push defs
+<pre><code>push defs
  push clip-path %s
   push graphic-context
    rectangle 10,10 20,20

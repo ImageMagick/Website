@@ -7,14 +7,12 @@
 
 <p>We list a few examples of the <code>animate</code> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
 
-<pre><code>
-magick animate movie.gif
+<pre><code>magick animate movie.gif
 </code></pre>
 
 <p>To animate a directory of JPEG images, use:</p>
 
-<pre><code>
-magick animate *.jpg
+<pre><code>magick animate *.jpg
 </code></pre>
 
 <p>You can find additional examples of using <code>animate</code> in <a href="https://www.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>

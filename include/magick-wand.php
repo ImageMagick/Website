@@ -17,14 +17,12 @@
 
 <p>After you write your MagickWand program, compile it like this:</p>
 
-<pre><code>
-cc -o wand wand.c `pkg-config --cflags --libs MagickWand`
+<pre><code>cc -o wand wand.c `pkg-config --cflags --libs MagickWand`
 </code></pre>
 
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre><code>
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+<pre><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 </code></pre>
 
 <p>Here is a example program that utilizes the MagickWand API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>

@@ -68,8 +68,7 @@ insensitive manner. </p>
 free-form string tables directly, allowing you to override the above sequence,
 and avoid accessing an attribute or property of the same name.</p>
 
-<pre><code>
-%[artifact:<var>setting</var>]
+<pre><code>%[artifact:<var>setting</var>]
 %[option:<var>setting</var>]
 </code></pre>
 
@@ -275,8 +274,7 @@ filename, type, width, height. </p>
 <p>Here is a sample command and its output for an image with filename
 <code>bird.miff</code> and whose width is 512 and height is 480.</p>
 
-<pre><code>
--> identify -format "%m:%f %wx%h" bird.miff
+<pre><code>-> identify -format "%m:%f %wx%h" bird.miff
 MIFF:bird.miff 512x480
 </code></pre>
 
@@ -585,8 +583,7 @@ Artifact. </p>
 now list all free-form string properties, artifacts, and options, (but not
 specific image attributes) using...</p>
 
-<pre><code>
-convert ... \
+<pre><code>convert ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \
@@ -606,16 +603,14 @@ example you can do a numerical calculation use <code>%[fx:...]</code> to
 evaluate the given <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 
-<pre><code>
-%[fx:<var>expression</var>]
+<pre><code>%[fx:<var>expression</var>]
 </code></pre>
 
 <p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
-<pre><code>
-%[pixel:<var>expression</var>]
+<pre><code>%[pixel:<var>expression</var>]
 </code></pre>
 
 <h3>Specific Profile Percent Escape Prefixes</h3>
@@ -623,8 +618,7 @@ expression:</p>
 <p>You can also use the following special formatting syntax to print EXIF
 mage meta-data that was included in the image read in:</p>
 
-<pre><code>
-%[EXIF:<var>tag</var>]
+<pre><code>%[EXIF:<var>tag</var>]
 </code></pre>
 
 <p>Choose <var>tag</var> from the following:</p>
@@ -723,8 +717,7 @@ shell from misinterpreting any spaces and square brackets.</p>
 <p>The following special formatting syntax can be used to print IPTC
 information contained in the file:</p>
 
-<pre><code>
-%[IPTC:<var>dataset</var>:<var>record</var>]
+<pre><code>%[IPTC:<var>dataset</var>:<var>record</var>]
 </code></pre>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>

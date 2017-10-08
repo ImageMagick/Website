@@ -402,8 +402,7 @@ but not always, the same name as the composite 'method' they use, and replaces
 the normal use of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a>
 setting in the "<code>composite</code>" command.  For example... </p>
 
-<pre><code>
-composite ... -blend 50x50 ...
+<pre><code>composite ... -blend 50x50 ...
 </code></pre>
 
 <p>As of IM v6.5.3-4 the "<code>convert</code>" command can now also supply
@@ -417,8 +416,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
-<pre><code>
-convert ... -compose blend  -define compose:args=50,50 -composite ...
+<pre><code>convert ... -compose blend  -define compose:args=50,50 -composite ...
 </code></pre>
 
 <p>The following is a table of these special 'argumented' compose methods,

@@ -8,8 +8,7 @@
 
 <p>Use this command:</p>
 
-<pre><code>
-convert wizard.png -quality 50 -define webp:lossless=true wizard.webp
+<pre><code>convert wizard.png -quality 50 -define webp:lossless=true wizard.webp
 </code></pre>
 
 <p>Here is a complete list of WebP encoding options:</p>

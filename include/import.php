@@ -7,14 +7,12 @@
 
 <p>We list a few examples of the <code>import</code> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
 
-<pre><code>
-magick import rose.jpg
+<pre><code>magick import rose.jpg
 </code></pre>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
-<pre><code>
-magick import -window root screen.ps
+<pre><code>magick import -window root screen.ps
 </code></pre>
 
 <p>You can find additional examples of using <code>import</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>

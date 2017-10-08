@@ -12,8 +12,7 @@
 <p>Object statistics is useful to review.  To display them, use this command:</p>
 <pre><code>magick objects.gif -define connected-components:verbose=true -connected-components 4 objects.png</code></pre>
 <p>Five objects were detected in the source image with these statistics:</p>
-<pre><code>
-Objects (id: bounding-box centroid area mean-color):
+<pre><code>Objects (id: bounding-box centroid area mean-color):
   0: 256x171+0+0 119.2,80.8 33117 srgb(0,0,0)
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)

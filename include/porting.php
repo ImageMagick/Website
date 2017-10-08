@@ -188,8 +188,7 @@ GetPixelRedTraits()      SetPixelRedTraits()
 GetPixelYellowTraits()   SetPixelYellowTraits()
 GetPixelYTraits()        SetPixelYTraits()</code></pre>
 <p>For convenience you can set the active trait for a set of pixel channels with a channel mask and this method:</p>
-<pre><code>
-SetImageChannelMask()
+<pre><code>SetImageChannelMask()
 </code></pre>
 
 <p>Previously MagickCore methods had channel analogs, for example, NegateImage() and NegateImageChannels().  The channel analog methods are no longer necessary because the pixel channel traits specify whether to act on a particular pixel channel or whether to blend with the alpha mask.  For example, instead of</p>
@@ -262,8 +261,7 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <ul>
 <li>Almost all image processing algorithms are now channel aware.</li>
 <li>Use this construct, for example, to avoid operating on the alpha channel:
-<pre><code>
-image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));
+<pre><code>image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));
 </code></pre>
 </li>
 </ul>

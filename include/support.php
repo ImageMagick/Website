@@ -64,8 +64,7 @@
 <p>Check, in USD funds, made payable to
   <a href="https://www.imagemagick.org/">ImageMagick Studio LLC</a>, and send to:</p>
 <ul>
-<pre><code>
-ImageMagick Studio LLC
+<pre><code>ImageMagick Studio LLC
 P.O. Box 40
 Landenberg, PA  19350
 USA
