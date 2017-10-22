@@ -19,9 +19,9 @@
 magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
 </code></pre>
 
-<p>The same concept is needed when separating channels. Normally, the conversion to separate each channel of an sRGB color image produces separate linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as non-linear grayscale. For example, the following produces non-linear grayscale channels.</p>
+<p>The same concept is needed when separating channels.  Normally, the conversion to separate each channel of an sRGB color image produces separate non-linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as linear grayscale. For example, the following produces linear grayscale channels.</p>
 
-<pre class="highlight"><code>magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png</code></pre>
+<pre class="highlight"><code>magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</code></pre>
 
 <p>When separating and recombining channels, with potential intermediate processing, it is important to identify the colorspace used, especially during the recombination. For example,</p>
 
