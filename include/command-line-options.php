@@ -4687,8 +4687,8 @@ Consequently this has no effect on the image sequence order.</p>
 
 <p>ImageMagick provides a number of methods used in situations where an
 operator needs to determine a single grayscale value for some purpose, from
-an image with red, green, and blue pixel components. Typically the linear
-<code>Rec709Luminance</code> formula is used, which is the same formula used when converting images to <code>-colorspace gray</code>. </p>
+an image with red, green, and blue pixel components. Typically the 
+<code>Rec709Luma</code> formula is used, which is the same formula used when converting images to <code>-colorspace gray</code>. </p>
 
 <p>The following formulas are currently provided, and will first convert
 the pixel values to linear-RGB or non-linear sRGB colorspace before
@@ -4711,9 +4711,9 @@ current value in the images respective R,G,B channel regardless of
 what that is, or what colorspace the image is currently using.</p>
 
 <dl class="row">
-<dt class="col-md-4">Average</dt><dd class="col-md-8">(R + G + B) / 3.0</dd>
-<dt class="col-md-4">MS</dt><dd class="col-md-8">(R^2 + G^2 + B^2) / 3.0</dd>
-<dt class="col-md-4">RMS</dt><dd class="col-md-8">sqrt( (R^2 + G^2 + B^2) / 3.0 )</dd>
+<dt class="col-md-4">Average</dt><dd class="col-md-8">(R' + G' + B') / 3.0</dd>
+<dt class="col-md-4">MS</dt><dd class="col-md-8">(R'^2 + G'^2 + B'^2) / 3.0</dd>
+<dt class="col-md-4">RMS</dt><dd class="col-md-8">sqrt( (R'^2 + G'^2 + B'^2) / 3.0 )</dd>
 </dl>
 
 <p>These methods are often used for other purposes, such as generating a
