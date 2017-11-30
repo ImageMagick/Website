@@ -4471,7 +4471,7 @@ within a tile. The default gravity is <code>Center</code> for this purpose.</p>
 <p class="magick-description">convert image to grayscale.</p>
 
 <p>This will use one of the <a href="#intensity" >-intensity</a> methods to
-convert the given image into a linear-grayscale image. </p>
+convert the given image into a grayscale image. </p>
 
 <p>For example, to convert an image to (linear) Rec709Luminance grayscale,  type:</p>
 
@@ -4490,7 +4490,7 @@ convert the given image into a linear-grayscale image. </p>
 
 <p>which is equivalent to:</p>
 
-<pre class="highlight"><code>convert in.png -set colorspace RGB -colorspace gray out.png
+<pre class="highlight"><code>convert in.png -colorspace gray out.png
 </code></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
