@@ -235,21 +235,8 @@ any values are weighted by the alpha channel of the input and output images.
 This 'Over' alpha blending is also applied to the lighting composition methods
 below. </p>
 
-<p>As of IM v6.6.1-6, if the special '<code>Sync</code>' flag is not specified
-(enabled by default) with the <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/command-line-options.php#channel"
->-channel</a> setting, then the above mathematical compositions will nolonger
-synchronise its actions with the alpha channel.  Instead the math composition
-will be applied on an individual channel basis as defined by the <a
-href="<?php echo
-$_SESSION['RelativePath']?>/../script/command-line-options.php#channel"
->-channel</a>.  This includes the alpha channel. This special usage
-allows you to perform true mathematics of the image channels, without alpha
+<p> The math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
 composition effects, becoming involved. </p>
-
-<p>This special flag is not applied to the lighting composition methods (see
-below) even though they are closely related to mathematical composition
-methods.</p>
 
 <p>The following lighting composition methods are also available. </p>
 
@@ -265,15 +252,13 @@ methods.</p>
     <td>This is equivalent to 'Plus' in that the color channels
         are simply added, however it does not 'Plus' the alpha channel, but
         uses the normal 'Over' alpha blending, which transparencies are
-        involved.  Produces a sort of additive multiply-like result. Added
-        ImageMagick version 6.5.4-3. </td>
+        involved.  Produces a sort of additive multiply-like result.  </td>
   </tr>
 
   <tr>
     <td>linear-burn</td>
     <td>As 'Linear-Dodge', but also subtract one from the result.
-        Sort of a additive 'Screen' of the images.  Added ImageMagick version
-        6.5.4-3. </td>
+        Sort of a additive 'Screen' of the images. </td>
   </tr>
 
   <tr>
@@ -285,8 +270,7 @@ methods.</p>
   <tr>
     <td>color-burn</td>
     <td>Darkens the destination color to reflect the source
-        color.  Painting with white produces no change. Fixed in ImageMagick
-        version 6.5.4-3. </td>
+        color.  Painting with white produces no change.  </td>
   </tr>
 
   <tr>
@@ -327,29 +311,26 @@ methods.</p>
         lightening is proportional to the difference between the source color
         and 0.5. If it is equal to 0.5, the destination is unchanged. Painting
         with pure black or white produces a distinctly darker or lighter area,
-        but does not result in pure black or white. Fixed in ImageMagick
-        version 6.5.4-3. </td>
+        but does not result in pure black or white. </td>
   </tr>
 
   <tr>
     <td>pegtop-light</td>
     <td>Almost equivalent to 'Soft-Light', but using a
         continuous mathematical formula rather than two conditionally
-        selected formulae. Added ImageMagick version 6.5.4-3. </td>
+        selected formulae. </td>
   </tr>
 
   <tr>
     <td>vivid-light</td>
     <td>A modified 'Linear-Light' designed to preserve very stong
-        primary and secondary colors in the image. Added ImageMagick version
-        6.5.4-3. </td>
+        primary and secondary colors in the image.  </td>
   </tr>
 
   <tr>
     <td>pin-light</td>
     <td>Similar to 'Hard-Light', but using sharp linear shadings,
-        to simulate the effects of a strong 'pinhole' light source. Added
-        ImageMagick version 6.5.4-3. </td>
+        to simulate the effects of a strong 'pinhole' light source. </td>
   </tr>
 
   </tbody>
@@ -389,6 +370,11 @@ methods.</p>
     href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> factor), with transparency.
     </td>
   </tr>
+
+  <tr>
+    <td>stereo</td>
+    <td>create a stereo anaglyph</td>
+  </tr>
   </tbody>
 </table>
 
@@ -405,8 +391,7 @@ setting in the "<code>composite</code>" command.  For example... </p>
 <pre class="highlight"><code>composite ... -blend 50x50 ...
 </code></pre>
 
-<p>As of IM v6.5.3-4 the "<code>convert</code>" command can now also supply
-these extra arguments to its <a href="<?php echo
+<p>The "<code>magick</code>" command can accept these extra arguments to its <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#composite"
 >-composite</a> operator, using the special <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a>
@@ -468,12 +453,7 @@ with a brief summary of what they do. For more details see the equivalent
     <br/>     <code>A*Sc*Dc + B*Sc + C*Dc + D</code>
     <br/>Can be used to generate a custom composition method that would
         otherwise need to be implemented using the slow <a
-        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> DIY image operator.   Added
-        to ImageMagick version 6.5.4-3.
-    <br/>As of IM v6.6.1-6 this method will do per-channel math compositions
-        if the 'Sync' flag is removed from <a
-        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel" >-channel</a>, just like all
-        the other mathematical composition methods above.
+        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> DIY image operator.
     </td>
   </tr>
 
@@ -516,7 +496,6 @@ with a brief summary of what they do. For more details see the equivalent
         overlay image (100% = half width/height of image). Using '!' switches
         percentage arguments to refer to the destination image size instead.
     <br/><br/>
-        Special flags were added Added to ImageMagick version 6.5.3-5.
     </td>
   </tr>
 
@@ -536,7 +515,6 @@ with a brief summary of what they do. For more details see the equivalent
         This means the overlay can lookup a completely different region of the
         destination image.
     <br/><br/>
-        Added to ImageMagick version 6.5.3-5.
     </td>
   </tr>
 
@@ -563,7 +541,6 @@ with a brief summary of what they do. For more details see the equivalent
         radial blurs, or a rough approximation for rotational blur. Or any mix
         of the two.
     <br/><br/>
-        Added to ImageMagick version 6.5.4-0.
     </td>
   </tr>
 
