@@ -123,9 +123,9 @@ display logo.gif</code></pre>
   </tr>
 
   <tr>
-    <td>ImageMagick-x86_64-apple-darwin16.7.0.tar.gz</td>
-    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin16.7.0.tar.gz">download</a></td>
-    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin16.7.0.tar.gz">download</a></td>
+    <td>ImageMagick-x86_64-apple-darwin17.2.0.tar.gz</td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin17.2.0.tar.gz">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin17.2.0.tar.gz">download</a></td>
     <td>macOS Sierra</td>
   </tr>
 </table></div>
@@ -138,7 +138,7 @@ display logo.gif</code></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre class="highlight"><code>tar xvzf ImageMagick-x86_64-apple-darwin16.7.0.tar.gz</code></pre>
+<pre class="highlight"><code>tar xvzf ImageMagick-x86_64-apple-darwin17.2.0.tar.gz</code></pre>
 
 <p>Set the <code>MAGICK_HOME</code> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
