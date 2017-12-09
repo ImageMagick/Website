@@ -92,7 +92,7 @@
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> 
 </p>
     <p><a href="#">Back to top</a> •
-    <a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
+    <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a></p>
     <?php if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") echo '<p><small>Sponsored by <a href="https://transloadit.com">Transloadit</a> - the file uploading &amp; processing service</small></p>' ?>
     <p><small>© 1999-2018 ImageMagick Studio LLC</small></p>
