@@ -83,7 +83,6 @@
     </script>
   </div>
   </header>
-  <?php flush(); ?>
   <main role="main" class="container">
     <div class="magick-template">
 <?php
