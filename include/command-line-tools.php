@@ -24,7 +24,7 @@
   <dt class="col-md-4"><a id="montage"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a></dt><dd class="col-md-8">create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</dd>
   <dt class="col-md-4"><a id="stream"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a></dt><dd class="col-md-8">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</dd>
 </dl>
-<p>If these tools are not available, you can simply append them to the <code>magick</code> tool like this:</p>
-<pre class="highlight"><code>magick convert logo: logo.jpg</code></pre>
+<p>If these tools are not available on your computer, you can instead utilize them as a subcommand of the <code>magick</code> command.  For example,</p>
+<pre class="highlight"><code>magick identify -verbose myImage.png</code></pre>
 
 </div>
