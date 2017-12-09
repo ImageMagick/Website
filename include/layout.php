@@ -31,9 +31,8 @@
   <link href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
-  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick.php" rel="stylesheet">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
 </head>
-<?php flush(); ?>
 <body>
   <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
