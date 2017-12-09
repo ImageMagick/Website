@@ -54,7 +54,7 @@
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
   SiteHeader($title);
-  flush();
+  ob_flush();
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
   if (!isset($dynamic_content) || !$dynamic_content) {
