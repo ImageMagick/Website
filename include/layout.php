@@ -85,11 +85,11 @@
     </div>
   </main><!-- /.container -->
   <footer class="magick-footer">
-    <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
-     <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a> •
+    <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>
+     <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> 
 </p>
     <p><a href="#">Back to top</a> •
     <a href="http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
