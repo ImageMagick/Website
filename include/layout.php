@@ -31,8 +31,7 @@
   <link href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
-  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-template.css" rel="stylesheet">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick.php" rel="stylesheet">
 </head>
 <?php flush(); ?>
 <body>
@@ -89,20 +88,18 @@
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> 
+    <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a>
 </p>
-    <p><a href="#">Back to top</a> •
-    <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
+    <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
+    <a href="#">Back to top</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a></p>
     <?php if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") echo '<p><small>Sponsored by <a href="https://transloadit.com">Transloadit</a> - the file uploading &amp; processing service</small></p>' ?>
     <p><small>© 1999-2018 ImageMagick Studio LLC</small></p>
   </footer>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/popper.min.js" crossorigin="anonymous"></script>
+  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.css"></script>
   <script>window.jQuery || document.write('<script src="<?php echo $_SESSION['RelativePath']?>/../assets/jquery.min.js"><\/script>')</script>
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.js"></script>
 
 </body>
 </html>
