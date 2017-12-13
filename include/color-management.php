@@ -49,8 +49,4 @@ magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set 
 
 <p>When specifying individual colors as <code>rgb(...)</code> or hex, these colors will still be interpreted as non-linear, that is, as sRGB colors. However if one wants to create linear colors, use <code>icc-color(rgb,r,g,b)"</code>, where <code>r</code>, <code>g</code>, and <code>b</code> are in the range 0 to 1. See the <a href="https://www.imagemagick.org/script/color.php" >Color</a> page.</p>
 
-<p>There are now also distinctions between linear and non-linear shades of gray. Any named shade of gray, such as black, white or numbered grays like <code>gray50</code> are non-linear gray. However, <code>gray(...)</code> is now linear gray. Hex grayscale values are non-linear.</p>
-
-<p>This means that you need to be careful when you create grayscale gradients. For example, <code>gradient:</code>, <code>gradient:"white-black"</code>, <code>gradient:"gray100-gray0"</code> generates non-linear gradients, however <code>gradient:"gray(255)-gray(0)"</code> or <code>gradient:"gray(100%)-gray(0%)"</code> generates linear gradients.</p>
-
 </div>
