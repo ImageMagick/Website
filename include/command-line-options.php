@@ -764,15 +764,22 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
 <p>The channels above can also be specified as a comma-separated list or can be
 abbreviated as a concatenation of the letters '<code>R</code>', '<code>G</code>',
 '<code>B</code>', '<code>A</code>', '<code>O</code>', '<code>C</code>',
-'<code>M</code>', '<code>Y</code>', '<code>K</code>'.
+'<code>M</code>', '<code>Y</code>', '<code>K</code>'.</p>
 
-For example, to only select the <code>Red</code> and <code>Blue</code> channels
-you can either use </p>
-<pre class="highlight"><code>-channel Red,Blue
-</code></pre>
-<p>or you can use the short hand form</p>
-<pre class="highlight"><code>-channel RB
-</code></pre>
+<p>The numerals 0 to 31 may also be used to specify channels, where 0 to 5 are: <br />
+'<code>0</code>' equals <code>Red</code> or <code>Cyan</code> <br />
+'<code>1</code>' equals <code>Green</code> or <code>Magenta</code> <br />
+'<code>2</code>' equals <code>Blue</code> or <code>Yellow</code> <br />
+'<code>3</code>' equals <code>Black</code> <br />
+'<code>4</code>' equals <code>Alpha</code> or <code>Opacity</code> <br />
+'<code>5</code>' equals <code>Index</code></p>
+
+<p>For example, to only select the <code>Red</code> and <code>Blue</code> channels
+you can use any of the following:</p>
+<pre class="highlight"><code>-channel Red,Blue</code>
+<pre class="highlight"><code>-channel R,B</code>
+<pre class="highlight"><code>-channel RB</code>
+<pre class="highlight"><code>-channel 0,1</code></pre>
 
 <p>All the channels that are present in an image can be specified using the
 special channel type <code>All</code>. Not all operators are 'channel capable',
@@ -4480,7 +4487,7 @@ convert the given image into a grayscale image. </p>
 
 <p>which is equivalent to:</p>
 
-<pre class="highlight"><code>convert in.png -colorspace gray out.png
+<pre class="highlight"><code>convert in.png -colorspace RGB -colorspace gray out.png
 </code></pre>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>

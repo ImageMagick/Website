@@ -46,10 +46,15 @@ rgba(100%, 0%, 0%, 1.0)        the same, with an explicit alpha value</code></pr
 
 <p>There is also a color called 'none' that is fully transparent.  This color is shorthand for <code>rgba(0, 0, 0, 0.0)</code>.</p>
 
-<p>Gray values are conveniently defined with a single intensity value or an intensity value and an alpha value:</p>
+<p>Non-linear gray values are conveniently defined with a name, single intensity value or an intensity value and an alpha value:</p>
 
-<pre class="highlight"><code>gray(50%)        mid gray
-graya(50%, 0.5)  semi-transparent mid gray</code></pre>
+<pre class="highlight"><code>
+gray50            near mid gray
+gray(127)         near mid gray
+gray(50%)         mid gray
+graya(50%, 0.5)   semi-transparent mid gray</code></pre>
+
+<p>For linear gray values add -colorspace RGB -colorspace gray when creating gray colors</p>
 
 <p>The ImageMagick color model also supports hue-saturation-lightness (HSL) and hue-saturation-brightness (HSB) colors as a complement to numerical sRGB colors. HSL colors are encoding as a triple (hue, saturation, lightness). Likewise HSB colors are encoding as a triple (hue, saturation, brightness). HSL or HSB triples are either direct values (hue 0—360, saturation 0—255, lightness or brightness 0—255) or with S,L,B as percentage values relative to these ranges.</p>
 

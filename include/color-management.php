@@ -15,10 +15,13 @@
 <p>Afterwards, the verbose information for the output file lists the colorspace as RGB. This only works on image types containing meta data that distinguishes between linear RGB and non-linear sRGB, such as PNG and GIF. Therefore, if the above command is run with a JPG or TIF output format, the verbose information for the colorspace still shows sRGB. In order to properly have the JPG output know that it is linear RGB, include an appropriate color profile.</p>
 
 
-<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a> options:</p>
+<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a
+> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#grayscale">-grayscale</a
+>options:</p>
 
 <pre class="highlight"><code>magick myimage.png -set colorspace RGB -colorspace gray myRGBimage.png
 magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
+magick myimage.png -grayscale Rec709luminance myRGBimage.png
 </code></pre>
 
 <p>The same concept is needed when separating channels.  Normally, the conversion to separate each channel of an sRGB color image produces separate non-linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as linear grayscale. For example, the following produces linear grayscale channels.</p>
@@ -35,9 +38,10 @@ magick myimage_channels_*.png -combine myimage2.png</code></pre>
 If one desires to separate to linear grayscale channels, recombine them later back to non-linear color, perhaps after some processing, then use the same concept as above for maintaining linear grayscale:</p>
 
 <pre class="highlight"><code>magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
-magick myimage_channels_*.png -combine -colorspace RGB -set colorspace sRGB myimage2.png</code></pre>
+magick myimage_channels_*.png -combine -colorspace RGB -set colorspace sRGB myimage2.png
+</code></pre>
 
-<p>When converting to another colorspace and back, such as between sRGB and HSL, the following two commands handle the first case of linear channels and the second case of non-linear channels:</p>
+<p>When converting to another colorspace and back, such as between sRGB and HSL, the following two commands handle the first case of non-linear channels and the second case of linear channels:</p>
 
 <pre class="highlight"><code>magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
 magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png</code></pre>
