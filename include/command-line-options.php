@@ -588,27 +588,27 @@ ignored. </p>
 <dl class="row">
 <dt class="col-md-4"><var>value</var></dt>
 <dd class="col-md-8">value is added to both left/right and top/bottom</dd>
-<dt class="col-md-4"><var>value-x</var><kbd>x</kbd></dt>
+<dt class="col-md-4"><var>value-x</var><code>x</code></dt>
 <dd class="col-md-8">value-x is added only to left/right and top/bottom are unchanged</dd>
-<dt class="col-md-4"><kbd>x</kbd><var>value-y</var></dt>
+<dt class="col-md-4"><code>x</code><var>value-y</var></dt>
 <dd class="col-md-8">value-y is added only to top/bottom and left/right are unchanged</dd>
-<dt class="col-md-4"><var>value-x</var><kbd>x</kbd><var>value-y</var></dt>
+<dt class="col-md-4"><var>value-x</var><code>x</code><var>value-y</var></dt>
 <dd class="col-md-8">value-x is added to left/right and value-y added to top/bottom</dd>
-<dt class="col-md-4"><var>value-x</var><kbd>x</kbd>0</dt>
+<dt class="col-md-4"><var>value-x</var><code>x</code>0</dt>
 <dd class="col-md-8">value-x is added only to left/right and top/bottom are unchanged</dd>
-<dt class="col-md-4">0<kbd>x</kbd><var>value-y</var></dt>
+<dt class="col-md-4">0<code>x</code><var>value-y</var></dt>
 <dd class="col-md-8">value-y is added only to top/bottom and left/right are unchanged</dd>
 <dt class="col-md-4"><var>value</var>%</dt>
 <dd class="col-md-8">value % of width is added to left/right and value % of height is added to top/bottom</dd>
-<dt class="col-md-4"><var>value-x</var><kbd>x</kbd>%</dt>
+<dt class="col-md-4"><var>value-x</var><code>x</code>%</dt>
 <dd class="col-md-8">value-x % of width is added to left/right and to top/bottom</dd>
 <dt class="col-md-4">x<var>value-y</var>%</dt>
 <dd class="col-md-8">value-y % of height is added to top/bottom and to left/right</dd>
-<dt class="col-md-4"><var>value-x</var>%<kbd>x</kbd><var>value-y</var>%</dt>
+<dt class="col-md-4"><var>value-x</var>%<code>x</code><var>value-y</var>%</dt>
 <dd class="col-md-8">value-x % of width is added to left/right and value-y % of height is added to top/bottom</dd>
-<dt class="col-md-4"><var>value-x</var>%<kbd>x</kbd>0%</dt>
+<dt class="col-md-4"><var>value-x</var>%<code>x</code>0%</dt>
 <dd class="col-md-8">value-x % of width is added to left/right and top/bottom are unchanged</dd>
-<dt class="col-md-4">0%<kbd>x</kbd><var>value-y</var>%</dt>
+<dt class="col-md-4">0%<code>x</code><var>value-y</var>%</dt>
 <dd class="col-md-8">value-y % of height is added to top/bottom and left/right are unchanged</dd>
 </dl>
 
@@ -776,9 +776,9 @@ abbreviated as a concatenation of the letters '<code>R</code>', '<code>G</code>'
 
 <p>For example, to only select the <code>Red</code> and <code>Blue</code> channels
 you can use any of the following:</p>
-<pre class="highlight"><code>-channel Red,Blue</code>
-<pre class="highlight"><code>-channel R,B</code>
-<pre class="highlight"><code>-channel RB</code>
+<pre class="highlight"><code>-channel Red,Blue</code></pre>
+<pre class="highlight"><code>-channel R,B</code></pre>
+<pre class="highlight"><code>-channel RB</code></pre>
 <pre class="highlight"><code>-channel 0,2</code></pre>
 
 <p>All the channels that are present in an image can be specified using the
