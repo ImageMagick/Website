@@ -54,7 +54,7 @@
 
   <dt class="col-md-4"><a id="dot-net"></a>.NET</dt>
 
-<dd class="col-md-8">Use <a href="http://magick.codeplex.com/">Magick.NET</a> to convert, compose, and edit images from Windows .NET.</dd>
+<dd class="col-md-8">Use <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a> to convert, compose, and edit images from Windows .NET.</dd>
   <dt class="col-md-4"><a id="dot-net"></a>&nbsp;</dt>
 
 <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagickapp/">ImageMagickApp</a> is a .NET application written in C# that utilizes the ImageMagick command line to allow conversion of multiple image formats to different formats.</dd>
