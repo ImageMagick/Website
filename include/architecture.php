@@ -52,7 +52,7 @@
 <p>The pixel cache is associated with an image when it is created and it is initialized when you try to get or put pixels.  Here are three common methods to associate a pixel cache with an image:</p>
 
 <dl>
-<dt class="col-md-4">Create an image canvas initialized to the background color:</dt><br/>
+<dt class="col-md-8">Create an image canvas initialized to the background color:</dt><br/>
 <dd class="col-md-8"><pre class="highlight"><code>image=AllocateImage(image_info);
 if (SetImageExtent(image,640,480) == MagickFalse)
   { /* an exception was thrown */ }
@@ -60,13 +60,13 @@ if (SetImageExtent(image,640,480) == MagickFalse)
 SetImageBackgroundColor(image);
 </code></pre></dd>
 
-<dt class="col-md-4">Create an image from a JPEG image on disk:</dt><br/>
+<dt class="col-md-8">Create an image from a JPEG image on disk:</dt><br/>
 <dd class="col-md-8"><pre class="highlight"><code>(void) strcpy(image_info-&gt;filename,"image.jpg"):
 image=ReadImage(image_info,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
 </code></pre></dd>
-<dt class="col-md-4">Create an image from a memory based image:</dt><br/>
+<dt class="col-md-8">Create an image from a memory based image:</dt><br/>
 <dd class="col-md-8"><pre class="highlight"><code>image=BlobToImage(blob_info,blob,extent,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
