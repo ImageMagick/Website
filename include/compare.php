@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">Use the <code>compare</code> program to mathematically and visually annotate the difference between an image and its reconstruction.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>compare</code> command or see below for example usages of the command.</p>
 
-<h2 class="magick-post-title"><a id="usage"></a>Example Usage</h2>
+<h2 class="magick-post-title"><a class="anchor" id="usage"></a>Example Usage</h2>
 
 <p>We list a few examples of the <code>compare</code> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one thats been sharpened:</p>
 
@@ -53,7 +53,7 @@ Image: rose.jpg
 
 <p>The compare program returns 2 on error otherwise 0 if the images are similar or 1 if they are dissimilar.</p>
 
-<h2 class="magick-post-title"><a id="options"></a>Option Summary</h2>
+<h2 class="magick-post-title"><a class="anchor" id="options"></a>Option Summary</h2>
 
 <p>The <code>compare</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 

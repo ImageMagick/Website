@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">Use the <code>montage</code> program to create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>montage</code> command or see below for example usages of the command.</p>
 
-<h2 class="magick-post-title"><a id="usage"></a>Example Usage</h2>
+<h2 class="magick-post-title"><a class="anchor" id="usage"></a>Example Usage</h2>
 
 <p>We list a few examples of the <code>montage</code> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
@@ -43,7 +43,7 @@
 
 <p>You can find additional examples of using <code>montage</code> at <a href="https://www.imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
-<h2 class="magick-post-title"><a id="options"></a>Option Summary</h2>
+<h2 class="magick-post-title"><a class="anchor" id="options"></a>Option Summary</h2>
 
 <p>The <code>montage</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 

@@ -1,7 +1,7 @@
 <div class="magick-header">
 <p class="text-center"><a href="#fx">The Fx Special Effects Image Operator</a> • <a href="#anatomy">The Anatomy of an Fx Expression</a></p>
 
-<a id="fx"></a>
+<a class="anchor" id="fx"></a>
 
 <p class="lead magick-description">Use the Fx special effects image operator to apply a mathematical expression to an image or image channels.  Use Fx to:</p>
 
@@ -67,7 +67,7 @@
 
 <p>The next section discusses the Fx expression language.</p>
 
-<h2 class="magick-post-title"><a id="anatomy"></a>The Anatomy of an Fx Expression</h2>
+<h2 class="magick-post-title"><a class="anchor" id="anatomy"></a>The Anatomy of an Fx Expression</h2>
 
 <h3>The Fx Expression Language</h3>
 

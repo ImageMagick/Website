@@ -5,7 +5,7 @@
 
 <p>You could use an <a href="http://www.wizards-toolkit.org/script/encipher.php">enciphering</a> utility to scramble your image but they typically scramble the entire file making it unrecognizable as an image format.  With ImageMagick, only the pixels are scrambled.  The scrambled image continues to be recognized as an image and will even display in your web page.  However, the content appears as gibberish, nothing like the original content.</p>
 
-<h2 class="magick-post-title"><a id="encipher"></a>Encipher an Image</h2>
+<h2 class="magick-post-title"><a class="anchor" id="encipher"></a>Encipher an Image</h2>
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
 
@@ -17,14 +17,14 @@
 <pre class="highlight"><code>convert rose.jpg -encipher smiley.gif rose.png
 </code></pre>
 
-<h2 class="magick-post-title"><a id="decipher"></a>Decipher an Image</h2>
+<h2 class="magick-post-title"><a class="anchor" id="decipher"></a>Decipher an Image</h2>
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
 
 <pre class="highlight"><code>convert rose.png -decipher passphrase.txt rose.jpg
 </code></pre>
 
-<h2 class="magick-post-title"><a id="caveats"></a>Encipher and Decipher Caveats</h2>
+<h2 class="magick-post-title"><a class="anchor" id="caveats"></a>Encipher and Decipher Caveats</h2>
 
 <p>Some formats do not support enciphered pixels-- the JPEG or GIF format, for
 example.  To ensure your image format is supported, encipher a test image and

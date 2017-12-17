@@ -95,3 +95,8 @@ h6, .h6 {
   font-weight: 400;
   color: #333;
 }
+
+a.anchor {
+  position: relative;
+  top: -3.5rem;
+}

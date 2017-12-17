@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.</p>
 
-<h2 class="magick-post-title"><a id="configure"></a>Configuration Files</h2>
+<h2 class="magick-post-title"><a class="anchor" id="configure"></a>Configuration Files</h2>
 
 <p>ImageMagick depends on a number of external configuration files detailed here:</p>
 
@@ -20,7 +20,7 @@
   A number of command line options require a <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
   </dd>
 
-<dt class="col-md-4"><a id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
+<dt class="col-md-4"><a class="anchor" id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
   <dd class="col-md-8">Set ImageMagick build parameters and system-wide environment variables (e.g. MAGICK_TEMPORARY_PATH).
   As ImageMagick is built, a number of build parameters are saved to this configuration file.  They include the version, release date, dependent delegate libraries, and quantum depth among others.
   </dd>
@@ -88,7 +88,7 @@ Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/thresholds.xml">thresholds.xml</a></dt>
   <dd class="col-md-8">Set threshold maps for ordered posterized dither.</dd>
 
-<dt class="col-md-4"><a id="type.xml"></a><a href="<?php echo $_SESSION['RelativePath']?>/../source/type.xml">type.xml</a></dt>
+<dt class="col-md-4"><a class="anchor" id="type.xml"></a><a href="<?php echo $_SESSION['RelativePath']?>/../source/type.xml">type.xml</a></dt>
   <dd class="col-md-8">Configure fonts.
   Define the font name, family, foundry, style, format, metrics, and glyphs for any font you want to use within ImageMagick.
   </dd>
@@ -144,7 +144,7 @@ $USERPROFILE/.config/ImageMagick
 
 <p>If a configuration file cannot not be found, ImageMagick relies on built-in default values.</p>
 
-<h2 class="magick-post-title"><a id="modules"></a>Modules</h2>
+<h2 class="magick-post-title"><a class="anchor" id="modules"></a>Modules</h2>
 
 <h4>Coders</h4>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
@@ -167,7 +167,7 @@ $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters</code></pre>
 
-<h2 class="magick-post-title"><a id="fonts"></a>Fonts</h2>
+<h2 class="magick-post-title"><a class="anchor" id="fonts"></a>Fonts</h2>
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
@@ -181,7 +181,7 @@ $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/etc/ImageMagick
 $MAGICK_FONT_PATH</code></pre>
 
-<h2 class="magick-post-title"><a id="environment"></a>Environment Variables</h2>
+<h2 class="magick-post-title"><a class="anchor" id="environment"></a>Environment Variables</h2>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
@@ -216,7 +216,7 @@ $MAGICK_FONT_PATH</code></pre>
     <td>Set debug options.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug</a> for a description of debugging options.</td>
   </tr>
   <tr>
-    <td><a id="disk-limit"></a>MAGICK_DISK_LIMIT</td>
+    <td><a class="anchor" id="disk-limit"></a>MAGICK_DISK_LIMIT</td>
     <td>Set maximum amount of disk space in bytes permitted for use by the pixel cache.  When this limit is exceeded, the pixel cache is not be created and an error message is returned.</td>
   </tr>
   <tr>
@@ -240,7 +240,7 @@ $MAGICK_FONT_PATH</code></pre>
     <td>Set the path at the top of ImageMagick installation directory.  This path is consulted by <var>uninstalled</var> builds of ImageMagick which do not have their location hard-coded or set by an installer.</td>
   </tr>
   <tr>
-    <td><a id="map-limit"></a>MAGICK_MAP_LIMIT</td>
+    <td><a class="anchor" id="map-limit"></a>MAGICK_MAP_LIMIT</td>
     <td>Set maximum amount of memory map in bytes to allocate for the pixel cache.  When this limit is exceeded, the image pixels are cached to disk (see MAGICK_DISK_LIMIT).</td>
   </tr>
   <tr>
