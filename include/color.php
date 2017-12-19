@@ -114,8 +114,14 @@ hsla(120, 255,  127.5,  1.0)       the same, with an alpha value of 1.0</code></
 -> magick -size 100x100 xc:"cielab(91.1131%,-18.8571%,-5.5436%)" -colorspace sRGB cyan.png</code></pre>
 
 <p>Or specify colors generically with the <code>icc-color</code> keyword, for example:</p>
-<pre class="highlight"><code>icc-color(cmyk, 0.11, 0.48, 0.83, 0.00)
-icc-color(rgb, white)</code></pre>
+<pre class="highlight"><code>
+icc-color(cmyk, 0.11, 0.48, 0.83, 0.00)  cymk
+icc-color(rgb, 1, 0, 0)                  linear rgb
+icc-color(rgb, red)                      linear rgb
+icc-color(srgb, 1, 0, 0)                 non-linear rgb
+icc-color(srgb, red)                     non-linear rgb
+icc-color(gray, 0.5)                     non-linear gray
+</code></pre>
 
 <p>Or specify uncalibrated device colors with the <code>device-</code> keyword, for example:</p>
 <pre class="highlight"><code>device-gray(0.5)

@@ -17,7 +17,7 @@
 
 <p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a
 > or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#grayscale">-grayscale</a
->options:</p>
+> options:</p>
 
 <pre class="highlight"><code>magick myimage.png -set colorspace RGB -colorspace gray myRGBimage.png
 magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
