@@ -1241,7 +1241,8 @@ YIQ          YPbPr        YUV          Undefined
         <tr><td valign="middle">Y=0.212656*R+0.715158*G+0.072186*B; <var>intensity-like</var></td></tr>
         <tr><td valign="middle">Cb=(−0.114572*R−0.385428*G+0.500000*B)+(<var>QuantumRange</var>+1)/2</td></tr>
         <tr><td valign="middle">Cr=(0.500000*R−0.454153*G−0.045847*B)+(<var>QuantumRange</var>+1)/2</td></tr>
-
+        <tr><th valign="middle">sGray</th></tr>
+        <tr><td valign="middle">sGray = 0.212656*R+0.715158*G+0.072186*B</td></tr>
         <tr><th valign="middle">sRGB</th></tr>
         <tr><td valign="middle">if R ≤ .0.0031308 then Rs=R/12.92 else Rs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
         <tr><td valign="middle">if G ≤ .0.0031308 then Gs=B/12.92 else Gs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
