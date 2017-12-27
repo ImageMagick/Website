@@ -1194,7 +1194,7 @@ YIQ          YPbPr        YUV          Undefined
         <tr><td valign="middle">Y=<var>QuantumRange</var>*(Y−K)/(<var>QuantumRange</var>−K)</td></tr>
 
         <tr><th valign="middle">Gray</th></tr>
-        <tr><td valign="middle">Gray = 0.298839*R+0.586811*G+0.114350*B</td></tr>
+        <tr><td valign="middle">Gray = 0.212656*R+0.715158*G+0.072186*B</td></tr>
 
         <tr><th valign="middle">HSB — Hue, Saturation, Brightness; like a cone peak downward</th></tr>
         <tr><td valign="middle">H=angle around perimeter (0 to 360 deg); H=0 is red; increasing angles toward green</td></tr>
@@ -1215,6 +1215,8 @@ YIQ          YPbPr        YUV          Undefined
         <tr><td valign="middle">L (complicated equation relating X,Y,Z)</td></tr>
         <tr><td valign="middle">A (complicated equation relating X,Y,Z)</td></tr>
         <tr><td valign="middle">B (complicated equation relating X,Y,Z)</td></tr>
+        <tr><th valign="middle">LinearGray</th></tr>
+        <tr><td valign="middle">LinearGray = 0.298839*R+0.586811*G+0.114350*B</td></tr>
 
         <tr><th valign="middle">LOG</th></tr>
         <tr><td valign="middle">I1 (complicated equation involving logarithm of R)</td></tr>
@@ -1241,8 +1243,6 @@ YIQ          YPbPr        YUV          Undefined
         <tr><td valign="middle">Y=0.212656*R+0.715158*G+0.072186*B; <var>intensity-like</var></td></tr>
         <tr><td valign="middle">Cb=(−0.114572*R−0.385428*G+0.500000*B)+(<var>QuantumRange</var>+1)/2</td></tr>
         <tr><td valign="middle">Cr=(0.500000*R−0.454153*G−0.045847*B)+(<var>QuantumRange</var>+1)/2</td></tr>
-        <tr><th valign="middle">sGray</th></tr>
-        <tr><td valign="middle">sGray = 0.212656*R+0.715158*G+0.072186*B</td></tr>
         <tr><th valign="middle">sRGB</th></tr>
         <tr><td valign="middle">if R ≤ .0.0031308 then Rs=R/12.92 else Rs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
         <tr><td valign="middle">if G ≤ .0.0031308 then Gs=B/12.92 else Gs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
@@ -4500,12 +4500,12 @@ convert the given image into a grayscale image. </p>
 
 <p>which is equivalent to:</p>
 
-<pre class="highlight"><code>convert in.png -colorspace gray out.png
+<pre class="highlight"><code>convert in.png -colorspace sgray out.png
 </code></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
 regardless of the current colorpsace of the image. But a 'mathematical'
-intensity method will depend on the current colorspace the image is currently
+intensity method depends on the current colorspace the image is currently
 using. </p>
 
 <p>While this operation uses an <a href="#intensity" >-intensity</a> method,
