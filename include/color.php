@@ -54,7 +54,7 @@ gray(127)         near mid gray
 gray(50%)         mid gray
 graya(50%, 0.5)   semi-transparent mid gray</code></pre>
 
-<p>For linear gray values add -colorspace RGB -colorspace gray when creating gray colors</p>
+<p>For linear gray values add -colorspace RGB -colorspace Gray or -colorspace LinearGray when creating gray colors. The latter is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
 
 <p>The ImageMagick color model also supports hue-saturation-lightness (HSL) and hue-saturation-brightness (HSB) colors as a complement to numerical sRGB colors. HSL colors are encoding as a triple (hue, saturation, lightness). Likewise HSB colors are encoding as a triple (hue, saturation, brightness). HSL or HSB triples are either direct values (hue 0—360, saturation 0—255, lightness or brightness 0—255) or with S,L,B as percentage values relative to these ranges.</p>
 
@@ -118,6 +118,7 @@ hsla(120, 255,  127.5,  1.0)       the same, with an alpha value of 1.0</code></
 icc-color(cmyk, 0.11, 0.48, 0.83, 0.00)  cymk
 icc-color(rgb, 1, 0, 0)                  linear rgb
 icc-color(rgb, red)                      linear rgb
+icc-color(lineargray, 0.5)               linear gray
 icc-color(srgb, 1, 0, 0)                 non-linear rgb
 icc-color(srgb, red)                     non-linear rgb
 icc-color(gray, 0.5)                     non-linear gray
