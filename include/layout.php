@@ -36,7 +36,7 @@
 <body>
   <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">ImageMagick</a>
+    <a class="navbar-brand" href="/"><img class="d-block" id="logo" name="ImageMagick" alt="ImageMagick" width="32" height="32" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,12 +62,12 @@
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://www.imagemagick.org/discourse-server/">Community</a>
+        <a class="nav-link" target="_blank" href="https://www.imagemagick.org/discourse-server/">Community</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">
-      <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="sa">Search</button>
     </form>
     </div>
   </nav>
@@ -97,14 +97,16 @@
     <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
-     <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a> •
-    <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a>
-</p>
-    <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
-    <a href="#">Back to top</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a></p>
-    <?php if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") echo '<p><small>Sponsored by <a href="https://transloadit.com">Transloadit</a> - the file uploading &amp; processing service</small></p>' ?>
-    <p><small>© 1999-2018 ImageMagick Studio LLC</small></p>
+     <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
+    &nbsp; &nbsp;
+    <a href="#"><img class="d-inline" id="logo" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
+    &nbsp; &nbsp;
+    <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a>
+    <br/>
+    <?php if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") echo '<small>Sponsored by <a href="https://transloadit.com">Transloadit</a> - the file uploading &amp; processing service</small><br/>' ?>
+    <small>© 1999-2018 ImageMagick Studio LLC</small></p>
   </footer>
 
   <!-- Javascript assets -->
