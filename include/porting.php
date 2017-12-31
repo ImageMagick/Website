@@ -422,9 +422,7 @@ scripts.</p>
 <dd class="col-md-8">Stop processing at this point. No further options will be processed after
     this option. Can be used in a script to force the "<code>magick</code>"
     command to exit, without actually closing the pipeline that it is
-    processing options from. </dd>
-
-<dd class="col-md-8">May also be used as a 'final' option on the "<code>magick</code>" command
+    processing options from.  May also be used as a 'final' option on the "<code>magick</code>" command
     line, instead of a implicit output image, to completely prevent any image
     write. ASIDE: even the "<code>NULL:</code>" coder requires at least one
     image, for it to 'not write'! This option does not require any images at
