@@ -385,11 +385,7 @@ scripts.</p>
     are to be processed 'in-place'.  (not yet implemented).  However if
     not provided, "<code>-read</code>" can still be used to differentiate
     secondary image reads (for use in things like alpha composition) from
-    the 'in-place' image being processed. </dd>
-
-<dd class="col-md-8">In other commands (such as "magick") it is equivalent to a explicit
-    "<code>-read</code>" (see below) of the next option as a image (as it was in
-    IMv6).  </dd>
+    the 'in-place' image being processed.  In other commands (such as "magick") it is equivalent to a explicit "<code>-read</code>" (see below) of the next option as a image (as it was in IMv6).  </dd>
 
 <dt class="col-md-4">-alpha discrete</dt>
 <dd class="col-md-8">treat the alpha channel independently (do not blend).</dd>
