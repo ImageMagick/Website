@@ -43,6 +43,16 @@
       header("Location: https://www.imagemagick.org/index.php");
       exit();
     }
+  $use_sts = true;
+  if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
+    $use_sts = false;
+  }
+  if ($use_sts && isset($_SERVER['HTTPS'])) {
+    header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload');
+  } elseif ($use_sts && !isset($_SERVER['HTTPS'])) {
+    header('Status-Code: 301');
+    header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+  }
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
   require_once($_SESSION['AbsolutePath'] . '/../function/cmd.php');
