@@ -285,6 +285,6 @@ $MAGICK_FONT_PATH</code></pre>
   </tr>
 </table></div>
 
-<p>Define arguments for the <code>MAGICK_AREA_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, <code>MAGICK_MAP_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code> and <code>MAGICK_HEIGHT_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).</p>
+<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).</p>
 
 </div>
