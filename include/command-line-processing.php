@@ -391,6 +391,10 @@ setting for more specifics.</p>
   <tr>
     <td><var>area</var>@</td>
     <td>Resize image to have specified area in pixels. Aspect ratio is preserved.</td>
+  <tr>
+    <td><var>x</var>x<var>y</var>~</td>
+    <td>Here x and y denotes an aspect ratio (e.g. 3x2~ = 1.5).</td>
+  </tr>
   </tr>
   <tr>
     <td>{<var>size</var>}{<var>offset</var>}</td>
