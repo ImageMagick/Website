@@ -1750,6 +1750,12 @@ available:</p>
   </tr>
 
   <tr>
+    <td>bmp:subtype=<var>RGB555|RGB565|ARGB4444|ARGB1555</var></td>
+    <td>BMP channel depth subtypes. Only support in BMP (BMP4). BMP3 and BMP2 do not 
+    contain header fields to support these options.</td>
+  </tr>
+
+  <tr>
     <td>colorspace:auto-grayscale=<var>on|off</var></td>
     <td>prevent automatic conversion to grayscale inside coders that support
     grayscale. This should be accompanied by -type truecolor. PNG and TIF do
@@ -2253,6 +2259,12 @@ available:</p>
   </tr>
 
   <tr>
+    <td>png:ignore-crc[=<var>true</var>]</td>
+     <td>When you know your image has no CRC or ADLER32 errors, this can speed up 
+     decoding. It is also helpful in debugging bug reports from "fuzzers"</td>
+  </tr>
+
+  <tr>
     <td>png:preserve-colormap[=<var>true</var>]</td>
      <td>Use the existing image->colormap. Normally the PNG encoder will
     try to optimize the palette, eliminating unused entries and putting
@@ -2429,7 +2441,7 @@ available:</p>
 
   <tr>
     <td>txt:compliance=<var>css</var></td>
-    <td> </td>
+    <td>The first argument of a hsl() color is integer, not percentage</td>
   </tr>
 
   <tr>
