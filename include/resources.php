@@ -240,6 +240,10 @@ $MAGICK_FONT_PATH</code></pre>
     <td>Set the path at the top of ImageMagick installation directory.  This path is consulted by <var>uninstalled</var> builds of ImageMagick which do not have their location hard-coded or set by an installer.</td>
   </tr>
   <tr>
+    <td>MAGICK_LIST_LENGTH_LIMIT</td>
+    <td>Set the maximum length of an image sequence.</td>
+  </tr>
+  <tr>
     <td><a class="anchor" id="map-limit"></a>MAGICK_MAP_LIMIT</td>
     <td>Set maximum amount of memory map in bytes to allocate for the pixel cache.  When this limit is exceeded, the image pixels are cached to disk (see MAGICK_DISK_LIMIT).</td>
   </tr>
