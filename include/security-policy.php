@@ -49,6 +49,9 @@ convert: no images defined `wizard.jpg'</pre>
 <p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
 <pre class="highlight"><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
 
+<p>As of ImageMagick version 7.0.4-23, you can limit the maximum number of images in a sequence.  For example, to limit an image sequence to 64 frames, use:</p>
+<pre class="highlight"><code>&lt;policy domain="resource" name="list-length" value="64"/></code></pre>
+
 <p>You can verify your policy changes are in effect with this command:</p>
 
 <pre class="pre-scrollable">-> identify -list policy
