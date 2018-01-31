@@ -51,7 +51,11 @@
 
 <p>Building ImageMagick source for Windows requires a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
 
-<p>Clone this Github <a href="https://github.com/ImageMagick/ImageMagick-Windows">repo</a> and run <code>CloneRepositories.cmd</code>.  Alternatively, download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> and verify its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.  For the latter, you can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
+<p>Clone the Github repo:<p>
+
+<pre class="highlight"><code>git clone git@github.com:ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
+
+<p>and run <code>CloneRepositories.cmd</code>.  Alternatively, download <a href="https://www.imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> and verify its <a href="https://www.imagemagick.org/download/windows/digest.rdf">message digest</a>.  For the latter, you can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
 
 <pre class="highlight"><code>unzip ImageMagick-windows.zip</code></pre>
 
