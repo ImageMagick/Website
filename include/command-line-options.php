@@ -3294,10 +3294,7 @@ magick!</code> for an image titled <code>bird.miff</code>. </p>
 to annotate an image with text.</p>
 
 <p>The <code>rotate</code> primitive rotates subsequent shape primitives and
-text primitives about the origin of the main image. If the <a
-href="#region">-region</a> option precedes the <a href="#draw">-draw</a>
-option, the origin for transformations is the upper left corner of the
-region.</p>
+text primitives about the origin of the main image.</p>
 
 <p>The <code>translate</code> primitive translates subsequent shape and text
 primitives.</p>
