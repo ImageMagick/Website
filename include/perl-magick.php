@@ -2317,8 +2317,8 @@ $preview-&gt;Display();
 <p>Call QueryColor() with no parameters to return a list of known colors names or specify one or more color names to get these attributes: red, green, blue, and opacity value.</p>
 
 <pre class="highlight"><code>@colors = $image-&gt;QueryColor();
-($red, $green, $blue, $opacity) = $image-&gt;QueryColor('cyan');
-($red, $green, $blue, $opacity) = $image-&gt;QueryColor('#716bae');
+($red, $green, $blue) = $image-&gt;QueryColor('cyan');
+($red, $green, $blue, $alpha) = $image-&gt;QueryColor('#716baeff');
 </code></pre>
 
 <p>QueryColorname() accepts a color value and returns its respective name or hex value;</p>
