@@ -2223,11 +2223,6 @@ $image-&gt;BlobToImage(@blob);
 <pre class="highlight"><code>@features = $image-&gt;Features(1);
 </code></pre>
 
-<p>Finally, the Transform() method accepts a fully-qualified geometry specification for cropping or resizing one or more images.  For example,</p>
-
-<pre class="highlight"><code>$p = $images-&gt;Transform(crop=>'100x100+10+60');
-</code></pre>
-
 <p>The Flatten() method flattens a set of images and returns it. For example,</p>
 
 <pre class="highlight"><code>$p = $images-&gt;Flatten(background=&gt;'none');
