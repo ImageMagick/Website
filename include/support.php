@@ -15,7 +15,7 @@
 </dl>
 
 <h2 class="magick-post-title"><a class="anchor" id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
-<p>Post any ImageMagick patches to the <a href="https://github.com/ImageMagick/ImageMagick/issues">Issues</a> forum if you think you have found and fixed a bug or security vulnerability. Post to the <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=2">Developers</a> forum if you want to propose an enhancement for discussion.</p>
+<p>Open an issue on the <a href="https://github.com/ImageMagick/ImageMagick/">GitHub repository</a> if you think you have found a bug or security vulnerability. Open a pull request to the repository if you have a fix. Post to the <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=2">Developers</a> forum if you want to propose an enhancement for discussion.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="support"></a>Support the ImageMagick Project</h2>
 
