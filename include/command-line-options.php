@@ -2571,7 +2571,7 @@ or CMYK, or to change the depth of any image after it has been read.</p>
   <h3><a class="anchor" id="direction"></a>-direction <var>type</var></h3>
 </div>
 
-<p class="magick-description">render text right-to-left or left-to-right.</p>
+<p class="magick-description">render text right-to-left or left-to-right.  Requires the <a href="https://github.com/HOST-Oman/libraqm">RAQM</a> delegate library and <a href="https://en.wikipedia.org/wiki/Complex_text_layout">complex text layout</a>.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="displace"></a>-displace <var>horizontal-scale</var>{%}{!}<br />-displace <var>horizontal-scale</var>x<var>vertical-scale</var>{%}{!}</h3>
