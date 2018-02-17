@@ -298,6 +298,13 @@ include:</p>
 
 <pre class="highlight"><code>magick wand.png -negate wizard.png images.png</code></pre>
 
+<p>Note that an image operator will be applied to each images in an image
+sequence. For example, if you use <?php option("resize")?> option to resize a
+GIF image, each frames will be resized to the given size. However, some frames
+may be smaller than the whole image and resizing all the frames into the same
+size may result in an unexpected output. In such a case,
+<?php option("coalesce")?> should be used to prepare those frames.</p>
+
 <h4 class="magick-header"><a class="anchor" id="channel"></a>Image Channel Operator</h4>
 <p>Operate directly on image channels:</p>
 <ul>
