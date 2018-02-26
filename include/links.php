@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse these sites, excepting the Wizard's Toolkit site, but we feel they are a helpfull adjunct to this web site.</p>
 
-<h2 class="magick-post-title"><a class="anchor" id="web"></a>Use ImageMagick on the Web</h2>
+<h2 class="magick-post-title"><a class="anchor" id="web"></a>Use ImageMagick Online</h2>
 <ul>
   <dd class="col-md-8"><a href="http://jqmagick.imagemagick.org/">JqMagick</a></dd>
   <dd class="col-md-8"><a href="http://transloadit.imagemagick.org/MagickStudio/">Magick Studio</a></dd>
