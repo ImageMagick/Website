@@ -73,13 +73,11 @@
   </nav>
   <div class="container">
    <?php if ($_SERVER["SERVER_ADDR"] != "10.144.245.30") echo '<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3129977114552745"
-         data-ad-slot="6345125851"
-         data-ad-format="auto"></ins>
     <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3129977114552745",
+        enable_page_level_ads: true
+      });
     </script>
   </div>
   </header>
