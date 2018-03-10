@@ -368,6 +368,8 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dd class="col-md-8">The draw transformations are relative to the upper left corner of the image, previously in IMv6 they were relative to the region.</dd>
 </dl>
 
+<p>Use <code>-define morphology:showKernel=1</code> to post the morphology or convolution kernel.  Previously it was <code>-define showKernel=1</code>.</p>
+
 <h3>New Options</h3>
 <p>ImageMagick version 7 supports these new options, though most are limited
 to the "<code>magick</code>" command, or to use in "<code>magick</code>"
