@@ -381,6 +381,20 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>GRAYA</td>
+    <td>RW</td>
+    <td>Raw gray and alpha samples</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <code>-define quantum:format=floating-point</code>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+  </tr>
+
+  <tr>
+    <td><a href="http://en.wikipedia.org/wiki/RGBE_image_format">HDR</a></td>
+    <td>RW</td>
+    <td>Radiance RGBE image format</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td><a href="http://en.wikipedia.org/wiki/RGBE_image_format">HDR</a></td>
     <td>RW</td>
     <td>Radiance RGBE image format</td>
