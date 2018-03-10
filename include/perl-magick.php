@@ -975,8 +975,8 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>SetPixel</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, color=&gt;<i>array of float values</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, color=&gt;<i>array of float values</i></td>
-    <td>set a single pixel.  By default normalized pixel values are expected.</td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, color=&gt;<i>array of float values</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, color=&gt;<i>array of float values</i></td>
+    <td>set the value of one or more pixels.  By default normalized pixel values are expected.</td>
   </tr>
 
   <tr>
