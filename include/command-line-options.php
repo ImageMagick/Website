@@ -1827,7 +1827,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>convolve:showkernel=<var>1</var></td>
+    <td>convolve:showKernel=<var>1</var></td>
      <td>Outputs (to 'standard error') all the information about a specified <a
     href="#morphology" >-morphology convolve</a> kernel.</td>
   </tr>
@@ -2065,7 +2065,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>morphology:showkernel=<var>1</var></td>
+    <td>morphology:showKernel=<var>1</var></td>
      <td>Outputs (to 'standard error') all the information about a generated <a
     href="#morphology" >-morphology</a> kernel.</td>
   </tr>
@@ -2377,7 +2377,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>showkernel=<var>1</var></td>
+    <td>morphology:showKernel=<var>1</var></td>
      <td>Outputs (to 'standard error') all the information about a generated <a
     href="#morphology" >-morphology</a> kernel.</td>
   </tr>
