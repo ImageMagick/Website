@@ -1827,7 +1827,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>convolve:showKernel=<var>1</var></td>
+    <td>morphology:showKernel=<var>1</var></td>
      <td>Outputs (to 'standard error') all the information about a specified <a
     href="#morphology" >-morphology convolve</a> kernel.</td>
   </tr>
