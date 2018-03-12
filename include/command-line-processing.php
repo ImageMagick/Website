@@ -286,7 +286,7 @@ any command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/comma
 <a href="#setting">image setting</a> or
 <a href="#sequence">image sequence operator</a>.  Unlike an
 image setting, which persists until the command-line terminates,
-an operator is applied to an image and forgotten.  The image operators
+an operator is applied to the current images and forgotten.  The image operators
 include:</p>
 
 <ul>
