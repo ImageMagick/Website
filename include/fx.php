@@ -57,10 +57,10 @@
 
 <p>This FX expression adds random noise to an image:</p>
 
-<pre class="highlight"><code>convert photo.jpg -fx \'iso=32; rone=rand(); rtwo=rand(); \
+<pre class="highlight"><code>convert photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
-  cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \ 
-  channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)\' noisy.png
+  cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
+  channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)' noisy.png
 </code></pre>
 
 <p>See <a href="https://www.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
