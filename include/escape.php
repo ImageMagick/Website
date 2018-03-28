@@ -258,10 +258,6 @@ filename, type, width, height. </p>
     <td>page (canvas) y offset (including sign)</td>
   </tr>
   <tr>
-    <td>%Z</td>
-    <td>unique filename (used for delegates)</td>
-  </tr>
-  <tr>
     <td>%@</td>
     <td>CALCULATED: trim bounding box (without actually trimming)</td>
   </tr>
