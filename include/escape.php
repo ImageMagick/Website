@@ -295,7 +295,7 @@ when enclosed in braces (long form):</p>
 <div class="table-responsive">
 <table class="table table-sm table-striped">
   <tr>
-    <td>%[base]</td>
+    <td>%[basename]</td>
     <td>base filename, no suffixes (as %t)</td>
   </tr>
   <tr>
@@ -395,10 +395,6 @@ when enclosed in braces (long form):</p>
     <td>CALCULATED: minimum value statistic of image</td>
   </tr>
   <tr>
-    <td>%[name]</td>
-    <td>The original name of the image</td>
-  </tr>
-  <tr>
     <td>%[opaque]</td>
     <td>CALCULATED: is image fully-opaque?</td>
   </tr>
@@ -473,10 +469,6 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[width]</td>
     <td>original width of image (when it was read in)</td>
-  </tr>
-  <tr>
-    <td>%[zero]</td>
-    <td>zero (unique filename for delegate use)</td>
   </tr>
 </table></div>
 
