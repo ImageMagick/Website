@@ -299,6 +299,10 @@ when enclosed in braces (long form):</p>
     <td>base filename, no suffixes (as %t)</td>
   </tr>
   <tr>
+    <td>%[bit-depth]</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
     <td>%[caption]</td>
     <td>caption meta-data property</td>
   </tr>
@@ -317,6 +321,10 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[colorspace]</td>
     <td>Colorspace of Image Data (excluding transparency)</td>
+  </tr>
+  <tr>
+    <td>%[compose]</td>
+    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>%[compression]</td>
@@ -361,6 +369,10 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[height]</td>
     <td>original height of image (when it was read in)</td>
+  </tr>
+  <tr>
+    <td>%[input]</td>
+    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>%[interlace]</td>
