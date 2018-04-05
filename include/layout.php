@@ -26,7 +26,6 @@
 <html lang="en">
 <head>
   <?php echo $meta->metadata($title); ?>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4">
   <link href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
@@ -36,7 +35,7 @@
 <body>
   <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/"><img class="d-block" id="logo" name="ImageMagick" alt="ImageMagick" width="32" height="32" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
+    <a class="navbar-brand" href="/"><img class="d-block" id="icon" alt="ImageMagick" width="32" height="32" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -81,7 +80,7 @@
     </script>
   </div>
   </header>
-  <main role="main" class="container">
+  <main class="container">
     <div class="magick-template">
 <?php
   }
@@ -97,7 +96,7 @@
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
     &nbsp; &nbsp;
-    <a href="#"><img class="d-inline" id="logo" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
+    <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     &nbsp; &nbsp;
     <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
