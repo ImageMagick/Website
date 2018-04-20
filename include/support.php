@@ -39,7 +39,7 @@
 <fieldset>
 <legend>Support the ImageMagick Project</legend>
 <h3>Paypal</h3>
-<p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
+<p>For direct monetary contributions, click on the donate button to contribute thru <a href="https://www.paypal.me/ImageMagick">Paypal</a> or with a credit card:</p>
 
 <ul>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
