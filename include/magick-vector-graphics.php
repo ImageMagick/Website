@@ -219,7 +219,7 @@ pop graphic-context
 
 <h2 class="magick-post-title"><a class="anchor" id="overview"></a>MVG Overview</h2>
 
-<p>MVG ignores all white-space between commands. This allows multiple MVG commands per line. It is common convention to terminate each MVG command with a new line to make MVG easier to edit and read. This syntax description uses indentation in MVG sequences to aid with understanding. Indentation is supported but is not required.</p>
+<p>MVG ignores all white-space between commands. This allows multiple MVG commands per line. It is common convention to terminate each MVG command with a newline to make MVG easier to edit and read. This syntax description uses indentation in MVG sequences to aid with understanding. Indentation is supported but is not required.</p>
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
@@ -695,8 +695,8 @@ reset</code></pre></td>
     <td></td>
   </tr>
   <tr>
-    <td><a class="anchor" id="push-graphic-context"></a>push graphic-context</td>
-    <td></td>
+    <td><a class="anchor" id="push-graphic-context"></a>push graphic-context { "<em>id</em>" }</td>
+    <td>the <em>id</em> is optional</td>
   </tr>
   <tr>
     <td><a class="anchor" id="push-pattern"></a>push pattern <var>id radial x,y width,height</var></td>
