@@ -695,7 +695,7 @@ reset</code></pre></td>
     <td></td>
   </tr>
   <tr>
-    <td><a class="anchor" id="push-graphic-context"></a>push graphic-context { "<em>id</em>" }</td>
+    <td><a class="anchor" id="push-graphic-context"></a>push graphic-context { "<var>id</var>" }</td>
     <td>the <em>id</em> is optional</td>
   </tr>
   <tr>
@@ -786,6 +786,10 @@ round</code></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="translate"></a>translate <var>x,y</var></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a class="anchor" id="use"></a>use "<var>id</var>"</td>
     <td></td>
   </tr>
   <tr>
