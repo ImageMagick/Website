@@ -789,7 +789,7 @@ round</code></pre></td>
     <td></td>
   </tr>
   <tr>
-    <td><a class="anchor" id="use"></a>use "<var>id</var>"</td>
+    <td><a class="anchor" id="use"></a>use "<var>url(#id)</var>"</td>
     <td></td>
   </tr>
   <tr>
