@@ -156,6 +156,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>CIP</td>
+    <td>W</td>
+    <td>Cisco IP phone image format</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>CMYK</td>
     <td>RW</td>
     <td>Raw cyan, magenta, yellow, and black samples</td>
