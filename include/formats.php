@@ -412,7 +412,7 @@ the supported image formats.</p>
     <td><a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIC</a></td>
     <td>R</td>
     <td>Apple High efficiency Image Format</td>
-    <td> </td>
+    <td>HEIC requires the <a href="https://github.com/strukturag/libheif">libheif</a> delegate library.</td>
   </tr>
 
   <tr>
