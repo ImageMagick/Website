@@ -274,13 +274,13 @@ pop pattern
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
 <pre class="highlight"><code>push defs
- push clip-path %s
+ push clip-path "myClipPath"
   push graphic-context
    rectangle 10,10 20,20
   pop graphic-context
  pop clip-path
 pop defs
-clip-path url(#%s)
+clip-path url(#myClipPath)
 </code></pre>
 
 <h2 class="magick-post-title"><a class="anchor" id="primitives"></a>Drawing Primitives</h2>
@@ -679,7 +679,7 @@ reset</code></pre></td>
     <td></td>
   </tr>
   <tr>
-    <td><a class="anchor" id="push"></a>push clip-path <var>name</var></td>
+    <td><a class="anchor" id="push"></a>push clip-path "<var>name</var>"</td>
     <td></td>
   </tr>
   <tr>
