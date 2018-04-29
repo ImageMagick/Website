@@ -341,7 +341,7 @@ reset</code></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="compliance"></a>compliance <var>type</var></td>
-    <td>Choose from MVG or SVG</td>
+    <td>Choose from these compliance types: MVG or SVG</td>
   </tr>
   <tr>
     <td><a class="anchor" id="decorate"></a>decorate <var>type</var></td>
