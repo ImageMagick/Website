@@ -367,7 +367,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dt class="col-md-4">-gamma</dt>
 <dd class="col-md-8">Multiple gamma arguments (e.g. <code>-gamma 1,2,3</code>) are no longer supported, instead use <code>-channel</code> (e.g. <code>-channel blue -gamma 2)</code>.</dd>
 <dt class="col-md-4">-region</dt>
-<dd class="col-md-8">The draw transformations are relative to the upper left corner of the image, previously in IMv6 they were relative to the region.</dd>
+<dd class="col-md-8">This option set a write mask for the region you define.  In IMv6, a separate image was clone instead, operated on, and the results were composited to the source image.  In addition, the draw transformations are relative to the upper left corner of the image, previously in IMv6 they were relative to the region.</dd>
 </dl>
 
 <p>Use <code>-define morphology:showKernel=1</code> to post the morphology or convolution kernel.  Previously it was <code>-define showKernel=1</code>.</p>
