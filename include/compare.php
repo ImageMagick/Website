@@ -51,7 +51,7 @@ Image: rose.jpg
 
 <p>You can find additional examples of using <code>compare</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
-<p>The compare program returns 2 on error otherwise 0 if the images are similar or 1 if they are dissimilar except for the default metric, the normalized cross correlation error metric.  For this metric, 1 is interpretted as two identical images.</p>
+<p>The compare program returns 2 on error otherwise 0 if the images are similar or 1 if they are dissimilar as defined by the metric and fuzz.  The normalized cross correlation error metric is an exception. For this metric, 1 is interpretted as two identical images.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="options"></a>Option Summary</h2>
 
