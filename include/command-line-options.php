@@ -1244,9 +1244,9 @@ YIQ          YPbPr        YUV          Undefined
         <tr><td valign="middle">Cb=(−0.114572*R−0.385428*G+0.500000*B)+(<var>QuantumRange</var>+1)/2</td></tr>
         <tr><td valign="middle">Cr=(0.500000*R−0.454153*G−0.045847*B)+(<var>QuantumRange</var>+1)/2</td></tr>
         <tr><th valign="middle">sRGB</th></tr>
-        <tr><td valign="middle">if R ≤ .0.0031308 then Rs=R/12.92 else Rs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
-        <tr><td valign="middle">if G ≤ .0.0031308 then Gs=B/12.92 else Gs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
-        <tr><td valign="middle">if B ≤ .0.0031308 then Bs=B/12.92 else Bs=1.055 R ^ (1.0 / 2.4) ? 0.055</td></tr>
+        <tr><td valign="middle">if R ≤ .0.0031308 then Rs=R/12.92 else Rs=1.055 R ^ (1.0 / 2.4) - 0.055</td></tr>
+        <tr><td valign="middle">if G ≤ .0.0031308 then Gs=B/12.92 else Gs=1.055 R ^ (1.0 / 2.4) - 0.055</td></tr>
+        <tr><td valign="middle">if B ≤ .0.0031308 then Bs=B/12.92 else Bs=1.055 R ^ (1.0 / 2.4) - 0.055</td></tr>
 
         <tr><th valign="middle">XYZ</th></tr>
         <tr><td valign="middle">X=0.4124564*R+0.3575761*G+0.1804375*B</td></tr>
