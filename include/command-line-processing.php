@@ -286,8 +286,7 @@ any command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/comma
 <a href="#setting">image setting</a> or
 <a href="#sequence">image sequence operator</a>.  Unlike an
 image setting, which persists until the command-line terminates,
-an operator is applied to an image and forgotten.  The image operators
-include:</p>
+an operator is applied to the current image set and forgotten.  The image operators include:</p>
 
 <ul>
 <?php options("annotate", "black-threshold", "blur", "border", "charcoal", "chop", "clip", "clip-path", "clip-mask", "colors", "colorize", "colorspace", "compose", "contrast", "convolve", "crop", "cycle", "despeckle", "draw", "edge", "emboss", "enhance", "equalize", "evaluate", "extent", "flip", "flop", "floodfill", "frame", "gamma", "gaussian-blur", "grayscale", "implode", "lat", "level", "map", "median", "modulate", "monochrome", "negate", "noise", "normalize", "opaque", "ordered-dither", "paint", "posterize", "raise", "profile", "radial-blur", "raise", "random-threshold", "resample", "resize", "roll", "rotate", "sample", "scale", "sepia-tone", "segment", "shade", "shadow", "sharpen", "shave", "shear", "sigmoidal-contrast", "solarize", "splice", "spread", "strip", "swirl", "threshold", "transparent", "thumbnail", "tint", "transform", "trim", "unsharp", "version", "wave", "white-point", "white-threshold");
