@@ -922,7 +922,6 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p class="magick-description">Simulate a charcoal drawing.</p>
 
-
 <div style="margin: auto;">
   <h3><a class="anchor" id="chop"></a>-chop <var>geometry</var></h3>
 </div>
@@ -1914,6 +1913,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>hough-lines:accumulator=true</td>
+     <td>Returns the accumulator image in addition to the lines image</td>
+  </tr>
+
+  <tr>
     <td>icon:auto-resize</td>
      <td>Automatically stores multiple sizes when writing an ico image
     (requires a 256x256 input image).</td>
@@ -2354,6 +2358,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>q-table=<var>quantization-table.xml</var></td>
+     <td>Custom JPEG quantization tables.</td>
+  </tr>
+
+  <tr>
     <td>quantum:format=<var>type</var></td>
      <td>Set the type to <code>floating-point</code> to specify a floating-point
     format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
@@ -2416,6 +2425,11 @@ available:</p>
   <tr>
     <td>tiff:ignore-tags=<var>comma-separate-list-of-tag-IDs</var></td>
     <td>Allows one or more tag ID values to be ignored.</td>
+  </tr>
+
+  <tr>
+    <td>tiff:predictor=<var>[1, 2 or 3]</var></td>
+    <td>A mathematical operator that is applied to the image data before an encoding scheme is applied. The general idea is that subsequent pixels of an image resemble each other. Thus, substracting the information from a pixel that is already contained in previous one is likely to reduce its information density considerably and aid subsequent compression. 1 = No prediction scheme used before coding. 2 = Horizontal differencing. 3 = Floating point horizontal differencing.</td>
   </tr>
 
   <tr>
@@ -2545,6 +2559,8 @@ resolution, use the <a href="#resample">-resample</a> option.</p>
 <p>This the number of bits in a color sample within a pixel.  Use this option
 to specify the depth of raw images whose depth is unknown such as GRAY, RGB,
 or CMYK, or to change the depth of any image after it has been read.</p>
+
+<p>Use <a href="#depth">+depth</a> to return depth to its default value.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="descend"></a>-descend</h3>
@@ -4481,6 +4497,8 @@ within the composite.</p>
 <p>When used as an option to <?php cmd("montage"); ?>, <a
 href="#gravity">-gravity</a> gives the direction that an image gravitates
 within a tile. The default gravity is <code>Center</code> for this purpose.</p>
+
+<p>Use <a href="#gravity">+gravity</a> to return gravity to its default value.</p>
 
 
 <div style="margin: auto;">
@@ -7990,6 +8008,3 @@ grayscale values causing blended updates of the image the mask is attached to.
 but with strict boolean masking. </p>
 </div>
 </div>
-
-
-

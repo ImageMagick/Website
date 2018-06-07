@@ -107,7 +107,7 @@ filename, type, width, height. </p>
   </tr>
   <tr>
     <td>%b</td>
-    <td>file size of image read in</td>
+    <td>file size of image read in (use <a href="#precision">-precision</a> 16 to force results in B)</td>
   </tr>
   <tr>
     <td>%c</td>
@@ -258,6 +258,10 @@ filename, type, width, height. </p>
     <td>page (canvas) y offset (including sign)</td>
   </tr>
   <tr>
+    <td>%Z</td>
+    <td>unique filename (used for delegates)</td>
+  </tr>
+  <tr>
     <td>%@</td>
     <td>CALCULATED: trim bounding box (without actually trimming)</td>
   </tr>
@@ -300,7 +304,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[bit-depth]</td>
-    <td>&nbsp;</td>
+    <td>Actual bit-depth of the pixel data</td>
   </tr>
   <tr>
     <td>%[caption]</td>
@@ -320,7 +324,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[colorspace]</td>
-    <td>Colorspace of Image Data (excluding transparency)</td>
+    <td>colorspace of Image Data (excluding transparency)</td>
   </tr>
   <tr>
     <td>%[compose]</td>
@@ -328,7 +332,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[compression]</td>
-    <td>Image compression type (as of IM 7.0.3.8)</td>
+    <td>image compression type (as of IM 6.9.6-6)</td>
   </tr>
   <tr>
     <td>%[copyright]</td>
@@ -481,6 +485,10 @@ when enclosed in braces (long form):</p>
   <tr>
     <td>%[width]</td>
     <td>original width of image (when it was read in)</td>
+  </tr>
+  <tr>
+    <td>%[zero]</td>
+    <td>zero (unique filename for delegate use)</td>
   </tr>
 </table></div>
 
