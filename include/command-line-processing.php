@@ -39,11 +39,10 @@
   -draw 'roundrectangle 140, 5, 180, 85  20,40' +tile -fill none \
   -draw 'roundrectangle 264, 5, 304, 85 20,40' -strokewidth 2 \
   -draw 'roundrectangle 16, 5, 304, 85 20,40' \( +clone -background snow4 \
-  -shadow 80x3+3+3 \) +swap -background none -layers merge \( +size -font Helvetica \
-  -pointsize 90 -strokewidth 1 -fill red label:'50 %' -trim +repage \( +clone \
-  -background firebrick3 -shadow 80x3+3+3 \) +swap -background none -layers merge \) \
-  -insert 0 -gravity center -append -background white -gravity center -extent 320x200 \
-  cylinder_shaded.png</code></pre>
+  -shadow 80x3+3+3 \) +swap -background none -layers merge \( +size -pointsize 90 \
+  -strokewidth 1 -fill red label:'50 %' -trim +repage \( +clone -background firebrick3 \
+  -shadow 80x3+3+3 \) +swap -background none -layers merge \) -insert 0 -gravity center \
+  -append -background white -gravity center -extent 320x200 cylinder_shaded.png</code></pre>
 
 <p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
 
