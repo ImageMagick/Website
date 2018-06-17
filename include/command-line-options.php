@@ -3138,6 +3138,7 @@ in these cases. </p>
 to generate purely random dither. Or use <a
 href="#ordered-dither">-ordered-dither</a> to apply threshold mapped dither
 patterns, using uniform color maps, rather than specific color maps. </p>
+<p>Use "<code><a href="#define" >-define</a> dither:diffusion-amount=35%</code>, for example, to control the amount of Floyd-Steinberg dither.</p>
 
 
 <div style="margin: auto;">
@@ -3783,7 +3784,7 @@ this requires that IM be configured with HDRI enabled. In this case, you must
 use either MIFF, TIF, PFM or MPC formats for the real and imaginary component
 results, since they are formats that preserve both negative and fractional
 values without clipping them or truncating the fractional part. With either
-MIFF or TIF, one should add -define quantum:format=32, to allow those image
+MIFF or TIF, one should add <code>-define quantum:format=32</code>, to allow those image
 types to work properly in HDRI mode without clipping.</p>
 
 <p>The real and imaginary component images resulting from <a
