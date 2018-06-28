@@ -1,4 +1,4 @@
-<div class="magick-header">
+﻿<div class="magick-header">
 <p class="text-center"><a href="#colorspace">A Word about Colorspaces</a> • <a href="#supported">Supported Formats</a> • <a href="#pseudo">Pseudo Formats</a> • <a href="#builtin-images">Built-in Images</a>  • <a href="#builtin-patterns">Built-in Patterns</a> • <a href="#embedded">Embedded Profiles</a></p>
 
 <p class="lead magick-description">ImageMagick uses an ASCII string known as <var>magick</var> (e.g. <code>GIF</code>) to identify file formats, algorithms acting as formats, built-in patterns, and embedded profile types.  Support for some of the formats are delegated to libraries or external programs. The Installation Guide describes where to find these distributions and any special configuration options required.</p>
@@ -1661,14 +1661,14 @@ the supported image formats.</p>
   <tr>
     <td>GRAY90</td>
     <td>R</td>
-    <td>100% intensity gray, 32x32</td>
+    <td>90% intensity gray, 32x32</td>
     <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray90.png" width="100" height="32" alt="GRAY90" /></td>
   </tr>
 
   <tr>
     <td>GRAY95</td>
     <td>R</td>
-    <td>100% intensity gray, 32x32</td>
+    <td>95% intensity gray, 32x32</td>
     <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray95.png" width="100" height="32" alt="GRAY95" /></td>
   </tr>
 
