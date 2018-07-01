@@ -202,6 +202,10 @@ filename, type, width, height. </p>
     <td>image transparency channel enabled (true/false)</td>
   </tr>
   <tr>
+    <td>%B</td>
+    <td>file size of image read in bytes</td>
+  </tr>
+  <tr>
     <td>%C</td>
     <td>image compression type</td>
   </tr>
