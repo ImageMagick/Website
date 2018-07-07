@@ -136,6 +136,7 @@
      <li><code>resolution.y</code>=> y resolution</li>
 
      <li><code>depth</code>=> image depth</li>
+     <li><code>extent</code>=> image extent</li>
      <li><code>minima</code>=> image minima</li>
      <li><code>maxima</code>=> image maxima</li>
      <li><code>mean</code>=> image mean</li>
@@ -149,7 +150,6 @@
 <p>Fx also supports these symbols:</p>
 <ul>
 <li>image.depth</li>
-<li>image.extent</li>
 <li>image.kurtosis</li>
 <li>image.maxima</li>
 <li>image.minima</li>
