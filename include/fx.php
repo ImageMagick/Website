@@ -146,6 +146,19 @@
     <dd class="col-md-8"> while()</dd>
 </dl>
 
+<p>Fx also supports these symbols:</p>
+<ul>
+<li>image.depth</li>
+<li>image.extent</li>
+<li>image.kurtosis</li>
+<li>image.maxima</li>
+<li>image.minima</li>
+<li>image.resolution.x</li>
+<li>image.resolution.y</li>
+<li>image.skewness</li>
+<li>image.standard_deviation</li>
+</ul>
+
 
 <h3>The Fx Expression</h3>
 
