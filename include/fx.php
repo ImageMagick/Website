@@ -244,7 +244,6 @@
 <dt class="col-md-4"> <code>while(</code><var>condition</var>,<var>expression</var><code>)</code></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <code>image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</code></dt><dd class="col-md-8"> image attributes</dd>
 </dl>
-<br/>
 <p>The expression semantics include these rules:</p>
 
 <ul>
