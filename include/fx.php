@@ -145,20 +145,9 @@
      <li><code>skewness</code>=> image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</li></dl></dd>
   <dt class="col-md-4"> iterators:</dt>
     <dd class="col-md-8"> while()</dd>
+  <dt class="col-md-4"> image attributes:</dt>
+  	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
 </dl>
-
-<p>Fx also supports these symbols:</p>
-<ul>
-<li>image.depth</li>
-<li>image.kurtosis</li>
-<li>image.maxima</li>
-<li>image.minima</li>
-<li>image.resolution.x</li>
-<li>image.resolution.y</li>
-<li>image.skewness</li>
-<li>image.standard_deviation</li>
-</ul>
-
 
 <h3>The Fx Expression</h3>
 
