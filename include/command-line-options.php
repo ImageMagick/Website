@@ -1773,6 +1773,11 @@ available:</p>
   </tr>
 
   <tr>
+    <td>compose:clip-to-self=<var>true|false</var></td>
+    <td>Some <a href="#compose" >-compose</a> methods can modify the 'destination' image outside the overlay area.  It is disabled by default.</td>
+  </tr>
+
+  <tr>
     <td>compose:clamp=<var>on|off</var></td>
     <td>set each pixel whose value is below zero to zero and any the pixel
     whose value is above the quantum range to the quantum range (e.g. 65535)
