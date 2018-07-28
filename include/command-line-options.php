@@ -1422,7 +1422,7 @@ href="#set">-set</a> '<code>option:compose:args</code>'
 appropriately for the compose method. </p>
 
 <p>Some <a href="#compose">-compose</a> methods can modify the 'destination'
-image outside the overlay area. It is disabled by default.  You can enable this by setting the special <a href="#set">-set</a> '<code>option:compose:clip-to-self</code>' to '<code>true</code>'.  </p>
+image outside the overlay area. It is disabled by default.  You can enable this by setting the this define: <a href="#define">-define</a> '<code>compose:clip-to-self=true</code>'.</p>
 
 <p>The SVG compositing specification requires that color and opacity values range between zero and QuantumRange inclusive.  You can permit values outside this range with this option: <a href="#set">-set</a> '<code>option:compose:clamp=false</code></p>
 

@@ -38,7 +38,7 @@
 <pre class="highlight"><code>/usr/local/bin/convert logo: logo.gif
 </code></pre>
 
-<p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript is a prerequisite, otherwise the EPS, PS, and PDF tests will fail.</p>
+<p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript and Freetype are prerequisites, otherwise expect the EPS, PS, PDF and text annotations tests to fail.</p>
 
 <pre class="highlight"><code>make check
 </code></pre>

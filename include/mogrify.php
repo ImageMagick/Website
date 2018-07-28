@@ -764,6 +764,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#page">-path <var>path</var></a></td>
+    <td>write images to this path on disk</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#paint">-paint <var>radius</var></a></td>
     <td>simulate an oil painting</td>
   </tr>
