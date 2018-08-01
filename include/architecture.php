@@ -447,6 +447,7 @@ convert -limit memory 2mb -limit map 2mb -limit disk 2gb \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png
 </code></pre>
+<p>Due to network latency, expect a substantial slow-down in processing your workflow.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="threads"></a>Threads of Execution</h2>
 
