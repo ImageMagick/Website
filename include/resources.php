@@ -146,7 +146,7 @@ $USERPROFILE/.config/ImageMagick
 
 <h2 class="magick-post-title"><a class="anchor" id="modules"></a>Modules</h2>
 
-<h4>Coders</h4>
+<h5>Coders</h5>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
 <pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
@@ -157,7 +157,7 @@ $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders</code></pre>
 
-<h4>Filters</h4>
+<h5>Filters</h5>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
 <pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters

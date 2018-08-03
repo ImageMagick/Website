@@ -6,7 +6,7 @@ Version: ImageMagick 7.0.7-19 2018-01-04 Q16 https://www.imagemagick.org
 Copyright: © 1999-2018 ImageMagick Studio LLC
 Features: OpenMP</code></pre>
 <p>With OpenMP enabled, most ImageMagick algorithms execute on all the cores on your system in parallel.  ImageMagick typically divides the work so that each thread processes 64 rows of pixels. As rows are completed, OpenMP assigns more chunks of pixel rows to each thread until the algorithm completes. For example, if you have a quad-core system, and attempt to resize an image, the resizing takes place on 4 cores (8 if hyperthreading is enabled).</p>
-<h4>The Perils of Parallel Execution</h4>
+<h5>The Perils of Parallel Execution</h5>
 <p>It can be difficult to predict behavior in a parallel environment. Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize. The only way to be certain of the optimal performance, in terms of the number of threads, is to benchmark. ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads. This can help you identify how many threads are the most efficient in your environment. Here is an example benchmark for threads 1-8:</p>
 
 <pre class="highlight"><code>-> magick -bench 40 model.png -sharpen 0x1 null:

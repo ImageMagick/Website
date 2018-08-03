@@ -510,7 +510,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
 
 <p>Chances are the download, configure, build, and install of ImageMagick went flawlessly as it is intended, however, certain systems and environments may cause one or more steps to fail.  We discuss a few problems we've run across and how to take corrective action to ensure you have a working release of ImageMagick</p>
 
-<h4>Build Problems</h4>
+<h5>Build Problems</h5>
 <p>If the build complains about missing dependencies (e.g. <var>.deps/source.PLO</var>), add <code>--disable-dependency-tracking</code> to your <code>configure</code> command line.</p>
 
 <p>Some systems may fail to link at build time due to unresolved symbols. Try adding the LDFLAGS to the <code>configure</code> command line:</p>
@@ -518,7 +518,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
 <pre class="highlight"><code>configure LDFLAGS='-L/usr/local/lib -R/usr/local/lib'
 </code></pre>
 
-<h4>Dynamic Linker Run-time Bindings</h4>
+<h5>Dynamic Linker Run-time Bindings</h5>
 <p>On some systems, ImageMagick may not find its shared library, <var>libMagick.so</var>.  Try running the <code>ldconfig</code> with the library path:</p>
 
 <pre class="highlight"><code>/sbin/ldconfig /usr/local/lib
@@ -529,7 +529,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
 <pre class="highlight"><code>ldd `which convert`
 </code></pre>
 
-<h4>Delegate Libraries</h4>
+<h5>Delegate Libraries</h5>
 <p>On occasion you may receive these warnings:</p>
 <pre class="highlight"><code>no decode delegate for this image format
 no encode delegate for this image format
@@ -546,7 +546,7 @@ no encode delegate for this image format
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>
 
-<h4>PerlMagick</h4>
+<h5>PerlMagick</h5>
 <p>If PerlMagick fails to link with a message similar to <var>libperl.a is not found</var>, rerun <code>configure</code> with the <code>--enable-shared</code> or <code>--enable-shared --with-modules</code> options.</p>
 
 </div>

@@ -135,7 +135,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <p>As a consequence of using an array structure for variable pixel channels, auto-vectorization compilers have additional opportunities to speed up pixel loops.</p>
 
-<h4>Pixel Accessors</h4>
+<h5>Pixel Accessors</h5>
 <p>You can access pixel channel as array elements (e.g. <code>pixel[1]</code>) or use convenience accessors to get or set pixel channels:</p>
 
 <pre class="highlight"><code>GetPixela()                  SetPixela()
@@ -161,7 +161,7 @@ GetPixelY()                  SetPixelY()</code></pre>
 
 <p>You can find these accessors defined in the header file, <code>MagickCore/pixel-accessor.h</code></p>
 
-<h4>Pixel Traits</h4>
+<h5>Pixel Traits</h5>
 <p>Each pixel channel includes one or more of these traits:</p>
 <dl class="row">
 <dt class="col-md-4">Undefined</dt>
@@ -198,9 +198,9 @@ GetPixelYTraits()        SetPixelYTraits()</code></pre>
 NegateImage(image,exception);
 (void) SetImageChannelMask(image,channel_mask);</code></pre>
 
-<h4>Pixel User Channels</h4>
+<h5>Pixel User Channels</h5>
 <p>In version 7, we introduce pixel user channels.  Traditionally we utilize 4 channels, red, green, blue, and alpha.   For CMYK we also have a black channel.  User channels are designed to contain whatever additional channel information that makes sense for your application.  Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel.  You can associate traits with the user channels so that they when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.</p>
-<h4>Pixel Metacontent</h4>
+<h5>Pixel Metacontent</h5>
 <p>In version 7, we introduce pixel metacontent.  Metacontent is content about content. So rather than being the content itself, it's something that describes or is associated with the content.  Here the content is a pixel.  The pixel metacontent is for your exclusive use (internally the data is just copied, it is not modified) and is accessed with these MagickCore API methods:</p>
 <pre class="highlight"><code>SetImageMetacontentExtent()
 GetImageMetacontentExtent()
@@ -524,11 +524,11 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 </dl>
 <h2 class="magick-post-title"><a class="anchor" id="summary"></a>Version 7 Change Summary</h2>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>
-<h4>High Dynamic Range Imaging</h4>
+<h5>High Dynamic Range Imaging</h5>
 <ul>
 <li>ImageMagick version 7 enables HDRI by default.  Expect more accurate image processing results with higher memory requirements and possible slower processing times.  You can disable this feature for resource constrained system such as a cell phone with a slight loss of accuracy for certain algorithms (e.g. resizing).</li>
 </ul>
-<h4>Pixels</h4>
+<h5>Pixels</h5>
 <ul>
 <li>Pixels are no longer addressed with PixelPacket structure members (e.g. red, green, blue, opacity) but as an array of channels (e.g. pixel[PixelRedChannel]).</li>
 <li>Use convenience macros to access pixel channels (e.g. GetPixelRed(), SetPixelRed()).</li>
@@ -538,20 +538,20 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <li>Use the <var>metacontent</var> channel  to associate metacontent with each pixel.</li>
 <li>All color packet structures, PixelPacket, LongPacket, and DoublePacket, are consolidated to a single color structure, PixelInfo.</li>
 </ul>
-<h4>Alpha</h4>
+<h5>Alpha</h5>
 <ul>
 <li>We support alpha rather than opacity (0 transparent; QuantumRange opaque).</li>
 <li>Use GetPixelAlpha() or SetPixelAlpha() to get or set the alpha pixel channel value.</li>
 </ul>
-<h4>Grayscale</h4>
+<h5>Grayscale</h5>
 <ul>
 <li>Grayscale images consume one pixel channel in ImageMagick version 7.  To process RGB, set the colorspace to RGB (e.g. -colorspace sRGB).</li>
 </ul>
-<h4>Masks</h4>
+<h5>Masks</h5>
 <ul>
 <li>ImageMagick version 6 only supports read mask in limited circumstances.  Version 7 supports both a read and write mask.  The read mask is honored by most image-processing algorithms.</li>
 </ul>
-<h4>MagickCore API</h4>
+<h5>MagickCore API</h5>
 <ul>
 <li>Almost all image processing algorithms are now channel aware.</li>
 <li>MagickCore, version 7, adds an ExceptionInfo argument to those methods that lacked it in version 6, e.g. <code>NegateImage(image,MagickTrue,exception);</code></li>
@@ -560,7 +560,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <li>The InterpolatePixelMethod enum is now PixelInterpolateMethod.</li>
 <li>To account for variable pixel channels, images may now return a different signature.</li>
 </ul>
-<h4>Deprecated Methods</h4>
+<h5>Deprecated Methods</h5>
 <ul>
 <li>All ImageMagick version 6 MagickCore and MagickWand deprecated methods are removed and no longer available in ImageMagick version 7.</li>
 <li>All MagickCore channel method analogs are removed (e.g. NegateImageChannels()).  For version 7, use pixel traits instead.</li>

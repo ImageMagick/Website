@@ -169,7 +169,7 @@ display logo.gif</code></pre>
 
 <p><a href="http://www.cloudgoessocial.net/2011/03/21/im-xcode4-ios4-3/">~Claudio</a> provides iOS builds of ImageMagick.</p>
 
-<h4>Download iOS Distribution</h4>
+<h5>Download iOS Distribution</h5>
 
 <p>You can download the iOS distribution directly from ImageMagick's <a href="https://www.imagemagick.org/download/iOS">repository</a>.</p>
 
@@ -182,7 +182,7 @@ display logo.gif</code></pre>
 
 <p>The first one includes headers and compiled libraries that have been used to compile ImageMagick. Most users would need this one.</p>
 
-<h4>ImageMagick compiling script for iOS OS and iOS Simulator</h4>
+<h5>ImageMagick compiling script for iOS OS and iOS Simulator</h5>
 
 <p>To run the script:</p>
 <pre class="highlight"><code>./imagemagick_compile.sh <var>VERSION</var></code></pre>
