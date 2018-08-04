@@ -123,9 +123,9 @@ display logo.gif</code></pre>
   </tr>
 
   <tr>
-    <td>ImageMagick-x86_64-apple-darwin17.3.0.tar.gz</td>
-    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin17.3.0.tar.gz">download</a></td>
-    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin17.3.0.tar.gz">download</a></td>
+    <td>ImageMagick-x86_64-apple-darwin17.7.0.tar.gz</td>
+    <td><a href="https://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin17.7.0.tar.gz">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-x86_64-apple-darwin17.7.0.tar.gz">download</a></td>
     <td>macOS High Sierra</td>
   </tr>
 </table></div>
