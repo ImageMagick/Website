@@ -869,8 +869,13 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#random-threshold">-random-threshold <var>low,high</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#random-threshold">-random-threshold <var>low, high</var></a></td>
     <td>random threshold the image</td>
+  </tr>
+
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#range-threshold">-range-threshold <var>low-soft, high-soft, low-hard, high-hard</var></a></td>
+    <td>combine hard and soft thresholding</td>
   </tr>
 
   <tr>
