@@ -897,6 +897,12 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
   </tr>
 
   <tr>
+    <td>RangeThreshold</td>
+    <td>geometry=&gt;<i>geometry</i>, 'low-soft'=&gt;<i>double</i>, 'high-soft'=&gt;<i>double</i>, 'low-hard'=&gt;<i>double</i>, 'high-hard'=&gt;<i>double</i></td>
+    <td>combine soft and hard image thresholding.</td>
+  </tr>
+
+  <tr>
     <td>ReduceNoise</td>
     <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>reduce noise in the image with a noise peak elimination filter</td>
