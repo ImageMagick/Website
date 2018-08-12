@@ -1,9 +1,9 @@
 <div class="magick-header">
-<p class="text-center"><a href="#fx">The Fx Special Effects Image Operator</a> • <a href="#anatomy">The Anatomy of an Fx Expression</a></p>
+<p class="text-center"><a href="#fx">The FX Special Effects Image Operator</a> • <a href="#anatomy">The Anatomy of an FX Expression</a></p>
 
 <a class="anchor" id="fx"></a>
 
-<p class="lead magick-description">Use the Fx special effects image operator to apply a mathematical expression to an image or image channels.  Use Fx to:</p>
+<p class="lead magick-description">Use the FX special effects image operator to apply a mathematical expression to an image or image channels.  Use FX to:</p>
 
 <ul>
   <li>create canvases, gradients, mathematical colormaps</li>
@@ -29,12 +29,12 @@
 
 <p>Or the expression can be complex:</p>
 
-<pre class="highlight"><code>convert rose.jpg \  
-  -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \ 
+<pre class="highlight"><code>convert rose.jpg \
+  -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
   rose-sigmoidal.png'
 </code></pre>
 
-<p>This expression results in a high contrast version of the image:</p>
+<p>This expression results in a high contrast version of the source image:</p>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
@@ -45,7 +45,7 @@
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
 <pre class="highlight"><code>convert -size 70x70 canvas: \
-  -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" 
+  -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5"
   radial-gradient.png'
 </code></pre>
 
@@ -65,20 +65,20 @@
 
 <p>See <a href="https://www.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
-<p>The next section discusses the Fx expression language.</p>
+<p>The next section discusses the FX expression language.</p>
 
-<h2 class="magick-post-title"><a class="anchor" id="anatomy"></a>The Anatomy of an Fx Expression</h2>
+<h2 class="magick-post-title"><a class="anchor" id="anatomy"></a>The Anatomy of an FX Expression</h2>
 
-<h3>The Fx Expression Language</h3>
+<h3>The FX Expression Language</h3>
 
-<p>The formal Fx expression language is defined here:</p>
+<p>The formal FX expression language is defined here:</p>
 
 <dl class="row">
   <dt class="col-md-4"> numbers:</dt>
   	<dd class="col-md-8"> integer, floating point, scientific notation (+/- required, e.g. 3.81469e-06), International System number postfixes (.e.g KB, Mib, GB, etc.)</dd>
   <dt class="col-md-4"> constants: </dt>
     <dd class="col-md-8"> E (Euler's number), Epsilon, QuantumRange, QuantumScale, Opaque, Phi (golden ratio), Pi, Transparent</dd>
-  <dt class="col-md-4"> Fx operators (in order of precedence): </dt>
+  <dt class="col-md-4"> FX operators (in order of precedence): </dt>
      <dd class="col-md-8"> ^ (power), unary -, *, /, % (modulo), +, -,
      &lt;&lt;, &gt;&gt;, &lt;, &lt;=, &gt;, &gt;=, ==, !=,
      &amp; (bitwise AND),   | (bitwise OR),
@@ -149,9 +149,9 @@
   	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
 </dl>
 
-<h3>The Fx Expression</h3>
+<h3>The FX Expression</h3>
 
-<p>An Fx expression may include any combination of the following:</p>
+<p>An FX expression may include any combination of the following:</p>
 <dl class="row">
 <dt class="col-md-4"> <var>x</var> <code>^</code> <var>y</var></dt><dd class="col-md-8"> exponentiation (<var>x<sup>y</sup></var>)</dd>
 <dt class="col-md-4"> <code>(</code> ... <code>)</code></dt><dd class="col-md-8"> grouping</dd>
@@ -176,7 +176,7 @@
 <dt class="col-md-4"> <code>+</code><var>x</var></dt><dd class="col-md-8"> unary plus, return 1.0*value</dd>
 <dt class="col-md-4"> <code>-</code><var>x</var></dt><dd class="col-md-8"> unary minus, return -1.0*value</dd>
 <dt class="col-md-4"> <var>x</var> <code>?</code> <var>y</var> <code>:</code> <var>z</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>y</var> if <var>x</var> != 0, otherwise <var>z</var>; only one ternary conditional permitted per statement</dd>
-<dt class="col-md-4"> <var>x</var> <code>=</code> <var>y</var></dt><dd class="col-md-8">assignment; variables must be at least 2 characters, letter combinations only (e.g. Xi not X1)</dd>
+<dt class="col-md-4"> <var>x</var> <code>=</code> <var>y</var></dt><dd class="col-md-8">assignment; single character variables are reserved, instead use 2 or more characters, letter combinations only (e.g. Xi not X1)</dd>
 <dt class="col-md-4"> <var>x</var> <code>;</code> <var>y</var></dt><dd class="col-md-8">statement separator </dd>
 <dt class="col-md-4"> <code>phi</code></dt><dd class="col-md-8"> constant (1.618034...)</dd>
 <dt class="col-md-4"> <code>pi</code></dt><dd class="col-md-8"> constant (3.14159265359...)</dd>
@@ -319,9 +319,9 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <code>%[fx:]</code> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <code>s</code> and <code>t</code> successively refer to the current image and its index, while <code>i</code> and <code>j</code> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
-<pre class="highlight"><code>$ convert canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \ 
+<pre class="highlight"><code>$ convert canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]' info:
-Red channel of NW corner of image #0 is 0.453758 
+Red channel of NW corner of image #0 is 0.453758
 Red channel of NW corner of image #1 is 0.184588
 </code></pre>
 

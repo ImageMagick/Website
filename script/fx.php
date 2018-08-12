@@ -1,4 +1,4 @@
 <?php
-  $title='The Fx Special Effects Image Operator';
+  $title='The FX Special Effects Image Operator';
   include('session.php');
 ?>
