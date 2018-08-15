@@ -898,7 +898,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>RangeThreshold</td>
-    <td>geometry=&gt;<i>geometry</i>, 'low-soft'=&gt;<i>double</i>, 'high-soft'=&gt;<i>double</i>, 'low-hard'=&gt;<i>double</i>, 'high-hard'=&gt;<i>double</i></td>
+    <td>geometry=&gt;<i>geometry</i>, 'low-black'=&gt;<i>double</i>, 'low-white'=&gt;<i>double</i>, 'high-white'=&gt;<i>double</i>, 'high-black'=&gt;<i>double</i></td>
     <td>combine soft and hard image thresholding.</td>
   </tr>
 
