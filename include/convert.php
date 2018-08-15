@@ -875,7 +875,7 @@ transparent, extract, background, or shape the alpha channel</td>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#range-threshold">-range-threshold <var>low-black, low-white, high-white, high-black</var></a></td>
-    <td>combine hard and soft thresholding</td>
+    <td>perform either hard or soft thresholding within some range of values in an image</td>
   </tr>
 
   <tr>
