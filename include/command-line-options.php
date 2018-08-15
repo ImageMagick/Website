@@ -6494,7 +6494,7 @@ href="#raise">-raise</a> does not alter the dimensions of the image.</p>
   <h3><a class="anchor" id="range-threshold"></a>-range-threshold <var>low-black</var>,<var>low-white</var>,<var>high-white</var>,<var>high-black</var></h3>
 </div>
 
-<p class="magick-description">Combine hard and soft thresholding to the image.</p>
+<p class="magick-description">Perform either hard or soft thresholding within some range of values in an image.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="read-mask"></a>-read-mask
