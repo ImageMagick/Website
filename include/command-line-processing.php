@@ -183,7 +183,7 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 <pre class="highlight"><code>magick '*.jpg' -resize 120x120 thumbnail%03d.png</code></pre>
 
 <p>Here <var>all</var> the images are read and subsequently
-resized.  It is faster and less resource intensive to resize each image it
+resized.  It is faster and less resource intensive to resize each image as it
 is read:
 </p>
 
