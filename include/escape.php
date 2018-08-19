@@ -427,6 +427,14 @@ when enclosed in braces (long form):</p>
     <td>Virtual canvas (page) geometry</td>
   </tr>
   <tr>
+    <td>%[printsize.x]</td>
+    <td>X printsize</td>
+  </tr>
+  <tr>
+    <td>%[printsize.y]</td>
+    <td>Y printsize</td>
+  </tr>
+  <tr>
     <td>%[profile:icc]</td>
     <td>ICC profile info</td>
   </tr>
