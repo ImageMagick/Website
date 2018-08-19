@@ -132,6 +132,9 @@
      <li><code>page.x</code>=> page x offset</li>
      <li><code>page.y</code>=> page y offset</li>
 
+     <li><code>printsize.x</code>=> x printsize</li>
+     <li><code>printsize.y</code>=> y printsize</li>
+
      <li><code>resolution.x</code>=> x resolution</li>
      <li><code>resolution.y</code>=> y resolution</li>
 
