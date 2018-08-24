@@ -24,7 +24,7 @@
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="cache" name="shared-secret" stealth="true" value="replace with your secret phrase"/>
   &lt;policy domain="coder" rights="none" pattern="MVG" />
-  &lt;policy domain="coder" rights="none" pattern="PDF" />
+  &lt;policy domain="coder" rights="none" pattern="PS" />
   &lt;policy domain="coder" rights="none" pattern="EPS" />
   &lt;policy domain="coder" rights="none" pattern="PDF" />
   &lt;policy domain="coder" rights="none" pattern="XPS" />
