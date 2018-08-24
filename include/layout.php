@@ -14,7 +14,7 @@
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
-    $meta->description="Use ImageMagick® to create, edit, compose, convert bitmap images. ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images.";
+    $meta->description="Use ImageMagick® to create, edit, compose, convert bitmap images. With ImageMagick you can resize your image, crop it, change its shades and colors, add captions, among other operations.";
     $meta->application_url="https://www.imagemagick.org";
     $meta->keywords2="ImageMagick, PerlMagick, image processing, image, photo, software, Magick++, OpenMP, convert";
     $meta->sitename="ImageMagick";
