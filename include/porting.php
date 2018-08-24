@@ -224,7 +224,7 @@ Rec709Luminance</code></pre>
 <p>Previously, grayscale images were Rec601Luminance and consumed 4 channels: red, green, blue, and alpha.  With version 7, grayscale consumes only 1 channel requiring far less resources as a result.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="mask"></a>Masks</h2>
-<p>Version 7 supports masks for most image operators.  Black pixels in a read mask ignores corresponding pixel in an image whereas black pixels in a write mask protects the corresponding pixel in the image.  From the command-line, you can associate a mask with an image with the <code>-read-mask</code> and <code>-write-mask</code> options.  This polarity is the reverse of masks in version 6 of ImageMagick.  For convenience, we continue to support the <code>-mask</code> option in version 7 to match the behavior of version 6.</p>
+<p>Version 7 supports masks for most image operators.  White pixels in a read mask ignores corresponding pixel in an image whereas white pixels in a write mask protects the corresponding pixel in the image.  From the command-line, you can associate a mask with an image with the <code>-read-mask</code> and <code>-write-mask</code> options.  This polarity is matches the masks in version 6 of ImageMagick for ease of porting your workflow.  For convenience, we continue to support the <code>-mask</code> option in version 7 to match the behavior of version 6.</p>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
 <pre class="highlight"><code>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</code></pre>
 <p>Here we protect certain pixels from change:</p>
