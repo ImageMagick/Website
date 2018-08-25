@@ -115,6 +115,9 @@ Path: [built-in]
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
 
+<p>As of ImageMagick version 7.0.8-11, you can set a module security policy.  For example, to prevent Postscript or PDF interpretation, use:</p>
+<pre class="highlight"><code>&lt;policy domain="module" rights="none" pattern="{ps,pdf,xps}/></code></pre>
+
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
