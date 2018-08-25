@@ -51,7 +51,7 @@ convert: no images defined `wizard.jpg'</pre>
 &lt;policy domain="coder" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
 
 <p>Here we disable just a few Postscript related formats:</p>
-<pre class="highlight"><code>&lt;policy domain="coder" rights="none" pattern="{EPS,PS,PS2,PS3,PDF,XPS}" /></code></pre>
+<pre class="highlight"><code>&lt;policy domain="coder" rights="none" pattern="{EPS,PS2,PS3,PS,PDF,XPS}" /></code></pre>
 
 <p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
 <pre class="highlight"><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
