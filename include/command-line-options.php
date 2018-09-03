@@ -1763,14 +1763,14 @@ available:</p>
 
   <tr>
     <td>complex:snr=<var>value</var></td>
-    <td>Set the divide SNR constant<a href="#complex">-complex</a></td>
+    <td>Set the divide SNR constant<a href="#complex">-complex</a>.</td>
   </tr>
 
   <tr>
     <td>compose:args=<var>arguments</var></td>
      <td>Sets certain compose argument values when using convert ... -compose ...
     -composite. See <a href="https://www.imagemagick.org/script/compose.php"
-    >Image Composition</a></td>
+    >Image Composition</a>.</td>
   </tr>
 
   <tr>
@@ -1874,12 +1874,12 @@ available:</p>
   <tr>
     <td>distort:scale=<var>value</var></td>
     <td>Sets the output scaling factor for use with <a href="#distort"
-   >-distort</a></td>
+   >-distort</a>.</td>
   </tr>
 
   <tr>
     <td>distort:viewport=<var>WxH+X+Y</var></td>
-    <td>Sets the viewport for use with <a href="#distort">-distort</a></td>
+    <td>Sets the viewport for use with <a href="#distort">-distort</a>.</td>
   </tr>
 
   <tr>
@@ -1918,7 +1918,7 @@ available:</p>
 
   <tr>
     <td>hough-lines:accumulator=true</td>
-     <td>Returns the accumulator image in addition to the lines image</td>
+     <td>Returns the accumulator image in addition to the lines image.</td>
   </tr>
 
   <tr>
@@ -1936,37 +1936,37 @@ available:</p>
 
   <tr>
     <td>identify:locate=<var>minimum|maximum</var></td>
-     <td>Locates the coordinates of one or more image minimum or maximum</td>
+     <td>Locates the coordinates of one or more image minimum or maximum.</td>
   </tr>
 
   <tr>
     <td>identify:limit=<var>number</var></td>
-     <td>Locates the coordinates for the number of minima or maxima specified</td>
+     <td>Locates the coordinates for the number of minima or maxima specified.</td>
   </tr>
 
   <tr>
     <td>jp2:layer-number=<var>value</var></td>
      <td>Sets the maximum number of quality layers to decode. Same for JPT, JC2,
-    and J2K</td>
+    and J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:number-resolutions=<var>value</var></td>
      <td>Sets the number of resolutions to encode.Same for JPT, JC2, and 
-     J2K</td>
+     J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:progression-order=<var>value</var></td>
      <td>choose from LRCP, RLCP, RPCL, PCRL or CPRL. Same for JPT, JC2, and 
-    J2K</td>
+    J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:quality=<var>value,value...</var></td>
      <td>Sets the quality layer PSNR, given in dB. The order is from left to 
     right in ascending order. The default is a single lossless quality layer.  
-    Same for JPT, JC2, and J2K</td>
+    Same for JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
@@ -1975,13 +1975,13 @@ available:</p>
      The compression factor is the reciprocal of the compression ratio. The 
      valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If 
      defined, this value overrides the -quality setting.  A quality setting 
-     of 75 results in a rate value of 0.06641. Same for JPT, JC2, and J2K</td>
+     of 75 results in a rate value of 0.06641. Same for JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:reduce-factor=<var>value</var></td>
      <td>Sets the number of highest resolution levels to be discarded.Same for 
-    JPT, JC2, and J2K</td>
+    JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
@@ -2042,7 +2042,7 @@ available:</p>
 
   <tr>
     <td>json:features</td>
-   <td>includes features in verbose information</td>
+   <td>includes features in verbose information.</td>
   </tr>
 
   <tr>
@@ -2057,7 +2057,7 @@ available:</p>
 
   <tr>
     <td>json:moments</td>
-   <td>includes image moments in verbose information</td>
+   <td>includes image moments in verbose information.</td>
   </tr>
 
   <tr>
@@ -2276,7 +2276,7 @@ available:</p>
   <tr>
     <td>png:ignore-crc[=<var>true</var>]</td>
      <td>When you know your image has no CRC or ADLER32 errors, this can speed up 
-     decoding. It is also helpful in debugging bug reports from "fuzzers"</td>
+     decoding. It is also helpful in debugging bug reports from "fuzzers".</td>
   </tr>
 
   <tr>
@@ -2410,7 +2410,7 @@ available:</p>
   <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
     <td>Specify the alpha extra samples as associated, unassociated or 
-    unspecified </td>
+    unspecified.</td>
   </tr>
 
   <tr>
@@ -2445,13 +2445,13 @@ available:</p>
 
   <tr>
     <td>tiff:rows-per-strip=<var>value</var></td>
-    <td>Sets the number of rows per strip</td>
+    <td>Sets the number of rows per strip.</td>
   </tr>
 
   <tr>
     <td>tiff:tile-geometry=<var>WxH</var></td>
     <td>Sets the tile size for pyramid tiffs. Requires the suffix
-        PTIF: before the outputname</td>
+        PTIF: before the outputname.</td>
   </tr>
 
   <tr>
@@ -2466,17 +2466,17 @@ available:</p>
 
   <tr>
     <td>txt:compliance=<var>css</var></td>
-    <td>The first argument of a hsl() color is integer, not percentage</td>
+    <td>The first argument of a hsl() color is integer, not percentage.</td>
   </tr>
 
   <tr>
     <td>x:screen=<var>true</var></td>
-    <td>Obtains the image from the root window </td>
+    <td>Obtains the image from the root window.</td>
   </tr>
 
   <tr>
     <td>x:silent=<var>true</var></td>
-    <td>Turns off the beep when importing an image </td>
+    <td>Turns off the beep when importing an image.</td>
   </tr>
 </table>
 
