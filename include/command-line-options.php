@@ -1922,6 +1922,13 @@ available:</p>
   </tr>
 
   <tr>
+    <td>heic:preserve-orientation</td>
+    <td>Preserve the original EXIF orientation during HEIC decoding and rotate the pixels accordingly.
+        By default, EXIF orientation is reset to "1" to match the actual orientation of pixels in HEIC.
+    </td>
+  </tr>
+
+  <tr>
     <td>icon:auto-resize</td>
      <td>Automatically stores multiple sizes when writing an ico image
     (requires a 256x256 input image).</td>
