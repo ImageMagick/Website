@@ -10,25 +10,28 @@
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/../cache/' . $script;
-  if (file_exists($cacheName) && ((time()-604800) < filemtime($cacheName))) {
-    readfile($cacheName);
-    echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
-      " -->";
-    ob_end_flush();
-    exit();
+  session_name('ImageMagick');
+  if ($dynamic_content && isset($dynamic_content)) {
+    session_cache_limiter('private_no_expire, must-revalidate');
+  } else {
+    if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
+      /*
+        Render cached content.
+      */
+      include($cacheName);
+      echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
+        " -->";
+      ob_end_flush();
+      exit;
+    }
+    session_cache_limiter('public');
   }
   /*
     Generate dynamic content.
   */
-  session_name('ImageMagick');
   ini_set("session.use_trans_sid",1);
   ini_set("url_rewriter.tags", "a=href,area=href,input=src,fieldset=");
   ini_set("arg_separator.output","&amp;");
-  if (!isset($dynamic_content) || !$dynamic_content) {
-    session_cache_limiter('public');
-  } else {
-    session_cache_limiter('private_no_expire, must-revalidate');
-  }
   session_start();
   $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
   $_SESSION['AbsolutePath']=$path['dirname'];
