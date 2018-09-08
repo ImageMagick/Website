@@ -7506,12 +7506,9 @@ generate an all-black and an all-white image with the same dimensions as the
 input image.</p>
 
 
-<pre class="highlight"><code>convert in.png -threshold 100% black.png
-convert in.png -threshold -1 white.png
+<pre class="highlight"><code>convert in.png -channel RGB -threshold 100% black.png
+convert in.png -channel RGB -threshold -1 white.png
 </code></pre>
-
-<p>Note that the values of the transparency channel is treated as 'matte'
-values (0 is opaque) and not as 'alpha' values (0 is transparent).</p>
 
 <p> See also <?php option("black-threshold"); ?> and <?php option("white-threshold"); ?>.
 </p>
