@@ -43,7 +43,7 @@
       ($_SERVER['SERVER_NAME'] == 'imagemagick.com') ||
       ($_SERVER['SERVER_NAME'] == 'imagemagick.org'))
     {
-      header("Location: https://www.imagemagick.org/index.php");
+      header("Location: https://imagemagick.org/index.php");
       exit();
     }
   $use_sts = true;
