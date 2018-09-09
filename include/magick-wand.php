@@ -302,5 +302,5 @@ int main(int argc,char **argv)
   return(0);
 }
 </code></pre>
-<p><a href="https://www.imagemagick.org/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
+<p><a href="https://imagemagick.org/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
 </div>

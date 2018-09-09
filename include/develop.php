@@ -9,7 +9,7 @@
 
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 
-<dd class="col-md-8"><a href="https://www.imagemagick.org/ChMagick">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
+<dd class="col-md-8"><a href="https://imagemagick.org/ChMagick">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="com_"></a>COM+</dt>
 
@@ -17,7 +17,7 @@
 
   <dt class="col-md-4"><a class="anchor" id="c__"></a>C++</dt>
 
-<dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick++.php">Magick++</a> provides an object-oriented C++ interface to ImageMagick.  See <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
+<dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick++.php">Magick++</a> provides an object-oriented C++ interface to ImageMagick.  See <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="go"></a>GO</dt>
   <dd class="col-md-8"><a href="https://github.com/gographics/imagick">GoImagick</a> is a set of Go bindings to ImageMagick's MagickWand and MagickCore C APIs.</dd>
@@ -79,7 +79,7 @@
 
 <dd class="col-md-8"><a href="http://wand-py.org/">Wand</a> is a ctypes-based ImagedMagick binding library for Python.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
-<dd class="col-md-8"><a href="https://www.imagemagick.org/download/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
+<dd class="col-md-8"><a href="https://imagemagick.org/download/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 <dd class="col-md-8"><a href="http://www.assembla.com/wiki/show/pythonmagickwand">PythonMagickWand</a> is an object-oriented Python interface to MagickWand based on ctypes.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>

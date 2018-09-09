@@ -55,7 +55,7 @@
       $mail->message=$message;
       $mail->Send();
 ?>
-      <p>Your message was sent.  Expect a reply within 24-48 hours if your message is on topic and is a sponsorship, license, security, or paid support issue.  For all other issues, post your message to the <a href="https://www.imagemagick.org/discourse-server">discourse server</a>.</p>
+      <p>Your message was sent.  Expect a reply within 24-48 hours if your message is on topic and is a sponsorship, license, security, or paid support issue.  For all other issues, post your message to the <a href="https://imagemagick.org/discourse-server">discourse server</a>.</p>
   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
 
 <?php
@@ -66,7 +66,7 @@
   }
 ?>
   <div>
-  <p class="lead magick-description">Post here for any of the issues listed below.  You can expect a response from our team if your issue is a sponsorship, <a href="https://www.imagemagick.org/script/license.php">license</a>, security, or paid support issue.  If you require a response for any other issue, post to the ImageMagick public <a href="https://www.imagemagick.org/discourse-server">forums</a>.  You can also post bug reports to the <a href="https://github.com/ImageMagick/ImageMagick/issues">issues</a> forum.  Note, we do <u>not</u> offer sponsored links <u>nor do we respond to solicitations</u>.</p>
+  <p class="lead magick-description">Post here for any of the issues listed below.  You can expect a response from our team if your issue is a sponsorship, <a href="https://imagemagick.org/script/license.php">license</a>, security, or paid support issue.  If you require a response for any other issue, post to the ImageMagick public <a href="https://imagemagick.org/discourse-server">forums</a>.  You can also post bug reports to the <a href="https://github.com/ImageMagick/ImageMagick/issues">issues</a> forum.  Note, we do <u>not</u> offer sponsored links <u>nor do we respond to solicitations</u>.</p>
   <fieldset>
   <h2 class="magick-post-title">Contact the Wizards</h2>
 	<p>Enter this code, <code>

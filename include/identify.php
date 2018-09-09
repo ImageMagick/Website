@@ -94,7 +94,7 @@ Image: rose.jpg
   Number pixels: 3.22K
   User time: 0.000u
   Elapsed time: 0:01.000
-  Version: ImageMagick 7.0.4-8 Q16 x86_64 http://www.imagemagick.org
+  Version: ImageMagick 7.0.4-8 Q16 x86_64 http://imagemagick.org
 </code></pre>
 
 <p>To get the print size in inches of an image at 72 DPI, use:</p>
@@ -119,7 +119,7 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01
 <pre class="highlight"><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png
 </code></pre>
 
-<p>You can find additional examples of using <code>identify</code> in <a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>identify</code> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="options"></a>Option Summary</h2>
 

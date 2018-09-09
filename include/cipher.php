@@ -56,7 +56,7 @@ cipher in Counter mode.  We use the the first half of your passphrase to derive 
 use a standard cipher and mode so other vendors could support enciphered image content.</p>
 
 <p>Some small practical examples of image enciphering can be found in IM
-Examples <a href="https://www.imagemagick.org/Usage/transform/#encipher"
+Examples <a href="https://imagemagick.org/Usage/transform/#encipher"
 >Encrypting Image Data</a>. </p>
 
 </div>

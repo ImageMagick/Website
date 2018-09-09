@@ -4,9 +4,9 @@
 <a class="anchor" id="introduction"></a>
 <p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">PerlMagick</a> is an objected-oriented <a href="http://www.perl.com/perl/">Perl</a> interface to ImageMagick. Use the module to read, manipulate, or write an image or image sequence from within a Perl script. This makes it very suitable for Web CGI scripts. You must have ImageMagick 6.5.5 or above and Perl version 5.005_02 or greater installed on your system for PerlMagick to build properly.</p>
 
-<p>There are a number of useful scripts available to show you the value of PerlMagick. You can do Web based image manipulation and conversion with <a href="https://www.imagemagick.org/download/perl">MagickStudio</a>, or use <a href="http://git.imagemagick.org/repos/ImageMagick/PerlMagick/demo">L-systems</a> to create images of plants using mathematical constructs, and finally navigate through collections of thumbnail images and select the image to view with the <a href="http://webmagick.sourceforge.net/">WebMagick Image Navigator</a>.</p>
+<p>There are a number of useful scripts available to show you the value of PerlMagick. You can do Web based image manipulation and conversion with <a href="https://imagemagick.org/download/perl">MagickStudio</a>, or use <a href="http://git.imagemagick.org/repos/ImageMagick/PerlMagick/demo">L-systems</a> to create images of plants using mathematical constructs, and finally navigate through collections of thumbnail images and select the image to view with the <a href="http://webmagick.sourceforge.net/">WebMagick Image Navigator</a>.</p>
 
-<p>You can try PerlMagick from your Web browser at the <a href="https://www.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick functions.</p>
+<p>You can try PerlMagick from your Web browser at the <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick functions.</p>
 
 <h2 class="magick-post-title"><a class="anchor" id="installation"></a>Installation</h2>
 
@@ -17,7 +17,7 @@
 <pre class="highlight"><code>yum install ImageMagick-perl
 </code></pre>
 
-<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">source</a> release.</p>
+<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="https://imagemagick.org/download/ImageMagick.tar.gz">source</a> release.</p>
 
 <p>Unpack the distribution with this command:</p>
 
@@ -44,7 +44,7 @@
 <pre class="highlight"><code>perl -MImage::Magick -le 'print Image::Magick->QuantumDepth'
 </code></pre>
 
-<p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="https://www.imagemagick.org/Usage/">convert, compose, or edit</a> your images.</p>
+<p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images.</p>
 
 <p><b>Windows XP / Windows 2000</b></p>
 

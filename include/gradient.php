@@ -18,7 +18,7 @@ radial-gradient:color1-color2
 
 <p>The default for a linear gradient has color1 at the top of the image and color2 at the bottom of the image. Similarly, the default for a radial gradient has color1 at the center of the image and color2 at the boundary of the image.</p>
 
-<p>Gradient colors may be any valid color defined per <a href="https://www.imagemagick.org/script/color.php" target="_blank">https://www.imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Unix systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
+<p>Gradient colors may be any valid color defined per <a href="https://imagemagick.org/script/color.php" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Unix systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
 
 <p>Here is an example linear (as opposed to radial) gradient:</p>
 

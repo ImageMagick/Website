@@ -11,7 +11,7 @@
 
 <h2 class="magick-post-title"><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://www.imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
+  <dd class="col-md-8"><a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
   <dd class="col-md-8"><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/">Efficient Image Resizing With ImageMagick</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0606.pdf">ImageMagick, Part One</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0607.pdf">ImageMagick, Part Two</a></dd>
@@ -67,20 +67,20 @@
 <h2 class="magick-post-title"><a class="anchor" id="mirrors"></a>ImageMagick Web Site Mirrors</h2>
 <ul>
   <dt class="col-md-4">United States</dt>
-    <dd class="col-md-8"><a href="https://www.imagemagick.org/">https://www.imagemagick.org</a></dd>
+    <dd class="col-md-8"><a href="https://imagemagick.org/">https://imagemagick.org</a></dd>
     <dd class="col-md-8"><a href="http://transloadit.imagemagick.org/">http://transloadit.imagemagick.org</a></dd>
 </ul>
 
 <h2 class="magick-post-title"><a class="anchor" id="bank"></a>Image Bank</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="https://www.imagemagick.org/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
+  <dd class="col-md-8"><a href="https://imagemagick.org/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
 </ul>
 
 <h2 class="magick-post-title"><a class="anchor" id="other-projects"></a>Other Projects</h2>
 <ul>
   <dd class="col-md-8"><a href="https://github.com/puelocesar/android-lib-magick">ImageMagick API on the Android Platform</a></dd>
-  <dd class="col-md-8"><a href="https://www.imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
+  <dd class="col-md-8"><a href="https://imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
   <dd class="col-md-8"><a href="http://www.wizards-toolkit.org/">Wizard's Toolkit</a></dd>
   <dd class="col-md-8"><a href="http://www.multipole.org/">Computational Simulation of Multi-Body Interactions with O(n) Scaling</a></dd>
 </ul>

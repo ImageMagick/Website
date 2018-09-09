@@ -15,7 +15,7 @@
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
     $meta->description="Use ImageMagick® to create, edit, compose, convert bitmap images. With ImageMagick you can resize your image, crop it, change its shades and colors, add captions, among other operations.";
-    $meta->application_url="https://www.imagemagick.org";
+    $meta->application_url="https://imagemagick.org";
     $meta->keywords2="ImageMagick, PerlMagick, image processing, image, photo, software, Magick++, OpenMP, convert";
     $meta->sitename="ImageMagick";
     $meta->slogan="Digital image manipulation that works like magick!";
@@ -27,7 +27,7 @@
 <head>
   <?php echo $meta->metadata($title); ?>
   <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4">
-  <link href="https://www.imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
+  <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
@@ -61,7 +61,7 @@
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="https://www.imagemagick.org/discourse-server/">Community</a>
+        <a class="nav-link" target="_blank" href="https://imagemagick.org/discourse-server/">Community</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">

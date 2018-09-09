@@ -41,7 +41,7 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<pre class="highlight">-> convert https://www.imagemagick.org/image/wizard.png wizard.jpg
+<pre class="highlight">-> convert https://imagemagick.org/image/wizard.png wizard.jpg
 convert: not authorized `HTTPS'
 convert: unable to open file: No such file or directory
 convert: no images defined `wizard.jpg'</pre>

@@ -2,8 +2,8 @@
 <p class="text-center"><a href="#documentation">Documentation</a> • <a href="#get">Obtaining Magick++</a> • <a href="#install">Installation</a> • <a href="#bugs">Reporting Bugs</a></p>
 
 <a class="anchor" id="intro"></a>
-<p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://www.imagemagick.org/">ImageMagick</a> image-processing library.</p>
-<p>Magick++ supports an object model which is inspired by <a href="https://www.imagemagick.org/script/perl-magick.php">PerlMagick</a>.
+<p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
+<p>Magick++ supports an object model which is inspired by <a href="https://imagemagick.org/script/perl-magick.php">PerlMagick</a>.
 Images support implicit reference counting so that copy constructors
 and assignment incur almost no cost. The cost of actually copying an
 image (if necessary) is done just before modification and this copy
@@ -26,11 +26,11 @@ performed on multiple images stored in STL containers.
 <a class="anchor" id="documentation"></a>
 <p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../api/magick++-classes.php">documentation</a> is
 provided for all Magick++ classes, class methods, and template
-functions which comprise the API.  See a <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://www.imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
+functions which comprise the API.  See a <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2 class="magick-post-title">Obtaining Magick++</h2>
 <a class="anchor" id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
-source releases and may be retrieved via <a href="https://www.imagemagick.org/script/download.php">HTTP</a>
+source releases and may be retrieved via <a href="https://imagemagick.org/script/download.php">HTTP</a>
 or <a href="https://github.com/ImageMagick/ImageMagick/tree/master/Magick%2B%2B">GitHub</a>.
 </p>
 <h2 class="magick-post-title">Installation</h2>
@@ -104,6 +104,6 @@ int main(int argc,char **argv)
 <h2 class="magick-post-title">Reporting Bugs</h2>
 <a class="anchor" id="bugs"></a>
 <p>Questions regarding usage should be directed to or to report any bugs go to
-<a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=23">Magick++ bug tracking forum</a>.
+<a href="https://imagemagick.org/discourse-server/viewforum.php?f=23">Magick++ bug tracking forum</a>.
 </p>
 </div>

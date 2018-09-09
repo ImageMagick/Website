@@ -5,7 +5,7 @@
 
 <h2 class="magick-post-title"><a class="anchor" id="download"></a>Download &amp; Unpack</h2>
 
-<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://www.imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
 <p>Unpack the distribution it with this command:</p>
 
@@ -362,7 +362,7 @@ Options used to compile and link:
 <p>While <code>configure</code> is designed to ease installation of ImageMagick, it often discovers problems that would otherwise be encountered later when compiling ImageMagick. The configure script tests for headers and libraries by executing the compiler (CC) with the specified compilation flags (CFLAGS), pre-processor flags (CPPFLAGS), and linker flags (LDFLAGS). Any errors are logged to the file <code>config.log</code>. If configure fails to discover a header or library please review this log file to determine why, however, please be aware that *errors in the <code>config.log</code> are normal* because configure works by trying something and seeing if it fails. An error in <code>config.log</code> is only a problem if the test should have passed on your system.</p>
 
 <p>Common causes of configure failures are: 1) a delegate header is not in the header include path (CPPFLAGS -I option); 2) a delegate library is not in the linker search/run path (LDFLAGS -L/-R option); 3) a delegate library is missing a function (old version?); or 4) compilation environment is faulty.</p>
-<p>If all reasonable corrective actions have been tried and the problem appears be due to a flaw in the configure script, please send a bug report to the <a href="https://www.imagemagick.org/discourse-server/viewforum.php?f=3">ImageMagick Defect Support Forum</a>. All bug reports should contain the operating system type (as reported by <code>uname -a</code>) and the compiler/compiler-version. A copy of the configure script output and/or the relevant portion of  <code>config.log</code> file may be valuable in order to find the problem.  If you post portions of <code>config.log</code>, please also send a script of the configure output and a description of what you expected to see (and why) so the failure you are observing can be identified and resolved.</p>
+<p>If all reasonable corrective actions have been tried and the problem appears be due to a flaw in the configure script, please send a bug report to the <a href="https://imagemagick.org/discourse-server/viewforum.php?f=3">ImageMagick Defect Support Forum</a>. All bug reports should contain the operating system type (as reported by <code>uname -a</code>) and the compiler/compiler-version. A copy of the configure script output and/or the relevant portion of  <code>config.log</code> file may be valuable in order to find the problem.  If you post portions of <code>config.log</code>, please also send a script of the configure output and a description of what you expected to see (and why) so the failure you are observing can be identified and resolved.</p>
 
 <p>ImageMagick is now configured and ready to build</p>
 
@@ -430,7 +430,7 @@ identify logo.gif
 
 <h2 class="magick-post-title"><a class="anchor" id="linux"></a>Linux-specific Build instructions</h2>
 
-<p>Download <a href="https://www.imagemagick.org/download/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://www.imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://www.imagemagick.org/download/linux/SRPMS/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://imagemagick.org/download/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://imagemagick.org/download/linux/SRPMS/digest.rdf">message digest</a>.</p>
 
 <p>Build ImageMagick with this command:</p>
 
@@ -463,7 +463,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
 
 <p>Now lets build ImageMagick:</p>
 
-	  <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://www.imagemagick.org/download/digest.rdf">message digest</a>.</p>
+	  <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
 	  <p>Unpack and change into the top-level ImageMagick directory:</p>
 		<?php crt("tar xvzf ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".tar.gz",
 				"",
