@@ -421,7 +421,7 @@ if (profile != (StringInfo *) NULL)
 <pre class="highlight"><code>convert logo: -resize 250000x250000 logo.miff
 </code></pre>
 
-<p>For large images, ImageMagick will likely create a pixel cache on disk.  Make sure you have plenty of temporary disk space.  If your default temporary disk partition is too small, tell ImageMagick to use another partition with plenty of free space.  For example:</p>
+<p>For large images, memory resources will likely be exhausted and ImageMagick will instead create a pixel cache on disk.  Make sure you have plenty of temporary disk space.  If your default temporary disk partition is too small, tell ImageMagick to use another partition with plenty of free space.  For example:</p>
 <pre class="highlight"><code>convert -define registry:temporary-path=/data/tmp logo:  \ <br/>     -resize 250000x250000 logo.miff
 </code></pre>
 
