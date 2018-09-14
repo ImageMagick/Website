@@ -195,11 +195,11 @@ display logo.gif</code></pre>
 <li>tiff</li>
 </ul>
 
-<p>Upon successful compilation a folder called <code>IMPORT_ME</code> is created on your <code>~/Desktop</code>. You can import it into your XCode project.</p>
+<p>Upon successful compilation a folder called <code>IMPORT_ME</code> is created on your <code>~/Desktop</code>. You can import it into your Xcode project.</p>
 
-<h5>XCode project settings</h5>
+<h5>Xcode project settings</h5>
 
-<p>After including everything into XCode please also make sure to have these settings (Build tab of the project information):</p>
+<p>After including everything into Xcode please also make sure to have these settings (Build tab of the project information):</p>
 <ul>
 <li>Other Linker Flags: -lMagickCore-Q16 -lMagickWand-Q16 -ljpeg -lpng -lbz2 -lz</li>
 <li>Header Search Paths: $(SRCROOT) - make it Recursive</li>
