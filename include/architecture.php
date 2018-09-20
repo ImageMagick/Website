@@ -33,9 +33,10 @@
   <li>a high-dynamic range pixel that can include negative values (e.g. -0.00716) as well as values that exceed the quantum depth (e.g. 65931)</li>
   <li>one or more pixels simultaneously in different threads of execution</li>
   <li>all the pixels in memory to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors</li>
+  <li>traits associated with each channel to specify is the pixel channel is copied, updated, or blended<li>
+  <li>masks that define which pixels are eligible to be updated<li>
+  <li>extra channels that benefits the user but otherwise remain untouched by ImageMagick image processing algorithms<li>
 </ul>
-
-<p>Some images include a clip mask that define which pixels are eligible to be updated.  Pixels outside the area defined by the clip mask remain untouched.</p>
 
 <p>Given the varied image formats and image processing requirements, we implemented the ImageMagick <a href="#cache">pixel cache</a> to provide convenient sequential or parallel access to any pixel on demand anywhere inside the image region (i.e. <a href="#authentic-pixels">authentic pixels</a>)  and from any image in a sequence.  In addition, the pixel cache permits access to pixels outside the boundaries defined by the image (i.e. <a href="#virtual-pixels">virtual pixels</a>).</p>
 
