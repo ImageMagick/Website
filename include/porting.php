@@ -355,7 +355,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 
 <p>By default, image operations such as convolution blends alpha with each channel.  To convolve each channel independently, deactivate the alpha channel as follows:</p>
 <pre class="highlight"><code>convert ... -alpha discrete -blur 0x1 ...</code></pre>
-<p>To remove the alpha values from your image, use <code>-alpha off</code>.</p>
+<p>To remove the alpha values from your image, use <code>-alpha off</code>. If you want to instead persist the alpha channel but not blend the alpha pixels for certain image processing operations, use <code>-alpha deactivate</code> instead.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
 <dt class="col-md-4">-channel</dt>
