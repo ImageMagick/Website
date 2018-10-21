@@ -49,11 +49,6 @@
   ImageMagick is capable of spewing copious amounts of informational or debugging statements.  Use this file to configure how the information will appear in a log message and where you want the logging messages posted.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/magic.xml">magic.xml</a></dt>
-  <dd class="col-md-8">Associate an image format with a unique identifier.
-  Many image formats have identifiers that uniquely identify a particular image format.  For example, the GIF image format always begins with <code>GIF8</code> as the first 4 characters of the image.  ImageMagick uses this information to quickly determine the type of image it is dealing with when it reads an image.
-  </dd>
-
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/mime.xml">mime.xml</a></dt>
   <dd class="col-md-8">Associate an internet media type with a unique identifier.
   Many files and data streams have identifiers that uniquely identify a
