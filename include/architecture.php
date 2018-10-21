@@ -1261,9 +1261,6 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
     area=0.0;
     status=MagickTrue;
     image_view=AcquireVirtualCacheView(image,exception);
-#if defined(MAGICKCORE_OPENMP_SUPPORT)
-    #pragma omp parallel for schedule(static,4) shared(status)
-#endif
     for (y=0; y &lt; (long) image->rows; y++)
     {
       register const Quantum
