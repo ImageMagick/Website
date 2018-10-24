@@ -6,7 +6,7 @@
 <h2 class="magick-post-title"><a class="anchor" id="web"></a>Use ImageMagick Online</h2>
 <ul>
   <dd class="col-md-8"><a href="http://jqmagick.imagemagick.org/">JqMagick</a></dd>
-  <dd class="col-md-8"><a href="http://transloadit.imagemagick.org/MagickStudio/">Magick Studio</a></dd>
+  <dd class="col-md-8"><a href="https://imagemagick.org/MagickStudio/">Magick Studio</a></dd>
 </ul>
 
 <h2 class="magick-post-title"><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
@@ -50,12 +50,12 @@
 
 <h2 class="magick-post-title"><a class="anchor" id="topics"></a>ImageMagick Topics</h2>
 <ul>
-  <dd class="col-md-8"><a href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/graphics/ImageMagick/">FreeBSD port</a></dd> 
-  <dd class="col-md-8"><a href="http://directory.fsf.org/project/ImageMagick/">Free Software Foundation</a></dd> 
-  <dd class="col-md-8"><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/">Hyperscale Image Resizing</a> </dd> 
-  <dd class="col-md-8"><a href="http://pkgsrc.se/graphics/ImageMagick/">NetBSD</a></dd> 
-  <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagick/">SourceForge</a></dd> 
-  <dd class="col-md-8"><a href="http://en.wikipedia.org/wiki/ImageMagick">WikiPedia</a></dd> 
+  <dd class="col-md-8"><a href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/graphics/ImageMagick/">FreeBSD port</a></dd>
+  <dd class="col-md-8"><a href="http://directory.fsf.org/project/ImageMagick/">Free Software Foundation</a></dd>
+  <dd class="col-md-8"><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/">Hyperscale Image Resizing</a> </dd>
+  <dd class="col-md-8"><a href="http://pkgsrc.se/graphics/ImageMagick/">NetBSD</a></dd>
+  <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagick/">SourceForge</a></dd>
+  <dd class="col-md-8"><a href="http://en.wikipedia.org/wiki/ImageMagick">WikiPedia</a></dd>
 </ul>
 
 <h2 class="magick-post-title"><a class="anchor" id="book-review"></a>ImageMagick Book Review</h2>
