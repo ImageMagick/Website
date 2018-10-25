@@ -105,7 +105,6 @@
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a>
     <br/>
-    <?php if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") echo '<small>Sponsored by <a href="https://transloadit.com">Transloadit</a> - the file uploading &amp; processing service</small><br/>' ?>
     <small>© 1999-2018 ImageMagick Studio LLC</small></p>
   </footer>
 

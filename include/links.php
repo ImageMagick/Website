@@ -68,7 +68,6 @@
 <ul>
   <dt class="col-md-4">United States</dt>
     <dd class="col-md-8"><a href="https://imagemagick.org/">https://imagemagick.org</a></dd>
-    <dd class="col-md-8"><a href="http://transloadit.imagemagick.org/">http://transloadit.imagemagick.org</a></dd>
 </ul>
 
 <h2 class="magick-post-title"><a class="anchor" id="bank"></a>Image Bank</h2>
