@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.</p>
 
-<h2 class="magick-post-title"><a class="anchor" id="configure"></a>Configuration Files</h2>
+<h2><a class="anchor" id="configure"></a>Configuration Files</h2>
 
 <p>ImageMagick depends on a number of external configuration files detailed here:</p>
 
@@ -139,7 +139,7 @@ $USERPROFILE/.config/ImageMagick
 
 <p>If a configuration file cannot not be found, ImageMagick relies on built-in default values.</p>
 
-<h2 class="magick-post-title"><a class="anchor" id="modules"></a>Modules</h2>
+<h2><a class="anchor" id="modules"></a>Modules</h2>
 
 <h5>Coders</h5>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
@@ -162,7 +162,7 @@ $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters</code></pre>
 
-<h2 class="magick-post-title"><a class="anchor" id="fonts"></a>Fonts</h2>
+<h2><a class="anchor" id="fonts"></a>Fonts</h2>
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
@@ -176,7 +176,7 @@ $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/etc/ImageMagick
 $MAGICK_FONT_PATH</code></pre>
 
-<h2 class="magick-post-title"><a class="anchor" id="environment"></a>Environment Variables</h2>
+<h2><a class="anchor" id="environment"></a>Environment Variables</h2>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
