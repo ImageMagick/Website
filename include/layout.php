@@ -110,7 +110,7 @@
 
   <!-- Javascript assets -->
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo $_SESSION['RelativePath']?>/../assets/jquery.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><\/script>')</script>
 </body>
 </html>
 <?php
