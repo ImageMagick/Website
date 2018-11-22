@@ -327,7 +327,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AdaptiveThreshold</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, offset=&gt;<i>integer</i></td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bias=&gt;<i>double</i></td>
     <td>local adaptive thresholding.</td>
   </tr>
 
@@ -419,6 +419,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
     <td>Chop</td>
     <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
     <td>chop an image</td>
+  </tr>
+
+  <tr>
+    <td>CLAHE</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bias=&gt;<i>double</i>, sans=&gt;<i>double</i></td>
+    <td>contrast limited adaptive histogram equalization.</td>
   </tr>
 
   <tr>
