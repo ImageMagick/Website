@@ -423,7 +423,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>CLAHE</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bias=&gt;<i>double</i>, sans=&gt;<i>double</i></td>
+    <td>geometry=&gt;<i>geometry</i>, x-tiles=&gt;<i>integer</i>, y-tiles=&gt;<i>integer</i>, number-bins=&gt;<i>integer</i>, clip-limit=&gt;<i>double</i></td>
     <td>contrast limited adaptive histogram equalization.</td>
   </tr>
 

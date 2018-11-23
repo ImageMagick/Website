@@ -949,7 +949,7 @@ sides of the image.  </p>
 href="#splice">-splice</a> that was given the same <var>geometry</var> and <a href="#gravity">-gravity</a> settings. </p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="lat"></a>-clahe <var>width</var><br />-lat <var>width</var>x<var>height</var>{<var>+-</var>}<var>bias</var>{<var>+-</var>}<var>sans</var></h3>
+  <h3><a class="anchor" id="lat"></a>-clahe <var>x-tiles</var><br />-clahe <var>x-tiles</var>x<var>y-tiles</var>{<var>+-</var>}<var>number-bins</var>{<var>+-</var>}<var>clip-limit</var></h3>
 </div>
 
 <p class="magick-description">contrast limited adaptive histogram equalization.</p>
