@@ -191,6 +191,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://wwwimages2.adobe.com/content/dam/acom/en/products/speedgrade/cc/pdfs/cube-lut-specification-1.0.pdf">CUBE</a></td>
+    <td>R</td>
+    <td>Cube Color lookup table image</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>CUR</td>
     <td>R</td>
     <td>Microsoft Cursor Icon</td>
