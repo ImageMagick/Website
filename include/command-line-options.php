@@ -952,7 +952,7 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
   <h3><a class="anchor" id="clahe"></a>-clahe <var>x-tiles</var><br />-clahe <var>x-tiles</var>x<var>y-tiles</var>{<var>+-</var>}<var>number-bins</var>{<var>+-</var>}<var>clip-limit</var></h3>
 </div>
 
-<p class="magick-description">contrast limited adaptive histogram equalization. <var>x-tiles</var>, <var>y-tiles</var> divides the image into tiles (min 2, max 16).  <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. Specify the clip-limit with a percent (e.g. -clahe 2x2+128+3%).</p>
+<p class="magick-description">contrast limited adaptive histogram equalization. <var>x-tiles</var>, <var>y-tiles</var> divides the image into tiles (min 2, max 16).  <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place (e.g. -clahe 2x2+128+3).</p>
 
 
 <div style="margin: auto;">
