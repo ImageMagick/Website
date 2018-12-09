@@ -66,10 +66,10 @@
   require_once($_SESSION['AbsolutePath'] . '/../function/option.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
-  SiteHeader($title,$topic);
+  SiteHeader($title);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
-  if (!isset($dynamic_content) || !$dynamic_content) {
+  if (!isset($dynamic_content)) {
     file_put_contents($cacheName,ob_get_contents());
   }
   session_unset();
