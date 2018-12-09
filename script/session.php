@@ -11,7 +11,7 @@
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/../cache/' . $script;
   session_name('ImageMagick');
-  if ($dynamic_content && isset($dynamic_content)) {
+  if (isset($dynamic_content)) {
     session_cache_limiter('private_no_expire, must-revalidate');
   } else {
     if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
