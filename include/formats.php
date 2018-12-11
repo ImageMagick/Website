@@ -1281,6 +1281,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>INLINE</td>
+    <td>R</td>
+    <td>inline images</td>
+    <td></td>
+  </tr>
+
+  <tr>
     <td>LABEL</td>
     <td>R</td>
     <td>Text image format</td>
