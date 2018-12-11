@@ -423,8 +423,8 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>CLAHE</td>
-    <td>geometry=&gt;<i>geometry</i>, x-tiles=&gt;<i>integer</i>, y-tiles=&gt;<i>integer</i>, number-bins=&gt;<i>integer</i>, clip-limit=&gt;<i>double</i></td>
-    <td>contrast limited adaptive histogram equalization. <var>x-tiles</var>, <var>y-tiles</var> divides the image into tiles (min 2, max 16).  <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place.</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, number-bins=&gt;<i>integer</i>, clip-limit=&gt;<i>double</i></td>
+    <td>contrast limited adaptive histogram equalization. <var>width</var>, <var>height</var> divides the image into tiles.  <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place.</td>
   </tr>
 
   <tr>
