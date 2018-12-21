@@ -1263,7 +1263,7 @@ the supported image formats.</p>
     <td>HALD</td>
     <td>R</td>
     <td>Identity Hald CLUT Image</td>
-    <td>Select order with filename, e.g. hald:5 for order 5.</td>
+    <td>Select order with filename, e.g. hald:[5] for order 5.</td>
   </tr>
 
   <tr>
