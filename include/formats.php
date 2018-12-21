@@ -193,8 +193,8 @@ the supported image formats.</p>
   <tr>
     <td><a href="https://wwwimages2.adobe.com/content/dam/acom/en/products/speedgrade/cc/pdfs/cube-lut-specification-1.0.pdf">CUBE</a></td>
     <td>R</td>
-    <td>Cube Color lookup table image</td>
-    <td> </td>
+    <td>Cube Color lookup table converted to a HALD image</td>
+    <td>Select levels like this: cube:Vibrant.cube[8] for level 8</td>
   </tr>
 
   <tr>
@@ -1263,7 +1263,7 @@ the supported image formats.</p>
     <td>HALD</td>
     <td>R</td>
     <td>Identity Hald CLUT Image</td>
-    <td>Select order with filename, e.g. hald:[5] for order 5.</td>
+    <td>Select levels like this: hald:[8] for level 8.</td>
   </tr>
 
   <tr>
