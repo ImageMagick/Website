@@ -7726,9 +7726,9 @@ single pixel transparent 'missed' image is returned, in the same way as when a
 </div>
 
 <p class="magick-description">the image type.</p> <p>Choose from: <code>Bilevel</code>,
-<code>Grayscale</code>, <code>GrayscaleMatte</code>, <code>Palette</code>,
-<code>PaletteMatte</code>, <code>TrueColor</code>, <code>TrueColorMatte</code>,
-<code>ColorSeparation</code>, or <code>ColorSeparationMatte</code>.</p>
+<code>Grayscale</code>, <code>GrayscaleAlpha</code>, <code>Palette</code>,
+<code>PaletteAlpha</code>, <code>TrueColor</code>, <code>TrueColorAlpha</code>,
+<code>ColorSeparation</code>, or <code>ColorSeparationAlpha</code>.</p>
 
 <p>Normally, when a format supports different subformats such as grayscale and
 truecolor, the encoder will try to choose an efficient subformat. The <a
