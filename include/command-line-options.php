@@ -7739,7 +7739,7 @@ only gray pixels are present, use.</p>
 <pre class="highlight"><code>convert bird.png -type TrueColor bird.jpg
 </code></pre>
 
-<p>Similarly, use <a href="#type">-type TrueColorMatte</a> to force the
+<p>Similarly, use <a href="#type">-type TrueColorAlpha</a> to force the
 encoder to write an alpha channel even though the image is opaque, if the
 output format supports transparency.</p>
 
