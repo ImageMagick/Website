@@ -952,7 +952,7 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
   <h3><a class="anchor" id="clahe"></a>-clahe <var>width</var>x<var>height</var>{%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</h3>
 </div>
 
-<p class="magick-description">contrast limited adaptive histogram equalization. The image is divided into tiles of <var>width</var> and <var>height</var> pixels.  <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place (e.g. -clahe 50x50%+128+3).  Note if number of bins and the clip-limit are ommitted, they default to 128 and no clipping respectively.</p>
+<p class="magick-description">contrast limited adaptive histogram equalization. The image is divided into tiles of <var>width</var> and <var>height</var> pixels.  The tile size respects the aspect ratio of the image.  Add <code>!</code> to force an exact tile width and height. <var>number-bins</var> is the number of histogram bins per tile (min 2, max 256).  <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place (e.g. -clahe 50x50%+128+3).  Note if number of bins and the clip-limit are ommitted, they default to 128 and no clipping respectively.</p>
 
 
 <div style="margin: auto;">
