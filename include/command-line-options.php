@@ -1929,7 +1929,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>heic:preserve-orientation</td>
+    <td>heic:preserve-orientation=true</td>
     <td>Preserve the original EXIF orientation during HEIC decoding and rotate the pixels accordingly.
         By default, EXIF orientation is reset to "1" to match the actual orientation of pixels in HEIC.
     </td>
