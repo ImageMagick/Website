@@ -31,7 +31,7 @@
       $meta.="  <meta name=\"author\" content=\"$this->company_name\">\n";
       $meta.="  <meta name=\"revisit-after\" content=\"2 DAYS\">\n";
       $meta.="  <meta name=\"resource-type\" content=\"document\">\n";
-      $meta.="  <meta name=\"copyright\" content=\"Copyright (c) 1999-2017 $this->company_name\">\n";
+      $meta.="  <meta name=\"copyright\" content=\"Copyright (c) 1999-2019 $this->company_name\">\n";
       $meta.="  <meta name=\"distribution\" content=\"Global\">\n";
       $meta.="  <meta name=\"magick-serial\" content=\"P131-S030410-R485315270133-P82224-A6668-G1245-1\">\n";
       return($meta);
