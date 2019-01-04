@@ -56,6 +56,8 @@
     header('Status-Code: 301');
     header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
   }
+  header("Content-Security-Policy: script-src 'self' 'sha256-".
+    base64_encode(hash('sha256', 'alert("allowed");', true))."'");
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
   require_once($_SESSION['AbsolutePath'] . '/../function/cmd.php');
