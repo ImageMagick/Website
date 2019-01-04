@@ -3,7 +3,7 @@
   header("Cache-Control: public");
   header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
   header('Expires: ' . gmdate('D, d M Y H:i:s',time()+604800) . ' GMT');
-  header("Content-type: application/javascript");
+  header("Content-type: text/javascript");
   readfile('jquery-3.3.1.slim.min.js');
   readfile('popper.min.js');
   readfile('bootstrap.min.js');
