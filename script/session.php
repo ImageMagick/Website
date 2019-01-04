@@ -58,7 +58,7 @@
   }
   header("Content-Security-Policy: script-src 'self' 'sha256-".
     base64_encode(hash('sha256', 'alert("allowed");', true)).
-    "' https://apis.google.com");
+    "' https://ajax.googleapis.com");
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
   require_once($_SESSION['AbsolutePath'] . '/../function/cmd.php');
