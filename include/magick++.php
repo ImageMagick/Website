@@ -22,24 +22,24 @@ PerlMagick. STL-compatible template versions of ImageMagick's
 list-style operations are provided so that operations may be
 performed on multiple images stored in STL containers. 
 </p>
-<h2>Documentation</h2>
+<h1>Documentation</h1>
 <a class="anchor" id="documentation"></a>
 <p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../api/magick++-classes.php">documentation</a> is
 provided for all Magick++ classes, class methods, and template
 functions which comprise the API.  See a <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
-<h2>Obtaining Magick++</h2>
+<h1>Obtaining Magick++</h1>
 <a class="anchor" id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
 source releases and may be retrieved via <a href="https://imagemagick.org/script/download.php">HTTP</a>
 or <a href="https://github.com/ImageMagick/ImageMagick/tree/master/Magick%2B%2B">GitHub</a>.
 </p>
-<h2>Installation</h2>
+<h1>Installation</h1>
 <a class="anchor" id="install"></a>
 <p>Once you have the Magick++ sources available, follow these detailed
 <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/Install.html">installation instructions</a> for UNIX and
 Windows. 
 </p>
-<h2>Usage</h2>
+<h1>Usage</h1>
 <p>A helper script named <code>Magick++-config</code> is installed
 under Unix which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
@@ -101,7 +101,7 @@ int main(int argc,char **argv)
   return 0; 
 }
 </code></pre>
-<h2>Reporting Bugs</h2>
+<h1>Reporting Bugs</h1>
 <a class="anchor" id="bugs"></a>
 <p>Questions regarding usage should be directed to or to report any bugs go to
 <a href="https://imagemagick.org/discourse-server/viewforum.php?f=23">Magick++ bug tracking forum</a>.

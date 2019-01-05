@@ -3,7 +3,7 @@
 
 <p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Unix or Linux systems.  If so, you also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#unix">binary release</a>  or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#unix">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Unix or Linux systems, lets begin.</p>
 
-<h2><a class="anchor" id="download"></a>Download &amp; Unpack</h2>
+<h1><a class="anchor" id="download"></a>Download &amp; Unpack</h1>
 
 <p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
@@ -15,7 +15,7 @@
 <p>Now that you have the ImageMagick Unix/Linux source distribution unpacked, let's configure it.</p>
 
 
-<h2><a class="anchor" id="configure"></a>Configure</h2>
+<h1><a class="anchor" id="configure"></a>Configure</h1>
 
 <p>The configure script looks at your environment and decides what it can cobble together to get ImageMagick compiled and installed on your system.  This includes finding a compiler, where your compiler header files are located (e.g. stdlib.h), and if any delegate libraries are available for ImageMagick to use (e.g. JPEG, PNG, TIFF, etc.).  If you are willing to accept configure's default options, and build from within the source directory, you can simply type:</p>
 
@@ -366,7 +366,7 @@ Options used to compile and link:
 
 <p>ImageMagick is now configured and ready to build</p>
 
-<h2><a class="anchor" id="build"></a>Build</h2>
+<h1><a class="anchor" id="build"></a>Build</h1>
 
 <p>Once ImageMagick is configured, these standard build targets are available from the generated <code>make</code> files:</p>
 
@@ -392,7 +392,7 @@ Options used to compile and link:
 
 <p>Once built, you can optionally install ImageMagick on your system as discussed below.</p>
 
-<h2><a class="anchor" id="install"></a>Install</h2>
+<h1><a class="anchor" id="install"></a>Install</h1>
 
 <p>Now that ImageMagick is configured and built, type:</p>
 
@@ -428,7 +428,7 @@ identify logo.gif
 
 <p>Ghostscript is a prerequisite, otherwise the EPS, PS, and PDF tests will fail.  Note that due to differences between the developer's environment and your own it is possible that a few tests may fail even though the results are ok. Differences between the developer's environment environment and your own may include the compiler, the CPU type, and the library versions used. The ImageMagick developers use the current release of all dependent libraries.</p>
 
-<h2><a class="anchor" id="linux"></a>Linux-specific Build instructions</h2>
+<h1><a class="anchor" id="linux"></a>Linux-specific Build instructions</h1>
 
 <p>Download <a href="https://imagemagick.org/download/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://imagemagick.org/download">ftp.imagemagick.org</a> or its <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirrors</a> and verify the distribution against its <a href="https://imagemagick.org/download/linux/SRPMS/digest.rdf">message digest</a>.</p>
 
@@ -441,7 +441,7 @@ identify logo.gif
 
 <?php crt("rpm -ivh ImageMagick-" . MagickLibVersionText . "-?.*.rpm"); ?>
 
-<h2><a class="anchor" id="macosx"></a>Mac OS X-specific Build instructions</h2>
+<h1><a class="anchor" id="macosx"></a>Mac OS X-specific Build instructions</h1>
 
 <p>Perform these steps as an administrator or with the <tt>sudo</tt> command:</p>
 
@@ -492,7 +492,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
 <pre class="highlight"><code>display -display :0
 </code></pre>
 
-<h2><a class="anchor" id="mingw"></a>MinGW-specific Build instructions</h2>
+<h1><a class="anchor" id="mingw"></a>MinGW-specific Build instructions</h1>
 
 <p>Although you can download and install delegate libraries yourself, many are already available in the <a href="http://gnuwin32.sourceforge.net/">GnuWin32</a> distribution.  Download and install whichever delegate libraries you require such as JPEG, PNG, TIFF, etc.  Make sure you specify the development headers when you install a package.  Next type,</p>
 
@@ -506,7 +506,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms
   "sudo make install"
   ); ?>
 
-<h2><a class="anchor" id="problems"></a>Dealing with Unexpected Problems</h2>
+<h1><a class="anchor" id="problems"></a>Dealing with Unexpected Problems</h1>
 
 <p>Chances are the download, configure, build, and install of ImageMagick went flawlessly as it is intended, however, certain systems and environments may cause one or more steps to fail.  We discuss a few problems we've run across and how to take corrective action to ensure you have a working release of ImageMagick</p>
 

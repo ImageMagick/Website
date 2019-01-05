@@ -3,7 +3,7 @@
 
 <p class="lead magick-description">Use the <code>animate</code> program to animate an image sequence on any X server.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>animate</code> command or see below for example usages of the command.</p>
 
-<h2><a class="anchor" id="usage"></a>Example Usage</h2>
+<h1><a class="anchor" id="usage"></a>Example Usage</h1>
 
 <p>We list a few examples of the <code>animate</code> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
 
@@ -18,7 +18,7 @@
 <p>You can find additional examples of using <code>animate</code> in <a href="https://imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 
 
-<h2><a class="anchor" id="options"></a>Option Summary</h2>
+<h1><a class="anchor" id="options"></a>Option Summary</h1>
 
 <p>The <code>animate</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
