@@ -1,5 +1,4 @@
 <?php
-  ob_start();
-  header("Location: script/index.php");
-  ob_end_flush();
+  $title='Convert, Edit, Or Compose Bitmap Images';
+  include('session.php');
 ?>
