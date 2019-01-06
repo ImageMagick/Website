@@ -121,7 +121,6 @@
   <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>: extract edges from an image using the Canny technique.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a>: utilize ImageMagick from the command line.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected Component Labeling</a>: uniquely label connected regions in an image.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a>: overlap one image over another.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected Component Labeling</a>: uniquely label connected regions in an image.</li>
   <li><a href="https://imagemagick.org/Usage/crop/">Decorate</a>: add a border or frame to an image.</li>
@@ -139,6 +138,7 @@
   <li><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a>: correct for, or induce image distortions including perspective.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a>: <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">certain algorithms</a> are <a href="http://en.wikipedia.org/wiki/OpenCL" target="_blank">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">istogram Equalization</a>: adaptive histogram equalization can improve contrast in an image.</li>
   <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25476">Hough lines</a>: fit straight lines to edges in an image using the Hough transform technique.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a>: create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</li>
