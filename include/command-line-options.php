@@ -952,7 +952,8 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
   <h3><a class="anchor" id="clahe"></a>-clahe <var>width</var>x<var>height</var>{%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</h3>
 </div>
 
-<p class="magick-description">contrast limited adaptive histogram equalization. The image is divided into tiles of <var>width</var> and <var>height</var> pixels.  The tile size should be larger than the size of features to be preserved and respects the aspect ratio of the image.  Add <code>!</code> to force an exact tile width and height. <var>number-bins</var> is the number of histogram bins per tile (min 2, max 65536).  The number of histogram bins should be smaller than the number of pixels in a single tile. <var>clip-limit</var> is the contrast limit for localised changes in contrast. A clip-limit of 2 to 3 is a good starting place (e.g. -clahe 50x50%+128+3).  Very large values will let the histogram equalization do whatever it wants to do, that is result in maximal local contrast. The value 1 will result in the original image.  Note if number of bins and the clip-limit are ommitted, they default to 128 and no clipping respectively.</p>
+<p class="magick-description">contrast limited adaptive histogram equalization.</p>
+<p> The image is divided into tiles of <var>width</var> and <var>height</var> pixels.  The tile size should be larger than the size of features to be preserved and respects the aspect ratio of the image.  Add <code>!</code> to force an exact tile width and height. <var>number-bins</var> is the number of histogram bins per tile (min 2, max 65536).  The number of histogram bins should be smaller than the number of pixels in a single tile. <var>clip-limit</var> is the contrast limit for localized changes in contrast. A clip-limit of 2 to 3 is a good starting place (e.g. -clahe 50x50%+128+3).  Very large values will let the histogram equalization do whatever it wants to do, that is result in maximal local contrast. The value 1 will result in the original image.  Note, if the number of bins and the clip-limit are ommitted, they default to 128 and no clipping respectively.</p>
 
 
 <div style="margin: auto;">
@@ -3474,12 +3475,12 @@ image into some other color space, such as HSL, OHTA, YIQ or YUV, then
 equalize the appropriate intensity-like channel, then convert back to RGB.</p>
 
 <p>For example using HSL, we have: ... <code>-colorspace HSL -channel lightness
--equalize -colorspace RGB</code> ...</p>
+-equalize -colorspace sRGB</code> ...</p>
 
 <p>For YIQ, YUV and OHTA use the red channel. For example, OHTA is a principal
 components transformation that puts most of the information in the first
 channel. Here we have ... <code>-colorspace OHTA -channel red -equalize
--colorspace RGB</code> ...</p>
+-colorspace sRGB</code> ...</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="evaluate"></a>-evaluate <var>operator value</var></h3>
