@@ -14,7 +14,7 @@
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-equalize.jpg" width="500" height="333" alt="label" /></a>
 </ul>
-<p>We can further improve the image with contrast limited adaptive histogram equalization image processing technique:</p>
+<p>We can further improve the image with the contrast limited adaptive histogram equalization image processing technique:</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
 </ul>
