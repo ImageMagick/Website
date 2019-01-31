@@ -102,5 +102,9 @@
     <td>thread-level=<var>value</var></td>
     <td>enable multi-threaded encoding.</td>
   </tr>
+  <tr>
+    <td>use-sharp-yuv=<var>value</var></td>
+    <td>if needed, use sharp (and slow) RGB->YUV conversion.</td>
+  </tr>
 </table></div>
 </div>
