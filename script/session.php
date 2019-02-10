@@ -18,9 +18,12 @@
       /*
         Render cached content.
       */
+      session_start();
       include($cacheName);
       echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
         " -->";
+      session_unset();
+      session_destroy();
       ob_end_flush();
       exit;
     }
