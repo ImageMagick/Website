@@ -2,14 +2,11 @@
    ImageMagick template.
 */
 
-@media (min-width: 48em) {
-  html {
-    font-size: 18px;
-  }
+html {
+  font-family: "Open Sans", sans;
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
   padding-top: 3.5rem;
 }
@@ -91,8 +88,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, sans;
   font-weight: 400;
+  font-family: Questrial, sans;
   color: #333;
 }
 
