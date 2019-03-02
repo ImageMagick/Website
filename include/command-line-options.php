@@ -7721,7 +7721,7 @@ information if it is unwanted.</p>
 single pixel transparent 'missed' image is returned, in the same way as when a
 <a href="#crop">-crop</a> operation 'misses' the image proper. </p>
 
-<p>Use <code><a href="#define">-define</a> trim:blend=0%</code> to remove all the background from the image.</p>
+<p>Use <code><a href="#define">-define</a> trim:percent-background=0%</code> to remove all the background from the image.</p>
 
 
 <div style="margin: auto;">
