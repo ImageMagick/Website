@@ -12,6 +12,9 @@
   $cacheName=$path . '/cache/' . $script;
   session_name('ImageMagick');
   if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
+    /*
+      Render cached content.
+    */
     session_start();
     readfile($cacheName);
     echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
