@@ -36,7 +36,8 @@
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
-  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-template.css" rel="stylesheet">
 </head>
 <?php flush(); ?>
 <body>
@@ -116,7 +117,7 @@
   </footer>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" crossorigin="anonymous"></script>
+  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.js" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><\/script>')</script>
 </body>
 </html>

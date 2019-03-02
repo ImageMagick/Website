@@ -19,7 +19,7 @@
         Render cached content.
       */
       session_start();
-      include($cacheName);
+      readfile($cacheName);
       echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
         " -->";
       session_unset();
