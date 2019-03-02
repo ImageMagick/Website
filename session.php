@@ -2,15 +2,19 @@
   /*
     Start a session and return content from the cache if its exists.
   */
+  if (!ini_get('date.timezone')) {
+    date_default_timezone_set('GMT');
+  }
   ob_start("ob_gzhandler");
   $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
-  $cachefile=$path . '/cache/' . $script;
-  if (file_exists($cachefile) && ((time()-10800) < filemtime($cachefile))) {
+  $cacheName=$path . '/cache/' . $script;
+  session_name('ImageMagick');
+  if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
     session_start();
-    readfile($cachefile);
-    echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cachefile)) .
+    readfile($cacheName);
+    echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
       " -->";
     session_unset();
     session_destroy();
