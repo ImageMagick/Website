@@ -418,7 +418,7 @@ if (profile != (StringInfo *) NULL)
 </code></pre>
 
 <h2><a class="anchor" id="tera-pixel"></a>Large Image Support</h2>
-<p>ImageMagick can read, process, or write mega-, giga-, or tera-pixel image sizes.  An image width or height can range from 1 to 2 giga-pixels on a 32 bit OS and up to 9 exa-pixels on a 64-bit OS.  Note, that some image formats have restrictions on image size.  For example, Photoshop images are limited to 300,000 pixels for width or height.  Here we resize an image to a quarter million pixels square:</p>
+<p>ImageMagick can read, process, or write mega-, giga-, or tera-pixel image sizes.  An image width or height can range from 1 to 2 giga-pixels on a 32 bit OS (up to 2147483647 rows/columns) and up to 9 exa-pixels on a 64-bit OS (up to 9223372036854775807 rows/columns).  Note, that some image formats have restrictions on image size.  For example, Photoshop images are limited to 300,000 pixels for width or height.  Here we resize an image to a quarter million pixels square:</p>
 <pre class="highlight"><code>convert logo: -resize 250000x250000 logo.miff
 </code></pre>
 
