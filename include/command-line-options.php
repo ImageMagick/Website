@@ -7721,8 +7721,7 @@ information if it is unwanted.</p>
 single pixel transparent 'missed' image is returned, in the same way as when a
 <a href="#crop">-crop</a> operation 'misses' the image proper. </p>
 
-<p>Use <code><a href="#define">-define</a> trim:percent-background=0%</code> to remove all the background from the image.</p>
-
+<p>Use <code><a href="#define">-define</a> trim:percent-background=0%</code> to remove all the background from the image.  The amount of background that is tolerated in an edge specified as a percent.  0% means no background is tolerated.  50% means an edge can contain up to 50% pixels that are background per the fuzz-factor.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="type"></a>-type <var>type</var></h3>
