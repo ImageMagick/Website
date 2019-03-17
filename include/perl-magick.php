@@ -867,6 +867,12 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
   </tr>
 
   <tr>
+    <td>OTSUThreshold</td>
+    <td>channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
+    <td>automatically performs clustering-based image thresholding. The algorithm calculates the optimum threshold separates into two classes so that their combined spread (intra-class variance) is minimal, and their inter-class variance is maximal.</td>
+  </tr>
+
+  <tr>
     <td>Perceptible</td>
     <td>epsilon=&gt;<i>double</i>, channel=&gt;{Red, RGB, All, etc.}</td>
     <td>set each pixel whose value is less than |<var>epsilon</var>| to <var>-epsilon</var> or <var>epsilon</var> (whichever is closer) otherwise the pixel value remains unchanged..</td>
