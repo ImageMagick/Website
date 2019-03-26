@@ -26,7 +26,7 @@
 
 <p>Next configure and compile ImageMagick:</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "./configure -with-perl", "", "make"); ?>
+<?php crt("cd ImageMagick-" . MagickLibVersionText . "<br/>" .  "$ ./configure -with-perl" . "<br/>" .  "$ make"); ?>
 
 <p>If ImageMagick / PerlMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
