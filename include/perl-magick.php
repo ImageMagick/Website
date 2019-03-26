@@ -452,12 +452,6 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
-    <td>Coalesce</td>
-    <td><br /></td>
-    <td>merge a sequence of images</td>
-  </tr>
-
-  <tr>
     <td>Color</td>
     <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>set the entire image to this color.</td>
@@ -2224,6 +2218,16 @@ $image-&gt;BlobToImage(@blob);
 <p>copies all the images from object <code>$p</code> to <code>$q</code>. You can use this method for single or multi-image sequences.</p>
 
 <p>The ComplexImages() method performs complex mathematics on an image sequence. For example,</p>
+
+<p>Coalesce() composites a set of images while respecting any page
+offsets and disposal methods.  GIF, MIFF, and MNG animation sequences
+typically start with an image background and each subsequent image
+varies in size and offset.  A new image sequence is returned with all
+images the same size as the first images virtual canvas and composited
+with the next image in the sequence.. For example,</p>
+
+<pre class="highlight"><code>$q = $p-&gt;Coalesce();
+</code></pre>
 
 <pre class="highlight"><code>$p = $image-&gt;ComplexImages('conjugate');
 </code></pre>
