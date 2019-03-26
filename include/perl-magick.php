@@ -2217,8 +2217,6 @@ $image-&gt;BlobToImage(@blob);
 
 <p>copies all the images from object <code>$p</code> to <code>$q</code>. You can use this method for single or multi-image sequences.</p>
 
-<p>The ComplexImages() method performs complex mathematics on an image sequence. For example,</p>
-
 <p>Coalesce() composites a set of images while respecting any page
 offsets and disposal methods.  GIF, MIFF, and MNG animation sequences
 typically start with an image background and each subsequent image
@@ -2228,6 +2226,8 @@ with the next image in the sequence.. For example,</p>
 
 <pre class="highlight"><code>$q = $p-&gt;Coalesce();
 </code></pre>
+
+<p>The ComplexImages() method performs complex mathematics on an image sequence. For example,</p>
 
 <pre class="highlight"><code>$p = $image-&gt;ComplexImages('conjugate');
 </code></pre>
