@@ -1319,7 +1319,7 @@ the supported image formats.</p>
     <td>PANGO</td>
     <td>R</td>
     <td>Image caption</td>
-    <td>You can configure the caption layout with these defines: <code>-define pango:auto-dir=</code><var>true/false</var>, <code>-define pango:ellipsize=</code><var>start/middle/end</var>, <code>-define pango:gravity-hint=</code><var>natural/strong/line</var>, <code>-define pango:hinting=</code><var>none/auto/full</var>, <code>-define pango:indent=</code><var>points</var>, <code>-define pango:justify=</code><var>true/false</var>, <code>-define pango:language=</code><var>en_US/etc</var>, <code>-define pango:markup=</code><var>true/false</var>, <code>-define pango:single-paragraph=</code><var>true/false</var> and <code>-define pango:wrap=</code><var>word/char/word-char</var>.</td>
+    <td>You can configure the caption layout with these defines: <code>-define pango:auto-dir=</code><var>true/false</var>, <code>-define pango:ellipsize=</code><var>start/middle/end</var>, <code>-define pango:gravity-hint=</code><var>natural/strong/line</var>, <code>-define pango:hinting=</code><var>none/auto/full</var>, <code>-define pango:indent=</code><var>points</var>, <code>-define pango:justify=</code><var>true/false</var>, <code>-define pango:language=</code><var>en_US/etc</var>, <code>-define pango:markup=</code><var>true/false</var>, <code>-define pango:single-paragraph=</code><var>true/false</var>, <code>-define pango:wrap=</code><var>word/char/word-char</var> and <code>-define pango:align=</code><var>left/center/right</var>.</td>
   </tr>
 
   <tr>
