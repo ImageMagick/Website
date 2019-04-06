@@ -7,6 +7,7 @@
 <p class="lead magick-description">We want to thank the following sponsors of the ImageMagick project, including:</p>
 
 <dl>
+  <dt class="col-md-12"><a href="https://amzn.to/2WQiVit"> <img class="clearfix" src="https://imagemagick.org/image/amazon.png" width="128" height="50" alt="[Amazon]" /></a>   Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</dt><br/>
   <dt class="col-md-12"><a href="http://www.networkredux.com"> <img class="clearfix" src="https://imagemagick.org/image/networkredux.png" width="140" height="31" alt="[Network Redux]" /></a>   We manage everything so you don't have to</dt><br/>
   <dt class="col-md-12"><a href="http://www.amd.com"> <img class="clearfix" src="https://imagemagick.org/image/amd.png" width="132" height="31" alt="[AMD]" /></a> Enabling today. Inspiring tomorrow.</dt><br/>
 <!-- Expires 20200101 -->
