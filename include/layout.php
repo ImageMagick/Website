@@ -109,10 +109,9 @@
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
     <br/>
-    &nbsp; &nbsp;
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
     <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> 
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a> 
     <br/>
     <small>© 1999-2019 ImageMagick Studio LLC</small></p>
   </footer>
