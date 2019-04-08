@@ -102,15 +102,17 @@
   </main><!-- /.container -->
   <footer class="magick-footer">
     <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>
+    &nbsp;
+    <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
+    &nbsp;
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
-    &nbsp; &nbsp;
-    <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
+    <br/>
     &nbsp; &nbsp;
     <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a>
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Donate</a> 
     <br/>
     <small>© 1999-2019 ImageMagick Studio LLC</small></p>
   </footer>
