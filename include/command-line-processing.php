@@ -407,7 +407,7 @@ setting for more specifics.</p>
   </tr>
   <tr>
     <td>{<var>size</var>}{<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var></td>
-    <td>Horizontal and vertical offsets <var>x</var> and <var>y</var>, specified in pixels. Signs are required for both. Offsets are affected by <?php option("gravity");?> setting. Offsets are not affected by <code>%</code> or other <var>size</var> operators.</td>
+    <td>Horizontal and vertical offsets <var>x</var> and <var>y</var>, specified in pixels. Signs are required for both. Offsets are affected by <?php option("gravity");?> setting. Offsets are not affected by <code>%</code> or other <var>size</var> operators. Note that positive X and Y offsets are in the inward direction towards the center of the image for all <?php option("gravity");?> options, except 'center'. For East, +X is left. For South, +Y is up. For SouthEast, +X is left and +Y is up. For center, the normal X and Y directional convention is used (+X is right and +Y is down).</td>
   </tr>
  </tbody>
 </table></div>

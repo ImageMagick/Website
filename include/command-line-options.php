@@ -1431,7 +1431,7 @@ href="#set">-set</a> '<code>option:compose:args</code>'
 appropriately for the compose method. </p>
 
 <p>Some <a href="#compose">-compose</a> methods can modify the 'destination'
-image outside the overlay area. It is disabled by default.  You can enable this by setting the this define: <a href="#define">-define</a> '<code>compose:clip-to-self=true</code>'.</p>
+image outside the overlay area. It is disabled by default.  You can enable this by setting the define: <a href="#define">-define</a> '<code>compose:clip-to-self=true</code>'.</p>
 
 <p>The SVG compositing specification requires that color and opacity values range between zero and QuantumRange inclusive.  You can permit values outside this range with this option: <a href="#set">-set</a> '<code>option:compose:clamp=false</code></p>
 
@@ -1838,12 +1838,6 @@ available:</p>
   </tr>
 
   <tr>
-    <td>morphology:showKernel=<var>1</var></td>
-     <td>Outputs (to 'standard error') all the information about a specified <a
-    href="#morphology" >-morphology convolve</a> kernel.</td>
-  </tr>
-
-  <tr>
     <td>dcm:display-range=<var>reset</var></td>
      <td>Sets the display range to the minimum and maximum pixel values for the
     DCM image format.</td>
@@ -1889,6 +1883,13 @@ available:</p>
     <td>distort:viewport=<var>WxH+X+Y</var></td>
     <td>Sets the viewport for use with <a href="#distort">-distort</a>.</td>
   </tr>
+
+  <tr>
+    <td>-define dither:diffusion-amount=<var>X%</var></td>
+    <td>Sets the amount of diffusion to use with Floyd-Steinberg diffusion</td>
+  </tr>
+  
+  <tr>
 
   <tr>
     <td>dot:layout-engine=<var>value</var></td>
@@ -2872,7 +2873,16 @@ and meaning of the floating point values depends on the distortion <var>method</
        'Perspective' distortion, or by calculating them yourself.
        If the last two perspective scaling coefficients are zero, the
        remaining 6 represents a transposed 'Affine Matrix'. </td>
+  </tr>
 
+  <tr>
+    <td>Polynomial</td>
+    <td>
+       Do an Nth order 2D 'Polynomial' distortion biased on a set of corresponding 
+       control points. The order of the polynomial dictates the minimum number of 
+       control points needed. Order 1 the same as -distort Affine. Order 1.5 is the 
+       same as -distort BilinearReverse. Typical use is for a 2nd order distortion. 
+       There is no +distort polynomial.</td>
   </tr>
 
   <tr>
