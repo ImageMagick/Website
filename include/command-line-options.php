@@ -1885,7 +1885,7 @@ available:</p>
   </tr>
 
   <tr>
-    <td>-define dither:diffusion-amount=<var>X%</var></td>
+    <td>dither:diffusion-amount=<var>X%</var></td>
     <td>Sets the amount of diffusion to use with Floyd-Steinberg diffusion</td>
   </tr>
   
@@ -2878,9 +2878,9 @@ and meaning of the floating point values depends on the distortion <var>method</
   <tr>
     <td>Polynomial</td>
     <td>
-       Do an Nth order 2D 'Polynomial' distortion biased on a set of corresponding 
+       Do an Nth order 2D 'Polynomial' distortion using a set of corresponding 
        control points. The order of the polynomial dictates the minimum number of 
-       control points needed. Order 1 the same as -distort Affine. Order 1.5 is the 
+       control points needed. Order 1 is the same as -distort Affine. Order 1.5 is the 
        same as -distort BilinearReverse. Typical use is for a 2nd order distortion. 
        There is no +distort polynomial.</td>
   </tr>
