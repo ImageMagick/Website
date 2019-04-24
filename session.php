@@ -11,6 +11,13 @@
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/cache/' . $script;
   session_name('ImageMagick');
+  if (($_SERVER['SERVER_NAME'] == 'www.imagemagick.com') ||
+      ($_SERVER['SERVER_NAME'] == 'www.imagemagick.net') ||
+      ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
+    {
+      header("Location: https://imagemagick.org/index.php");
+      exit();
+    }
   if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
     /*
       Render cached content.
