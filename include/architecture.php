@@ -600,7 +600,7 @@ Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
 
 <p>First verify that your version of ImageMagick includes support for the OpenCL feature:</p>
 <pre class="highlight"><code>identify -version
-Features: DPC Cipher Modules OpenCL OpenMP
+Features: DPC Cipher Modules OpenCL OpenMP(4.5)
 </code></pre>
 
 <p>If so, run this command to realize a significant speed-up for image convolution:</p>
