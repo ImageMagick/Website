@@ -923,6 +923,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>RGB565</td>
+    <td>R</td>
+    <td>Raw red, green, blue pixels in the 5-6-5 format</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the image width and height.</td>
+  </tr>
+
+  <tr>
     <td>RGBA</td>
     <td>RW</td>
     <td>Raw red, green, blue, and alpha samples</td>
