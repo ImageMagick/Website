@@ -22,7 +22,8 @@
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
 <?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "./configure", "<br/>", "make"); ?>
-
+<p>For advanced users, we recommend a modules build:</p>
+<?php crt("./configure --with-modules --enable-shared --with-perl"); ?>
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
 <pre class="highlight"><code>sudo make install
