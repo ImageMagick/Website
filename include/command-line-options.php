@@ -7050,7 +7050,7 @@ Offsets are ignored.</p>
 
 <p class="magick-description">Shear the image along the x-axis and/or y-axis.</p>
 
-<p>The shear angles may be positive, negative, or zero. When <var>Ydegrees</var> is omitted it defaults to 0. When both angles are
+<p>The shear angles may be positive, negative, or zero. When <var>Ydegrees</var> is omitted it defaults to <var>Xdegrees</var>. When both angles are
 given, the horizontal component of the shear is performed before the vertical
 component.</p>
 
