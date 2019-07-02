@@ -29,9 +29,9 @@
 
 <p>Or the expression can be complex:</p>
 
-<pre class="highlight"><code>convert rose.jpg \
+<pre class="highlight"><code>convert rose: \
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
-  rose-sigmoidal.png'
+  rose-sigmoidal.png
 </code></pre>
 
 <p>This expression results in a high contrast version of the source image:</p>
@@ -46,7 +46,7 @@
 
 <pre class="highlight"><code>convert -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \
-  radial-gradient.png'
+  radial-gradient.png
 </code></pre>
 
 <p>The command above returns this image:</p>
