@@ -382,7 +382,7 @@ display logo.gif</code></pre>
 magick identify logo.gif
 magick logo.gif win:</code></pre>
 
-<p>If you have any problems, you likely need <code>vcomp120.dll</code>.  To install it, download <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ 2013 Redistributable Package</a>.</p>
+<p>If you have any problems, you likely need <code>vcomp120.dll</code>.  To install it, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable Package</a>.</p>
 
 <p>Note, use a double quote (<code>"</code>) rather than a single quote (<code>'</code>) for the ImageMagick command line under Windows:</p>
 
