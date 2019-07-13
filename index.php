@@ -1,5 +1,5 @@
 <?php
   $title='Convert, Edit, or Compose Bitmap Images';
-  $topic="Home";
+  $topic='Home';
   include('session.php');
 ?>
