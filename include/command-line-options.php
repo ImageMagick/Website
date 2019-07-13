@@ -5638,7 +5638,7 @@ times.</p>
   <h3><a class="anchor" id="magnify"></a>-magnify</h3>
 </div>
 
-<p class="magick-description">double the size of the image with pixel art scaling. Specify an alternative scaling method with <code>-define magnify:method=<var>method</var></code> Choose from these methods: eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X,  scale2X, scale3X, xbr2X.  The default is scale2X.</p>
+<p class="magick-description">double the size of the image with pixel art scaling. Specify an alternative scaling method with <code>-define magnify:method=<var>method</var></code> Choose from these methods: <code>eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X,  scale2X, scale3X, xbr2X</code>.  The default is scale2X.</p>
 
 
 <div style="margin: auto;">
