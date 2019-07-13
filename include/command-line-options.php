@@ -1757,7 +1757,7 @@ available:</p>
 
   <tr>
     <td>bmp:subtype=<var>RGB555|RGB565|ARGB4444|ARGB1555</var></td>
-    <td>BMP channel depth subtypes. Only support in BMP (BMP4). BMP3 and BMP2 do not 
+    <td>BMP channel depth subtypes. Only support in BMP (BMP4). BMP3 and BMP2 do not
     contain header fields to support these options.</td>
   </tr>
 
@@ -1829,11 +1829,11 @@ available:</p>
     percent. The factor or percent is then applied after the automatic scaling.
     An example is 50%!. This produces a result 50% darker than full dynamic
     range scaling. The ^ flag assures the kernel is 'zero-summing', for
-    example when some values are positive and some are negative as in edge 
-    detection kernels. The origin addition adds that value to the center 
+    example when some values are positive and some are negative as in edge
+    detection kernels. The origin addition adds that value to the center
     pixel of the kernel. This produces an effect that is like adding the image 	
-    that many times to the result of the filtered image. The typical value 
-    is 1 so that the original image is added to the result of the convolution. 
+    that many times to the result of the filtered image. The typical value
+    is 1 so that the original image is added to the result of the convolution.
     The default is 0.</td>
   </tr>
 
@@ -1888,7 +1888,7 @@ available:</p>
     <td>dither:diffusion-amount=<var>X%</var></td>
     <td>Sets the amount of diffusion to use with Floyd-Steinberg diffusion</td>
   </tr>
-  
+
   <tr>
 
   <tr>
@@ -1910,8 +1910,8 @@ available:</p>
 
   <tr>
     <td>fourier:normalize=<var>inverse</var></td>
-    <td>Sets the location for the FFT/IFT normalization as use by 
-    <a href="#fft">+-fft</a> and <a href="#ift">+-ift</a>. The default is 
+    <td>Sets the location for the FFT/IFT normalization as use by
+    <a href="#fft">+-fft</a> and <a href="#ift">+-ift</a>. The default is
     <var>forward</var>.</td>
   </tr>
 
@@ -1961,35 +1961,35 @@ available:</p>
 
   <tr>
     <td>jp2:number-resolutions=<var>value</var></td>
-     <td>Sets the number of resolutions to encode.Same for JPT, JC2, and 
+     <td>Sets the number of resolutions to encode.Same for JPT, JC2, and
      J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:progression-order=<var>value</var></td>
-     <td>choose from LRCP, RLCP, RPCL, PCRL or CPRL. Same for JPT, JC2, and 
+     <td>choose from LRCP, RLCP, RPCL, PCRL or CPRL. Same for JPT, JC2, and
     J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:quality=<var>value,value...</var></td>
-     <td>Sets the quality layer PSNR, given in dB. The order is from left to 
-    right in ascending order. The default is a single lossless quality layer.  
+     <td>Sets the quality layer PSNR, given in dB. The order is from left to
+    right in ascending order. The default is a single lossless quality layer. 
     Same for JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:rate=<var>value</var></td>
-     <td>Specify the compression factor to use while writing JPEG-2000 files. 
+     <td>Specify the compression factor to use while writing JPEG-2000 files.
      The compression factor is the reciprocal of the compression ratio. The 
-     valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If 
-     defined, this value overrides the -quality setting.  A quality setting 
+     valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If
+     defined, this value overrides the -quality setting.  A quality setting
      of 75 results in a rate value of 0.06641. Same for JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:reduce-factor=<var>value</var></td>
-     <td>Sets the number of highest resolution levels to be discarded.Same for 
+     <td>Sets the number of highest resolution levels to be discarded.Same for
     JPT, JC2, and J2K.</td>
   </tr>
 
@@ -2006,7 +2006,7 @@ available:</p>
 
   <tr>
     <td>jpeg:dct-method=<var>value</var></td>
-     <td>Choose from <code>default</code>, <code>fastest</code>, 
+     <td>Choose from <code>default</code>, <code>fastest</code>,
     <code>float</code>, <code>ifast</code>, and <code>islow</code>.</td>
   </tr>
 
@@ -2015,9 +2015,9 @@ available:</p>
      <td>Restrict the maximum JPEG file size, for example <code>-define
     jpeg:extent=400KB</code>.  The JPEG encoder will search for the highest
     compression quality level that results in an output file that does not
-    exceed the value. The <code>-quality</code> option also will be respected 
+    exceed the value. The <code>-quality</code> option also will be respected
     starting with version 6.9.2-5. Between 6.9.1-0 and 6.9.2-4, add -quality 
-    100 in order for the jpeg:extent to work properly. Prior to 6.9.1-0, the 
+    100 in order for the jpeg:extent to work properly. Prior to 6.9.1-0, the
     -quality setting was ignored.</td>
   </tr>
 
@@ -2083,8 +2083,8 @@ available:</p>
   <tr>
     <td>morphology:compose=<var>compose-method</var></td>
      <td>Specifies how to merge results generated by multiple<a
-    href="#morphology" >-morphology</a> kernel. The default is none. One 
-    typical value is 'lighten' as used, for example, with the sobel edge 
+    href="#morphology" >-morphology</a> kernel. The default is none. One
+    typical value is 'lighten' as used, for example, with the sobel edge
     kernels. </td>
   </tr>
 
@@ -2132,15 +2132,15 @@ available:</p>
 
   <tr>
     <td>phash:colorspaces=<var>colorspace,colorspace,...</var></td>
-    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  When 
-    using this define, you can specify up to six alternative colorspaces. (as 
+    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  When
+    using this define, you can specify up to six alternative colorspaces. (as
     of IM 7.0.3-8)</td>
   </tr>
 
   <tr>
     <td>phash:normalize=<var>true</var></td>
-    <td>normalizes the phash metric by dividing by the number of channels 
-    specified by <code>-define phash:colorspaces</code> when using compare 
+    <td>normalizes the phash metric by dividing by the number of channels
+    specified by <code>-define phash:colorspaces</code> when using compare
     -metric phash. (as of IM 7.0.3-8)</td>
   </tr>
 
@@ -2171,8 +2171,8 @@ available:</p>
     <td>png:compression-filter=<var>value</var></td>
     <td> valid values are 0 through 9. 0-4 are the corresponding PNG filters,
    5 means adaptive filtering except for images with a colormap, 6 means
-   adaptive filtering for all images, 7 means MNG "loco" compression, 8 means 
-   Z_RLE strategy with adaptive filtering, and 9 means Z_RLE strategy with no 
+   adaptive filtering for all images, 7 means MNG "loco" compression, 8 means
+   Z_RLE strategy with adaptive filtering, and 9 means Z_RLE strategy with no
    filtering.</td>
   </tr>
 
@@ -2284,7 +2284,7 @@ available:</p>
 
   <tr>
     <td>png:ignore-crc[=<var>true</var>]</td>
-     <td>When you know your image has no CRC or ADLER32 errors, this can speed up 
+     <td>When you know your image has no CRC or ADLER32 errors, this can speed up
      decoding. It is also helpful in debugging bug reports from "fuzzers".</td>
   </tr>
 
@@ -2332,19 +2332,19 @@ available:</p>
 
   <tr>
     <td>ps:imagemask</td>
-     <td>If the ps:imagemask flag is defined, the PS3 and EPS3 coders will 
-    create Postscript files that render bilevel images with the Postscript 
+     <td>If the ps:imagemask flag is defined, the PS3 and EPS3 coders will
+    create Postscript files that render bilevel images with the Postscript
     imagemask operator instead of the image operator.</td>
   </tr>
 
   <tr>
     <td>psd:additional-info=all|selective</td>
-     <td>This option should only be used when converting from a PSD file to 
+     <td>This option should only be used when converting from a PSD file to
      another PSD file. This should be placed after the image is read. The two
-     options are 'all' and 'selective'. The 'selective' option will preserve 
-     all additional information that is not related to the geometry of the 
-     image. The 'all' option should only be used when the geometry of the 
-     image has not been changed. This option is helpful when transferring 
+     options are 'all' and 'selective'. The 'selective' option will preserve
+     all additional information that is not related to the geometry of the
+     image. The 'all' option should only be used when the geometry of the
+     image has not been changed. This option is helpful when transferring
      non-simple layers, such as adjustment layers from the input PSD file to 
      the output PSD file. If this option is not used, the additional 
      information will not be preserved. This define is available as of 
@@ -5638,7 +5638,7 @@ times.</p>
   <h3><a class="anchor" id="magnify"></a>-magnify</h3>
 </div>
 
-<p class="magick-description">double the size of the image with pixel art scaling.</p>
+<p class="magick-description">double the size of the image with pixel art scaling. Specify an alternative scaling method with <code>-define magnify:method=<var>method</var></code> Choose from these methods: eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X,  scale2X, scale3X, xbr2X.  The default is scale2X.</p>
 
 
 <div style="margin: auto;">
@@ -6130,32 +6130,32 @@ The choices for a PostScript page are:</p>
 <dt class="col-md-4"> ArchA      </dt> <dd class="col-md-8">  648 x  864</dd>
 <dt class="col-md-4"> A0         </dt> <dd class="col-md-8"> 2380 x 3368</dd>
 <dt class="col-md-4"> A1         </dt> <dd class="col-md-8"> 1684 x 2380</dd>
-<dt class="col-md-4"> A2         </dt> <dd class="col-md-8"> 1190 x 1684</dd> 
-<dt class="col-md-4"> A3         </dt> <dd class="col-md-8">  842 x 1190</dd> 
-<dt class="col-md-4"> A4         </dt> <dd class="col-md-8">  595 x  842</dd> 
-<dt class="col-md-4"> A4Small    </dt> <dd class="col-md-8">  595 x  842</dd> 
-<dt class="col-md-4"> A5         </dt> <dd class="col-md-8">  421 x  595</dd> 
-<dt class="col-md-4"> A6         </dt> <dd class="col-md-8">  297 x  421</dd> 
-<dt class="col-md-4"> A7         </dt> <dd class="col-md-8">  210 x  297</dd> 
-<dt class="col-md-4"> A8         </dt> <dd class="col-md-8">  148 x  210</dd> 
-<dt class="col-md-4"> A9         </dt> <dd class="col-md-8">  105 x  148</dd> 
-<dt class="col-md-4"> A10        </dt> <dd class="col-md-8">   74 x  105</dd> 
-<dt class="col-md-4"> B0         </dt> <dd class="col-md-8"> 2836 x 4008</dd> 
-<dt class="col-md-4"> B1         </dt> <dd class="col-md-8"> 2004 x 2836</dd> 
-<dt class="col-md-4"> B2         </dt> <dd class="col-md-8"> 1418 x 2004</dd> 
-<dt class="col-md-4"> B3         </dt> <dd class="col-md-8"> 1002 x 1418</dd> 
-<dt class="col-md-4"> B4         </dt> <dd class="col-md-8">  709 x 1002</dd> 
-<dt class="col-md-4"> B5         </dt> <dd class="col-md-8">  501 x  709</dd> 
-<dt class="col-md-4"> C0         </dt> <dd class="col-md-8"> 2600 x 3677</dd> 
-<dt class="col-md-4"> C1         </dt> <dd class="col-md-8"> 1837 x 2600</dd> 
-<dt class="col-md-4"> C2         </dt> <dd class="col-md-8"> 1298 x 1837</dd> 
-<dt class="col-md-4"> C3         </dt> <dd class="col-md-8">  918 x 1298</dd> 
-<dt class="col-md-4"> C4         </dt> <dd class="col-md-8">  649 x  918</dd> 
-<dt class="col-md-4"> C5         </dt> <dd class="col-md-8">  459 x  649</dd> 
-<dt class="col-md-4"> C6         </dt> <dd class="col-md-8">  323 x  459</dd> 
-<dt class="col-md-4"> Flsa       </dt> <dd class="col-md-8">  612 x  936</dd> 
-<dt class="col-md-4"> Flse       </dt> <dd class="col-md-8">  612 x  936</dd> 
-<dt class="col-md-4"> HalfLetter </dt> <dd class="col-md-8">  396 x  612</dd> 
+<dt class="col-md-4"> A2         </dt> <dd class="col-md-8"> 1190 x 1684</dd>
+<dt class="col-md-4"> A3         </dt> <dd class="col-md-8">  842 x 1190</dd>
+<dt class="col-md-4"> A4         </dt> <dd class="col-md-8">  595 x  842</dd>
+<dt class="col-md-4"> A4Small    </dt> <dd class="col-md-8">  595 x  842</dd>
+<dt class="col-md-4"> A5         </dt> <dd class="col-md-8">  421 x  595</dd>
+<dt class="col-md-4"> A6         </dt> <dd class="col-md-8">  297 x  421</dd>
+<dt class="col-md-4"> A7         </dt> <dd class="col-md-8">  210 x  297</dd>
+<dt class="col-md-4"> A8         </dt> <dd class="col-md-8">  148 x  210</dd>
+<dt class="col-md-4"> A9         </dt> <dd class="col-md-8">  105 x  148</dd>
+<dt class="col-md-4"> A10        </dt> <dd class="col-md-8">   74 x  105</dd>
+<dt class="col-md-4"> B0         </dt> <dd class="col-md-8"> 2836 x 4008</dd>
+<dt class="col-md-4"> B1         </dt> <dd class="col-md-8"> 2004 x 2836</dd>
+<dt class="col-md-4"> B2         </dt> <dd class="col-md-8"> 1418 x 2004</dd>
+<dt class="col-md-4"> B3         </dt> <dd class="col-md-8"> 1002 x 1418</dd>
+<dt class="col-md-4"> B4         </dt> <dd class="col-md-8">  709 x 1002</dd>
+<dt class="col-md-4"> B5         </dt> <dd class="col-md-8">  501 x  709</dd>
+<dt class="col-md-4"> C0         </dt> <dd class="col-md-8"> 2600 x 3677</dd>
+<dt class="col-md-4"> C1         </dt> <dd class="col-md-8"> 1837 x 2600</dd>
+<dt class="col-md-4"> C2         </dt> <dd class="col-md-8"> 1298 x 1837</dd>
+<dt class="col-md-4"> C3         </dt> <dd class="col-md-8">  918 x 1298</dd>
+<dt class="col-md-4"> C4         </dt> <dd class="col-md-8">  649 x  918</dd>
+<dt class="col-md-4"> C5         </dt> <dd class="col-md-8">  459 x  649</dd>
+<dt class="col-md-4"> C6         </dt> <dd class="col-md-8">  323 x  459</dd>
+<dt class="col-md-4"> Flsa       </dt> <dd class="col-md-8">  612 x  936</dd>
+<dt class="col-md-4"> Flse       </dt> <dd class="col-md-8">  612 x  936</dd>
+<dt class="col-md-4"> HalfLetter </dt> <dd class="col-md-8">  396 x  612</dd>
 </dl>
 
 <p>This option is also used to place subimages when writing to a multi-image
