@@ -49,7 +49,7 @@
 
     <div class="navbar-collapse collapse" id="navbarsMagick" style="">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item <?php IsActive($title,"Convert, Edit, Or Compose Bitmap Images"); ?>">
+      <li class="nav-item <?php IsActive($title,"Convert, Edit, or Compose Bitmap Images"); ?>">
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item <?php IsActive($title,"Download"); ?>">
