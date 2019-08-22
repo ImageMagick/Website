@@ -83,6 +83,8 @@
          style="display:block"
          data-ad-client="ca-pub-3129977114552745"
          data-ad-slot="6345125851"
+         data-ad-slot="5439289906"
+         data-full-width-responsive="true"
          data-ad-format="auto"></ins>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
