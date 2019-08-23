@@ -84,7 +84,7 @@
          data-ad-client="ca-pub-3129977114552745"
          data-ad-slot="6345125851"
          data-full-width-responsive="true"
-         data-ad-format="auto"></ins>
+         data-ad-format="horizontal"></ins>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
