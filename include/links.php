@@ -78,7 +78,7 @@
 
 <h2><a class="anchor" id="other-projects"></a>Other Projects</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://github.com/puelocesar/android-lib-magick">ImageMagick API on the Android Platform</a></dd>
+  <dd class="col-md-8"><a href="https://github.com/cherryleafroad/Android-ImageMagick7">ImageMagick API on the Android Platform</a></dd>
   <dd class="col-md-8"><a href="https://imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
   <dd class="col-md-8"><a href="http://www.wizards-toolkit.org/">Wizard's Toolkit</a></dd>
   <dd class="col-md-8"><a href="http://www.multipole.org/">Computational Simulation of Multi-Body Interactions with O(n) Scaling</a></dd>
