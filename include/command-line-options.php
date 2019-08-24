@@ -5613,7 +5613,7 @@ characters:</p>
 
 <p>For example:</p>
 
-<pre class="highlight"><code>convert -debug coders -log "%u %m:%l %e" in.gif out.png
+<pre class="highlight"><code>convert -debug coder -log "%u %m:%l %e" in.gif out.png
 </code></pre>
 
 <p>The default behavior is to print all of the components.</p>
