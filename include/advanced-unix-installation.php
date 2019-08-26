@@ -131,7 +131,7 @@ Options used to compile and link:
 
 <p>Here are the optional features you can configure:</p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:80% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>--enable-shared</td>
@@ -185,7 +185,7 @@ Options used to compile and link:
 
 <p>Here are the optional packages you can configure:</p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:80% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>--with-quantum-depth</td>

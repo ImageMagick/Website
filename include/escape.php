@@ -1,7 +1,7 @@
 <div class="magick-header">
 <p class="lead magick-description">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a> or in montage <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#label" >-label</a>, to print various properties and other settings associated with an image.</p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:80% !important;">
 <table class="table table-striped">
 <tr>
     <td><b>Profile Data</b></td>
@@ -80,7 +80,7 @@ and avoid accessing an attribute or property of the same name.</p>
 common attributes and properties of an image, such as: the image filename
 filename, type, width, height. </p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:80% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>\n</td>
@@ -301,7 +301,7 @@ especially for large images.</p>
 <p>In addition to the above specific and calculated attributes are recognized
 when enclosed in braces (long form):</p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:80% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>%[basename]</td>
