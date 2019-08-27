@@ -180,7 +180,7 @@ $MAGICK_FONT_PATH</code></pre>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
-<div class="table-responsive" style="font-size:90% !important;">
+<div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>HOME</td>
