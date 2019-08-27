@@ -13,7 +13,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
-<div class="table-responsive" style="font-size:80% !important;">
+<div class="table-responsive" style="font-size:90% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>

@@ -52,7 +52,7 @@ magick convert rose.jpg rose.png
 
 <p>The <code>magick</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<div class="table-responsive" style="font-size:80% !important;">
+<div class="table-responsive" style="font-size:90% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#adaptive-blur">-adaptive-blur <var>geometry</var></a></td>
