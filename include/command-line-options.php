@@ -6689,6 +6689,8 @@ correction, apply the transform, then restore it like this:</p>
   -quality 92 passport.jpg
 </code></pre>
 
+<p>Note, some resampling functions are damped oscillations in approximation of a Sinc function.  As such, you may get negative lobes if your release of ImageMagick is HDRI-enabled.  To eliminate them, add <a href="#clamp">-clamp</a> to your command-line.</p>
+
 <div style="margin: auto;">
   <h3><a class="anchor" id="respect-parentheses"></a>-respect-parentheses</h3>
 </div>
