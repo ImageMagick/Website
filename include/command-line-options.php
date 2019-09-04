@@ -3399,6 +3399,7 @@ than 1.png).</p>
 <p>Drawing primitives conform to the <a href="<?php echo
 $_SESSION['RelativePath'] ?>/../script/magick-vector-graphics.php" >Magick
 Vector Graphics</a> format.</p>
+<p>Note, drawing requires an alpha channel.  If none is available, an all opaque alpha channel is implicitedly created.</p>
 
 
 <div style="margin: auto;">
