@@ -1,8 +1,8 @@
 <div class="magick-header">
-<p class="text-center"><a href="magick-vector-graphics.html#overview">MVG Overview</a> • <a href="magick-vector-graphics.html#primitives">Drawing Primitives</a></p>
+<p class="text-center"><a href="magick-vector-graphics.php#overview">MVG Overview</a> • <a href="magick-vector-graphics.php#primitives">Drawing Primitives</a></p>
 
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
-command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="api.html">program interfaces</a>.  Use this command, for example, to render an arc:</p>
+command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="api.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
 <pre class="highlight"><code>convert -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
@@ -188,7 +188,7 @@ pop graphic-context
 
 <p>to produce the same pie chart we created with the MVG language.</p>
 
-<p>Drawing is available from many of the ImageMagick <a href="api.html">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.html">MagickWand</a> language: </p>
+<p>Drawing is available from many of the ImageMagick <a href="api.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.php">MagickWand</a> language: </p>
 
 <pre class="pre-scrollable"><code>(void) PushDrawingWand(draw_wand);
 {
@@ -357,7 +357,7 @@ underline</code></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="fill"></a>fill <var>color</var></td>
-    <td>Choose from any of these <a href="color.html">colors</a>.</td>
+    <td>Choose from any of these <a href="color.php">colors</a>.</td>
   </tr>
   <tr>
     <td><a class="anchor" id="fill-opacity"></a>fill-opacity <var>opacity</var></td>
@@ -608,7 +608,7 @@ SouthEast</code></pre></td>
 
   <tr>
     <td>change-mask</td>
-    <td>Replace any destination pixel that is the similar to the source images pixel (as defined by the current <a href="magick-vector-graphics.html#fuzz">-fuzz</a> factor), with transparency. </td>
+    <td>Replace any destination pixel that is the similar to the source images pixel (as defined by the current <a href="magick-vector-graphics.php#fuzz">-fuzz</a> factor), with transparency. </td>
   </tr>
   </tbody>
 </table></td>
