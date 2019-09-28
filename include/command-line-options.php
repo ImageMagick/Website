@@ -1683,8 +1683,8 @@ option.</p>
 
 <p>Get the passphrase from the file specified by <var>filename</var>.</p>
 
-<p>For more information, see the webpage, <a
-href="https://imagemagick.org/www/cipher.html">ImageMagick: Encipher or
+<p>For more information, see the webpage, <a href="<?php
+echo $_SESSION['RelativePath'] ?>/../script/cipher.php">ImageMagick: Encipher or
 Decipher an Image</a>.</p>
 
 
@@ -3435,8 +3435,8 @@ image sequence.</p>
 
 <p>Get the passphrase from the file specified by <var>filename</var>.</p>
 
-<p>For more information, see the webpage, <a
-href="https://imagemagick.org/www/cipher.html">ImageMagick: Encipher or
+<p>For more information, see the webpage, <a href="<?php
+echo $_SESSION['RelativePath'] ?>/../script/cipher.php">ImageMagick: Encipher or
 Decipher an Image</a>.</p>
 
 
