@@ -14,7 +14,7 @@
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
-    $meta->description="ImageMagick® creates, edits, composes, and converts bitmap images. Resize an image, crop it, change its shades and colors, add captions, and more.";
+    $meta->description="Use ImageMagick® to create, edit, compose, and convert bitmap images. Resize an image, crop it, change its shades and colors, add captions, and more.";
     $meta->application_url="https://imagemagick.org";
     $meta->keywords2="ImageMagick, PerlMagick, image processing, image, photo, software, Magick++, OpenMP, convert";
     $meta->sitename="ImageMagick";
