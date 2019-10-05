@@ -535,6 +535,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://en.wikipedia.org/wiki/JPEG_XR">JXL</a></td>
+    <td>RW</td>
+    <td>JPEG1 recompression as specified in https://arxiv.org/pdf/1908.03565.pdf</td>
+    <td>Requires the <a href="https://github.com/google/brunsli">brunsli</a> delegate library.</td>
+  </tr>
+
+  <tr>
     <td>MAN</td>
     <td>R</td>
     <td>Unix reference manual pages</td>
