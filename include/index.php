@@ -85,7 +85,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
-    <td>apply a mathematical expression to an image or image channels.</td>
+    <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a></td>
