@@ -472,7 +472,7 @@ transparent, extract, background, or shape the alpha channel</td>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#tile">-tile <var>geometry</var></a></td>
-    <td>set tiles per column and row (e.g. -tile 8x)</td>
+    <td>number of tiles per row and column (e.g. -tile 8x)</td>
   </tr>
 
   <tr>
