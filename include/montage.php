@@ -426,7 +426,7 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#scenes">-scenes<var>range</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#scenes">-scenes <var>range</var></a></td>
     <td>image scene range</td>
   </tr>
 
