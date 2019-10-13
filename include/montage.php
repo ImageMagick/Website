@@ -471,8 +471,8 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#tile">-tile <var>filename</var></a></td>
-    <td>tile image when filling a graphic primitive</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#tile">-tile <var>geometry</var></a></td>
+    <td>set tiles per column and row (e.g. -tile 8x)</td>
   </tr>
 
   <tr>
