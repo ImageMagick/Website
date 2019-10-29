@@ -106,11 +106,11 @@ display logo.gif</code></pre>
 
 <h2><a class="anchor" id="macosx"></a>Mac OS X Binary Release</h2>
 
-<p>We recommend <a href="http://www.macports.org">MacPorts</a> which custom builds ImageMagick in your environment (some users prefer <a href="http://brew.sh">Homebrew</a>).  Download MacPorts and type:</p>
+<p>We recommend <a href="https://brew.sh">Homebrew</a> which custom builds ImageMagick in your environment (some users prefer <a href="https://macports.org">MacPorts</a>).  Download HomeBrew and type:</p>
 
-<pre class="highlight"><code>sudo port install ImageMagick</code></pre>
+<pre class="highlight"><code>brew install imagemagick</code></pre>
 
-<p>The <code>port</code> command downloads ImageMagick and many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc.) and configures, builds, and installs ImageMagick automagically.  Alternatively, you can download the ImageMagick Mac OS X distribution we provide:</p>
+<p>The <code>brew</code> command downloads ImageMagick and many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc.) and configures, builds, and installs ImageMagick automagically.  Alternatively, you can download the ImageMagick Mac OS X distribution we provide:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-striped">
