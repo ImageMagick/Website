@@ -33,6 +33,8 @@
   &lt;policy domain="coder" rights="none" pattern="XPS" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="delegate" rights="none" pattern="HTTPS" />  <!--  prevent 'curl' program from reading HTTPS URL's -->
+  &lt;policy domain="delegate" rights="none" pattern="SHOW" />
+  &lt;policy domain="delegate" rights="none" pattern="WIN" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
 &lt;/policymap></code></pre>
 
