@@ -52,8 +52,8 @@ convert: no images defined `wizard.jpg'</pre>
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
 <pre class="highlight"><code>&lt;policy domain="delegate" rights="none" pattern="*" />
-&lt;policy domain="coder" rights="none" pattern="*" />
-&lt;policy domain="coder" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
+&lt;policy domain="module" rights="none" pattern="*" />
+&lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
 
 <p>Here we disable just a few Postscript related formats:</p>
 <pre class="highlight"><code>&lt;policy domain="coder" rights="none" pattern="{EPS,PS2,PS3,PS,PDF,XPS}" /></code></pre>
