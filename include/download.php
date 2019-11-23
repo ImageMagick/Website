@@ -110,6 +110,10 @@ display logo.gif</code></pre>
 
 <pre class="highlight"><code>brew install imagemagick</code></pre>
 
+<p>ImageMagick depends on Ghostscript fonts.  To install them, type:</p>
+
+<pre class="highlight"><code>brew install ghostscript</code></pre>
+
 <p>The <code>brew</code> command downloads ImageMagick and many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc.) and configures, builds, and installs ImageMagick automagically.  Alternatively, you can download the ImageMagick Mac OS X distribution we provide:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
