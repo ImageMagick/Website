@@ -730,7 +730,7 @@ the supported image formats.</p>
     <td>PDF</td>
     <td>RW</td>
     <td>Portable Document Format</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define pdf:use-cropbox=true</code> or <code>-define pdf:use-trimbox=true</code>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from  Postscript to PDF, use <code>-define delegate:bimodel=true</code>. Use <code>-define pdf:fit-page=true</code> to scale to the page size. To immediately stop processing upon an error, set <code>-define pdf:stop-on-error</code> to <code>true</code>. To set the page direction preferences to right-to-left, try  <code>-define pdf:page-direction=right-to-left</code>. Create a Pocketmod page with the <code>-define pdf:pocketmod=true</code> option and an image sequence of at least 8.</td>
+    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define pdf:use-cropbox=true</code> or <code>-define pdf:use-trimbox=true</code>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from  Postscript to PDF, use <code>-define delegate:bimodel=true</code>. Use <code>-define pdf:fit-page=true</code> to scale to the page size. To immediately stop processing upon an error, set <code>-define pdf:stop-on-error</code> to <code>true</code>. To set the page direction preferences to right-to-left, try  <code>-define pdf:page-direction=right-to-left</code>.</td>
   </tr>
 
   <tr>
@@ -850,6 +850,13 @@ the supported image formats.</p>
     <td>RW</td>
     <td>Portable anymap</td>
     <td>PNM is a family of formats supporting portable bitmaps (PBM) , graymaps (PGM), and pixmaps (PPM). There is no file format associated with pnm itself. If PNM is used as the output format specifier, then ImageMagick automagically selects the most appropriate format to represent the image.  The default is to write the binary version of the formats. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compress">-compress none</a> to write the ASCII version of the formats.</td>
+  </tr>
+
+  <tr>
+    <td>POCKETMOD</td>
+    <td>RW</td>
+    <td>Pocketmod personal organizer format</td>
+    <td>Example usage: <code>convert -density 300 pages?.pdf pocketmod:organize.pdf</code> </td>
   </tr>
 
   <tr>
