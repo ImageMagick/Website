@@ -96,7 +96,7 @@ the supported image formats.</p>
     <td>ARW</td>
     <td>R</td>
     <td>Sony Digital Camera Alpha Raw Image Format</td>
-    <td> </td>
+    <td>Set <code>-define dng:use-camera-wb=true</code> to use the RAW-embedded color profile for Sony cameras.</td>
   </tr>
 
   <tr>
@@ -612,7 +612,7 @@ the supported image formats.</p>
     <td>MRW</td>
     <td>R</td>
     <td>Sony (Minolta) Raw Image File</td>
-    <td> </td>
+    <td>Set <code>-define dng:use-camera-wb=true</code> to use the RAW-embedded color profile for Sony cameras.</td>
   </tr>
 
   <tr>
