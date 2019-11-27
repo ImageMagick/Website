@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="lead magick-description">ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors around the world listed below.  ImageMagick stable and development source releases are also available from <a href="http://git.imagemagick.org/repos/ImageMagick">Git</a>.  Before you download, you may want to review recent <a href="<?php echo $_SESSION['RelativePath']?>/../script/changelog.php">changes</a> to the ImageMagick distribution.  The authoritative source code repository is <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>.</p>
+<p class="lead magick-description">ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors around the world listed below.  ImageMagick stable and development source releases are also available from <a href="https://github.com/ImageMagick">Git</a>.  Before you download, you may want to review recent <a href="<?php echo $_SESSION['RelativePath']?>/../script/changelog.php">changes</a> to the ImageMagick distribution.  The authoritative source code repository is <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>.</p>
 <p>The latest release of ImageMagick is version <?php echo(MagickLibVersionText.MagickLibSubversion); ?>.</p>
 <dl>
   <dt>Germany</dt>
