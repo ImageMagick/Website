@@ -296,14 +296,14 @@ now gone.  However the strict order means that you can no longer give operations
 before providing an image for the operations to work on.  To do so will now
 produce an error. </p>
 
-<p>With the IMv7 parser, activated by the `magick` utility, settings are applied to each image in memory in turn (if any). While an option: only need to be applied once globally. Using the other utilities directly, or as an argument to the `magick` CLI (e.g. `magick convert`) utilizes the legacy parser.</p>
-
 <p>Error reporting is now reporting exactly which option (by argument count on
 command line, or line,column in scripts) caused the 'exception'.  This is not
 complete as yet but getting better. Also not complete is 'regard-warnings'
 handling or its replacement, which will allow you to ignore reported errors
 and continue processing (as appropriate due to error) in co-processes or
 interactive usage. </p>
+
+<p>With the IMv7 parser, activated by the `magick` utility, settings are applied to each image in memory in turn (if any). While an option: only need to be applied once globally. Using the other utilities directly, or as an argument to the `magick` CLI (e.g. `magick convert`) utilizes the legacy parser.</p>
 
 <p>The parenthesis options used to 'push' the current image list, and image
 settings (EG: '<code>(</code>' and '<code>)</code>' ) on to a stack now has
