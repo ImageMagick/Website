@@ -74,6 +74,8 @@
 <p>You'll need the libraries as well:</p>
 <?php crt("rpm -Uvh ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 
+<p>Note, if there are missing dependencies, install them from the <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repo.</p>
+
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
 <pre class="highlight"><code>cd $HOME</code></pre>
