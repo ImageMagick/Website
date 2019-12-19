@@ -4947,7 +4947,7 @@ lookup for positions outside the boundaries of the image. </p>
 <p class="magick-description">the space between two letters.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="kmeans"></a>-kerning <var>colors</var>x<var>max-iterations</var>+<var>max-distortion</var></h3>
+  <h3><a class="anchor" id="kmeans"></a>-kerning <var>colors</var>x<var>iterations</var>+<var>distortion</var></h3>
 </div>
 
 <p class="magick-description">K means color reduction (e.g. <code>-kmeans 5x40+0.05</code>).</p>
