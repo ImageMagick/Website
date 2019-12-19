@@ -629,6 +629,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-kmeans <var>geometry</var></a></td>
+    <td>K means color reduction</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#kuwahara">-kuwahara <var>geometry</var></a></td>
     <td>edge preserving noise reduction filter</td>
   </tr>
