@@ -4950,7 +4950,7 @@ lookup for positions outside the boundaries of the image. </p>
   <h3><a class="anchor" id="kmeans"></a>-kerning <var>colors</var>x<var>iterations</var>+<var>distortion</var></h3>
 </div>
 
-<p class="magick-description">K means color reduction (e.g. <code>-kmeans 5x40+0.05</code>). Use <code>-define kmeans:seed-colors=<var>color-list</var></code> to initialize the color list, where <var>color-list</var> is a semicolon delimited list of seed colors (e.g. <code>-define kmeans:seed-colors="red;sRGB(19,167,254);cyan</code>).</p>
+<p class="magick-description">K means color reduction (e.g. <code>-kmeans 5x40+0.05</code>). Use <code>-define kmeans:seed-colors=<var>color-list</var></code> to initialize the color list, where <var>color-list</var> is a semicolon delimited list of seed colors (e.g. <code>-define kmeans:seed-colors="red;sRGB(19,167,254);cyan</code>).  A color of <code>random</code> assigns random seed colors.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="kuwahara"></a>-kuwahara <var>radius</var><br />-kuwahara <var>radius</var>x<var>sigma</var></h3>
