@@ -4947,10 +4947,10 @@ lookup for positions outside the boundaries of the image. </p>
 <p class="magick-description">the space between two letters.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="kmeans"></a>-kmeans <var>colors</var>{x<var>iterations</var>}{+<var>convergence</var>}</h3>
+  <h3><a class="anchor" id="kmeans"></a>-kmeans <var>colors</var>{x<var>iterations</var>}{+<var>tolerance</var>}</h3>
 </div>
 
-<p class="magick-description">Kmeans (iterative) color reduction (e.g. <code>-kmeans 5x100+0.01</code>). Colors is the desired number of colors. Initial colors are found using color quantization. Iterations is the stopping number of iterations (default=100). Convergence is the stopping threshold on the color change between iterations (default=0.01). Processing finishes, if either iterations or convergence are reached. Use <code>-define kmeans:seed-colors=<var>color-list</var></code> to initialize the colors, where color-list is a semicolon delimited list of seed colors (e.g. <code>-define kmeans:seed-colors="red;sRGB(19,167,254);#00ffff</code>). A color list overrides the color quantization. A non-empty list of colors overrides the number of colors. Any unassigned initial colors are assigned  random colors from the image.</p>
+<p class="magick-description">Kmeans (iterative) color reduction (e.g. <code>-kmeans 5x100+0.01</code>). Colors is the desired number of colors. Initial colors are found using color quantization. Iterations is the stopping number of iterations (default=100). Convergence is the stopping threshold on the color change between iterations (default=0.01). Processing finishes, if either iterations or tolerance are reached. Use <code>-define kmeans:seed-colors=<var>color-list</var></code> to initialize the colors, where color-list is a semicolon delimited list of seed colors (e.g. <code>-define kmeans:seed-colors="red;sRGB(19,167,254);#00ffff</code>). A color list overrides the color quantization. A non-empty list of colors overrides the number of colors. Any unassigned initial colors are assigned  random colors from the image.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="kuwahara"></a>-kuwahara <var>radius</var><br />-kuwahara <var>radius</var>x<var>sigma</var></h3>
