@@ -729,7 +729,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Kmeans</td>
-    <td>geometry=&gt;<i>geometry</i>, 'colors'=&gt;<i>double</i>, 'iterations'=&gt;<i>double</i>, 'distortion'=&gt;<i>double</i></td>
+    <td>geometry=&gt;<i>geometry</i>, 'colors'=&gt;<i>double</i>, 'iterations'=&gt;<i>double</i>, 'tolerance'=&gt;<i>double</i></td>
     <td>K means color reduction.</td>
   </tr>
 
