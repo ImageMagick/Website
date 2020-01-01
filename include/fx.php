@@ -324,8 +324,8 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <pre class="highlight"><code>$ convert canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]\n' info:
-Red channel of NW corner of image #0 is 0.453758
-Red channel of NW corner of image #1 is 0.184588
+Red channel of NW corner of image #0 is 0.464883
+Red channel of NW corner of image #1 is 0.184582
 </code></pre>
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <code>-set</code> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
