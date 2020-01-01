@@ -7,7 +7,7 @@
 
 <h2><a class="anchor" id="unix"></a>Unix Binary Release</h2>
 
-<p>These are the Unix variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on dual and quad-core systems reducing run times considerably.</p>
+<p>These are the Unix variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-striped">
@@ -17,6 +17,13 @@
     <th>HTTP</th>
     <th>FTP</th>
     <th>Description</th>
+  </tr>
+
+  <tr>
+    <td>magick</td>
+      <td><a href= "https://imagemagick.org/download/binaries/magick">download</a></td>
+    <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/magick">download</a></td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.</td>
   </tr>
 
   <tr>
