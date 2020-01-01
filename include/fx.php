@@ -95,57 +95,57 @@
   <dt class="col-md-4"> color hex values:</dt>
     <dd class="col-md-8"> #ccc, #cbfed0, #b9e1cc00, etc.</dd>
   <dt class="col-md-4"> symbols:</dt><dd class="col-md-8"><dl>
-     <li><code>u</code>=> first image in list</li>
-     <li><code>v</code>=> second image in list</li>
-     <li><code>s</code>=> current image in list (for %[fx:] otherwise = u)</li>
-     <li><code>t</code>=> index of current image (s) in list</li>
-     <li><code>n</code>=> number of images in list</li>
+     <dd><code>u</code>: first image in list</dd>
+     <dd><code>v</code>: second image in list</dd>
+     <dd><code>s</code>: current image in list (for %[fx:] otherwise = u)</dd>
+     <dd><code>t</code>: index of current image (s) in list</dd>
+     <dd><code>n</code>: number of images in list</dd>
 
-     <li><code>i</code>=> column offset</li>
-     <li><code>j</code>=> row offset</li>
-     <li><code>p</code>=> pixel to use (absolute or relative to current pixel)</li>
+     <dd><code>i</code>: column offset</dd>
+     <dd><code>j</code>: row offset</dd>
+     <dd><code>p</code>: pixel to use (absolute or relative to current pixel)</dd>
 
-     <li><code>w</code>=> width of this image</li>
-     <li><code>h</code>=> height of this image</li>
-     <li><code>z</code>=> channel depth</li>
+     <dd><code>w</code>: width of this image</dd>
+     <dd><code>h</code>: height of this image</dd>
+     <dd><code>z</code>: channel depth</dd>
 
-     <li><code>r</code>=> red value (from RGBA), of a specific or current pixel</li>
-     <li><code>g</code>=> green</li>
-     <li><code>b</code>=> blue</li>
-     <li><code>a</code>=> alpha</li>
-     <li><code>o</code>=> opacity</li>
+     <dd><code>r</code>: red value (from RGBA), of a specific or current pixel</dd>
+     <dd><code>g</code>: green</dd>
+     <dd><code>b</code>: blue</dd>
+     <dd><code>a</code>: alpha</dd>
+     <dd><code>o</code>: opacity</dd>
 
-     <li><code>c</code>=> cyan value of CMYK color of pixel</li>
-     <li><code>y</code>=> yellow</li>
-     <li><code>m</code>=> magenta</li>
-     <li><code>k</code>=> black</li>
+     <dd><code>c</code>: cyan value of CMYK color of pixel</dd>
+     <dd><code>y</code>: yellow</dd>
+     <dd><code>m</code>: magenta</dd>
+     <dd><code>k</code>: black</dd>
 
-     <li><code>intensity</code>=> pixel intensity</li>
+     <dd><code>intensity</code>: pixel intensity</dd>
 
-     <li><code>hue</code>=> pixel hue</li>
-     <li><code>saturation</code>=> pixel saturation</li>
-     <li><code>lightness</code>=> pixel lightness</li>
-     <li><code>luma</code>=> pixel luma</li>
+     <dd><code>hue</code>: pixel hue</dd>
+     <dd><code>saturation</code>: pixel saturation</dd>
+     <dd><code>lightness</code>: pixel lightness</dd>
+     <dd><code>luma</code>: pixel luma</dd>
 
-     <li><code>page.width</code>=> page width</li>
-     <li><code>page.height</code>=> page height</li>
-     <li><code>page.x</code>=> page x offset</li>
-     <li><code>page.y</code>=> page y offset</li>
+     <dd><code>page.width</code>: page width</dd>
+     <dd><code>page.height</code>: page height</dd>
+     <dd><code>page.x</code>: page x offset</dd>
+     <dd><code>page.y</code>: page y offset</dd>
 
-     <li><code>printsize.x</code>=> x printsize</li>
-     <li><code>printsize.y</code>=> y printsize</li>
+     <dd><code>printsize.x</code>: x printsize</dd>
+     <dd><code>printsize.y</code>: y printsize</dd>
 
-     <li><code>resolution.x</code>=> x resolution</li>
-     <li><code>resolution.y</code>=> y resolution</li>
+     <dd><code>resolution.x</code>: x resolution</dd>
+     <dd><code>resolution.y</code>: y resolution</dd>
 
-     <li><code>depth</code>=> image depth</li>
-     <li><code>extent</code>=> image extent</li>
-     <li><code>minima</code>=> image minima</li>
-     <li><code>maxima</code>=> image maxima</li>
-     <li><code>mean</code>=> image mean</li>
-     <li><code>standard_deviation</code>=> image standard deviation</li>
-     <li><code>kurtosis</code>=> image kurtosis</li>
-     <li><code>skewness</code>=> image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</li></dl></dd>
+     <dd><code>depth</code>: image depth</dd>
+     <dd><code>extent</code>: image extent</dd>
+     <dd><code>minima</code>: image minima</dd>
+     <dd><code>maxima</code>: image maxima</dd>
+     <dd><code>mean</code>: image mean</dd>
+     <dd><code>standard_deviation</code>: image standard deviation</dd>
+     <dd><code>kurtosis</code>: image kurtosis</dd>
+     <dd><code>skewness</code>: image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</dd></dl></dd>
   <dt class="col-md-4"> iterators:</dt>
     <dd class="col-md-8"> while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
