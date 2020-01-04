@@ -78,7 +78,7 @@
   pixel == 1.0 ? 0.0 : pixel" \
   \( -size 1x1 xc:white xc:red xc:orange xc:yellow xc:green1 xc:cyan xc:blue \
      xc:blueviolet xc:white -reverse +append -filter Cubic -resize 1024x1! \) \
-  -clut julia-set.png
+  -clut -rotate -90 julia-set.png
 </code></pre>
 
 <ul>
