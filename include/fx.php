@@ -66,13 +66,13 @@
 <p>This Fx script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
 <pre class="highlight"><code>magick -size 400x400 xc:black -colorspace gray -fx " \
-  zx=2.4*i/w-1.2;
-  zy=2.4*j/h-1.2;
+  Xi=2.4*i/w-1.2;
+  Yj=2.4*j/h-1.2;
   pixel=0.0;
-  while ((hypot(zx,zy) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0),
-    zz=zx^2-zy^2;
-    zy=2.0*zx*zy+0.2;
-    zx=zz+0.4;
+  while ((hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0),
+    delta=Xi^2-Yj^2;
+    Yj=2.0*Xi*Yj+0.2;
+    Xi=delta+0.4;
     pixel+=0.00390625
   );
   pixel == 1.0 ? 0.0 : pixel" \
