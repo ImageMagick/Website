@@ -16,7 +16,7 @@
 
 <p>The expression can be simple:</p>
 
-<pre class="highlight"><code>convert -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
+<pre class="highlight"><code>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
 </code></pre>
 
 <p>Here, we convert a black to a navy blue image:</p>
@@ -29,7 +29,7 @@
 
 <p>Or the expression can be complex:</p>
 
-<pre class="highlight"><code>convert rose: \
+<pre class="highlight"><code>magick rose: \
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
   rose-sigmoidal.png
 </code></pre>
@@ -44,7 +44,7 @@
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
-<pre class="highlight"><code>convert -size 70x70 canvas: \
+<pre class="highlight"><code>magick -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \
   radial-gradient.png
 </code></pre>
@@ -57,11 +57,33 @@
 
 <p>This FX expression adds random noise to an image:</p>
 
-<pre class="highlight"><code>convert photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
+<pre class="highlight"><code>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
   channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)' noisy.png
 </code></pre>
+
+<p>This Fx script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
+
+<pre class="highlight"><code>magick -size 400x400 -colorspace gray xc:black -fx " \
+  zx=2.4*i/w-1.2;
+  zy=2.4*j/h-1.2;
+  pixel=0.0;
+  while ((hypot(zx,zy) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0),
+    zz=zx^2-zy^2;
+    zy=2.0*zx*zy+0.2;
+    zx=zz+0.4;
+    pixel+=0.00390625
+  );
+  pixel == 1.0 ? 0.0 : pixel" \
+  \( -size 1x1 xc:white xc:red xc:orange xc:yellow xc:green1 xc:cyan xc:blue \
+     xc:blueviolet xc:white -reverse +append -filter Cubic -resize 1024x1! \) \
+  -clut julia-set.png
+</code></pre>
+
+<ul>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia.png" width="160" height="160" alt="Julia Fractals" /></a>
+</ul>
 
 <p>See <a href="https://imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
@@ -267,14 +289,14 @@
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<pre class="highlight"><code>convert image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
+<pre class="highlight"><code>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
 </code></pre>
 
 <p>By default, the image to which <code>p</code>, <code>r</code>, <code>g</code>, <code>b</code>, <code>a</code>, etc., are applied is the current image <code>s</code> in the image list. This is equivalent to <code>u</code> except when used in an escape sequence <code>%[fx:...]</code>. </p>
 
 <p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel red</a> instructs <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> to modify only the red channel; nothing in the green or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
-<pre class="highlight"><code>convert -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
+<pre class="highlight"><code>magick -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
 </code></pre>
 
 <ul>
@@ -309,7 +331,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <code>alpha.png</code> with the average of the green channels from the images <code>alpha.png</code> and <code>beta.png</code>, use:</p>
 
-<pre class="highlight"><code>convert alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
+<pre class="highlight"><code>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
 </code></pre>
 
 
@@ -322,7 +344,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <code>%[fx:]</code> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <code>s</code> and <code>t</code> successively refer to the current image and its index, while <code>i</code> and <code>j</code> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
-<pre class="highlight"><code>$ convert canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
+<pre class="highlight"><code>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]\n' info:
 Red channel of NW corner of image #0 is 0.464883
 Red channel of NW corner of image #1 is 0.184582
@@ -330,7 +352,7 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <code>-set</code> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
-<pre class="highlight"><code>convert rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
+<pre class="highlight"><code>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
   -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif"
 </code></pre>
 
