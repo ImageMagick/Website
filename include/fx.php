@@ -168,8 +168,7 @@
      <dd><code>kurtosis</code>: image kurtosis</dd>
      <dd><code>skewness</code>: image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</dd></dl></dd>
   <dt class="col-md-4"> iterators:</dt>
-    <dd class="col-md-8"> for()</dd>
-    <dd class="col-md-8"> while()</dd>
+    <dd class="col-md-8"> for(), while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
 </dl>
