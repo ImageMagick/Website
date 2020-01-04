@@ -65,7 +65,7 @@
 
 <p>This Fx script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
-<pre class="highlight"><code>magick -size 400x400 -colorspace gray xc:black -fx " \
+<pre class="highlight"><code>magick -size 400x400 xc:black -colorspace gray -fx " \
   zx=2.4*i/w-1.2;
   zy=2.4*j/h-1.2;
   pixel=0.0;
