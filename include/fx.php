@@ -169,6 +169,7 @@
      <dd><code>kurtosis</code>: image kurtosis</dd>
      <dd><code>skewness</code>: image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</dd></dl></dd>
   <dt class="col-md-4"> iterators:</dt>
+    <dd class="col-md-8"> for()</dd>
     <dd class="col-md-8"> while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
@@ -238,6 +239,7 @@
 <dt class="col-md-4"> <code>erf(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <code>exp(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
 <dt class="col-md-4"> <code>floor(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> largest integral value not greater than argument</dd>
+<dt class="col-md-4"> <code>for(</code><var>initialization</var>, <var>condition test</var>, <var>expression</var><code>)</code></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <code>gauss(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> gaussian function; gauss(<var>x</var>)=exp(<var>-x*x/2</var>)/sqrt(2*pi)</dd>
 <dt class="col-md-4"> <code>gcd(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> greatest common denominator</dd>
 <dt class="col-md-4"> <code>hypot(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> the square root of x<sup>2</sup>+y<sup>2</sup></dd>
@@ -266,7 +268,7 @@
 <dt class="col-md-4"> <code>tan(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> tangent function</dd>
 <dt class="col-md-4"> <code>tanh(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> hyperbolic tangent function</dd>
 <dt class="col-md-4"> <code>trunc(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> round to integer, towards zero</dd>
-<dt class="col-md-4"> <code>while(</code><var>condition</var>,<var>expression</var><code>)</code></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
+<dt class="col-md-4"> <code>while(</code><var>condition test</var>, <var>expression</var><code>)</code></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <code>image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</code></dt><dd class="col-md-8"> image attributes</dd>
 </dl>
 <p>The expression semantics include these rules:</p>
