@@ -68,8 +68,7 @@
 <pre class="highlight"><code>magick -size 400x400 xc:black -colorspace gray -fx " \
   Xi=2.4*i/w-1.2;
   Yj=2.4*j/h-1.2;
-  pixel=0.0;
-  while ((hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0),
+  for (pixel=0.0, (hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0),
     delta=Xi^2-Yj^2;
     Yj=2.0*Xi*Yj+0.2;
     Xi=delta+0.4;
