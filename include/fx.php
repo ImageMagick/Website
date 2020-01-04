@@ -82,7 +82,7 @@
 </code></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia.png" width="160" height="160" alt="Julia Fractals" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
 
 <p>See <a href="https://imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
