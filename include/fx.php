@@ -101,8 +101,9 @@
     <dd class="col-md-8"> E (Euler's number), Epsilon, QuantumRange, QuantumScale, Opaque, Phi (golden ratio), Pi, Transparent</dd>
   <dt class="col-md-4"> FX operators (in order of precedence): </dt>
      <dd class="col-md-8"> ^ (power), unary -, *, /, % (modulo), +, -,
-     &lt;&lt;, &gt;&gt;, &lt;, &lt;=, &gt;, &gt;=, +=, -=, *=, /=, ++, --,
-     ==, !=, &amp; (bitwise AND),   | (bitwise OR),
+     &lt;&lt;, &gt;&gt;, &lt;, &lt;=, &gt;, &gt;=, +=, -=, *=, /=, %=, &lt;&lt;=
+, &gt;&gt;=,
+     &amp;=, |=, ++, --, ==, !=, &amp; (bitwise AND),   | (bitwise OR),
      &amp;&amp; (logical AND),  || (logical OR),
      ~ (logical NOT),  ?: (ternary conditional)</dd>
   <dt class="col-md-4"> math functions: </dt>
