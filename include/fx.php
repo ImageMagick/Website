@@ -241,6 +241,7 @@
 <dt class="col-md-4"> <code>gauss(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> gaussian function; gauss(<var>x</var>)=exp(<var>-x*x/2</var>)/sqrt(2*pi)</dd>
 <dt class="col-md-4"> <code>gcd(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> greatest common denominator</dd>
 <dt class="col-md-4"> <code>hypot(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> the square root of x<sup>2</sup>+y<sup>2</sup></dd>
+<dt class="col-md-4"> <code>if(</code><var>condition test</var>, <var>expression</var>, <var>expression</var><code>)</code></dt><dd class="col-md-8"> interpret expression depending on condition</dd>
 <dt class="col-md-4"> <code>int(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> greatest integer function (return greatest integer less than or equal to <var>x</var>)</dd>
 <dt class="col-md-4"> <code>isnan(</code><var>x</var><code>)</code></dt><dd class="col-md-8">return 1.0 if <var>x</var> is NAN, 0.0 otherwise</dd>
 <dt class="col-md-4"> <code>j0(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> Bessel functions of <var>x</var> of the first kind of order 0</dd>
