@@ -169,7 +169,7 @@
      <dd><code>kurtosis</code>: image kurtosis</dd>
      <dd><code>skewness</code>: image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</dd></dl></dd>
   <dt class="col-md-4"> iterators:</dt>
-    <dd class="col-md-8"> for(), while()</dd>
+    <dd class="col-md-8"> do(), for(), while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
 </dl>
@@ -234,6 +234,7 @@
 <dt class="col-md-4"> <code>cos(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> cosine function</dd>
 <dt class="col-md-4"> <code>cosh(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> hyperbolic cosine function</dd>
 <dt class="col-md-4"> <code>debug(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> print <var>x</var> (useful for debugging your expression)</dd>
+<dt class="col-md-4"> <code>do(</code><var>expression</var>, <var>condition test</var><code>)</code></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <code>drc(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> dynamic range compression (knee curve); drc(<var>x</var>,<var>y</var>)=(<var>x</var>)/(<var>y</var>*(<var>x</var>-1)+1); -1&lt;<var>y</var>&lt;1 </dd>
 <dt class="col-md-4"> <code>erf(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <code>exp(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
