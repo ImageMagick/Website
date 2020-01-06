@@ -23,7 +23,7 @@
     <td>magick</td>
       <td><a href= "https://imagemagick.org/download/binaries/magick">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/magick">download</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run. Portability comes with a cost in performance.  Want more performance?  Download and build ImageMagick from source instead.</td>
   </tr>
 
   <tr>
