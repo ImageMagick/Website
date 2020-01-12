@@ -23,7 +23,7 @@
     <td>magick</td>
       <td><a href= "https://imagemagick.org/download/binaries/magick">download</a></td>
     <td><a href="ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/magick">download</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run. To ensure maximum portability, the app runs on a single core.  To take advantage of multi-core systems and the expected performance benefit, build from source.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.</td>
   </tr>
 
   <tr>
