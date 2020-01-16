@@ -193,7 +193,7 @@ channel data, to create an alpha channel, or to perform other operations on the 
     <dt class="col-md-4">Extract</dt>
     <dd class="col-md-8">
        Copies the alpha channel values into all the color channels and turns
-       'Off' the the image's transparency, so as to generate
+       'Off' the image's transparency, so as to generate
        a grayscale mask of the image's shape. The alpha channel data is left
        intact just deactivated.  This is the inverse of 'Copy'.
        </dd>
