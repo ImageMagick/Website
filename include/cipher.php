@@ -50,7 +50,7 @@ untouched and readable by anyone with access to the image file.</p>
 
 <p>ImageMagick uses the <a
 href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>
-cipher in Counter mode.  We use the the first half of your passphrase to derive the nonce.  The second half is the cipher key. When used correctly, AES-CTR provides a high level of confidentiality. To avoid information leaks, you must use a fresh passphrase for each image your encrypt.</p>
+cipher in Counter mode.  We use the first half of your passphrase to derive the nonce.  The second half is the cipher key. When used correctly, AES-CTR provides a high level of confidentiality. To avoid information leaks, you must use a fresh passphrase for each image your encrypt.</p>
 
 <p>Currently only ImageMagick can restore your enciphered image content.  We
 use a standard cipher and mode so other vendors could support enciphered image content.</p>
