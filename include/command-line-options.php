@@ -1177,12 +1177,13 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <pre class="highlight"><code>CMY          CMYK         Gray         HCL
 HCLp         HSB          HSI          HSL
-HSV          HWB          Lab          LCHab
-LCHuv        LMS          Log          Luv
-OHTA         Rec601YCbCr  Rec709YCbCr  RGB
-scRGB        sRGB         Transparent  xyY
-XYZ          YCbCr        YCC          YDbDr
-YIQ          YPbPr        YUV          Undefined
+HSV          HWB          Jzazbz       JzCzhz
+Lab          LCHab        LCHuv        LMS
+Log          Luv          OHTA         Rec601YCbCr
+Rec709YCbCr  RGB          scRGB        sRGB
+Transparent  xyY          XYZ          YCbCr
+YCC          YDbDr        YIQ          YPbPr
+YUV          Undefined
 </code></pre>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
@@ -1974,14 +1975,14 @@ available:</p>
   <tr>
     <td>jp2:quality=<var>value,value...</var></td>
      <td>Sets the quality layer PSNR, given in dB. The order is from left to
-    right in ascending order. The default is a single lossless quality layer. 
+    right in ascending order. The default is a single lossless quality layer.
     Same for JPT, JC2, and J2K.</td>
   </tr>
 
   <tr>
     <td>jp2:rate=<var>value</var></td>
      <td>Specify the compression factor to use while writing JPEG-2000 files.
-     The compression factor is the reciprocal of the compression ratio. The 
+     The compression factor is the reciprocal of the compression ratio. The
      valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If
      defined, this value overrides the -quality setting.  A quality setting
      of 75 results in a rate value of 0.06641. Same for JPT, JC2, and J2K.</td>
@@ -2016,7 +2017,7 @@ available:</p>
     jpeg:extent=400KB</code>.  The JPEG encoder will search for the highest
     compression quality level that results in an output file that does not
     exceed the value. The <code>-quality</code> option also will be respected
-    starting with version 6.9.2-5. Between 6.9.1-0 and 6.9.2-4, add -quality 
+    starting with version 6.9.2-5. Between 6.9.1-0 and 6.9.2-4, add -quality
     100 in order for the jpeg:extent to work properly. Prior to 6.9.1-0, the
     -quality setting was ignored.</td>
   </tr>
@@ -2345,26 +2346,26 @@ available:</p>
      all additional information that is not related to the geometry of the
      image. The 'all' option should only be used when the geometry of the
      image has not been changed. This option is helpful when transferring
-     non-simple layers, such as adjustment layers from the input PSD file to 
-     the output PSD file. If this option is not used, the additional 
-     information will not be preserved. This define is available as of 
+     non-simple layers, such as adjustment layers from the input PSD file to
+     the output PSD file. If this option is not used, the additional
+     information will not be preserved. This define is available as of
      Imagemagick version 6.9.5-8.
 </td>
   </tr>
 
   <tr>
     <td>psd:alpha-unblend=off</td>
-     <td>Disables new automatic un-blending of transparency with the base image 
-     for the flattened layer 0 before adding the alpha channel to the output  
-     image. This define must be placed before the input psd image. (Available 
-     as of IM 6.9.2.5). The automatic un-blending is new to IM 6.9.2.5 and 
-     prevents the transparency from being applied twice in the output 
+     <td>Disables new automatic un-blending of transparency with the base image
+     for the flattened layer 0 before adding the alpha channel to the output 
+     image. This define must be placed before the input psd image. (Available
+     as of IM 6.9.2.5). The automatic un-blending is new to IM 6.9.2.5 and
+     prevents the transparency from being applied twice in the output
      image. This option should be set before reading the image.</td>
   </tr>
 
   <tr>
     <td>psd:preserve-opacity-mask=true</td>
-     <td>This option should only be used when converting from a PSD file to 
+     <td>This option should only be used when converting from a PSD file to
      another PSD file. It will preserve the opacity mask of a layer and add it 
      back to the layer when the image is saved. Setting this to 'true' will 
      enable this feature. This define is available as of Imagemagick version 
