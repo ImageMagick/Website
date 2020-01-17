@@ -1177,13 +1177,13 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <pre class="highlight"><code>CMY          CMYK         Gray         HCL
 HCLp         HSB          HSI          HSL
-HSV          HWB          Jzazbz       JzCzhz
-Lab          LCHab        LCHuv        LMS
-Log          Luv          OHTA         Rec601YCbCr
-Rec709YCbCr  RGB          scRGB        sRGB
-Transparent  xyY          XYZ          YCbCr
-YCC          YDbDr        YIQ          YPbPr
-YUV          Undefined
+HSV          HWB          Jzazbz       Lab
+LCHab        LCHuv        LMS          Log
+Luv          OHTA         Rec601YCbCr  Rec709YCbCr
+RGB          scRGB        sRGB         Transparent
+xyY          XYZ          YCbCr        YCC
+YDbDr        YIQ          YPbPr        YUV
+Undefined
 </code></pre>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
