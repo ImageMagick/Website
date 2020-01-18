@@ -6263,7 +6263,7 @@ neighborhood whose width is specified with <var>radius</var>.</p>
 
 <p>Some simple uses are:</p>
 <ul>
-<li>A weighted sum of each image provided all weights add to unity and all exponents=1. If the the weights are all equal to 1/(number of images), then this is equivalent to <a href="#profile">-evaluate-sequence</a> <var>mean</var>.</li>
+<li>A weighted sum of each image provided all weights add to unity and all exponents=1. If the weights are all equal to 1/(number of images), then this is equivalent to <a href="#profile">-evaluate-sequence</a> <var>mean</var>.</li>
 <li>The sum of squares of two or more images, provided the weights are equal (and sum to 1 to avoid clamping) and the exponents equal 2.</li>
 </ul>
 
