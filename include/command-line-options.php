@@ -2927,7 +2927,7 @@ and meaning of the floating point values depends on the distortion <var>method</
        All arguments are optional. With <var>Rmin</var> defaulting to zero, the
        center to the center of the image, and the angles going from -180 (top)
        to +180 (top).  If <var>Rmax</var> is given the special value of
-       '0', the the distance from the center to the nearest edge
+       '0', the distance from the center to the nearest edge
        is used for the radius of the output image, which will ensure the whole
        image is visible (though scaled smaller).  However a special value of
        '-1' will use the distance from the center to the furthest
