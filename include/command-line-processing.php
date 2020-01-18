@@ -58,6 +58,7 @@
 <li>zero, one, or more image sequence operators.</li>
 <li>zero, one, or more image stacks.</li>
 <li>zero or one output image filenames (required by
+<?php cmd("magick"); ?>,
 <?php cmd("convert"); ?>,
 <?php cmd("composite"); ?>,
 <?php cmd("montage"); ?>,
@@ -120,13 +121,13 @@ so we explicitly set one:
 
 <h5>STDIN, STDOUT, and file descriptors</h5>
 <p>Unix and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <code>-</code>.  In this example we pipe the output of
-  <?php cmd("convert"); ?> to the <?php cmd("display"); ?> program:
+  <?php cmd("magick"); ?> to the <?php cmd("display"); ?> program:
 </p>
 
 <pre class="highlight"><code>magick logo: gif:- | display gif:-</code></pre>
 
 <p>The second explicit format "<code>gif:</code>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <?php cmd("display"); ?>
- command can readily recognize the format as GIF.  The <?php cmd("convert"); ?> program also accepts STDIN as input in this way:
+ command can readily recognize the format as GIF.  The <?php cmd("magick"); ?> program also accepts STDIN as input in this way:
 </p>
 
 <pre class="highlight"><code>magick rose: gif:- | magick - -resize "200%" bigrose.jpg'</code></pre>
@@ -474,7 +475,7 @@ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</code><
 </p>
 
 
-<h4 class="magick-header"><a class="anchor" id="stack"></a>Image Stack</h5>
+<h4 class="magick-header"><a class="anchor" id="stack"></a>Image Stack</h4>
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
@@ -517,7 +518,7 @@ above.</p>
 
 
 <h5>Standard Out</h5>
-  <p>Unix permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
+  <p>Unix permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
 <pre class="highlight"><code>magick logo: gif:- | display gif:-</code></pre>
