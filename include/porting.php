@@ -218,7 +218,7 @@ Rec601Luminance
 Rec709Luma
 Rec709Luminance</code></pre>
 <p>For example,</p>
-<pre class="highlight"><code>convert myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</code></pre>
+<pre class="highlight"><code>magick myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</code></pre>
 
 <h2><a class="anchor" id="grayscale"></a>Grayscale</h2>
 <p>Previously, grayscale images were Rec601Luminance and consumed 4 channels: red, green, blue, and alpha.  With version 7, grayscale consumes only 1 channel requiring far less resources as a result.</p>
@@ -228,7 +228,7 @@ Rec709Luminance</code></pre>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
 <pre class="highlight"><code>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</code></pre>
 <p>Here we protect certain pixels from change:</p>
-<pre class="highlight"><code>convert rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +mask rose_blue.png</code></pre>
+<pre class="highlight"><code>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +mask rose_blue.png</code></pre>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
 <pre class="highlight">
@@ -319,7 +319,7 @@ specific </p>
 channels.  Most operators will blend alpha the other color channels, but other
 operators (and situations) may require this blending to be disabled, and is
 currently done by removing alpha from the active channels via
-<code>-channel</code> option.  (e.g. <code>convert castle.gif -channel RGB
+<code>-channel</code> option.  (e.g. <code>magick castle.gif -channel RGB
 -negate castle.png</code>). </p>
 
 <p>Reading gray-scale images generate an image with only one channel. If
@@ -333,7 +333,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dl class="row">
 <dt class="col-md-4">magick</dt>
 <dd class="col-md-8">The "<code>magick</code>" command is the new primary command of the Shell
-    API, replacing the old "<code>convert</code>" command. This allows you to
+    API, replacing the old "<code>magick</code>" command. This allows you to
     create a 'magick script' of the form  "<code>#!/path/to/command/magick
     -script</code>", or pipe options into a command "<code>magick -script
     -</code>, as abackground process. </dd>
@@ -348,15 +348,15 @@ be applied to expand the one channel into separate RGB (or other) channels.
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
 <dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
-<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>convert</code> utility.
+<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <code>magick</code> utility.  You can also invoke them from the <code>magick</code> utility, for example, use <code>magick convert logo: logo.png</code> to invoke the <code>magick</code> utility.
 </dd></dl>
 
 <h3>Behavioral Changes</h3>
 <p>Image settings are applied to each image on the command line.  To associate a setting with a particular image, use parenthesis to remove ambiguity.  In this example we assign a unique page offset to each image:</p>
-<pre class="highlight"><code>convert \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</code></pre>
+<pre class="highlight"><code>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</code></pre>
 
 <p>By default, image operations such as convolution blends alpha with each channel.  To convolve each channel independently, deactivate the alpha channel as follows:</p>
-<pre class="highlight"><code>convert ... -alpha discrete -blur 0x1 ...</code></pre>
+<pre class="highlight"><code>magick ... -alpha discrete -blur 0x1 ...</code></pre>
 <p>To remove the alpha values from your image, use <code>-alpha off</code>. If you want to instead persist the alpha channel but not blend the alpha pixels for certain image processing operations, use <code>-alpha deactivate</code> instead.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
@@ -421,9 +421,9 @@ scripts.</p>
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<pre class="highlight"><code>convert wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</code></pre>
+<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</code></pre>
 <p>Use a similar command to define a read mask:</p>
-<pre class="highlight"><code>convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</code></pre>
+<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</code></pre>
 
 <p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
 
