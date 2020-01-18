@@ -6,7 +6,7 @@
 </pre>
 
 <p>Here we create two distributed pixel caches and utilize them from our desktop:</p>
-<pre class="highlight"><code>convert -distribute-cache 6668 &amp;  # start on 192.168.100.50
+<pre class="highlight"><code>magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
 convert -distribute-cache 6668 &amp;  # start on 192.168.100.51
 convert -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \

@@ -97,7 +97,7 @@ dpx:user.data
 
 <p>Finally, to set a property:</p>
 
-<pre class="highlight"><code>convert bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
+<pre class="highlight"><code>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
 </code></pre>
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>

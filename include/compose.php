@@ -401,7 +401,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
-<pre class="highlight"><code>convert ... -compose blend  -define compose:args=50,50 -composite ...
+<pre class="highlight"><code>magick ... -compose blend  -define compose:args=50,50 -composite ...
 </code></pre>
 
 <p>The following is a table of these special 'argumented' compose methods,

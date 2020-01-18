@@ -405,7 +405,7 @@ Options used to compile and link:
 
 <p>To confirm your installation of the ImageMagick distribution was successful, ensure that the installation directory is in your executable search path and type:</p>
 
-<pre class="highlight"><code>convert logo: logo.gif
+<pre class="highlight"><code>magick logo: logo.gif
 identify logo.gif
 </code></pre>
 

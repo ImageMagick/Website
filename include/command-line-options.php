@@ -58,7 +58,7 @@ strings, such as '<code>%d</code>' or '<code>%03d</code>', are familiar to those
 who have used the standard <code>printf()</code>' C-library function. As an
 example, the command</p>
 
-<pre class="highlight"><code>convert logo: rose: -morph 15 my%02dmorph.jpg
+<pre class="highlight"><code>magick logo: rose: -morph 15 my%02dmorph.jpg
 </code></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
@@ -909,10 +909,10 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<pre class="highlight"><code>convert wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
+<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
 </code></pre>
 <p>Use a similar command to define a read mask:</p>
-<pre class="highlight"><code>convert wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
+<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
 </code></pre>
 
 <p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
@@ -972,7 +972,7 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
 
 <p>For example, in the command</p>
 
-<pre class="highlight"><code>convert cockatoo.tif -clip -negate negated.tif
+<pre class="highlight"><code>magick cockatoo.tif -clip -negate negated.tif
 </code></pre>
 
 <p>only the pixels within the clipping path are negated.</p>
@@ -1159,7 +1159,7 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <p>As an example, to add contrast to an image with offsets, try this command:</p>
 
-<pre class="highlight"><code>convert kittens.jpg -color-matrix \
+<pre class="highlight"><code>magick kittens.jpg -color-matrix \
   " 1.5 0.0 0.0 0.0, 0.0, -0.157 \
     0.0 1.5 0.0 0.0, 0.0, -0.157 \
     0.0 0.0 1.5 0.0, 0.0, -0.157 \
@@ -1310,7 +1310,7 @@ href="#separate">-separate</a>, so long as the channel settings are the same.
 Thus, in the following example, the final image should be a copy of the
 original.  </p>
 
-<pre class="highlight"><code>convert original.png -channel RGB -separate sepimage.png
+<pre class="highlight"><code>magick original.png -channel RGB -separate sepimage.png
 convert sepimage-0.png sepimage-1.png sepimage-2.png -channel RGB \
   -combine imagecopy.png
 </code></pre>
@@ -1355,12 +1355,12 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
 
 <p>This is a convert version of "<code>compare</code>" for two same sized images. The syntax is as follows, but other metrics are allowed.</p>
 
-<pre class="highlight"><code>convert image.png reference.png -metric RMSE -compare \ <br/> difference.png
+<pre class="highlight"><code>magick image.png reference.png -metric RMSE -compare \ <br/> difference.png
 </code></pre>
 
 <p>To get the metric value use the string format "%[distortion]".</p>
 
-<pre class="highlight"><code>convert image.png reference.png -metric RMSE -compare -format \
+<pre class="highlight"><code>magick image.png reference.png -metric RMSE -compare -format \
    "%[distortion]" info:
 </code></pre>
 
@@ -1500,7 +1500,7 @@ contrast.</p>
 
 <p>For a more pronounced effect you can repeat the option:</p>
 
-<pre class="highlight"><code>convert rose: -contrast -contrast rose_c2.png
+<pre class="highlight"><code>magick rose: -contrast -contrast rose_c2.png
 </code></pre>
 
 <div style="margin: auto;">
@@ -1655,7 +1655,7 @@ a comma-separated list consisting of one or more of the following domains:
 
 <p>For example, to log cache and blob events, use.</p>
 
-<pre class="highlight"><code>convert -debug "Cache,Blob" rose: rose.png
+<pre class="highlight"><code>magick -debug "Cache,Blob" rose: rose.png
 </code></pre>
 
 <p>The <code>User</code> domain is normally empty, but developers can log user
@@ -2493,7 +2493,7 @@ available:</p>
 <p>For example, to create a postscript file that will render only the black
 pixels of a bilevel image, use:</p>
 
-<pre class="highlight"><code>convert bilevel.tif -define ps:imagemask eps3:stencil.ps
+<pre class="highlight"><code>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
 </code></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
@@ -3055,7 +3055,7 @@ perspective distortion of the built-in "rose:" image. Note how spaces were
 used to group the 4 sets of coordinate pairs, to make it easier to read and
 understand.</p>
 
-<pre class="highlight"><code>convert rose:  -virtual-pixel black \
+<pre class="highlight"><code>magick rose:  -virtual-pixel black \
   -distort Perspective '0,0,0,0  0,45,0,45  69,0,60,10  69,45,60,35' \
    rose_3d_rotated.gif"
 </code></pre>
@@ -3079,7 +3079,7 @@ images become smaller (minified) in the output, which is very common when
 using '<code>perspective</code>' distortion. For example here we view
 a infinitely tiled 'plane' all the way to the horizon. </p>
 
-<pre class="highlight"><code>convert -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
+<pre class="highlight"><code>magick -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
   -distort perspective  '0,0,5,45  89,0,45,46  0,89,0,89  89,89,89,89' \
    checks_tiled.jpg
 </code></pre>
@@ -3662,7 +3662,7 @@ specify how to compose the image with the background, use <a href="#compose"
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
-<pre class="highlight"><code>convert input.jpg -resize 800x600 -background black -compose Copy \ 
+<pre class="highlight"><code>magick input.jpg -resize 800x600 -background black -compose Copy \ 
   -gravity center -extent 800x600 -quality 92 output.jpg
 </code></pre>
 
@@ -3677,7 +3677,7 @@ image is centered on an 800x600 black canvas: </p>
 <p>This option is most useful for extracting a subregion of a very large raw
 image.  Note that these two commands are equivalent:</p>
 
-<pre class="highlight"><code>convert -size 16000x16000 -depth 8 -extract 640x480+1280+960 \ 
+<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \ 
   image.rgb image.png",
 convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
   image.rgb image.png"
@@ -3685,14 +3685,14 @@ convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
 
 <p>If you omit the offsets, as in</p>
 
-<pre class="highlight"><code>convert -size 16000x16000 -depth 8 -extract 640x480 \ 
+<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480 \ 
   image.rgb image.png
 </code></pre>
 
 <p>the image is <var>resized</var> to the specified dimensions instead,
 equivalent to:</p>
 
-<pre class="highlight"><code>convert -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
+<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
 </code></pre>
 
 <p><?php seeGeometry(); ?></p>
@@ -3761,13 +3761,13 @@ formats that do not limit the color or compress the image. Thus, MIFF, TIF,
 PFM, EXR and PNG are the recommended image formats to use. All of these
 formats, except PNG support multi-frame images. So for example,</p>
 
-<pre class="highlight"><code>convert image.png -fft fft_image.miff
+<pre class="highlight"><code>magick image.png -fft fft_image.miff
 </code></pre>
 
 <p>generates a magnitude image as <code>fft_image.miff[0]</code> and a phase
 image as <code>fft_image.miff[1]</code>. Similarly,</p>
 
-<pre class="highlight"><code>convert image.png -fft fft_image.png
+<pre class="highlight"><code>magick image.png -fft fft_image.png
 </code></pre>
 
 <p>generates a magnitude image as <code>fft_image-0.png</code> and a phase image
@@ -3793,7 +3793,7 @@ function into what is usually called the spectrum. A log function is used to
 enhance the darker values more in comparison to the lighter values. This can
 be done, for example, as follows:</p>
 
-<pre class="highlight"><code>convert fft_image.miff[0] -contrast-stretch 0 \
+<pre class="highlight"><code>magick fft_image.miff[0] -contrast-stretch 0 \
   -evaluate log 1000 fft_image_spectrum.png"
 </code></pre>
 
@@ -4026,7 +4026,7 @@ href="#set" >-set</a>):-</p>
 
 <p>For example, to get a 8 lobe jinc windowed sinc filter (Genseng filter?):</p>
 
-<pre class="highlight"><code>convert image.png \
+<pre class="highlight"><code>magick image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
@@ -4035,7 +4035,7 @@ href="#set" >-set</a>):-</p>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
 
-<pre class="highlight"><code>convert image.png \
+<pre class="highlight"><code>magick image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
   -resize 150% image.jpg"
@@ -4045,7 +4045,7 @@ href="#set" >-set</a>):-</p>
 a '<code>Box</code>' filter.  For example the '<code>Welch</code> parabolic
 windowing function. </p>
 
-<pre class="highlight"><code>convert null: -define filter:filter=Box \
+<pre class="highlight"><code>magick null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
   -define filter:verbose=1 \
@@ -4428,7 +4428,7 @@ is useful if the image is of a known gamma but not set as an image attribute
 display gamma; e.g., if your image is sRGB and you want to write a PNG gAMA
 chunk, use</p>
 
-<pre class="highlight"><code>convert input.png +gamma .45455 output.png
+<pre class="highlight"><code>magick input.png +gamma .45455 output.png
 </code></pre>
 
 <p>(0.45455 is 1/2.2)</p>
@@ -4517,7 +4517,7 @@ that point. (In addition, the <a href="#gravity">-gravity</a> affects the
 region itself, which is <var>centered</var> at the pixel
 coordinate (60,70). (<?php seeGeometry();?>)</p>
 
-<pre class="highlight"><code>convert image.png -gravity Center -region 10x10-40+20 \
+<pre class="highlight"><code>magick image.png -gravity Center -region 10x10-40+20 \
   -negate output.png
 </code></pre>
 
@@ -4544,27 +4544,27 @@ convert the given image into a grayscale image. </p>
 
 <p>For example, to convert an image to (linear) Rec709Luminance grayscale,  type:</p>
 
-<pre class="highlight"><code>convert in.png -grayscale Rec709Luminance out.png
+<pre class="highlight"><code>magick in.png -grayscale Rec709Luminance out.png
 </code></pre>
 
 <p>which is equivalent to:</p>
 
 <pre class="highlight">
-<code>convert in.png -colorspace RGB -colorspace Gray out.png</code>
+<code>magick in.png -colorspace RGB -colorspace Gray out.png</code>
 or
-<code>convert in.png -colorspace LinearGray out.png</code>
+<code>magick in.png -colorspace LinearGray out.png</code>
 </pre>
 
 <p>Note that LinearGray is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
 
-<pre class="highlight"><code>convert in.png -grayscale Rec709Luma out.png
+<pre class="highlight"><code>magick in.png -grayscale Rec709Luma out.png
 </code></pre>
 
 <p>which is equivalent to:</p>
 
-<pre class="highlight"><code>convert in.png -colorspace Gray out.png
+<pre class="highlight"><code>magick in.png -colorspace Gray out.png
 </code></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
@@ -4595,7 +4595,7 @@ dimensions.  Create it with the <code>HALD:</code> prefix (e.g. HALD:8).  You
 can apply any color transformation to the Hald image and then use this option
 to apply the transform to the image. </p>
 
-<pre class="highlight"><code>convert image.png hald.png -hald-clut transform.png
+<pre class="highlight"><code>magick image.png hald.png -hald-clut transform.png
 </code></pre>
 
 <p>This option provides a convenient method for you to use Gimp or Photoshop
@@ -4704,12 +4704,12 @@ href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a>,
 <p>For example, depending upon the image format used to store the result of
 the <a href="#fft">-fft</a>, one would use either</p>
 
-<pre class="highlight"><code>convert fft_image.miff -ift fft_image_ift.png
+<pre class="highlight"><code>magick fft_image.miff -ift fft_image_ift.png
 </code></pre>
 
 <p>or</p>
 
-<pre class="highlight"><code>convert fft_image-0.png fft_image-1.png -ift fft_image_ift.png
+<pre class="highlight"><code>magick fft_image-0.png fft_image-1.png -ift fft_image_ift.png
 </code></pre>
 
 <p>The resulting image may need to be cropped due to padding introduced when
@@ -5621,7 +5621,7 @@ characters:</p>
 
 <p>For example:</p>
 
-<pre class="highlight"><code>convert -debug coder -log "%u %m:%l %e" in.gif out.png
+<pre class="highlight"><code>magick -debug coder -log "%u %m:%l %e" in.gif out.png
 </code></pre>
 
 <p>The default behavior is to print all of the components.</p>
@@ -5848,7 +5848,7 @@ href="#modulate">-modulate 120,90</a>.</p>
 >option:modulate:colorspace</code>' to specify which colorspace to
 modulate.  Choose from <code>HCL</code>, <code>HCLp</code>, <code>HSB</code>, <code>HSI</code>, <code>HSL</code> (the default), <code>HSV</code>, <code>HWB</code>, or <code>LCH</code> (LCHuv).  For example,</p>
 
-<pre class="highlight"><code>convert image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
+<pre class="highlight"><code>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
 </code></pre>
 
 <div style="margin: auto;">
@@ -6294,7 +6294,7 @@ visible effect.</p>
 <p class="magick-description">image preview type.</p>
 
 <p>Use this option to affect the preview operation of an image (e.g.
-<code>convert file.png -preview Gamma Preview:gamma.png</code>). Choose from
+<code>magick file.png -preview Gamma Preview:gamma.png</code>). Choose from
 these previews:</p>
 
 <pre class="pre-scrollable"><code>
@@ -6377,7 +6377,7 @@ used. Instead, simply write the file to an image format such as <var>APP1, 8BIM,
 <p>For example, to extract the Exif data (which is stored in JPEG files in the
 <var>APP1</var> profile), use.</p>
 
-<pre class="highlight"><code>convert cockatoo.jpg profile.exif
+<pre class="highlight"><code>magick cockatoo.jpg profile.exif
 </code></pre>
 
 <p>It is important to note that results may depend on whether or not the
@@ -6387,7 +6387,7 @@ therefore a conversion is made each time it is encountered, in order, in the
 command-line. For instance, in the following example, if the original image is
 CMYK with profile, a CMYK-CMYK-RGB conversion results.</p>
 
-<pre class="highlight"><code>convert CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
+<pre class="highlight"><code>magick CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
 </code></pre>
 
 <p>Furthermore, since ICC profiles are not necessarily symmetric, extra
@@ -6693,7 +6693,7 @@ filter.</p>
 coding.  If your image is gamma-corrected, you can remove the nonlinear gamma
 correction, apply the transform, then restore it like this:</p>
 
-<pre class="highlight"><code>convert portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
+<pre class="highlight"><code>magick portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
   -quality 92 passport.jpg
 </code></pre>
 
@@ -6952,14 +6952,14 @@ attribute. </p>
 <p>This option can also associate a colorspace or profile with your image.
 For example,</p>
 
-<pre class="highlight"><code>convert image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
+<pre class="highlight"><code>magick image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
 </code></pre>
 
 <p>Some 'properties' must be defined in a specific way to be used. For
 example only 'properties' prefixed with "<code>filename:</code>" can be used to
 modify the output filename of an image. For example</p>
 
-<pre class="highlight"><code>convert rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
+<pre class="highlight"><code>magick rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
 </code></pre>
 
 <p>If the setting value is prefixed with "<code>option:</code>" the setting will
@@ -6969,7 +6969,7 @@ can be used to pass 'attributes' and 'properties' of one specific image,
 in a way that allows you to use them in a completely different image, even if
 the original image has long since been modified or destroyed. For example: </p>
 
-<pre class="highlight"><code>convert rose:  -set option:rosesize '%wx%h' -delete 0 \
+<pre class="highlight"><code>magick rose:  -set option:rosesize '%wx%h' -delete 0 \
   label:'%[rosesize]'   label_size_of_rose.gif"
 </code></pre>
 
@@ -6986,7 +6986,7 @@ previously-formatted ancillary chunks into the output PNG file, using
 the commandline option as shown below or by setting the profile via a
 programming interface:</p>
 
-<pre class="highlight"><code>convert in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
+<pre class="highlight"><code>magick in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
 </code></pre>
 
 <p>where <var>x</var> is a location flag and
@@ -7001,7 +7001,7 @@ of the same type, then add a short unique string after the "x" to prevent
 subsequent profiles from overwriting the preceding ones, e.g.,</p>
 
 
-<pre class="highlight"><code>convert in.png -set profile PNG-chunk-b01:file01 \
+<pre class="highlight"><code>magick in.png -set profile PNG-chunk-b01:file01 \
   -profile PNG-chunk-b02:file02 out.png
 </code></pre>
 
@@ -7080,7 +7080,7 @@ important to note, since horizontal and vertical shears do not
 <var>commute</var>, i.e., the order matters in a sequence of shears. For
 example, the following two commands are not equivalent.</p>
 
-<pre class="highlight"><code>convert logo: -shear 20x0 -shear 0x60 logo-sheared.png
+<pre class="highlight"><code>magick logo: -shear 20x0 -shear 0x60 logo-sheared.png
 convert logo: -shear 0x60 -shear 20x0 logo-sheared.png
 </code></pre>
 
@@ -7088,7 +7088,7 @@ convert logo: -shear 0x60 -shear 20x0 logo-sheared.png
 for the amount of empty space created; the command that follows generates
 a smaller image, and so is a better choice in terms of time and space.</p>
 
-<pre class="highlight"><code>convert logo: -shear 20x60 logo-sheared.png
+<pre class="highlight"><code>magick logo: -shear 20x60 logo-sheared.png
 </code></pre>
 
 <div style="margin: auto;">
@@ -7526,7 +7526,7 @@ red values, while those at or below 50% red would be set to 0 in the red
 channel. The green, blue, and alpha channels (if present) would be unchanged.
 </p>
 
-<pre class="highlight"><code>convert in.png -channel red -threshold 50% out.png
+<pre class="highlight"><code>magick in.png -channel red -threshold 50% out.png
 </code></pre>
 
 <p>As (possibly) impractical but instructive examples, the following would
@@ -7534,7 +7534,7 @@ generate an all-black and an all-white image with the same dimensions as the
 input image.</p>
 
 
-<pre class="highlight"><code>convert in.png -channel RGB -threshold 100% black.png
+<pre class="highlight"><code>magick in.png -channel RGB -threshold 100% black.png
 convert in.png -channel RGB -threshold -1 white.png
 </code></pre>
 
@@ -7629,7 +7629,7 @@ titled <code>bird.miff</code> and whose width is 512 and height is 480.</p>
 
 <p>This option applies the transformation matrix from a previous <a href="#affine">-affine</a> option.</p>
 
-<pre class="highlight"><code>convert -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
+<pre class="highlight"><code>magick -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
 </code></pre>
 
 
@@ -7760,7 +7760,7 @@ href="#type">-type</a> option can be used to override this behavior. For
 example, to prevent a JPEG from being written in grayscale format even though
 only gray pixels are present, use.</p>
 
-<pre class="highlight"><code>convert bird.png -type TrueColor bird.jpg
+<pre class="highlight"><code>magick bird.png -type TrueColor bird.jpg
 </code></pre>
 
 <p>Similarly, use <a href="#type">-type TrueColorAlpha</a> to force the

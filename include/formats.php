@@ -37,7 +37,7 @@ satisfactory results processing in the sRGB colorspace, you may get improved
 results in linear RGB (essentially sRGB with the gamma function removed).  For
 example,</p>
 
-<pre class="highlight"><code>convert image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg
+<pre class="highlight"><code>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg
 </code></pre>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
@@ -46,7 +46,7 @@ Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
-<pre class="highlight"><code>convert lab.tif -resize 50% resize.jpg
+<pre class="highlight"><code>magick lab.tif -resize 50% resize.jpg
 </code></pre>
 
 <p>Again, it may not make sense for some image processing operators to work
@@ -602,7 +602,7 @@ the supported image formats.</p>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
     <td>This format permits you to write to and read images from memory.  The image persists until the program exits.  For example, let's use the MPR to create a checkerboard:
-<pre class="highlight"><code>convert \( -size 15x15 canvas:black canvas:white -append \) \
+<pre class="highlight"><code>magick \( -size 15x15 canvas:black canvas:white -append \) \
   \( +clone -flip \) +append -write mpr:checkers +delete \
   -size 240x240 tile:mpr:checkers board.png
 </code></pre></td>
@@ -856,7 +856,7 @@ the supported image formats.</p>
     <td>POCKETMOD</td>
     <td>RW</td>
     <td>Pocketmod personal organizer format</td>
-    <td>Example usage: <code>convert -density 300 pages?.pdf pocketmod:organize.pdf</code> </td>
+    <td>Example usage: <code>magick -density 300 pages?.pdf pocketmod:organize.pdf</code> </td>
   </tr>
 
   <tr>
@@ -1298,7 +1298,7 @@ the supported image formats.</p>
     <td>INLINE</td>
     <td>RW</td>
     <td>Base64-encoded inline image</td>
-    <td>The inline image look similar to <code>inline:data:;base64,/9j/4AAQSk...knrn//2Q==</code>.  If the inline image exceeds 5000 characters, reference it from a file (e.g. <code>inline:inline.txt</code>). You can also write a base64-encoded image.  Embed the mime type in the filename, for example, <code>convert myimage inline:jpeg:myimage.txt</code>.</td>
+    <td>The inline image look similar to <code>inline:data:;base64,/9j/4AAQSk...knrn//2Q==</code>.  If the inline image exceeds 5000 characters, reference it from a file (e.g. <code>inline:inline.txt</code>). You can also write a base64-encoded image.  Embed the mime type in the filename, for example, <code>magick myimage inline:jpeg:myimage.txt</code>.</td>
   </tr>
 
   <tr>

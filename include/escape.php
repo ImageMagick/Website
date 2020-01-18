@@ -599,7 +599,7 @@ Artifact. </p>
 now list all free-form string properties, artifacts, and options, (but not
 specific image attributes) using...</p>
 
-<pre class="highlight"><code>convert ... \
+<pre class="highlight"><code>magick ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \

@@ -21,7 +21,7 @@
 
 <p>C++ programmers should have a look at the <code>MagickCMD.cpp</code> command line utility for an example of how to call the object from C++.  The object requires a variable size list of BSTR's to emulate the command line argc, argv style calling conventions of the COM component which is more complex in C++ then in VBS or VB.</p>
 
-<p>MagickCMD is a C++ sample, but it also serves as a replacement for all the other command line utilities in most applications. Instead of using <code>convert xxxx yyyy</code> you can use <code>MagickCMD convert xxxx yyyy</code> instead. MagickCMD calls the COM object to accomplish the designated task.  This small tight combination replaces the entire usual binary distribution in just a few mebibytes.</p>
+<p>MagickCMD is a C++ sample, but it also serves as a replacement for all the other command line utilities in most applications. Instead of using <code>magick xxxx yyyy</code> you can use <code>MagickCMD convert xxxx yyyy</code> instead. MagickCMD calls the COM object to accomplish the designated task.  This small tight combination replaces the entire usual binary distribution in just a few mebibytes.</p>
 
 <h2><a class="anchor" id="build"></a>Build ImageMagickObject From Source</h2>
 
