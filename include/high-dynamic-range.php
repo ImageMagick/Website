@@ -9,6 +9,8 @@
   <li>apply tone-mapping for specific display</li>
 </ul>
 
+<p>ImageMagick supports the Jzazbc colorspace, for applications that require wide color gamut and high dynamic range.</p>
+
 <h2><a class="anchor" id="enable"></a>Enabling HDRI in ImageMagick</h2>
 
 <p>By default, image pixels in ImageMagick version 7 are stored in a floating-point representation that range from 0 to the quantum depth, which is typically 16-bits (Q16).  With HDRI enabled, the pixels can include negative values as well as values that exceed the quantum depth. A majority of digital image formats do not support HDRI, and for those images any pixels outside the quantum range are clamped before they are stored.</p>
