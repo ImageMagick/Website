@@ -1241,7 +1241,7 @@ rectangle 60, 60 300, 300
 
 <p>You can optionally add <i>Image</i> to any method name. For example, TrimImage() is an alias for method Trim().</p>
 
-<p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
+<p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="set-attribute"></a>Set an Image Attribute</h2>
 
@@ -1654,7 +1654,7 @@ can use the integers 1 and 0.</p>
 <p>SetAttribute() is an alias for method Set().</p>
 
 <p>Most of the attributes listed above have an analog in
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="get-attribute"></a>Get an Image Attribute</h2>
 
@@ -1926,7 +1926,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 <p>GetAttribute() is an alias for method Get().</p>
 
 <p>Most of the attributes listed above have an analog in
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>. See the documentation for a more detailed description of these attributes.</p>
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="compare"></a>Compare an Image to its Reconstruction</h2>
 
