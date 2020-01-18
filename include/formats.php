@@ -26,7 +26,7 @@ Colorspace: sRGB
 </code></pre>
 
 OR use the appropriate percent escape
-<pre class="highlight"><code>-> convert image.jpg -print "%[colorspace]\n" null:
+<pre class="highlight"><code>-> magick image.jpg -print "%[colorspace]\n" null:
 sRGB
 </code></pre>
 
@@ -59,7 +59,7 @@ colorspace some other linear colorspace, before apply your processing
 operator. Afterward you can transform back to the LAB colorspace.  For
 example,</p>
 
-<pre class="highlight"><code>  convert lab.tif -colorspace RGB -resize 50% -colorspace Lab resize.jpg
+<pre class="highlight"><code>  magick lab.tif -colorspace RGB -resize 50% -colorspace Lab resize.jpg
 </code></pre>
 
 <h2><a class="anchor" id="supported"></a>Supported Image Formats</h2>
@@ -633,7 +633,7 @@ the supported image formats.</p>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">MVG</a></td>
     <td>RW</td>
     <td>Magick Vector Graphics.</td>
-    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>'s <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#draw">-draw</a> option.</td>
+    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#draw">-draw</a> option.</td>
   </tr>
 
   <tr>
@@ -1479,7 +1479,7 @@ the supported image formats.</p>
     <td> NETSCAPE</td>
     <td>R</td>
     <td>image using colors in Netscape 216 (6x6x6 ) color cube, 216x144</td>
-    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a> programs with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#map">-map</a> option to create <var>web safe</var> images.</td>
+    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#map">-map</a> option to create <var>web safe</var> images.</td>
   </tr>
 
   <tr>
@@ -1937,14 +1937,14 @@ the supported image formats.</p>
     <td>RW</td>
     <td>International Color Consortium color profile</td>
     <td>Also known as <code>ICM</code>. To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with
-      <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>.</td>
+      <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>.</td>
   </tr>
 
   <tr>
     <td>IPTC</td>
     <td>RW</td>
     <td>IPTC Newsphoto (binary)</td>
-    <td>To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a></td>
+    <td>To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></td>
   </tr>
 
   <tr>
