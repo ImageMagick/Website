@@ -3150,7 +3150,7 @@ a lower level pattern of colors. Error diffusion dithers can use any set of
 colors (generated or user defined) to an image.  </p>
 
 <p>Dithering is turned on by default, to turn it off use the plus form of the
-setting, <a href="#dither">+dither</a>. This will also also render PostScript
+setting, <a href="#dither">+dither</a>. This will also render PostScript
 without text or graphic aliasing. Disabling dithering often (but not always)
 leads to faster process, a smaller number of colors, but more cartoon like
 image coloring.  Generally resulting in 'color banding' effects in areas with
