@@ -3258,7 +3258,7 @@ Give the center and any point on the perimeter (boundary).</p>
 <p>The <code>arc</code> primitive is used to inscribe an elliptical segment in
 to a given rectangle. An <code>arc</code> requires the two corners used for
 <code>rectangle</code> (see above) followed by the start and end angles of the
-arc of the segment segment (e.g. 130,30 200,100 45,90). The start and end
+arc of the segment (e.g. 130,30 200,100 45,90). The start and end
 points produced are then joined with a line segment and the resulting segment
 of an ellipse is filled.</p>
 
