@@ -5266,7 +5266,7 @@ animation, or a fully-'coalesced' animation sequence. </p>
         image sequence, then adjust the offsets so all images are contained on
         a minimal positive canvas. None of the image data is modified or
         merged, only the individual image virtual canvas size and offset.
-        All the images is given the same canvas size, and and will have
+        All the images is given the same canvas size, and will have
         a positive offset, but will remain in the same position relative to
         each other. As a result of the minimal canvas size at least one image
         will touch every edge of that canvas.  The image data touching those
