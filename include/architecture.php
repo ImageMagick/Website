@@ -240,22 +240,33 @@ Resource limits:
 
 <p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre class="highlight"><code>&lt;policymap>
+  &lt;!-- temporary path must be a preexisting writable directory -->
   &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
   &lt;policy domain="resource" name="memory" value="256MiB"/>
   &lt;policy domain="resource" name="map" value="512MiB"/>
   &lt;policy domain="resource" name="width" value="8KP"/>
   &lt;policy domain="resource" name="height" value="8KP"/>
-  &lt;policy domain="resource" name="area" value="128MB"/>
+  &lt;policy domain="resource" name="area" value="16KP"/>
   &lt;policy domain="resource" name="disk" value="1GiB"/>
   &lt;policy domain="resource" name="file" value="768"/>
   &lt;policy domain="resource" name="thread" value="2"/>
   &lt;policy domain="resource" name="throttle" value="0"/>
   &lt;policy domain="resource" name="time" value="120"/>
+  &lt;policy domain="resource" name="list-length" value="128"/>
   &lt;policy domain="system" name="precision" value="6"/>
-  &lt;policy domain="cache" name="shared-secret" value="replace with your secret phrase" stealth="true"/>
-  &lt;policy domain="delegate" rights="none" pattern="HTTPS" />
-  &lt;policy domain="path" rights="none" pattern="@*"/>  &lt;!-- indirect reads not permitted -->
-&lt;/policymap>
+  &lt;policy domain="cache" name="shared-secret" stealth="true" value="replace with your secret phrase"/>
+  &lt;policy domain="coder" rights="none" pattern="MVG" />
+  &lt;policy domain="coder" rights="none" pattern="EPS" />
+  &lt;policy domain="coder" rights="none" pattern="PS" />
+  &lt;policy domain="coder" rights="none" pattern="PS2" />
+  &lt;policy domain="coder" rights="none" pattern="PS3" />
+  &lt;policy domain="coder" rights="none" pattern="PDF" />
+  &lt;policy domain="coder" rights="none" pattern="XPS" />
+  &lt;policy domain="filter" rights="none" pattern="*" />
+  &lt;policy domain="delegate" rights="none" pattern="HTTPS" />  <!--  prevent 'curl' program from reading HTTPS URL's -->
+  &lt;policy domain="delegate" rights="none" pattern="SHOW" />
+  &lt;policy domain="delegate" rights="none" pattern="WIN" />
+  &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
 </code></pre>
 <p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8 you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS"). The policy also prevents indirect reads.  If you want to, for example, read text from a file (e.g. caption:@myCaption.txt), you'll need to remove this policy.</p>
 
