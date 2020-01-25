@@ -23,6 +23,7 @@
 <p>You might want to eliminate small objects by merging them with their larger neighbors.  If so, use this command:</p>
 <pre class="highlight"><code>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
   -auto-level objects.jpg</code></pre>
+<p>Thresholds can optionally include ranges, e.g. <code>-define connected-components:area-threshold=410-1600</code>.</p>
 <p>Here are the expected results.  Notice, how the small objects are now merged with the background.</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg" width="256" height="171" class="image-slices" alt="Objects" /></a>
