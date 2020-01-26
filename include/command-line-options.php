@@ -5338,7 +5338,7 @@ values (0 is opaque) and not as 'alpha' values (0 is transparent).</p>
 <p class="magick-description">adjust the level of an image using the provided dash separated colors.</p>
 
 <p>This function is exactly like <a href="#level">-level</a>, except that the
-value value for each color channel is determined by the
+value for each color channel is determined by the
 '<code>black_color</code>' and '<code>white_color</code>' colors given (as
 described under the <a href="#fill">-fill</a> option). </p>
 
