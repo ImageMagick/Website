@@ -508,7 +508,7 @@ when enclosed in braces (long form):</p>
 <h3>Properties</h3>
 
 <p>All other long forms of percent escapes (not single letter long form) are
-handled in a case insensitive manner. Such escapes will will attempt to look
+handled in a case insensitive manner. Such escapes will attempt to look
 up that name specific data sources. </p>
 
 <p>The primary search space (if not a specific attribute listed above) is
