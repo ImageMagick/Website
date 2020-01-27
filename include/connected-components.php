@@ -24,7 +24,6 @@
 <p>You might want to eliminate small objects by merging them with their larger neighbors.  If so, use this command:</p>
 <pre class="highlight"><code>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
   -auto-level objects.jpg</code></pre>
-<p>Thresholds can optionally include ranges, e.g. <code>-define connected-components:area-threshold=410-1600</code>.</p>
 <p>Here are the expected results.  Notice, how the small objects are now merged with the background.</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg" width="256" height="171" class="image-slices" alt="Objects" /></a>
@@ -35,6 +34,7 @@
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)</code></pre>
 <p>By default, the labeled image is grayscale.  You can instead replace the object color in the labeled image with the mean-color from the source image. Simply add this setting, <code>-define connected-components:mean-color=true</code>, to your command line.</p>
+<p>Thresholds can optionally include ranges, e.g. <code>-define connected-components:area-threshold=410-1600</code>. To keep the background object, identify it with <code>-define connected-components:background-id=<var>object-id</var></code></p>
 <p>You may want to remove certain objects by making them transparent.  Use <code>-define connected-components:remove-ids=<em>list-of-ids</em></code> (e.g. -define connected-components:remove-ids=2,4-5).  Or use <code>-define connected-components:keep-ids=<em>list-of-ids</em></code> to keep these objects and make all others transparent. For convenience, you can keep the top objects with this option: <code>-define connected-components:keep-top=<em>number-of-objects</em></code>. Rather than object ids, you can instead remove or keep objects by colors, e.g. <code>-define connected-components:keep-colors=<em>red;green;blue</em></code>.</p>
 <p>Objects in your image may look homogeneous but have slightly different color values.  By default, only pixels that match exactly are considered as part of a particular object.  For slight variations of color in an object, use <code>-fuzz</code>.  For example,</p>
 <pre class="highlight"><code>magick star-map.png -fuzz 5% -define connected-components:verbose=true \
