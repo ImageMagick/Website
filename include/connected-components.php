@@ -38,6 +38,7 @@
 <p>We support other thresholding metrics,  They include:</p>
 <ul>
 <li>connected-components:circularity-threshold</li>
+<li>connected-components:diameter-threshold</li>
 <li>connected-components:perimeter-threshold</li>
 </ul>
 <p>You may want to remove certain objects.  Use <code>-define connected-components:remove-ids=<em>list-of-ids</em></code> (e.g. -define connected-components:remove-ids=2,4-5).  Or use <code>-define connected-components:keep-ids=<em>list-of-ids</em></code> to keep these objects and merge all others. For convenience, you can keep the top objects with this option: <code>-define connected-components:keep-top=<em>number-of-objects</em></code>. Rather than object ids, you can instead remove or keep objects by colors, e.g. <code>-define connected-components:keep-colors=<em>red;green;blue</em></code>.</p>
