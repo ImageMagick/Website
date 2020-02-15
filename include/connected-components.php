@@ -38,6 +38,10 @@
 <p>We support other thresholding metrics,  They include:</p>
 <ul>
 <li>connected-components:circularity-threshold</li>
+<li>connected-components:eccentricity-threshold</li>
+<li>connected-components:ellipse-major-axis-threshold</li>
+<li>connected-components:ellipse-minor-axis-threshold</li>
+<li>connected-components:ellipse-angle-threshold</li>
 <li>connected-components:diameter-threshold</li>
 <li>connected-components:perimeter-threshold</li>
 </ul>
