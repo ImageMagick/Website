@@ -711,7 +711,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Identify</td>
-    <td>file=&gt;<i>file</i>, features=&gt;<i>distance</i>, unique=&gt;{True, False}</td>
+    <td>file=&gt;<i>file</i>, features=&gt;<i>distance</i>, moments=&gt;{True, False}, unique=&gt;{True, False}</td>
     <td>identify the attributes of an image</td>
   </tr>
 
