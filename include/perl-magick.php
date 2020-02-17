@@ -1558,6 +1558,12 @@ can use the integers 1 and 0.</p>
   </tr>
 
   <tr>
+    <td>precision</td>
+    <td><i>integer</i></td>
+    <td>set the maximum number of significant digits to be printed</td>
+  </tr>
+
+  <tr>
     <td>quality</td>
     <td><i>integer</i></td>
     <td>JPEG/MIFF/PNG compression level</td>
