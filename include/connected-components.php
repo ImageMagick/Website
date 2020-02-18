@@ -35,7 +35,7 @@
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)</code></pre>
 <p>By default, the labeled image is grayscale.  You can instead replace the object color in the labeled image with the mean-color from the source image. Simply add this setting, <code>-define connected-components:mean-color=true</code>, to your command line.</p>
 <p>Thresholds can optionally include ranges, e.g. <code>-define connected-components:area-threshold=410-1600</code>. To keep the background object, identify it with <code>-define connected-components:background-id=<var>object-id</var></code>.  The default background object is the object with the largest area.</p>
-<p>We support other thresholding metrics,  They include:</p>
+<p>In addition to area, there is support for these thresholding metrics:</p>
 <ul>
 <li>connected-components:angle-threshold (from equivalent ellipse)</li>
 <li>connected-components:circularity-threshold (4*pi*area/perimeter^2)</li>
