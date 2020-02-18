@@ -22,7 +22,7 @@
 <pre class="highlight"><code>./configure --disable-hdri
 </code></pre>
 
-<p>Under Windows, uncomment the <code>MAGICKCORE_HDRI_SUPPORT</code> definition in the <code>magick-baseconfig.h</code> configuration file and build.</p>
+<p>Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="https://imagemagick.org/script/install-source.php">Install from Windows Source</a>.</p>
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
