@@ -269,6 +269,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#color-threshold">-color-threshold <var>start-color</var>-<var>stop-color</var></a></td>
+    <td>force all pixels in the color range to white otherwise black</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#combine">-combine</a></td>
     <td>combine a sequence of images</td>
   </tr>
