@@ -261,7 +261,7 @@ image-5.jpg</pre>
 <li><a href="#stack">Image Stack</a></li>
 </ul>
 
-<h4 class="magick-header"><a class="anchor" id="setting"></a>Image Setting</h5>
+<h4 class="magick-header"><a class="anchor" id="setting"></a>Image Setting</h4>
 
 <p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
@@ -278,7 +278,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 
 <pre class="highlight"><code>magick -channel RGB wand.png wizard.png images.png</code></pre>
 
-<h4 class="magick-header"><a class="anchor" id="operator"></a>Image Operator</h5>
+<h4 class="magick-header"><a class="anchor" id="operator"></a>Image Operator</h4>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
@@ -289,7 +289,7 @@ image setting, which persists until the command-line terminates,
 an operator is applied to the current image set and forgotten.  The image operators include:</p>
 
 <ul>
-<?php options("annotate", "black-threshold", "blur", "border", "charcoal", "chop", "clip", "clip-path", "clip-mask", "colors", "colorize", "colorspace", "compose", "contrast", "convolve", "crop", "cycle", "despeckle", "draw", "edge", "emboss", "enhance", "equalize", "evaluate", "extent", "flip", "flop", "floodfill", "frame", "gamma", "gaussian-blur", "grayscale", "implode", "kmeans", "lat", "level", "map", "median", "modulate", "monochrome", "negate", "noise", "normalize", "opaque", "ordered-dither", "paint", "posterize", "raise", "profile", "radial-blur", "raise", "random-threshold", "resample", "resize", "roll", "rotate", "sample", "scale", "sepia-tone", "segment", "shade", "shadow", "sharpen", "shave", "shear", "sigmoidal-contrast", "solarize", "splice", "spread", "strip", "swirl", "threshold", "transparent", "thumbnail", "tint", "transform", "trim", "unsharp", "version", "wave", "white-point", "white-threshold");
+<?php options("annotate", "black-threshold", "blur", "border", "charcoal", "chop", "clip", "clip-path", "clip-mask", "colors", "colorize", "colorspace", "color-threshold", "compose", "contrast", "convolve", "crop", "cycle", "despeckle", "draw", "edge", "emboss", "enhance", "equalize", "evaluate", "extent", "flip", "flop", "floodfill", "frame", "gamma", "gaussian-blur", "grayscale", "implode", "kmeans", "lat", "level", "map", "median", "modulate", "monochrome", "negate", "noise", "normalize", "opaque", "ordered-dither", "paint", "posterize", "raise", "profile", "radial-blur", "raise", "random-threshold", "resample", "resize", "roll", "rotate", "sample", "scale", "sepia-tone", "segment", "shade", "shadow", "sharpen", "shave", "shear", "sigmoidal-contrast", "solarize", "splice", "spread", "strip", "swirl", "threshold", "transparent", "thumbnail", "tint", "transform", "trim", "unsharp", "version", "wave", "white-point", "white-threshold");
 ?>
 </ul>
 
@@ -311,7 +311,7 @@ size may result in an unexpected output. In such a case,
 ?>
 </ul>
 
-<h4 class="magick-header"><a class="anchor" id="sequence"></a>Image Sequence Operator</h5>
+<h4 class="magick-header"><a class="anchor" id="sequence"></a>Image Sequence Operator</h4>
 
 <p>An image sequence operator differs from a setting in that it affects an
 image sequence immediately as it appears on the command-line.  Choose from
@@ -325,7 +325,7 @@ these image sequence operators:</p>
 
 <pre class="highlight"><code>magick mikayla.png picnic.png beach.png -append vacation.png</code></pre>
 
-<h4 class="magick-header"><a class="anchor" id="geometry"></a>Image Geometry</h5>
+<h4 class="magick-header"><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
