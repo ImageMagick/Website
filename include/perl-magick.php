@@ -381,7 +381,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>BlackThreshold</td>
-    <td>threshold=&gt;<i>string</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
+    <td>threshold=&gt;<i>color</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>force all pixels below the threshold intensity into black</td>
   </tr>
 
@@ -485,6 +485,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
     <td>Comment</td>
     <td>string</td>
     <td>add a comment to your image</td>
+  </tr>
+
+  <tr>
+    <td>ColorThreshold</td>
+    <td>start-color=&gt;<i>color</i>, stop-color=&gt;<i>color</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
+    <td>force all pixels below the threshold intensity into black</td>
   </tr>
 
   <tr>
