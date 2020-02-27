@@ -1048,10 +1048,8 @@ top-left to bottom-right corners.</p>
 <p>The lookup is further controlled by the <a
 href="#interpolate">-interpolate</a> setting, which is especially handy for an
 LUT which is not the full length needed by the ImageMagick installed Quality
-(Q) level. Good settings for this are the '<code>bilinear</code>' and
-'<code>bicubic</code>' interpolation settings, which give smooth color
-gradients, and the '<code>integer</code>' setting for a direct, unsmoothed
-lookup of color values. </p>
+(Q) level. Good settings for this are '<code>bilinear</code>' and
+'<code>catrom</code>'. Catom can return a useful second-order continuity.</p>
 
 <p>This operator is especially suited to replacing a grayscale image with a
 specific color gradient from the CLUT image. </p>
