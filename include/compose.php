@@ -224,7 +224,30 @@ the rest of the image outside the overlaid area.  </p>
         lighter, otherwise it is left unchanged. </td>
   </tr>
 
-  </tbody>
+  <tr>
+    <td>negate</td>
+    <td>The "opposite" of difference mode. Note that it is not difference mode inverted, because black and white return the same result, but colors between become brighter instead of darker. </td>
+  </tr>
+
+  <tr>
+    <td>reflect</td>
+    <td>This mode is useful when adding shining objects or light zones to images. The formula is similar to color dodge, but the result is not that bright in most cases. The result looks a bit like soft light. </td>
+  </tr>
+
+  <tr>
+    <td>freeze</td>
+    <td>Another variation of reflect mode (base and blend color inverted, the result inverted again). </td>
+  </tr>
+
+  <tr>
+    <td>stamp</td>
+    <td>This mode somehow is similar to average mode. It is helpful when applying relief or bump textures to images. </td>
+  </tr>
+
+  <tr>
+    <td>interpolate</td>
+    <td>This mode somehow combines multiply and screen mode (looks very similar for very dark or bright colors). </td>
+  </tr>
 </table>
 
 <p>Typically these use the default 'Over' alpha blending when transparencies
@@ -300,6 +323,16 @@ composition effects, becoming involved. </p>
     <td>Like 'Hard-Light' but using linear-dodge and linear-burn
         instead.  Increases contrast slightly with an impact on the
         foreground's tonal values.</td>
+  </tr>
+
+  <tr>
+    <td>soft-burn</td>
+    <td>A combination of color burn and inverse color dodge mode, but a lot smoother than both of them. The base image is lightened a bit, but very dark blend colors are "burned" in. </td>
+  </tr>
+
+  <tr>
+    <td>soft-dodge</td>
+    <td> Combination of color dodge and inverse color burn mode, but a lot smoother than both of them. The base image is darkened a bit, but very bright blend colors are "dodged" in. </td>
   </tr>
 
   <tr>
