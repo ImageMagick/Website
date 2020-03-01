@@ -10,7 +10,7 @@
 
 <ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding.jpg" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
 ￼
-<p>Start by choosing one sRGB color (somewhere on the image -- in this case the yellow of the flowers) and offset it low and high to form two sRGB colors. The lower values is the start color and the higher value is the stop color.  Start with <code>sRGB(183,132,20)</code>.  Offset by +-20 to identify the stop color: <code>R=183+-20</code>, <code>G=132+-20</code>, and <code>B=40+-20</code>.</p>
+<p>Start by choosing one sRGB color (somewhere on the image -- in this case the yellow of the flowers) and offset it low and high to form two sRGB colors. The lower values form the start color and the higher values form the stop color. Begin with <code>sRGB(183,132,20)</code>. Offset its values by +-20 to identify the start color (-) and the stop color (+); namely, R=183+-20, G=132+-20, and B=40+-20:</p>
 
 <ul><pre class="code">magick monet.jpg -color-threshold 'sRGB(163,112,0)-sRGB(203,152,40)' monet.gif</pre></ul>
 
@@ -24,7 +24,7 @@
 ￼
 <ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
 
-<p>Next, select one sRGB color and convert it to HSV and offset it low and high value to generate the start and stop HSV colors. Use <code>-colorspace HSV</code> to convert the image to HSV.  For our HSV example, we pick <code>sRGB(183,132,20)</code> and convert to HSV:</p>
+<p>Next, select one sRGB color and convert it to HSV and offset its values low and high to generate the start and stop HSV colors. Use -colorspace HSV to convert the image to HSV. For our HSV example, we pick <code>sRGB(183,132,20)</code> and convert to HSV:</p>
 
 <ul><pre class="code">
 magick xc:"srgb(183,132,20)" -colorspace HSV txt:
@@ -32,7 +32,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 0,0: (41.227,89.071%,71.7647%) #1D51E405B7B7 hsv(41.227,89.071%,71.7647%)
 </pre></ul>
 
-<p>This is our start color.  To define the stop color, add H=41+-20, S=89+-10, and V=72+-10:</p>
+<p>Now, offset its HSV values as H=41+-20, S=89+-10, and V=72+-10, to create the start color (-) and stop color (+):</p>
 
 <ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold "hsv(21,79%,62%)-hsv(61,99%,85%)" monet.gif</pre></ul>
 ￼
