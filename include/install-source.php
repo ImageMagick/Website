@@ -52,16 +52,16 @@
 <p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your magick/convert commands go to the old version.<p>
 <p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
 
-<p>Method 1: Clone the Github:<p>
+<p>Method 1: Clone the Github repo:<p>
 
 <pre class="highlight"><code>git clone git@github.com:ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
 
 <p>and run <code>CloneRepositories.cmd</code>.<p>
-<p>Method 2: Download <a href="https://imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> and verify its <a href="https://imagemagick.org/download/windows/digest.rdf">message digest</a>.  For the latter, you can unpack the distribution with <a href="http://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
+<p>Method 2: Download <a href="https://imagemagick.org/download/windows/ImageMagick-windows.zip">ImageMagick-windows.zip</a> and verify its <a href="https://imagemagick.org/download/windows/digest.rdf">message digest</a>.  For the latter, you can unpack the distribution with <a href="https://www.winzip.com">WinZip</a> or type the following from any MS-DOS Command Prompt window:</p>
 
 <pre class="highlight"><code>unzip ImageMagick-windows.zip</code></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
-<p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and press Open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
+<p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and Open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
 
 <p><img class="img-fluid mx-auto d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/configure.jpg" alt="[configure]" /></p>
