@@ -18,7 +18,7 @@
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
-<p>Now, pick two RGB colors: <code>sRGB(159,150,0)</code> and <code>sRGB(205,100,45)</code></p>
+<p>Now, pick two RGB colors: <code>sRGB(159,150,0)</code> and <code>sRGB(205,100,45):</code></p>
 
 <ul><pre class="code">magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</code></ul>
 ￼
@@ -34,7 +34,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 
 <p>Now, offset its HSV values as H=41+-20, S=89+-10, and V=72+-10, to create the start color (-) and stop color (+):</p>
 
-<ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold "hsv(21,79%,62%)-hsv(61,99%,85%)" monet.gif</pre></ul>
+<ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold 'hsv(21,79%,62%)-hsv(61,99%,85%)' monet.gif</pre></ul>
 ￼
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
