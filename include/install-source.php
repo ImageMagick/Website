@@ -61,7 +61,7 @@
 
 <pre class="highlight"><code>unzip ImageMagick-windows.zip</code></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
-<p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and Open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
+<p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
 
 <p><img class="img-fluid mx-auto d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/configure.jpg" alt="[configure]" /></p>
