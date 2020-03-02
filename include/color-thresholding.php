@@ -8,21 +8,21 @@
 
 <p>The following are some typical examples of use:</p>
 
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding.jpg" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
-￼
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding.jpg" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+
 <p>Start by choosing one sRGB color (somewhere on the image -- in this case the yellow of the flowers) and offset it low and high to form two sRGB colors. The lower values form the start color and the higher values form the stop color. Begin with <code>sRGB(183,132,20)</code>. Offset its values by +-20 to identify the start color (-) and the stop color (+); namely, R=183+-20, G=132+-20, and B=40+-20:</p>
 
 <ul><pre class="code">magick monet.jpg -color-threshold 'sRGB(163,112,0)-sRGB(203,152,40)' monet.gif</pre></ul>
 
 <p>this returns the outline of the yellow flower petals:</p>
 
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Now, pick two RGB colors: <code>sRGB(159,150,0)</code> and <code>sRGB(205,100,45)</code></p>
 
 <ul><pre class="code">magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</code></ul>
 ￼
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, select one sRGB color and convert it to HSV and offset its values low and high to generate the start and stop HSV colors. Use -colorspace HSV to convert the image to HSV. For our HSV example, we pick <code>sRGB(183,132,20)</code> and convert to HSV:</p>
 
@@ -36,7 +36,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 
 <ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold "hsv(21,79%,62%)-hsv(61,99%,85%)" monet.gif</pre></ul>
 ￼
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, pick two RGB colors. Use <code>-colorspace HSV</code> to convert the image to HSV, and apply the RGB start and stop colors.  Choose <code>sRGB(158,77,33)</code> and <code>sRGB(213,217,2)</code>:</p>
 
@@ -44,7 +44,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 ￼
 <p>Here is the expected results:</p>
 
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, choose two sRGB colors and convert them to gray. Now convert the image to gray and use the gray thresholding colors.</p>
 
@@ -64,4 +64,4 @@ magick xc:"sRGB(205,100,45)" -colorspace gray txt:
 
 <p>Here is the results of the color thresholding operation:</p>
 ￼
-<ul><img src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-gray.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-gray.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
