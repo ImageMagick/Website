@@ -2394,7 +2394,7 @@ available:</p>
     to preserve negative values. If <a href="#depth">-depth</a> 16 is
     included, the result is a single precision floating point format.
     If <a href="#depth">-depth</a> 32 is included, the result is
-    double precision floating point format.</td>
+    double precision floating point format. For signed pixel data, use <code>-define quantum:format=signed</code></td>
   </tr>
 
   <tr>
