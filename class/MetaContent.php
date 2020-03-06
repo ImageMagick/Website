@@ -17,9 +17,9 @@
       $meta="<meta charset=\"utf-8\" >\n";
       $meta.="  <meta name=\"viewport\" content=\"width=device-width,minimum-scale=1,initial-scale=1,shrink-to-fit=no\" >\n";
       if (empty($title))
-        $meta.="  <title>$this->sitename | $this->slogan</title>\n";
+        $meta.="  <title>$this->sitename - $this->slogan</title>\n";
       else
-        $meta.="  <title>$this->sitename | $title</title>\n";
+        $meta.="  <title>$this->sitename - $title</title>\n";
       $meta.="  <meta name=\"application-name\" content=\"$this->application_name\">\n";
       $meta.="  <meta name=\"description\" content=\"$this->description\">\n";
       $meta.="  <meta name=\"application-url\" content=\"$this->application_url\">\n";
