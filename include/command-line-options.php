@@ -408,7 +408,7 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 <dt class="col-md-4">Triangle</dt><dd class="col-md-8">a geometric thresholding method.</dd>
 </dl>
 
-<p>The computed threshold is returned as the <kbd>auto-threshold:threshold</kbd> image property.</p>
+<p>The computed threshold is returned as the <kbd>auto-threshold:threshold</kbd> image property. To instead print to your device, use <kbd>-define auto-threshold:threshold=true</kbd>.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="average"></a>-average</h3>
