@@ -1747,6 +1747,11 @@ available:</p>
 
 <table class="table table-sm table-striped">
   <tr>
+    <td>auto-threshold:verbose</td>
+    <td>return derived threshold as the <kbd>auto-threshold:threshold</kbd> image property.</td>
+  </tr>
+
+  <tr>
     <td>bmp3:alpha=<var>true|false</var></td>
     <td>include any alpha channel when writing in the BMP image format.</td>
   </tr>
@@ -2466,6 +2471,11 @@ available:</p>
     <td>tiff:tile-geometry=<var>WxH</var></td>
     <td>Sets the tile size for pyramid tiffs. Requires the suffix
         PTIF: before the outputname.</td>
+  </tr>
+
+  <tr>
+    <td>trim:verbose</td>
+    <td>return bounding box of trim as the <kbd>trim:bounding-box</kbd> image property.</td>
   </tr>
 
   <tr>
