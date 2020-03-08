@@ -312,6 +312,10 @@ when enclosed in braces (long form):</p>
     <td>Actual bit-depth of the pixel data</td>
   </tr>
   <tr>
+    <td>%[bounding-box]</td>
+    <td>upper left and lower right corners of the image bounding box</td>
+  </tr>
+  <tr>
     <td>%[caption]</td>
     <td>caption meta-data property</td>
   </tr>
