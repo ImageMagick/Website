@@ -7749,6 +7749,8 @@ single pixel transparent 'missed' image is returned, in the same way as when a
 
 <p>Use <code><a href="#define">-define</a> trim:background-color=<em>color</em></code> to identify background color surrounding the region of interest.</p>
 
+<p>The trim bounding box is returned as the <kbd>trim:bounding-box</kbd> image property.</p>
+
 <div style="margin: auto;">
   <h3><a class="anchor" id="type"></a>-type <var>type</var></h3>
 </div>
