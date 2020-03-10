@@ -16,7 +16,7 @@
     $meta->application_name="ImageMagick";
     $meta->description="Use ImageMagick® to create, edit, compose, and convert bitmap images. Resize an image, crop it, change its shades and colors, add captions, and more.";
     $meta->application_url="https://imagemagick.org";
-    $meta->keywords2="image converter image editor, photo editor, resize image, jpg converter, png converter, tiff converter, vector images, online, free, swiss army";
+    $meta->keywords2="image converter, image resizer, image editor, photo editor, jpg converter, png converter, tiff converter, vector images, online, free, swiss army";
     $meta->sitename="ImageMagick";
     $meta->slogan="Digital image manipulation that works like magick!";
     $meta->generator="PHP";
