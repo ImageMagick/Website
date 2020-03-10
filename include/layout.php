@@ -31,7 +31,7 @@
   <meta property='og:image' content='https://imagemagick.org/image/logo.png' />
   <meta property='og:type' content='website' />
   <meta property='og:site_name' content='ImageMagick' />
-  <meta property='og:description' content="Convert, Edit, or Compose Bitmap Images" />
+  <meta property='og:description' content="Create, Edit, Compose, or Convert Bitmap Images" />
   <meta name="google-site-verification" content="_bMOCDpkx9ZAzBwb2kF3PRHbfUUdFj2uO8Jd1AXArz4">
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
