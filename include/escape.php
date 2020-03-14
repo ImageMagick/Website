@@ -321,7 +321,7 @@ when enclosed in braces (long form):</p>
   </tr>
    <tr>
     <td>%[caption:pointsize]</td>
-    <td>returns the pointsize computed during caption: processing (as of IM 6.9.1-0)</td>
+    <td>returns the pointsize computed during caption: processing</td>
   </tr>
   <tr>
     <td>%[channels]</td>
@@ -341,7 +341,11 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[compression]</td>
-    <td>image compression type (as of IM 6.9.6-6)</td>
+    <td>image compression type</td>
+  </tr>
+  <tr>
+    <td>%[convex-hull]</td>
+    <td>points that form a convex hull around the foreground object</td>
   </tr>
   <tr>
     <td>%[copyright]</td>
@@ -401,7 +405,7 @@ when enclosed in braces (long form):</p>
   </tr>
    <tr>
     <td>%[label:pointsize]</td>
-    <td>returns the pointsize computed during label: processing (as of IM 6.9.1-0)</td>
+    <td>returns the pointsize computed during label: processing</td>
   </tr>
   <tr>
     <td>%[magick]</td>
