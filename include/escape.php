@@ -345,7 +345,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[convex-hull]</td>
-    <td>points that form a convex hull around the foreground object</td>
+    <td>points that form a convex hull around the foreground object.  Use <code><a href="#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.</td>
   </tr>
   <tr>
     <td>%[copyright]</td>
