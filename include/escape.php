@@ -344,7 +344,7 @@ when enclosed in braces (long form):</p>
     <td>image compression type</td>
   </tr>
   <tr>
-    <td>%[convex-hull]</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull]</a></td>
     <td>points that form a convex hull around the foreground object.  Use <code><a href="#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.</td>
   </tr>
   <tr>
