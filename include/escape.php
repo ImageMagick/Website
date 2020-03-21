@@ -424,6 +424,10 @@ when enclosed in braces (long form):</p>
     <td>CALCULATED: minimum value statistic of image</td>
   </tr>
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[minimum-bounding-rectangle]</a></td>
+    <td>points that form the minimum bounding rectangle around the foreground object.  Use <code><a href="#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.</td>
+  </tr>
+  <tr>
     <td>%[opaque]</td>
     <td>CALCULATED: is image fully-opaque?</td>
   </tr>
