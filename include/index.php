@@ -44,6 +44,10 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>uniquely label connected regions in an image.</td>
   </tr>
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">Convex hull</a></td>
+    <td>smallest area convex polygon containing the image foreground objects.</td>
+  </tr>
+  <tr>
     <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>
     <td>add a border or frame to an image.</td>
   </tr>

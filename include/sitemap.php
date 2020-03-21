@@ -117,47 +117,150 @@
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>
 
-<dl class="magick-list-unstyled">
-  <li><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a>: create a GIF animation sequence from a group of images.</li>
-  <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>: extract edges from an image using the Canny technique.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a>: utilize ImageMagick from the command line.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a>: overlap one image over another.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected component labeling</a>: uniquely label connected regions in an image.</li>
-  <li><a href="https://imagemagick.org/Usage/crop/">Decorate</a>: add a border or frame to an image.</li>
-  <li><a href="https://imagemagick.org/Usage/fourier">Discrete Fourier transform</a>: implements the forward and inverse DFT.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/distribute-pixel-cache.php">Distributed pixel cache</a>: offload intermediate pixel storage to one or more remote servers .</li>
-  <li><a href="https://imagemagick.org/Usage/draw/">Draw</a>: add shapes or text to an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/cipher.php">Encipher or decipher an image</a>: convert ordinary images into unintelddgible gibberish and back again.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php">Escapes</a>: utilize percent escapes in a number of options, for example in <a href="<?php echo 
-  $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_"
-  >-format</a> or in montage <a href="<?php echo
-  $_SESSION['RelativePath']?>/../script/command-line-options.php#label"
-  >-label</a>, to print various properties and other settings associated with an
-  image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">Format conversion</a>: convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</li>
-  <li><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a>: correct for, or induce image distortions including perspective.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a>: <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">certain algorithms</a> are <a href="http://en.wikipedia.org/wiki/OpenCL" target="_blank">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram equalization</a>: adaptive histogram equalization can improve contrast in an image.</li>
-  <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25476">Hough lines</a>: fit straight lines to edges in an image using the Hough transform technique.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a>: apply a mathematical expression to an image or image channels.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a>: create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a>: describe the format and attributes of an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a>: convert, edit, or compose images on your iPhone.</li>
-  <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara filter</a>: apply an edge perserving noise and color reduction filter to an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a>: read, process, or write mega-, giga-, or tera-pixel image sizes.</li>
-  <li><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25504">Mean-shift</a>: apply a color reduction technique to an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">Montage</a>: juxtapose image thumbnails on an image canvas.</li>
-  <li><a href="https://imagemagick.org/Usage/morphology/">Morphology of shapes</a>: extract features, describe shapes and recognize patterns in images.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a>: read and write the common image formats used in digital film work.</li>
-  <li><a href="https://imagemagick.org/Usage/blur/">Special effects</a>: blur, sharpen, threshold, or tint an image.</li>
-  <li><a href="https://imagemagick.org/Usage/text/">Text &amp; comments</a>: insert descriptive or artistic text in an image.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#threads">Threads of execution support</a>: ImageMagick is thread safe and most internal algorithms execute in parallel to take advantage of speed-ups offered by multicore processor chips.</li>
-  <li><a href="https://imagemagick.org/Usage/resize/">Transform</a>: resize, rotate, crop, or trim an image.</li>
-  <li><a href="https://imagemagick.org/Usage/masking/">Transparency</a>: render portions of an image invisible.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a>: convenient access to pixels outside the image region.</li>
-</dl>
+<div class="table-responsive" style="font-size:87.5% !important;">
+<table class="table table-sm table-striped">
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
+    <td>create a GIF animation sequence from a group of images.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a></td>
+    <td>accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-thresholding.php">Color thresholding</a></td>
+    <td>force all pixels in the color range to white otherwise black.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a></td>
+    <td>utilize ImageMagick from the command-line.</td>
+  </tr>
+  <tr>
+    <td><a href="https://en.wikipedia.org/wiki/Complex_text_layout">Complex text layout</a></td>
+    <td>bidirectional text support and shaping.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a></td>
+    <td>overlap one image over another.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected component labeling</a></td>
+    <td>uniquely label connected regions in an image.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">Convex hull</a></td>
+    <td>smallest area convex polygon containing the image foreground objects.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>
+    <td>add a border or frame to an image.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
+    <td><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>, <a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25476">Hough lines</a>.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
+    <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/distribute-pixel-cache.php">Distributed pixel cache</a></td>
+    <td>offload intermediate pixel storage to one or more remote servers.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/draw/">Draw</a></td>
+    <td>add shapes or text to an image.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/cipher.php">Encipher or decipher an image</a></td>
+    <td>convert ordinary images into unintelligible gibberish and back again.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">Format conversion</a></td>
+    <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
+    <td>correct for, or induce image distortions including perspective.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a></td>
+    <td>certain algorithms are <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a></td>
+    <td>accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram Equalization</a></td>
+    <td>Use adaptive histogram equalization to improve contrast in images.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
+    <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a></td>
+    <td>create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a></td>
+    <td>describe the format and attributes of an image.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
+    <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a></td>
+    <td>read, process, or write mega-, giga-, or tera-pixel image sizes.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">Montage</a></td>
+    <td>juxtapose image thumbnails on an image canvas.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
+    <td>extract features, describe shapes, and recognize patterns in images.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a></td>
+    <td>read and write the common image formats used in digital film work.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
+    <td><a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara Filter</a>, <a href="https://imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25504">mean-shift</a>.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html">Perceptual hash</a></td>
+    <td>map visually identical images to the same or similar hash-- useful in image retrieval, authentication, indexing, or copy detection as well as digital watermarking.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/blur/">Special effects</a></td>
+    <td>blur, sharpen, threshold, or tint an image.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/text/">Text &amp; comments</a></td>
+    <td>insert descriptive or artistic text in an image.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#threads">Threads of execution support</a></td>
+    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/resize/">Transform</a></td>
+    <td>resize, rotate, deskew, crop, flip or trim an image.</td>
+  </tr>
+  <tr>
+    <td><a href="https://imagemagick.org/Usage/masking/">Transparency</a></td>
+    <td>render portions of an image invisible.</td>
+  </tr>
+  <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a></td>
+    <td>convenient access to pixels outside the image boundaries.</td>
+  </tr>
+</table>
+</div>
 <h2><a class="anchor" id="legacy"></a>ImageMagick Legacy</h2>
 <p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a></p>
 </div>
