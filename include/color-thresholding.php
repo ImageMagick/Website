@@ -3,7 +3,7 @@
 
 <p>Caution is advised when mixing the colorspace of the start and stop colors and that of the image. A large range in one colorspace may map to only a narrow range in another colorspace. For example, one might naively think that <code>sRGB(0,0,0)</code> to <code>sRGB(255,255,255)</code> would produce a white image, catching all colors, even when using -colorspace HSV. But these two colors are black and white and so map only to a range of grayscale as <code>hsv(0,0%,0%)</code> and <code>hsv(0,0%,100%)</code>. For a color image, you would likely not find too many gray pixels.</p>
 
-<p>To illustate how color thresholding performs, use this image:</p>
+<p>To illustrate how color thresholding performs, use this image:</p>
 
 <ul><pre class="code">convert <var>input-image</var> -colorspace <var>XXX</var> -color-threshold <var>"start - stop"</var> <var>output-image</var></pre></ul>
 
