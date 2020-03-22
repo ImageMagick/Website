@@ -537,7 +537,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#caption"
 >-caption</a>). </p>
 
 <p>These convenience options are globally saved (as 'global options' so thay can
-be set before images are read), and later are transfered to the property of
+be set before images are read), and later are transferred to the property of
 individual images, only when they are read in. At that time any internal
 percent escape present is then handled. </p>
 
@@ -571,7 +571,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#distort"
 >-distort</a> operator will use to modify its behavior (distorted output
 image 'view'). </p>
 
-<p>An Option is essentually a Artifact that has been stored globally as part
+<p>An Option is essentually an Artifact that has been stored globally as part
 of a list of images (specifically a 'Wand' of images). As such they are
 identical, in that a Option, is simply a global Artifact for all the
 associated images. </p>
@@ -593,7 +593,7 @@ one of the key differences between IMv6 and IMv7.</p>
 <p>Sets a link back to the global options
 data, so that if a specific per-image Artifact is not found , then it will
 look for a equivalent global Option for that image list.  directly.  This
-saves coping these free-form options into artifacts repeatally, and means you
+saves coping these free-form options into artifacts repeatedly, and means you
 can now separately define a global option for a list, and a individual
 overriding artifact for a specific image in that list. </p>
 
