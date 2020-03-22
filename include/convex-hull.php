@@ -1,3 +1,6 @@
+<div class="magick-header">
+<p class="text-center"><a href="#about">Convex Hull</a> • <a href="#box">Minimum Bounding Box</a></p>
+
 <p>The convex hull is the is the smallest area convex polygon containing the set of points inside it. The convex hull may be visualized as the shape enclosed by a rubber band stretched around the set of points.</p>
 
 <p>The convex-hull string format returns a list of x,y coordinates of the vertices of the convex-hull polygon containing all the non-black pixels within it.</p>
@@ -34,6 +37,11 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
 
+<p>Now let's highlight the convex hull of the image foregound object:</p>
 <ul><pre class="code">magick barn_rot20.png -fuzz 30% -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</pre></ul>
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
+
+<h2><a class="anchor" id="box"></a>Minimum Bounding Box</h2>
+<p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <code>%[minimum-bounding-box]</code> to return the points that make up the bounding box.  In addition, these properties are set: minimum-bounding-box:area, minimum-bounding-box:width, minimum-bounding-box:height, and minimum-bounding-box:angle.</p>
+</div>
