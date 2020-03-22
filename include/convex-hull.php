@@ -37,7 +37,7 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
 
-<p>Now let's highlight the convex hull of the image foregound object:</p>
+<p>Now let's highlight the convex hull of the image foreground object:</p>
 <ul><pre class="code">magick barn_rot20.png -fuzz 30% -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</pre></ul>
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
