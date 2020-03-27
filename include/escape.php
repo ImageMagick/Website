@@ -83,6 +83,10 @@ filename, type, width, height. </p>
 <div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-striped">
   <tr>
+    <td>\</td>
+    <td>backslash, the next character is literal and not subject to interpretation</td>
+  </tr>
+  <tr>
     <td>\n</td>
     <td>newline</td>
   </tr>
