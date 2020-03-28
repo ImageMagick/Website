@@ -43,5 +43,9 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
 
 <h2><a class="anchor" id="box"></a>Minimum Bounding Box</h2>
-<p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <code>%[minimum-bounding-box]</code> to return the points that make up the bounding box.  In addition, these properties are set: minimum-bounding-box:area, minimum-bounding-box:width, minimum-bounding-box:height, and minimum-bounding-box:angle.</p>
+<p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <code>%[minimum-bounding-box]</code> to return the points that make up the bounding box.  In addition, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, and <code>minimum-bounding-box:angle</code>.  With the <code>minimum-bounding-box:angle</code>, you can unrotate an image.  For example,</p>
+
+<ul><pre class="code">magick butterfly.jpg -set angle "%[minimum-bounding-box:angle]" -rotate "%[angle]" butterfly-unrotate.png
+</pre></ul>
+
 </div>
