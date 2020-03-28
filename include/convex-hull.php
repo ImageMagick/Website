@@ -45,7 +45,7 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 <h2><a class="anchor" id="box"></a>Minimum Bounding Box</h2>
 <p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <code>%[minimum-bounding-box]</code> to return the points that make up the bounding box.  In addition, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, and <code>minimum-bounding-box:angle</code>.  With the <code>minimum-bounding-box:angle</code>, you can unrotate an image.  For example,</p>
 
-<ul><pre class="code">magick butterfly.jpg -set angle "%[minimum-bounding-box:angle]" -rotate "%[angle]" butterfly-unrotate.png
+<ul><pre class="code">magick butterfly.jpg -fuzz 5% -set angle "%[minimum-bounding-box:angle]" -rotate "%[angle]" butterfly-unrotate.png
 </pre></ul>
 
 </div>
