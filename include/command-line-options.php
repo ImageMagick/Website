@@ -2365,7 +2365,7 @@ available:</p>
   <tr>
     <td>psd:alpha-unblend=off</td>
      <td>Disables new automatic un-blending of transparency with the base image
-     for the flattened layer 0 before adding the alpha channel to the output 
+     for the flattened layer 0 before adding the alpha channel to the output
      image. This define must be placed before the input psd image. (Available
      as of IM 6.9.2.5). The automatic un-blending is new to IM 6.9.2.5 and
      prevents the transparency from being applied twice in the output
@@ -2375,9 +2375,9 @@ available:</p>
   <tr>
     <td>psd:preserve-opacity-mask=true</td>
      <td>This option should only be used when converting from a PSD file to
-     another PSD file. It will preserve the opacity mask of a layer and add it 
-     back to the layer when the image is saved. Setting this to 'true' will 
-     enable this feature. This define is available as of Imagemagick version 
+     another PSD file. It will preserve the opacity mask of a layer and add it
+     back to the layer when the image is saved. Setting this to 'true' will
+     enable this feature. This define is available as of Imagemagick version
      6.9.5-10.
 </td>
   </tr>
@@ -2404,7 +2404,7 @@ available:</p>
 
   <tr>
     <td>quantum:polarity=<var>photometric-interpretation</var></td>
-     <td>Set the photometric-interpretation of an image (typically for TIFF 
+     <td>Set the photometric-interpretation of an image (typically for TIFF
      image file format) to either <code>min-is-black</code> (default) or
     <code>min-is-white</code>.</td>
   </tr>
@@ -2428,7 +2428,7 @@ available:</p>
 
   <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
-    <td>Specify the alpha extra samples as associated, unassociated or 
+    <td>Specify the alpha extra samples as associated, unassociated or
     unspecified.</td>
   </tr>
 
@@ -2888,10 +2888,10 @@ and meaning of the floating point values depends on the distortion <var>method</
   <tr>
     <td>Polynomial</td>
     <td>
-       Do an Nth order 2D 'Polynomial' distortion using a set of corresponding 
-       control points. The order of the polynomial dictates the minimum number of 
-       control points needed. Order 1 is the same as -distort Affine. Order 1.5 is the 
-       same as -distort BilinearReverse. Typical use is for a 2nd order distortion. 
+       Do an Nth order 2D 'Polynomial' distortion using a set of corresponding
+       control points. The order of the polynomial dictates the minimum number of
+       control points needed. Order 1 is the same as -distort Affine. Order 1.5 is the
+       same as -distort BilinearReverse. Typical use is for a 2nd order distortion.
        There is no +distort polynomial.</td>
   </tr>
 
@@ -2983,8 +2983,8 @@ and meaning of the floating point values depends on the distortion <var>method</
 
        <p class="text-center">Arguments: <var>A   B   C</var>   [ <var>D</var>   [
        <var>X</var> , <var>Y</var> ] ] <br/>
-       or <var>A<sub>x</sub> B<sub>x</sub> C<sub>x</sub> D<sub>x</sub>  
-       A<sub>y</sub> B<sub>y</sub> C<sub>y</sub> D<sub>y</sub></var>  
+       or <var>A<sub>x</sub> B<sub>x</sub> C<sub>x</sub> D<sub>x</sub>
+       A<sub>y</sub> B<sub>y</sub> C<sub>y</sub> D<sub>y</sub></var>
        [ <var>X</var> , <var>Y</var> ] </p>
        So that it forms the function
        <p class="text-center">Rsrc = r * ( <var>A</var>*r<sup>3</sup> + <var>B</var>*r<sup>2</sup> +
@@ -3049,11 +3049,11 @@ destination image. Each set of four floating point values represent a source
 image coordinate, followed immediately by the destination image coordinate.
 This produces a list of values such as...</p>
 <p class="text-center"><var>
-      U<sub>1</sub>,V<sub>1</sub> X<sub>1</sub>,Y<sub>1</sub>  
-      U<sub>2</sub>,V<sub>2</sub> X<sub>2</sub>,Y<sub>2</sub>  
-      U<sub>3</sub>,V<sub>3</sub> X<sub>3</sub>,Y<sub>3</sub>  
-      ...  
-      U<sub>n</sub>,V<sub>n</sub> X<sub>n</sub>,Y<sub>n</sub>  
+      U<sub>1</sub>,V<sub>1</sub> X<sub>1</sub>,Y<sub>1</sub>
+      U<sub>2</sub>,V<sub>2</sub> X<sub>2</sub>,Y<sub>2</sub>
+      U<sub>3</sub>,V<sub>3</sub> X<sub>3</sub>,Y<sub>3</sub>
+      ...
+      U<sub>n</sub>,V<sub>n</sub> X<sub>n</sub>,Y<sub>n</sub>
 </var></p>
 <p>where <var>U,V</var> on the source image is mapped to <var>X,Y</var> on the
 destination image. </p>
@@ -3671,7 +3671,7 @@ specify how to compose the image with the background, use <a href="#compose"
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
-<pre class="highlight"><code>magick input.jpg -resize 800x600 -background black -compose Copy \ 
+<pre class="highlight"><code>magick input.jpg -resize 800x600 -background black -compose Copy \
   -gravity center -extent 800x600 -quality 92 output.jpg
 </code></pre>
 
@@ -3686,7 +3686,7 @@ image is centered on an 800x600 black canvas: </p>
 <p>This option is most useful for extracting a subregion of a very large raw
 image.  Note that these two commands are equivalent:</p>
 
-<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \ 
+<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \
   image.rgb image.png",
 convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
   image.rgb image.png"
@@ -3694,7 +3694,7 @@ convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
 
 <p>If you omit the offsets, as in</p>
 
-<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480 \ 
+<pre class="highlight"><code>magick -size 16000x16000 -depth 8 -extract 640x480 \
   image.rgb image.png
 </code></pre>
 
@@ -4770,7 +4770,7 @@ Consequently this has no effect on the image sequence order.</p>
 
 <p>ImageMagick provides a number of methods used in situations where an
 operator needs to determine a single grayscale value for some purpose, from
-an image with red, green, and blue pixel components. Typically the 
+an image with red, green, and blue pixel components. Typically the
 <code>Rec709Luma</code> formula is used, which is the same formula used when converting images to <code>-colorspace gray</code>. </p>
 
 <p>The following formulas are currently provided, and will first convert
@@ -6385,6 +6385,8 @@ used. Instead, simply write the file to an image format such as <var>APP1, 8BIM,
 
 <p>For example, to extract the Exif data (which is stored in JPEG files in the
 <var>APP1</var> profile), use.</p>
+
+<p>Set <code>-define precision:highres-transform=true</code> to increase the transform precision.  Note, there is a slight performance penalty as the high-precision transform is floating point rather than unsigned.</p>
 
 <pre class="highlight"><code>magick cockatoo.jpg profile.exif
 </code></pre>
