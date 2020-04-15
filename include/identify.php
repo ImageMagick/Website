@@ -283,6 +283,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#ping">-ping</a></td>
+    <td>by default, efficiently determine certain image characteristics.</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#precision">-precision <var>value</var></a></td>
     <td>set the maximum number of significant digits to be printed</td>
   </tr>

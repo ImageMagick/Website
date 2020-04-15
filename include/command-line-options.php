@@ -6242,7 +6242,7 @@ neighborhood whose width is specified with <var>radius</var>.</p>
   <h3><a class="anchor" id="ping"></a>-ping</h3>
 </div>
 
-<p class="magick-description">efficiently determine image characteristics.</p>
+<p class="magick-description">efficiently determine these image characteristics: image number, the file name, the width and height of the image, whether the image is colormapped or not, the number of colors in the image, the number of bytes in the image, the format of the image (JPEG, PNM, etc.).  Use <code>+ping</code> to ensure accurate image properties.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="pointsize"></a>-pointsize <var>value</var></h3>
