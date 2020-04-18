@@ -48,5 +48,5 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 <ul><pre class="code">magick barn_rot20.png -fuzz 10% -background black -set MBR "%[minimum-bounding-box]" -fill none -stroke red -strokewidth 1 -draw "polygon %[MBR]" barn-mbr.png</pre></ul>
 
 <h2><a class="anchor" id="unrotate"></a>Unrotate an Image</h2>
-<p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle may by off by 90 degrees.  With a hint of the correct image orientation, to ensure the proper unrotate angle is returned, Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation.</p>
+<p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle may by off by 90 degrees.  Set the correct image orientation to ensure the proper unrotate angle is returned, Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation.</p>
 </div>
