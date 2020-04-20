@@ -49,4 +49,10 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 
 <h2><a class="anchor" id="unrotate"></a>Unrotate an Image</h2>
 <p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle may by off by 90 degrees.  Set the correct image orientation to ensure the proper unrotate angle is returned, Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation.</p>
+
+<p>The barn image above is rotated by 20 degrees.  Here is how we can automatically correct for the rotation and return it to its original landscape orientation:
+
+<ul><pre class="code">magick barn_rotate20.jpg -fuzz 15% -set option:angle "%[minimum-bounding-box:unrotate]" -background gray -rotate "%[angle]" -trim barn_unrotate.jpg</pre></ul>
+</p>
+
 </div>
