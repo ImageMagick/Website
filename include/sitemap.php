@@ -149,7 +149,7 @@
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">Convex hull</a></td>
-    <td>smallest area convex polygon containing the image foreground objects.</td>
+    <td>smallest area convex polygon containing the image foreground objects. In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>

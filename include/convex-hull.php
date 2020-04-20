@@ -48,7 +48,7 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 <ul><pre class="code">magick barn_rot20.png -fuzz 10% -background black -set MBR "%[minimum-bounding-box]" -fill none -stroke red -strokewidth 1 -draw "polygon %[MBR]" barn-mbr.png</pre></ul>
 
 <h2><a class="anchor" id="unrotate"></a>Unrotate an Image</h2>
-<p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle may by off by 90 degrees.  Set the correct image orientation to ensure the proper unrotate angle is returned, Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation.</p>
+<p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle should properly align the image to the correct coordinate axis for angles &lt;= 45.  For angles > 45, the image may align with the wrong coordinate axis.  Set the correct image orientation to ensure the proper unrotate angle is returned. Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation. Note, that like convex-hull, the string format is sensitive to an optional <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> value and an optional <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#background">-background</a> color.</p>
 
 <p>The barn image above is rotated by 20 degrees.  Here is how we can automatically correct for the rotation and return it to its original landscape orientation:
 

@@ -349,7 +349,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull]</a></td>
-    <td>points that form a convex hull around the foreground object.  Use <code><a href="#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.</td>
+    <td>points that form a convex hull around the foreground object.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
   </tr>
   <tr>
     <td>%[copyright]</td>
@@ -429,7 +429,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[minimum-bounding-box]</a></td>
-    <td>points that form the minimum bounding box around the foreground object.  Use <code><a href="#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color. In addition to the bounding box points, these properties are set: minimum-bounding-box:area, minimum-bounding-box:width, minimum-bounding-box:height, and minimum-bounding-box:angle.</td>
+    <td>Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, <code>minimum-bounding-box:angle</code>, and <code>minimum-bounding-box:unrotate</code>.</td>
   </tr>
   <tr>
     <td>%[opaque]</td>
