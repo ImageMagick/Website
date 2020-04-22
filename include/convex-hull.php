@@ -6,7 +6,7 @@
 <p>The convex-hull string format returns a list of x,y coordinates of the vertices of the convex-hull polygon containing all the non-black pixels within it.</p>
 
 <ul><pre class="code">
-magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%[convex-hull]" info:
+magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:
 </pre></ul>
 
 <p>where the string format is sensitive to an optional <code>-fuzz</code> value and to an optional background color specified by the define. The command above will find the background color automatically according to the fuzz value unless the background color is defined. The fuzz value defaults to 0 when not specified.</p>
