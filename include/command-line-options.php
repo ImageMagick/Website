@@ -7754,7 +7754,7 @@ single pixel transparent 'missed' image is returned, in the same way as when a
 
 <p>Use <code><a href="#define">-define</a> trim:percent-background=0%</code> to remove all the background from the image.  The amount of background that is tolerated in an edge specified as a percent.  0% means no background is tolerated.  50% means an edge can contain up to 50% pixels that are background per the fuzz-factor.</p>
 
-<p>Use <code><a href="#define">-define</a> trim:background-color=<em>color</em></code> to identify background color surrounding the region of interest.</p>
+<p>Use <code><a href="#background">-background</a> <em>background-color</em></code> to identify background color surrounding the region of interest.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="type"></a>-type <var>type</var></h3>
