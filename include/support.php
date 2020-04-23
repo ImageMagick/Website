@@ -37,6 +37,8 @@
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
 <legend>Support the ImageMagick Project</legend>
+<h3><a href="https://github.com/sponsors/ImageMagick">Become a sponsor to ImageMagick</a></h3>
+<p>iImageMagick Studio LLC is the organization that designs, maintains, and enhances the ImageMagick software suite. In the past, we paid for the privilege of producing free software out of our own pockets. Now, to help defray costs associated with network bandwidth, development software, computer hardware, taxes, legal, and other expenses, we accept donations from individuals or companies like yourself.</p>
 <h3><a href="https://www.paypal.me/ImageMagick">Paypal</a></h3>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
 
@@ -52,16 +54,6 @@
 <p>Our Litecoin Address is: <kbd>LcZLAmym4EMvUPc9koagkccRLYQbsgGwmj</kbd>.  Or you can reference the below QR code:</p>
 <ul>
 <dt class="col-md-4"><img src="<?php echo $_SESSION['RelativePath']?>/../image/litecoin.png" alt="Click to Donate to ImageMagick via Litecoin" title="Click to Donate to ImageMagick via Litecoin" width="256" height="256" /></dt>
-</ul>
-<h3>Check</h3>
-<p>Check, in USD funds, made payable to
-  <a href="https://imagemagick.org/">ImageMagick Studio LLC</a>, and send to:</p>
-<ul>
-<pre class="highlight"><code>ImageMagick Studio LLC
-P.O. Box 40
-Landenberg, PA  19350
-USA
-</code></pre>
 </ul>
 </fieldset>
 <br/>
