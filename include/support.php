@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Support the ImageMagick Project</a></p>
+<p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 
 
 <a class="anchor" id="sponsor"></a>
@@ -36,8 +36,8 @@
 
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
-<legend>Support the ImageMagick Project</legend>
-<h3><a href="https://github.com/sponsors/ImageMagick">Become a sponsor to ImageMagick</a></h3>
+<legend>Sponsor the ImageMagick Project</legend>
+<h3><a href="https://github.com/sponsors/ImageMagick">Sponsor @ImageMagick on Github Sponsors</a></h3>
 <p>iImageMagick Studio LLC is the organization that designs, maintains, and enhances the ImageMagick software suite. In the past, we paid for the privilege of producing free software out of our own pockets. Now, to help defray costs associated with network bandwidth, development software, computer hardware, taxes, legal, and other expenses, we accept donations from individuals or companies like yourself.</p>
 <h3><a href="https://www.paypal.me/ImageMagick">Paypal</a></h3>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
@@ -46,7 +46,7 @@
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="E4UZGVA6PU7RC" />
-<input type="image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Support ImageMagick" width="92" height="26" />
+<input type="image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Sponsor ImageMagick" width="92" height="26" />
 </form>
 </ul>
 
