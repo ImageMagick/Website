@@ -2809,6 +2809,13 @@ and meaning of the floating point values depends on the distortion <var>method</
   </tr>
 
   <tr>
+    <td>RigidAffine</td>
+    <td>
+       A rigid affine (also known as a Euclidean transform), is similar to Affine but restricts the distortion to 4 arguments (S, R, Tx, Ty) with Sy = Sx and Ry = -Rx so that the distortion only has scale, rotation and translation. No skew.
+     </td>
+  </tr>
+
+  <tr>
     <td>AffineProjection</td>
     <td>
        Linearly distort an image using the given Affine Matrix of 6
