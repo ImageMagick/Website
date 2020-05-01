@@ -96,7 +96,7 @@ the supported image formats.</p>
     <td>ARW</td>
     <td>R</td>
     <td>Sony Digital Camera Alpha Raw Image Format</td>
-    <td>Set <code>-define dng:use-camera-wb=true</code> to use the RAW-embedded color profile for Sony cameras.</td>
+    <td>Set <code>-define dng:use-camera-wb=true</code> to use the RAW-embedded color profile for Sony cameras.  You can also set these options: <code>use-auto-wb</code>, <code>use-auto-bright</code>, and <code>output-color</code>.</td>
   </tr>
 
   <tr>
