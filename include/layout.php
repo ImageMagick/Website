@@ -110,6 +110,7 @@
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
     <br/>
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Sponsor</a> •
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/cite.php">Cite</a> •
     <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a> 
     <br/>
