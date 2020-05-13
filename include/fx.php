@@ -226,7 +226,7 @@
 <dt class="col-md-4"> <code>asinh(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> inverse hyperbolic sine function</dd>
 <dt class="col-md-4"> <code>atan(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> arc tangent function</dd>
 <dt class="col-md-4"> <code>atanh(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> inverse hyperbolic tangent function</dd>
-<dt class="col-md-4"> <code>atan2(</code><var>x</var>,<var>y</var><code>)</code></dt><dd class="col-md-8"> arc tangent function of two variables</dd>
+<dt class="col-md-4"> <code>atan2(</code><var>y</var>,<var>x</var><code>)</code></dt><dd class="col-md-8"> arc tangent function of two variables</dd>
 <dt class="col-md-4"> <code>ceil(</code><var>x</var><code>)</code></dt><dd class="col-md-8">smallest integral value not less than argument</dd>
 <dt class="col-md-4"> <code>channel(</code><var>r</var>,<var>g</var>,<var>b</var>,<var>a</var><code>)</code></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
 <dt class="col-md-4"> <code>channel(</code><var>c</var>,<var>m</var>,<var>y</var>,<var>k</var>,<var>a</var><code>)</code></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
