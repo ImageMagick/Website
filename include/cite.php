@@ -15,7 +15,7 @@
 <br>&nbsp;&nbsp;author&nbsp;=&nbsp;{{The&nbsp;ImageMagick&nbsp;Development&nbsp;Team}},
 <br>&nbsp;&nbsp;title&nbsp;=&nbsp;{ImageMagick},
 <br>&nbsp;&nbsp;url&nbsp;=&nbsp;{https://imagemagick.org},
-<br>&nbsp;&nbsp;version&nbsp;=&nbsp;{7.0.11},
+<br>&nbsp;&nbsp;version&nbsp;=&nbsp;{7.0.10},
 <br>&nbsp;&nbsp;date&nbsp;=&nbsp;{2020-06-12},
 <br>}
 </div>
