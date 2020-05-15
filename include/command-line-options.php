@@ -2811,7 +2811,7 @@ and meaning of the floating point values depends on the distortion <var>method</
   <tr>
     <td>RigidAffine</td>
     <td>
-       A rigid affine (also known as a Euclidean transform), is similar to Affine but restricts the distortion to 4 arguments (S, R, Tx, Ty) with Sy = Sx and Ry = -Rx so that the distortion only has scale, rotation and translation. No skew.
+       A rigid affine (also known as a Euclidean transform), is similar to Affine but restricts the distortion to 4 arguments (S, R, Tx, Ty) with Sy = Sx and Ry = -Rx so that the distortion only has scale, rotation and translation. No skew. A minimum of two control point pairs is required.
      </td>
   </tr>
 
