@@ -25,7 +25,6 @@
     <dd><a href="http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/">http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/</a> (HP-UX 10.20 and 11.00)</dd>
   <dt>Rsync Mirrors </dt>
     <dd><a href="rsync://rsync.is.co.za/IS-Mirror/mirror.imagemagick.org/">rsync://rsync.is.co.za/IS-Mirror/mirror.imagemagick.org/</a></dd>
-    <dd><a href="rsync://rsync.fifi.org/ImageMagick">rsync://rsync.fifi.org/ImageMagick</a></dd>
     <dd><a href="rsync://mirror.imagemagick.org/magick_html">rsync://mirror.imagemagick.org/magick_html/</a> (Web site mirror)</dd>
     <dd><a href="rsync://mirror.imagemagick.org/magick_ftp">rsync://mirror.imagemagick.org/magick_ftp/</a> (FTP mirror)</dd>
 </dl>
