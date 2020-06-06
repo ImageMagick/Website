@@ -1,6 +1,7 @@
 <div class="magick-header">
 <p class="lead magick-description"></p>
 
+<div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-striped">
   <tr>
     <td>auto-threshold:verbose</td>
@@ -754,5 +755,5 @@
     <td>Turns off the beep when importing an image.</td>
   </tr>
 </table>
-
+</div>
 </div>
