@@ -645,6 +645,8 @@ expression:</p>
 <pre class="highlight"><code>%[pixel:<var>expression</var>]
 </code></pre>
 
+<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <code>-define pixel:compliance=css</code>)</p>.
+
 <h3>Specific Profile Percent Escape Prefixes</h3>
 
 <p>You can also use the following special formatting syntax to print EXIF
