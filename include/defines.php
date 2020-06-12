@@ -46,7 +46,7 @@ use:</p>
 
  <tr>
     <td>auto-threshold:verbose</td>
-    <td>return derived threshold as the <kbd>auto-threshold:threshold</kbd> image property.</td>
+    <td>return derived threshold as the <code>auto-threshold:threshold</code> image property.</td>
   </tr>
 
   <tr>
