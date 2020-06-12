@@ -1,31 +1,52 @@
 <div class="magick-header">
-<p class="lead magick-description"></p>
+
+<p class="magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
+
+<p>This option creates one or more definitions for coders and decoders to use
+while reading and writing image data.  Definitions are generally used to
+control image file format coder modules, and image processing operations,
+beyond what is provided by normal means.  Defined settings are listed in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> information ("<code>info:</code>" output format) as "Artifacts". </p>
+
+<p>If <var>value</var> is missing for a definition, an empty-valued
+definition of a flag is created with that name. This used to control on/off
+options.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define keys</a> to remove definitions
+previously created.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">+define "*"</a> to remove all existing definitions.</p>
+
+<p>The same 'artifact' settings can also be defined using the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image Properties</a> in the defined value. </p>
+
+<p>The <var>option</var> and <var>key</var> are case-independent (they are
+converted to lowercase for use within the decoders) while the <var>value</var>
+is case-dependent.</p>
+
+<p>Such settings are global in scope, and affect all images and operations. </p>
+
+<pre class="highlight"><code>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
+</code></pre>
+
+<p>Set attributes of the image registry by prefixing the value with
+<code>registry:</code>.  For example, to set a temporary path to put work files,
+use:</p>
+
+<pre class="highlight"><code>-define registry:temporary-path=/data/tmp
+</code></pre>
+
+<p>Here is a list of recognized defines:</p>
+
 
 <div class="table-responsive" style="font-size:87.5% !important;">
+
 <table class="table table-sm table-striped">
+   <tr>
+    <th align="center" colspan=2>Command-line Defines</th>
+  </tr>
+
   <tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+ <tr>
     <td>auto-threshold:verbose</td>
     <td>return derived threshold as the <kbd>auto-threshold:threshold</kbd> image property.</td>
-  </tr>
-
-  <tr>
-    <td>bmp3:alpha=<var>true|false</var></td>
-    <td>include any alpha channel when writing in the BMP image format.</td>
-  </tr>
-
-  <tr>
-    <td>bmp:format=<var>value</var></td>
-    <td> valid values are <var>bmp2</var>, <var>bmp3</var>,
-   and <var>bmp4</var>.  This option can be useful when the
-   method of prepending "BMP2:" to the output filename is inconvenient or
-   is not available, such as when using the <?php cmd("mogrify"); ?>
-   utility.</td>
-  </tr>
-
-  <tr>
-    <td>bmp:subtype=<var>RGB555|RGB565|ARGB4444|ARGB1555</var></td>
-    <td>BMP channel depth subtypes. Only support in BMP (BMP4). BMP3 and BMP2 do not
-    contain header fields to support these options.</td>
   </tr>
 
   <tr>
@@ -36,9 +57,29 @@
     -type truecolor. JPG and PSD will need this define.</td>
   </tr>
 
-  <tr>
+   <tr>
+    <td>compare:ssim-radius=<var>value</var></td>
+     <td>Sets the structural similarity index radius.</td>
+  </tr>
+
+    <tr>
+    <td>compare:ssim-sigma=<var>value</var></td>
+     <td>Sets the structural similarity index sigma.</td>
+  </tr>
+
+    <tr>
+    <td>compare:ssim-k1=<var>value</var></td>
+     <td>Sets the structural similarity index k1 argument.</td>
+  </tr>
+
+    <tr>
+    <td>compare:ssim-k2=<var>value</var></td>
+     <td>Sets the structural similarity index k2 argument.</td>
+  </tr>
+
+ <tr>
     <td>complex:snr=<var>value</var></td>
-    <td>Set the divide SNR constant<a href="#complex">-complex</a>.</td>
+    <td>Set the divide SNR constant <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#complex">-complex</a>.</td>
   </tr>
 
   <tr>
@@ -50,20 +91,64 @@
 
   <tr>
     <td>compose:clip-to-self=<var>true|false</var></td>
-    <td>Some <a href="#compose" >-compose</a> methods can modify the 'destination' image outside the overlay area.  It is disabled by default.</td>
+    <td>Some <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> methods can modify the 
+    'destination' image outside the overlay area.  It is disabled by default.</td>
   </tr>
 
   <tr>
     <td>compose:clamp=<var>on|off</var></td>
-    <td>set each pixel whose value is below zero to zero and any the pixel
+    <td>Sets each pixel whose value is below zero to zero and any the pixel
     whose value is above the quantum range to the quantum range (e.g. 65535)
     otherwise the pixel value remains unchanged.  Define supported in
     ImageMagick 6.9.1-3 and above.</td>
   </tr>
 
   <tr>
+    <td>connected-components:angle-threshold=<var>value</var></td>
+    <td>Merges any region with equivalent ellipse angle smaller than 
+    <var>value</var> into its surrounding region or largest neighbor.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
     <td>connected-components:area-threshold=<var>value</var></td>
-    <td>Merges any region with area smaller than <var>value</var> into its surrounding region or largest neighbor.</td>
+    <td>Merges any region with area smaller than <var>value</var> into its 
+    surrounding region or largest neighbor.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:background-id=<var>object-id</var></td>
+    <td>Identifies which object is to be the background object.
+    Supported in Imagemagick 7.0.9.21.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:circularity-threshold=<var>value</var></td>
+    <td>Merges any region with circularity smaller than <var>value</var> 
+    into its surrounding region or largest neighbor. Circularity is 
+    computed as 4*pi*area/perimeter^2.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:diameter-threshold=<var>value</var></td>
+    <td>Merges any region with diameter smaller than <var>value</var> 
+    into its surrounding region or largest neighbor. Diameter is 
+    computed as sqrt(4*area/pi).
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:eccentricity-threshold=<var>value</var></td>
+    <td>Merges any region with equivalent ellipse eccentricity smaller 
+    than <var>value</var> into its surrounding region or largest neighbor.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:exclude-header=<var>true</var></td>
+    <td>List the objects without the header. 
+    Supported in Imagemagick 7.0.9.21.</td>
   </tr>
 
   <tr>
@@ -72,16 +157,55 @@
     Supported in Imagemagick 6.9.3-0.</td>
   </tr>
 
+   <tr>
+    <td>connected-components:keep-colors=<var>red;green;blue</var></td>
+    <td>Keeps objects identified by their color in a semicolon separated list.
+    Supported in Imagemagick 6.9.3-0.</td>
+  </tr>
+
+   <tr>
+    <td>connected-components:keep-top=<var>number-of-objects</var></td>
+    <td>Keeps only the top number of objects by area.
+    Supported in Imagemagick 7.0.9.21.</td>
+  </tr>
+
   <tr>
+    <td>connected-components:major-axis-threshold=<var>value</var></td>
+    <td>Merges any region with equivalent ellipse major axis diameter smaller 
+    than <var>value</var> into its surrounding region or largest neighbor.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+ <tr>
     <td>connected-components:mean-color=<var>true</var></td>
     <td>Changes the output image from id values to mean color values. Supported
     in Imagemagick 6.9.2-8.</td>
   </tr>
 
   <tr>
+    <td>connected-components:minor-axis-threshold=<var>value</var></td>
+    <td>Merges any region with equivalent ellipse minor axis diameter smaller 
+    than <var>value</var> into its surrounding region or largest neighbor.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
+    <td>connected-components:perimeter-threshold=<var>value</var></td>
+    <td>Merges any region with perimeter smaller than <var>value</var> 
+    into its surrounding region or largest neighbor.
+    Supported in Imagemagick 7.0.9.24.</td>
+  </tr>
+
+  <tr>
     <td>connected-components:remove=<var>list-of-ids</var></td>
     <td>Comma and/or hyphenated list of id values to remove from the output.
      Supported in Imagemagick 6.9.2-9.</td>
+  </tr>
+
+   <tr>
+    <td>connected-components:remove-colors=<var>red;green;blue</var></td>
+    <td>Removes objects identified by their color in a semicolon separated list.
+    Supported in Imagemagick 6.9.3-0.</td>
   </tr>
 
   <tr>
@@ -105,12 +229,424 @@
   </tr>
 
   <tr>
+    <td>deskew:auto-crop=<var>true</var></td>
+    <td>auto crop the image after deskewing.</td>
+  </tr>
+
+  <tr>
+    <td>delegate:bimodal=<var>true</var></td>
+     <td>Specifies direct conversion from Postscript to PDF.</td>
+  </tr>
+
+  <tr>
+    <td>distort:scale=<var>value</var></td>
+    <td>Sets the output scaling factor for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort"
+   >-distort</a>.</td>
+  </tr>
+
+  <tr>
+    <td>distort:viewport=<var>WxH+X+Y</var></td>
+    <td>Sets the viewport for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort">-distort</a>.</td>
+  </tr>
+
+  <tr>
+    <td>dither:diffusion-amount=<var>X%</var></td>
+    <td>Sets the amount of diffusion to use with Floyd-Steinberg diffusion</td>
+  </tr>
+
+  <tr>
+    <td>filter:option=<var>value</var></td>
+     <td>Set a filter option for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#resize">-resize</a>.
+    See below for specific options.</td>
+  </tr>
+
+  <tr>
+    <td>filter:b=<var>value</var></td>
+     <td>Redefines the spline factor used for cubic filters such as Cubic, 
+     Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing 
+     function. If only one of the b or c values are defined, the other is 
+     set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c 
+     values was defined in a research paper by Mitchell-Netravali.</td>
+  </tr>
+
+  <tr>
+    <td>filter:blur=<var>factor</var></td>
+     <td>Scale the X axis of the filter (and its window). Use > 1.0 for blurry 
+     or < 1.0 for sharp. This should only be used with Gaussian and 
+     Gaussian-like filters simple filters, or you may not get the 
+     expected results.</td>
+  </tr>
+
+  <tr>
+    <td>filter:c=<var>value</var></td>
+     <td>Redefine the Keys alpha factor used for cubic filters such as Cubic, 
+     Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing 
+     function. If only one of the b or c values are defined, the other is 
+     set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c 
+     values was defined in a research paper by Mitchell-Netravali.</td>
+  </tr>
+
+  <tr>
+    <td>filter:kaiser-alpha=<var>value</var></td>
+     <td>Sets the Kaiser window alpha value. When it is multiplied by 'PI', 
+     it is equivalent to "kaiser-beta" and will override that setting. 
+     It only affects the Kaiser windowing function and does not affect 
+     any other attributes.</td>
+  </tr>
+
+   <tr>
+    <td>filter:kaiser-beta=<var>value</var></td>
+     <td>Sets the Kaiser window beta value. It only affects Kaiser windowing 
+     function and does not affect any other attributes. Before ImageMagick 
+     v6.7.6-10, this option was known as "filter:alpha" (an inheritance 
+     from the very old "zoom" program). It was changed to bring the function 
+     in line with more modern academic research usage and better assign it 
+     be more definitive. The default value is 6.5</td>
+  </tr>
+
+ <tr>
+    <td>filter:lobes=<var>count</var></td>
+     <td>Sets the number of lobes to use for the Sinc/Bessel filter. 
+     This is an alternate way of specifying the 'support' range of the filter, 
+     that is designed to be more suited to windowed filters, especially when 
+     used for image distorts.</td>
+  </tr>
+
+  <tr>
+    <td>filter:sigma=<var>value</var></td>
+     <td>Sets the 'sigma' value used to define the Gaussian filter. 
+     The default sigma value is '0.5'. It only affects the Gaussian filter, 
+     but does not shrink (but may enlarge) the filter's 'support'. 
+     It can be used to generate very small blurs, but without the filter 
+     'missing' pixels due to using a small support setting. 
+     A larger value of '0.707' (a value of '1/sqrt(2)') is another 
+     common setting.</td>
+  </tr>
+
+  <tr>
+    <td>filter:support=<var>radius</var></td>
+     <td>Sets the filter support radius. It defines how large the filter 
+     should be and thus directly defines how slow the filtered resampling 
+     process is. All filters have a default 'preferred' support size. 
+     Some filters like Lagrange and windowed filters adjust themselves 
+     depending on this value. With simple filters this value either does 
+     nothing (but slow the resampling), or will clip the filter function 
+     in a detrimental way.</td>
+  </tr>
+
+  <tr>
+    <td>filter:verbose=<var>true</var></td>
+     <td>This enables printing of information about the final internal 
+     filter selection to standard output. This includes a commented header 
+     on the filter settings being used and data allowing the filter weights 
+     to be easily graphed. Note however that some filters are internally 
+     defined in terms of other filters. The Lanczos filter, for example, 
+     is defined in terms of a SincFast windowed SincFast filter, while 
+     the Mitchell filter is defined as a general Cubic family filter 
+     with specific 'B' and 'C' settings.</td>
+  </tr>
+
+  <tr>
+    <td>filter:window=<var>filter_function</var></td>
+     <td>The IIR (infinite impulse response) filters Sinc and Jinc are 
+     windowed (brought down to zero over the defined support range) with 
+     the given filter. This allows you to specify a filter function to be 
+     used as a windowing function for these IIR filters. Many of the defined 
+     filters are actually windowing functions for these IIR filters. A typical 
+     choices is Box, (which effectively turns off the windowing function).</td>
+  </tr>
+  
+  <tr>
+    <td>filter:window-support=<var>radius</var></td>
+     <td>This define scales the windowing function to this size. This causes 
+     the windowing (or self-windowing Lagrange filter) to act is if the 
+     support window is larger than what is actually supplied to the calling 
+     operator. The filter, however, is still clipped to the true support 
+     size that is provided. If unset, this will equal the normal filter 
+     support size.</td>
+  </tr>
+
+  <tr>
+    <td>fourier:normalize=<var>inverse</var></td>
+    <td>Sets the location for the FFT/IFT normalization as use by
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fft">+-fft</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#ift">+-ift</a>. The default is
+    <var>forward</var>.</td>
+  </tr>
+
+  <tr>
+    <td>h:format=<var>value</var></td>
+     <td>Set the image encoding format use when writing a C-style header.
+         <var>format</var> can be any output format supported by ImageMagick
+         except for <var>h</var> and <var>magick</var>.  If this
+         option is omitted, the default is <var>GIF</var> for PseudoClass
+         images and <var>PNM</var> for DirectClass images.
+    </td>
+  </tr>
+
+  <tr>
+    <td>hough-lines:accumulator=true</td>
+     <td>Returns the accumulator image in addition to the lines image.</td>
+  </tr>
+
+  <tr>
+    <td>json:features</td>
+   <td>includes features in verbose information.</td>
+  </tr>
+
+  <tr>
+    <td>json:limit</td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>json:locate</td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>json:moments</td>
+   <td>includes image moments in verbose information.</td>
+  </tr>
+
+   <tr>
+    <td>kmeans:seed-colors=<var>color-list</var></td>
+     <td>Initializes the colors, where color-list is a semicolon delimited 
+     list of seed colors (e.g. red;sRGB(19,167,254);#00ffff)</td>
+  </tr>
+
+ <tr>
+    <td>magick:format=<var>value</var></td>
+     <td>Set the image encoding format use when writing a C-style header.
+         This is the same as "h:format=format" described above.</td>
+  </tr>
+
+   <tr>
+    <td>magnify:method=<var>value</var></td>
+    <td>Specifies the method of pixel art magnification. The choices are: 
+    eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X (default), 
+    scale3X, xbr2X</td>
+  	</tr>
+
+   <tr>
+    <td>modulate:colorspace=<var>colorspace</var></td>
+    <td>Specified the colorspace to use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#modulate">-modulate</a>. 
+    Any hue-based colorspace may be use. The default is HSL.</td>
+  	</tr>
+
+ <tr>
+    <td>morphology:compose=<var>compose-method</var></td>
+     <td>Specifies how to merge results generated by multiple<a
+    href="#morphology" >-morphology</a> kernel. The default is none. One
+    typical value is 'lighten' as used, for example, with the sobel edge
+    kernels. </td>
+  </tr>
+
+  <tr>
+    <td>morphology:showKernel=<var>1</var></td>
+     <td>Outputs (to 'standard error') all the information about a generated <a
+    href="#morphology" >-morphology</a> kernel.</td>
+  </tr>
+
+  <tr>
+    <td>phash:colorspaces=<var>colorspace,colorspace,...</var></td>
+    <td>The perceptual hash defaults to the sRGB and HCLp colorspaces.  When
+    using this define, you can specify up to six alternative colorspaces. (as
+    of IM 7.0.3-8)</td>
+  </tr>
+
+  <tr>
+    <td>phash:normalize=<var>true</var></td>
+    <td>Normalizes the phash metric by dividing by the number of channels
+    specified by <code>-define phash:colorspaces</code> when using compare
+    -metric phash. (as of IM 7.0.3-8)</td>
+  </tr>
+
+  <tr>
+    <td>profile:skip=<var>name1,name2,...</var></td>
+     <td>Skip the named profile[s] when reading the image. Use skip="*" to
+    skip all named profiles in the image. Many named profiles exist,
+    including ICC, EXIF, APP1, IPTC, XMP, and others.</td>
+  </tr>
+
+  <tr>
+    <td>precision:highres-transform=<var>true</var></td>
+     <td>Increases the profile transform precision. Note, there is a slight 
+     performance penalty as the high-precision transform is floating point 
+     rather than unsigned. It is important to note that results may depend 
+     on whether or not the original image already has an included profile.</td>
+  </tr>
+
+  <tr>
+    <td>preserve-timestamp=<var>true|false</var></td>
+     <td>Preserve file timestamp (<code>mogrify</code> only).</td>
+  </tr>
+
+  <tr>
+    <td>q-table=<var>quantization-table.xml</var></td>
+     <td>Custom JPEG quantization tables.</td>
+  </tr>
+
+  <tr>
+    <td>quantum:format=<var>type</var></td>
+     <td>Set the type to <code>floating-point</code> to specify a floating-point
+    format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
+    to preserve negative values. If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 16 is
+    included, the result is a single precision floating point format.
+    If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 32 is included, the result is
+    double precision floating point format. For signed pixel data, use <code>-define quantum:format=signed</code></td>
+  </tr>
+
+   <tr>
+    <td>quantum:maximum=<var>value</var></td>
+     <td>Maximum value for certain image types such as DCM. If not set, the 
+     the maximum value is QuantumRange.</td>
+  </tr>
+
+   <tr>
+    <td>quantum:minimum=<var>value</var></td>
+     <td>Minimum value for certain image types such as DCM. If not set, the 
+     the minimum value is zero.</td>
+  </tr>
+
+ <tr>
+    <td>quantum:polarity=<var>photometric-interpretation</var></td>
+     <td>Set the photometric-interpretation of an image (typically for TIFF
+     image file format) to either <code>min-is-black</code> (default) or
+    <code>min-is-white</code>.</td>
+  </tr>
+
+  <tr>
+    <td>registry:<var>attribute</var>=<var>value</var></td>
+     <td>Sets attributes of the image registry, for example, 
+     registry:temporary-path=/data/tmp.
+    </td>
+  </tr>
+
+  <tr>
+    <td>resample:verbose=<var>true</var></td>
+     <td>Outputs the cylindrical filter lookup table created by the EWA 
+     (Elliptical Weighted Average) resampling algorithm. Note this table 
+     uses a squared radius lookup value. This is typically only used for 
+     debugging EWA resampling.
+    </td>
+  </tr>
+
+  <tr>
+    <td>sample:offset=<var>geometry</var></td>
+     <td>Location of the sampling point within the sub-region being sampled,
+    expressed as percentages (see <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sample" >-sample</a>).</td>
+  </tr>
+
+   <tr>
+    <td>shepards:power=<var>value</var></td>
+     <td>Sets the exponent in the Shepard's distortion. The default is 2.</td>
+  </tr>
+
+<tr>
+    <td>stream:buffer-size=<var>value</var></td>
+   <td>Set the stream buffer size.  Select 0 for unbuffered I/O.</td>
+  </tr>
+
+ <tr>
+    <td>trim:percent-background=<var>X%</var></td>
+   <td>Sets the amount of background that is tolerated in an edge. It is 
+   specified as a percent. 0% means no background is tolerated. 
+   50% means an edge can contain up to 50% pixels that are background per 
+   the fuzz-factor.</td>
+  </tr>
+
+  <tr>
+    <td>type:features=<var>string</var></td>
+    <td>Adds a font feature to be used by the RAQM delegate during complex 
+    text layout. This is usually used to turn on optional font features that 
+    are not enabled by default, but can be also used to turn off default font 
+    features. Features include those to control kerning, ligature and Arabic.</td>
+  </tr>
+
+  <tr>
+    <td>type:hinting=<var>false</var></td>
+    <td>Disables font hinting. Proper glyph rendering needs the scaled points 
+    to be aligned along the target device pixel grid, through an operation 
+    often called hinting. One of its main purposes is to ensure that important 
+    widths and heights are respected throughout the whole font. (For example, 
+    it is very often desirable that the ‘I’ and the ‘T’ glyphs have their 
+    central vertical line of the same pixel width. Hinting also manages 
+    features like stems and overshoots, which can cause problems at small 
+    pixel sizes.</td>
+  </tr>
+
+  <tr>
+    <td>x:screen=<var>true</var></td>
+    <td>Obtains the image from the root window.</td>
+  </tr>
+
+  <tr>
+    <td>x:silent=<var>true</var></td>
+    <td>Turns off the beep when importing an image.</td>
+  </tr>
+
+
+  <tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+  <tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+  <tr>
+   <th align="center" colspan=2>IMAGE FORMATS</th>
+  </tr>
+
+  <tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+  <tr>
+    <td>bmp3:alpha=<var>true|false</var></td>
+    <td>include any alpha channel when writing in the BMP image format.</td>
+  </tr>
+
+  <tr>
+    <td>bmp:format=<var>value</var></td>
+    <td> valid values are <var>bmp2</var>, <var>bmp3</var>,
+   and <var>bmp4</var>.  This option can be useful when the
+   method of prepending "BMP2:" to the output filename is inconvenient or
+   is not available, such as when using the <?php cmd("mogrify"); ?>
+   utility.</td>
+  </tr>
+
+  <tr>
+    <td>bmp:subtype=<var>value</var></td>
+    <td>BMP channel depth subtypes. The choices are: RGB555, RGB565, ARGB4444, 
+    ARGB1555. Only support in BMP (BMP4). BMP3 and BMP2 do not contain header 
+    fields to support these options.</td>
+  </tr>
+
+  <tr>
     <td>dcm:display-range=<var>reset</var></td>
      <td>Sets the display range to the minimum and maximum pixel values for the
     DCM image format.</td>
   </tr>
 
   <tr>
+    <td>dcm:rescale=<var>true</var></td>
+     <td>Enable interpretation of the rescale slope and intercept settings 
+     in the file.</td>
+  </tr>
+
+   <tr>
+    <td>dcm:rescale=<var>true</var></td>
+     <td>Enable interpretation of the rescale slope and intercept settings 
+     in the file.</td>
+  </tr>
+
+    <tr>
+    <td>dcm:window=<var>CxW</var></td>
+     <td>Specifies the dcm window center and width.</td>
+  </tr>
+
+<tr>
     <td>dds:cluster-fit=<var>true|false</var></td>
      <td>Enables the dds cluster-fit.</td>
   </tr>
@@ -131,32 +667,31 @@
   </tr>
 
   <tr>
-    <td>deskew:auto-crop=<var>true</var></td>
-    <td>auto crop the image after deskewing.</td>
+    <td>dng:output-color=<var>value</var></td>
+     <td>Select the output colorspace. The choices are: 
+       0 - Raw color (unique to each camera), 
+       1 - sRGB D65 (default), 
+       2 - Adobe RGB (1998) D65, 
+       3 - Wide Gamut RGB D65, 
+       4 - Kodak ProPhoto RGB D65,  
+       5 - XYZ, 
+       6 - ACES</td>  
+    </tr>
+
+  <tr>
+    <td>dng:use-auto-bright=<var>false</var></td>
+     <td>Disables the histogram-based white level.</td>
+  </tr>
+
+ <tr>
+    <td>dng:use-auto-wb=<var>true</var></td>
+     <td>Computes the white balance by averaging the entire image.</td>
   </tr>
 
   <tr>
-    <td>delegate:bimodal=<var>true</var></td>
-     <td>Specifies direct conversion from Postscript to PDF.</td>
+    <td>dng:use-camera-wb=<var>true</var></td>
+     <td>Uses the white balance specified by the camera.</td>
   </tr>
-
-  <tr>
-    <td>distort:scale=<var>value</var></td>
-    <td>Sets the output scaling factor for use with <a href="#distort"
-   >-distort</a>.</td>
-  </tr>
-
-  <tr>
-    <td>distort:viewport=<var>WxH+X+Y</var></td>
-    <td>Sets the viewport for use with <a href="#distort">-distort</a>.</td>
-  </tr>
-
-  <tr>
-    <td>dither:diffusion-amount=<var>X%</var></td>
-    <td>Sets the amount of diffusion to use with Floyd-Steinberg diffusion</td>
-  </tr>
-
-  <tr>
 
   <tr>
     <td>dot:layout-engine=<var>value</var></td>
@@ -165,42 +700,29 @@
   </tr>
 
   <tr>
+    <td>eps:use-cropbox=<var>true</var></td>
+     <td>Forces Imagemagick to respect the crop box.</td>
+  </tr>
+
+  <tr>
     <td>exr:color-type=<var>value</var></td>
-     <td>Specifies the color type for the EXR format: RGB, RGBA, YC, YCA, Y, YA, R, G, B, A).</td>
+     <td>Specifies the color type for the EXR format: RGB, RGBA, YC, YCA, Y, 
+     YA, R, G, B, A).</td>
   </tr>
 
   <tr>
-    <td>filter:option=<var>value</var></td>
-     <td>Set a filter option for use with <a href="#resize">-resize</a>.
-    See <a href="#filter">-filter</a> for details.</td>
+    <td>fpx:view=<var>value</var></td>
+     <td>Specifies the FlashPix viewing object, which contains the specification 
+     of a viewing transform. The viewing transform enables applications to 
+     represent a set of simple edits as a list of "commands" which are applied 
+     to the image in real time without altering the original image.</td>
   </tr>
 
   <tr>
-    <td>fourier:normalize=<var>inverse</var></td>
-    <td>Sets the location for the FFT/IFT normalization as use by
-    <a href="#fft">+-fft</a> and <a href="#ift">+-ift</a>. The default is
-    <var>forward</var>.</td>
-  </tr>
-
-  <tr>
-    <td>h:format=<var>value</var></td>
-     <td>Set the image encoding format use when writing a C-style header.
-         <var>format</var> can be any output format supported by ImageMagick
-         except for <var>h</var> and <var>magick</var>.  If this
-         option is omitted, the default is <var>GIF</var> for PseudoClass
-         images and <var>PNM</var> for DirectClass images.
-    </td>
-  </tr>
-
-  <tr>
-    <td>hough-lines:accumulator=true</td>
-     <td>Returns the accumulator image in addition to the lines image.</td>
-  </tr>
-
-  <tr>
-    <td>heic:preserve-orientation=true</td>
-    <td>Preserve the original EXIF orientation during HEIC decoding and rotate the pixels accordingly.
-        By default, EXIF orientation is reset to "1" to match the actual orientation of pixels in HEIC.
+    <td>heic:preserve-orientation=<var>true</var></td>
+    <td>Preserve the original EXIF orientation during HEIC decoding and rotate 
+    the pixels accordingly. By default, EXIF orientation is reset to "1" to 
+    match the actual orientation of pixels in HEIC.
     </td>
   </tr>
 
@@ -208,16 +730,6 @@
     <td>icon:auto-resize</td>
      <td>Automatically stores multiple sizes when writing an ico image
     (requires a 256x256 input image).</td>
-  </tr>
-
-  <tr>
-    <td>identify:locate=<var>minimum|maximum</var></td>
-     <td>Locates the coordinates of one or more image minimum or maximum.</td>
-  </tr>
-
-  <tr>
-    <td>identify:limit=<var>number</var></td>
-     <td>Locates the coordinates for the number of minima or maxima specified.</td>
   </tr>
 
   <tr>
@@ -234,7 +746,7 @@
 
   <tr>
     <td>jp2:progression-order=<var>value</var></td>
-     <td>choose from LRCP, RLCP, RPCL, PCRL or CPRL. Same for JPT, JC2, and
+     <td>Choose from LRCP, RLCP, RPCL, PCRL or CPRL. Same for JPT, JC2, and
     J2K.</td>
   </tr>
 
@@ -317,64 +829,39 @@
   </tr>
 
   <tr>
-    <td>json:features</td>
-   <td>includes features in verbose information.</td>
-  </tr>
-
-  <tr>
-    <td>json:limit</td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>json:locate</td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>json:moments</td>
-   <td>includes image moments in verbose information.</td>
-  </tr>
-
-  <tr>
-    <td>magick:format=<var>value</var></td>
-     <td>Set the image encoding format use when writing a C-style header.
-         This is the same as "h:format=format" described above.</td>
-  </tr>
-
-  <tr>
     <td>mng:need-cacheoff</td>
    <td>turn playback caching off for streaming MNG.</td>
-  </tr>
-
-  <tr>
-    <td>morphology:compose=<var>compose-method</var></td>
-     <td>Specifies how to merge results generated by multiple<a
-    href="#morphology" >-morphology</a> kernel. The default is none. One
-    typical value is 'lighten' as used, for example, with the sobel edge
-    kernels. </td>
-  </tr>
-
-  <tr>
-    <td>morphology:showKernel=<var>1</var></td>
-     <td>Outputs (to 'standard error') all the information about a generated <a
-    href="#morphology" >-morphology</a> kernel.</td>
   </tr>
 
   <tr>
     <td>pcl:fit-to-page=<var>true</var></td>
   </tr>
 
-  <tr>
+ <tr>
     <td>pdf:fit-page=<var>geometry</var></td>
-     <td> geometry specifies the scaling dimensions for resizing when the PDF is
-    being read. The geometry is either WxH{%} or page size. No offsets are
+     <td> geometry specifies the scaling dimensions for resizing when the PDF 
+    is being read. The geometry is either WxH{%} or page size. No offsets are
     allowed. (introduced in IM 6.8.8-8)</td>
   </tr>
 
   <tr>
     <td>pdf:fit-to-page=<var>true</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:page-direction=<var>right-to-left</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:stop-on-error=<var>true</var></td>
+    <td> </td>
+  </tr>
+
+   <tr>
+    <td>pdf:thumbnail=<var>false</var></td>
+     <td>Skips writing a thumbnail when saving a PDF file.</td>
   </tr>
 
   <tr>
@@ -388,46 +875,22 @@
   </tr>
 
   <tr>
-    <td>pdf:stop-on-error=<var>true</var></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>pdf:pdf:page-direction=<var>right-to-left</var></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>phash:colorspaces=<var>colorspace,colorspace,...</var></td>
-    <td>the perceptual hash defaults to the sRGB and HCLp colorspaces.  When
-    using this define, you can specify up to six alternative colorspaces. (as
-    of IM 7.0.3-8)</td>
-  </tr>
-
-  <tr>
-    <td>phash:normalize=<var>true</var></td>
-    <td>normalizes the phash metric by dividing by the number of channels
-    specified by <code>-define phash:colorspaces</code> when using compare
-    -metric phash. (as of IM 7.0.3-8)</td>
-  </tr>
-
-  <tr>
     <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>
 
   <tr>
     <td>png:color-type=<var>value</var></td>
-     <td>desired bit-depth and color-type for PNG output.  You can force the PNG
-    encoder to use a different bit-depth and color-type than it would have
+     <td>desired bit-depth and color-type for PNG output.  You can force the 
+    PNG encoder to use a different bit-depth and color-type than it would have
     normally selected, but only if this does not cause any loss of image
     quality. Any attempt to reduce image quality is treated as an error and no
     PNG file is written.  E.g., if you have a 1-bit black-and-white image, you
     can use these "defines" to cause it to be written as an 8-bit grayscale,
     indexed, or even a 64-bit RGBA.  But if you have a 16-million color image,
     you cannot force it to be written as a grayscale or indexed PNG.  If you
-    wish to do this, you must use the appropriate <a href="#depth">-depth</a>,
-    <a href="#colors">-colors</a>, or <a href="#type">-type</a> directives to
+    wish to do this, you must use the appropriate <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>,
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-colors</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#type">-type</a> directives to
     reduce the image quality prior to using the PNG encoder. Note that in
     indexed PNG files, "bit-depth" refers to the number of bits per index,
     which can be 1, 2, 4, or 8.  In such files, the color samples always have
@@ -445,7 +908,7 @@
 
   <tr>
     <td>png:compression-level=<var>value</var></td>
-    <td> valid values are 0 through 9, with 0 providing the least but fastest
+    <td> valid values are 0 through 9, with 0 providing the least, but fastest
        compression and 9 usually providing the best and always the slowest.</td>
   </tr>
 
@@ -525,11 +988,10 @@
     <code>tRNS</code> chunk isn't written anyhow, and there is no effect
     on the PNG colortype of the output image.</p>
 
-    <p>The <a href="#strip">-strip</a> option does the equivalent of the
+    <p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#strip">-strip</a> option does the equivalent of the
     following for PNG output:</p>
 
-<pre class="highlight"><code>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date
-</code></pre>
+<pre class="highlight"><code>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</code></pre>
 
     <p>The default behavior is to include all known PNG ancillary chunks
     plus ImageMagick's private <code>vpAg</code> ("virtual page") chunk,
@@ -551,8 +1013,8 @@
 
   <tr>
     <td>png:ignore-crc[=<var>true</var>]</td>
-     <td>When you know your image has no CRC or ADLER32 errors, this can speed up
-     decoding. It is also helpful in debugging bug reports from "fuzzers".</td>
+     <td>When you know your image has no CRC or ADLER32 errors, this can speed 
+     up decoding. It is also helpful in debugging bug reports from "fuzzers".</td>
   </tr>
 
   <tr>
@@ -582,19 +1044,12 @@
 
   <tr>
     <td>png:swap-bytes[=<var>true</var>]</td>
-     <td>The PNG specification requires that any multi-byte integers be stored in
-    network byte order (MSB-LSB endian).  This option allows you to
+     <td>The PNG specification requires that any multi-byte integers be stored 
+    in network byte order (MSB-LSB endian).  This option allows you to
     fix any invalid PNG files that have 16-bit samples stored incorrectly
     in little-endian order (LSB-MSB).  The "-define png:swap-bytes" option
     must appear before the input filename on the commandline.  The swapping
     is done during the libpng decoding operation.</td>
-  </tr>
-
-  <tr>
-    <td>profile:skip=<var>name1,name2,...</var></td>
-     <td>Skip the named profile[s] when reading the image. Use skip="*" to
-    skip all named profiles in the image. Many named profiles exist,
-    including ICC, EXIF, APP1, IPTC, XMP, and others.</td>
   </tr>
 
   <tr>
@@ -616,7 +1071,7 @@
      the output PSD file. If this option is not used, the additional
      information will not be preserved. This define is available as of
      Imagemagick version 6.9.5-8.
-</td>
+    </td>
   </tr>
 
   <tr>
@@ -630,57 +1085,18 @@
   </tr>
 
   <tr>
-    <td>psd:preserve-opacity-mask=true</td>
+    <td>psd:preserve-opacity-mask=<var>true</var></td>
      <td>This option should only be used when converting from a PSD file to
      another PSD file. It will preserve the opacity mask of a layer and add it
      back to the layer when the image is saved. Setting this to 'true' will
      enable this feature. This define is available as of Imagemagick version
      6.9.5-10.
-</td>
+    </td>
   </tr>
 
   <tr>
-    <td>preserve-timestamp=<var>{True, False}</var></td>
-     <td>Preserve file timestamp (<code>mogrify</code> only).</td>
-  </tr>
-
-  <tr>
-    <td>q-table=<var>quantization-table.xml</var></td>
-     <td>Custom JPEG quantization tables.</td>
-  </tr>
-
-  <tr>
-    <td>quantum:format=<var>type</var></td>
-     <td>Set the type to <code>floating-point</code> to specify a floating-point
-    format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
-    to preserve negative values. If <a href="#depth">-depth</a> 16 is
-    included, the result is a single precision floating point format.
-    If <a href="#depth">-depth</a> 32 is included, the result is
-    double precision floating point format. For signed pixel data, use <code>-define quantum:format=signed</code></td>
-  </tr>
-
-  <tr>
-    <td>quantum:polarity=<var>photometric-interpretation</var></td>
-     <td>Set the photometric-interpretation of an image (typically for TIFF
-     image file format) to either <code>min-is-black</code> (default) or
-    <code>min-is-white</code>.</td>
-  </tr>
-
-  <tr>
-    <td>sample:offset=<var>geometry</var></td>
-     <td>Location of the sampling point within the sub-region being sampled,
-    expressed as percentages (see <a href="#sample" >-sample</a>).</td>
-  </tr>
-
-  <tr>
-    <td>morphology:showKernel=<var>1</var></td>
-     <td>Outputs (to 'standard error') all the information about a generated <a
-    href="#morphology" >-morphology</a> kernel.</td>
-  </tr>
-
-  <tr>
-    <td>stream:buffer-size=<var>value</var></td>
-   <td>Set the stream buffer size.  Select 0 for unbuffered I/O.</td>
+    <td>svg:xml-parse-huge=<var>true</var></td>
+    <td>Enables rendering of a very large SVG for which you trust the source</td>
   </tr>
 
   <tr>
@@ -716,7 +1132,13 @@
 
   <tr>
     <td>tiff:predictor=<var>[1, 2 or 3]</var></td>
-    <td>A mathematical operator that is applied to the image data before an encoding scheme is applied. The general idea is that subsequent pixels of an image resemble each other. Thus, substracting the information from a pixel that is already contained in previous one is likely to reduce its information density considerably and aid subsequent compression. 1 = No prediction scheme used before coding. 2 = Horizontal differencing. 3 = Floating point horizontal differencing.</td>
+    <td>A mathematical operator that is applied to the image data before an 
+    encoding scheme is applied. The general idea is that subsequent pixels of 
+    an image resemble each other. Thus, substracting the information from a 
+    pixel that is already contained in previous one is likely to reduce its 
+    information density considerably and aid subsequent compression. 
+    1 = No prediction scheme used before coding. 2 = Horizontal differencing. 
+    3 = Floating point horizontal differencing.</td>
   </tr>
 
   <tr>
@@ -731,29 +1153,210 @@
   </tr>
 
   <tr>
-    <td>type:features=<var>string</var></td>
-    <td> </td>
+   <td colspan=2><p></p></td>
   </tr>
 
   <tr>
-    <td>type:hinting=<var>off</var></td>
-    <td> </td>
+   <td colspan=2><p></p></td>
   </tr>
 
   <tr>
-    <td>txt:compliance=<var>css</var></td>
-    <td>The first argument of a hsl() color is integer, not percentage.</td>
+    <th align="center" colspan=2>PSEUDO-IMAGE FORMATS</th>
   </tr>
 
   <tr>
-    <td>x:screen=<var>true</var></td>
-    <td>Obtains the image from the root window.</td>
+    <td>caption:max-pointsize=<var>pointsize</var></td>
+     <td>Limits the maximum point size</td>
+  </tr>
+
+   <tr>
+    <td>gradient:angle=<var>angle (in degrees)</var></td>
+     <td>For a linear gradient, this specifies the direction of 
+     the gradient going from color1 to color2 in a clockwise 
+     positive manner relative to north (up). For a radial 
+     gradient, this specifies the rotation of the gradient in a 
+     clockwise positive manner from its normal X-Y orientation.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+   <tr>
+   	 <td>gradient:bounding-box=<var>WxH+X+Y</var></td>
+     <td>Limits the gradient to a larger or smaller region than 
+     the image dimensions. If the region defined by the bounding 
+     box is smaller than the image, then color1 will be the color 
+     of the background.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+   <tr>
+    <td>gradient:center=<var>x,y</var></td>
+     <td>Specifies the coordinates of the center point for the 
+     radial gradient. The default is the center of the image.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+    <tr>
+    <td>gradient:direction=<var>value</var></td>
+     <td>Specifies the direction of the linear gradient towards 
+     the top/bottom/left/right or diagonal corners. The choices are: 
+     NorthWest, North, Northeast, West, East, SouthWest, South, SouthEast.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+     <tr>
+    <td>gradient:extent=<var>value</var></td>
+     <td>Specifies the shape of an image centered radial gradient. 
+     The choices are: Circle, Diagonal, Ellipse, Maximum, Minimum.
+     Circle and Maximum draw a circular radial gradient even for 
+     rectangular shaped images of radius equal to the larger of 
+     the half-width and half-height of the image. The Circle and 
+     Maximum options are both equivalent to the default radial 
+     gradient. The Minimum option draws a circular radial gradient 
+     even for rectangular shaped images of radius equal to the 
+     smaller of the half-width and half-height of the image. 
+     The Diagonal option draws a circular radial gradient even 
+     for rectangular shaped images of radius equal to the 
+     half-diagonal of the image. The Ellipse options draws an 
+     elliptical radial gradient for rectangular shaped images of  
+     radii equal to half the width and half the height of the image.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+ <tr>
+    <td>gradient:radii=<var>x,y</var></td>
+     <td>Specifies the x and y radii of the gradient. If the 
+     x radius and the y radius are equal, the shape of the 
+     radial gradient will be a circle. If they differ, then 
+     the shape will be an ellipse. The default values are the 
+     maximum of the half width and half height of the image.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+   <tr>
+    <td>gradient:vector=<var>x1,y1,x2,y2</var></td>
+     <td>Specifies the direction of the linear gradient going from 
+     vector1 (x1,y1) to vector2 (x2,y2). Color1 (fromColor) will be 
+     located at vector position x1,y1 and color2 (toColor) will be 
+     located at vector position x2,y2.
+      Supported in Imagemagick 6.9.2-5.</td>
+   </tr>
+
+  <tr>
+    <td>histogram:unique-colors=<var>false</var></td>
+     <td>Suppresses the textual listing of the image's unique colors.</td>
+   </tr>
+
+  <tr>
+    <td>pango:align=<var>left|center|right</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:auto-dir=<var>true|false</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:ellipsize=<var>start|middle|end</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:gravity-hint=<var>natural|strong|line</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:hinting=<var>none|auto|full</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:indent=<var>points</var></td>
+     <td></td>
+   </tr>
+
+   <tr>
+    <td>pango:justify=<var>true|false</var></td>
+     <td></td>
+   </tr>
+
+   <tr>
+    <td>pango:language=<var>en_US|others</var></td>
+     <td></td>
+   </tr>
+
+   <tr>
+    <td>pango:markup=<var>true|false</var></td>
+     <td></td>
+   </tr>
+
+   <tr>
+    <td>pango:single-paragraph=<var>true|false</var></td>
+     <td></td>
+   </tr>
+
+  <tr>
+    <td>pango:wrap=<var>word|char|word-char</var></td>
+     <td></td>
+   </tr>
+
+   <tr>
+    <td>pixel:compliance=<var>value</var></td>
+     <td>Sets the "pixel:" output format according to several standards.
+     The choices are svg, none, undefined, mvg, x11, xpm. The default will 
+     list values for (s)RGB colors in the form of (s)rgb(r,g,b) or 
+     (s)rgba(r,g,b,a). Color names will no longer be presented. For sRGB or 
+     RGB colors, the svg, x11, xpm and none options will list color names, 
+     if they exist. The mvg and undefined options will list hex values. When 
+     colors are presented or converted to hue-based colorspaces, the values 
+     listed will be integers for hue and percents for the other two components. 
+     For other colorspaces, values may be listed as either percents or 
+     fractional value. Setting the depth to 8 will limit values to the 8-bit 
+     range, except for hue-based colors.</td>
+   </tr>
+
+    <tr>
+    <td>txt:compliance=<var>value</var></td>
+     <td>Sets the "txt:" format for the values in parentheses according to 
+     several standards. The choices are svg, none, undefined, mvg, x11, xpm.
+     The default will list values for (s)RGB colors in the quantum range.
+     The svg, x11, xpm, mvg and none options will list values in the 8-bit range 
+     for all Q-level compiles. The undefined option also lists values in the 
+     quantum range. When colors are presented or converted to hue-based 
+     colorspaces, the values listed will be integers for hue and percents for 
+     the other two components. For other colorspaces, values may be listed as 
+     either percents or fractional value. Setting the depth to 8 will limit 
+     values to the 8-bit range, except for hue-based colors.</td>
+   </tr>
+
+<tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+   <tr>
+   <td colspan=2><p></p></td>
   </tr>
 
   <tr>
-    <td>x:silent=<var>true</var></td>
-    <td>Turns off the beep when importing an image.</td>
+    <th align="center" colspan=2>Identify Defines</th>
   </tr>
+
+  <tr>
+   <td colspan=2><p></p></td>
+  </tr>
+
+  <tr>
+    <td>identify:locate=<var>minimum|maximum</var></td>
+     <td>Locates the coordinates of one or more image minimum or maximum.</td>
+  </tr>
+
+  <tr>
+    <td>identify:limit=<var>number</var></td>
+     <td>Locates the coordinates for the number of minima or maxima specified.</td>
+  </tr>
+
 </table>
+
 </div>
 </div>
