@@ -25,7 +25,7 @@
   <dt class="col-md-4"><a class="anchor" id="montage"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">magick montage</a></dt><dd class="col-md-8">create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</dd>
   <dt class="col-md-4"><a class="anchor" id="stream"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a></dt><dd class="col-md-8">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</dd>
 </dl>
-<p>Your installation may have ImageMagick version 6 compatibility links.  If so, you can access the tools directly by referring to them by name.  For example,
+<p>Your installation may have direct ImageMagick version 6 compatibility links.  If so, you can access the tools directly by referring to them by name.  For example,
 <pre class="highlight"><code>identify -verbose myImage.png</code></pre>
 
 </div>
