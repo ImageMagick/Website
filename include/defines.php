@@ -374,6 +374,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>frames:step</td>
+    <td>When selecting image <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">frames</a>, the default is to step one frame at a time through a list, e.g. [0-3], returns frames 0, 1, 2, and 3.  Set the step to 2 in this example and we instead get frames 0 and 2.</td>
+  </tr>
+
+  <tr>
     <td>h:format=<var>value</var></td>
      <td>Set the image encoding format use when writing a C-style header.
          <var>format</var> can be any output format supported by ImageMagick

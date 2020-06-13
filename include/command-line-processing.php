@@ -157,6 +157,8 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 
 <pre class="highlight"><code>magick 'images.gif[0-3]' images.mng</code></pre>
 
+<p>The default is to step one frame at a time so frames 0, 1, 2, and 3 are returned.  Set the step to 2 with <code>-define frames:step=2</code> and we instead get frames 0 and 2.</p>
+
 <p>Finally, you can read more than one image from a sequence, out-of-order. The next command gets the third image in the sequence, followed by the second, and then the fourth:
 </p>
 
