@@ -273,22 +273,22 @@ Resource limits:
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
-<pre class="highlight">-> convert -debug cache logo: -sharpen 3x2 null:
-2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+<pre class="highlight">-> magick -debug cache logo: -sharpen 3x2 null:
+2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy 
-2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x4 4.688MiB)
-2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x3 3.516MiB)
-2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
+2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache magick: cache.c/ClonePixelCachePixels/1044/Cache
   Memory => Memory
-2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/ClonePixelCachePixels/1044/Cache
+2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache magick: cache.c/ClonePixelCachePixels/1044/Cache
   Memory => Memory
-2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache convert: cache.c/OpenPixelCache/3834/Cache
+2016-12-17T13:33:42-05:00 0:00.020 0.010u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x3 3.516MiB)
-2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
-2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache convert: cache.c/DestroyPixelCache/1275/Cache
+2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
 </pre>
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
@@ -297,7 +297,7 @@ Resource limits:
 <h3>Distributed Pixel Cache</h3>
 <p>A distributed pixel cache is an extension of the traditional pixel cache available on a single host.  The distributed pixel cache may span multiple servers so that it can grow in size and transactional capacity to support very large images.  Start up the pixel cache server on one or more machines.  When you read or operate on an image and the local pixel cache resources are exhausted, ImageMagick contacts one or more of these remote pixel servers to store or retrieve pixels.  The distributed pixel cache relies on network bandwidth to marshal pixels to and from the remote server.  As such, it will likely be significantly slower than a pixel cache utilizing local storage (e.g. memory, disk, etc.).</p>
 <pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
-convert -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
+magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
 </code></pre>
 
 <h3>Cache Views</h3>
@@ -359,9 +359,9 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>If you plan on processing the same image many times, consider the MPC format.  Reading a MPC image has near-zero overhead because its in the native pixel cache format eliminating the need for decoding the image pixels.  Here is an example:</p>
 <pre class="highlight"><code>magick image.tif image.mpc
-convert image.mpc -crop 100x100+0+0 +repage 1.png
-convert image.mpc -crop 100x100+100+0 +repage 2.png
-convert image.mpc -crop 100x100+200+0 +repage 3.png
+magick image.mpc -crop 100x100+0+0 +repage 1.png
+magick image.mpc -crop 100x100+100+0 +repage 2.png
+magick image.mpc -crop 100x100+200+0 +repage 3.png
 </code></pre>
 
 <p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
@@ -454,8 +454,8 @@ if (profile != (StringInfo *) NULL)
 
 <p>For really large images, or if there is limited resources on your host, you can utilize a distributed pixel cache on one or more remote hosts:</p>
 <pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
-convert -distribute-cache 6668 &amp;  // start on 192.168.100.51
-convert -limit memory 2mb -limit map 2mb -limit disk 2gb \
+magick -distribute-cache 6668 &amp;  // start on 192.168.100.51
+magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png
 </code></pre>
@@ -591,7 +591,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <h5>Threading Performance</h5>
 <p>It can be difficult to predict behavior in a parallel environment.   Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize.  The only way to be certain of optimal performance, in terms of the number of threads, is to benchmark.   ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads.  This can help you identify how many threads is the most efficient in your environment.  For this benchmark we sharpen a 1920x1080 image of a model 10 times with 1 to 12 threads:</p>
-<pre class="highlight">-> convert -bench 10 model.png -sharpen 5x2 null:
+<pre class="highlight">-> magick -bench 10 model.png -sharpen 5x2 null:
 Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810
 Performance[2]: 10i 2.020ips 0.640e 9.190u 0:04.950
 Performance[3]: 10i 2.786ips 0.710e 9.400u 0:03.590
