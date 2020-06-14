@@ -157,6 +157,7 @@ Path: [built-in]
 <li>running ImageMagick in a sanitized software container such as Docker;</li>
 <li>running ImageMagick as the least-privileged user (e.g. 'nobody');</li>
 <li>explicitly setting the image file type.  For example, use the filename <code>png:image.png</code> rather than <code>image.png</code>.  Without an explicit image type in the filename, ImageMagick guesses the image type.</li>
+<li>do not create temporary files in shared directories, instead specify a private area to store only ImageMagick temporary files, e.g. <code>-define registry:temporary-path=/data/magick</code>.</li>
 </ul>
 
 </div>
