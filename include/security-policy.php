@@ -10,7 +10,7 @@
 
 <pre class="pre-scrollable"><code>&lt;policymap>
   &lt;!-- temporary path must be a preexisting writable directory -->
-  &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
+  &lt;policy domain="resource" name="temporary-path" value="/data/magick"/>
   &lt;policy domain="resource" name="memory" value="256MiB"/>
   &lt;policy domain="resource" name="map" value="512MiB"/>
   &lt;policy domain="resource" name="width" value="8KP"/>
@@ -105,7 +105,7 @@ Path: ImageMagick/policy.xml
     value: 8KP
   Policy: Resource
     name: temporary-path
-    value: /tmp
+    value: /data/magick
   Policy: System
     name: precision
     value: 6
