@@ -248,7 +248,7 @@ display logo.gif</code></pre>
   </tr>
 
   <tr>
-  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-dll.exe";
+  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-dll.exe";
   ?>
       <td><?php echo $filename; ?></td>
         <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>">download</a></td>
