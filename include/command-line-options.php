@@ -2964,7 +2964,7 @@ equivalent to:</p>
 <p>This setting suggests a font family that ImageMagick should try to use for
 rendering text. If the family can be found it is used; if not, a default font
 (e.g., "Arial") or a family known to be similar is substituted (e.g.,
-"Courier" might be used if "System" is requested but not found).  </p>
+"Courier" might be used if "System" is requested but not found). Note, the family can be a CSS-style font list.</p>
 
 <p>For other settings that affect fonts, see the options <a
 href="#font">-font</a>, <a href="#stretch">-stretch</a>, <a
