@@ -25,12 +25,12 @@
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="cache" name="shared-secret" stealth="true" value="replace with your secret phrase"/>
   &lt;policy domain="coder" rights="none" pattern="MVG" />
-  &lt;policy domain="coder" rights="none" pattern="EPS" />
-  &lt;policy domain="coder" rights="none" pattern="PS" />
-  &lt;policy domain="coder" rights="none" pattern="PS2" />
-  &lt;policy domain="coder" rights="none" pattern="PS3" />
-  &lt;policy domain="coder" rights="none" pattern="PDF" />
-  &lt;policy domain="coder" rights="none" pattern="XPS" />
+  &lt;policy domain="coder" rights="write" pattern="EPS" />
+  &lt;policy domain="coder" rights="write" pattern="PS" />
+  &lt;policy domain="coder" rights="write" pattern="PS2" />
+  &lt;policy domain="coder" rights="write" pattern="PS3" />
+  &lt;policy domain="coder" rights="write" pattern="PDF" />
+  &lt;policy domain="coder" rights="write" pattern="XPS" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="delegate" rights="none" pattern="HTTPS" />  <!--  prevent 'curl' program from reading HTTPS URL's -->
   &lt;policy domain="delegate" rights="none" pattern="SHOW" />
@@ -56,7 +56,7 @@ convert: no images defined `wizard.jpg'</pre>
 &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
 
 <p>Here we disable just a few Postscript related formats:</p>
-<pre class="highlight"><code>&lt;policy domain="module" rights="none" pattern="{PDF,PS,PS2,PS3,XPS}" /></code></pre>
+<pre class="highlight"><code>&lt;policy domain="module" rights="write" pattern="{PDF,PS,PS2,PS3,XPS}" /></code></pre>
 
 <p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero resulting in a minor performance penalty.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
 <pre class="highlight"><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
