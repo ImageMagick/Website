@@ -12,7 +12,7 @@
 
 <h2><a class="anchor" id="unix"></a>Install from Unix Source</h2>
 
-<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Clone the git repository:</p>
+<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Clone the source repository:</p>
 
 <?php crt("git clone git@github.com:ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
