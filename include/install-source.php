@@ -12,18 +12,15 @@
 
 <h2><a class="anchor" id="unix"></a>Install from Unix Source</h2>
 
-<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Download <a href="https://imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Unix and Unix-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Unix systems have one.  Clone the git repository:</p>
 
-<p>Unpack the distribution with this command:</p>
-
-<pre class="highlight"><code>tar xvzf ImageMagick.tar.gz
-</code></pre>
+<?php crt("git clone git@github.com:ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
 <?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "./configure", "<br/>", "make"); ?>
 <p>For advanced users, we recommend a modules build:</p>
-<?php crt("./configure --with-modules --enable-shared --with-perl"); ?>
+<?php crt("./configure --with-modules"); ?>
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
 <pre class="highlight"><code>sudo make install
