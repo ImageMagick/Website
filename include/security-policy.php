@@ -23,6 +23,7 @@
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
+  &lt;policy domain="cache" name="shared-secret" value="My voice is my passport: verify me." stealth="True"/>
   &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
@@ -117,7 +118,7 @@ Path: ImageMagick-7/policy.xml
 Path: [built-in]
   Policy: Undefined
     rights: None</pre>
-<p>Notice the <code>Cache</code> policy is not listed due to the <code>stealth</code> property.</p>
+<p>Notice the <code>shared-secret</code> policy is not listed due to the <code>stealth</code> property.</p>
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
 
