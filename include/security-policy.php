@@ -23,7 +23,7 @@
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
-  &lt;policy domain="cache" name="shared-secret" value="<em>phassphrase</em>" stealth="True"/>
+  &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="True"/>
   &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
