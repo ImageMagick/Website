@@ -20,7 +20,6 @@
   &lt;policy domain="resource" name="disk" value="1GiB"/>
   &lt;policy domain="resource" name="file" value="768"/>
   &lt;policy domain="resource" name="thread" value="2"/>
-  &lt;policy domain="resource" name="throttle" value="0"/>
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
