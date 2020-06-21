@@ -36,7 +36,6 @@
 
 <pre class="highlight">-> convert https://imagemagick.org/image/wizard.png wizard.jpg
 convert: attempt to perform an operation not allowed by the security policy `HTTPS'
-convert: unable to open file: No such file or directory
 convert: no images defined `wizard.jpg'</pre>
 
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
