@@ -24,7 +24,7 @@
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
-  &lt;policy domain="coder" rights="none" pattern="{HTTP,HTTPS,PS,EPS,PDF,XPS}" />
+  &lt;policy domain="coder" rights="read" pattern="{HTTP,HTTPS,PS,EPS,PDF,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
 &lt;/policymap></code></pre>
