@@ -156,7 +156,7 @@ filename, type, width, height. </p>
   </tr>
   <tr>
     <td>%n</td>
-    <td>number of images in current image sequence, report once per image</td>
+    <td>number of images in current image sequence, report once per frame</td>
   </tr>
   <tr>
     <td>%o</td>
@@ -232,7 +232,7 @@ filename, type, width, height. </p>
   </tr>
   <tr>
     <td>%N</td>
-    <td>number of images in current image sequence, report once per sequence</td>
+    <td>number of images in current image sequence, report once per image sequence</td>
   </tr>
   <tr>
     <td>%O</td>
