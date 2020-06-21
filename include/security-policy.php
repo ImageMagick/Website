@@ -61,13 +61,13 @@ convert: no images defined `wizard.jpg'</pre>
 <p>You can verify your policy changes are in effect with this command:</p>
 
 <pre class="pre-scrollable">-> identify -list policy
-Path: ImageMagick/policy.xml
+Path: ImageMagick-7/policy.xml
+  Policy: Resource
+    name: list-length
+    value: 32
   Policy: Resource
     name: time
     value: 120
-  Policy: Resource
-    name: throttle
-    value: 0
   Policy: Resource
     name: thread
     value: 2
@@ -94,12 +94,24 @@ Path: ImageMagick/policy.xml
     value: 8KP
   Policy: Resource
     name: temporary-path
-    value: /data/magick
+    value: /opt/tmp
   Policy: System
     name: precision
     value: 6
+  Policy: Cache
+    name: memory-map
+    value: anonymous
+  Policy: Cache
+    name: synchronize
+    value: true
+  Policy: Coder
+    rights: Write 
+    pattern: {HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}
+  Policy: Filter
+    rights: None 
+    pattern: *
   Policy: Path
-    rights: None
+    rights: None 
     pattern: @*
 
 Path: [built-in]
