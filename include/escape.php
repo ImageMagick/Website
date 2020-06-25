@@ -327,7 +327,11 @@ when enclosed in braces (long form):</p>
     <td>%[caption]</td>
     <td>caption meta-data property</td>
   </tr>
-   <tr>
+  <tr>
+    <td>%[caption:lines]</td>
+    <td>returns the number lines generated when wrapping the caption</td>
+  </tr>
+  <tr>
     <td>%[caption:pointsize]</td>
     <td>returns the pointsize computed during caption: processing</td>
   </tr>
