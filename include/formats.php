@@ -1229,7 +1229,7 @@ the supported image formats.</p>
     <td>ASHLAR</td>
     <td>W</td>
     <td>Image sequence laid out in continuous irregular courses</td>
-    <td> </td>
+    <td>By default a resonable canvas size is selected relative to the image collection you provide.  You can also specify the canvase size by appending to the filename, e.g. <code>ashlar:canvas.pbg[1024x768]</code></td>
   </tr>
 
   <tr>
