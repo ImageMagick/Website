@@ -1226,6 +1226,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>ASHLAR</td>
+    <td>W</td>
+    <td>Image sequence laid out in continuous irregular courses</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>CANVAS</td>
     <td>R</td>
     <td>Canvas image of specified color</td>
