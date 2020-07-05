@@ -1171,6 +1171,12 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
   </tr>
 
   <tr>
+    <td>WhiteBalance</td>
+    <td></td>
+    <td>applies white balancing to an image according to a grayworld assumption in the LAB colorspace.</td>
+  </tr>
+
+  <tr>
     <td>WhiteThreshold</td>
     <td>threshold=&gt;<i>string</i>, , channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>force all pixels above the threshold intensity into white</td>
