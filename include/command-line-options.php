@@ -7252,7 +7252,7 @@ href="#stretch">-stretch</a>, and <a href="#style">-style</a>. </p>
   <h3><a class="anchor" id="white-balance"></a>-white-balance</h3>
 </div>
 <p>Applies white balancing to an image according to a grayworld assumption in the LAB colorspace.</p>
-<p>Use <kbd>-define white-balance:level=<em>argument</em> to adjust the level of the a &amp; b channels.</kbd>
+<p>Use <kbd>-define white-balance:vibrance=<em>value{%}</em> to change the color vibrance of the a &amp; b channels.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="white-point"></a>-white-point <var>x,y</var></h3>

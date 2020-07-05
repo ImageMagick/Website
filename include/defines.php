@@ -572,8 +572,8 @@ use:</p>
   </tr>
 
   <tr>
-    <td>white-balance:level=<var>black_point</var>{,<var>white_point</var>}{<var>%</var>}{,<var>gamma</var>}</td>
-    <td>Adjust the level of the a &amp; b channels.</td>
+    <td>white-balance:vibrance=<var>value{%}</var></td>
+    <td>Change in color vibrance of the a &amp; b channels.</td>
   </tr>
 
   <tr>
