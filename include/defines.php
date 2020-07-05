@@ -572,6 +572,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>white-balance:level=<var>black_point</var>{,<var>white_point</var>}{<var>%</var>}{,<var>gamma</var>}</td>
+    <td>Adjust the level of the a &amp; b channels.</td>
+  </tr>
+
+  <tr>
     <td>x:screen=<var>true</var></td>
     <td>Obtain the image from the root window.</td>
   </tr>
