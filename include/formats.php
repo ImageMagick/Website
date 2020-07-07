@@ -1229,7 +1229,7 @@ the supported image formats.</p>
     <td>ASHLAR</td>
     <td>W</td>
     <td>Image sequence laid out in continuous irregular courses</td>
-    <td>By default, a resonable canvas size and border width is determined relative to the image collection you provide.  You can explicitedly set the canvas size and border width by appending to the filename, e.g. <code>ashlar:canvas.png[1024x768+4+4]</code>. By default, alignment is along the left edge.  Use <code>-define ashlar:best-fit=true</code> to align on both the left  and right edges.</td>
+    <td>By default, a resonable canvas size and border width is determined relative to the image collection you provide.  You can explicitedly set the canvas size and border width by appending to the filename, e.g. <code>ashlar:canvas.png[1024x768+4+4]</code>. By default, alignment is along the left edge.  Use <code>-define ashlar:best-fit=true</code> to align on both the left  and right edges.  You can label the image tiles with, for example, <code>-label %f</code>.</td>
   </tr>
 
   <tr>
