@@ -124,7 +124,7 @@ the supported image formats.</p>
     <td><a href="http://www.fileformat.info/format/bmp/egff.htm">BMP, BMP2, BMP3</a></td>
     <td>RW</td>
     <td>Microsoft Windows bitmap</td>
-    <td>By default the BMP format is version 4.  Use BMP3 and BMP2 to write versions 3 and 2 respectively.</td>
+    <td>By default the BMP format is version 4.  Use BMP3 and BMP2 to write versions 3 and 2 respectively. Use <code>-define bmp:ignore-filesize</code> to ignore the filesize check.</td>
   </tr>
 
   <tr>
