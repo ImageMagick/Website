@@ -2789,6 +2789,7 @@ calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
     <tr><td>Divide  </td>         <td>Divide pixels by <var>value</var>.</td></tr>
     <tr><td>Exp  </td>            <td>base-e exponential function</td></tr>
     <tr><td>Exponential  </td>            <td>base-e exponential function</td></tr>
+    <tr><td>InverseLog  </td>            <td>Apply inverse scaled logarithm to normalized pixels.</td></tr>
     <tr><td>LeftShift </td>       <td>Shift the pixel values left by <var>value</var> bits (i.e., multiply pixels by 2<sup><var>value</var></sup>).</td></tr>
     <tr><td>Log  </td>            <td>Apply scaled logarithm to normalized pixels.</td></tr>
     <tr><td>Max  </td>            <td>Set pixels to maximum of <var>value</var> and current pixel <var>value</var> (i.e. set any pixels currently less than <var>value</var> to <var>value</var>).</td></tr>
