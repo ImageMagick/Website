@@ -1140,6 +1140,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>tiff:preserve-compression=<var>true</var></td>
+    <td>Preserve compression of the source image.</td>
+  </tr>
+
+  <tr>
     <td>tiff:rows-per-strip=<var>value</var></td>
     <td>Set the number of rows per strip.</td>
   </tr>
