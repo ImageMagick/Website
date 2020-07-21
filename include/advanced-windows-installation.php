@@ -16,7 +16,6 @@
 <li>Desktop development with C++ (workload)</li>
 <li>Visual C++ ATL for x86 and x64</li>
 <li>Visual C++ MFC for x86 and x64</li>
-<li>Windows XP support for C++ (optional if the output needs to run on Windows XP)</li>
 </ul>
 
 <p>Naming of these components might differ between version of Visual Studio. The example above use the Visual Studio 2017 names.</p>
