@@ -38,8 +38,11 @@
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
 <legend>Sponsor the ImageMagick Project</legend>
-<h3><a href="https://github.com/sponsors/ImageMagick">Sponsor @ImageMagick on Github Sponsors</a></h3>
+<h3>Github</a></h3>
 <p>ImageMagick Studio LLC is the organization that designs, maintains, and enhances the ImageMagick software suite. In the past, we paid for the privilege of producing free software out of our own pockets. Now, to help defray costs associated with network bandwidth, development software, computer hardware, taxes, legal, and other expenses, we accept donations from individuals or companies like yourself.</p>
+<ul>
+<iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
+</ul>
 <h3><a href="https://www.paypal.me/ImageMagick">Paypal</a></h3>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
 

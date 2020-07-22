@@ -60,14 +60,17 @@
       <li class="nav-item <?php IsActive($title,"Command-line Processing"); ?>">
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
       </li>
-      <li class="nav-item <?php IsActive($title,"Resources"); ?>">
-        <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
-      </li>
       <li class="nav-item <?php IsActive($title,"Develop"); ?>">
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">Community</a>
+      </li>
+      <li class="nav-item">
+        &nbsp;&nbsp;
+      </li>
+      <li class="nav-item">
+        <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
       </li>
     </ul>
     </div>
@@ -102,7 +105,7 @@
   </main><!-- /.container -->
   <footer class="magick-footer">
     <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
     &nbsp;
     <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     &nbsp;
