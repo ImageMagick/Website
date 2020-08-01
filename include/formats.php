@@ -651,6 +651,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://www.freedesktop.org/wiki/Specifications/OpenRaster/">ORA</a></td>
+    <td>R</td>
+    <td>open exchange format for layered raster based graphics</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>OTB</td>
     <td>RW</td>
     <td>On-the-air Bitmap</td>
