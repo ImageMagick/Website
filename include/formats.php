@@ -42,7 +42,7 @@ example,</p>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
 Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
-?>/../script/high-dynamic-range.php">HDRI</a>-enabled.  Essentually the A and
+?>/../script/high-dynamic-range.php">HDRI</a>-enabled.  Essentially the A and
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
