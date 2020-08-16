@@ -535,9 +535,9 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://en.wikipedia.org/wiki/JPEG_XR">JXL</a></td>
+    <td><a href="https://jpeg.org/jpegxl/index.html">JXL</a></td>
     <td>RW</td>
-    <td>JPEG1 recompression as specified in https://arxiv.org/pdf/1908.03565.pdf</td>
+    <td><a href="https://arxiv.org/ftp/arxiv/papers/1908/1908.03565.pdf">JPEG XL image coding system</a></td>
     <td>Requires the <a href="https://github.com/google/brunsli">brunsli</a> delegate library.</td>
   </tr>
 
