@@ -583,7 +583,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#distort"
 >-distort</a> operator will use to modify its behavior (distorted output
 image 'view'). </p>
 
-<p>An Option is essentually an Artifact that has been stored globally as part
+<p>An Option is essentially an Artifact that has been stored globally as part
 of a list of images (specifically a 'Wand' of images). As such they are
 identical, in that a Option, is simply a global Artifact for all the
 associated images. </p>
