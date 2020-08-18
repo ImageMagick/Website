@@ -30,7 +30,6 @@
     <li><a href="https://imagemagick.org/download/windows">Windows source</a>: Windows source distributions.</li>
     <li><a href="https://imagemagick.org/download/binaries">Unix and Windows binaries</a>: Unix and Windows binary distributions.</li>
     <li><a href="https://github.com/ImageMagick">Git repository</a>: stable and development source releases.</li>
-    <li><a href="http://www.magickwand.org/">MagickWand for PHP</a>: a native PHP-extension to the ImageMagick MagickWand API.</li>
     <li><a href="https://imagemagick.org/download/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
   </dl> </li>
 </dl>
@@ -80,7 +79,6 @@
     <li><a href="https://github.com/techblue/jmagick">JMagick</a>: provides an object-oriented Java interface to ImageMagick.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a>: C API, recommended for wizard-level developers.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a>: convert, compose, and edit images from the C language.</li>
-    <li><a href="http://www.magickwand.org/">MagickWand for PHP</a>: a native PHP-extension to the ImageMagick MagickWand API.</li>
     <li><a href="http://code.google.com/p/nmagick">nMagick</a>: is a port of the ImageMagick library to the haXe and Neko platforms.</li>
     <li><a href="http://wiki.freepascal.org/PascalMagick">PascalMagick</a>: a Pascal binding for the MagickWand API and also the low-level MagickCore library.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
