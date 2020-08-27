@@ -531,7 +531,7 @@ the supported image formats.</p>
     <td><a href="http://www.json.org">JSON</a></td>
     <td>W</td>
     <td>JavaScript Object Notation, a lightweight data-interchange format</td>
-    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:features</a>.</td>
+    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:version</a>.  The current version is 1.0, the previous version was 0.9.</td>
   </tr>
 
   <tr>
