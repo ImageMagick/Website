@@ -129,7 +129,7 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01
 
 <p>The <code>identify</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tbody>
   <tr>
     <th align="left">Option</th>

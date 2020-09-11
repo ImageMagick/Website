@@ -26,7 +26,7 @@ magick display -depth 8 -size 640x480 rgb:pixels.dat
 
 <p>The <code>stream</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tbody>
   <tr>
     <th align="left">Option</th>

@@ -77,7 +77,7 @@
   <br/>
   <form method="post" name="post" id="post" action="<?php echo $_SESSION['RelativePath']?>/../script/contact.php" enctype="application/x-www-form-urlencoded">
   <div class="table-responsive" style="font-size:87.5% !important;">
-  <table class="table table-sm table-striped">
+  <table class="table table-sm table-hover">
     <tr>
       <td><label id="authenticate" title="Your authentication code">Authenticate</label></td>
 <?php

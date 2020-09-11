@@ -11,7 +11,7 @@
 <p>The following is a partial list of <var> key = value</var> combinations that are typically be found in a MIFF file:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tr>
     <td>background-color = <var>color</var></td>
     <td> </td>

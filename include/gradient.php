@@ -47,7 +47,7 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 
 <p>As of IM 6.9.2.5, gradients have been enhanced through the use of several -defines.</p>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tr>
     <td><code>-define gradient:vector=<var>x1</var>,<var>y1</var>, <var>x2</var>,<var>y2</var></code></td>
     <td>Specifies the direction of the linear gradient going from vector1 
@@ -90,7 +90,7 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 
 <p>We also support two convenience defines for setting the linear gradient direction and the radial gradient shape.</p>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tr>
     <td><code>-define gradient:direction=<em>{NorthWest, North, Northeast, West, East, SouthWest, South, SouthEast}</em></code></td>
     <td>Specifies the direction of the linear gradient towards the 

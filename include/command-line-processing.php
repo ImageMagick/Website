@@ -351,7 +351,7 @@ setting for more specifics.</p>
 
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <col width="20%"/> <col width="80%"/>
   <thead>
   <tr>

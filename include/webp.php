@@ -14,7 +14,7 @@
 <p>Here is a complete list of WebP encoding options:</p>
 
 <div class=" able-responsive">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tr>
     <td>alpha-compression=<var>value</var></td>
     <td>encode the alpha plane: 0 = none, 1 = compressed.</td>

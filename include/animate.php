@@ -22,7 +22,7 @@
 
 <p>The <code>animate</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tbody>
   <tr>
     <th align="left">Option</th>

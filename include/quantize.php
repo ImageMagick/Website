@@ -106,7 +106,7 @@ while number of nodes with (n2 &gt; 0) &gt; required maximum number of colors
 <p>These errors are measured and printed when the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-colors</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> options are specified on the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> command line:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-hover">
   <tr>
     <td>mean error per pixel</td>
     <td>is the mean error for any single pixel in the image.</td>
