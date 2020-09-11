@@ -8,13 +8,19 @@
 
 <p>Use this command:</p>
 
-<pre class="highlight"><code>magick wizard.png -quality 50 -define webp:lossless=true wizard.webp
-</code></pre>
+<ul><pre class="highlight"><code>magick wizard.png -quality 50 -define webp:lossless=true wizard.webp</code></pre></ul>
 
 <p>Here is a complete list of WebP encoding options:</p>
 
 <div class="table-responsive">
 <table class="table table-sm table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Option</th>
+    <th scope="col">Description</th>
+  </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>alpha-compression=<var>value</var></td>
     <td>encode the alpha plane: 0 = none, 1 = compressed.</td>
