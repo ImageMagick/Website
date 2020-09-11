@@ -7,19 +7,19 @@
 
 <p>We list a few examples of the <code>stream</code> command here to illustrate its usefulness and ease of use. To get started, lets stream the red, green, blue components of a 640x480 JPEG image to disk as unsigned characters:</p>
 
-<pre class="highlight"><code>magick stream -map rgb -storage-type char image.jpg pixels.dat
+<ul><pre class="highlight"><code>magick stream -map rgb -storage-type char image.jpg pixels.dat
 magick display -depth 8 -size 640x480 rgb:pixels.dat
-</code></pre>
+</code></pre></ul>
 
 <p>Here we extract a 100x100 region from a TIFF image in the grayscale format as doubles:</p>
 
-<pre class="highlight"><code>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
-</code></pre>
+<ul><pre class="highlight"><code>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
+</code></pre></ul>
 
 <p>You can also associate the region to extract with the image filename:</p>
 
-<pre class="highlight"><code>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
-</code></pre>
+<ul><pre class="highlight"><code>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
+</code></pre></ul>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
@@ -27,12 +27,13 @@ magick display -depth 8 -size 640x480 rgb:pixels.dat
 <p>The <code>stream</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
-  <tbody>
+  <thead>
   <tr>
-    <th align="left">Option</th>
-    <th align="left">Description</th>
+    <th scope="col">Option</th>
+    <th scope="col">Description</th>
   </tr>
-
+  </thead>
+  <tbody>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#authenticate">-authenticate <var>value</var></a></td>
     <td>decrypt image with this password</td>
