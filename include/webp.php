@@ -13,7 +13,7 @@
 
 <p>Here is a complete list of WebP encoding options:</p>
 
-<div class=" able-responsive">
+<div class="table-responsive">
 <table class="table table-sm table-hover">
   <tr>
     <td>alpha-compression=<var>value</var></td>
