@@ -10,12 +10,7 @@
 <p>These are the Unix variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<<<<<<< HEAD
 <table class="table table-sm table-hover">
-  <col width="50%"/> <col width="10%"/> <col width="10%"/> <col width="30%"/>
-=======
-<table class="table table-sm table-striped">
->>>>>>> ...
   <tr>
     <th>Version</th>
     <th>HTTPS</th>
@@ -122,12 +117,7 @@ display logo.gif</code></pre></ul>
 <p>The <code>brew</code> command downloads ImageMagick and many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc.) and configures, builds, and installs ImageMagick automagically.  Alternatively, you can download the ImageMagick Mac OS X distribution we provide:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<<<<<<< HEAD
 <table class="table table-sm table-hover">
-  <col width="50%"/> <col width="10%"/> <col width="10%"/> <col width="30%"/>
-=======
-<table class="table table-sm table-striped">
->>>>>>> ...
   <tr>
     <th>Version</th>
     <th>HTTPS</th>
@@ -236,12 +226,7 @@ display logo.gif</code></pre></ul>
 <p>The Windows version of ImageMagick is self-installing.  Simply click on the appropriate version below and it will launch itself and ask you a few installation questions.  Versions with <var>Q8</var> in the name are 8 bits-per-pixel component (e.g. 8-bit red, 8-bit green, etc.), whereas,  <var>Q16</var> in the filename are 16 bits-per-pixel component. A Q16 version permits you to read or write 16-bit images without losing precision but requires twice as much resources as the Q8 version.  Versions with <var>dll</var> in the filename include ImageMagick libraries as <a href="http://www.answers.com/topic/dll">dynamic link libraries</a>. Unless you have a Windows 32-bit OS, we recommend this version of ImageMagick for 64-bit Windows:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<<<<<<< HEAD
 <table class="table table-sm table-hover">
-  <col width="50%"/> <col width="10%"/> <col width="10%"/> <col width="30%"/>
-=======
-<table class="table table-sm table-striped">
->>>>>>> ...
   <tr>
     <th>Version</th>
     <th>HTTPS</th>
@@ -260,12 +245,7 @@ display logo.gif</code></pre></ul>
 <p>Or choose from these alternate Windows binary distributions:</p>
 
 <div class="table-responsive" style="font-size:87.5% !important;">
-<<<<<<< HEAD
 <table class="table table-sm table-hover">
-  <col width="50%"/> <col width="10%"/> <col width="10%"/> <col width="30%"/>
-=======
-<table class="table table-sm table-striped">
->>>>>>> ...
   <tr>
     <th>Version</th>
     <th>HTTPS</th>
