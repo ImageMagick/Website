@@ -3536,7 +3536,7 @@
   <li> Tiff images in the LAB colorspace are no longer identified as RGB    (reference https://imagemagick.org/discourse-server/viewtopic.php?f=3&amp;t=9015).</li>
   <li> Update image color_profile and iptc_profile members in the JPEG coder    (reference https://imagemagick.org/discourse-server/viewtopic.php?f=3&amp;t=9063);</li>
 <dt class="col-md-4">2007-06-13  6.3.4-10 Cristy  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Fix composite mask bug (reference    https://imagemagick.org/Usage/bugs/composite_mask/).</li>
+  <li> Fix composite mask bug (reference    https://legacy.imagemagick.org/Usage/bugs/composite_mask/).</li>
   <li> Speed up GetPixelOpacity() method (patch from seth@price...).</li>
   <li> Set icon image width/height before allocating the image colormap.</li>
   <li> Remove Photoshop string segment from JPEG profile (reference    https://imagemagick.org/discourse-server/viewtopic.php?f=3&amp;t=9006).</li>
@@ -3615,7 +3615,7 @@
 <dt class="col-md-4">2007-03-28  6.3.3-4 Anthony  &lt;anthony@griffith...&gt;</dt>
   <li> Code duplication, simplification, and possible logic faults in "list.c".</li>
   <li> Added new Composition method, 'ChangeMask' to return pixels    that have changed or will cause a color change in overlays</li>
-  <li> Used 'ChangeMask' to implement the "-layers" method    "OptimizeTransparency" to improve the compressibility of    frame optimized GIF animations. See IM Examples...      https://imagemagick.org/Usage/anim_opt/#opt_trans</li>
+  <li> Used 'ChangeMask' to implement the "-layers" method    "OptimizeTransparency" to improve the compressibility of    frame optimized GIF animations. See IM Examples...      https://legacy.imagemagick.org/Usage/anim_opt/#opt_trans</li>
 <dt class="col-md-4">2007-03-19  6.3.3-4 Cristy  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Fixed two memory leaks in wand/magick-image.c and magick/stream.c and made    some minor changes to the GIF coder to make reading and pinging images    faster (patch provided by mstemm@cloud...).</li>
 <dt class="col-md-4">2007-03-19  6.3.3-3 Cristy  &lt;quetzlzacatenango@image...&gt;</dt>

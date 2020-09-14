@@ -16,7 +16,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 <div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-hover">
   <tr>
-    <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/anim_basics/">Animation</a></td>
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
@@ -48,15 +48,15 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>smallest area convex polygon containing the image foreground objects.  In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/crop/">Decorate</a></td>
     <td>add a border or frame to an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
     <td><a href="https://archive.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25405">Canny edge detection</a>, <a href="https://archive.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25476">Hough lines</a>.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
     <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
@@ -64,7 +64,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>offload intermediate pixel storage to one or more remote servers.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/draw/">Draw</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/draw/">Draw</a></td>
     <td>add shapes or text to an image.</td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
     <td>correct for, or induce image distortions including perspective.</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>juxtapose image thumbnails on an image canvas.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
@@ -124,7 +124,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
     <td><a href="https://archive.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=26480">Kuwahara Filter</a>, <a href="https://archive.imagemagick.org/discourse-server/viewtopic.php?f=4&amp;t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
@@ -132,11 +132,11 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>map visually identical images to the same or similar hash-- useful in image retrieval, authentication, indexing, or copy detection as well as digital watermarking.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/blur/">Special effects</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/blur/">Special effects</a></td>
     <td>blur, sharpen, threshold, or tint an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/text/">Text &amp; comments</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/text/">Text &amp; comments</a></td>
     <td>insert descriptive or artistic text in an image.</td>
   </tr>
   <tr>
@@ -144,11 +144,11 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/resize/">Transform</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/resize/">Transform</a></td>
     <td>resize, rotate, deskew, crop, flip or trim an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/masking/">Transparency</a></td>
+    <td><a href="https://legacy.imagemagick.org/Usage/masking/">Transparency</a></td>
     <td>render portions of an image invisible.</td>
   </tr>
   <tr>
@@ -158,7 +158,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 </table>
 </div>
 
-<p><a href="https://imagemagick.org/Usage/" target="_blank">Examples of ImageMagick Usage</a> shows how to use ImageMagick from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> to accomplish any of these tasks and much more. Also, see <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations. With <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>, use ImageMagick without having to install ImageMagick on your server or desktop.</p>
+<p><a href="https://legacy.imagemagick.org/Usage/" target="_blank">Examples of ImageMagick Usage</a> shows how to use ImageMagick from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> to accomplish any of these tasks and much more. Also, see <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations. With <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>, use ImageMagick without having to install ImageMagick on your server or desktop.</p>
 
 <h2><a class="anchor" id="news"></a>News</h2>
 

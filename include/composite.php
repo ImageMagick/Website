@@ -34,7 +34,7 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png" width="70" height="70" alt="red ball" /></a>
 </ul>
 
-<p>You can find additional examples of using <code>composite</code> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
+<p>You can find additional examples of using <code>composite</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

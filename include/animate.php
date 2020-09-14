@@ -15,7 +15,7 @@
 <pre class="highlight"><code>magick animate *.jpg
 </code></pre>
 
-<p>You can find additional examples of using <code>animate</code> in <a href="https://imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>animate</code> in <a href="https://legacy.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>

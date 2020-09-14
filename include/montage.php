@@ -41,7 +41,7 @@
   </a>
 </ul>
 
-<p>You can find additional examples of using <code>montage</code> at <a href="https://imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>montage</code> at <a href="https://legacy.imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

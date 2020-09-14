@@ -11,7 +11,7 @@
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
+  <dd class="col-md-8"><a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
   <dd class="col-md-8"><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/">Efficient Image Resizing With ImageMagick</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0606.pdf">ImageMagick, Part One</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0607.pdf">ImageMagick, Part Two</a></dd>

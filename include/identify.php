@@ -123,7 +123,7 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01
 <pre class="highlight"><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png
 </code></pre>
 
-<p>You can find additional examples of using <code>identify</code> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>identify</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
