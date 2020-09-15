@@ -12,7 +12,7 @@
 
 <p>Here is a complete list of WebP encoding options:</p>
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-hover">
   <thead>
   <tr>
