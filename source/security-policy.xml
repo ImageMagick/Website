@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE security-policy [
+<!ELEMENT security-policy (policy)+>
+<!ELEMENT policy (#PCDATA)>
+<!ATTLIST policy access CDATA #IMPLIED>
+<!ATTLIST policy delegate CDATA #IMPLIED>
+<!ATTLIST policy format CDATA #IMPLIED>
+<!ATTLIST policy path CDATA #IMPLIED>
+]>
+<!--
+  ImageMagick security policy.  By default any delegate, format, or file path
+  is permitted.
+
+  Suppose we do not want users to execute the ffmpeg delegate:
+
+    <policy access="none" delegate="ffmpeg" />
+
+  Here we do not want users reading images from HTTP:
+
+    <policy access="none" format="http" />
+
+  The /repository file system is restricted to read only. We use a glob
+  expression to match all paths that start with /repository:
+  
+    <policy access="read" path="/repository/*" />
+-->
+<security-policy>
+  <policy access="execute" delegate="*" />
+  <policy access="read | write" format="*" />
+  <policy access="read | write" path="*" />
+</security-policy>
