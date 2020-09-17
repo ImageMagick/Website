@@ -1,6 +1,12 @@
-<div class="magick-header"><dl><dt>2020-09-05  7.0.10-29  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-09-13  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-30 GIT revision 17602:8101670a1:20200913</li>
+<dt>2020-09-07  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Add endian support to JSON coder.</li>
+  <li> Regression: MapCache type cache allocation skipped (reference    https://github.com/ImageMagick/ImageMagick6/issues/97).</li>
+  <li> Some DCM images include a thumbnail (reference    https://github.com/ImageMagick/ImageMagick/pull/2558).</li>
+<dt>2020-09-05  7.0.10-29  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-29 GIT revision 17580:fc52fa0a9:20200905</li>
-<dt>2020-09-05  7.0.10-28  &lt;quetzlzacatenango@image...&gt;</dt>
+<dt>2020-09-05  7.0.10-29  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Eliminate infinite loop for certain SVG styles (reference    https://github.com/ImageMagick/ImageMagick6/issues/96).</li>
   <li> Add version element to JSON file format (reference    https://github.com/ImageMagick/ImageMagick6/issues/91).</li>
 <dt>2020-09-01  7.0.10-29 Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>

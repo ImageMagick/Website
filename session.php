@@ -5,7 +5,7 @@
   if (!ini_get('date.timezone')) {
     date_default_timezone_set('GMT');
   }
-  ob_start("ob_gzhandler");
+  ob_start('ob_gzhandler');
   $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
