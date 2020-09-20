@@ -1,5 +1,5 @@
-<div class="magick-header"><dl><dt>2020-09-13  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-30 GIT revision 17602:8101670a1:20200913</li>
+<div class="magick-header"><dl><dt>2020-09-19  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-30 GIT revision 17641:ab95f7264:20200919</li>
 <dt>2020-09-07  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Add endian support to JSON coder.</li>
   <li> Regression: MapCache type cache allocation skipped (reference    https://github.com/ImageMagick/ImageMagick6/issues/97).</li>
