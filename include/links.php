@@ -1,7 +1,7 @@
 <div class="magick-header">
 <p class="text-center"><a href="#command-line">Command-line Tutorials</a> • <a href="#program-interfaces">Program Interface Tutorials</a> • <a href="#techniques">ImageMagick Techniques</a> • <a href="#install">Installation Tutorials</a> • <a href="#topics">ImageMagick Topics</a> • <a href="#book-review">ImageMagick Book Review</a> • <a href="#mirrors">Web Site Mirrors</a> • <a href="#bank">Image Bank</a> • <a href="#other-projects">Other Projects</a></p>
 
-<p class="lead magick-description">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse these sites, excepting the Wizard's Toolkit site, but we feel they are a helpfull adjunct to this web site.</p>
+<p class="lead magick-description">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse these sites, but we feel they are a helpfull adjunct to this web site.</p>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
 <ul>
@@ -52,10 +52,10 @@
   <dd class="col-md-8"><a href="http://en.wikipedia.org/wiki/ImageMagick">WikiPedia</a></dd>
 </ul>
 
-<h2><a class="anchor" id="book-review"></a>ImageMagick Book Review</h2>
+<h2><a class="anchor" id="book-review"></a>ImageMagick Legacy Discussion</h2>
 <ul>
-  <dd class="col-md-8"><a href="http://www.linux.com/article.pl?sid=06/09/29/1917210">Book review: ImageMagick Tricks</a></dd>
-  <dd class="col-md-8"><a href="http://books.slashdot.org/books/06/03/13/1442239.shtml">The Definitive Guide To ImageMagick</a></dd>
+  <dd class="col-md-8"><a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a></dd>
+  <dd class="col-md-8"><a href="http://legacy.imagemagick.org/discourse-server">Legacy ImageMagick Discourse Server</a></dd>
 </ul>
 
 <h2><a class="anchor" id="mirrors"></a>ImageMagick Web Site Mirrors</h2>
@@ -74,7 +74,5 @@
 <ul>
   <dd class="col-md-8"><a href="https://github.com/cherryleafroad/Android-ImageMagick7">ImageMagick API on the Android Platform</a></dd>
   <dd class="col-md-8"><a href="https://imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
-  <dd class="col-md-8"><a href="http://www.wizards-toolkit.org/">Wizard's Toolkit</a></dd>
-  <dd class="col-md-8"><a href="http://www.multipole.org/">Computational Simulation of Multi-Body Interactions with O(n) Scaling</a></dd>
 </ul>
 </div>
