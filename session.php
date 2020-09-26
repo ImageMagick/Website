@@ -5,7 +5,20 @@
   if (!ini_get('date.timezone')) {
     date_default_timezone_set('GMT');
   }
-  ob_start('ob_gzhandler');
+  if (!isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
+    ob_start();            
+  }
+  elseif (strpos(' ' . $_SERVER['HTTP_ACCEPT_ENCODING'],'x-gzip') == false) {
+      if (strpos(' ' . $_SERVER['HTTP_ACCEPT_ENCODING'],'gzip') == false) {
+        ob_start();
+      }
+      elseif(!ob_start("ob_gzhandler")) {
+        ob_start();
+      }   
+  }
+  elseif (!ob_start("ob_gzhandler")) {
+    ob_start();
+  }
   $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
