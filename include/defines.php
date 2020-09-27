@@ -835,6 +835,7 @@ use:</p>
 
   <tr>
     <td>pcl:fit-to-page=<var>true</var></td>
+    <td> </td>
   </tr>
 
  <tr>
@@ -845,6 +846,11 @@ use:</p>
   <tr>
     <td>pdf:fit-to-page=<var>true</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>pdf:interpolate=<var>true</var></td>
+    <td>enable interpolation while rendering</td>
   </tr>
 
   <tr>

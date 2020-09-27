@@ -106,7 +106,7 @@
   <footer class="magick-footer">
     <div class="container">
     <p><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
-    <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/news.php">News</a>
     &nbsp;
     <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     &nbsp;
@@ -126,8 +126,8 @@
   </footer>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><\/script>')</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/assets/jquery.slim.min.js"><\/script>')</script><script src="/assets/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
 </body>
 </html>
 <?php

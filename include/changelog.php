@@ -1,5 +1,12 @@
-<div class="magick-header"><dl><dt>2020-09-19  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-09-20  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-31 GIT revision 17...</li>
+<dt>2020-09-20  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Add support for APNG (specify explicitly, e.g. apng:animate.png).</li>
+  <li> Add support for WEBM.</li>
+<dt>2020-09-19  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-30 GIT revision 17641:ab95f7264:20200919</li>
+<dt>2020-09-15  7.0.10-30 Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed registry lookup of GhostScript that now writes the patch version to the    registry (reference https://github.com/ImageMagick/ImageMagick/issues/2571).</li>
 <dt>2020-09-07  7.0.10-30  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Add endian support to JSON coder.</li>
   <li> Regression: MapCache type cache allocation skipped (reference    https://github.com/ImageMagick/ImageMagick6/issues/97).</li>
@@ -41,7 +48,7 @@
   <li> Discover hidden files when globbing (e.g. *.jpg) (reference    https://github.com/ImageMagick/ImageMagick/discussions/2239).</li>
   <li> New inverse-log evaluate operator.</li>
 <dt>2020-07-04  7.0.10-23  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-23 GIT revision 17437:894231bc3:20200704 </li>
+  <li> Release ImageMagick version 7.0.10-23 GIT revision 17437:894231bc3:20200704</li>
 <dt>2020-06-28  7.0.10-23  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Ensure that float is valid in ClampToQuantum() (reference    https://github.com/ImageMagick/ImageMagick/pull/2219).</li>
   <li> New pseudo-image format, ashlar, e.g.    convert *.jpg -resize 320x320 ashlar:canvas.png).</li>
