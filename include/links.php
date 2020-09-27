@@ -38,7 +38,7 @@
 <ul>
   <dd class="col-md-8"><a href="http://cactuslab.com/imagemagick/">ImageMagick Installer for Mac OS X</a></dd>
   <dd class="col-md-8"><a href="http://www.cloudgoessocial.net/2011/03/21/im-xcode4-ios4-3/">ImageMagick on iPhone</a></dd>
-  <dd class="col-md-8"><a href="https://github.com/juan-cardelino/imagemagick_lib_iphone/">Scripts and Instructions to Compile ImageMagick as a iOS Static Library</a></dd>
+  <dd class="col-md-8"><a href="https://github.com/juan-cardelino/imagemagick_lib_iphone/">Scripts and Instructions to Compile ImageMagick as an iOS Static Library</a></dd>
   <dd class="col-md-8"><a href="http://www.digitalsanctum.com/2009/03/18/installing-imagemagick-from-source-on-ubuntu-804/">Installing ImageMagick from Source on Ubuntu</a></dd>
 </ul>
 
