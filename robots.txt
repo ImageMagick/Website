@@ -1,4 +1,4 @@
-Sitemap: https://imagemagick.org/sitemap.xml.gz
+Sitemap: https://imagemagick.org/sitemap.xml
 
 User-agent: *
 Disallow:

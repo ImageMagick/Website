@@ -1,5 +1,5 @@
-<div class="magick-header"><dl><dt>2020-09-20  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-31 GIT revision 17...</li>
+<div class="magick-header"><dl><dt>2020-09-26  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-31 GIT revision 17652:78ad905d9:20200926</li>
 <dt>2020-09-20  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Add support for APNG (specify explicitly, e.g. apng:animate.png).</li>
   <li> Add support for WEBM.</li>
