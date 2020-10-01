@@ -1,4 +1,4 @@
 <?php
-  $title='Downloads';
+  $title='Download';
   include('session.php');
 ?>
