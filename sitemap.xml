@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://imagemagick.org</loc>
+    <lastmod>2020-09-15T13:47:18Z</lastmod>
+  </url>
+  <url>
     <loc>https://imagemagick.org/script/advanced-source-installation.php</loc>
     <lastmod>2020-09-15T13:47:18Z</lastmod>
   </url>
@@ -110,10 +114,6 @@
   </url>
   <url>
     <loc>https://imagemagick.org/script/download.php</loc>
-    <lastmod>2020-09-15T13:47:18Z</lastmod>
-  </url>
-  <url>
-    <loc>https://imagemagick.org/script/downloads.php</loc>
     <lastmod>2020-09-15T13:47:18Z</lastmod>
   </url>
   <url>
@@ -281,7 +281,7 @@
     <lastmod>2020-09-15T13:47:18Z</lastmod>
   </url>
   <url>
-    <loc>https://imagemagick.org/script/sponsors.php</loc>
+    <loc>https://imagemagick.org/script/support.php</loc>
     <lastmod>2020-09-15T13:47:18Z</lastmod>
   </url>
   <url>
