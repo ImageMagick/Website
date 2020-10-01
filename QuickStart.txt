@@ -45,6 +45,7 @@ Unix/Linux/Darwin/Mac OS X/Cygwin/MinGW Install:
 
 
   Additional Information
+You need to set proper bootstrap your website is not responsive
 
     Environment Variables:
 
