@@ -23,12 +23,12 @@
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/cache/' . $script;
-  session_name('ImageMagick');
-  if (($_SERVER['SERVER_NAME'] == 'www.imagemagick.com') ||
-      ($_SERVER['SERVER_NAME'] == 'www.imagemagick.net') ||
-      ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
+  session_name('Magicpicture');
+  if (($_SERVER['SERVER_NAME'] == 'www.Magicpicture.com') ||
+      ($_SERVER['SERVER_NAME'] == 'www.Magicpicture.net') ||
+      ($_SERVER['SERVER_NAME'] == 'www.Magicpicture.org'))
     {
-      header("Location: https://imagemagick.org/index.php");
+      header("Location: https://Magicpicture.org/index.php");
       exit();
     }
   if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
