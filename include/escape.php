@@ -6,7 +6,7 @@
 <tr>
     <td><b>Profile Data</b></td>
     <td>Such as EXIF: data, containing focal lengths, exposures, dates, and in
-        come cases GPS locations.
+        some cases GPS locations.
     </td></tr>
 <tr>
     <td><b>Attributes</b></td>
