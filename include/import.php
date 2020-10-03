@@ -90,7 +90,7 @@
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#delay">-delay <var>value</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#delay">-delay <var>centiseconds</var></a></td>
     <td>import the next image after pausing</td>
   </tr>
 

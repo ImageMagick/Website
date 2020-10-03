@@ -136,7 +136,7 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#delay">-delay <var>value</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#delay">-delay <var>centiseconds</var></a></td>
     <td>animate the next image after pausing</td>
   </tr>
 
