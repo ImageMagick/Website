@@ -43,6 +43,16 @@
 
 <p>You can find additional examples of using <code>montage</code> at <a href="https://legacy.imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
+<h5>Ashlar Format</h5>
+<p>An alternative to the <code>montage</code> tool is the Ashlar image format.  The montage layout is composed of a regular grid pattern aligned both verticall and horizontally in left-to-right order of the images you provide.  The Ashlar format differs from <code>montage</code> in these ways:</p>
+<ul>
+<li>it acts like an image format rather than a command-line tool;</li>
+<li>by default, only the vertical edges are aligned;</li>
+<li>the image order and layout is adjusted to optimize the canvas space.</li>
+</ul>
+<p> For example:</p>
+<pre class="highlight"><code>convert logo: wizard: rose: 'ashlar:canvas.png[1024x768+4+4]'</code></pre>
+
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
 <p>The <code>montage</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
