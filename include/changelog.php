@@ -1,4 +1,9 @@
-<div class="magick-header"><dl><dt>2020-09-26  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-10-02  7.0.10-32  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-32 GIT revision 17670:1686dd921:20201002 </li>
+<dt>2020-09-27  7.0.10-32  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> enable WMF for module build.</li>
+  <li> writing PDF requires a seekable stream.</li>
+<dt>2020-09-27  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-31 GIT revision 17652:78ad905d9:20200926</li>
 <dt>2020-09-20  7.0.10-31  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Add support for APNG (specify explicitly, e.g. apng:animate.png).</li>
