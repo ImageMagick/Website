@@ -113,7 +113,7 @@ use:</p>
   <tr>
     <td>connected-components:area-threshold=<var>value</var></td>
     <td>Merges any region with area smaller than <var>value</var> into its 
-    surrounding region or largest neighbor.</td>
+    surrounding region or largest neighbor.  Thresholds can optionally include ranges, e.g. 410-1600.</td>
   </tr>
 
   <tr>
