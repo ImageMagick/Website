@@ -14,7 +14,7 @@
     <dd><a href="ftp://sunsite.icm.edu.pl/packages/ImageMagick/">ftp://sunsite.icm.edu.pl/packages/ImageMagick/</a></dd>
     <dd><a href="rsync://ftp.tpnet.pl/pub/graphics/ImageMagick/">rsync://ftp.tpnet.pl/pub/graphics/ImageMagick/</a></dd>
   <dt>Sweden</dt>
-    <dd><a href="http://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">http://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
+    <dd><a href="https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">http://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
     <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
   <dt>United States</dt>
     <dd><a href="https://imagemagick.org/download/">https://imagemagick.org/download</a></dd>
