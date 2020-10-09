@@ -542,6 +542,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>KERNEL</td>
+    <td>W</td>
+    <td>Morphology kernel format</td>
+    <td>format suitable for a morphology kernel</td>
+  </tr>
+
+  <tr>
     <td>MAN</td>
     <td>R</td>
     <td>Unix reference manual pages</td>
