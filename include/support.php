@@ -43,15 +43,11 @@
 <ul>
 <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
 </ul>
-<h3><a href="https://www.paypal.me/ImageMagick">Paypal</a></h3>
+<h3><a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J">Paypal</a></h3>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
 
 <ul>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="E4UZGVA6PU7RC" />
-<input type="image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Sponsor ImageMagick" width="92" height="26" />
-</form>
+<a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J"><img "image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Sponsor ImageMagick" width="92" height="26"</img></a>
 </ul>
 
 <h3>Litecoin</h3>
