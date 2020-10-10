@@ -104,6 +104,6 @@ int main(int argc,char **argv)
 <h2>Reporting Bugs</h2>
 <a class="anchor" id="bugs"></a>
 <p>Questions regarding usage should be directed to or to report any bugs go to
-<a href="https://imagemagick.org/discourse-server/viewforum.php?f=23">Magick++ bug tracking forum</a>.
+<a href="https://github.com/ImageMagick/ImageMagick/discussions">Magick++ community forum</a>.
 </p>
 </div>
