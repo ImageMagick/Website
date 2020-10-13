@@ -1,5 +1,5 @@
 <div class="magick-header">
-<p class="lead magick-description">Choose from these citation formats to cite ImageMagick in your work.</p>
+<p class="lead magick-description">Learn how to cite ImageMagick in your work.  Choose from these citation formats:</p>
 
 <h5>Citation in APA style</h5>
 <p class="highlight">The ImageMagick Development Team. (2020). ImageMagick. Retrieved from https://imagemagick.org</p>
