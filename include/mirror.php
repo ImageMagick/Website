@@ -3,7 +3,8 @@
 <p>The latest release of ImageMagick is version <?php echo(MagickLibVersionText.MagickLibSubversion); ?>.</p>
 <dl>
   <dt>Germany</dt>
-    <dd><a href="http://mirror.checkdomain.de/imagemagick/">http://mirror.checkdomain.de/imagemagick/</a></dd>
+    <dd><a href="https://mirror.dogado.de/imagemagick/">https://mirror.dogado.de/imagemagick/</a></dd>
+    <dd><a href="https://mirror.checkdomain.de/imagemagick/">http://mirror.checkdomain.de/imagemagick/</a></dd>
     <dd><a href="ftp://mirror.checkdomain.de/imagemagick/">ftp://mirror.checkdomain.de/imagemagick/</a></dd>
   <dt>Japan</dt>
     <dd><a href="ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/">ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/</a></dd>
