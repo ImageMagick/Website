@@ -263,7 +263,7 @@ use:</p>
   <tr>
     <td>filter:blur=<var>factor</var></td>
      <td>Scale the X axis of the filter (and its window). Use > 1.0 for blurry 
-     or < 1.0 for sharp. This should only be used with Gaussian and 
+     or &lt; 1.0 for sharp. This should only be used with Gaussian and 
      Gaussian-like filters simple filters, or you may not get the 
      expected results.</td>
   </tr>

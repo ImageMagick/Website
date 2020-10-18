@@ -432,6 +432,10 @@ when enclosed in braces (long form):</p>
     <td>CALCULATED: average value statistic of image</td>
   </tr>
   <tr>
+    <td>%[median]</td>
+    <td>CALCULATED: median value statistic of image</td>
+  </tr>
+  <tr>
     <td>%[min]</td>
     <td>CALCULATED: minimum value statistic of image</td>
   </tr>
