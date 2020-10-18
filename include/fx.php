@@ -165,6 +165,7 @@
      <dd><code>minima</code>: image minima</dd>
      <dd><code>maxima</code>: image maxima</dd>
      <dd><code>mean</code>: image mean</dd>
+     <dd><code>median</code>: image median</dd>
      <dd><code>standard_deviation</code>: image standard deviation</dd>
      <dd><code>kurtosis</code>: image kurtosis</dd>
      <dd><code>skewness</code>: image skewness (add a channel specifier to compute a statistic for that channel, e.g. depth.r)</dd></dl></dd>
