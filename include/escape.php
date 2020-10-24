@@ -456,8 +456,8 @@ when enclosed in braces (long form):</p>
     <td>Virtual canvas (page) geometry</td>
   </tr>
   <tr>
-    <td>%[papersize.<em>name</em>]</td>
-    <td>paper size for <em>name</em> (e.g. papersize.A4)</td>
+    <td>%[papersize:<em>name</em>]</td>
+    <td>paper size for <em>name</em> in pixels at 72DPI (e.g. papersize:A4)</td>
   </tr>
   <tr>
     <td>%[printsize.x]</td>
