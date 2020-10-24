@@ -456,6 +456,10 @@ when enclosed in braces (long form):</p>
     <td>Virtual canvas (page) geometry</td>
   </tr>
   <tr>
+    <td>%[pagesize.<em>name</em>]</td>
+    <td>page size for <em>name</em> (e.g. pagesize.A4)</td>
+  </tr>
+  <tr>
     <td>%[printsize.x]</td>
     <td>X printsize</td>
   </tr>
