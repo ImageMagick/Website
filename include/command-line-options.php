@@ -5382,48 +5382,8 @@ orientation</a> option.</p>
 href="#page">-page</a> <code>Letter+43+43</code>).</p>
 
 <p>Use <var>media</var> as shorthand to specify the dimensions (<var>width</var>x<var>height</var>) of the <var>PostScript</var> page in dots per inch or a TEXT page in pixels.
-The choices for a PostScript page are:</p>
-
-<dl class="row">
-<dt class="col-md-4"> 11x17      </dt> <dd class="col-md-8">  792 x 1224</dd>
-<dt class="col-md-4"> Ledger     </dt> <dd class="col-md-8"> 1224 x  792</dd>
-<dt class="col-md-4"> Legal      </dt> <dd class="col-md-8">  612 x 1008</dd>
-<dt class="col-md-4"> Letter     </dt> <dd class="col-md-8">  612 x  792</dd>
-<dt class="col-md-4"> LetterSmall</dt> <dd class="col-md-8">  612 x  792</dd>
-<dt class="col-md-4"> ArchE      </dt> <dd class="col-md-8"> 2592 x 3456</dd>
-<dt class="col-md-4"> ArchD      </dt> <dd class="col-md-8"> 1728 x 2592</dd>
-<dt class="col-md-4"> ArchC      </dt> <dd class="col-md-8"> 1296 x 1728</dd>
-<dt class="col-md-4"> ArchB      </dt> <dd class="col-md-8">  864 x 1296</dd>
-<dt class="col-md-4"> ArchA      </dt> <dd class="col-md-8">  648 x  864</dd>
-<dt class="col-md-4"> A0         </dt> <dd class="col-md-8"> 2380 x 3368</dd>
-<dt class="col-md-4"> A1         </dt> <dd class="col-md-8"> 1684 x 2380</dd>
-<dt class="col-md-4"> A2         </dt> <dd class="col-md-8"> 1190 x 1684</dd>
-<dt class="col-md-4"> A3         </dt> <dd class="col-md-8">  842 x 1190</dd>
-<dt class="col-md-4"> A4         </dt> <dd class="col-md-8">  595 x  842</dd>
-<dt class="col-md-4"> A4Small    </dt> <dd class="col-md-8">  595 x  842</dd>
-<dt class="col-md-4"> A5         </dt> <dd class="col-md-8">  421 x  595</dd>
-<dt class="col-md-4"> A6         </dt> <dd class="col-md-8">  297 x  421</dd>
-<dt class="col-md-4"> A7         </dt> <dd class="col-md-8">  210 x  297</dd>
-<dt class="col-md-4"> A8         </dt> <dd class="col-md-8">  148 x  210</dd>
-<dt class="col-md-4"> A9         </dt> <dd class="col-md-8">  105 x  148</dd>
-<dt class="col-md-4"> A10        </dt> <dd class="col-md-8">   74 x  105</dd>
-<dt class="col-md-4"> B0         </dt> <dd class="col-md-8"> 2836 x 4008</dd>
-<dt class="col-md-4"> B1         </dt> <dd class="col-md-8"> 2004 x 2836</dd>
-<dt class="col-md-4"> B2         </dt> <dd class="col-md-8"> 1418 x 2004</dd>
-<dt class="col-md-4"> B3         </dt> <dd class="col-md-8"> 1002 x 1418</dd>
-<dt class="col-md-4"> B4         </dt> <dd class="col-md-8">  709 x 1002</dd>
-<dt class="col-md-4"> B5         </dt> <dd class="col-md-8">  501 x  709</dd>
-<dt class="col-md-4"> C0         </dt> <dd class="col-md-8"> 2600 x 3677</dd>
-<dt class="col-md-4"> C1         </dt> <dd class="col-md-8"> 1837 x 2600</dd>
-<dt class="col-md-4"> C2         </dt> <dd class="col-md-8"> 1298 x 1837</dd>
-<dt class="col-md-4"> C3         </dt> <dd class="col-md-8">  918 x 1298</dd>
-<dt class="col-md-4"> C4         </dt> <dd class="col-md-8">  649 x  918</dd>
-<dt class="col-md-4"> C5         </dt> <dd class="col-md-8">  459 x  649</dd>
-<dt class="col-md-4"> C6         </dt> <dd class="col-md-8">  323 x  459</dd>
-<dt class="col-md-4"> Flsa       </dt> <dd class="col-md-8">  612 x  936</dd>
-<dt class="col-md-4"> Flse       </dt> <dd class="col-md-8">  612 x  936</dd>
-<dt class="col-md-4"> HalfLetter </dt> <dd class="col-md-8">  396 x  612</dd>
-</dl>
+The choices for paper sizes are: <code>4x6</code>, <code>5x7</code>, <code>7x9</code>, <code>8x10</code>, <code>9x11</code>, <code>9x12</code>, <code>10x13</code>, <code>10x14</code>, <code>11x17</code>, <code>4A0</code>, <code>2A0</code>, <code>a0</code>, <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>a4</code>, <code>a4small</code>, <code>a5</code>, <code>a6</code>, <code>a7</code>, <code>a8</code>, <code>a9</code>, <code>a10</code>, <code>archa</code>, <code>archb</code>, <code>archC</code>, <code>archd</code>, <code>arche</code>, <code>b0</code>, <code>b1</code>, <code>b10</code>, <code>b2</code>, <code>b3</code>, <code>b4</code>, <code>b5</code>, <code>b6</code>, <code>b7</code>, <code>b8</code>, <code>b9</code>, <code>c0</code>, <code>c1</code>, <code>c2</code>, <code>c3</code>, <code>c4</code>, <code>c5</code>, <code>c6</code>, <code>c7</code>, <code>csheet</code>, <code>dsheet</code>, <code>esheet</code>, <code>executive</code>, <code>flsa</code>, <code>flse</code>, <code>folio</code>, <code>halfletter</code>, <code>isob0</code>, <code>isob1</code>, <code>isob10</code>, <code>isob2</code>, <code>isob3</code>, <code>isob4</code>, <code>isob5</code>, <code>isob6</code>, <code>isob7</code>, <code>isob8</code>, <code>isob9</code>, <code>jisb0</code>, <code>jisb1</code>, <code>jisb2</code>, <code>jisb3</code>, <code>jisb4</code>, <code>jisb5</code>, <code>jisb6</code>, <code>ledger</code>, <code>legal</code>, <code>letter</code>, <code>lettersmall</code>, <code>monarch</code>, <code>quarto</code>, <code>statement</code>, <code>tabloid</code>. To determine the cooresponding size in pixels at 72DPI, us this command for example:</p>
+<pre class="highlight"><code>convert x: -format "%[papersize.a4]" info:</code></pre>
 
 <p>This option is also used to place subimages when writing to a multi-image
 format that supports offsets, such as GIF89 and MNG. When used for this
