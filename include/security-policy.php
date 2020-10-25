@@ -21,12 +21,12 @@
   &lt;policy domain="resource" name="file" value="768"/>
   &lt;policy domain="resource" name="thread" value="2"/>
   &lt;policy domain="resource" name="time" value="120"/>
+  &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  &lt;!-- indirect reads not permitted -->
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
   &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="True"/>
-  &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}" />
   &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="system" name="shred" value="1"/>
 &lt;/policymap></code></pre>
