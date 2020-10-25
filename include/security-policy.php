@@ -28,7 +28,7 @@
   &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="True"/>
   &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG,PS,EPS,PDF,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
-  &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
+  &lt;policy domain="path" rights="none" pattern="@*"/>  &lt;!-- indirect reads not permitted -->
 &lt;/policymap></code></pre>
 
 <p>Since we process multiple simultaneous sessions, we do not want any one session consuming all the available memory. With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels or if an image sequence exceeds 32 frames, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to these releases, use a domain of <code>coder</code> to prevent delegate usage (e.g. <code>domain="coder" rights="none" pattern="HTTPS"</code>). We prevent users from executing any image filters.  The policy also prevents indirect reads. If you want to, for example, read text from a file (e.g. <code>caption:@myCaption.txt</code>), you'll need to disable the <code>path</code> policy.</p>
