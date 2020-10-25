@@ -21,6 +21,8 @@
   &lt;policy domain="resource" name="file" value="768"/>
   &lt;policy domain="resource" name="thread" value="2"/>
   &lt;policy domain="resource" name="time" value="120"/>
+  &lt;policy domain="system" name="precision" value="6"/>
+  &lt;policy domain="system" name="shred" value="1"/>
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
   &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="True"/>
