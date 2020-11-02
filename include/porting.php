@@ -393,7 +393,7 @@ scripts.</p>
     are to be processed 'in-place'.  (not yet implemented).  However if
     not provided, "<code>-read</code>" can still be used to differentiate
     secondary image reads (for use in things like alpha composition) from
-    the 'in-place' image being processed.  In other commands (such as "magick") it is equivalent to a explicit "<code>-read</code>" (see below) of the next option as a image (as it was in IMv6).  </dd>
+    the 'in-place' image being processed.  In other commands (such as "magick") it is equivalent to an explicit "<code>-read</code>" (see below) of the next option as an image (as it was in IMv6).  </dd>
 
 <dt class="col-md-4">-alpha activate/deactivate</dt>
 <dd class="col-md-8">enables and disables the alpha channel, respectively, with persistence. This is like on/off in Imagemagick 6. In Imagemagick 7, -alpha off will remove the alpha channel permanently such that -alpha on will not re-enable it.</dd>
