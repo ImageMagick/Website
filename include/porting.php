@@ -10,7 +10,7 @@
 a major overhaul, with specific emphasis on the ability to read 'options' not
 only from the command line, but also from scripts, and file streams. This
 allows for the use of 'co-processing' programming techniques or performing
-image handling using 'deamon/server backends', and even multi-machine
+image handling using 'daemon/server backends', and even multi-machine
 distributed processing.</p>
 
 <p>With the shell API overhaul other improvements were made, including:
@@ -199,7 +199,7 @@ NegateImage(image,exception);
 (void) SetImageChannelMask(image,channel_mask);</code></pre>
 
 <h5>Pixel User Channels</h5>
-<p>In version 7, we introduce pixel user channels.  Traditionally we utilize 4 channels, red, green, blue, and alpha.   For CMYK we also have a black channel.  User channels are designed to contain whatever additional channel information that makes sense for your application.  Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel.  You can associate traits with the user channels so that they when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.</p>
+<p>In version 7, we introduce pixel user channels.  Traditionally we utilize 4 channels, red, green, blue, and alpha.   For CMYK we also have a black channel.  User channels are designed to contain whatever additional channel information that makes sense for your application.  Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel.  You can associate traits with the user channels so that when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.</p>
 <h5>Pixel Metacontent</h5>
 <p>In version 7, we introduce pixel metacontent.  Metacontent is content about content. So rather than being the content itself, it's something that describes or is associated with the content.  Here the content is a pixel.  The pixel metacontent is for your exclusive use (internally the data is just copied, it is not modified) and is accessed with these MagickCore API methods:</p>
 <pre class="highlight"><code>SetImageMetacontentExtent()
@@ -210,7 +210,7 @@ GetCacheViewAuthenticMetacontent()
 GetCacheViewVirtualMetacontent()</code></pre>
 
 <h2><a class="anchor" id="alpha"></a>Alpha</h2>
-<p>We support alpha now, previously opacity.  With alpha, a value of <kbd>0</kbd> means that the pixel does not have any coverage information and is transparent; i.e. there was no color contribution from any geometry because the geometry did not overlap this pixel. A value of <code>QuantumRange</code> means that the pixel is opaque because the geometry completely overlapped the pixel. As a consequence, in version 7, the PixelInfo structure member alpha has replaced the previous opacity member.  Another consequence is the alpha part of a sRGB value in hexadecimal notation is now reversed (e.g. #0000 is fully transparent).</p>
+<p>We support alpha now, previously opacity.  With alpha, a value of <kbd>0</kbd> means that the pixel does not have any coverage information and is transparent; i.e. there was no color contribution from any geometry because the geometry did not overlap this pixel. A value of <code>QuantumRange</code> means that the pixel is opaque because the geometry completely overlapped the pixel. As a consequence, in version 7, the PixelInfo structure member alpha has replaced the previous opacity member.  Another consequence is the alpha part of an sRGB value in hexadecimal notation is now reversed (e.g. #0000 is fully transparent).</p>
 <h2><a class="anchor" id="colorspace"></a>Colorspace</h2>
 <p>The <code>Rec601Luma</code> and <code>Rec709Luma</code> colorspaces are no longer supported.  Instead, specify the <code>gray</code> colorspace and choose from these intensity options:</p>
 <pre class="highlight"><code>Rec601Luma
@@ -239,7 +239,7 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <p>Here are a list of changes to the MagickCore API:</p>
 <ul>
 <li>Almost all image processing algorithms are now channel aware.</li>
-<li>The MagickCore API adds an <code>ExceptionInfo</code> argument to those methods that lacked it in version 6, e.g. <code>NegateImage(image,MagickTrue,exception</code>);</li>
+<li>The MagickCore API adds an <code>ExceptionInfo</code> argument to those methods that lacked it in version 6, e.g. <code>NegateImage(image,MagickTrue,exception)</code></li>
 <li>All method channel analogs have been removed (e.g. BlurImageChannel()), they are no longer necessary, use pixel traits instead.</li>
 <li>Public and private API calls are now declared with the GCC visibility attribute.  The MagickCore and MagickWand dynamic libraries now only export public struct and function declarations.</li>
 <li>The InterpolatePixelMethod enum is now PixelInterpolateMethod.</li>
@@ -336,7 +336,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
     API, replacing the old "<code>magick</code>" command. This allows you to
     create a 'magick script' of the form  "<code>#!/path/to/command/magick
     -script</code>", or pipe options into a command "<code>magick -script
-    -</code>, as abackground process. </dd>
+    -</code>, as a background process. </dd>
 
 <dt class="col-md-4">magick-script</dt>
 <dd class="col-md-8">This the same as "<code>magick</code>", (only command name is different)
