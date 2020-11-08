@@ -1,11 +1,26 @@
-<div class="magick-header"><dl><dt>2020-10-07  7.0.10-34  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-11-07  7.0.10-37  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-37 GIT revision 17780:47a8392ef:20201107</li>
+<dt>2020-11-07  7.0.10-37  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> correct soversioning.</li>
+<dt>2020-11-07  7.0.10-36  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-36 GIT revision 17776:6bb35345c:20201107</li>
+<dt>2020-11-02  7.0.10-36  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> check and report if profile is corrupt.</li>
+  <li> do not add entropy based on mkstemp() unique filename.</li>
+<dt>2020-10-31  7.0.10-35  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-35 GIT revision 17762:df5df8489:20201031</li>
+<dt>2020-10-14  7.0.10-35  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Prefer ffmpeg over avconv.</li>
+  <li> Support median image statistic and median property.</li>
+  <li> Add -extend option to {display,animate,import}.</li>
+<dt>2020-10-07  7.0.10-34  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-34 GIT revision 17695:de3284341:20201008</li>
 <dt>2020-10-05  7.0.10-34  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> check for linux-compatible sendfile().</li>
+  <li> Check for linux-compatible sendfile().</li>
 <dt>2020-10-04  7.0.10-33  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-33 GIT revision 17683:c1bfec283:20201004</li>
 <dt>2020-10-04  7.0.10-33  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> miscellaneous clean-up.</li>
+  <li> Miscellaneous clean-up.</li>
 <dt>2020-10-02  7.0.10-32  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-32 GIT revision 17670:1686dd921:20201002 </li>
 <dt>2020-09-27  7.0.10-32  &lt;quetzlzacatenango@image...&gt;</dt>
