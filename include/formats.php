@@ -367,6 +367,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://flif.info/">FLIF</a></td>
+    <td>RW</td>
+    <td>Free Lossless Image Format</td>
+    <td></td>
+  </tr>
+   
+  <tr>
     <td>FPX</td>
     <td>RW</td>
     <td>FlashPix Format</td>
