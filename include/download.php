@@ -124,7 +124,7 @@ display logo.gif</code></pre></ul>
   </thead>
   <tbody>
   <tr>
-    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin19.6.0.tar.gz">ImageMagick-x86_64-apple-darwin19.6.0.tar.gz</a></td>
+    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin20.1.0.tar.gz">ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</a></td>
     <td>macOS High Sierra</td>
   </tr>
   <tbody>
