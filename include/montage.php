@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Juxtapose Image Thumbnails on a Canvas</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead magick-description">Use the <code>montage</code> program to create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>montage</code> command or see below for example usages of the command.</p>

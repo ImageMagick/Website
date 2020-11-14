@@ -1,5 +1,5 @@
 <div class="magick-header">
-
+<h1 class="text-center">Create a Gradual Blend of Two Colors</h1>
 <p class="lead magick-description">An image gradient creates a gradual blend between two colors formed into a shape that is linear, circular, or ellipical.</p>
 
 <p>For a linear gradient, the operator is either:</p>
