@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Identify Image Foreground Objects</h1>
 <p class="text-center"><a href="#about">Convex Hull</a> • <a href="#box">Minimum Bounding Box</a> • <a href="#unrotate">Unrotate an Image</a></p>
 
 <p>The convex hull is the is the smallest area convex polygon containing the set of points inside it. The convex hull may be visualized as the shape enclosed by a rubber band stretched around the set of points.</p>
