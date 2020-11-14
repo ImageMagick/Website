@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Sponsor the ImageMagick Open-source Project</h1>
 <p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 
 

@@ -1,4 +1,11 @@
-<div class="magick-header"><dl><dt>2020-11-07  7.0.10-37  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-11-14  7.0.10-38  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-38 GIT revision 17815:bf51a3f1f:20201114</li>
+<dt>2020-11-07  7.0.10-38  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> add image settings support to -fx.</li>
+  <li> better support for TIFF YCbCr photometric.</li>
+  <li> verify TTF glyph format before dereferencing (reference    https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=26932).</li>
+  <li> force single HEIC image per container.</li>
+<dt>2020-11-07  7.0.10-37  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-37 GIT revision 17780:47a8392ef:20201107</li>
 <dt>2020-11-07  7.0.10-37  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> correct soversioning.</li>
@@ -13,6 +20,7 @@
   <li> Prefer ffmpeg over avconv.</li>
   <li> Support median image statistic and median property.</li>
   <li> Add -extend option to {display,animate,import}.</li>
+  <li> Support papersize property, e.g. [%papersize:A5].</li>
 <dt>2020-10-07  7.0.10-34  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-34 GIT revision 17695:de3284341:20201008</li>
 <dt>2020-10-05  7.0.10-34  &lt;quetzlzacatenango@image...&gt;</dt>

@@ -1,5 +1,5 @@
 <div class="magick-header">
-
+<h1 class="text-center">Command-line Tools</h1>
 <p class="lead magick-description">ImageMagick includes a number of command-line utilities for manipulating images.  Most of you are probably accustomed to editing images one at a time with a graphical user interface (GUI) with such programs as Gimp or Photoshop.  However, a GUI is not always convenient.  Suppose you want to process an image dynamically from a web script or you want to apply the same operations to many images or repeat a specific operation at different times to the same or different image.  For these types of operations, the command-line image processing utility is appropriate.</p>
 
 <p>The ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> tools exit with a status of 0 if the command line arguments have a proper syntax and no problems are encountered.  Expect a descriptive message and an exit status of 1 if any exception occurs such as improper syntax, a problem reading or writing an image, or any other problem that prevents the command from completing successfully.</p>

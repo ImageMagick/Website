@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Cite ImageMagick</h1>
 <p class="lead magick-description">Learn how to cite ImageMagick in your work.  Choose from these citation formats:</p>
 
 <h5>Citation in APA style</h5>

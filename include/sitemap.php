@@ -1,9 +1,10 @@
 <div class="magick-header">
-<p class="text-center"><a href="#overview">ImageMagick Overview</a> • <a href="#download">Download ImageMagick</a> • <a href="#install">Install ImageMagick</a> • <a href="#command-line">Command-line Tools</a> • <a href="#program-interfaces">Program Interfaces</a> • <a href="#formats">Image Formats</a> • <a href="#help">Getting Help</a> • <a href="#support">Support ImageMagick</a> • <a href="#miscellaneous">Miscellaneous Topics</a></p>
+<h1 class="text-center">ImageMagick Sitemap</h1>
+<p class="text-center"><a href="#overview">Overview</a> • <a href="#download">Download ImageMagick</a> • <a href="#install">Install ImageMagick</a> • <a href="#command-line">Command-line Tools</a> • <a href="#program-interfaces">Program Interfaces</a> • <a href="#formats">Image Formats</a> • <a href="#help">Getting Help</a> • <a href="#support">Support ImageMagick</a> • <a href="#miscellaneous">Miscellaneous Topics</a></p>
 
 <p class="lead magick-description">Use this ImageMagick sitemap to quickly jump to one of the areas of interest listed below.  If you can't find what you want on this page, try our <a href="<?php echo $_SESSION['RelativePath']?>/../script/search.php">site search</a>.</p>
 
-<h2><a class="anchor" id="overview"></a>ImageMagick Overview</h2>
+<h2><a class="anchor" id="overview"></a>Overview</h2>
 
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>

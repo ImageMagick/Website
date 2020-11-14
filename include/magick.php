@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">ImageMagick Magick Command-line Tool</h1>
 <p class="lead magick-description">Use the <code>magick</code> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>magick</code> command or see below for example usages of the command.</p>
 
 <p>We list a few examples of the <code>magick</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
