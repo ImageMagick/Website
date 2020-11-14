@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Overlap One Image over Another</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead magick-description">Use the <code>composite</code> program to overlap one image over another.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>composite</code> command or see below for example usages of the command.</p>
