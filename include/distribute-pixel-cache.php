@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Distributed Pixel Cache</h1>
 <p class="lead magick-description">A distributed pixel cache is an extension of the traditional pixel cache available on a single host.  The distributed pixel cache may span multiple servers so that it can grow in size and transactional capacity to support very large images or large image sequences.  Start up the pixel cache server on one or more hosts.  When you read or operate on an image and the local pixel cache resources are exhausted, ImageMagick contacts one or more of these remote pixel servers to store or retrieve pixels.</p>
 <p>For really large images or large image sequences, or if there is limited resources on your host, you can utilize a distributed pixel cache on one or more remote hosts. To get started, first set your shared secret in the <code>policy.xml</code> security policy configuration file:</p>
 <pre class="highlight">
