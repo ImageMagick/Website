@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Install ImageMagick from Source</h1>
 <p class="text-center"><a href="#unix">Install from Unix Source</a> • <a href="#windows">Install from Windows Source</a></p>
 
 <p class="lead magick-description">Chances are, ImageMagick is already installed on your computer if you are using some flavor of Unix, and its likely not installed if you are using some form of Windows.  In either case, you can type the following to find out:</p>
