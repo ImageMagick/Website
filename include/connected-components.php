@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Uniquely Label Connected Regions</h1>
 <p class="lead magick-description">Connected-component labeling (alternatively connected-component analysis, blob extraction, region labeling, blob discovery, or region extraction) uniquely labels connected components in an image.  The labeling process scans the image, pixel-by-pixel from top-left to bottom-right, in order to identify connected pixel regions, i.e. regions of adjacent pixels which share the same set of intensity values.  For example, let's find the objects in this image:</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif" width="256" height="171" class="image-slices" alt="purse" /></a>
