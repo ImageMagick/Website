@@ -29,7 +29,7 @@
 
 <pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
-#include &lt;wand/MagickWand.h>
+#include &lt;MagickWand/MagickWand.h>
 
 int main(int argc,char **argv)
 {
@@ -89,7 +89,7 @@ int main(int argc,char **argv)
 <pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
-#include &lt;wand/MagickWand.h>
+#include &lt;MagickWand/MagickWand.h>
 
 int main(int argc,char **argv)
 {
@@ -198,7 +198,7 @@ int main(int argc,char **argv)
 <pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
-#include &lt;wand/MagickWand.h>
+#include &lt;MagickWand/MagickWand.h>
 
 static MagickBooleanType SigmoidalContrast(WandView *pixel_view,
   const ssize_t y,const int id,void *context)
