@@ -110,7 +110,7 @@
 
   <dt class="col-md-4"><a class="anchor" id="rust"></a>Rust</dt>
 
-<dd class="col-md-8"><a href="https://github.com/nlfiedler/magick-rust">MagickRush</a> is a MagickWand bindings for the Rust language.</dd>
+<dd class="col-md-8"><a href="https://github.com/nlfiedler/magick-rust">MagickRust</a> is a MagickWand bindings for the Rust language.</dd>
 
 <dt class="col-md-4"><a class="anchor" id="tcl"></a>Tcl/Tk</dt>
 

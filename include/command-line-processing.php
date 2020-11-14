@@ -264,7 +264,7 @@ image-5.jpg</pre>
 <li><a href="#stack">Image Stack</a></li>
 </ul>
 
-<h4 class="magick-header"><a class="anchor" id="setting"></a>Image Setting</h4>
+<h4><a class="anchor" id="setting"></a>Image Setting</h4>
 
 <p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
@@ -281,7 +281,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 
 <pre class="highlight"><code>magick -channel RGB wand.png wizard.png images.png</code></pre>
 
-<h4 class="magick-header"><a class="anchor" id="operator"></a>Image Operator</h4>
+<h4><a class="anchor" id="operator"></a>Image Operator</h4>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
@@ -307,14 +307,14 @@ may be smaller than the whole image and resizing all the frames into the same
 size may result in an unexpected output. In such a case,
 <?php option("coalesce")?> should be used to prepare those frames.</p>
 
-<h4 class="magick-header"><a class="anchor" id="channel"></a>Image Channel Operator</h5>
+<h4<a class="anchor" id="channel"></a>Image Channel Operator</h5>
 <p>Operate directly on image channels:</p>
 <ul>
 <?php options("channel-fx", "separate");
 ?>
 </ul>
 
-<h4 class="magick-header"><a class="anchor" id="sequence"></a>Image Sequence Operator</h4>
+<h4><a class="anchor" id="sequence"></a>Image Sequence Operator</h4>
 
 <p>An image sequence operator differs from a setting in that it affects an
 image sequence immediately as it appears on the command-line.  Choose from
@@ -328,7 +328,7 @@ these image sequence operators:</p>
 
 <pre class="highlight"><code>magick mikayla.png picnic.png beach.png -append vacation.png</code></pre>
 
-<h4 class="magick-header"><a class="anchor" id="geometry"></a>Image Geometry</h4>
+<h4"><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
@@ -478,7 +478,7 @@ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</code><
 </p>
 
 
-<h4 class="magick-header"><a class="anchor" id="stack"></a>Image Stack</h4>
+<h4><a class="anchor" id="stack"></a>Image Stack</h4>
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 

@@ -1,5 +1,5 @@
 <div class="magick-header">
-
+<h1 class="text-center">MagickCore Image API for C</h1>
 <p  class="lead magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../api/MagickCore/index.html">MagickCore API</a> is a low-level interface between the C programming language and the ImageMagick image processing libraries and is recommended for wizard-level programmers only.  Unlike the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> C API which uses only a few opaque types and accessors, with MagickCore you almost exlusively access the structure members directly.  A description of the MagickCore public methods are found here:</p>
 
 <ul>

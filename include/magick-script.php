@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Image Scripting Language</h1>
 <p class="lead magick-description">Use the <code>magick-script</code> scripting language to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>magick</code> command or see below for example usages of the command.</p>
 
 <p>Here is an example script:</p>
