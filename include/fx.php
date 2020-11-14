@@ -1,5 +1,5 @@
 <div class="magick-header">
-<h1 class="text-center">Apply a Mathematical Expression to an Image</h1>
+<h1 class="text-center">FX Special Effects Image Operator</h1>
 <p class="text-center"><a href="#fx">The FX Special Effects Image Operator</a> • <a href="#anatomy">The Anatomy of an FX Expression</a></p>
 
 <a class="anchor" id="fx"></a>
