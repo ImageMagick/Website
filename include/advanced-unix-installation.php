@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Advanced Unix Installation</h1>
 <p class="text-center"><a href="#download">Download &amp; Unpack</a> • <a href="#configure">Configure</a>  • <a href="#build">Build</a> • <a href="#install">Install</a> • <a href="#linux">Linux-specific Build Instructions</a> • <a href="#macosx">Mac OS X-specific Build Instructions</a> • <a href="#mingw">MinGW-specific Build Instructions</a> • <a href="#problems">Dealing with Unexpected Problems</a></p>
 
 <p  class="lead magick-description">It's possible you don't want to concern yourself with advanced installation under Unix or Linux systems.  If so, you also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#unix">binary release</a>  or if you still want to install from source without all the fuss see the simple <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php#unix">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Unix or Linux systems, lets begin.</p>

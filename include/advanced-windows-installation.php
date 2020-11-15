@@ -1,5 +1,5 @@
 <div class="magick-header">
-
+<h1 class="text-center">Advanced Windows Installation</h1>
 <p class="lead magick-description">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
 
 <h2>Requirements</h2>
