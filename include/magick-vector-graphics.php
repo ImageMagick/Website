@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">Magick Vector Graphics</h1>
 <p class="text-center"><a href="magick-vector-graphics.php#overview">MVG Overview</a> • <a href="magick-vector-graphics.php#primitives">Drawing Primitives</a></p>
 
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
@@ -12,7 +13,7 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
 <p>and here is the result:</p>
 
 <ul>
-  <a href="../images/arc.png"><img src="../images/arc.png" width="100" height="60" alt="arc"></a>
+  <a href="../image/arc.png"><img src="../image/arc.png" width="100" height="60" alt="arc"></a>
 </ul>
 
 <p>When the drawing gets sufficiently complex, we recommend you assemble the graphic primitives into a MVG file. For our example, we use <a href="../source/piechart.mvg">piechart.mvg</a>:</p>
@@ -177,7 +178,7 @@ pop graphic-context
 <p>which produces this rendering:</p>
 
 <ul>
-  <a href="../images/piechart.png"><img src="../images/piechart.png" width="624" height="369" alt="piechart"></a>
+  <a href="../image/piechart.png"><img src="../image/piechart.png" width="624" height="369" alt="piechart"></a>
 </ul>
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
