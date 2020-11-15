@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">ImageMagick COM+ Component</h1>
 <p class="text-center"><a href="<?php echo $_SESSION['RelativePath']?>/../script/#build">Build ImageMagickObject From Source</a></p>
 
 <p class="lead magick-description">The ImageMagickObject is a COM+ compatible component that can be invoked from any language capable of using COM objects.  The intended use is for Windows Scripting Host VBS scripts and Visual Basic, but it is also available from to C++, ASP, and other languages like Delphi, Perl and PHP.</p>
