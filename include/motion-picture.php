@@ -2,7 +2,7 @@
 <h1 class="text-center">Motion Picture and Effects</h1>
 <p class="text-center"><a href="#log">Log Format</a> • <a href="#properties">DPX Properties</a> • <a href="#settings">DPX Settings</a></p>
 
-<p class="lead magick-description">DPX (SMPTE 268M-2003) - This format is used in Motion Picture and Effects industry that makes particular use of the extensive header information and the format's flexibility in being able to handle high dynamic range and logarithmic color values at a variety of bit depths using RGB or YCbCr pixel descriptions.  It is based on, but largely supersedes, Kodak's Cineon format that has more a more film specific header.</p>
+<p class="lead magick-description">DPX (SMPTE 268M-2003) - This format is used in Motion Picture and Effects industry that makes particular use of the extensive header information and the format's flexibility in being able to handle high dynamic range and logarithmic color values at a variety of bit depths using RGB or YCbCr pixel descriptions.  It is based on, but largely supersedes, Kodak's Cineon format that has a more film specific header.</p>
 
 <p>One example of it's use includes scanning film for use in post production. Each frame is stored as an individual DPX file ranging from 2k (2048 pixels wide) to 8k (8192 pixels wide - for IMAX frames) at anything between 8 to 64 bits per color component. A sequence of these might then be processed using compositing software, altering the color or adding visual effects. Once complete they might then be recorded digitally to tape or projected back on to film.</p>
 
