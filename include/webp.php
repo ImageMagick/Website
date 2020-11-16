@@ -106,7 +106,7 @@
   </tr>
   <tr>
     <td>thread-level=<var>value</var></td>
-    <td>enable multi-threaded encoding.</td>
+    <td>enable multi-threaded encoding: 0 = disabled, 1 = enabled.</td>
   </tr>
   <tr>
     <td>use-sharp-yuv=<var>value</var></td>
