@@ -1,4 +1,9 @@
-<div class="magick-header"><dl><dt>2020-11-14  7.0.10-38  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-11-15  7.0.10-39  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-39 GIT revision 17...</li>
+<dt>2020-11-07  7.0.10-39  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> support DPX 4:2:2 sampling.</li>
+  <li> fix shell injection vulnerability via the -authenticate option (reference    alex@cure...).</li>
+<dt>2020-11-14  7.0.10-38  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-38 GIT revision 17815:bf51a3f1f:20201114</li>
 <dt>2020-11-07  7.0.10-38  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> add image settings support to -fx.</li>

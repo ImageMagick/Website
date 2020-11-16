@@ -87,6 +87,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://en.wikipedia.org/wiki/APNG">APNG</a></td>
+    <td>RW</td>
+    <td>Animated Portable Network Graphics</td>
+    <td>Note, you must use an explicit image format specifier to read an APNG (<code>apng:myImage.apng</code>) image sequence, otherwise it assumes a PNG image and only reads the first frame.</td>
+  </tr>
+
+  <tr>
     <td>ART</td>
     <td>RW</td>
     <td>PFS: 1st Publisher</td>
