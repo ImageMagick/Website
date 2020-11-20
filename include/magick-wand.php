@@ -17,17 +17,15 @@
 
 <p>After you write your MagickWand program, compile it like this:</p>
 
-<pre class="highlight"><code>cc -o wand wand.c `pkg-config --cflags --libs MagickWand`
-</code></pre>
+<ul><pre class="highlight"><code>cc -o wand wand.c `pkg-config --cflags --libs MagickWand`</code></pre></ul>
 
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="highlight"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-</code></pre>
+<ul><pre class="highlight"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</code></pre></ul>
 
 <p>Here is a example program that utilizes the MagickWand API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>
 
-<pre class="pre-scrollable"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;MagickWand/MagickWand.h>
 
@@ -82,11 +80,11 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</code></pre>
+</code></pre></ul>
 
 <p>Here is another program that shows one way to get and set image pixels with the MagickWand API, <a href="<?php echo $_SESSION['RelativePath']?>/../source/contrast.c">contrast.c</a>. It reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk.</p>
 
-<pre class="pre-scrollable"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;MagickWand/MagickWand.h>
@@ -192,10 +190,10 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</code></pre>
+</code></pre></ul>
 <p><a class="anchor" id="wand-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
-<pre class="pre-scrollable"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;MagickWand/MagickWand.h>
@@ -301,6 +299,6 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</code></pre>
+</code></pre></ul>
 <p><a href="https://imagemagick.org/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
 </div>
