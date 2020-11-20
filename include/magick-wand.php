@@ -1,6 +1,6 @@
 <div class="magick-header">
 <h1 class="text-center">MagickWand Image API for C</h1>
-<p class="lead magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
+<p class="lead magick-description">The <a href="https://imagemagick.org/api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="https://imagemagick.org/api/MagickCore/index.html">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
 
 <ul>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-wand.php">Magick Wand Methods</a></li>
