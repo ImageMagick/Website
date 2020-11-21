@@ -13,7 +13,7 @@ rose.jpg JPEG 70x46 70x46+0+0 8-bit sRGB 2.36KB 0.000u 0:00.000
 </code></pre>
 
 <p>By default, <code>identify</code> provides the following output:</p>
-￼
+
 <p><code>Filename[frame #] image-format widthxheight page-widthxpage-height+x-offset+y-offset colorspace user-time elapsed-time</code></p>
 
 <p>Next, we look at the same image in greater detail:</p>
