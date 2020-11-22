@@ -375,6 +375,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>FL32</td>
+    <td>RW</td>
+    <td>FilmLight floating point image format</td>
+    <td></td>
+  </tr>
+   
+  <tr>
     <td><a href="https://flif.info/">FLIF</a></td>
     <td>RW</td>
     <td>Free Lossless Image Format</td>
