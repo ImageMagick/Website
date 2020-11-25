@@ -381,6 +381,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
+    <td>BilateralFilter</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
+    <td>smooth and reduce noise while preserving edges.</td>
+  </tr>
+
+  <tr>
     <td>BlackThreshold</td>
     <td>threshold=&gt;<i>color</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>force all pixels below the threshold intensity into black</td>
