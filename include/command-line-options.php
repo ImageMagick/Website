@@ -493,7 +493,7 @@ href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
 entry.  </p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="bilateral-filter"></a>-bilateral-filter <var>radius</var>x<var>sigma</var></h3>
+  <h3><a class="anchor" id="bilateral-filter"></a>-bilateral-filter <var>radius</var>x<var>sigma</var>{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</h3>
 </div>
 
 <p class="magick-description">smooth and reduce noise while preserving edges.</p>

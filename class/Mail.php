@@ -21,8 +21,8 @@
       $headers.='From: ' . $this->name . ' <' . $this->from .">\r\n";
       $headers.='Reply-To: ' . $this->name . ' <' . $this->from .">\r\n";
       $headers.='X-Mailer: PHP ' . phpversion();
-      mail($this->to,$this->subject,base64_encode($message),$headers,
-        '-f' . $this->to);
+      mail($this->to,$this->subject,chunk_split(base64_encode($message),76,
+        "\r\n"),$headers,'-f' . $this->to);
     }
   }
 ?>
