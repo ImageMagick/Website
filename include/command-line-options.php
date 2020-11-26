@@ -504,6 +504,18 @@ distance of pixels, but also on the radiometric differences (e.g., range
 differences, such as color intensity, depth distance, etc.). This preserves
 sharp edges.</p>
 
+<p>The intensity sigma is in the intensity space. A larger value means
+that farther colors within the pixel neighborhood (see spatial_sigma)
+will be mixed together, resulting in larger areas of semi-equal color.</p>
+
+<p>The spatial sigma is in the coordinate space. A larger value means that
+farther pixels influence each other as long as their colors are close
+enough (see intensity_sigma ). When the neigborhood diameter is greater
+than zero, it specifies the neighborhood size regardless of
+spatial_sigma. Otherwise, the neigborhood diameter is proportional to
+spatial_sigma.</p>
+
+
 <div style="margin: auto;">
   <h3><a class="anchor" id="black-point-compensation"></a>-black-point-compensation</h3>
 </div>
