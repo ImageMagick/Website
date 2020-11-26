@@ -135,7 +135,7 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-smoothing">-bilateral-smoothing <var>geometry</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-blur">-bilateral-blur <var>geometry</var></a></td>
     <td>non-linear, edge-preserving, and noise-reducing smoothing filter</td>
   </tr>
 
