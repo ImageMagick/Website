@@ -381,7 +381,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
-    <td>BilateralFilter</td>
+    <td>BilateralSmoothing</td>
     <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}</td>
     <td>a non-linear, edge-preserving, and noise-reducing smoothing filter for images.  It replaces the intensity of each pixel with a weighted average of intensity values from nearby pixels. This weight is based on a Gaussian distribution.  The weights depend not only on Euclidean distance of pixels, but also on the radiometric differences (e.g., range differences, such as color intensity, depth distance, etc.). This preserves sharp edges.</td>
   </tr>
