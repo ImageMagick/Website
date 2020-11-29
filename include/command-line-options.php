@@ -519,7 +519,7 @@ enough (see intensity-sigma ). When the neigborhood diameter is greater
 than zero, it specifies the neighborhood size regardless of
 spatial-sigma. Otherwise, the neigborhood diameter is proportional to
 spatial-sigma.</p>
-<p>The default value for the intensity and spatial sigmas are <var>2*radius</var> and <var>0.5*radius</var> respectively.</p>
+<p>The default value for the intensity and spatial sigmas are <var>2*diameter</var> and <var>0.5*diameter</var> respectively.</p>
 
 
 <div style="margin: auto;">
