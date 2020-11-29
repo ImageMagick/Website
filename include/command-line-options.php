@@ -152,6 +152,7 @@ matrix determinant has a sufficiently small absolute value it is rejected.</p>
 <p>Used to set a flag on an image indicating whether or not to use existing alpha
 channel data, to create an alpha channel, or to perform other operations on the alpha channel.  Choose the argument <var>type</var> from the list below.</p>
 
+<div class="pre-scrollable">
 <dl class="row">
     <dt class="col-md-4">Activate</dt>
     <dd class="col-md-8">
@@ -226,13 +227,15 @@ channel data, to create an alpha channel, or to perform other operations on the 
        and thus can compress better.
        </dd>
 </dl>
+</div>
+<br/>
 
 <p>Note that while the obsolete <code>+matte</code> operation was the
 same as "<code><a href="#alpha" >-alpha</a> Off</code>", the <code>
 >-matte</code> operation was the same as "<code><a href="#alpha" >-alpha</a>
 Set</code>" and not "<code><a href="#alpha" >-alpha</a> On</code>".  </p>
 
-<div style="margin: auto;">
+<div class="pre-scrollable" style="margin: auto;">
  <h3><a class="anchor" id="annotate"></a>
  -annotate <var>degrees</var> <var>text</var><br />
  -annotate <var>Xdegrees</var>x<var>Ydegrees</var> <var>text</var><br /> -annotate <var>Xdegrees</var>x<var>Ydegrees</var> {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var><br /> -annotate {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var></h3>
@@ -402,12 +405,14 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 
 <p>Here are the valid methods:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No method specified (equivalent to '<code>OTSU</code>').</dd>
 <dt class="col-md-4">Kapur</dt><dd class="col-md-8">maximum entropy thresholding.</dd>
 <dt class="col-md-4">OTSU</dt><dd class="col-md-8">cluster-based image thresholding.</dd>
 <dt class="col-md-4">Triangle</dt><dd class="col-md-8">a geometric thresholding method.</dd>
 </dl>
+</div>
 
 <p>The computed threshold is returned as the <kbd>auto-threshold:threshold</kbd> image property. To instead print to your device, use <kbd>-define auto-threshold:threshold=true</kbd>.</p>
 
@@ -493,7 +498,7 @@ href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
 entry.  </p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="bilateral-blur"></a>-bilateral-blur <var>radius</var>x<var>sigma</var>{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</h3>
+  <h3><a class="anchor" id="bilateral-blur"></a>-bilateral-blur <var>radius</var>{x<var>sigma</var>}{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</h3>
 </div>
 
 <p class="magick-description">a non-linear, edge-preserving, and noise-reducing
@@ -531,7 +536,7 @@ spatial-sigma.</p>
 <p> The threshold value can be given as a percentage or as an absolute integer
 value within [0, <var>QuantumRange</var>] corresponding to the
 desired <?php option("channel"); ?> value. See <?php option("threshold"); ?>
-for more details on thresholds and resulting values.  </p>
+ for more details on thresholds and resulting values.  </p>
 
 
 <div style="margin: auto;">
@@ -563,7 +568,7 @@ the background image is weighted by the exact opposite amount. That is a
 <div style="margin: auto;">
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="blur"></a>-blur <var>radius</var><br />-blur <var>radius</var>x<var>sigma</var></h3>
+  <h3><a class="anchor" id="blur"></a>-blur <var>radius</var><br />-blur <var>radius</var>{x<var>sigma</var>}</h3>
 </div>
 
 <p class="magick-description">Reduce image noise and reduce detail levels.</p>
@@ -610,6 +615,7 @@ ignored. </p>
 
 <p>As of IM 6.7.8-8, the <var>geometry</var> arguments behave as follows:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4"><var>value</var></dt>
 <dd class="col-md-8">value is added to both left/right and top/bottom</dd>
@@ -636,6 +642,7 @@ ignored. </p>
 <dt class="col-md-4">0%<code>x</code><var>value-y</var>%</dt>
 <dd class="col-md-8">value-y % of height is added to top/bottom and left/right are unchanged</dd>
 </dl>
+</div>
 
 <p>Set the border color by preceding with the <a
 href="#bordercolor">-bordercolor</a> setting.</p>
@@ -711,12 +718,12 @@ symbol is no different than leaving it off.</p>
 <p class="magick-description">(This option has been replaced by the <a href='#limit'>-limit</a> option).</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="canny"></a>-canny <var>radius</var><br/>-canny <var>radius</var>x<var>sigma</var>{<var>+lower-percent</var>}{<var>+upper-percent</var>}</h3>
+  <h3><a class="anchor" id="canny"></a>-canny <var>radius</var><br/>-canny <var>radius</var>{x<var>sigma</var>}{<var>+lower-percent</var>}{<var>+upper-percent</var>}</h3>
 </div>
 
 <p class="magick-description">Canny edge detector uses a multi-stage algorithm to detect a wide range of edges in the image.</p>
 
-<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown. The <var>radius</var>x<var>sigma</var> controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
+<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown. The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="caption"></a>-caption <var>string</var></h3>
@@ -792,28 +799,28 @@ abbreviated as a concatenation of the letters '<code>R</code>', '<code>G</code>'
 '<code>M</code>', '<code>Y</code>', '<code>K</code>'.</p>
 
 <p>The numerals 0 to 31 may also be used to specify channels, where 0 to 5 are: <br />
+<ul>
 '<code>0</code>' equals <code>Red</code> or <code>Cyan</code> <br />
 '<code>1</code>' equals <code>Green</code> or <code>Magenta</code> <br />
 '<code>2</code>' equals <code>Blue</code> or <code>Yellow</code> <br />
 '<code>3</code>' equals <code>Black</code> <br />
 '<code>4</code>' equals <code>Alpha</code> or <code>Opacity</code> <br />
 '<code>5</code>' equals <code>Index</code></p>
+</ul>
 
 <p>For example, to only select the <code>Red</code> and <code>Blue</code> channels
 you can use any of the following:</p>
-<pre class="highlight">
+<ul><pre class="highlight">
 <code>-channel Red,Blue</code>
 <code>-channel R,B</code>
 <code>-channel RB</code>
 <code>-channel 0,2</code>
-</pre>
+</pre></ul>
 
 <p>All the channels that are present in an image can be specified using the
 special channel type <code>All</code>. Not all operators are 'channel capable',
 but generally any operators that are generally 'grey-scale' image operators,
 will understand this setting.  See individual operator documentation. </p>
-
-<br/>
 
 <p>On top of the normal channel selection an extra flag can be specified,
 '<code>Sync</code>'.  This is turned on by default and if set means that
@@ -1213,6 +1220,7 @@ Undefined
 
 <p>For a more accurate color conversion to or from the linear RGB, CMYK, or grayscale colorspaces, use the <a href="#profile">-profile</a> option.  Note, ImageMagick assumes the sRGB colorspace if the image format does not indicate otherwise.  For colorspace conversion, the gamma function is first removed to produce linear RGB.</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
         <caption>Conversion of RGB to Other Color Spaces</caption>
         <tr><th valign="middle">CMY</th></tr>
@@ -1310,6 +1318,7 @@ Undefined
         <tr><td valign="middle">U=(−0.14740*R−0.28950*G+0.43690*B)*(<var>QuantumRange</var>+1)/2</td></tr>
         <tr><td valign="middle">V=(0.61500*R−0.51500*G−0.10000*B)*(<var>QuantumRange</var>+1)/2</td></tr>
 </table>
+</div>
 
 <p>Note the scRGB colorspace requires HDRI support otherwise it behaves just like linear RGB.</p>
 
@@ -1968,12 +1977,14 @@ animation is to be overlaid onto the display. </p>
 
 <p>Here are the valid methods:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No disposal specified (equivalent to '<code>none</code>').</dd>
 <dt class="col-md-4">None</dt><dd class="col-md-8">1:  Do not dispose, just overlay next frame image.</dd>
 <dt class="col-md-4">Background</dt><dd class="col-md-8">2:  Clear the frame area with the background color.</dd>
 <dt class="col-md-4">Previous</dt><dd class="col-md-8">3:  Clear to the image prior to this frames overlay.</dd>
 </dl>
+</div>
 
 <p>You can also use the numbers given above, which is what the GIF format
 uses internally to represent the above settings. </p>
@@ -2021,6 +2032,7 @@ and meaning of the floating point values depends on the distortion <var>method</
 
 <p>Choose from these distortion types:</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <tr>
     <th style="width: 8%">Method</th>
@@ -2312,6 +2324,7 @@ and meaning of the floating point values depends on the distortion <var>method</
   </tr>
 
 </table>
+</div>
 
 <p>To print a complete list of distortion methods, use <a href="#list">-list
 distort</a>.</p>
@@ -2466,6 +2479,7 @@ operations.</p>
 
 <p>The shape primitives:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">point</dt><dd class="col-md-8">          x,y</dd>
 <dt class="col-md-4">line</dt><dd class="col-md-8">           x0,y0 x1,y1</dd>
@@ -2480,6 +2494,7 @@ operations.</p>
 <dt class="col-md-4">path</dt><dd class="col-md-8">specification  </dd>
 <dt class="col-md-4">image</dt><dd class="col-md-8">          operator x0,y0 w,h filename</dd>
 </dl>
+</div>
 
 <p>The text primitive:</p>
 
@@ -2499,6 +2514,7 @@ scope to the <a href="#draw">-draw</a> option in which it appears.</p>
 
 <p>The transformation primitives:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">rotate</dt><dd class="col-md-8">degrees</dd>
 <dt class="col-md-4">translate</dt><dd class="col-md-8">dx,dy</dd>
@@ -2506,13 +2522,16 @@ scope to the <a href="#draw">-draw</a> option in which it appears.</p>
 <dt class="col-md-4">skewX</dt><dd class="col-md-8">degrees</dd>
 <dt class="col-md-4">skewY</dt><dd class="col-md-8">degrees</dd>
 </dl>
+</div>
 
 <p>The pixel operation primitives:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">color</dt><dd class="col-md-8">x0,y0 method</dd>
 <dt class="col-md-4">matte</dt><dd class="col-md-8">x0,y0 method</dd>
 </dl>
+</div>
 
 <p>The shape primitives are drawn in the color specified by the preceding <a
 href="#fill">-fill</a> setting.  For unfilled shapes, use <a
@@ -2795,6 +2814,7 @@ a "normalized pixel" is that number divided by the maximum
 normalized pixels are used, they are restored, following the other
 calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <col width="25%" />
   <col width="75%" />
@@ -2848,6 +2868,7 @@ calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
    <tr><td>ThresholdWhite </td>  <td>Threshold pixels to maximum values above <var>value</var>.  </td></tr>
  </tbody>
  </table>
+</div>
 
 <p>The specified functions are applied only to each previously set <a
 href="#channel" >-channel</a> in the image. If necessary, the results of the
@@ -3195,6 +3216,7 @@ filter</a> option.</p>
 use of these expert settings (see also <a href="#define" >-define</a> and <a
 href="#set" >-set</a>):-</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <tr>
     <td>-define filter:blur=<var>factor</var></td>
@@ -3307,6 +3329,7 @@ href="#set" >-set</a>):-</p>
   </tr>
 
 </table>
+</div>
 
 <p>For example, to get a 8 lobe jinc windowed sinc filter (Genseng filter?):</p>
 
@@ -3519,6 +3542,7 @@ Arctan
 <p>To print a complete list of <a href="#function">-function</a> operators,
 use <a href="#list">-list function</a>. Descriptions follow.</p>
 
+<div class="pre-scrollable">
 <dl class="row">
   <dt class="col-md-4">Polynomial</dt>
   <dd class="col-md-8"><p>The <code>Polynomial</code> function takes an arbitrary number of parameters,
@@ -3542,6 +3566,7 @@ polynomials) of the <a href="#evaluate">-evaluate</a> operator. The <a
 href="#level">-level</a> operator also affects channels linearly. Some
 correspondences follow.</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <tr>
         <td>-evaluate Set <var>value</var> </td>
@@ -3566,6 +3591,7 @@ correspondences follow.</p>
         <td>(Reduce contrast. Here, A=(white-black)/100 and  B=black/100.)</td>
   </tr>
 </table>
+</div>
 
 <p>The <code>Polynomial</code> function gives great versatility, since
 polynomials can be used to fit any continuous curve to any degree of accuracy
@@ -3603,6 +3629,7 @@ is 0.</p>
 <code>Cos</code> of the <a href="#evaluate">-evaluate</a> operator by allowing
 varying amplitude, phase and bias. The correspondence is as follows.</p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <tr>
         <td>-evaluate Sin <var>freq</var> </td>
@@ -3613,6 +3640,7 @@ varying amplitude, phase and bias. The correspondence is as follows.</p>
         <td>-function Sinusoid <var>freq</var>,90 </td>
   </tr>
 </table>
+</div>
   </dd>
 <dt class="col-md-4">ArcSin</dt>
 <dd class="col-md-8">
@@ -3648,6 +3676,7 @@ All these values can be adjusted via the arguments.</p>
 </code></pre>
   </dd>
 </dl>
+</div>
 
 
 
@@ -3720,7 +3749,7 @@ chunk, use</p>
 <p>Note that gamma adjustments are also available via the <a href="#level">-level</a> operator.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="gaussian-blur"></a>-gaussian-blur <var>radius</var><br />-gaussian-blur <var>radius</var>x<var>sigma</var></h3>
+  <h3><a class="anchor" id="gaussian-blur"></a>-gaussian-blur <var>radius</var><br />-gaussian-blur <var>radius</var>{x<var>sigma</var>}</h3>
 </div>
 
 <p class="magick-description">Blur the image with a Gaussian operator.</p>
@@ -4052,6 +4081,7 @@ an image with red, green, and blue pixel components. Typically the
 the pixel values to linear-RGB or non-linear sRGB colorspace before
 being applied to calculate the final greyscale value. </p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Rec601Luma</dt><dd class="col-md-8">      0.298839R' + 0.586811G'+ 0.114350B'</dd>
 <dt class="col-md-4">Rec601Luminance</dt><dd class="col-md-8"> 0.298839R + 0.586811G + 0.114350B</dd>
@@ -4060,6 +4090,7 @@ being applied to calculate the final greyscale value. </p>
 <dt class="col-md-4">Brightness</dt><dd class="col-md-8">      max(R', G', B')</dd>
 <dt class="col-md-4">Lightness</dt><dd class="col-md-8">       (min(R', G', B') + max(R', G', B')) / 2.0</dd>
 </dl>
+</div>
 
 <p>Note that the above R,G,B values is the image's linear-RGB values, while
 R',G',B' are sRGB non-linear values. </p>
@@ -4068,11 +4099,13 @@ R',G',B' are sRGB non-linear values. </p>
 current value in the images respective R,G,B channel regardless of
 what that is, or what colorspace the image is currently using.</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Average</dt><dd class="col-md-8">(R' + G' + B') / 3.0</dd>
 <dt class="col-md-4">MS</dt><dd class="col-md-8">(R'^2 + G'^2 + B'^2) / 3.0</dd>
 <dt class="col-md-4">RMS</dt><dd class="col-md-8">sqrt( (R'^2 + G'^2 + B'^2) / 3.0 )</dd>
 </dl>
+</div>
 
 <p>These methods are often used for other purposes, such as generating a
 grayscale difference image between two color images (using <a href="#compose"
@@ -4176,6 +4209,7 @@ image. This setting determines how the color is determined from the colors of
 the pixels surrounding that point.  That is how to determine the color of a
 point that falls between two, or even four different colored pixels. </p>
 
+<div class="pre-scrollable">
 <dl class="row">
   <dt class="col-md-4">average</dt>
   <dd class="col-md-8">The average color of the surrounding four pixels</dd>
@@ -4202,6 +4236,7 @@ point that falls between two, or even four different colored pixels. </p>
   <dt class="col-md-4">spline</dt>
   <dd class="col-md-8">Direct spline curves (colors are blurred)</dd>
 </dl>
+</div>
 
 <p>This most important for distortion operators such as <a href="#distort"
 >-distort</a>, <a href="#implode" >-implode</a>, <a href="#transform"
@@ -4238,7 +4273,7 @@ lookup for positions outside the boundaries of the image. </p>
 <p class="magick-description">Kmeans (iterative) color reduction (e.g. <code>-kmeans 5x100+0.01</code>). Colors is the desired number of colors. Initial colors are found using color quantization. Iterations is the stopping number of iterations (default=100). Convergence is the stopping threshold on the color change between iterations (default=0.01). Processing finishes, if either iterations or tolerance are reached. Use <code>-define kmeans:seed-colors=<var>color-list</var></code> to initialize the colors, where color-list is a semicolon delimited list of seed colors (e.g. <code>-define kmeans:seed-colors="red;sRGB(19,167,254);#00ffff</code>). A color list overrides the color quantization. A non-empty list of colors overrides the number of colors. Any unassigned initial colors are assigned  random colors from the image.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="kuwahara"></a>-kuwahara <var>radius</var><br />-kuwahara <var>radius</var>x<var>sigma</var></h3>
+  <h3><a class="anchor" id="kuwahara"></a>-kuwahara <var>radius</var><br />-kuwahara <var>radius</var>{x<var>sigma</var>}</h3>
 </div>
 
 <p class="magick-description">edge preserving noise reduction filter.</p>
@@ -4315,6 +4350,7 @@ the local background color, from which to separate the foreground color. </p>
 which may represent either a set of overlaid 'image layers', a GIF disposal
 animation, or a fully-'coalesced' animation sequence. </p>
 
+<div class="pre-scrollable">
 <table class="table table-sm table-hover">
   <tbody>
   <tr>
@@ -4565,6 +4601,7 @@ animation, or a fully-'coalesced' animation sequence. </p>
 
   </tbody>
 </table>
+</div>
 
 <p>To print a complete list of layer types, use <a href="#list">-list layers</a>.</p>
 
@@ -4888,6 +4925,7 @@ href="#debug">-debug</a> option is active.</p>
 <p>You can display the following components by embedding special format
 characters:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">%d</dt><dd class="col-md-8">domain</dd>
 <dt class="col-md-4">%e</dt><dd class="col-md-8">event</dd>
@@ -4902,6 +4940,7 @@ characters:</p>
 <dt class="col-md-4">\n</dt><dd class="col-md-8">newline</dd>
 <dt class="col-md-4">\r</dt><dd class="col-md-8">carriage return</dd>
 </dl>
+</div>
 
 <p>For example:</p>
 
@@ -4963,6 +5002,7 @@ the type and <code>display</code> searches the list of colormap types in
 
 <p>Here are the valid components of a map:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">r</dt><dd class="col-md-8">  red pixel component</dd>
 <dt class="col-md-4">g</dt><dd class="col-md-8">  green pixel component</dd>
@@ -4976,6 +5016,7 @@ the type and <code>display</code> searches the list of colormap types in
 <dt class="col-md-4">k</dt><dd class="col-md-8">  black pixel component</dd>
 <dt class="col-md-4">p</dt><dd class="col-md-8">  pad component (always 0)</dd>
 </dl>
+</div>
 
 <p>You can specify as many of these components as needed in any order (e.g.
 bgr).  The components can repeat as well (e.g. rgbr).</p>
@@ -5032,6 +5073,7 @@ name. </p>
 
 <p>Choose from:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz affected)</dd>
 <dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
@@ -5046,6 +5088,7 @@ name. </p>
 <dt class="col-md-4">RMSE</dt><dd class="col-md-8">  root mean squared (normalized root mean squared)</dd>
 <dt class="col-md-4">SSIM</dt><dd class="col-md-8">  structural similarity index</dd>
 </dl>
+</div>
 
 <p>Control the '<code>AE</code>', or absolute count of pixels that are different,
 with the <a href="#fuzz" >-fuzz</a> factor (ignore pixels which
@@ -5188,7 +5231,7 @@ Morphology</a>. </p>
 
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="motion-blur"></a>-motion-blur <var>radius</var><br />-motion-blur <var>radius</var>x<var>sigma</var>+<var>angle</var></h3>
+  <h3><a class="anchor" id="motion-blur"></a>-motion-blur <var>radius</var><br />-motion-blur <var>radius</var>{x<var>sigma</var>}+<var>angle</var></h3>
 </div>
 
 <p class="magick-description">simulate motion blur.</p>
@@ -5674,6 +5717,7 @@ compression.</p>
 <p>If filter-type is 4 or less, the specified PNG filter-type is used for
 all scanlines:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">0</dt><dd class="col-md-8">none</dd>
 <dt class="col-md-4">1</dt><dd class="col-md-8">sub</dd>
@@ -5681,6 +5725,7 @@ all scanlines:</p>
 <dt class="col-md-4">3</dt><dd class="col-md-8">average</dd>
 <dt class="col-md-4">4</dt><dd class="col-md-8">Paeth</dd>
 </dl>
+</div>
 
 <p>If filter-type is 5, adaptive filtering is used when quality is greater
 than 50 and the image does not have a color map, otherwise no filtering is
@@ -6109,7 +6154,7 @@ of the color clusters is returned.</p>
 
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="selective-blur"></a>-selective-blur <var>radius</var><br />-selective-blur <var>radius</var>x<var>sigma</var>{<var>+threshold</var>}</h3>
+  <h3><a class="anchor" id="selective-blur"></a>-selective-blur <var>radius</var><br />-selective-blur <var>radius</var>{x<var>sigma</var>}{<var>+threshold</var>}</h3>
 </div>
 
 <p class="magick-description">Selectively blur pixels within a contrast threshold.</p>
@@ -6280,7 +6325,7 @@ and the display must support the <var>MIT-SHM</var> extension.
 Otherwise, this option is ignored. The default is <code>True</code>.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="sharpen"></a>-sharpen <var>radius</var><br />-sharpen <var>radius</var>x<var>sigma</var></h3>
+  <h3><a class="anchor" id="sharpen"></a>-sharpen <var>radius</var><br />-sharpen <var>radius</var>{x<var>sigma</var>}</h3>
 </div>
 
 <p class="magick-description">sharpen the image.</p>
@@ -6405,7 +6450,7 @@ image or tell the number of colors in a <code>MAP</code> image file, (e.g. -size
 </code></pre>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="sketch"></a>-sketch <var>radius</var><br />-sketch <var>radius</var>x<var>sigma</var>+<var>angle</var></h3>
+  <h3><a class="anchor" id="sketch"></a>-sketch <var>radius</var><br />-sketch <var>radius</var>{x<var>sigma</var>}+<var>angle</var></h3>
 </div>
 
 <p class="magick-description">simulate a pencil sketch.</p>
@@ -6454,6 +6499,7 @@ exposing a photographic film to light during the development process.</p>
 <p class="magick-description"> color the given image using the specified points of color, and filling the other intervening colors using the given methods. </p>
 
 
+<div class="pre-scrollable">
 <dl class="row">
     <dt class="col-md-4">barycentric</dt>
     <dd class="col-md-8">three point triangle of color given 3 points.
@@ -6478,6 +6524,7 @@ exposing a photographic film to light during the development process.</p>
         '<code>shepards</code>'  Generating spots of color in a sea of the
         average of colors. </dd>
 </dl>
+</div>
 
 <p>The points are placed according to the images location on the virtual
 canvas (<a href="#page" >-page</a> or <a href="#repage" >-repage</a>
@@ -6541,6 +6588,8 @@ blend.</p>
 <p class="magick-description">replace each pixel with corresponding statistic from the neighborhood.</p>
 
 <p>Choose from these statistic types:</p>
+
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Gradient</dt><dd class="col-md-8">maximum difference (max - min) value in neighborhood</dd>
 <dt class="col-md-4">Maximum</dt><dd class="col-md-8">maximum value per channel in neighborhood</dd>
@@ -6552,6 +6601,7 @@ blend.</p>
 <dt class="col-md-4">RMS</dt><dd class="col-md-8">root mean square value per channel in neighborhood</dd>
 <dt class="col-md-4">StandardDeviation</dt><dd class="col-md-8"> standard deviation value per channel in neighborhood</dd>
 </dl>
+</div>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="stegano"></a>-stegano <var>offset</var></h3>
@@ -6578,6 +6628,7 @@ this information to recover the steganographic image (e.g. display -size
 
 <p class="magick-description">pixel storage type.  Here are the valid types:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">char</dt><dd class="col-md-8">unsigned characters</dd>
 <dt class="col-md-4">double</dt><dd class="col-md-8">doubles</dd>
@@ -6587,6 +6638,7 @@ this information to recover the steganographic image (e.g. display -size
 <dt class="col-md-4">quantum</dt><dd class="col-md-8">pixels in the native depth of your ImageMagick distribution</dd>
 <dt class="col-md-4">short</dt><dd class="col-md-8">unsigned shorts</dd>
 </dl>
+</div>
 
 <p>Float and double types are normalized from 0.0 to 1.0 otherwise the pixels
 values range from 0 to the maximum value the storage type can support.</p>
@@ -7057,7 +7109,7 @@ with the <a href="#density">-density</a> option.</p>
 
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="unsharp"></a>-unsharp <var>radius</var><br />-unsharp <var>radius</var>x<var>sigma</var>{<var>+gain</var>}{<var>+threshold</var>}</h3>
+  <h3><a class="anchor" id="unsharp"></a>-unsharp <var>radius</var><br />-unsharp <var>radius</var>{x<var>sigma</var>}{<var>+gain</var>}{<var>+threshold</var>}</h3>
 </div>
 
 <p class="magick-description">sharpen the image with an unsharp mask operator.</p>
@@ -7069,6 +7121,7 @@ a radius of 0 to have the method select a suitable radius.</p>
 
 <p>The parameters are:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">radius</dt>
 <dd class="col-md-8">The radius of the Gaussian, in pixels,  not counting the center pixel (default 0).</dd>
@@ -7079,6 +7132,7 @@ a radius of 0 to have the method select a suitable radius.</p>
 <dt class="col-md-4">threshold</dt>
 <dd class="col-md-8">The threshold, as a fraction of <var>QuantumRange</var>, needed to apply the difference amount (default 0.05).</dd>
 </dl>
+</div>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="verbose"></a>-verbose</h3>
@@ -7122,6 +7176,7 @@ image, but could also be set to a specify background color. </p>
 
 <p>Choose from these methods:</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">background</dt><dd class="col-md-8">the area surrounding the image is the background color</dd>
 <dt class="col-md-4">black</dt><dd class="col-md-8">the area surrounding the image is black</dd>
@@ -7139,6 +7194,7 @@ image, but could also be set to a specify background color. </p>
 <dt class="col-md-4">vertical-tile-edge</dt><dd class="col-md-8">vertically tile the image and replicate the side edge pixels</dd>
 <dt class="col-md-4">white</dt><dd class="col-md-8">the area surrounding the image is white</dd>
 </dl>
+</div>
 
 <p>The default value is "edge".</p>
 
@@ -7206,6 +7262,7 @@ percentage, which defaults to 100 percent (no color change). </p>
 the currently selected font family. Use a positive integer for
 <var>fontWeight</var> or select from the following.</p>
 
+<div class="pre-scrollable">
 <dl class="row">
 <dt class="col-md-4">Thin </dt>
 <dd class="col-md-8">Same as <var>fontWeight</var> = 100.</dd>
@@ -7226,6 +7283,7 @@ the currently selected font family. Use a positive integer for
 <dt class="col-md-4">Heavy </dt>
 <dd class="col-md-8">Same as <var>fontWeight</var> = 900.</dd>
 </dl>
+</div>
 <br/>
 
 <p>To print a complete list of weight types, use <a href="#list">-list weight</a>.</p>
@@ -7238,7 +7296,7 @@ href="#stretch">-stretch</a>, and <a href="#style">-style</a>. </p>
   <h3><a class="anchor" id="white-balance"></a>-white-balance</h3>
 </div>
 <p>Applies white balancing to an image according to a grayworld assumption in the LAB colorspace.</p>
-<p>Use <kbd>-define white-balance:vibrance=<em>value{%}</em> to change the color vibrance of the a &amp; b channels.</p>
+<p>Use <kbd>-define white-balance:vibrance=<em>value{%}</em></kdb> to change the color vibrance of the a &amp; b channels.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="white-point"></a>-white-point <var>x,y</var></h3>
