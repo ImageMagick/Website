@@ -498,7 +498,7 @@ href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
 entry.  </p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="bilateral-blur"></a>-bilateral-blur <var>radius</var>{x<var>sigma</var>}{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</h3>
+  <h3><a class="anchor" id="bilateral-blur"></a>-bilateral-blur <var>width</var>{x<var>height</var>}{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</h3>
 </div>
 
 <p class="magick-description">a non-linear, edge-preserving, and noise-reducing
