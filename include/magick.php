@@ -137,6 +137,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-blur">-bilateral-blur <var>geometry</var></a></td>
+    <td>non-linear, edge-preserving, and noise-reducing smoothing filter</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#black-threshold">-black-threshold <var>value</var></a></td>
     <td>force all pixels below the threshold into black</td>
   </tr>
