@@ -354,6 +354,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>FARBFELD</td>
+    <td>RW</td>
+    <td>Farbfeld lossless image format</td>
+    <td>sRGB 16-bit RGBA lossless image format</td>
+  </tr>
+   
+  <tr>
     <td>FAX</td>
     <td>RW</td>
     <td>Group 3 TIFF</td>
