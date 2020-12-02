@@ -281,7 +281,6 @@ MagickWand-config</code></pre>
 
 <p>The Bessel filter was removed as it is an alias for Jinc.  Use -filter Jinc instead.</p>
 
-
 <h2><a class="anchor" id="cli"></a>Shell API or Command-line Interface</h2>
 
 <p>As mentioned the primary focus of the changes to the Shell API or Command
