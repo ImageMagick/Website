@@ -1,6 +1,27 @@
-<div class="magick-header"><dl><dt>2020-11-19  7.0.10-40  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-40 GIT revision 17...</li>
-<dt>2020-11-19  7.0.10-39  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-11-30  7.0.10-45  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-45 GIT revision 17972:6c0cb7f72:20201130</li>
+<dt>2020-11-30  7.0.10-45  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> added support for the farbfeld format (reference    https://github.com/ImageMagick/ImageMagick/discussions/2664).</li>
+<dt>2020-11-29  7.0.10-45  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> specify the bilateral neighbor as width/height rather than radius/sigma.</li>
+<dt>2020-11-28  7.0.10-44  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-44 GIT revision 17948:7e96e9fdd:20201128</li>
+<dt>2020-11-26  7.0.10-44  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> correct reading of first row in TIFF decoder.</li>
+<dt>2020-11-24  7.0.10-44  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> correct rotation parameter for SVG transform.</li>
+<dt>2020-11-23  7.0.10-43  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-43 GIT revision 17885:be852878e:20201123</li>
+<dt>2020-11-23  7.0.10-43  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> add padding to AcquirePolicyString().</li>
+<dt>2020-11-22  7.0.10-42  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-42 GIT revision 17881:d228ef95e:20201122</li>
+<dt>2020-11-21  7.0.10-42  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> revert memory patch to avert possible thread lock.</li>
+  <li> add support for FilmLight FL32 image format.</li>
+<dt>2020-11-20  7.0.10-40  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-40 GIT revision 17860:2594cd0a5:20201120 </li>
+<dt>2020-11-19  7.0.10-40  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> remove Linux shell artifact from Windows delegate configuration file.</li>
   <li> fix shell injection vulnerability via the -authenticate option (reference    alex@cure...).</li>
 <dt>2020-11-17  7.0.10-39  &lt;quetzlzacatenango@image...&gt;</dt>
