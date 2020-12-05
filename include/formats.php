@@ -54,15 +54,6 @@ negatives required by the format.</p>
 directly in LAB space, but ImageMagick permits it and generally returns
 reasonable results.</p>
 
-<p>Prior to IM 6.7.8-2, the A and B channels has a discontinuity, making them
-non-linear. As such to process such images, you needed to first convert the
-colorspace some other linear colorspace, before apply your processing
-operator. Afterward you can transform back to the LAB colorspace.  For
-example,</p>
-
-<pre class="highlight"><code>  magick lab.tif -colorspace RGB -resize 50% -colorspace Lab resize.jpg
-</code></pre>
-
 <h2><a class="anchor" id="supported"></a>Supported Image Formats</h2>
 
 <p>ImageMagick supports reading over 100 major file formats (not
