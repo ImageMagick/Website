@@ -1261,7 +1261,7 @@ the supported image formats.</p>
   </tbody>
 </table>
 </div>
-
+<br/>
 <h2><a class="anchor" id="pseudo"></a>Pseudo-image Formats</h2>
 
 <p>ImageMagick supports a number of image format specifications which refer to images prepared via an algorithm, or input/output targets. The following table lists these pseudo-image formats:</p>
@@ -1505,6 +1505,7 @@ the supported image formats.</p>
 </table>
 </div>
 
+<br/>
 <h2><a class="anchor" id="builtin-images"></a>Built-in Images</h2>
 
 <p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <code>magick:</code> format tag may be used via the syntax <code>magick:</code><var>name</var> to request an embedded image (e.g. <code>magick:logo</code>). For backwards compatibility, the image specifications <code>GRANITE:</code>, <code>LOGO:</code>, <code>NETSCAPE:</code>, and <code>ROSE:</code> may also be used to request images with those names.</p>
@@ -1555,6 +1556,7 @@ the supported image formats.</p>
 
 </table></div>
 
+<br/>
 <h2><a class="anchor" id="builtin-patterns"></a>Built-in Patterns</h2>
 
 <p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <code>pattern:</code> format tag may be used via the syntax <code>pattern:</code><var>name</var> to request an embedded pattern (e.g. <code>pattern:checkerboard</code>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
@@ -1947,6 +1949,7 @@ the supported image formats.</p>
   </tr>
 </table></div>
 
+<br/>
 <h2><a class="anchor" id="embedded"></a>Embedded Image Profiles</h2>
 
 <p>ImageMagick provides a number of format identifiers which are used to add, remove, and save embedded profiles for images which can support embedded profiles. Image types which may contain embedded profiles are TIFF, JPEG, and PDF.</p>
