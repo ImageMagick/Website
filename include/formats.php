@@ -6,7 +6,7 @@
 
 <p>To get a complete listing of which image formats are supported on your system, type</p>
 
-<pre class="highlight"><code>identify -list format
+<pre class="highlight"><code>magick identify -list format
 </code></pre>
 
 <p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Unix compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
@@ -19,7 +19,7 @@ Then there is the occasional format that also supports LAB (that is CieLAB)
 (e.g. TIFF, PSD, JPG, JP2).  To determine the colorspace of your image, use
 this command:</p>
 
-<pre class="highlight"><code>-> identify -verbose image.jpg
+<pre class="highlight"><code>-> magick identify -verbose image.jpg
 Image: image.jpg
 Format: JPEG (Joint Photographic Experts Group JFIF format)
 ...
