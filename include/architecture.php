@@ -613,7 +613,7 @@ Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
 <p>ImageMagick includes support for heterogeneous distributed processing with the <a href="http://en.wikipedia.org/wiki/OpenCL">OpenCL</a> framework.  OpenCL kernels within ImageMagick permit image processing algorithms to execute across heterogeneous platforms consisting of CPUs, GPUs, and other processors.  Depending on your platform, speed-ups can be an order of magnitude faster than the traditional single CPU.</p>
 
 <p>First verify that your version of ImageMagick includes support for the OpenCL feature:</p>
-<pre class="highlight"><code>identify -version
+<pre class="highlight"><code>magick identify -version
 Features: DPC Cipher Modules OpenCL OpenMP(4.5)
 </code></pre>
 

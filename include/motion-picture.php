@@ -88,12 +88,12 @@ dpx:user.data
 
 <p> To determine which properties are associated with your DPX image, use this command for example:</p>
 
-<pre class="highlight"><code>identify -verbose bluebells.dpx
+<pre class="highlight"><code>magick identify -verbose bluebells.dpx
 </code></pre>
 
 <p>To identify a particular property, try this:</p>
 
-<pre class="highlight"><code>identify -format "%[dpx:television.time.code]" bluebells.dpx
+<pre class="highlight"><code>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
 </code></pre>
 
 <p>Finally, to set a property:</p>

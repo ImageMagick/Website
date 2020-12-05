@@ -414,12 +414,12 @@ identify logo.gif
 
 <p>To verify the ImageMagick build configuration, type:</p>
 
-<pre class="highlight"><code>identify -list configure
+<pre class="highlight"><code>magick identify -list configure
 </code></pre>
 
 <p>To list which image formats are supported , type:</p>
 
-<pre class="highlight"><code>identify -list format
+<pre class="highlight"><code>magick identify -list format
 </code></pre>
 
 <p>For a more comprehensive test, you run the ImageMagick test suite by typing:</p>
@@ -542,7 +542,7 @@ no encode delegate for this image format
 
 <p>Now reconfigure, rebuild, and reinstall ImageMagick.  To verify JPEG is now properly supported within ImageMagick, use this command:</p>
 
-<pre class="highlight"><code>identify -list format
+<pre class="highlight"><code>magick identify -list format
 </code></pre>
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>

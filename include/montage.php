@@ -46,7 +46,7 @@
 
 <h5>Ashlar Pseudo-image Format</h5>
 <p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitedly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
-<pre class="highlight"><code>convert '*.png' -resize 320x320 -label %f ashlar:ashlar.png</code></pre>
+<pre class="highlight"><code>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</code></pre>
 <p>This is designed to quickly view a collection of images. To have more control over the layout of your image tiles, use the <code>montage</code> command instead.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
