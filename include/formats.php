@@ -819,6 +819,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="http://netpbm.sourceforge.net/doc/pfm.html">PHM</a></td>
+    <td>RW</td>
+    <td>Portable float map format 16-bit half</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>PICON</td>
     <td>RW</td>
     <td>Personal Icon</td>
