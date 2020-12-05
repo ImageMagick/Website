@@ -23,7 +23,7 @@
 
   <tr>
     <td><a href= "https://imagemagick.org/download/binaries/magick">magick</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  AppImages require <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">FUSE</a> to run. Many distributions have a working FUSE setup out-of-the-box. However if it is not working for you, you may need to install and configure FUSE manually.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.  AppImages require <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">FUSE</a> and <code>libc</code> to run. Many distributions have a working FUSE setup out-of-the-box. However if it is not working for you, you must install and configure FUSE manually.</td>
   </tr>
 
   <tr>
