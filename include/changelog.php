@@ -1,4 +1,10 @@
-<div class="magick-header"><dl><dt>2020-11-30  7.0.10-45  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-12-05  7.0.10-46  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-46 GIT revision 18001:7c75b33a1:20201205</li>
+<dt>2020-11-30  7.0.10-46  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> possible TIFF related-heap buffer overflow (alert &amp; POC by Hardik Shah).</li>
+  <li> set default system fault in policy.xml configuration file.</li>
+  <li> support portable float map format 16-bit half.</li>
+<dt>2020-11-30  7.0.10-45  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-45 GIT revision 17972:6c0cb7f72:20201130</li>
 <dt>2020-11-30  7.0.10-45  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> added support for the farbfeld format (reference    https://github.com/ImageMagick/ImageMagick/discussions/2664).</li>
