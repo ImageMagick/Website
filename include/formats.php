@@ -1230,6 +1230,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://yaml.org/">YAML</a></td>
+    <td>W</td>
+    <td>human-readable data-serialization language</td>
+    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:version</a>.  The current version is 1.0.</td>
+  </tr>
+
+  <tr>
     <td>YCbCr</td>
     <td>RW</td>
     <td>Raw Y, Cb, and Cr samples</td>
