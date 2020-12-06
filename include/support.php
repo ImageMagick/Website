@@ -63,7 +63,7 @@
 </ul>
 </fieldset>
 <br/>
-<p>If you prefer a recurring subscription or if you have any questions about supporting ImageMagick, please <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a>.
+<p>If you have any questions about supporting ImageMagick, please <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a>.
 </p>
 
 
