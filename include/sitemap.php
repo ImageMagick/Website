@@ -115,7 +115,7 @@
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>
 
-<div class="table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-hover">
   <tr>
     <td><a href="https://legacy.imagemagick.org/Usage/anim_basics/">Animation</a></td>
@@ -263,6 +263,7 @@
   </tr>
 </table>
 </div>
+<br/>
 <h2><a class="anchor" id="legacy"></a>ImageMagick Legacy</h2>
 <p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a></p>
 </div>
