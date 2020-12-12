@@ -1,8 +1,17 @@
-<div class="magick-header"><dl><dt>2020-12-05  7.0.10-46  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-12-10  7.0.10-48  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-48 GIT revision 18026:4646e5fd1:20201210</li>
+<dt>2020-12-09  7.0.10-48  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Repair unit test failures (reference    https://github.com/ImageMagick/ImageMagick/issues/2959).</li>
+<dt>2020-12-09  7.0.10-47  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-47 GIT revision 18020:6f1ee6104:20201209</li>
+<dt>2020-12-06  7.0.10-47  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> support YAML image format.</li>
+  <li> use generic TIFF read method for LZW-compressed strips (reference    https://github.com/ImageMagick/ImageMagick/discussions/2935).</li>
+<dt>2020-12-05  7.0.10-46  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-46 GIT revision 18001:7c75b33a1:20201205</li>
 <dt>2020-11-30  7.0.10-46  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> possible TIFF related-heap buffer overflow (alert &amp; POC by Hardik Shah).</li>
-  <li> set default system fault in policy.xml configuration file.</li>
+  <li> set default system font in policy.xml configuration file.</li>
   <li> support portable float map format 16-bit half.</li>
 <dt>2020-11-30  7.0.10-45  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-45 GIT revision 17972:6c0cb7f72:20201130</li>
