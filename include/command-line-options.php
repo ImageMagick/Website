@@ -3869,8 +3869,6 @@ or
 <code>magick in.png -colorspace LinearGray out.png</code>
 </pre>
 
-<p>Note that LinearGray is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
-
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
 
 <pre class="highlight"><code>magick in.png -grayscale Rec709Luma out.png
@@ -5219,9 +5217,7 @@ argument determine how many images to interpolate between each image. </p>
 
 <p class="magick-description">Apply a morphology method to the image.</p>
 
-<p>Until I get around to writing an option summary for this, see <a
-href="https://legacy.imagemagick.org/Usage/morphology/" >IM Usage Examples,
-Morphology</a>. </p>
+<p>See <a href="https://legacy.imagemagick.org/Usage/morphology/" >IM Usage Examples, Morphology</a>. </p>
 
 
 <div style="margin: auto;">
