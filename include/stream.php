@@ -22,6 +22,8 @@ magick display -depth 8 -size 640x480 rgb:pixels.dat
 <ul><pre class="highlight"><code>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
 </code></pre></ul>
 
+<p>Streaming requires that the image coder read the image pixels in row order.  Not all formats adhere to this requirement.  Verify a particular image format first, before you utilize streaming in your workflow.</p>
+
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
