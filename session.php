@@ -29,7 +29,7 @@
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
     {
       header("Location: https://imagemagick.org/index.php");
-      exit();
+      exit;
     }
   if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
     /*
@@ -46,4 +46,5 @@
   }
   header("Location: script/index.php");
   ob_end_flush();
+  exit;
 ?>

@@ -60,7 +60,7 @@
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
     {
       header("Location: https://imagemagick.org/index.php");
-      exit();
+      exit;
     }
   $use_sts = true;
   if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
@@ -91,4 +91,5 @@
   session_unset();
   session_destroy();
   ob_end_flush();
+  exit;
 ?>
