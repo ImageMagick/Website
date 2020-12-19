@@ -30,14 +30,14 @@
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
     <td><a href= "https://imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Redhat / CentOS 7.1 x86_64 RPM</td>
+    <td>Redhat / CentOS 8.3 x86_64 RPM</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
     <td><a href= "https://imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Redhat / CentOS 7.1 x86_64 RPM</td>
+    <td>Redhat / CentOS 8.3 x86_64 RPM</td>
   </tr>
 
   <tr>
