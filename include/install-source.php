@@ -52,7 +52,7 @@
 
 <p>Clone the Github repo:<p>
 
-<pre class="highlight"><code>git clone git@github.com:ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
+<pre class="highlight"><code>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
 
 <p>and run <code>CloneRepositories.cmd</code>.<p>
 
