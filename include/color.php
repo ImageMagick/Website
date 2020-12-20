@@ -15,8 +15,6 @@ magick -bordercolor '#00ff00' -border 10 image.jpg image.png
 magick -bordercolor 'rgb(0,255,0)' -border 10 image.jpg image.png
 magick -bordercolor 'rgb(0,100%,0)' -border 10 image.jpg image.png</code></pre>
 
-<p>Note, as of ImageMagick 7.0.10-53, the commas are no longer necessary.</p>
-
 <p>The list of recognized color names (for example, <var>aqua</var>, <var>black</var>, <var>blue</var>, <var>fuchsia</var>, <var>gray</var>, <var>green</var>, <var>lime</var>, <var>maroon</var>, <var>navy</var>, <var>olive</var>, <var>purple</var>, <var>red</var>, <var>silver</var>, <var>teal</var>, <var>white</var>, <var>yellow</var>, and others) is shown in a table further below.</p>
 
 <h2><a class="anchor" id="models"></a>Color Model Specification</h2>
@@ -33,7 +31,7 @@ rgb(100.0%, 0.0%, 0.0%)   a float in the range 0—100% for each component</code
 
 <p>The format of an sRGB value in hexadecimal notation is a '#' immediately followed by either three, six, or twelve hexadecimal characters. The three-digit sRGB notation (#rgb) is converted into six-digit form (#rrggbb) by replicating digits, not by adding zeros. For example,  #fb0 expands to #ffbb00. This ensures that white (#ffffff) can be specified with the short notation (#fff) and removes any dependencies on the color depth of the image. Use the hexadecimal notation whenever performance is an issue.  ImageMagick does not need to load the expansive color table to interpret a hexadecimal color, e.g., <code>#000000</code>, but it does if <code>black</code> is used instead.</p>
 
-<p>The format of an sRGB value in the functional notation is 'rgb(<var>r</var>,<var>g</var>,<var>b</var>)',  where  <var>r</var>, <var>g</var>, and <var>b</var> are either three integer or float values in the range 0—255 or three integer or float percentage values in the range 0—100%. The value 255 corresponds to 100%, and to #F or #FF in the hexadecimal notation: rgb(255, 255, 255) = rgb(100%, 100%, 100%) = #FFF = #FFFFFF. </p>
+<p>The format of an sRGB value in the functional notation is 'rgb(<var>r</var>,<var>g</var>,<var>b</var>)',  where  <var>r</var>, <var>g</var>, and <var>b</var> are either three integer or float values in the range 0—255 or three integer or float percentage values in the range 0—100%. The value 255 corresponds to 100%, and to #F or #FF in the hexadecimal notation: rgb(255, 255, 255) = rgb(100%, 100%, 100%) = #FFF = #FFFFFF. Note, as of ImageMagick 7.0.10-53, the commas are no longer necessary.</p>
 
 <p>White space characters are allowed around the numerical values, at least if the entire color argument is enclosed in quotes ('single quotes' for Unix-like systems, "double quotes" for Windows).</p>
 
