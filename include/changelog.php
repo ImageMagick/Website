@@ -1,4 +1,21 @@
-<div class="magick-header"><dl><dt>2020-12-10  7.0.10-48  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-12-19  7.0.10-52  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-52 GIT revision 18057:1f5bab30b:20201219</li>
+<dt>2020-12-19  7.0.10-52  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> return alpha bytes with stream utility (reference    https://github.com/ImageMagick/ImageMagick/discussions/2862).</li>
+  <li> percentage -border in x no longer adds one pixel border in y (reference    https://github.com/ImageMagick/ImageMagick/issues/2978).</li>
+<dt>2020-12-18  7.0.10-51  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-51 GIT revision 18052:475508769:20201218</li>
+<dt>2020-12-17  7.0.10-51  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> reduce time to identify PDF/PS/XPS/PCL image width/height (reference    https://github.com/ImageMagick/ImageMagick/discussions/2993).</li>
+<dt>2020-12-16  7.0.10-50  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-50 GIT revision 18046:83c162886:20201216</li>
+<dt>2020-12-15  7.0.10-50  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> revert patch to ready gray alpha TIFF image.</li>
+<dt>2020-12-14  7.0.10-49  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-49 GIT revision 18040:7976abf6e:20201214</li>
+<dt>2020-12-13  7.0.10-49  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> correct previous patch to read planar RGB TIFF images.</li>
+<dt>2020-12-10  7.0.10-48  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-48 GIT revision 18026:4646e5fd1:20201210</li>
 <dt>2020-12-09  7.0.10-48  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Repair unit test failures (reference    https://github.com/ImageMagick/ImageMagick/issues/2959).</li>

@@ -15,6 +15,8 @@ magick -bordercolor '#00ff00' -border 10 image.jpg image.png
 magick -bordercolor 'rgb(0,255,0)' -border 10 image.jpg image.png
 magick -bordercolor 'rgb(0,100%,0)' -border 10 image.jpg image.png</code></pre>
 
+<p>Note, as of ImageMagick 7.0.10-53, the commas are no longer necessary.</p>
+
 <p>The list of recognized color names (for example, <var>aqua</var>, <var>black</var>, <var>blue</var>, <var>fuchsia</var>, <var>gray</var>, <var>green</var>, <var>lime</var>, <var>maroon</var>, <var>navy</var>, <var>olive</var>, <var>purple</var>, <var>red</var>, <var>silver</var>, <var>teal</var>, <var>white</var>, <var>yellow</var>, and others) is shown in a table further below.</p>
 
 <h2><a class="anchor" id="models"></a>Color Model Specification</h2>
@@ -72,7 +74,7 @@ graya(50%, 0.5)   semi-transparent mid gray</code></pre>
 
 <p>The HSB color system is a little easier to understand than the HSL color system. In the HSB color system, black is at the bottom apex and white is at the top center of the cone on the central axis. The most colorful or saturated colors will then be at the outer edge of the top of the cone at the widest part. Thus at Saturation=100% and Brightness=100%</p>
 
-<pre class="highlight"><code>hsb(0,   100%,  100%)    or    hsb(0,   255,   255)          full red
+<pre class="highlight"><code>hsb(0,   100%,  100%)    or    hsb(0,   255,   255)       full red
 hsb(120, 100%,  100%)    or    hsb(120, 255,   255)       full green
 hsb(120, 100%,  75%)     or    hsb(120, 255,   191.25)    medium green
 hsb(120, 100%,  50%)     or    hsb(120, 255,   127.5)     dark green
@@ -81,7 +83,7 @@ hsb(120, 50%,   50%)     or    hsb(120, 127.5, 127.5)     pastel green</code></p
 
 <p>In the HSL color system, black is at the bottom apex and white is at the top apex. However, saturation is largest at the middle of the double cone on its outer perimeter and thus at a lightness value of 50%. The most colorful or saturated colors will then be at the outer edge of the double cone at its widest part. Thus at Saturation=100% and Brightness=50%</p>
 
-<pre class="highlight"><code>hsl(0,   100%,  50%)     or    hsl(0,   255,   127.5)        full red
+<pre class="highlight"><code>hsl(0,   100%,  50%)     or    hsl(0,   255,   127.5)     full red
 hsl(120, 100%,  100%)    or    hsl(120, 255,   255)       white
 hsl(120, 100%,  75%)     or    hsl(120, 255,   191.25)    pastel green
 hsl(120, 100%,  50%)     or    hsl(120, 255,   127.5)     full green
