@@ -31,7 +31,7 @@
   <li>pixels from two different images (e.g. pixel at 5,1 from image 1 and pixel at 5,1 from image 2)</li>
   <li>pixels outside the boundaries of the image (e.g. pixel at -1,-3)</li>
   <li>a pixel component that is unsigned (65311) or in a floating-point representation (e.g. 0.17836)</li>
-  <li>a high-dynamic range pixel that can include negative values (e.g. -0.00716) as well as values that exceed the quantum depth (e.g. 65931)</li>
+  <li>a high-dynamic range pixel that can include negative values (e.g. -0.0072973525627812781) as well as values that exceed the quantum depth (e.g. 65931)</li>
   <li>one or more pixels simultaneously in different threads of execution</li>
   <li>all the pixels in memory to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors</li>
   <li>traits associated with each channel to specify whether the pixel channel is copied, updated, or blended</li>
