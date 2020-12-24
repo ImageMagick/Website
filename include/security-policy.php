@@ -129,7 +129,7 @@ Path: [built-in]
 <pre class="highlight"><code>&lt;policy domain="module" rights="none" pattern="{ps,pdf,xps}/></code></pre>
 
 <p>As of ImageMagick version 7.0-10-52, you can set a font policy.  Specify a path to a Unicode font that ImageMagick defaults to whenever the user does not specify a font preference:</p>
-<pre class="highlight"><code>&lt;policy domain="system" name="font" value="/usr/local/etc/ImageMagick-7/arial-unicode.ttf"/></code></pre>
+<pre class="highlight"><code>&lt;policy domain="system" name="font" value="/usr/share/fonts/arial-unicode.ttf"/></code></pre>
 
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
