@@ -555,10 +555,10 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://jpeg.org/jpegxl/index.html">JXL</a></td>
+    <td><a href="https://jpeg.org/jpegxl">JXL</a></td>
     <td>RW</td>
     <td><a href="https://arxiv.org/ftp/arxiv/papers/1908/1908.03565.pdf">JPEG XL image coding system</a></td>
-    <td>Requires the <a href="https://github.com/google/brunsli">brunsli</a> delegate library.</td>
+    <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl.git">JPEG XL</a> delegate library.</td>
   </tr>
 
   <tr>
