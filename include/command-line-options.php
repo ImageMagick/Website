@@ -2637,14 +2637,15 @@ single or double quotes.</p>
 <p>For example, the following annotates the image with <code>Works like
 magick!</code> for an image titled <code>bird.miff</code>. </p>
 
-<pre class="highlight"><code>-draw "text 100,100 'Works like magick!' "
-</code></pre>
+<pre class="highlight"><code>-draw "text 100,100 'Works like magick!'"</code></pre>
 
 <p>See the <a href="#annotate">-annotate</a> option for another convenient way
 to annotate an image with text.</p>
 
 <p>The <code>rotate</code> primitive rotates subsequent shape primitives and
-text primitives about the origin of the main image.</p>
+text primitives about the origin of the main image:</p>
+
+<pre class="highlight"><code>-draw "rotate 45 text 10,10 'Works like magick!'"</code></pre>
 
 <p>The <code>translate</code> primitive translates subsequent shape and text
 primitives.</p>
