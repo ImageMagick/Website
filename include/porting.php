@@ -31,10 +31,10 @@ options, and more global use of 'image properties' (more commonly known as
 
 <pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
-  register IndexPacket
+  IndexPacket
     *indexes;
 
-  register PixelPacket
+  PixelPacket
     *q;
 
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
@@ -65,7 +65,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
-  register Quantum
+  Quantum
     *q;
 
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
@@ -96,7 +96,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
-  register Quantum
+  Quantum
     *q;
 
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
@@ -107,7 +107,7 @@ options, and more global use of 'image properties' (more commonly known as
     }
   for (x = 0; x &lt; (ssize_t) image->columns; x++)
   {
-    register ssize_t
+    ssize_t
       i;
 
     if (GetPixelWriteMask(image,q) &lt;= (QuantumRange/2))
