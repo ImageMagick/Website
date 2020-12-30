@@ -9,9 +9,6 @@
     <dd><a href="ftp://mirror.checkdomain.de/imagemagick/">ftp://mirror.checkdomain.de/imagemagick/</a></dd>
   <dt>Japan</dt>
     <dd><a href="ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/">ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/</a></dd>
-  <dt>Netherlands</dt>
-    <dd><a href="ftp://ftp.nluug.nl/pub/ImageMagick/">ftp://ftp.nluug.nl/pub/ImageMagick</a></dd>
-    <dd><a href="http://ftp.nluug.nl/ImageMagick/">http://ftp.nluug.nl/ImageMagick/</a></dd>
   <dt>Poland</dt>
     <dd><a href="ftp://sunsite.icm.edu.pl/packages/ImageMagick/">ftp://sunsite.icm.edu.pl/packages/ImageMagick/</a></dd>
     <dd><a href="rsync://ftp.tpnet.pl/pub/graphics/ImageMagick/">rsync://ftp.tpnet.pl/pub/graphics/ImageMagick/</a></dd>
