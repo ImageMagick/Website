@@ -61,7 +61,7 @@ options, and more global use of 'image properties' (more commonly known as
     status=MagickFalse;
 }</code></pre>
 
-<p>ImageMagick version 7 supports any number of channels from 1 to 32 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum.   Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7.  We illustrate with an example.  Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:</p>
+<p>ImageMagick version 7 supports any number of channels from 1 to 64 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum.   Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7.  We illustrate with an example.  Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:</p>
 
 <pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
