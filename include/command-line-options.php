@@ -238,7 +238,7 @@ Set</code>" and not "<code><a href="#alpha" >-alpha</a> On</code>".  </p>
 <div class="pre-scrollable" style="margin: auto;">
  <h3><a class="anchor" id="annotate"></a>
  -annotate <var>degrees</var> <var>text</var><br />
- -annotate <var>Xdegrees</var>x<var>Ydegrees</var> <var>text</var><br /> -annotate <var>Xdegrees</var>x<var>Ydegrees</var> {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var><br /> -annotate {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var></h3>
+ -annotate <var>Xdegrees</var>x<var>Ydegrees</var> <var>text</var><br /> -annotate <var>Xdegrees</var>x<var>Ydegrees</var>{+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var><br /> -annotate {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var></h3>
 </div>
 
 <p class="magick-description">Annotate an image with text</p>
