@@ -1,4 +1,11 @@
-<div class="magick-header"><dl><dt>2020-12-19  7.0.10-52  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-12-24  7.0.10-53  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-53 GIT revision 18083:3b141f557:20201224</li>
+<dt>2020-12-20  7.0.10-53  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> CSS colors no longer require commas.</li>
+  <li> eliminate possible arthimetic overflow (reference    https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=28849)</li>
+  <li> support display-p3, Adobe-98, and Pro-photo colorspaces</li>
+  <li> read/write 1024 colors Sixel images (reference    https://github.com/ImageMagick/ImageMagick/discussions/3018).</li>
+<dt>2020-12-19  7.0.10-52  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-52 GIT revision 18057:1f5bab30b:20201219</li>
 <dt>2020-12-19  7.0.10-52  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> return alpha bytes with stream utility (reference    https://github.com/ImageMagick/ImageMagick/discussions/2862).</li>

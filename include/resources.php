@@ -283,6 +283,10 @@ $MAGICK_FONT_PATH</code></pre>
     <td>MAGICK_WIDTH_LIMIT</td>
     <td>Set the maximum <var>width</var> of an image.</td>
   </tr>
+  <tr>
+    <td>SOURCE_DATE_EPOCH</td>
+    <td>A UNIX timestamp, defined as the number of seconds, excluding leap seconds, since <code>01 Jan 1970 00:00:00 UTC</code>.</td>
+  </tr>
 </table></div>
 
 <p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).</p>
