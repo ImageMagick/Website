@@ -551,6 +551,16 @@ use:</p>
   </tr>
 
   <tr>
+    <td>trim:horizontal=<var>true</var></td>
+    <td>Only trim the horizontal edges of the image.</td>
+  </tr>
+
+  <tr>
+    <td>trim:vertical=<var>true</var></td>
+    <td>Only trim the vertical edges of the image.</td>
+  </tr>
+
+  <tr>
     <td>type:features=<var>string</var></td>
     <td>Add a font feature to be used by the RAQM delegate during complex 
     text layout. This is usually used to turn on optional font features that 
