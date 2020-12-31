@@ -7042,6 +7042,10 @@ remove all the background from the image.  The amount of background that is
 tolerated in an edge specified as a percent.  0% means no background is tolerated.
 50% means an edge can contain up to 50% pixels that are background per the fuzz-factor.</p>
 
+<p>Use <code><a href="#define">-define</a> trim:vertical=true</code> or <code>
+<a href="#define">-define</a> trim:horizontal=true</code> to only trim the horizontal
+or vertical edges of the image.</p>
+
 <p>Use <code><a href="#background">-background</a> <em>background-color</em></code> to
 identify background color surrounding the region of interest.</p>
 
