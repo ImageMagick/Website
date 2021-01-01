@@ -17,9 +17,12 @@
 
 <?php crt("git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
+<p>Or download <a href="https://imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
+
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
 <?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "./configure", "<br/>", "make"); ?>
+
 <p>For advanced users, we recommend a modules build:</p>
 <?php crt("./configure --with-modules"); ?>
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
