@@ -551,13 +551,8 @@ use:</p>
   </tr>
 
   <tr>
-    <td>trim:horizontal=<var>true</var></td>
-    <td>Only trim the horizontal edges of the image.</td>
-  </tr>
-
-  <tr>
-    <td>trim:vertical=<var>true</var></td>
-    <td>Only trim the vertical edges of the image.</td>
+    <td>trim:edges=<var>north,east,south,west</var></td>
+    <td>Only trim the specified edges of the image.</td>
   </tr>
 
   <tr>
