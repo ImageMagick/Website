@@ -57,9 +57,8 @@
 
 <pre class="highlight"><code>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
 
-<p>Or download <a href="https://imagemagick.org/download">ImageMagick-Windows.zip.gz</a> from <a href="https://imagemagick.org/download">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
-<p>and run <code>CloneRepositories.cmd</code>.<p>
+<p>and run <code>CloneRepositories.cmd</code>.  Or download <a href="https://imagemagick.org/download/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/download/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
 
 <pre class="highlight"><code>unzip ImageMagick-windows.zip</code></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
