@@ -1,4 +1,13 @@
-<div class="magick-header"><dl><dt>2020-12-24  7.0.10-53  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2020-12-27  7.0.10-54  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-54 GIT revision 18...</li>
+<dt>2020-12-27  7.0.10-54  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> replaced jxl coder with an implementation that uses the jpeg-xl reference    library.</li>
+  <li> added -define trim:edges=(north,east,south,west) that can be used to    trim a single or multiple edges.</li>
+<dt>2020-12-25  7.0.10-54  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> enable reading of a certain grayscale TIFF image.</li>
+  <li> support HEIC depth masks (reference    https://github.com/ImageMagick/ImageMagick/discussions/3040).</li>
+  <li> validate pixel cache offsets (reference    https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=29039).</li>
+<dt>2020-12-24  7.0.10-53  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-53 GIT revision 18083:3b141f557:20201224</li>
 <dt>2020-12-20  7.0.10-53  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> CSS colors no longer require commas.</li>

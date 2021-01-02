@@ -3015,9 +3015,12 @@ rendering text. If the family can be found it is used; if not, a default font
 (e.g., "Arial") or a family known to be similar is substituted (e.g.,
 "Courier" might be used if "System" is requested but not found). Note, the family can be a CSS-style font list.</p>
 
-<p>For other settings that affect fonts, see the options <a
-href="#font">-font</a>, <a href="#stretch">-stretch</a>, <a
-href="#style">-style</a>, and <a href="#weight">-weight</a>.  </p>
+<p>For other settings that affect fonts, see the options
+￼<a href="command-line-options.html#font">-font</a>, 
+￼<a href="command-line-options.html#pointsize">-pointsize</a>,
+￼<a href="command-line-options.html#stretch">-stretch</a>,
+￼<a href="command-line-options.html#style">-style</a>,
+￼and <a href="command-line-options.html#weight">-weight</a>.  </p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="features"></a>-features <var>distance</var></h3>
