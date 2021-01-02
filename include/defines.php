@@ -551,7 +551,7 @@ use:</p>
   </tr>
 
   <tr>
-    <td>trim:edges=<var>north,east,south,west</var></td>
+    <td>trim:edges={<var>north,east,south,west</var>}</td>
     <td>Only trim the specified edges of the image.</td>
   </tr>
 
