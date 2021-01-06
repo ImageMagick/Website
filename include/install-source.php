@@ -17,7 +17,7 @@
 
 <?php crt("git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
-<p>Or download <a href="https://imagemagick.org/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>Or download <a href="https://download.imagemagick.org/ImageMagick/download/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/download">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/ImageMagick/download/digest.rdf">message digest</a>.</p>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
@@ -58,7 +58,7 @@
 <pre class="highlight"><code>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
 
 
-<p>and run <code>CloneRepositories.cmd</code>.  Or download <a href="https://imagemagick.org/download/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/download/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/download/digest.rdf">message digest</a>.</p>
+<p>and run <code>CloneRepositories.cmd</code>.  Or download <a href="https://download.imagemagick.org/ImageMagick/download/windows">ImageMagick-Windows.zip</a> from <a href="https://download.imagemagick.org/ImageMagick/download/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/ImageMagick/download/digest.rdf">message digest</a>.</p>
 
 <pre class="highlight"><code>unzip ImageMagick-windows.zip</code></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 

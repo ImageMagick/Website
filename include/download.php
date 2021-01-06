@@ -22,47 +22,47 @@
   <tbody>
 
   <tr>
-    <td><a href= "https://imagemagick.org/download/binaries/magick">magick</a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/magick">magick</a></td>
     <td>Complete portable application on Linux, no installation required.  Just download and run.  AppImages require <a href="https://github.com/AppImage/AppImageKit/wiki/FUSE">FUSE</a> and <code>libc</code> to run. Many distributions have a working FUSE setup out-of-the-box. However if it is not working for you, you must install and configure FUSE manually.</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
-    <td><a href= "https://imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Redhat / CentOS 8.3 x86_64 RPM</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
   ?>
-    <td><a href= "https://imagemagick.org/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Redhat / CentOS 8.3 x86_64 RPM</td>
   </tr>
 
   <tr>
-    <td><a href="https://imagemagick.org/download/linux/CentOS">ImageMagick RPM's</a></td>
+    <td><a href="https://download.imagemagick.org/ImageMagick/download/linux/CentOS">ImageMagick RPM's</a></td>
     <td>Development, Perl, C++, and documentation RPM's.</td>
   </tr>
 
   <tr>
-    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">ImageMagick-i386-pc-solaris2.11.tar.gz</a></td>
+    <td><a href="https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">ImageMagick-i386-pc-solaris2.11.tar.gz</a></td>
     <td>Solaris Sparc 2.11</td>
   </tr>
 
   <tr>
-    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-i686-pc-cygwin.tar.gz">ImageMagick-i686-pc-cygwin.tar.gz</a></td>
+    <td><a href="https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-i686-pc-cygwin.tar.gz">ImageMagick-i686-pc-cygwin.tar.gz</a></td>
     <td>Cygwin</td>
   </tr>
 
   <tr>
-    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-i686-pc-mingw32.tar.gz">ImageMagick-i686-pc-mingw32.tar.gz</a></td>
+    <td><a href="https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-i686-pc-mingw32.tar.gz">ImageMagick-i686-pc-mingw32.tar.gz</a></td>
     <td>MinGW</td>
   </tr>
   </tbody>
 </table></div>
 
-<p>Verify its <a href="https://imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://download.imagemagick.org/ImageMagick/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
 
@@ -125,13 +125,13 @@ display logo.gif</code></pre></ul>
   </thead>
   <tbody>
   <tr>
-    <td><a href="https://imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin20.1.0.tar.gz">ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</a></td>
+    <td><a href="https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-x86_64-apple-darwin20.1.0.tar.gz">ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</a></td>
     <td>macOS High Sierra</td>
   </tr>
   <tbody>
 </table></div>
 
-<p>Verify its <a href="https://imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://download.imagemagick.org/ImageMagick/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>Create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
@@ -172,7 +172,7 @@ display logo.gif</code></pre></ul>
 
 <h5>Download iOS Distribution</h5>
 
-<p>You can download the iOS distribution directly from ImageMagick's <a href="https://imagemagick.org/download/iOS">repository</a>.</p>
+<p>You can download the iOS distribution directly from ImageMagick's <a href="https://download.imagemagick.org/ImageMagick/download/iOS">repository</a>.</p>
 
 <p>There are always 2 packages for the compiled ImageMagick:</p>
 
@@ -238,7 +238,7 @@ display logo.gif</code></pre></ul>
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win64 dynamic at 16 bits-per-pixel component</td>
   </tr>
   </tbody>
@@ -259,133 +259,133 @@ display logo.gif</code></pre></ul>
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-static.exe";
   ?>
-      <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+      <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
    <td>Win64 static at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x64-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
    <td>Win64 dynamic at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x64-static.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win64 static at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
    <td>Win64 dynamic at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-static.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x86-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 dynamic at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x86-static.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 static at 16 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x86-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 dynamic at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q8-x86-static.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 static at 8 bits-per-pixel component</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-dll.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-static.exe";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-x64.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-x86.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 I
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q8-x64.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win64 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q8-x86.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win32 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x64.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x86.zip";
   ?>
-    <td><a href= "https://imagemagick.org/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tbody>
 </table></div>
 
-<p>Verify its <a href="https://imagemagick.org/download/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="https://download.imagemagick.org/ImageMagick/download/binaries/digest.rdf">message digest</a>.</p>
 
 <p>To verify ImageMagick is working properly, type the following in an Command Prompt window:</p>
 

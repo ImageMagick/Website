@@ -1117,7 +1117,7 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
 display logo.mgk
 </code></pre>
 
-<p>We provide the <a href="https://imagemagick.org/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
+<p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
 
 <h2><a class="anchor" id="filters"></a>Custom Image Filters</h2>
 
@@ -1387,6 +1387,6 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
 </code></pre>
 
 
-<p>We provide the <a href="https://imagemagick.org/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
+<p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
 
 </div>

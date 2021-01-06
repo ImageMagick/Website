@@ -11,7 +11,7 @@
     <dd><a href="https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
     <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
   <dt>United States</dt>
-    <dd><a href="https://imagemagick.org/download/">https://imagemagick.org/download</a></dd>
+    <dd><a href="https://download.imagemagick.org/ImageMagick/download/">https://imagemagick.org/download</a></dd>
     <dd><a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a> (Git)</dd>
     <dd><a href="https://gitlab.com/ImageMagick">https://gitlab.com/ImageMagick</a> (Git Mirror)</dd>
   <dt>Select Binaries </dt>

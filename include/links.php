@@ -75,12 +75,12 @@
 <h2><a class="anchor" id="bank"></a>Image Bank</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="https://imagemagick.org/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
+  <dd class="col-md-8"><a href="https://download.imagemagick.org/ImageMagick/download/image-bank/">Image Bank</a>: a small digital test image bank</dd>
 </ul>
 
 <h2><a class="anchor" id="other-projects"></a>Other Projects</h2>
 <ul>
   <dd class="col-md-8"><a href="https://github.com/cherryleafroad/Android-ImageMagick7">ImageMagick API on the Android Platform</a></dd>
-  <dd class="col-md-8"><a href="https://imagemagick.org/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
+  <dd class="col-md-8"><a href="https://download.imagemagick.org/ImageMagick/download/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
 </ul>
 </div>

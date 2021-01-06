@@ -390,7 +390,7 @@ the supported image formats.</p>
     <td>FPX</td>
     <td>RW</td>
     <td>FlashPix Format</td>
-    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://imagemagick.org/download/delegates">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define fpx:view</a>.</td>
+    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://download.imagemagick.org/ImageMagick/download/delegates">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define fpx:view</a>.</td>
   </tr>
 
   <tr>
