@@ -1,5 +1,18 @@
-<div class="magick-header"><dl><dt>2020-12-27  7.0.10-54  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-54 GIT revision 18...</li>
+<div class="magick-header"><dl><dt>2021-01-08  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-57 GIT revision 18... </li>
+<dt>2021-01-08  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> update automake/aucong configuration files.</li>
+  <li> additional checks to prevent integer overflow.</li>
+<dt>2021-01-05  7.0.10-56  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-56 GIT revision 18192:2fb74f026:20210105</li>
+<dt>2021-01-05  7.0.10-56  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Fix rounding error for CSS colors (reference    https://github.com/ImageMagick/ImageMagick6/issues/129).</li>
+<dt>2021-01-03  7.0.10-55  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-55 GIT revision 18181:636ebf7ba:20210103</li>
+<dt>2021-01-04  7.0.10-55  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> revert changes to the default max width/height of image.</li>
+<dt>2021-01-02  7.0.10-54  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-54 GIT revision 18159:24fabe7e2:20210102</li>
 <dt>2020-12-27  7.0.10-54  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> replaced jxl coder with an implementation that uses the jpeg-xl reference    library.</li>
   <li> added -define trim:edges=(north,east,south,west) that can be used to    trim a single or multiple edges.</li>

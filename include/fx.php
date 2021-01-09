@@ -78,12 +78,17 @@
   pixel == 1.0 ? 0.0 : pixel" \
   \( -size 1x1 xc:white xc:red xc:orange xc:yellow xc:green1 xc:cyan xc:blue \
      xc:blueviolet xc:white -reverse +append -filter Cubic -resize 1024x1! \) \
-  -clut -rotate -90 julia-set.png
-</code></pre>
+  -clut -rotate -90 julia-set.png</code></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
+
+<p>This Fx script prints the first 10 prime numbers:</p>
+<pre class="highlight"><code>magick -channel gray -fx " \
+  for (prime=2, prime &lt; 30, composite=0;
+    for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++);
+      if (composite &lt;= 0, debug(prime), ); prime++)" null:</code></pre>
 
 <p>See <a href="https://legacy.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
