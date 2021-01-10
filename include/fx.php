@@ -85,7 +85,7 @@
 </ul>
 
 <p>This Fx script prints the first 10 prime numbers:</p>
-<pre class="highlight"><code>magick -channel gray -fx " \
+<pre class="highlight"><code>magick xc: -channel gray -fx " \
   for (prime=2, prime &lt; 30, composite=0;
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++);
       if (composite &lt;= 0, debug(prime), ); prime++)" null:</code></pre>
