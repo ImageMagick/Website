@@ -113,7 +113,7 @@
      &amp;&amp; (logical AND),  || (logical OR),
      ~ (logical NOT),  ?: (ternary conditional)</dd>
   <dt class="col-md-4"> array: </dt>
-    <dd class="col-md-8">an image offers three-dimensional array storage (x,y,channel) bounded by its width and height.  Multiple arrays are achieved by accessing an image sequence.  Storage is limited to floating point values.</dd>
+    <dd class="col-md-8">an image offers two-dimensional array storage (x,y,channel) bounded by its width and height.  A third dimension is achieved by accessing an image sequence.  Storage is limited to floating point values.</dd>
   <dt class="col-md-4"> math functions: </dt>
      <dd class="col-md-8"> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
   <dt class="col-md-4"> channel functions: </dt>
