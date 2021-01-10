@@ -64,7 +64,7 @@
   channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)' noisy.png
 </code></pre>
 
-<p>This Fx script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
+<p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
 <pre class="highlight"><code>magick -size 400x400 xc:black -colorspace gray -fx " \
   Xi=2.4*i/w-1.2; \
@@ -84,7 +84,7 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
 
-<p>This Fx script prints the first 10 prime numbers:</p>
+<p>This FX script prints the first 10 prime numbers:</p>
 <pre class="highlight"><code>magick xc: -channel gray -fx " \
   for (prime=2, prime &lt; 30, composite=0; \
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
