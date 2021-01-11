@@ -1,5 +1,5 @@
 <div class="magick-header">
-<h1 class="text-center">ImageMagick License</h1>
+<h1 class="text-center">License</h1>
 <p class="text-center"><a href="#terms">Terms and Conditions for Use, Reproduction, and Distribution</a> • <a href="#apply">How to Apply the License to your Work</a></p>
 
 <p class="lead magick-description">Before we get to the text of the license, lets just review what the license says in simple terms:</p>

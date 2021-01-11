@@ -1,5 +1,5 @@
 <div class="magick-header">
-<h1 class="text-center">ImageMagick News</h1>
+<h1 class="text-center">News</h1>
 <p class="text-center"><a href="#news">News</a> • <a href="#community">Community</a></p>
 
 <p>ImageMagick best practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>

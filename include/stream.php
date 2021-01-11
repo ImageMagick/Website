@@ -1,5 +1,5 @@
 <div class="magick-header">
-<h1 class="text-center">ImageMagick Streaming Interface</h1>
+<h1 class="text-center">Streaming Interface</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead magick-description"><code>Stream</code> is a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</p>
