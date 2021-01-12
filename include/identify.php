@@ -116,13 +116,15 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01
 
 <p>Here we display the image texture features, moments, perceptual hash, and the number of unique colors in the image:</p>
 
-<pre class="highlight"><code>-> magick identify -verbose -features 1 -moments -unique image.png
-</code></pre>
+<pre class="highlight"><code>-> magick identify -verbose -features 1 -moments -unique image.png</code></pre>
+
+<p>To display the convex hull and minimum bounding box attributes of the image, use:</p>
+
+<pre class="highlight"><code>magick identify -define identify:convex-hull=true image.png</code></pre>
 
 <p>Here is a special define that outputs the location of the minimum or maximum pixel of the image:</p>
 
-<pre class="highlight"><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png
-</code></pre>
+<pre class="highlight"><code>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png</code></pre>
 
 <p>You can find additional examples of using <code>magick identify</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
