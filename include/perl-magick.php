@@ -59,7 +59,6 @@ nmake
 nmake install
 </code></pre>
 
-<p>See the <a href="http://www.dylanbeattie.net/magick/">PerlMagick Windows HowTo</a> page for further installation instructions.</p>
 
 <p><b>Running the Regression Tests</b></p>
 
