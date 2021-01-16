@@ -10,6 +10,8 @@
   <dt>Sweden</dt>
     <dd><a href="https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
     <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
+  <dt>Russia</dt>
+    <dd><a href="https://mirror.surf/imagemagick/ ">https://mirror.surf/imagemagick/ </a></dd>
   <dt>United States</dt>
     <dd><a href="https://download.imagemagick.org/ImageMagick/download/">https://imagemagick.org/download</a></dd>
     <dd><a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a> (Git)</dd>
@@ -18,6 +20,7 @@
     <dd><a href="http://www.macports.org/ports.php?by=name&amp;substr=imagemagick">http://www.macports.org/ports.php?by=name&amp;substr=imagemagick</a> (Mac OS X)</dd>
     <dd><a href="http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/">http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/</a> (HP-UX 10.20 and 11.00)</dd>
   <dt>Rsync Mirrors </dt>
+    <dd><a href="rsync://mirror.surf/imagemagick/">rsync://mirror.surf/imagemagick//</a></dd>
     <dd><a href="rsync://rsync.is.co.za/IS-Mirror/mirror.imagemagick.org/">rsync://rsync.is.co.za/IS-Mirror/mirror.imagemagick.org/</a></dd>
     <dd><a href="rsync://mirror.imagemagick.org/magick_html">rsync://mirror.imagemagick.org/magick_html/</a> (Web site mirror)</dd>
     <dd><a href="rsync://mirror.imagemagick.org/magick_ftp">rsync://mirror.imagemagick.org/magick_ftp/</a> (FTP mirror)</dd>
