@@ -1058,6 +1058,12 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
   </tr>
 
   <tr>
+    <td>SortPixels</td>
+    <td><br /></td>
+    <td>sorts pixels within each scanline in ascending order of intensity.</td>
+  </tr>
+
+  <tr>
     <td>SparseColor</td>
     <td>points=&gt;<i>array of float values</i>, method=&gt;{Barycentric, Bilinear, Shepards, Voronoi}, 'virtual-pixel'=&gt;{Background Black Constant Dither Edge Gray Mirror Random Tile Transparent White}</td>
     <td>interpolate the image colors around the supplied points</td>

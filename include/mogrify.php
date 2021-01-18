@@ -1045,6 +1045,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sort-pixels">-sort-pixels</a></td>
+    <td>sorts pixels within each scanline in ascending order of intensity</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#splice">-splice <var>geometry</var></a></td>
     <td>splice the background color into the image</td>
   </tr>

@@ -1,7 +1,14 @@
-<div class="magick-header"><dl><dt>2021-01-08  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-57 GIT revision 18... </li>
+<div class="magick-header"><dl><dt>2021-01-11  7.0.10-58  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-58 GIT revision 18... </li>
+<dt>2021-01-11  7.0.10-58  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> identify the convex hull and minimum bounding box attributes of an image    with the -define identify:convex-hull=true define.</li>
+  <li> set the quality to 100 to produce lossless HEIC images (reference    https://github.com/ImageMagick/ImageMagick/pull/3116).</li>
+  <li> properly identify SVG images (reference    https://github.com/ImageMagick/ImageMagick/issues/3117).</li>
+  <li> duplicate operator: inverse range parameter working again (reference    https://github.com/ImageMagick/ImageMagick/issues/3113).</li>
+<dt>2021-01-09  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-57 GIT revision 18221:2f611d533:20210109</li>
 <dt>2021-01-08  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> update automake/aucong configuration files.</li>
+  <li> update automake/autoconf configuration files.</li>
   <li> additional checks to prevent integer overflow.</li>
 <dt>2021-01-05  7.0.10-56  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-56 GIT revision 18192:2fb74f026:20210105</li>
