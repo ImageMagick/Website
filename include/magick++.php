@@ -1,4 +1,4 @@
-<div class="magick-header">
+<div class="magick-header"> 
 <p class="text-center"><a href="#documentation">Documentation</a> • <a href="#get">Obtaining Magick++</a> • <a href="#install">Installation</a> • <a href="#bugs">Reporting Bugs</a></p>
 
 <a class="anchor" id="intro"></a>
