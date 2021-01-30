@@ -1124,45 +1124,7 @@ display logo.mgk
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
-<pre class="pre-scrollable"><code>/*
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                             %
-%                                                                             %
-%                AAA   N   N   AAA   L      Y   Y  ZZZZZ  EEEEE               %
-%               A   A  NN  N  A   A  L       Y Y      ZZ  E                   %
-%               AAAAA  N N N  AAAAA  L        Y     ZZZ   EEE                 %
-%               A   A  N  NN  A   A  L        Y    ZZ     E                   %
-%               A   A  N   N  A   A  LLLLL    Y    ZZZZZ  EEEEE               %
-%                                                                             %
-%                             Analyze An Image                                %
-%                                                                             %
-%                             Software Design                                 %
-%                               Bill Corbis                                   %
-%                              December 1998                                  %
-%                                                                             %
-%                                                                             %
-%  Copyright 1999-2021 ImageMagick Studio LLC, a non-profit organization      %
-%  dedicated to making software imaging solutions freely available.           %
-%                                                                             %
-%  You may not use this file except in compliance with the License.  You may  %
-%  obtain a copy of the License at                                            %
-%                                                                             %
-%    https://imagemagick.org/script/license.php                               %
-%                                                                             %
-%  Unless required by applicable law or agreed to in writing, software        %
-%  distributed under the License is distributed on an "AS IS" BASIS,          %
-%  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   %
-%  See the License for the specific language governing permissions and        %
-%  limitations under the License.                                             %
-%                                                                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-*/
-
-/*
-  Include declarations.
-*/
-#include &lt;stdio.h>
+<pre class="pre-scrollable"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
