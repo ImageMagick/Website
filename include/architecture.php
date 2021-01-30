@@ -1150,8 +1150,8 @@ display logo.mgk
 %
 %  The format of the analyzeImage method is:
 %
-%      size_t analyzeImage(Image *images,const int argc,
-%        char **argv,ExceptionInfo *exception)
+%      size_t analyzeImage(Image *images,const int argc,char **argv,
+%        ExceptionInfo *exception)
 %
 %  A description of each parameter follows:
 %
