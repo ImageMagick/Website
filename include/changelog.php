@@ -1,10 +1,26 @@
-<div class="magick-header"><dl><dt>2021-01-11  7.0.10-58  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-58 GIT revision 18... </li>
+<div class="magick-header"><dl><dt>2021-01-25  7.0.10-61  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-61 GIT revision 18...</li>
+<dt>2021-01-25  7.0.10-61  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> dng:decode element in delegates.xml quoted incorrectly (reference    https://github.com/ImageMagick/ImageMagick/issues/3156).</li>
+<dt>2021-01-25  7.0.10-60  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-60 GIT revision 18347:9a84e249b:20210125</li>
+<dt>2021-01-24  7.0.10-60  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> revert configure script for validating JXL delegate library.</li>
+  <li> the distributed pixel cache now properly deserializes the image attributes.</li>
+<dt>2021-01-24  7.0.10-59  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-59 GIT revision 18340:d30ae5272:20210124</li>
+<dt>2021-01-20  7.0.10-59  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> strip EXIF marker from profile (reference    https://github.com/ImageMagick/ImageMagick/issues/3140).</li>
+  <li> add --enable-opencl to the configure command-line to enable OpenCL    support.</li>
+  <li> generate histograms by comparing pixel components rather than color    (reference https://github.com/ImageMagick/ImageMagick/discussions/3142).</li>
+<dt>2021-01-16  7.0.10-58  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-58 GIT revision 18277:8876652f5:20210116</li>
 <dt>2021-01-11  7.0.10-58  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> identify the convex hull and minimum bounding box attributes of an image    with the -define identify:convex-hull=true define.</li>
   <li> set the quality to 100 to produce lossless HEIC images (reference    https://github.com/ImageMagick/ImageMagick/pull/3116).</li>
   <li> properly identify SVG images (reference    https://github.com/ImageMagick/ImageMagick/issues/3117).</li>
   <li> duplicate operator: inverse range parameter working again (reference    https://github.com/ImageMagick/ImageMagick/issues/3113).</li>
+  <li> Fix rounding error for CSS colors on i686 (reference    https://tracker.debian.org/pkg/imagemagick).</li>
 <dt>2021-01-09  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-57 GIT revision 18221:2f611d533:20210109</li>
 <dt>2021-01-08  7.0.10-57  &lt;quetzlzacatenango@image...&gt;</dt>
