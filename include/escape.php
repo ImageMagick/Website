@@ -673,7 +673,7 @@ mage meta-data that was included in the image read in:</p>
 
 <p>Choose <var>tag</var> from the following:</p>
 
-<pre class="pre-scrollable"><code>
+<pre class="pre-scrollable highlight"><code>
 *  (print all EXIF tags, in keyword=data format)
 !  (print all EXIF tags, in tag_number data format)
 #hhhh (print data for EXIF tag #hhhh)
@@ -772,7 +772,7 @@ information contained in the file:</p>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
 
-<pre class="pre-scrollable:">
+<pre class="pre-scrollable highlight:">
   Envelope Record
   1:00  Model Version
   1:05  Destination

@@ -18,7 +18,7 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
 
 <p>When the drawing gets sufficiently complex, we recommend you assemble the graphic primitives into a MVG file. For our example, we use <a href="../source/piechart.mvg">piechart.mvg</a>:</p>
 
-<pre class="pre-scrollable"><code>push graphic-context
+<pre class="pre-scrollable highlight"><code>push graphic-context
   viewbox 0 0 624 369
   affine 0.283636 0 0 0.283846 -0 -0
   push graphic-context
@@ -191,7 +191,7 @@ pop graphic-context
 
 <p>Drawing is available from many of the ImageMagick <a href="develop.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.php">MagickWand</a> language: </p>
 
-<pre class="pre-scrollable"><code>(void) PushDrawingWand(draw_wand);
+<pre class="pre-scrollable highlight"><code>(void) PushDrawingWand(draw_wand);
 {
   const PointInfo points[6] =
   {

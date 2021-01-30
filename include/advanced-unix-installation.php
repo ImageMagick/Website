@@ -25,7 +25,7 @@
 <p>Watch the configure script output to verify that it finds everything that
  you think it should.  Pay particular attention to the last lines of the script output.  For example, here is a recent report from our system:</p>
 
-<pre class="pre-scrollable"><code>ImageMagick is configured as follows. Please verify that this configuration
+<pre class="pre-scrollable highlight"><code>ImageMagick is configured as follows. Please verify that this configuration
 matches your expectations.
 
 Host system type: x86_64-unknown-linux-gnu

@@ -36,7 +36,7 @@
 
 <p>ImageMagick supports these DPX properties:</p>
 
-<pre class="pre-scrollable"><code>dpx:file.copyright
+<pre class="pre-scrollable highlight"><code>dpx:file.copyright
 dpx:file.creator
 dpx:file.filename
 dpx:file.project

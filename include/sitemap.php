@@ -115,7 +115,7 @@
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>
 
-<div class="pre-scrollable table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable highlight table-responsive" style="font-size:87.5% !important;">
 <table class="table table-sm table-hover">
   <tr>
     <td><a href="https://legacy.imagemagick.org/Usage/anim_basics/">Animation</a></td>

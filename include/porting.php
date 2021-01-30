@@ -29,7 +29,7 @@ options, and more global use of 'image properties' (more commonly known as
 <p>A pixel is comprised of one or more color values, or <var>channels</var> (e.g. red pixel channel).</p>
 <p>Prior versions of ImageMagick (4-6), support 4 to 5 pixel channels (RGBA or CMYKA).  The first 4 channels are accessed with the PixelPacket data structure.   The structure includes 4 members of type Quantum (typically 16-bits) of red, green, blue, and opacity.  The black channel or colormap indexes are supported by a separate method and structure, IndexPacket.  As an example, here is a code snippet from ImageMagick version 6 that negates the color components (but not the alpha component) of the image pixels:</p>
 
-<pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   IndexPacket
     *indexes;
@@ -63,7 +63,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <p>ImageMagick version 7 supports any number of channels from 1 to 64 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum.   Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7.  We illustrate with an example.  Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:</p>
 
-<pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   Quantum
     *q;
@@ -94,7 +94,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <p>Let's do that again but take full advantage of the new variable pixel channel support:</p>
 
-<pre class="pre-scrollable"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   Quantum
     *q;

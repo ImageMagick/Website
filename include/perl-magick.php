@@ -138,7 +138,7 @@ warn "$x" if "$x";
 
 <p>The script reads three images, crops them, and writes a single image as a GIF animation sequence. In many cases you may want to access individual images of a sequence. The next example illustrates how this done:</p>
 
-<pre class="pre-scrollable"><code>#!/usr/local/bin/perl
+<pre class="pre-scrollable highlight"><code>#!/usr/local/bin/perl
 use Image::Magick;<br />
 my($image, $p, $q);<br />
 $image = new Image::Magick;
@@ -1218,7 +1218,7 @@ rectangle 60, 60 300, 300
 
 <p>The <i>text</i> parameter for methods, Annotate(), Comment(), Draw(), and Label() can include the image filename, type, width, height, or other image attribute by embedding these special format characters:</p>
 
-<pre class="pre-scrollable"><code>%b   file size
+<pre class="pre-scrollable highlight"><code>%b   file size
 %c   comment
 %d   directory
 %e   filename extension
@@ -2472,7 +2472,7 @@ die "unable to continue" if ($1 == ResourceLimitError);
 
 <p>PerlMagick includes these constants:</p>
 
-<pre class="pre-scrollable"><code>BlobError
+<pre class="pre-scrollable highlight"><code>BlobError
 BlobWarning
 CacheError
 CacheWarning

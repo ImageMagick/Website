@@ -68,7 +68,7 @@ Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>
 <p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
 
-<pre class="pre-scrollable"><code>
+<pre class="pre-scrollable highlight"><code>
 #include &lt;Magick++.h> 
 #include &lt;iostream> 
 
