@@ -1559,7 +1559,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>orientation</td>
-    <td>{top-left, top-right, bottom-right, bottom-left, left-top, right-top, right-bottom, left-bottom}</td>
+    <td>{TopLeft, TopRight, BottomRight, BottomLeft, LeftTop, RightTop, RightBottom, LeftBottom}</td>
     <td>image orientation</td>
   </tr>
 
