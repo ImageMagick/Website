@@ -14,7 +14,7 @@ rose.jpg JPEG 70x46 70x46+0+0 8-bit sRGB 2.36KB 0.000u 0:00.000
 
 <p>By default, <code>magick identify</code> provides the following output:</p>
 
-<p><code>Filename[frame #] image-format widthxheight page-widthxpage-height+x-offset+y-offset colorspace user-time elapsed-time</code></p>
+<ul><code>Filename[frame #] image-format widthxheight page-widthxpage-height+x-offset+y-offset colorspace user-time elapsed-time</code></ul>
 
 <p>Next, we look at the same image in greater detail:</p>
 
@@ -101,6 +101,7 @@ Image: rose.jpg
   Elapsed time: 0:01.000
   Version: ImageMagick 7.0.4-8 Q16 x86_64 http://imagemagick.org
 </code></pre>
+<p>Note, the image signature is generated from the pixel components, not the image metadata.</p>
 
 <p>To get the print size in inches of an image at 72 DPI, use:</p>
 
