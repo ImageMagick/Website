@@ -1381,14 +1381,14 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
     Class: PseudoClass
     Geometry: 640x480
     ...
-    filter:brightness:kurtosis: 8.17947
-    filter:brightness:mean: 60632.1
-    filter:brightness:skewness: -2.97118
-    filter:brightness:standard-deviation: 13742.1
-    filter:saturation:kurtosis: 4.33554
-    filter:saturation:mean: 5951.55
-    filter:saturation:skewness: 2.42848
-    filter:saturation:standard-deviation: 15575.9
+    filter:brightness:kurtosis: 3.97886
+    filter:brightness:mean: 58901.3
+    filter:brightness:skewness: -2.30827
+    filter:brightness:standard-deviation: 16179.8
+    filter:saturation:kurtosis: 6.59719
+    filter:saturation:mean: 5321.05
+    filter:saturation:skewness: 2.75679
+    filter:saturation:standard-deviation: 14484.7
 </code></pre>
 
 
