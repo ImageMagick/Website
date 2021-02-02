@@ -43,12 +43,12 @@
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
     <a class="navbar-brand" href="/"><img class="d-block" id="icon" alt="ImageMagick" width="32" height="32" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarsMagick" aria-controls="navbarsMagick" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMagick" aria-controls="navbarsMagick" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="navbar-collapse collapse" id="navbarsMagick" style="">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php IsActive($title,"Convert, Edit, or Compose Bitmap Images"); ?>">
         <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -128,7 +128,7 @@
   </footer>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" rel="stylesheet"></script>
+  <script>window.jQuery || document.write('<script src="/assets/jquery.slim.min.js"><\/script>')</script><script src="/assets/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
 </body>
 </html>
 <?php

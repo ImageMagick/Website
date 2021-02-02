@@ -1,5 +1,5 @@
 /*
-  ImageMagick template.
+   ImageMagick template.
 */
 
 html {
@@ -56,8 +56,6 @@ body {
   margin: 5px;
 }
 
-/*
-
 fieldset {
   padding: .5em;
   background: white;
@@ -96,9 +94,6 @@ h6, .h6 {
 }
 
 a.anchor {
-  display: block;
   position: relative;
-  top: -4.5rem;
-  visibility: hidden;
+  top: -3.5rem;
 }
-*/

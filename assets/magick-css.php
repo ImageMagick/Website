@@ -5,8 +5,8 @@
   header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
   header('Expires: ' . gmdate('D, d M Y H:i:s',time()+604800) . ' GMT');
   header("Content-type: text/css; charset=utf-8");
-  readfile('font-awesome.min.css');
   readfile('bootstrap.min.css');
   readfile('magick-template.css');
+  readfile('font-awesome.min.css');
   ob_end_flush();
 ?>
