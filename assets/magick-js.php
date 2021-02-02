@@ -4,9 +4,7 @@
   header("Cache-Control: max-age=604800");
   header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
   header('Expires: ' . gmdate('D, d M Y H:i:s',time()+604800) . ' GMT');
-  header("Content-type: text/css; charset=utf-8");
-  readfile('font-awesome.min.css');
-  readfile('bootstrap.min.css');
-  readfile('magick-template.css');
+  header("Content-type: text/javascript; charset=utf-8");
+  readfile('bootstrap.bundle.min.js');
   ob_end_flush();
 ?>
