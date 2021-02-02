@@ -414,7 +414,7 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 </dl>
 </div>
 
-<p>The computed threshold is returned as the <kbd>auto-threshold:threshold</kbd> image property. To instead print to your device, use <kbd>-define auto-threshold:threshold=true</kbd>.</p>
+<p>The computed threshold is returned as the <kbd>auto-threshold:verbose</kbd> image property. To instead print to your device, use <kbd>-define auto-threshold:verbose=true</kbd>.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="average"></a>-average</h3>
