@@ -41,6 +41,7 @@
 <?php flush(); ?>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
     <a class="navbar-brand" href="/"><img class="d-block" id="icon" alt="ImageMagick" width="32" height="32" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMagick" aria-controls="navbarsMagick" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -74,10 +75,11 @@
       </li>
     </ul>
     </div>
-    <form class="form-inline my-2 my-md-0" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="sa">Search</button>
+    <form class="d-flex" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">
+      <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit" name="sa">Search</button>
     </form>
+    </div>
   </nav>
   <div class="container">
    <?php if ($_SERVER["SERVER_ADDR"] != "10.144.245.30") echo '<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
@@ -126,7 +128,8 @@
   </footer>
 
   <!-- Javascript assets -->
-  <script>window.jQuery || document.write('<script src="/assets/jquery.slim.min.js"><\/script>')</script><script src="/assets/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+  <script>window.jQuery || document.write('<script src="/assets/jquery.slim.min.js"><\/script>')</script>
+  <script src="/assets/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 </body>
 </html>
 <?php
