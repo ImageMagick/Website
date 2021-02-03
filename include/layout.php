@@ -2,14 +2,14 @@
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
 
-  function IsActive($target,$title)
+  function IsActive($topic,$title)
   {
-    if (strcmp($title,$target) == 0) {
+    if (strcmp($topic,$title) == 0) {
       echo "active";
     }
   }
 
-  function SiteHeader($title)
+  function SiteHeader($title,$topic)
   {
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
@@ -49,19 +49,19 @@
 
     <div class="collapse navbar-collapse" id="magick-navbars">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item <?php IsActive($title,"Convert, Edit, or Compose Bitmap Images"); ?>">
+        <li class="nav-item <?php IsActive($topic,"Convert, Edit, or Compose Bitmap Images"); ?>">
           <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Home</a>
         </li>
-        <li class="nav-item <?php IsActive($title,"Download"); ?>">
+        <li class="nav-item <?php IsActive($topic,"Download"); ?>">
           <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
         </li>
-        <li class="nav-item <?php IsActive($title,"Command-line Tools"); ?>">
+        <li class="nav-item <?php IsActive($topic,"Command-line Tools"); ?>">
           <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
         </li>
-        <li class="nav-item <?php IsActive($title,"Command-line Processing"); ?>">
+        <li class="nav-item <?php IsActive($topic,"Command-line Processing"); ?>">
           <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
         </li>
-        <li class="nav-item <?php IsActive($title,"Develop"); ?>">
+        <li class="nav-item <?php IsActive($topic,"Develop"); ?>">
           <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
         </li>
         <li class="nav-item">
