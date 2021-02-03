@@ -2,9 +2,9 @@
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
 
-  function IsActive($topic,$title)
+  function IsActive($topic,$target)
   {
-    if (strcmp($topic,$title) == 0) {
+    if (strcmp($topic,$target) == 0) {
       echo "active";
     }
   }
@@ -74,7 +74,7 @@
           <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
         </li>
       </ul>
-      <form class="d-flex" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">
+      <form class="d-flex form-inline" action="<?php echo $_SESSION['RelativePath']?>/../script/search.php">
         <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit" name="sa">Search</button>
       </form>
