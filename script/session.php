@@ -82,7 +82,7 @@
   require_once($_SESSION['AbsolutePath'] . '/../function/option.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
-  SiteHeader($title);
+  SiteHeader($title,$topic);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
   if (!isset($dynamic_content)) {
