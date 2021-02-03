@@ -7,6 +7,5 @@
   header("Content-type: text/css; charset=utf-8");
   readfile('bootstrap.min.css');
   readfile('magick-template.css');
-  readfile('font-awesome.min.css');
   ob_end_flush();
 ?>
