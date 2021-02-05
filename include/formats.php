@@ -106,6 +106,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://en.wikipedia.org/wiki/AV1#AV1_Image_File_Format_(AVIF)">AVIF</a></td>
+    <td>RW</td>
+    <td>Format derived from the keyframes of AV1 video</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>AVS</td>
     <td>RW</td>
     <td>AVS X image</td>
