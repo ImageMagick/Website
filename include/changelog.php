@@ -1,7 +1,15 @@
-<div class="magick-header"><dl><dt>2021-01-25  7.0.10-61  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-61 GIT revision 18...</li>
+<div class="magick-header"><dl><dt>2021-02-01  7.0.10-62  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-62 GIT revision 18...</li>
+<dt>2021-02-01  7.0.10-62  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> -trim not working as expected (reference    https://github.com/ImageMagick/ImageMagick/discussions/3172).</li>
+  <li> possible undefined behavior (reference    https://github.com/ImageMagick/ImageMagick/issues/3195).</li>
+  <li> sanitize buggy ascender and descender values (reference    https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=980202).</li>
+<dt>2021-01-30  7.0.10-61  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-61 GIT revision 18360:d3bec838c:20210130</li>
 <dt>2021-01-25  7.0.10-61  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> dng:decode element in delegates.xml quoted incorrectly (reference    https://github.com/ImageMagick/ImageMagick/issues/3156).</li>
+  <li> Extract GPS info from TIFF images (reference    https://github.com/ImageMagick/ImageMagick/issues/3167).</li>
+  <li> Revert tieing MagickFloatType to double (reference    https://github.com/ImageMagick/ImageMagick/pull/2832).</li>
 <dt>2021-01-25  7.0.10-60  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.10-60 GIT revision 18347:9a84e249b:20210125</li>
 <dt>2021-01-24  7.0.10-60  &lt;quetzlzacatenango@image...&gt;</dt>

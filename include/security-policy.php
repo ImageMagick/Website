@@ -74,7 +74,7 @@ convert: no images defined `wizard.jpg'</pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
 
-<pre class="pre-scrollable highlight">-> identify -list policy
+<pre class="modal-body highlight">-> identify -list policy
 Path: ImageMagick-7/policy.xml
   Policy: Cache
     name: memory-map
