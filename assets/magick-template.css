@@ -46,4 +46,7 @@ a.anchor {
   top: -3.5rem;
 }
 
-.pre-scrollable { max-height: 340px; overflow-y: scroll; }
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
