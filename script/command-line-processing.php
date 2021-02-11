@@ -1,5 +1,5 @@
 <?php
   $title='Command-line Processing';
-  $target='CLI';
+  $topic='CLI';
   include('session.php');
 ?>
