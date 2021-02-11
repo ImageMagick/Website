@@ -49,26 +49,23 @@
 
     <div class="collapse navbar-collapse" id="magick-navbars">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item <?php IsActive($topic,"Convert, Edit, or Compose Bitmap Images"); ?>">
-          <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Home</a>
+        <li class="nav-item">
+          <a class="nav-link <?php IsActive($topic,'Home'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Home</a>
         </li>
-        <li class="nav-item <?php IsActive($topic,"Download"); ?>">
-          <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
+        <li class="nav-item">
+          <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
         </li>
-        <li class="nav-item <?php IsActive($topic,"Command-line Tools"); ?>">
-          <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
+        <li class="nav-item">
+          <a class="nav-link <?php IsActive($topic,'Tools'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
         </li>
-        <li class="nav-item <?php IsActive($topic,"Command-line Processing"); ?>">
-          <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line</a>
+        <li class="nav-item">
+          <a class="nav-link <?php IsActive($topic,'CLI'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">CLI</a>
         </li>
-        <li class="nav-item <?php IsActive($topic,"Develop"); ?>">
-          <a class="nav-link" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
+        <li class="nav-item">
+          <a class="nav-link <?php IsActive($topic,'Develop'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">Community</a>
-        </li>
-        <li class="nav-item">
-          &nbsp;&nbsp;
         </li>
         <li class="nav-item">
           <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
