@@ -225,7 +225,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external delegate libraries (e.g. JPEG, TIFF, etc.).</p>
 
 <p>To determine the current setting of these limits, use this command:</p>
-<ul><pre class="highlight">-> identify -list resource
+<ul><pre class="highlight"><samp>-> identify -list resource
 Resource limits:
   Width: 100MP
   Height: 100MP
@@ -237,7 +237,7 @@ Resource limits:
   Thread: 12
   Throttle: 0
   Time: unlimited
-</pre></ul>
+</samp></pre></ul>
 
 <p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <ul><pre class="highlight"><code>&lt;policymap>
@@ -274,7 +274,7 @@ Resource limits:
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
-<ul><pre class="highlight">-> magick -debug cache logo: -sharpen 3x2 null:
+<ul><pre class="highlight"><samp>-> magick -debug cache logo: -sharpen 3x2 null:
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy 
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
@@ -291,7 +291,7 @@ Resource limits:
   destroy LOGO[0]
 2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
-</pre></ul>
+</samp></pre></ul>
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
 
 
@@ -592,7 +592,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <h5>Threading Performance</h5>
 <p>It can be difficult to predict behavior in a parallel environment.   Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize.  The only way to be certain of optimal performance, in terms of the number of threads, is to benchmark.   ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads.  This can help you identify how many threads is the most efficient in your environment.  For this benchmark we sharpen a 1920x1080 image of a model 10 times with 1 to 12 threads:</p>
-<ul><pre class="highlight">-> magick -bench 10 model.png -sharpen 5x2 null:
+<ul><pre class="highlight"><samp>-> magick -bench 10 model.png -sharpen 5x2 null:
 Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810
 Performance[2]: 10i 2.020ips 0.640e 9.190u 0:04.950
 Performance[3]: 10i 2.786ips 0.710e 9.400u 0:03.590
@@ -605,7 +605,7 @@ Performance[9]: 10i 4.484ips 0.798e 12.860u 0:02.230
 Performance[10]: 10i 4.274ips 0.790e 14.830u 0:02.340
 Performance[11]: 10i 4.348ips 0.793e 16.500u 0:02.300
 Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
-</pre></ul>
+</samp></pre></ul>
 <p>The sweet spot for this example is 6 threads. This makes sense since there are 6 physical cores.  The other 6 are hyperthreads. It appears that sharpening does not benefit from hyperthreading.</p>
 <p>In certain cases, it might be optimal to set the number of threads to 1 or to disable OpenMP completely with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option,  or the  <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy.xml</a> configuration file.</p>
 
@@ -1375,21 +1375,21 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
 
 <p>To invoke the custom filter from the command line, use this command:</p>
 
-<ul><pre class="highlight"><code>magick logo: -process \"analyze\" -verbose info:
-  Image: logo:
-    Format: LOGO (ImageMagick Logo)
-    Class: PseudoClass
-    Geometry: 640x480
-    ...
-    filter:brightness:kurtosis: 3.97886
-    filter:brightness:mean: 58901.3
-    filter:brightness:skewness: -2.30827
-    filter:brightness:standard-deviation: 16179.8
-    filter:saturation:kurtosis: 6.59719
-    filter:saturation:mean: 5321.05
-    filter:saturation:skewness: 2.75679
-    filter:saturation:standard-deviation: 14484.7
-</code></pre></ul>
+<ul><pre class="highlight"><samp>magick logo: -process \"analyze\" -verbose info:
+Image: logo:
+  Format: LOGO (ImageMagick Logo)
+  Class: PseudoClass
+  Geometry: 640x480
+  ...
+  filter:brightness:kurtosis: 3.97886
+  filter:brightness:mean: 58901.3
+  filter:brightness:skewness: -2.30827
+  filter:brightness:standard-deviation: 16179.8
+  filter:saturation:kurtosis: 6.59719
+  filter:saturation:mean: 5321.05
+  filter:saturation:skewness: 2.75679
+  filter:saturation:standard-deviation: 14484.7
+</samp></pre></ul>
 
 
 <p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
