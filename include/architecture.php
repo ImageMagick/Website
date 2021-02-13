@@ -55,24 +55,24 @@
 
 <dl>
 <dt class="col-md-8">Create an image canvas initialized to the background color:</dt><br/>
-<dd class="col-md-8"><pre class="highlight"><code>image=AllocateImage(image_info);
+<dd class="col-md-8"><ul><pre class="highlight"><code>image=AllocateImage(image_info);
 if (SetImageExtent(image,640,480) == MagickFalse)
   { /* an exception was thrown */ }
 (void) QueryMagickColor("red",&amp;image-&gt;background_color,&amp;image-&gt;exception);
 SetImageBackgroundColor(image);
-</code></pre></dd>
+</code></pre></ul></dd>
 
 <dt class="col-md-8">Create an image from a JPEG image on disk:</dt><br/>
-<dd class="col-md-8"><pre class="highlight"><code>(void) strcpy(image_info-&gt;filename,"image.jpg"):
+<dd class="col-md-8"><ul><pre class="highlight"><code>(void) strcpy(image_info-&gt;filename,"image.jpg"):
 image=ReadImage(image_info,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
-</code></pre></dd>
+</code></pre></ul></dd>
 <dt class="col-md-8">Create an image from a memory based image:</dt><br/>
-<dd class="col-md-8"><pre class="highlight"><code>image=BlobToImage(blob_info,blob,extent,exception);
+<dd class="col-md-8"><ul><pre class="highlight"><code>image=BlobToImage(blob_info,blob,extent,exception);
 if (image == (Image *) NULL)
   { /* an exception was thrown */ }
-</code></pre></dd>
+</code></pre></ul></dd>
 </dl>
 
 <p>In our discussion of the pixel cache, we use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore API</a> to illustrate our points, however, the principles are the same for other program interfaces to ImageMagick.</p>
@@ -96,7 +96,7 @@ if (image == (Image *) NULL)
 
 <p>Here is a typical <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> code snippet for manipulating pixels in the pixel cache.  In our example, we copy pixels from the input image to the output image and decrease the intensity by 10%:</p>
 
-<pre class="pre-scrollable highlight"><code>const Quantum
+<ul><pre class="pre-scrollable highlight"><code>const Quantum
   *p;
 
 Quantum
@@ -130,13 +130,13 @@ for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
 }
 if (y &lt; (ssize_t) source-&gt;rows)
   { /* an exception was thrown */ }
-</code></pre>
+</code></pre></ul>
 
 <p>When we first create the destination image by cloning the source image, the pixel cache pixels are not copied.  They are only copied when you signal your intentions to modify or set the pixel cache by calling <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetAuthenticPixels">GetAuthenticPixels()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a> if you want to set new pixel values rather than update existing ones.  You could use GetAuthenticPixels() to set pixel values but it is slightly more efficient to use QueueAuthenticPixels() instead. Finally, use <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SyncAuthenticPixels">SyncAuthenticPixels()</a> to ensure any updated pixels are pushed to the pixel cache.</p>
 
 <p>You can associate arbitrary content with each pixel, called <em>meta</em> content.  Use  <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetVirtualMetacontent">GetVirtualMetacontent()</a> (to read the content) or <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#GetAuthenticMetacontent">GetAuthenticMetacontent()</a> (to update the content) to gain access to this content.  For example, to print the metacontent, use:</p>
 
-<pre class="highlight"><code>const void
+<ul><pre class="highlight"><code>const void
   *metacontent;
 
 for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
@@ -149,12 +149,12 @@ for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
 }
 if (y &lt; (ssize_t) source-&gt;rows)
   /* an exception was thrown */
-</code></pre>
+</code></pre></ul>
 
 <p>The pixel cache manager decides whether to give you direct or indirect access to the image pixels.  In some cases the pixels are staged to an intermediate buffer-- and that is why you must call SyncAuthenticPixels() to ensure this buffer is <var>pushed</var> out to the pixel cache to guarantee the corresponding pixels in the cache are updated.  For this reason we recommend that you only read or update a scanline or a few scanlines of pixels at a time.  However, you can get any rectangular region of pixels you want.  GetAuthenticPixels() requires that the region you request is within the bounds of the image area.  For a 640 by 480 image, you can get a scanline of 640 pixels at row 479 but if you ask for a scanline at row 480, an exception is returned (rows are numbered starting at 0).  GetVirtualPixels() does not have this constraint.  For example,</p>
 
-<pre class="highlight"><code>p=GetVirtualPixels(source,-3,-3,source-&gt;columns+3,6,exception);
-</code></pre>
+<ul><pre class="highlight"><code>p=GetVirtualPixels(source,-3,-3,source-&gt;columns+3,6,exception);
+</code></pre></ul>
 
 <p>gives you the pixels you asked for without complaint, even though some are not within the confines of the image region.</p>
 
@@ -225,7 +225,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external delegate libraries (e.g. JPEG, TIFF, etc.).</p>
 
 <p>To determine the current setting of these limits, use this command:</p>
-<pre class="highlight">-> identify -list resource
+<ul><pre class="highlight">-> identify -list resource
 Resource limits:
   Width: 100MP
   Height: 100MP
@@ -237,10 +237,10 @@ Resource limits:
   Thread: 12
   Throttle: 0
   Time: unlimited
-</pre>
+</pre></ul>
 
 <p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
-<pre class="highlight"><code>&lt;policymap>
+<ul><pre class="highlight"><code>&lt;policymap>
   &lt;!-- temporary path must be a preexisting writable directory -->
   &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
   &lt;policy domain="resource" name="memory" value="256MiB"/>
@@ -268,13 +268,13 @@ Resource limits:
   &lt;policy domain="delegate" rights="none" pattern="SHOW" />
   &lt;policy domain="delegate" rights="none" pattern="WIN" />
   &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
-</code></pre>
+</code></pre></ul>
 <p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8 you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS"). The policy also prevents indirect reads.  If you want to, for example, read text from a file (e.g. caption:@myCaption.txt), you'll need to remove this policy.</p>
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
-<pre class="highlight">-> magick -debug cache logo: -sharpen 3x2 null:
+<ul><pre class="highlight">-> magick -debug cache logo: -sharpen 3x2 null:
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy 
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
@@ -291,20 +291,20 @@ Resource limits:
   destroy LOGO[0]
 2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
-</pre>
+</pre></ul>
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
 
 
 <h3>Distributed Pixel Cache</h3>
 <p>A distributed pixel cache is an extension of the traditional pixel cache available on a single host.  The distributed pixel cache may span multiple servers so that it can grow in size and transactional capacity to support very large images.  Start up the pixel cache server on one or more machines.  When you read or operate on an image and the local pixel cache resources are exhausted, ImageMagick contacts one or more of these remote pixel servers to store or retrieve pixels.  The distributed pixel cache relies on network bandwidth to marshal pixels to and from the remote server.  As such, it will likely be significantly slower than a pixel cache utilizing local storage (e.g. memory, disk, etc.).</p>
-<pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
+<ul><pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
 magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
-</code></pre>
+</code></pre></ul>
 
 <h3>Cache Views</h3>
 
 <p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
-<pre class="pre-scrollable highlight"><code>CacheView
+<ul><pre class="pre-scrollable highlight"><code>CacheView
   *view_1,
   *view_2;
 
@@ -325,7 +325,7 @@ view_2=DestroyCacheView(view_2);
 view_1=DestroyCacheView(view_1);
 if (y &lt; (ssize_t) source-&gt;rows)
   { /* an exception was thrown */ }
-</code></pre>
+</code></pre></ul>
 
 <h3>Magick Persistent Cache Format</h3>
 
@@ -353,17 +353,17 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>A great majority of image formats and algorithms restrict themselves to a fixed range of pixel values from 0 to some maximum value, for example, the Q16 version of ImageMagick permit intensities from 0 to 65535.  High dynamic-range imaging (HDRI), however, permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  Enable <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">HDRI</a> at ImageMagick build time to deal with high dynamic-range images, but be mindful that each pixel component is a 32-bit floating point value. In addition, pixel values are not clamped by default so some algorithms may have unexpected results due to out-of-band pixel values than the non-HDRI version.</p>
 
 <p>If you are dealing with large images, make sure the pixel cache is written to a disk area with plenty of free space.  Under Unix, this is typically <code>/tmp</code> and for Windows, <code>c:/temp</code>.  You can tell ImageMagick to write the pixel cache to an alternate location and conserve memory with these options:</p>
-<pre class="highlight"><code>magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
-</code></pre>
+<ul><pre class="highlight"><code>magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
+</code></pre></ul>
 
 <p>Set global resource limits for your environment in the <code>policy.xml</code> configuration file.</p>
 
 <p>If you plan on processing the same image many times, consider the MPC format.  Reading a MPC image has near-zero overhead because its in the native pixel cache format eliminating the need for decoding the image pixels.  Here is an example:</p>
-<pre class="highlight"><code>magick image.tif image.mpc
+<ul><pre class="highlight"><code>magick image.tif image.mpc
 magick image.mpc -crop 100x100+0+0 +repage 1.png
 magick image.mpc -crop 100x100+100+0 +repage 2.png
 magick image.mpc -crop 100x100+200+0 +repage 3.png
-</code></pre>
+</code></pre></ul>
 
 <p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
 
@@ -372,7 +372,7 @@ magick image.mpc -crop 100x100+200+0 +repage 3.png
 <p>ImageMagick provides for streaming pixels as they are read from or written to an image.  This has several advantages over the pixel cache.  The time and resources consumed by the pixel cache scale with the area of an image, whereas the pixel stream resources scale with the width of an image.  The disadvantage is the pixels must be consumed as they are streamed so there is no persistence.</p>
 
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#ReadStream">ReadStream()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#WriteStream">WriteStream()</a> with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
-<pre class="pre-scrollable highlight"><code>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
+<ul><pre class="pre-scrollable highlight"><code>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
 {
   register const Quantum
     *p;
@@ -394,30 +394,30 @@ magick image.mpc -crop 100x100+200+0 +repage 3.png
 /* invoke the pixel stream here */
 image_info->client_data=(void *) MyData;
 image=ReadStream(image_info,&amp;StreamPixels,exception);
-</code></pre>
+</code></pre></ul>
 
 <p>We also provide a lightweight tool, <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a>, to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a> desirable when working with large images or when you require raw pixel components.  A majority of the image formats stream pixels (red, green, and blue) from left to right and top to bottom.  However, a few formats do not support this common ordering (e.g. the PSD format).</p>
 
 <h2><a class="anchor" id="properties"></a>Image Properties and Profiles</h2>
 
 <p>Images have metadata associated with them in the form of properties (e.g. width, height, description, etc.) and profiles (e.g. EXIF, IPTC, color management).  ImageMagick provides convenient methods to get, set, or update image properties and get, set, update, or apply profiles.  Some of the more popular image properties are associated with the Image structure in the MagickCore API.  For example:</p>
-<pre class="highlight"><code>(void) printf("image width: %lu, height: %lu\n",image-&gt;columns,image-&gt;rows);
-</code></pre>
+<ul><pre class="highlight"><code>(void) printf("image width: %lu, height: %lu\n",image-&gt;columns,image-&gt;rows);
+</code></pre></ul>
 
 <p>For a great majority of image properties, such as an image comment or description, we use the <a href="<?php echo $_SESSION['RelativePath']?>/../api/property.php#GetImageProperty">GetImageProperty()</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../api/property.php#SetImageProperty">SetImageProperty()</a> methods.  Here we set a property and fetch it right back:</p>
-<pre class="highlight"><code>const char
+<ul><pre class="highlight"><code>const char
   *comment;
 
 (void) SetImageProperty(image,"comment","This space for rent");
 comment=GetImageProperty(image,"comment");
 if (comment == (const char *) NULL)
   (void) printf("Image comment: %s\n",comment);
-</code></pre>
+</code></pre></ul>
 
 <p>ImageMagick supports artifacts with the GetImageArtifact() and SetImageArtifact() methods.  Artifacts are stealth properties that are not exported to image formats (e.g. PNG).</p>
 
 <p>Image profiles are handled with <a href="<?php echo $_SESSION['RelativePath']?>/../api/profile.php#GetImageProfile">GetImageProfile()</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../api/profile.php#SetImageProfile">SetImageProfile()</a>, and <a href="<?php echo $_SESSION['RelativePath']?>/../api/profile.php#ProfileImage">ProfileImage()</a> methods.  Here we set a profile and fetch it right back:</p>
-<pre class="highlight"><code>StringInfo
+<ul><pre class="highlight"><code>StringInfo
   *profile;
 
 profile=AcquireStringInfo(length);
@@ -427,39 +427,39 @@ DestroyStringInfo(profile);
 profile=GetImageProfile(image,"EXIF");
 if (profile != (StringInfo *) NULL)
   (void) PrintStringInfo(stdout,"EXIF",profile);
-</code></pre>
+</code></pre></ul>
 
 <h2><a class="anchor" id="tera-pixel"></a>Large Image Support</h2>
 <p>ImageMagick can read, process, or write mega-, giga-, or tera-pixel image sizes.  An image width or height can range from 1 to 2 giga-pixels on a 32 bit OS (up to 2147483647 rows/columns) and up to 9 exa-pixels on a 64-bit OS (up to 9223372036854775807 rows/columns).  Note, that some image formats have restrictions on image size.  For example, Photoshop images are limited to 300,000 pixels for width or height.  Here we resize an image to a quarter million pixels square:</p>
-<pre class="highlight"><code>magick logo: -resize 250000x250000 logo.miff
-</code></pre>
+<ul><pre class="highlight"><code>magick logo: -resize 250000x250000 logo.miff
+</code></pre></ul>
 
 <p>For large images, memory resources will likely be exhausted and ImageMagick will instead create a pixel cache on disk.  Make sure you have plenty of temporary disk space.  If your default temporary disk partition is too small, tell ImageMagick to use another partition with plenty of free space.  For example:</p>
-<pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp logo:  \ <br/>     -resize 250000x250000 logo.miff
-</code></pre>
+<ul><pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp logo:  \ <br/>     -resize 250000x250000 logo.miff
+</code></pre></ul>
 
 <p>To ensure large images do not consume all the memory on your system, force the image pixels to memory-mapped disk with resource limits:</p>
-<pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp -limit memory 16mb \
+<ul><pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp -limit memory 16mb \
   logo: -resize 250000x250000 logo.miff
-</code></pre>
+</code></pre></ul>
 
 <p>Here we force all image pixels to disk:</p>
-<pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp -limit area 0 \
+<ul><pre class="highlight"><code>magick -define registry:temporary-path=/data/tmp -limit area 0 \
   logo: -resize 250000x250000 logo.miff
-</code></pre>
+</code></pre></ul>
 
 <p>Caching pixels to disk is about 1000 times slower than memory.  Expect long run times when processing large images on disk with ImageMagick.  You can monitor progress with this command:</p>
-<pre class="highlight"><code>magick -monitor -limit memory 2GiB -limit map 4GiB -define registry:temporary-path=/data/tmp \
+<ul><pre class="highlight"><code>magick -monitor -limit memory 2GiB -limit map 4GiB -define registry:temporary-path=/data/tmp \
   logo: -resize 250000x250000 logo.miff
-</code></pre>
+</code></pre></ul>
 
 <p>For really large images, or if there is limited resources on your host, you can utilize a distributed pixel cache on one or more remote hosts:</p>
-<pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
+<ul><pre class="highlight"><code>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
 magick -distribute-cache 6668 &amp;  // start on 192.168.100.51
 magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png
-</code></pre>
+</code></pre></ul>
 <p>Due to network latency, expect a substantial slow-down in processing your workflow.</p>
 
 <h2><a class="anchor" id="threads"></a>Threads of Execution</h2>
@@ -467,7 +467,7 @@ magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
 <p>Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips. However, you are welcome to use ImageMagick algorithms in your threads of execution with the exception of the MagickCore's GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), or SyncAuthenticPixels() pixel cache methods.  These methods are intended for one thread of execution only with the exception of an OpenMP parallel section.  To access the pixel cache with more than one thread of execution, use a cache view.  We do this for the <a href="<?php echo $_SESSION['RelativePath']?>/../api/composite.php#CompositeImage">CompositeImage()</a> method, for example.  Suppose we want to composite a single source image over a different destination image in each thread of execution.  If we use GetVirtualPixels(), the results are unpredictable because multiple threads would likely be asking for different areas of the pixel cache simultaneously.  Instead we use GetCacheViewVirtualPixels() which creates a unique view for each thread of execution ensuring our program behaves properly regardless of how many threads are invoked.  The other program interfaces, such as the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand API</a>, are completely thread safe so there are no special precautions for threads of execution.</p>
 
 <p>Here is an MagickCore code snippet that takes advantage of threads of execution with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">OpenMP</a> programming paradigm:</p>
-<pre class="pre-scrollable highlight"><code>CacheView
+<ul><pre class="pre-scrollable highlight"><code>CacheView
   *image_view;
 
 MagickBooleanType
@@ -515,10 +515,10 @@ for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
 image_view=DestroyCacheView(image_view);
 if (status == MagickFalse)
   perror("something went wrong");
-</code></pre>
+</code></pre></ul>
 
 <p>This code snippet converts an uncompressed Windows bitmap to a Magick++ image:</p>
-<pre class="pre-scrollable highlight"><code>#include "Magick++.h"
+<ul><pre class="pre-scrollable highlight"><code>#include "Magick++.h"
 #include &lt;assert.h&gt;
 #include "omp.h"
 
@@ -572,19 +572,19 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
     image->syncPixels();  // sync pixels to pixel cache.
   }
   return;
-}</code></pre>
+}</code></pre></ul>
 
 <p>If you call the ImageMagick API from your OpenMP-enabled application and you intend to dynamically increase the number of threads available in subsequent parallel regions, be sure to perform the increase <var>before</var> you call the API otherwise ImageMagick may fault.</p>
 
 <p><a href="<?php echo $_SESSION['RelativePath']?>/../api/wand-view.php">MagickWand</a> supports wand views.  A view iterates over the entire, or portion, of the image in parallel and for each row of pixels, it invokes a callback method you provide.  This limits most of your parallel programming activity to just that one module.  There are similar methods in <a href="<?php echo $_SESSION['RelativePath']?>/../api/image-view.php">MagickCore</a>.  For an example, see the same sigmoidal contrast algorithm implemented in both <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php#wand-view">MagickWand</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php#image-view">MagickCore</a>.</p>
 
 <p>In most circumstances, the default number of threads is set to the number of processor cores on your system for optimal performance.  However, if your system is hyperthreaded or if you are running on a virtual host and only a subset of the processors are available to your server instance, you might get an increase in performance by setting the thread <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy</a> or the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable.  For example, your virtual host has 8 processors but only 2 are assigned to your server instance.  The default of 8 threads can cause severe performance problems.  One solution is to limit the number of threads to the available processors in your <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a> configuration file:</p>
-<pre class="highlight"><code>&lt;policy domain="resource" name="thread" value="2"/>
-</code></pre>
+<ul><pre class="highlight"><code>&lt;policy domain="resource" name="thread" value="2"/>
+</code></pre></ul>
 
 <p>Or suppose your 12 core hyperthreaded computer defaults to 24 threads.  Set the MAGICK_THREAD_LIMIT environment variable and you will likely get improved performance:</p>
-<pre class="highlight"><code>export MAGICK_THREAD_LIMIT=12
-</code></pre>
+<ul><pre class="highlight"><code>export MAGICK_THREAD_LIMIT=12
+</code></pre></ul>
 
 <p>The OpenMP committee has not defined the behavior of mixing OpenMP with other threading models such as Posix threads.  However, using modern releases of Linux, OpenMP and Posix threads appear to interoperate without complaint.  If you want to use Posix threads from a program module that calls one of the ImageMagick application programming interfaces (e.g. MagickCore, MagickWand, Magick++, etc.) from Mac OS X or an older Linux release, you may need to disable OpenMP support within ImageMagick.  Add the <code>--disable-openmp</code> option to the configure script command line and rebuild and reinstall ImageMagick.</p>
 
@@ -592,7 +592,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <h5>Threading Performance</h5>
 <p>It can be difficult to predict behavior in a parallel environment.   Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize.  The only way to be certain of optimal performance, in terms of the number of threads, is to benchmark.   ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads.  This can help you identify how many threads is the most efficient in your environment.  For this benchmark we sharpen a 1920x1080 image of a model 10 times with 1 to 12 threads:</p>
-<pre class="highlight">-> magick -bench 10 model.png -sharpen 5x2 null:
+<ul><pre class="highlight">-> magick -bench 10 model.png -sharpen 5x2 null:
 Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810
 Performance[2]: 10i 2.020ips 0.640e 9.190u 0:04.950
 Performance[3]: 10i 2.786ips 0.710e 9.400u 0:03.590
@@ -605,7 +605,7 @@ Performance[9]: 10i 4.484ips 0.798e 12.860u 0:02.230
 Performance[10]: 10i 4.274ips 0.790e 14.830u 0:02.340
 Performance[11]: 10i 4.348ips 0.793e 16.500u 0:02.300
 Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
-</pre>
+</pre></ul>
 <p>The sweet spot for this example is 6 threads. This makes sense since there are 6 physical cores.  The other 6 are hyperthreads. It appears that sharpening does not benefit from hyperthreading.</p>
 <p>In certain cases, it might be optimal to set the number of threads to 1 or to disable OpenMP completely with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option,  or the  <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy.xml</a> configuration file.</p>
 
@@ -613,19 +613,19 @@ Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
 <p>ImageMagick includes support for heterogeneous distributed processing with the <a href="http://en.wikipedia.org/wiki/OpenCL">OpenCL</a> framework.  OpenCL kernels within ImageMagick permit image processing algorithms to execute across heterogeneous platforms consisting of CPUs, GPUs, and other processors.  Depending on your platform, speed-ups can be an order of magnitude faster than the traditional single CPU.</p>
 
 <p>First verify that your version of ImageMagick includes support for the OpenCL feature:</p>
-<pre class="highlight"><code>magick identify -version
+<ul><pre class="highlight"><code>magick identify -version
 Features: DPC Cipher Modules OpenCL OpenMP(4.5)
-</code></pre>
+</code></pre></ul>
 
 <p>If so, run this command to realize a significant speed-up for image convolution:</p>
 
-<pre class="highlight"><code>magick image.png -convolve '-1, -1, -1, -1, 9, -1, -1, -1, -1' convolve.png
-</code></pre>
+<ul><pre class="highlight"><code>magick image.png -convolve '-1, -1, -1, -1, 9, -1, -1, -1, -1' convolve.png
+</code></pre></ul>
 
 <p>If an accelerator is not available or if the accelerator fails to respond, ImageMagick reverts to the non-accelerated convolution algorithm.</p>
 
 <p>Here is an example OpenCL kernel that convolves an image:</p>
-<pre class="pre-scrollable highlight"><code>static inline long ClampToCanvas(const long offset,const ulong range)
+<ul><pre class="pre-scrollable highlight"><code>static inline long ClampToCanvas(const long offset,const ulong range)
 {
   if (offset &lt; 0L)
     return(0L);
@@ -681,7 +681,7 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
   destination[index].y=ClampToQuantum(gamma*sum.y);
   destination[index].z=ClampToQuantum(gamma*sum.z);
   destination[index].w=ClampToQuantum(sum.w);
-};</code></pre>
+};</code></pre></ul>
 
 <p>See <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/accelerate.c">MagickCore/accelerate.c</a> for a complete implementation of image convolution with an OpenCL kernel.</p>
 
@@ -692,7 +692,7 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g.  PNG, GIF, JPEG, etc.).  Registering an image coder alerts ImageMagick a particular format is available to read or write.  While unregistering tells ImageMagick the format is no longer available.  The classifying method looks at the first few bytes of an image and determines if the image is in the expected format.  The reader sets the image size, colorspace, and other properties and loads the pixel cache with the pixels.  The reader returns a single image or an image sequence (if the format supports multiple images per file), or if an error occurs, an exception and a null image.  The writer does the reverse.  It takes the image properties and unloads the pixel cache and writes them as required by the image format.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/mgk.c">custom coder</a>.  It reads and writes images in the MGK image format which is simply an ID followed by the image width and height followed by the RGB pixel values.</p>
-<pre class="pre-scrollable highlight"><code>#include &lt;MagickCore/studio.h>
+<ul><pre class="pre-scrollable highlight"><code>#include &lt;MagickCore/studio.h>
 #include &lt;MagickCore/blob.h>
 #include &lt;MagickCore/cache.h>
 #include &lt;MagickCore/colorspace.h>
@@ -1110,12 +1110,12 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
   } while (image_info->adjoin != MagickFalse);
   (void) CloseBlob(image);
   return(MagickTrue);
-}</code></pre>
+}</code></pre></ul>
 
 <p>To invoke the custom coder from the command line, use these commands:</p>
-<pre class="highlight"><code>magick logo: logo.mgk
+<ul><pre class="highlight"><code>magick logo: logo.mgk
 display logo.mgk
-</code></pre>
+</code></pre></ul>
 
 <p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
 
@@ -1124,7 +1124,7 @@ display logo.mgk
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
-<pre class="pre-scrollable highlight"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable highlight"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
@@ -1371,11 +1371,11 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
       }
   }
   return(MagickImageFilterSignature);
-}</code></pre>
+}</code></pre></ul>
 
 <p>To invoke the custom filter from the command line, use this command:</p>
 
-<pre class="highlight"><code>magick logo: -process \"analyze\" -verbose info:
+<ul><pre class="highlight"><code>magick logo: -process \"analyze\" -verbose info:
   Image: logo:
     Format: LOGO (ImageMagick Logo)
     Class: PseudoClass
@@ -1389,7 +1389,7 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
     filter:saturation:mean: 5321.05
     filter:saturation:skewness: 2.75679
     filter:saturation:standard-deviation: 14484.7
-</code></pre>
+</code></pre></ul>
 
 
 <p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>

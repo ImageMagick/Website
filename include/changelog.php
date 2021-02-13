@@ -1,5 +1,11 @@
-<div class="magick-header"><dl><dt>2021-02-01  7.0.10-62  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.10-62 GIT revision 18...</li>
+<div class="magick-header"><dl><dt>2021-02-10  7.0.11-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-0 GIT revision 18</li>
+<dt>2021-02-10  7.0.11-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> bump minor version #</li>
+  <li> allow reading multichannel PSD files with 1 or 2 channels.</li>
+  <li> respect masks when computing SSIM metric (reference    https://github.com/ImageMagick/ImageMagick/discussions/3212).</li>
+<dt>2021-02-07  7.0.10-62  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.10-62 GIT revision 18418:f1e915f65:20210207</li>
 <dt>2021-02-01  7.0.10-62  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> -trim not working as expected (reference    https://github.com/ImageMagick/ImageMagick/discussions/3172).</li>
   <li> possible undefined behavior (reference    https://github.com/ImageMagick/ImageMagick/issues/3195).</li>
