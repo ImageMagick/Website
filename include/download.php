@@ -353,7 +353,6 @@ display logo.gif</code></pre></ul>
     <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
     <td>Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
-I
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q8-x64.zip";
   ?>
