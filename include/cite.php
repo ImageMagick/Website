@@ -3,20 +3,18 @@
 <p class="lead magick-description">Learn how to cite ImageMagick in your work.  Choose from these citation formats:</p>
 
 <h5>Citation in APA style</h5>
-<p class="highlight">The ImageMagick Development Team. (2021). ImageMagick. Retrieved from https://imagemagick.org</p>
+<ul><pre class="highlight"><samp>The ImageMagick Development Team. (2021). ImageMagick. Retrieved from https://imagemagick.org</samp></pre></ul>
 
 <h5>Citation in Vancouver style</h5>
-<p class="highlight">1. The ImageMagick Development Team. ImageMagick [Internet]. 2021. Available from: https://imagemagick.org</p>
+<ul><pre class="highlight"><samp>1. The ImageMagick Development Team. ImageMagick [Internet]. 2021. Available from: https://imagemagick.org</samp></pre></ul>
 
 <h5>Citation in Harvard style</h5>
-<p class="highlight">The ImageMagick Development Team, 2021. ImageMagick, Available at: https://imagemagick.org.</p>
+<ul><pre class="highlight"><sampl>The ImageMagick Development Team, 2021. ImageMagick, Available at: https://imagemagick.org.</samp></pre></ul>
 <h5>Citation in Bibtex format</h5>
-<div class="highlight">
-@software{imagemagick,
-<br>&nbsp;&nbsp;author&nbsp;=&nbsp;{{The&nbsp;ImageMagick&nbsp;Development&nbsp;Team}},
-<br>&nbsp;&nbsp;title&nbsp;=&nbsp;{ImageMagick},
-<br>&nbsp;&nbsp;url&nbsp;=&nbsp;{https://imagemagick.org},
-<br>&nbsp;&nbsp;version&nbsp;=&nbsp;{7.0.10},
-<br>&nbsp;&nbsp;date&nbsp;=&nbsp;{2021-01-04},
-<br>}
-</div>
+<ul><pre class="highlight"><samp>@software{imagemagick,
+  author = {{The ImageMagick Development Team}},
+  title = {ImageMagick},
+  url = {https://imagemagick.org},
+  version = {7.0.10},
+  date = {2021-01-04},
+}</samp></pre></ul>
