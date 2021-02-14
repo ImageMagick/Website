@@ -299,49 +299,49 @@ the supported image formats.</p>
     <td>EPI</td>
     <td>RW</td>
     <td>Adobe Encapsulated PostScript Interchange format</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPS</td>
     <td>RW</td>
     <td>Adobe Encapsulated PostScript</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPS2</td>
     <td>W</td>
     <td>Adobe Level II Encapsulated PostScript</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPS3</td>
     <td>W</td>
     <td>Adobe Level III Encapsulated PostScript</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPSF</td>
     <td>RW</td>
     <td>Adobe Encapsulated PostScript</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPSI</td>
     <td>RW</td>
     <td>Adobe Encapsulated PostScript Interchange format</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>EPT</td>
     <td>RW</td>
     <td>Adobe Encapsulated PostScript Interchange format with <a href="#TIFF">TIFF</a> preview</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
@@ -771,7 +771,7 @@ the supported image formats.</p>
     <td>PDF</td>
     <td>RW</td>
     <td>Portable Document Format</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define pdf:use-cropbox=true</code> or <code>-define pdf:use-trimbox=true</code>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from  Postscript to PDF, use <code>-define delegate:bimodel=true</code>. Use <code>-define pdf:fit-page=true</code> to scale to the page size. To immediately stop processing upon an error, set <code>-define pdf:stop-on-error</code> to <code>true</code>. To set the page direction preferences to right-to-left, try  <code>-define pdf:page-direction=right-to-left</code>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  To skip generating thumbnails, <code>-define pdf:thumbnail=false</code>. To enable interpolation when rendering, use <code>-define pdf:interpolate=true</code>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define pdf:use-cropbox=true</code> or <code>-define pdf:use-trimbox=true</code>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from  Postscript to PDF, use <code>-define delegate:bimodel=true</code>. Use <code>-define pdf:fit-page=true</code> to scale to the page size. To immediately stop processing upon an error, set <code>-define pdf:stop-on-error</code> to <code>true</code>. To set the page direction preferences to right-to-left, try  <code>-define pdf:page-direction=right-to-left</code>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  To skip generating thumbnails, <code>-define pdf:thumbnail=false</code>. To enable interpolation when rendering, use <code>-define pdf:interpolate=true</code>.</td>
   </tr>
 
   <tr>
@@ -918,21 +918,21 @@ the supported image formats.</p>
     <td>PS</td>
     <td>RW</td>
     <td>Adobe PostScript file</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define eps:use-cropbox=true</code>). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <code>-define delegate:bimodel=true</code>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <code>-define eps:use-cropbox=true</code>). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <code>-define delegate:bimodel=true</code>.</td>
   </tr>
 
   <tr>
     <td>PS2</td>
     <td>RW</td>
     <td>Adobe Level II PostScript file</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
     <td>PS3</td>
     <td>RW</td>
     <td>Adobe Level III PostScript file</td>
-    <td>Requires <a href="http://www.cs.wisc.edu/%7Eghost">Ghostscript</a> to read.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.</td>
   </tr>
 
   <tr>
