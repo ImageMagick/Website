@@ -13,7 +13,7 @@
   \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -matte \) \
   -delete 0 +swap  -compose Multiply -composite  button.gif");</code></pre>
 
-<p class="text-info">This example command is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<code>\</code>). The backslash is the Unix <var>line-continuation</var> character. In the Windows shell, use a carat character (<code>^</code>) for line-continuation. We use the Unix style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command-lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Unix (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
+<p class="text-info">This example command is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<code>\</code>). The backslash is the Linux <var>line-continuation</var> character. In the Windows shell, use a carat character (<code>^</code>) for line-continuation. We use the Linux style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command-lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Linux (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
 
 <p>Without knowing much about the ImageMagick command-line, you can probably surmise that the first command above converts an image in the JPEG format to one in the PNG format.  However, very few may realize the second, more complex command, gives a flat two-dimensional label a three-dimensional look with rich textures and simulated depth:</p>
 
@@ -89,7 +89,7 @@
 <p>These extensions are explained in the next few paragraphs.</p>
 
 <h5>Filename Globbing</h5>
-<p>In Unix shells, certain characters such as the asterisk (<code>*</code>) and question mark (<code>?</code>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <code>1.jpg</code>, <code>2.jpg</code>, <code>3.jpg</code>, <code>4.jpg</code>, and <code>5.jpg</code> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
+<p>In Linux shells, certain characters such as the asterisk (<code>*</code>) and question mark (<code>?</code>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <code>1.jpg</code>, <code>2.jpg</code>, <code>3.jpg</code>, <code>4.jpg</code>, and <code>5.jpg</code> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
 </p>
 
 <pre class="highlight"><code>magick *.jpg images.gif</code></pre>
@@ -121,7 +121,7 @@ so we explicitly set one:
 <pre class="highlight"><code>magick -size 640x480 pattern:checkerboard checkerboard.png</code></pre>
 
 <h5>STDIN, STDOUT, and file descriptors</h5>
-<p>Unix and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <code>-</code>.  In this example we pipe the output of
+<p>Linux and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <code>-</code>.  In this example we pipe the output of
   <?php cmd("magick"); ?> to the <?php cmd("display"); ?> program:
 </p>
 
@@ -149,8 +149,8 @@ so we explicitly set one:
 
 <pre class="highlight"><code>magick 'images.gif[0]' image.png</code></pre>
 
-<p class="text-info">Unix shells generally interpret brackets so we enclosed the filename in quotes above.
-In a Windows command shell the brackets are not interpreted but using quotes doesn't hurt. However, in most cases the roles of single-quotes and double-quotes are reversed with respect to Unix and Windows, so Windows users should usually try double-quotes where we display single-quotes, and vice versa.
+<p class="text-info">Linux shells generally interpret brackets so we enclosed the filename in quotes above.
+In a Windows command shell the brackets are not interpreted but using quotes doesn't hurt. However, in most cases the roles of single-quotes and double-quotes are reversed with respect to Linux and Windows, so Windows users should usually try double-quotes where we display single-quotes, and vice versa.
 </p>
 
 <p>You can read more than one image from a sequence with a frame range.  For example, you can extract the first four frames of an image sequence:
@@ -486,7 +486,7 @@ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</code><
 
 
 <p class="text-info">Notice again that the  parentheses are <var>escaped</var> by preceding them with
-backslashes.  This is required under Unix, where parentheses are special
+backslashes.  This is required under Linux, where parentheses are special
 <var>shell</var> characters.  The backslash tells the shell not to interpret
 these characters, but to pass them directly to the command being executed. Do
 not escape the parentheses under Windows. Each parenthesis (or escaped
@@ -521,7 +521,7 @@ above.</p>
 
 
 <h5>Standard Out</h5>
-  <p>Unix permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
+  <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
 <pre class="highlight"><code>magick logo: gif:- | display gif:-</code></pre>

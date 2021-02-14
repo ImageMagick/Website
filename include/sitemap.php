@@ -27,9 +27,9 @@
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li> <dl class="magick-list-unstyled">
-    <li><a href="https://imagemagick.org/download">Unix source</a>: Unix source distributions.</li>
+    <li><a href="https://imagemagick.org/download">Linux source</a>: Linux source distributions.</li>
     <li><a href="https://download.imagemagick.org/ImageMagick/download/windows">Windows source</a>: Windows source distributions.</li>
-    <li><a href="https://download.imagemagick.org/ImageMagick/download/binaries">Unix and Windows binaries</a>: Unix and Windows binary distributions.</li>
+    <li><a href="https://download.imagemagick.org/ImageMagick/download/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
     <li><a href="https://github.com/ImageMagick">Git repository</a>: stable and development source releases.</li>
     <li><a href="https://download.imagemagick.org/ImageMagick/download/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
   </dl> </li>
@@ -37,10 +37,10 @@
 
 <h2><a class="anchor" id="install"></a>Install ImageMagick</h2>
 
-  <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Unix or Windows executable.</p>
+  <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Linux or Windows executable.</p>
 <dl class="magick-list-unstyled">
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Install from a binary distribution</a>: install a ready-to-run Unix or Windows executable.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Install from a binary distribution</a>: install a ready-to-run Linux or Windows executable.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/ImageMagickObject.php">Install ImageMagickObject COM+ component</a>: install the Windows ImageMagick COM+ component.</li>
 </dl>
 

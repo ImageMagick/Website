@@ -4782,7 +4782,7 @@ of execution, and maximum elapsed time in seconds respectively.</p>
 <p> Inquisitive users can try adding <a href="#debug">-debug cache</a> to
 their commands and then scouring the generated output for references to the
 pixel cache, in order to determine how the pixel cache was allocated and how
-resources were consumed. Advanced Unix/Linux users can pipe that output
+resources were consumed. Advanced Linux/Linux users can pipe that output
 through <code>grep memory|open|destroy|disk</code> for more readable sifting.
 </p>
 

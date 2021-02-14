@@ -34,7 +34,7 @@
 <li>Send us a licensed copy of Adobe Photoshop.</li>
 <li>Lend us developers to add support for additional image formats or to finish integrating support for the SVG specification.</li>
 <li>Extend our FFT algorithm to support non-square images.</li>
-<li>Port our Unix build environment from Autoconf / Automake to CMake.</li>
+<li>Port our Linux build environment from Autoconf / Automake to CMake.</li>
 <li>Provide technical writers to assist with the development of commercial-grade technical documentation.</li>
 <li>Donate a quality SWOP or Eurostandard ICC profile to use as a default CMYK to RGB conversion profile.</li>
 <li>Donate a workstation with a modern processor and plenty of memory and disk.  We would use it for our primary development environment.</li>

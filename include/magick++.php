@@ -41,7 +41,7 @@ Windows.
 </p>
 <h2>Usage</h2>
 <p>A helper script named <code>Magick++-config</code> is installed
-under Unix which assists with recalling compilation options required
+under Linux which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
 following command compiles and links the source file <code>demo.cpp</code>
 to produce the executable <code>demo</code> (notice that quotes are
@@ -63,7 +63,7 @@ for one of the Magick++ demo programs.
   InitializeMagick(*argv);
   ...
 </code></pre>
-<p>This initialization step is not required under Unix, Linux,
+<p>This initialization step is not required under Linux, Linux,
 Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>
 <p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>

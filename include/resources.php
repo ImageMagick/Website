@@ -98,7 +98,7 @@ Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 
   <dd class="col-md-8">Associate names with Windows font glyphs.</dd>
 </dl>
 
-<p>Under Unix and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
+<p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
 <pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
@@ -109,7 +109,7 @@ $HOME/.config/ImageMagick
 
 <p>The environmental variable $PREFIX is the default install path (e.g. <code>/usr/local</code>). The <var>client path</var> is the execution path of your ImageMagick client (e.g. <code>/usr/local</code>) .</p>
 
-<p>For the Unix or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
+<p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
 
 <pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
@@ -197,15 +197,15 @@ $MAGICK_FONT_PATH</code></pre>
   </tr>
   <tr>
     <td>MAGICK_CODER_FILTER_PATH</td>
-    <td>Set search path to use when searching for filter process modules (invoked via  <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Unix, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
+    <td>Set search path to use when searching for filter process modules (invoked via  <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
   </tr>
   <tr>
     <td>MAGICK_CODER_MODULE_PATH</td>
-    <td>Set path where ImageMagick can locate its coder modules.  This path permits the user to arbitrarily extend the image formats supported by ImageMagick by adding loadable coder modules from an preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Unix, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
+    <td>Set path where ImageMagick can locate its coder modules.  This path permits the user to arbitrarily extend the image formats supported by ImageMagick by adding loadable coder modules from an preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
   </tr>
   <tr>
     <td>MAGICK_CONFIGURE_PATH</td>
-    <td>Set path where ImageMagick can locate its configuration files.  Use this search path to search for configuration (.xml) files. The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Unix, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#configure">default search path</a>.</td>
+    <td>Set path where ImageMagick can locate its configuration files.  Use this search path to search for configuration (.xml) files. The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#configure">default search path</a>.</td>
   </tr>
   <tr>
     <td>MAGICK_DEBUG</td>

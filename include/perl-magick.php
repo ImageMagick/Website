@@ -115,7 +115,7 @@ $image = Image::Magick::Q16-&gt;new;
 
 <p>The next section illustrates how to use various PerlMagick methods to manipulate an image sequence.</p>
 
-<p>Some of the PerlMagick methods require external programs such as <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a>. This may require an explicit path in your PATH environment variable to work properly. For example (in Unix),</p>
+<p>Some of the PerlMagick methods require external programs such as <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a>. This may require an explicit path in your PATH environment variable to work properly. For example (in Linux),</p>
 
 <pre class="highlight"><code>$ENV{PATH}' . "='/../bin:/usr/bin:/usr/local/bin';
 </code></pre>

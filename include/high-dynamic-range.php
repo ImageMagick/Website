@@ -17,7 +17,7 @@
 
 <p>The most promising HDR image format is EXR.  You must have the <a href="http://www.openexr.org">OpenEXR</a> delegate library installed to read or write this format.  Other HDR formats include TIFF 48-bit integer and 96-bit float formats, HDR, PFM, and ImageMagick's own MIFF format.</p>
 
-<p>To disable the HDRI version of ImageMagick, use this Unix/Linux command:</p>
+<p>To disable the HDRI version of ImageMagick, use this Linux/Linux command:</p>
 
 <pre class="highlight"><code>./configure --disable-hdri
 </code></pre>

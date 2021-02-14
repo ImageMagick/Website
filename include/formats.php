@@ -9,7 +9,7 @@
 <pre class="highlight"><code>magick identify -list format
 </code></pre>
 
-<p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Unix compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
+<p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Linux compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
 
 <h2><a class="anchor" id="colorspace"></a>A Word about Colorspaces</h2>
  <p>A majority of the image formats assume an sRGB
@@ -578,7 +578,7 @@ the supported image formats.</p>
   <tr>
     <td>MAN</td>
     <td>R</td>
-    <td>Unix reference manual pages</td>
+    <td>Linux reference manual pages</td>
     <td>Requires that GNU groff and Ghostcript are installed.</td>
   </tr>
 
@@ -1424,7 +1424,7 @@ the supported image formats.</p>
     <td>PRINT</td>
     <td>W</td>
     <td>Send image to your computer printer</td>
-    <td>Unix users may set the PRINTER (for 'lpr') or LPDEST (for 'lp') environment variables to select the desired printer.</td>
+    <td>Linux users may set the PRINTER (for 'lpr') or LPDEST (for 'lp') environment variables to select the desired printer.</td>
   </tr>
 
   <tr>
