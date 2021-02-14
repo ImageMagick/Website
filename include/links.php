@@ -8,7 +8,7 @@
 <h2><a class="anchor" id="web"></a>Use ImageMagick Online</h2>
 <ul>
   <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org/">JqMagick</a></dd>
-  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/">ImageMagick Online Studio</a></dd>
+  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/">Magick Online Studio</a></dd>
 </ul>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
