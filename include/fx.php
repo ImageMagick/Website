@@ -104,7 +104,7 @@
   <dt class="col-md-4"> numbers:</dt>
   	<dd class="col-md-8"> integer, floating point, scientific notation (+/- required, e.g. 3.81469e-06), International System number postfixes (.e.g KB, Mib, GB, etc.)</dd>
   <dt class="col-md-4"> constants: </dt>
-    <dd class="col-md-8"> E (Euler's number), Epsilon, QuantumRange, QuantumScale, Opaque, Phi (golden ratio), Pi, Transparent</dd>
+    <dd class="col-md-8"> E (Euler's number), Epsilon, FSC (fine-structure constant), Opaque, Phi (golden ratio), Pi, QuantumRange, QuantumScale, Transparent</dd>
   <dt class="col-md-4"> FX operators (in order of precedence): </dt>
      <dd class="col-md-8"> ^ (power), unary -, *, /, % (modulo), +, -,
      &lt;&lt;, &gt;&gt;, &lt;, &lt;=, &gt;, &gt;=, +=, -=, *=, /=, %=, &lt;&lt;=
