@@ -70,8 +70,8 @@
 <h2><a class="anchor" id="program-interfaces"></a>Program Interfaces</h2>
 
 <dl class="magick-list-unstyled">
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.</li>
-  <li> <dl class="magick-list-unstyled">
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.
+  <ul class="magick-list-unstyled">
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
     <li><a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>: Use Magick.NET to convert, compose, and edit images from Windows .NET.</li>
     <li><a href="https://imagemagick.org/Magick++">Magick++</a>: provides an object-oriented C++ interface to ImageMagick.</li>
@@ -85,7 +85,7 @@
     <li><a href="https://download.imagemagick.org/ImageMagick/download/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
     <li><a href="http://rmagick.rubyforge.org/">RMagick</a>: is an interface between the Ruby programming language and ImageMagick.</li>
     <li><a href="http://tclmagick.sourceforge.net/">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
-  </dl></li>
+  </ul></li>
 </dl>
 
 <h2><a class="anchor" id="format"></a>Image Formats</h2>
