@@ -1,4 +1,4 @@
 <?php
-  $title='Formats';
+  $title='Image Formats';
   include('session.php');
 ?>
