@@ -65,17 +65,17 @@ file or data stream.
   <dd class="col-md-8">Configure ImageMagick policies.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
-<pre class="highlight"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre>
+<ul><pre class="highlight"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre></ul>
 
 Any image larger than this area limit is cached to disk rather than memory.
 
 Use <code>width</code> to limit the maximum width of an image in pixels.  Exceed this limit and an exception is thrown and processing stops.
 
-<pre class="highlight"><code>&lt;policy domain="resource" name="width" value="8KP"/></code></pre>
+<ul><pre class="highlight"><code>&lt;policy domain="resource" name="width" value="8KP"/></code></pre></ul>
 
 To limit the elapsed time of any ImageMagick command to 5 minutes, use this policy:
 
-<pre class="highlight"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre>
+<ul><pre class="highlight"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre></ul>
 Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
 
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
@@ -100,43 +100,43 @@ Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 
 
 <p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
-<pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/etc/ImageMagick</code></pre>
+&lt;<var>client path</var>&gt;/etc/ImageMagick</code></pre></ul>
 
 <p>The environmental variable $PREFIX is the default install path (e.g. <code>/usr/local</code>). The <var>client path</var> is the execution path of your ImageMagick client (e.g. <code>/usr/local</code>) .</p>
 
 <p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
 
-<pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick/
 &lt;<var>client path</var>&gt;/etc/ImageMagick
-&lt;<var>current directory</var>&gt;</code></pre>
+&lt;<var>current directory</var>&gt;</code></pre></ul>
 
 <p>Under Windows, ImageMagick searches for these configuration files in the following order, and loads them if found:</p>
 
-<pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 &lt;<var>windows registry</var>&gt;
 $PREFIX/config
 $USERPROFILE/.config/ImageMagick
-&lt;<var>client path</var>&gt;</code></pre>
+&lt;<var>client path</var>&gt;</code></pre></ul>
 
 <p>Above, $PREFIX is the default install path, typically <code>c:\\Program Files\\ImageMagick-<?php echo(MagickLibVersionText); ?></code>.</p>
 
 <p>For an uninstalled Windows installation, the configuration load order is:</p>
 
-<pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME
 $USERPROFILE/.config/ImageMagick
 <var>client path</var>
-&lt;<var>current directory</var>&gt;</code></pre>
+&lt;<var>current directory</var>&gt;</code></pre></ul>
 
 <p>If a configuration file cannot not be found, ImageMagick relies on built-in default values.</p>
 
@@ -145,29 +145,29 @@ $USERPROFILE/.config/ImageMagick
 <h5>Coders</h5>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
-<pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
+<ul><pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders</code></pre>
+&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders</code></pre></ul>
 
 <h5>Filters</h5>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
-<pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
+<ul><pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters</code></pre>
+&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters</code></pre></ul>
 
 <h2><a class="anchor" id="fonts"></a>Fonts</h2>
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
-<pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
@@ -175,7 +175,7 @@ $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/etc/ImageMagick
-$MAGICK_FONT_PATH</code></pre>
+$MAGICK_FONT_PATH</code></pre></ul>
 
 <h2><a class="anchor" id="environment"></a>Environment Variables</h2>
 
