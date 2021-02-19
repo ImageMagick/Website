@@ -29,7 +29,7 @@ options, and more global use of 'image properties' (more commonly known as
 <p>A pixel is comprised of one or more color values, or <var>channels</var> (e.g. red pixel channel).</p>
 <p>Prior versions of ImageMagick (4-6), support 4 to 5 pixel channels (RGBA or CMYKA).  The first 4 channels are accessed with the PixelPacket data structure.   The structure includes 4 members of type Quantum (typically 16-bits) of red, green, blue, and opacity.  The black channel or colormap indexes are supported by a separate method and structure, IndexPacket.  As an example, here is a code snippet from ImageMagick version 6 that negates the color components (but not the alpha component) of the image pixels:</p>
 
-<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<ul><pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   IndexPacket
     *indexes;
@@ -59,11 +59,11 @@ options, and more global use of 'image properties' (more commonly known as
   }
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
-}</code></pre>
+}</code></pre></ul>
 
 <p>ImageMagick version 7 supports any number of channels from 1 to 64 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum.   Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7.  We illustrate with an example.  Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:</p>
 
-<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<ul><pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   Quantum
     *q;
@@ -90,11 +90,11 @@ options, and more global use of 'image properties' (more commonly known as
   }
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
-}</code></pre>
+}</code></pre></ul>
 
 <p>Let's do that again but take full advantage of the new variable pixel channel support:</p>
 
-<pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+<ul><pre class="pre-scrollable highlight"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   Quantum
     *q;
@@ -127,7 +127,7 @@ options, and more global use of 'image properties' (more commonly known as
   }
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
-}</code></pre>
+}</code></pre></ul>
 
 <p>Note, how we use GetPixelChannels() to advance to the next set of pixel channels.</p>
 
@@ -138,7 +138,7 @@ options, and more global use of 'image properties' (more commonly known as
 <h5>Pixel Accessors</h5>
 <p>You can access pixel channel as array elements (e.g. <code>pixel[1]</code>) or use convenience accessors to get or set pixel channels:</p>
 
-<pre class="highlight"><code>GetPixela()                  SetPixela()
+<ul><pre class="highlight"><code>GetPixela()                  SetPixela()
 GetPixelAlpha()              SetPixelAlpha()
 GetPixelb()                  SetPixelb()
 GetPixelBlack()              SetPixelBlack()
@@ -157,7 +157,7 @@ GetPixelMetacontentExtent()  SetPixelMetacontentExtent()
 GetPixelOpacity()            SetPixelOpacity()
 GetPixelRed()                SetPixelRed()
 GetPixelYellow()             SetPixelYellow()
-GetPixelY()                  SetPixelY()</code></pre>
+GetPixelY()                  SetPixelY()</code></pre></ul>
 
 <p>You can find these accessors defined in the header file, <code>MagickCore/pixel-accessor.h</code></p>
 
@@ -174,7 +174,7 @@ GetPixelY()                  SetPixelY()</code></pre>
 <dd class="col-md-8">blend this pixel channel with the alpha mask if it's enabled</dd>
 </dl>
 <p>We provide these methods to set and get pixel traits:</p>
-<pre class="highlight"><code>GetPixelAlphaTraits()    SetPixelAlphaTraits()
+<ul><pre class="highlight"><code>GetPixelAlphaTraits()    SetPixelAlphaTraits()
 GetPixelBlackTraits()    SetPixelBlackTraits()
 GetPixelBlueTraits()     SetPixelBlueTraits()
 GetPixelCbTraits()       SetPixelCbTraits()
@@ -186,39 +186,39 @@ GetPixelIndexTraits()    SetPixelIndexTraits()
 GetPixelMagentaTraits()  SetPixelMagentaTraits()
 GetPixelRedTraits()      SetPixelRedTraits()
 GetPixelYellowTraits()   SetPixelYellowTraits()
-GetPixelYTraits()        SetPixelYTraits()</code></pre>
+GetPixelYTraits()        SetPixelYTraits()</code></pre></ul>
 <p>For convenience you can set the active trait for a set of pixel channels with a channel mask and this method:</p>
-<pre class="highlight"><code>SetImageChannelMask()
-</code></pre>
+<ul><pre class="highlight"><code>SetImageChannelMask()
+</code></pre></ul>
 
 <p>Previously MagickCore methods had channel analogs, for example, NegateImage() and NegateImageChannels().  The channel analog methods are no longer necessary because the pixel channel traits specify whether to act on a particular pixel channel or whether to blend with the alpha mask.  For example, instead of</p>
-<pre class="highlight"><code>NegateImageChannel(image,channel);</code></pre>
+<ul><pre class="highlight"><code>NegateImageChannel(image,channel);</code></pre></ul>
 <p>we use:</p>
-<pre class="highlight"><code>channel_mask=SetImageChannelMask(image,channel);
+<ul><pre class="highlight"><code>channel_mask=SetImageChannelMask(image,channel);
 NegateImage(image,exception);
-(void) SetImageChannelMask(image,channel_mask);</code></pre>
+(void) SetImageChannelMask(image,channel_mask);</code></pre></ul>
 
 <h5>Pixel User Channels</h5>
 <p>In version 7, we introduce pixel user channels.  Traditionally we utilize 4 channels, red, green, blue, and alpha.   For CMYK we also have a black channel.  User channels are designed to contain whatever additional channel information that makes sense for your application.  Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel.  You can associate traits with the user channels so that when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.</p>
 <h5>Pixel Metacontent</h5>
 <p>In version 7, we introduce pixel metacontent.  Metacontent is content about content. So rather than being the content itself, it's something that describes or is associated with the content.  Here the content is a pixel.  The pixel metacontent is for your exclusive use (internally the data is just copied, it is not modified) and is accessed with these MagickCore API methods:</p>
-<pre class="highlight"><code>SetImageMetacontentExtent()
+<ul><pre class="highlight"><code>SetImageMetacontentExtent()
 GetImageMetacontentExtent()
 GetVirtualMetacontent()
 GetAuthenticMetacontent()
 GetCacheViewAuthenticMetacontent()
-GetCacheViewVirtualMetacontent()</code></pre>
+GetCacheViewVirtualMetacontent()</code></pre></ul>
 
 <h2><a class="anchor" id="alpha"></a>Alpha</h2>
 <p>We support alpha now, previously opacity.  With alpha, a value of <kbd>0</kbd> means that the pixel does not have any coverage information and is transparent; i.e. there was no color contribution from any geometry because the geometry did not overlap this pixel. A value of <code>QuantumRange</code> means that the pixel is opaque because the geometry completely overlapped the pixel. As a consequence, in version 7, the PixelInfo structure member alpha has replaced the previous opacity member.  Another consequence is the alpha part of an sRGB value in hexadecimal notation is now reversed (e.g. #0000 is fully transparent).</p>
 <h2><a class="anchor" id="colorspace"></a>Colorspace</h2>
 <p>The <code>Rec601Luma</code> and <code>Rec709Luma</code> colorspaces are no longer supported.  Instead, specify the <code>gray</code> colorspace and choose from these intensity options:</p>
-<pre class="highlight"><code>Rec601Luma
+<ul><pre class="highlight"><code>Rec601Luma
 Rec601Luminance
 Rec709Luma
-Rec709Luminance</code></pre>
+Rec709Luminance</code></pre></ul>
 <p>For example,</p>
-<pre class="highlight"><code>magick myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</code></pre>
+<ul><pre class="highlight"><code>magick myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</code></pre></ul>
 
 <h2><a class="anchor" id="grayscale"></a>Grayscale</h2>
 <p>Previously, grayscale images were Rec601Luminance and consumed 4 channels: red, green, blue, and alpha.  With version 7, grayscale consumes only 1 channel requiring far less resources as a result.</p>
@@ -226,14 +226,14 @@ Rec709Luminance</code></pre>
 <h2><a class="anchor" id="mask"></a>Masks</h2>
 <p>Version 7 supports masks for most image operators.  White pixels in a read mask ignores corresponding pixel in an image whereas white pixels in a write mask protects the corresponding pixel in the image.  From the command-line, you can associate a mask with an image with the <code>-read-mask</code> and <code>-write-mask</code> options.  This polarity matches the masks in version 6 of ImageMagick for ease of porting your workflow.  For convenience, we continue to support the <code>-mask</code> option in version 7 to match the behavior of version 6.</p>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
-<pre class="highlight"><code>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</code></pre>
+<ul><pre class="highlight"><code>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</code></pre></ul>
 <p>Here we protect certain pixels from change:</p>
-<pre class="highlight"><code>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +mask rose_blue.png</code></pre>
+<ul><pre class="highlight"><code>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +mask rose_blue.png</code></pre></ul>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
-<pre class="highlight">
+<ul><pre class="highlight">
 convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
-</pre>
+</pre></ul>
 
 <h2><a class="anchor" id="core"></a>MagickCore API</h2>
 <p>Here are a list of changes to the MagickCore API:</p>
@@ -261,20 +261,20 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <ul>
 <li>Almost all image processing algorithms are now channel aware.</li>
 <li>Use this construct, for example, to avoid operating on the alpha channel:
-<pre class="highlight"><code>image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));
-</code></pre>
+<ul><pre class="highlight"><code>image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));
+</code></pre></ul>
 </li>
 </ul>
 <h2><a class="anchor" id="headers"></a>Header Files</h2>
 <p>Prior versions of ImageMagick (4-6) reference the ImageMagick header files as <code>magick/</code> and <code>wand/</code>.  ImageMagick 7 instead uses <code>MagickCore/</code> and <code>MagickWand/</code> respectively.  For example,</p>
-<pre class="highlight"><code><code>#include &lt;MagickCore/MagickCore.h>
-#include &lt;MagickWand/MagickWand.h></code></code></pre>
+<ul><pre class="highlight"><code><code>#include &lt;MagickCore/MagickCore.h>
+#include &lt;MagickWand/MagickWand.h></code></code></pre></ul>
 
 <h2><a class="anchor" id="deprecate"></a>Deprecated Features Removed</h2>
 <p>All deprecated features from ImageMagick version 6 are removed in version 7.  These include the <code>Magick-config</code> and <code>Wand-config</code> configuration utilities.  Instead use:</p>
 
-<pre class="highlight"><code>MagickCore-config
-MagickWand-config</code></pre>
+<ul><pre class="highlight"><code>MagickCore-config
+MagickWand-config</code></pre></ul>
 <p>The FilterImage() method has been removed.  Use ConvolveImage() instead.</p>
 
 <p>In addition, all deprecated <a href="http://magick.imagemagick.org/api/deprecate.php">MagickCore</a> and <a href="http://magick.imagemagick.org/api/magick-deprecate.php">MagickWand</a> methods are no longer available in version 7.</p>
@@ -352,10 +352,10 @@ be applied to expand the one channel into separate RGB (or other) channels.
 
 <h3>Behavioral Changes</h3>
 <p>Image settings are applied to each image on the command line.  To associate a setting with a particular image, use parenthesis to remove ambiguity.  In this example we assign a unique page offset to each image:</p>
-<pre class="highlight"><code>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</code></pre>
+<ul><pre class="highlight"><code>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</code></pre></ul>
 
 <p>By default, image operations such as convolution blends alpha with each channel.  To convolve each channel independently, deactivate the alpha channel as follows:</p>
-<pre class="highlight"><code>magick ... -alpha discrete -blur 0x1 ...</code></pre>
+<ul><pre class="highlight"><code>magick ... -alpha discrete -blur 0x1 ...</code></pre></ul>
 <p>To remove the alpha values from your image, use <code>-alpha off</code>. If you want to instead persist the alpha channel but not blend the alpha pixels for certain image processing operations, use <code>-alpha deactivate</code> instead.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
@@ -406,23 +406,23 @@ scripts.</p>
 
 <p>The expression consists of one or more channels, either mnemonic or numeric (e.g. red or 0, green or 1, etc.), separated by certain operation symbols as follows:</p>
 
-<pre class="highlight"><code>&lt;=&gt;  exchange two channels (e.g. red&lt;=&gt;blue)
+<ul><pre class="highlight"><code>&lt;=&gt;  exchange two channels (e.g. red&lt;=&gt;blue)
 =&gt;   copy one channel to another channel (e.g. red=&gt;green)
 =    assign a constant value to a channel (e.g. red=50%)
 ,    write new image with channels in the specified order (e.g. red, green)
 ;    add a new output image for the next set of channel operations (e.g. red; green; blue)
-|    move to the next input image for the source of channel data (e.g. | gray=>alpha)</code></pre>
+|    move to the next input image for the source of channel data (e.g. | gray=>alpha)</code></pre></ul>
 
 <p>For example, to create 3 grayscale images from the red, green, and blue channels of an image, use:</p>
 
-<pre class="highlight"><code>-channel-fx "red; green; blue"</code></pre>
+<ul><pre class="highlight"><code>-channel-fx "red; green; blue"</code></pre></ul>
 
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</code></pre>
+<ul><pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</code></pre></ul>
 <p>Use a similar command to define a read mask:</p>
-<pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</code></pre>
+<ul><pre class="highlight"><code>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</code></pre></ul>
 
 <p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
 
