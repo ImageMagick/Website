@@ -47,7 +47,7 @@
 <h2><a class="anchor" id="command-line"></a>Command-line Tools</h2>
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.</li>
-  <li> <dl class="magick-list-unstyled">
+  <ul class="magick-list-unstyled">
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">animate</a>: animates an image sequence on any X server.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">composite</a>: overlaps one image over another.</li>
@@ -60,7 +60,7 @@
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>: create a composite image by combining several separate images.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
-  </dl></li>
+  </ul>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command line processing</a>: the anatomy of the command line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
