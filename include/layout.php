@@ -9,12 +9,12 @@
     }
   }
 
-  function SiteHeader($title,$topic)
+  function SiteHeader($title,$topic,$description)
   {
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
-    $meta->description="Use ImageMagick® to create, edit, compose, and convert digital images. Resize an image, crop it, change its shades and colors, add captions, and more.";
+    $meta->description=$description;
     $meta->application_url="https://imagemagick.org";
     $meta->keywords2="image processing software";
     $meta->sitename="ImageMagick";
