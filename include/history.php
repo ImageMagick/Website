@@ -1,7 +1,7 @@
 <div class="magick-header">
 <h1 class="text-center">Genesis</h1>
-<p class="blockquote">
-I swear by my life and my love of it that I will never live for the sake of another man, nor ask another man to live for mine.<br />-- John Galt in "Atlas Shrugged", by Ayn Rand</p>
+<blockquote>
+		I swear by my life and my love of it that I will never live for the sake of another man, nor ask another man to live for mine.  -- John Galt in "Atlas Shrugged", by Ayn Rand</blockquote>
 
 <p class="lead magick-description">ImageMagick started with a request from my DuPont supervisor, Dr. David Pensak, to display computer-generated images on a monitor only capable of showing 256 unique colors simultaneously.</p>
 
