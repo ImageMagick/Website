@@ -35,6 +35,7 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/montage.php">Create an Image Thumbnail</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/fourier.php">Compute the discrete Fourier transform (DFT)</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/compare.php">Compare an Image to a Reconstructed Image</a></li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/vision.php">Computer Vision</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/display.php">Interactively Display and Edit an Image</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/animate.php">Interactively Animate an Image Sequence</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cipher.php">Convert to and from Cipher Pixels</a></li>
