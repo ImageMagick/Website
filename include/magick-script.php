@@ -4,14 +4,14 @@
 
 <p>Here is an example script:</p>
 
-<pre class="highlight"><code>#!/bin/env magick-script
+<ul><pre class="highlight"><code>#!/bin/env magick-script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</code></pre>
+</code></pre></ul>
 
 <p>Or use the <code>magick</code> utility with the scripting option like this:</p>
-<pre class="highlight"></code>#!/bin/magick -script
+<ul><pre class="highlight"></code>#!/bin/magick -script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</code></pre>
+</code></pre></ul>
 
 <p>You can find additional examples of using <code>magick-script</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
