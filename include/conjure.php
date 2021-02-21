@@ -7,12 +7,12 @@
 
 <p>We list a few examples of the <code>conjure</code> command here to illustrate its usefulness and ease of use. To get started, here is simple <code>conjure</code> command:</p>
 
-<pre class="highlight"><code>magick conjure -dimensions 400x400 msl:incantation.msl
-</code></pre>
+<ul><pre class="highlight"><code>magick conjure -dimensions 400x400 msl:incantation.msl
+</code></pre></ul>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
 
-<pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<ul><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;read filename="image.gif" /&gt;
   &lt;get width="base-width" height="base-height" /&gt;
@@ -21,11 +21,11 @@
   &lt;print output="Image sized from %[base-width]x%[base-height] to %[resize-width]x%[resize-height].\n" /&gt;
   &lt;write filename="image.png" /&gt;
 &lt;/image&gt;
-</code></pre>
+</code></pre></ul>
 
 <p>In this example, a family stayed home for their vacation but as far as their friends are concerned they went to a beautiful beach in the Caribbean:</p>
 
-<pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<ul><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;group>
     &lt;image id="family">
         &lt;read filename="family.gif"/>
@@ -42,20 +42,20 @@
     &lt;/image>
     &lt;write filename="family-vacation.png"/>
 &lt;/group>
-</code></pre>
+</code></pre></ul>
 
 <p>Here we display the width in pixels of text for a particular font and pointsize.</p>
 
-<pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<ul><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;query-font-metrics text="ImageMagick" font="helvetica" pointsize="48" /&gt;
   &lt;print output="Text width is %[msl:font-metrics.width] pixels.\n" /&gt;
 &lt;/image&gt;
-</code></pre>
+</code></pre></ul>
 
 <p>The <code>query-font-metrics</code> tag supports these properties:</p>
 
-<pre class="highlight"><code>msl:font-metrics.pixels_per_em.x
+<ul><pre class="highlight"><code>msl:font-metrics.pixels_per_em.x
 msl:font-metrics.pixels_per_em.y
 msl:font-metrics.ascent
 msl:font-metrics.descent
@@ -68,7 +68,7 @@ msl:font-metrics.bounds.x2
 msl:font-metrics.bounds.y2
 msl:font-metrics.origin.x
 msl:font-metrics.origin.y
-</code></pre>
+</code></pre></ul>
 
 <p>MSL supports most methods and attributes discussed in the <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">Perl API for ImageMagick</a>.
 </p>
@@ -83,12 +83,14 @@ msl:font-metrics.origin.y
 <p>The <code>conjure</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
-  <tbody>
+<thead>
   <tr>
     <th align="left">Option</th>
     <th align="left">Description</th>
   </tr>
+</thead>
 
+<tbody>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug <var>events</var></a></td>
     <td>display copious debugging information</td>
@@ -139,14 +141,17 @@ msl:font-metrics.origin.y
 
 <h2><a class="anchor" id="msl"></a>Magick Scripting Language</h2>
 <p>The <code>conjure</code> command recognizes these MSL elements.  Any element with a strike-thru is not supported yet.</p>
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover caption-top">
 <caption>Magick Scripting Language (MSL)</caption>
-<tbody>
+<thead>
   <tr>
     <th>Method</th>
     <th style="width: 40%;">Parameters</th>
     <th style="width: 40%;">Description</th>
   </tr>
+</thead>
+
+<tbody>
   <tr>
     <td><strike>adaptiveblur</strike></td>
     <td>geometry="geometry", radius="double", sigma="double", bias="double", channel="All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Opacity, Red, RGB, Yellow"</td>
