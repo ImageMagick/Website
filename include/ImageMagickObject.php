@@ -15,8 +15,8 @@
 
 <p>To execute the sample program from the Windows Command Shell, type:</p>
 
-<pre class="highlight"><code>cscript SimpleTest.vbs
-</code></pre>
+<ul><pre class="highlight"><code>cscript SimpleTest.vbs
+</code></pre></ul>
 
 <p>Since the ImageMagick utility command line parsers are incorporated within ImageMagickObject, please refer to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a> discussion to learn how to use it. The sample VBS scripts show how the object should be called and used and have lots of comments.</p>
 
@@ -30,21 +30,21 @@
 
 <p>Once the VisualStaticMT project has been built, build the ImageMagickObject with this procedure:</p>
 
-<pre class="highlight"><code>cd ImageMagick/contrib/win32/ATL7/ImageMagickObject
+<ul><pre class="highlight"><code>cd ImageMagick/contrib/win32/ATL7/ImageMagickObject
 BuildImageMagickObject release
-</code></pre>
+</code></pre></ul>
 
 <p>Here, we assume that the VisualStaticMT project has been built using the release setting for an optimized build. If the debug setting was used for a debug build, specify the argument <code>debug</code>; instead.</p>
 
 <p>To register the DLL as a COM+ server, type</p>
 
-<pre class="highlight"><code>regsvr32 /c /s ImageMagickObject.dll
-</code></pre>
+<ul><pre class="highlight"><code>regsvr32 /c /s ImageMagickObject.dll
+</code></pre></ul>
 
 <p>To unregister the DLL, type</p>
 
-<pre class="highlight"><code>regsvr32 /u /s ImageMagickObject.dll
-</code></pre>
+<ul><pre class="highlight"><code>regsvr32 /u /s ImageMagickObject.dll
+</code></pre></ul>
 
 <p>Use MagickCMD to exercise ImageMagickObject to verify that it is working properly.</p>
 
