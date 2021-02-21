@@ -125,7 +125,7 @@ so we explicitly set one:
   <?php cmd("magick"); ?> to the <?php cmd("display"); ?> program:
 </p>
 
-<ul><pre class="highlight"><code>magick logo: gif:- | display gif:-</code></pre></ul>
+<ul><pre class="highlight"><code>magick logo: gif:- | magick display gif:-</code></pre></ul>
 
 <p>The second explicit format "<code>gif:</code>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <?php cmd("display"); ?>
  command can readily recognize the format as GIF.  The <?php cmd("magick"); ?> program also accepts STDIN as input in this way:
@@ -249,7 +249,7 @@ image-5.jpg</pre></ul>
 <h5>Stream Buffering</h5>
 <p>By default, the input stream is buffered.  To ensure information on the source file or terminal is read as soon as its available, set the buffer size to 0:</p>
 
-<ul><pre class="highlight"><code>magick logo: gif:- | display -define stream:buffer-size=0 gif:-</code></pre></ul>
+<ul><pre class="highlight"><code>magick logo: gif:- | magick display -define stream:buffer-size=0 gif:-</code></pre></ul>
 
 <h2><a class="anchor" id="option"></a>Command-line Options</h2>
 
@@ -524,7 +524,7 @@ above.</p>
   <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <code>-</code>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
-<ul><pre class="highlight"><code>magick logo: gif:- | display gif:-</code></pre></ul>
+<ul><pre class="highlight"><code>magick logo: gif:- | magick display gif:-</code></pre></ul>
 
 <p>Here the explicit format is optional.  The GIF image format has a signature that uniquely identifies it so ImageMagick can readily recognize the format as GIF.</p>
 
@@ -554,5 +554,5 @@ image-2.jpg</pre></ul>
 
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
 
-<ul><pre class="highlight"><code>magick -define stream:buffer-size=0 logo: gif:- | display gif:-</code></pre></ul>
+<ul><pre class="highlight"><code>magick -define stream:buffer-size=0 logo: gif:- | magick display gif:-</code></pre></ul>
 </div>
