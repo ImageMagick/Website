@@ -19,7 +19,7 @@ Then there is the occasional format that also supports LAB (that is CieLAB)
 (e.g. TIFF, PSD, JPG, JP2).  To determine the colorspace of your image, use
 this command:</p>
 
-<pre class="highlight"><code>-> magick identify -verbose image.jpg
+<pre class="highlight"><code>$ magick identify -verbose image.jpg
 Image: image.jpg
 Format: JPEG (Joint Photographic Experts Group JFIF format)
 ...
@@ -27,7 +27,7 @@ Colorspace: sRGB
 </code></pre>
 
 OR use the appropriate percent escape
-<pre class="highlight"><code>-> magick image.jpg -print "%[colorspace]\n" null:
+<pre class="highlight"><code>$ magick image.jpg -print "%[colorspace]\n" null:
 sRGB
 </code></pre>
 

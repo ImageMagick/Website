@@ -24,7 +24,7 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png
 
 <p>In addition to the visual interpretation of the difference in an image and its reconstruction, we report a mathematical measure of the difference:</p>
 
-<pre class="highlight"><code>-> magick compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
+<pre class="highlight"><code>$ magick compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
  Channel distortion: MAE
   red: 2282.91 (0.034835)
@@ -34,19 +34,19 @@ Image: rose.jpg
 </code></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
-<pre class="highlight"><code>-> magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
+<pre class="highlight"><code>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
 19.63
 </code></pre>
 
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
-<pre class="highlight"><code>-> magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
+<pre class="highlight"><code>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
 28.31
 </code></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
-<pre class="highlight"><code>-> magick compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.gif
+<pre class="highlight"><code>$ magick compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.gif
 85.05 (0.00129778) @ 353,157
 </code></pre>
 
