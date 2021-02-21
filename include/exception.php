@@ -4,7 +4,7 @@
 
 <table class="table table-sm table-hover">
   <caption>ImageMagick Error and Warning Codes</caption>
-  <tbody>
+  <thead>
   <tr>
     <th>Domain</th>
     <th>Description</th>
@@ -12,7 +12,8 @@
     <th>Error</th>
     <th>Fatal Error</th>
   </tr>
-
+  </thead>
+  <tbody>
   <tr>
     <td>Success</td>
     <td>the command or algorithm completed successfully without complaint</td>
