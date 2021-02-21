@@ -457,7 +457,7 @@ consider the following command and its output.  Modify the benchmark with the
 -duration to run the benchmark for a fixed number of seconds and -concurrent
 to run the benchmark in parallel (requires the OpenMP feature).</p>
 
-<pre class="highlight"><code>-> convert logo: -resize 200% -bench 5 logo.png
+<pre class="highlight"><code>$ magick logo: -resize 200% -bench 5 logo.png
 Performance[1]: 5i 1.344ips 1.000e 3.710u 0:03.720
 Performance[2]: 5i 1.634ips 0.549e 3.890u 0:03.060
 Performance[3]: 5i 2.174ips 0.618e 3.190u 0:02.300
@@ -6216,7 +6216,7 @@ a global 'artifact' which are automatically assigned (and any <a href="<?php
 echo $_SESSION['RelativePath'] ?>/../script/escape.php" >Format Percent
 Escapes</a> expanded) to images as they are read in.  For example:</p>
 
-<pre class="highlight"><code>-> convert rose: -set comment 'Rose is a rose is a rose is a rose' rose.jpg
+<pre class="highlight"><code>$ magick rose: -set comment 'Rose is a rose is a rose is a rose' rose.jpg
 identify -format %c rose.jpg
 Rose is a rose is a rose is a rose
 </code></pre>
@@ -6225,7 +6225,7 @@ Rose is a rose is a rose is a rose
 $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image
 Properties</a> in the defined value.  For example:</p>
 
-<pre class="highlight"><code>-> convert rose: -set origsize '%wx%h' -resize 50% \
+<pre class="highlight"><code>$ magick rose: -set origsize '%wx%h' -resize 50% \
   -format 'Old size = %[origsize]  New size = %wx%h' info:
 Old size = 70x46  New size = 35x23
 </code></pre>
