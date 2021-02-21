@@ -38,7 +38,7 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<ul><pre class="highlight">-> convert https://imagemagick.org/image/wizard.png wizard.jpg
+<ul><pre class="highlight">$ magick https://imagemagick.org/image/wizard.png wizard.jpg
 convert: attempt to perform an operation not allowed by the security policy `HTTPS'
 convert: no images defined `wizard.jpg'</pre></ul>
 
