@@ -48,6 +48,7 @@
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.
   <ul class="magick-list-unstyled">
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">animate</a>: animates an image sequence on any X server.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">composite</a>: overlaps one image over another.</li>
@@ -56,7 +57,6 @@
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a>: displays an image or image sequence on any X server.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a>: describes the format and characteristics of one or more image files.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a>: saves any visible window on an X server and outputs it as an image file.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>: create a composite image by combining several separate images.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
