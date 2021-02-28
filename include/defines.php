@@ -51,7 +51,7 @@ use:</p>
 
   <tr>
     <td>color:illuminant</td>
-    <td>reference illuminat, defaults to D65.</td>
+    <td>reference illuminant, defaults to D65.</td>
   </tr>
 
   <tr>
