@@ -1,5 +1,22 @@
-<div class="magick-header"><dl><dt>2021-02-10  7.0.11-0  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-0 GIT revision 18</li>
+<div class="magick-header"><dl><dt>2021-02-25  7.0.11-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-2 GIT revision 18462:cd5b6fb4f:20210221 </li>
+<dt>2021-02-25  7.0.11-2  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> decode HEIC images in sRGB instead of YCbCr.</li>
+<dt>2021-02-25  7.0.11-2  &lt;happyerc...@...&gt;</dt>
+  <li> Division by zero error is possible if crafty file sets film-gamma property</li>
+  <li> Check for overflow in thumbnail coder</li>
+  <li> Prevent compiler from optimizing out buffer clearing in cipher</li>
+<dt>2021-02-21  7.0.11-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Clone properties from image stack.</li>
+  <li> Set overall image depth statistic in Composite channel.</li>
+<dt>2021-02-21  7.0.11-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Clone properties from image stack.</li>
+<dt>2021-02-21  7.0.11-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-1 GIT revision 18456:4de21b7b4:20210221</li>
+<dt>2021-02-15  7.0.11-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> fix EXR crash (reference    https://github.com/ImageMagick/ImageMagick/issues/3242).</li>
+<dt>2021-02-13  7.0.11-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-0 GIT revision 18438:ff3ef50ab:20210213</li>
 <dt>2021-02-10  7.0.11-0  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> bump minor version #</li>
   <li> allow reading multichannel PSD files with 1 or 2 channels.</li>
