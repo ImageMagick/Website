@@ -50,6 +50,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>color:illuminant</td>
+    <td>reference illuminat, defaults to D65.</td>
+  </tr>
+
+  <tr>
     <td>colorspace:auto-grayscale=<var>on|off</var></td>
     <td>Prevent automatic conversion to grayscale inside coders that support
     grayscale. This should be accompanied by -type truecolor. PNG and TIF do
