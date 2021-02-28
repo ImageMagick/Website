@@ -595,6 +595,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#illuminant">-illuminant <var>type</var></a></td>
+    <td>reference illuminant</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#implode">-implode <var>amount</var></a></td>
     <td>implode image pixels about the center</td>
   </tr>
