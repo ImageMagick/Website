@@ -6604,6 +6604,8 @@ blend.</p>
 
 <div class="pre-scrollable highlight">
 <dl class="row">
+<dt class="col-md-4">Contrast</dt><dd class="col-md-8">maximum difference (max - min) divided by (max + min) value in neighborhood</dd>
+<dt class="col-md-4">Maximum</dt><dd class="col-md-8">maximum value per channel in neighborhood</dd>
 <dt class="col-md-4">Gradient</dt><dd class="col-md-8">maximum difference (max - min) value in neighborhood</dd>
 <dt class="col-md-4">Maximum</dt><dd class="col-md-8">maximum value per channel in neighborhood</dd>
 <dt class="col-md-4">Minimum</dt><dd class="col-md-8">minimum value per channel in neighborhood</dd>
