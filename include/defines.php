@@ -252,7 +252,7 @@ use:</p>
 
   <tr>
     <td>filename:literal=<var>true</var></td>
-    <td>By default, an output filename can contain C-like printf integer specifiers: %d, %02d, %o, %x etc. Each escape is replaced by a decimal (or octal or hex) number of the image number, starting at zero.  Enable this option to instead use the output filename literally.</td>
+    <td>By default, an output filename can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpretting embedded formatting characters and instead use the filename literally.</td>
   </tr>
 
   <tr>

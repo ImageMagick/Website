@@ -550,6 +550,8 @@ image-2.jpg</pre></ul>
 
 <ul><pre class="highlight"><code>magick *.jpg +adjoin page-%d.pdf</code></pre></ul>
 
+<p>Use <code>-define filename:literal=true</code> to bypass interpretting embedded formatting characters and instead use the filename literally.</p>
+
 <h5>Stream Buffering</h5>
 
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
