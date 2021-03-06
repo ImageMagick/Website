@@ -1114,6 +1114,12 @@ use:</p>
   </tr>
 
   <tr>
+    <td>psd:write-layers=<var>false</var></td>
+    <td>This option can be used to disable writing the layers of a PSD file.
+    </td>
+  </tr>
+
+  <tr>
     <td>svg:xml-parse-huge=<var>true</var></td>
     <td>Enable rendering of a very large SVG for which you trust the source</td>
   </tr>
