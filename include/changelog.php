@@ -1,5 +1,9 @@
-<div class="magick-header"><dl><dt>2021-02-25  7.0.11-2  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-2 GIT revision 18462:cd5b6fb4f:20210221 </li>
+<div class="magick-header"><dl><dt>2021-03-02  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-3 GIT revision 18...</li>
+<dt>2021-02-27  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Eliminate multiple division by zero exceptions (reference    https://github.com/ImageMagick/ImageMagick/issues/3339 and others).</li>
+<dt>2021-02-27  7.0.11-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-2 GIT revision 18492:c524ed20c:20210227</li>
 <dt>2021-02-25  7.0.11-2  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> decode HEIC images in sRGB instead of YCbCr.</li>
 <dt>2021-02-25  7.0.11-2  &lt;happyerc...@...&gt;</dt>

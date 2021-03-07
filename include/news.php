@@ -2,7 +2,7 @@
 <h1 class="text-center">News</h1>
 <p class="text-center"><a href="#news">News</a> • <a href="#community">Community</a></p>
 
-<p>ImageMagick best practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
+<p>ImageMagick recommended practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
 
 
 <p class="highlight">We are utilizing a new community <a target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a> service.  The previous <a target="_blank" href="https://legacy.imagemagick.org/discourse-server">discourse server</a> remains available to read legacy <a target="_blank" href="https://legacy.imagemagick.org/discourse-server~">discussions</a>.</p>
