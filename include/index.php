@@ -1,7 +1,7 @@
 <div class="magick-header">
 <h1 class="text-center">ImageMagick</h1>
 <p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" title="And Now a Touch of Magick"><img class="img-fluid magick-icon" id="logo" alt="And Now a Touch of Magick" width="265" height="352" src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.jpg" /></a> 
-Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969">&#174;</a></sup> to create, edit, compose, or convert digital images.  It can read and write images in a variety of <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> (over 200) including PNG, JPEG, GIF, WebP, HEIC, SVG, PDF, <a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">EXR</a>.  ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</p>
+Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969">&#174;</a></sup> to create, edit, compose, or convert digital images.  It can read and write images in a variety of <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> (over 200) including PNG, JPEG, GIF, WebP, HEIC, SVG, PDF, <a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">EXR</a> and TIFF.  ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</p>
 
 <p>ImageMagick is free software delivered as a ready-to-run binary distribution or as source code that you may use, copy, modify, and distribute in both open and proprietary applications. It is distributed under a derived Apache 2.0 <a href="https://imagemagick.org/script/license.php">license</a>.</p>
 <p>ImageMagick utilizes multiple computational threads to increase performance and can read, process, or write mega-, giga-, or tera-pixel image sizes.</p>
@@ -56,7 +56,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
   <tr>
     <td><a href="https://legacy.imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
-    <td><a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25405">Canny edge detection</a>, <a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25476">Hough lines</a>.</td>
+    <td><a href="http://www.imagemagick.org/Usage/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://legacy.imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
