@@ -212,6 +212,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort">-distort <var>type coefficients</var></a></td>
+    <td>distort image</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dither">-dither  <var>method</var></a></td>
     <td>apply error diffusion to image</td>
   </tr>
