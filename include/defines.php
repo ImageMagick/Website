@@ -1200,6 +1200,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>caption:split=<var>boolean</var></td>
+   <td>split text if required to fit caption on canvas</td>
+  </tr>
+
+  <tr>
     <td>gradient:angle=<var>angle (in degrees)</var></td>
     <td>For a linear gradient, this specifies the direction of 
     the gradient going from color1 to color2 in a clockwise 
