@@ -41,6 +41,7 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cipher.php">Convert to and from Cipher Pixels</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/list.php">Working with Image Lists</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/image-view.php">Image View Methods</a></li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/image-cache.php">Image Cache Methods</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php">Get or Set Image Pixels</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">Working with Cache Views</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php">The Pixel FIFO</a></li>
