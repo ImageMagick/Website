@@ -1,7 +1,12 @@
-<div class="magick-header"><dl><dt>2021-03-02  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-3 GIT revision 18...</li>
-<dt>2021-02-27  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2021-03-13  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-4 GIT revision 18...</li>
+<dt>2021-03-13  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> support caption:split define (reference   https://github.com/ImageMagick/ImageMagick/discussions/3389).</li>
+<dt>2021-03-06  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-3 GIT revision 18521:10079791f:20210306</li>
+<dt>2021-03-02  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Eliminate multiple division by zero exceptions (reference    https://github.com/ImageMagick/ImageMagick/issues/3339 and others).</li>
+  <li> Use -define filename:literal=true to bypass interpretting embedded    formatting characters and instead use the filename literally.</li>
 <dt>2021-02-27  7.0.11-2  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-2 GIT revision 18492:c524ed20c:20210227</li>
 <dt>2021-02-25  7.0.11-2  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>

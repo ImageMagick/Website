@@ -4785,6 +4785,8 @@ environment variables <code>MAGICK_AREA_LIMIT</code>,
 image area, disk space, open files, heap memory, memory map, number of threads
 of execution, and maximum elapsed time in seconds respectively.</p>
 
+<p>Note, you can restrict limits relative to any <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.xml">security policies</a>, but you cannot relax them.</p>
+
 <p> Inquisitive users can try adding <a href="#debug">-debug cache</a> to
 their commands and then scouring the generated output for references to the
 pixel cache, in order to determine how the pixel cache was allocated and how

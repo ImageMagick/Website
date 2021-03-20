@@ -62,7 +62,7 @@ file or data stream.
 </dd>
 
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a></dt>
-  <dd class="col-md-8">Configure ImageMagick policies.
+  <dd class="col-md-8">Configure ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.xml">security policies</a>.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
 <ul><pre class="highlight"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre></ul>
@@ -289,6 +289,6 @@ $MAGICK_FONT_PATH</code></pre></ul>
   </tr>
 </table></div>
 
-<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).</p>
+<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.xml">security policies</a>, but you cannot relax them.</p>
 
 </div>
