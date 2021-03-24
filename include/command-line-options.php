@@ -4616,7 +4616,7 @@ animation, or a fully-'coalesced' animation sequence. </p>
 
 <p>The operators <a href="#coalesce" >-coalesce</a>, <a href="#deconstruct"
 >-deconstruct</a>, <a href="#flatten" >-flatten</a>, and <a href="#mosaic"
->-mosaic</a> are only aliases for the above methods and may be depreciated in
+>-mosaic</a> are only aliases for the above methods and may be deprecated in
 the future.  Also see  <a href="#page" >-page</a>,  <a href="#repage"
 >-repage</a> operators, the <a href="#compose" >-compose</a> setting, and the
 GIF <a href="#dispose" >-dispose</a> and  <a href="#delay" >-delay</a>
