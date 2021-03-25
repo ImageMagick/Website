@@ -19,19 +19,19 @@
         $status="Message not sent: message does not have sufficient content.";
       if ((preg_match("/\blink\b/i",$message) != 0) &&
           (preg_match("/\bexchange\b/i",$message) != 0))
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bad\b/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bads\b/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\badvertis/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bpromot/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\btraffic/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bmonetiz/i",$message) != 0)
-        $status="Message not sent: solicitions not permitted.";
+        $status="Message not sent: solicitations not permitted.";
       if (!$address)
         $status="Message not sent: e-mail address is required.";
       if (strpos($address,'@') == false)
