@@ -67,7 +67,7 @@
 ?>
   <div>
   <h1 class="text-center">Contact the Wizards</h1>
-  <p class="lead magick-description">Post here for any of the issues listed below.  You can expect a response from our team if your issue is a sponsorship, <a href="https://imagemagick.org/script/license.php">license</a>, security, or paid support issue.  If you require a response for any other issue, post to the ImageMagick public <a href="https://github.com/ImageMagick/ImageMagick/discussions">forums</a>.  You can also post bug reports to the <a href="https://github.com/ImageMagick/ImageMagick/issues">issues</a> forum.  Note, we do <u>not</u> offer sponsored links <u>nor do we respond to solicitations</u>.</p>
+  <p class="lead magick-description">Post here for any of the issues listed below.  You can expect a response from our team if your issue is a sponsorship, <a href="https://imagemagick.org/script/license.php">license</a>, security, or paid support issue.  If you require a response for any other issue, post to the ImageMagick public <a href="https://github.com/ImageMagick/ImageMagick/discussions">forums</a>.  You can also post bug and security reports to the <a href="https://github.com/ImageMagick/ImageMagick/issues">issues</a> forum.  Note, we do <u>not</u> offer sponsored links <u>nor do we respond to solicitations</u>.</p>
   <fieldset>
   <h2>Contact the Wizards</h2>
 	<p>Enter this code, <code>
