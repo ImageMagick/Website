@@ -627,7 +627,7 @@ the supported image formats.</p>
   <tr>
     <td>MPC</td>
     <td>RW</td>
-    <td>Magick Persistent Cache image file format</td>
+    <td>Magick Pixel Cache image file format</td>
     <td>The most efficient data processing pattern is a write-once, read-many-times pattern. The image is generated or copied from source, then various analyses are performed on the image pixels over time.  MPC supports this pattern. MPC is the native <var>in-memory</var> ImageMagick uncompressed file format. This file format is identical to that used by ImageMagick to represent images in memory and is read by mapping the file directly into memory. The MPC format is not portable and is not suitable as an archive format. It is suitable as an intermediate format for high-performance image processing.  The MPC format requires two files to support one image. Image attributes are written to a file with the extension <code>.mpc</code>, whereas, image pixels are written to a file with the extension <code>.cache</code>.</td>
   </tr>
 
