@@ -811,12 +811,12 @@ abbreviated as a concatenation of the letters '<code>R</code>', '<code>G</code>'
 
 <p>For example, to only select the <code>Red</code> and <code>Blue</code> channels
 you can use any of the following:</p>
-<ul><ul><pre class="bg-light text-dark">
+<ul><pre class="bg-light text-dark">
 <code>-channel Red,Blue</code>
 <code>-channel R,B</code>
 <code>-channel RB</code>
 <code>-channel 0,2</code>
-</pre></ul></ul>
+</pre></ul>
 
 <p>All the channels that are present in an image can be specified using the
 special channel type <code>All</code>. Not all operators are 'channel capable',
