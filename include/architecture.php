@@ -96,7 +96,7 @@ if (image == (Image *) NULL)
 
 <p>Here is a typical <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> code snippet for manipulating pixels in the pixel cache.  In our example, we copy pixels from the input image to the output image and decrease the intensity by 10%:</p>
 
-<ul><pre class="pre-scrollable highlight"><code>const Quantum
+<ul><pre class="pre-scrollable bg-light"><code>const Quantum
   *p;
 
 Quantum
@@ -304,7 +304,7 @@ magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2
 <h3>Cache Views</h3>
 
 <p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
-<ul><pre class="pre-scrollable highlight"><code>CacheView
+<ul><pre class="pre-scrollable bg-light"><code>CacheView
   *view_1,
   *view_2;
 
@@ -372,7 +372,7 @@ magick image.mpc -crop 100x100+200+0 +repage 3.png
 <p>ImageMagick provides for streaming pixels as they are read from or written to an image.  This has several advantages over the pixel cache.  The time and resources consumed by the pixel cache scale with the area of an image, whereas the pixel stream resources scale with the width of an image.  The disadvantage is the pixels must be consumed as they are streamed so there is no persistence.</p>
 
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#ReadStream">ReadStream()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#WriteStream">WriteStream()</a> with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
-<ul><pre class="pre-scrollable highlight"><code>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
+<ul><pre class="pre-scrollable bg-light"><code>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
 {
   register const Quantum
     *p;
@@ -467,7 +467,7 @@ magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
 <p>Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips. However, you are welcome to use ImageMagick algorithms in your threads of execution with the exception of the MagickCore's GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), or SyncAuthenticPixels() pixel cache methods.  These methods are intended for one thread of execution only with the exception of an OpenMP parallel section.  To access the pixel cache with more than one thread of execution, use a cache view.  We do this for the <a href="<?php echo $_SESSION['RelativePath']?>/../api/composite.php#CompositeImage">CompositeImage()</a> method, for example.  Suppose we want to composite a single source image over a different destination image in each thread of execution.  If we use GetVirtualPixels(), the results are unpredictable because multiple threads would likely be asking for different areas of the pixel cache simultaneously.  Instead we use GetCacheViewVirtualPixels() which creates a unique view for each thread of execution ensuring our program behaves properly regardless of how many threads are invoked.  The other program interfaces, such as the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand API</a>, are completely thread safe so there are no special precautions for threads of execution.</p>
 
 <p>Here is an MagickCore code snippet that takes advantage of threads of execution with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">OpenMP</a> programming paradigm:</p>
-<ul><pre class="pre-scrollable highlight"><code>CacheView
+<ul><pre class="pre-scrollable bg-light"><code>CacheView
   *image_view;
 
 MagickBooleanType
@@ -518,7 +518,7 @@ if (status == MagickFalse)
 </code></pre></ul>
 
 <p>This code snippet converts an uncompressed Windows bitmap to a Magick++ image:</p>
-<ul><pre class="pre-scrollable highlight"><code>#include "Magick++.h"
+<ul><pre class="pre-scrollable bg-light"><code>#include "Magick++.h"
 #include &lt;assert.h&gt;
 #include "omp.h"
 
@@ -625,7 +625,7 @@ Features: DPC Cipher Modules OpenCL OpenMP(4.5)
 <p>If an accelerator is not available or if the accelerator fails to respond, ImageMagick reverts to the non-accelerated convolution algorithm.</p>
 
 <p>Here is an example OpenCL kernel that convolves an image:</p>
-<ul><pre class="pre-scrollable highlight"><code>static inline long ClampToCanvas(const long offset,const ulong range)
+<ul><pre class="pre-scrollable bg-light"><code>static inline long ClampToCanvas(const long offset,const ulong range)
 {
   if (offset &lt; 0L)
     return(0L);
@@ -692,7 +692,7 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g.  PNG, GIF, JPEG, etc.).  Registering an image coder alerts ImageMagick a particular format is available to read or write.  While unregistering tells ImageMagick the format is no longer available.  The classifying method looks at the first few bytes of an image and determines if the image is in the expected format.  The reader sets the image size, colorspace, and other properties and loads the pixel cache with the pixels.  The reader returns a single image or an image sequence (if the format supports multiple images per file), or if an error occurs, an exception and a null image.  The writer does the reverse.  It takes the image properties and unloads the pixel cache and writes them as required by the image format.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/mgk.c">custom coder</a>.  It reads and writes images in the MGK image format which is simply an ID followed by the image width and height followed by the RGB pixel values.</p>
-<ul><pre class="pre-scrollable highlight"><code>#include &lt;MagickCore/studio.h>
+<ul><pre class="pre-scrollable bg-light"><code>#include &lt;MagickCore/studio.h>
 #include &lt;MagickCore/blob.h>
 #include &lt;MagickCore/cache.h>
 #include &lt;MagickCore/colorspace.h>
@@ -1124,7 +1124,7 @@ display logo.mgk
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
-<ul><pre class="pre-scrollable highlight"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable bg-light"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>

@@ -152,7 +152,7 @@ matrix determinant has a sufficiently small absolute value it is rejected.</p>
 <p>Used to set a flag on an image indicating whether or not to use existing alpha
 channel data, to create an alpha channel, or to perform other operations on the alpha channel.  Choose the argument <var>type</var> from the list below.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
     <dt class="col-md-4">Activate</dt>
     <dd class="col-md-8">
@@ -235,7 +235,7 @@ same as "<code><a href="#alpha" >-alpha</a> Off</code>", the <code>
 >-matte</code> operation was the same as "<code><a href="#alpha" >-alpha</a>
 Set</code>" and not "<code><a href="#alpha" >-alpha</a> On</code>".  </p>
 
-<div class="pre-scrollable highlight" style="margin: auto;">
+<div class="pre-scrollable bg-light" style="margin: auto;">
  <h3><a class="anchor" id="annotate"></a>
  -annotate <var>degrees</var> <var>text</var><br />
  -annotate <var>Xdegrees</var>x<var>Ydegrees</var> <var>text</var><br /> -annotate <var>Xdegrees</var>x<var>Ydegrees</var>{+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var><br /> -annotate {+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var></h3>
@@ -405,7 +405,7 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 
 <p>Here are the valid methods:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No method specified (equivalent to '<code>OTSU</code>').</dd>
 <dt class="col-md-4">Kapur</dt><dd class="col-md-8">maximum entropy thresholding.</dd>
@@ -616,7 +616,7 @@ ignored. </p>
 
 <p>As of IM 6.7.8-8, the <var>geometry</var> arguments behave as follows:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4"><var>value</var></dt>
 <dd class="col-md-8">value is added to both left/right and top/bottom</dd>
@@ -1221,7 +1221,7 @@ Undefined
 
 <p>For a more accurate color conversion to or from the linear RGB, CMYK, or grayscale colorspaces, use the <a href="#profile">-profile</a> option.  Note, ImageMagick assumes the sRGB colorspace if the image format does not indicate otherwise.  For colorspace conversion, the gamma function is first removed to produce linear RGB.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
         <caption>Conversion of RGB to Other Color Spaces</caption>
         <tr><th valign="middle">CMY</th></tr>
@@ -1978,7 +1978,7 @@ animation is to be overlaid onto the display. </p>
 
 <p>Here are the valid methods:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No disposal specified (equivalent to '<code>none</code>').</dd>
 <dt class="col-md-4">None</dt><dd class="col-md-8">1:  Do not dispose, just overlay next frame image.</dd>
@@ -2033,7 +2033,7 @@ and meaning of the floating point values depends on the distortion <var>method</
 
 <p>Choose from these distortion types:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <tr>
     <th style="width: 8%">Method</th>
@@ -2480,7 +2480,7 @@ operations.</p>
 
 <p>The shape primitives:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">point</dt><dd class="col-md-8">          x,y</dd>
 <dt class="col-md-4">line</dt><dd class="col-md-8">           x0,y0 x1,y1</dd>
@@ -2515,7 +2515,7 @@ scope to the <a href="#draw">-draw</a> option in which it appears.</p>
 
 <p>The transformation primitives:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">rotate</dt><dd class="col-md-8">degrees</dd>
 <dt class="col-md-4">translate</dt><dd class="col-md-8">dx,dy</dd>
@@ -2527,7 +2527,7 @@ scope to the <a href="#draw">-draw</a> option in which it appears.</p>
 
 <p>The pixel operation primitives:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">color</dt><dd class="col-md-8">x0,y0 method</dd>
 <dt class="col-md-4">matte</dt><dd class="col-md-8">x0,y0 method</dd>
@@ -2816,7 +2816,7 @@ a "normalized pixel" is that number divided by the maximum
 normalized pixels are used, they are restored, following the other
 calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <col width="25%" />
   <col width="75%" />
@@ -3221,7 +3221,7 @@ filter</a> option.</p>
 use of these expert settings (see also <a href="#define" >-define</a> and <a
 href="#set" >-set</a>):-</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <tr>
     <td>-define filter:blur=<var>factor</var></td>
@@ -3547,7 +3547,7 @@ Arctan
 <p>To print a complete list of <a href="#function">-function</a> operators,
 use <a href="#list">-list function</a>. Descriptions follow.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
   <dt class="col-md-4">Polynomial</dt>
   <dd class="col-md-8"><p>The <code>Polynomial</code> function takes an arbitrary number of parameters,
@@ -3571,7 +3571,7 @@ polynomials) of the <a href="#evaluate">-evaluate</a> operator. The <a
 href="#level">-level</a> operator also affects channels linearly. Some
 correspondences follow.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <tr>
         <td>-evaluate Set <var>value</var> </td>
@@ -3634,7 +3634,7 @@ is 0.</p>
 <code>Cos</code> of the <a href="#evaluate">-evaluate</a> operator by allowing
 varying amplitude, phase and bias. The correspondence is as follows.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <tr>
         <td>-evaluate Sin <var>freq</var> </td>
@@ -4090,7 +4090,7 @@ an image with red, green, and blue pixel components. Typically the
 the pixel values to linear-RGB or non-linear sRGB colorspace before
 being applied to calculate the final greyscale value. </p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Rec601Luma</dt><dd class="col-md-8">      0.298839R' + 0.586811G'+ 0.114350B'</dd>
 <dt class="col-md-4">Rec601Luminance</dt><dd class="col-md-8"> 0.298839R + 0.586811G + 0.114350B</dd>
@@ -4108,7 +4108,7 @@ R',G',B' are sRGB non-linear values. </p>
 current value in the images respective R,G,B channel regardless of
 what that is, or what colorspace the image is currently using.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Average</dt><dd class="col-md-8">(R' + G' + B') / 3.0</dd>
 <dt class="col-md-4">MS</dt><dd class="col-md-8">(R'^2 + G'^2 + B'^2) / 3.0</dd>
@@ -4218,7 +4218,7 @@ image. This setting determines how the color is determined from the colors of
 the pixels surrounding that point.  That is how to determine the color of a
 point that falls between two, or even four different colored pixels. </p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
   <dt class="col-md-4">average</dt>
   <dd class="col-md-8">The average color of the surrounding four pixels</dd>
@@ -4359,7 +4359,7 @@ the local background color, from which to separate the foreground color. </p>
 which may represent either a set of overlaid 'image layers', a GIF disposal
 animation, or a fully-'coalesced' animation sequence. </p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <table class="table table-sm table-hover">
   <tbody>
   <tr>
@@ -4844,7 +4844,7 @@ normalization of mathematical images. </p>
 
 <p class="magick-description">Print a list of supported arguments for various options or settings.  Choose from these list types:</p>
 
-<ul><pre class="pre-scrollable highlight"><code>
+<ul><pre class="pre-scrollable bg-light"><code>
 Align
 Alpha
 Boolean
@@ -4936,7 +4936,7 @@ href="#debug">-debug</a> option is active.</p>
 <p>You can display the following components by embedding special format
 characters:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">%d</dt><dd class="col-md-8">domain</dd>
 <dt class="col-md-4">%e</dt><dd class="col-md-8">event</dd>
@@ -5013,7 +5013,7 @@ the type and <code>display</code> searches the list of colormap types in
 
 <p>Here are the valid components of a map:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">r</dt><dd class="col-md-8">  red pixel component</dd>
 <dt class="col-md-4">g</dt><dd class="col-md-8">  green pixel component</dd>
@@ -5084,7 +5084,7 @@ name. </p>
 
 <p>Choose from:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz affected)</dd>
 <dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
@@ -5374,7 +5374,7 @@ given number of <var>levels</var> per color channel.</p>
 
 <p>You can choose from these standard threshold maps:</p>
 
-<ul><pre class="pre-scrollable highlight"><code>
+<ul><pre class="pre-scrollable bg-light"><code>
 threshold   1x1   Threshold 1x1 (non-dither)
 checks      2x1   Checkerboard 2x1 (dither)
 o2x2        2x2   Ordered 2x2 (dispersed)
@@ -5593,7 +5593,7 @@ visible effect.</p>
 <code>magick file.png -preview Gamma Preview:gamma.png</code>). Choose from
 these previews:</p>
 
-<ul><pre class="pre-scrollable highlight"><code>
+<ul><pre class="pre-scrollable bg-light"><code>
 AddNoise
 Blur
 Brightness
@@ -5726,7 +5726,7 @@ compression.</p>
 <p>If filter-type is 4 or less, the specified PNG filter-type is used for
 all scanlines:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">0</dt><dd class="col-md-8">none</dd>
 <dt class="col-md-4">1</dt><dd class="col-md-8">sub</dd>
@@ -6514,7 +6514,7 @@ exposing a photographic film to light during the development process.</p>
 <p class="magick-description"> color the given image using the specified points of color, and filling the other intervening colors using the given methods. </p>
 
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
     <dt class="col-md-4">barycentric</dt>
     <dd class="col-md-8">three point triangle of color given 3 points.
@@ -6604,7 +6604,7 @@ blend.</p>
 
 <p>Choose from these statistic types:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Contrast</dt><dd class="col-md-8">maximum difference (max - min) divided by (max + min) value in neighborhood</dd>
 <dt class="col-md-4">Maximum</dt><dd class="col-md-8">maximum value per channel in neighborhood</dd>
@@ -6645,7 +6645,7 @@ this information to recover the steganographic image (e.g. display -size
 
 <p class="magick-description">Pixel storage type.  Here are the valid types:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">char</dt><dd class="col-md-8">unsigned characters</dd>
 <dt class="col-md-4">double</dt><dd class="col-md-8">doubles</dd>
@@ -7144,7 +7144,7 @@ a radius of 0 to have the method select a suitable radius.</p>
 
 <p>The parameters are:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">radius</dt>
 <dd class="col-md-8">The radius of the Gaussian, in pixels,  not counting the center pixel (default 0).</dd>
@@ -7199,7 +7199,7 @@ image, but could also be set to a specify background color. </p>
 
 <p>Choose from these methods:</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">background</dt><dd class="col-md-8">the area surrounding the image is the background color</dd>
 <dt class="col-md-4">black</dt><dd class="col-md-8">the area surrounding the image is black</dd>
@@ -7285,7 +7285,7 @@ percentage, which defaults to 100 percent (no color change). </p>
 the currently selected font family. Use a positive integer for
 <var>fontWeight</var> or select from the following.</p>
 
-<div class="pre-scrollable highlight">
+<div class="pre-scrollable bg-light">
 <dl class="row">
 <dt class="col-md-4">Thin </dt>
 <dd class="col-md-8">Same as <var>fontWeight</var> = 100.</dd>
