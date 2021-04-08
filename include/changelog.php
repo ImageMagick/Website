@@ -1,7 +1,8 @@
-<div class="magick-header"><dl><dt>2021-03-13  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-4 GIT revision 18...</li>
+<div class="magick-header"><dl><dt>2021-03-20  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-4 GIT revision 18551:474c73cba:20210320</li>
 <dt>2021-03-13  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> support caption:split define (reference   https://github.com/ImageMagick/ImageMagick/discussions/3389).</li>
+  <li> avoid an omp deadlock with policy string</li>
 <dt>2021-03-06  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-3 GIT revision 18521:10079791f:20210306</li>
 <dt>2021-03-02  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
