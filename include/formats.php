@@ -6,7 +6,7 @@
 
 <p>To get a complete listing of which image formats are supported on your system, type</p>
 
-<pre class="highlight"><code>magick identify -list format
+<pre class="bg-light"><code>magick identify -list format
 </code></pre>
 
 <p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Linux compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
@@ -19,7 +19,7 @@ Then there is the occasional format that also supports LAB (that is CieLAB)
 (e.g. TIFF, PSD, JPG, JP2).  To determine the colorspace of your image, use
 this command:</p>
 
-<pre class="highlight"><code>$ magick identify -verbose image.jpg
+<pre class="bg-light"><code>$ magick identify -verbose image.jpg
 Image: image.jpg
 Format: JPEG (Joint Photographic Experts Group JFIF format)
 ...
@@ -27,7 +27,7 @@ Colorspace: sRGB
 </code></pre>
 
 OR use the appropriate percent escape
-<pre class="highlight"><code>$ magick image.jpg -print "%[colorspace]\n" null:
+<pre class="bg-light"><code>$ magick image.jpg -print "%[colorspace]\n" null:
 sRGB
 </code></pre>
 
@@ -38,7 +38,7 @@ satisfactory results processing in the sRGB colorspace, you may get improved
 results in linear RGB (essentially sRGB with the gamma function removed).  For
 example,</p>
 
-<pre class="highlight"><code>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg
+<pre class="bg-light"><code>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg
 </code></pre>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
@@ -47,7 +47,7 @@ Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
-<pre class="highlight"><code>magick lab.tif -resize 50% resize.jpg
+<pre class="bg-light"><code>magick lab.tif -resize 50% resize.jpg
 </code></pre>
 
 <p>Again, it may not make sense for some image processing operators to work
@@ -636,7 +636,7 @@ the supported image formats.</p>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
     <td>This format permits you to write to and read images from memory.  The image persists until the program exits.  For example, let's use the MPR to create a checkerboard:
-<pre class="highlight"><code>magick \( -size 15x15 canvas:black canvas:white -append \) \
+<pre class="bg-light"><code>magick \( -size 15x15 canvas:black canvas:white -append \) \
   \( +clone -flip \) +append -write mpr:checkers +delete \
   -size 240x240 tile:mpr:checkers board.png
 </code></pre></td>

@@ -8,7 +8,7 @@
 
 <p>We list a few examples of the <code>montage</code> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
-<pre class="highlight"><code>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
+<pre class="bg-light"><code>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
 </code></pre>
 
 <ul>
@@ -26,7 +26,7 @@
 
 <p>Ok, let's add some decorations:</p>
 
-<pre class="highlight"><code>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
+<pre class="bg-light"><code>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
 </code></pre>
 
 <ul>
@@ -46,7 +46,7 @@
 
 <h5>Ashlar Pseudo-image Format</h5>
 <p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitedly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
-<pre class="highlight"><code>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</code></pre>
+<pre class="bg-light"><code>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</code></pre>
 <p>This is designed to quickly view a collection of images. To have more control over the layout of your image tiles, use the <code>montage</code> command instead.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>

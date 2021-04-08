@@ -1,7 +1,7 @@
 <div class="magick-header">
 <h1 class="text-center">Threads of Execution</h1>
 <p class="lead magick-description">Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips and <a href="http://www.openmp.org">OpenMP</a>. OpenMP, is an API specification for parallel programming. If your compiler supports OpenMP (e.g. gcc, Visual Studio 2005) directives, ImageMagick automatically includes support. To verify, look for the OpenMP feature of ImageMagick with this command:</p>
-<ul><pre class="highlight"><code>$ magick identify -version
+<ul><pre class="bg-light"><code>$ magick identify -version
 Version: ImageMagick 7.0.10-50 2021-01-04 Q16 https://imagemagick.org
 Copyright: © 1999-2021 ImageMagick Studio LLC
 Features: OpenMP(4.5)</code></pre></ul>
@@ -10,7 +10,7 @@ Features: OpenMP(4.5)</code></pre></ul>
 <h5>The Perils of Parallel Execution</h5>
 <p>It can be difficult to predict behavior in a parallel environment. Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize. The only way to be certain of the optimal performance, in terms of the number of threads, is to benchmark. ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads. This can help you identify how many threads are the most efficient in your environment. Here is an example benchmark for threads 1-8:</p>
 
-<ul><pre class="highlight"><code>$ magick -bench 40 model.png -sharpen 0x1 null:
+<ul><pre class="bg-light"><code>$ magick -bench 40 model.png -sharpen 0x1 null:
 Performance[1]: 40i 0.712ips 1.000e 14.000u 0:14.040
 Performance[2]: 40i 1.362ips 0.657e 14.550u 0:07.340
 Performance[3]: 40i 2.033ips 0.741e 14.530u 0:04.920

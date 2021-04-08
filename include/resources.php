@@ -65,17 +65,17 @@ file or data stream.
   <dd class="col-md-8">Configure ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.xml">security policies</a>.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
-<ul><pre class="highlight"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre></ul>
+<ul><pre class="bg-light"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre></ul>
 
 Any image larger than this area limit is cached to disk rather than memory.
 
 Use <code>width</code> to limit the maximum width of an image in pixels.  Exceed this limit and an exception is thrown and processing stops.
 
-<ul><pre class="highlight"><code>&lt;policy domain="resource" name="width" value="8KP"/></code></pre></ul>
+<ul><pre class="bg-light"><code>&lt;policy domain="resource" name="width" value="8KP"/></code></pre></ul>
 
 To limit the elapsed time of any ImageMagick command to 5 minutes, use this policy:
 
-<ul><pre class="highlight"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre></ul>
+<ul><pre class="bg-light"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre></ul>
 Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
 
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
@@ -100,7 +100,7 @@ Define arguments for the memory, map, and disk resources with SI prefixes (.e.g 
 
 <p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="bg-light"><code>$MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
@@ -111,7 +111,7 @@ $HOME/.config/ImageMagick
 
 <p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="bg-light"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
@@ -122,7 +122,7 @@ $HOME/.config/ImageMagick/
 
 <p>Under Windows, ImageMagick searches for these configuration files in the following order, and loads them if found:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="bg-light"><code>$MAGICK_CONFIGURE_PATH
 &lt;<var>windows registry</var>&gt;
 $PREFIX/config
 $USERPROFILE/.config/ImageMagick
@@ -132,7 +132,7 @@ $USERPROFILE/.config/ImageMagick
 
 <p>For an uninstalled Windows installation, the configuration load order is:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="bg-light"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME
 $USERPROFILE/.config/ImageMagick
 <var>client path</var>
@@ -145,7 +145,7 @@ $USERPROFILE/.config/ImageMagick
 <h5>Coders</h5>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
+<ul><pre class="bg-light"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
@@ -155,7 +155,7 @@ $HOME/.config/ImageMagick
 
 <h5>Filters</h5>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
-<ul><pre class="highlight"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
+<ul><pre class="bg-light"><code>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
@@ -167,7 +167,7 @@ $HOME/.config/ImageMagick
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
-<ul><pre class="highlight"><code>$MAGICK_CONFIGURE_PATH
+<ul><pre class="bg-light"><code>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
