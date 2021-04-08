@@ -2,7 +2,7 @@
   /*
     ImageMagick Constants.
   */
-  define('DevelopmentTeam', '****@urban-warrior.org');
+  define('DevelopmentTeam', '*****@urban-warrior.org');
   define('SponsorIcon', 'networkredux.png');
   define('SponsorURL', 'https://networkredux.com');
   define('MagickMajorReleaseText', '7');

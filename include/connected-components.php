@@ -5,15 +5,15 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif" width="256" height="171" class="image-slices" alt="purse" /></a>
 </ul>
 <p>To identify the objects in this image, use this command:</p>
-<ul><pre class="bg-light"><code>magick objects.gif -connected-components 4 -auto-level -depth 8 objects.png</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>magick objects.gif -connected-components 4 -auto-level -depth 8 objects.png</code></pre></ul>
 <p>The detected objects are uniquely labeled.  Use auto leveling to visualize the detected objects:</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.png" width="256" height="171" class="image-slices" alt="Objects" /></a>
 </ul>
 <p>Object statistics is useful to review.  To display them, use this command:</p>
-<ul><pre class="bg-light"><code>magick objects.gif -define connected-components:verbose=true -connected-components 4 objects.png</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>magick objects.gif -define connected-components:verbose=true -connected-components 4 objects.png</code></pre></ul>
 <p>Five objects were detected in the source image with these statistics:</p>
-<ul><pre class="bg-light"><code>Objects (id: bounding-box centroid area mean-color):
+<ul><pre class="bg-light text-dark"><code>Objects (id: bounding-box centroid area mean-color):
   0: 256x171+0+0 119.2,80.8 33117 srgb(0,0,0)
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)
@@ -23,14 +23,14 @@
 <p>Add <code>-define connected-components:exclude-header=true</code> to show the objects without the header-line.  Add <code>-define connected-components:exclude-ids=true</code>.</p>
 <p>Use <code>-connected-components 8</code> to visit 8 neighbors rather than 4.  By default, neighbor colors must be exact to be part of a unique object. Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> option to include pixels as part of an object that are <var>close</var> in color.</p>
 <p>You might want to eliminate small objects by merging them with their larger neighbors.  If so, use this command:</p>
-<ul><pre class="bg-light"><code>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
+<ul><pre class="bg-light text-dark"><code>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
   -auto-level objects.jpg</code></pre></ul>
 <p>Here are the expected results.  Notice, how the small objects are now merged with the background.</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg" width="256" height="171" class="image-slices" alt="Objects" /></a>
 </ul>
 <p>Notice how two of the objects were merged leaving three remaining objects:</p>
-<ul><pre class="bg-light"><code>Objects (id: bounding-box centroid area mean-color):
+<ul><pre class="bg-light text-dark"><code>Objects (id: bounding-box centroid area mean-color):
   0: 256x171+0+0 118.0,80.4 33557 srgb(0,0,0)
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)</code></pre></ul>
@@ -48,6 +48,6 @@
 </ul>
 <p>You may want to remove certain objects.  Use <code>-define connected-components:remove-ids=<em>list-of-ids</em></code> (e.g. -define connected-components:remove-ids=2,4-5).  Or use <code>-define connected-components:keep-ids=<em>list-of-ids</em></code> to keep these objects and merge all others. For convenience, you can keep the top objects with this option: <code>-define connected-components:keep-top=<em>number-of-objects</em></code>. Rather than object ids, you can instead remove or keep objects identified by there color, e.g. <code>-define connected-components:keep-colors=<em>red;green;blue</em></code>.</p>
 <p>Objects in your image may look homogeneous but have slightly different color values.  By default, only pixels that match exactly are considered as part of a particular object.  For slight variations of color in an object, use <code>-fuzz</code>.  For example,</p>
-<ul><pre class="bg-light"><code>magick star-map.png -fuzz 5% -define connected-components:verbose=true \
+<ul><pre class="bg-light text-dark"><code>magick star-map.png -fuzz 5% -define connected-components:verbose=true \
   -define connected-components:mean-color=true -connected-components 4 stars.gif</code></pre></ul>
 </div>

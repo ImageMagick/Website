@@ -36,7 +36,7 @@
 
 <p>ImageMagick supports these DPX properties:</p>
 
-<ul><pre class="pre-scrollable bg-light"><code>dpx:file.copyright
+<ul><pre class="pre-scrollable bg-light text-dark"><code>dpx:file.copyright
 dpx:file.creator
 dpx:file.filename
 dpx:file.project
@@ -88,17 +88,17 @@ dpx:user.data
 
 <p> To determine which properties are associated with your DPX image, use this command for example:</p>
 
-<ul><pre class="bg-light"><code>magick identify -verbose bluebells.dpx
+<ul><pre class="bg-light text-dark"><code>magick identify -verbose bluebells.dpx
 </code></pre></ul>
 
 <p>To identify a particular property, try this:</p>
 
-<ul><pre class="bg-light"><code>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
+<ul><pre class="bg-light text-dark"><code>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
 </code></pre></ul>
 
 <p>Finally, to set a property:</p>
 
-<ul><pre class="bg-light"><code>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
+<ul><pre class="bg-light text-dark"><code>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
 </code></pre></ul>
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>
@@ -106,7 +106,7 @@ dpx:user.data
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
 </p>
 
-<ul><pre class="bg-light"><code>-set gamma 1.7
+<ul><pre class="bg-light text-dark"><code>-set gamma 1.7
 -set film-gamma 0.6
 -set reference-black 95
 -set reference-white 685

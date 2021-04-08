@@ -17,7 +17,7 @@
 
 <p>The expression can be simple:</p>
 
-<ul><pre class="bg-light"><samp>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
+<ul><pre class="bg-light text-dark"><samp>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
 </samp></pre></ul>
 
 <p>Here, we convert a black to a navy blue image:</p>
@@ -30,7 +30,7 @@
 
 <p>Or the expression can be complex:</p>
 
-<ul><pre class="bg-light"><samp>magick rose: \
+<ul><pre class="bg-light text-dark"><samp>magick rose: \
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
   rose-sigmoidal.png
 </samp></pre></ul>
@@ -45,7 +45,7 @@
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
-<ul><pre class="bg-light"><samp>magick -size 70x70 canvas: \
+<ul><pre class="bg-light text-dark"><samp>magick -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \
   radial-gradient.png
 </samp></pre></ul>
@@ -58,7 +58,7 @@
 
 <p>This FX expression adds random noise to an image:</p>
 
-</ul><pre class="bg-light"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
+</ul><pre class="bg-light text-dark"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
   channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)' noisy.png
@@ -66,7 +66,7 @@
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
-<ul><pre class="bg-light"><samp>magick -size 400x400 xc:black -colorspace gray -fx " \
+<ul><pre class="bg-light text-dark"><samp>magick -size 400x400 xc:black -colorspace gray -fx " \
   Xi=2.4*i/w-1.2; \
   Yj=2.4*j/h-1.2; \
   for (pixel=0.0, (hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0), \
@@ -85,7 +85,7 @@
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
-<ul><pre class="bg-light"><samp>magick xc: -channel gray -fx " \
+<ul><pre class="bg-light text-dark"><samp>magick xc: -channel gray -fx " \
   for (prime=2, prime &lt; 30, composite=0; \
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
       if (composite &lt;= 0, debug(prime), ); prime++)" null:</samp></pre></ul>
@@ -303,14 +303,14 @@
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<ul><pre class="bg-light"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
+<ul><pre class="bg-light text-dark"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
 </samp></pre></ul>
 
 <p>By default, the image to which <code>p</code>, <code>r</code>, <code>g</code>, <code>b</code>, <code>a</code>, etc., are applied is the current image <code>s</code> in the image list. This is equivalent to <code>u</code> except when used in an escape sequence <code>%[fx:...]</code>. </p>
 
 <p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel red</a> instructs <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> to modify only the red channel; nothing in the green or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
-<ul><pre class="bg-light"><samp>magick -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
+<ul><pre class="bg-light text-dark"><samp>magick -channel red logo: -flop logo: -resize "20%" -fx "(u+v)/2" image.jpg
 </samp></pre></ul>
 
 <ul>
@@ -327,13 +327,13 @@
 
 <p>The pixels are processed one at a time, but a different pixel of an image can be specified using a pixel index represented by <code>p</code>. For example,</p>
 
-<ul><pre class="bg-light"><samp>p[-1].g      green value of pixel to the immediate left of the current pixel
+<ul><pre class="bg-light text-dark"><samp>p[-1].g      green value of pixel to the immediate left of the current pixel
 p[-1,-1].r   red value of the pixel diagonally left and up from current pixel
 </samp></pre></ul>
 
 <p>To specify an absolute position, use braces, rather than brackets.</p>
 
-<ul><pre class="bg-light"><samp>p{0,0}.r     red value of the pixel in the upper left corner of the image
+<ul><pre class="bg-light text-dark"><samp>p{0,0}.r     red value of the pixel in the upper left corner of the image
 p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 </samp></pre></ul>
 
@@ -345,7 +345,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <code>alpha.png</code> with the average of the green channels from the images <code>alpha.png</code> and <code>beta.png</code>, use:</p>
 
-<ul><pre class="bg-light"><samp>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
+<ul><pre class="bg-light text-dark"><samp>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
 </samp></pre></ul>
 
 
@@ -358,7 +358,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <code>%[fx:]</code> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <code>s</code> and <code>t</code> successively refer to the current image and its index, while <code>i</code> and <code>j</code> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
-<ul><pre class="bg-light"><samp>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
+<ul><pre class="bg-light text-dark"><samp>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]\n' info:
 Red channel of NW corner of image #0 is 0.464883
 Red channel of NW corner of image #1 is 0.184582
@@ -366,7 +366,7 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <code>-set</code> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
-<ul><pre class="bg-light"><samp>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
+<ul><pre class="bg-light text-dark"><samp>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
   -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif"
 </samp></pre></ul>
 

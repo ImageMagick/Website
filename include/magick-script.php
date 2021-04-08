@@ -4,12 +4,12 @@
 
 <p>Here is an example script:</p>
 
-<ul><pre class="bg-light"><code>#!/bin/env magick-script
+<ul><pre class="bg-light text-dark"><code>#!/bin/env magick-script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </code></pre></ul>
 
 <p>Or use the <code>magick</code> utility with the scripting option like this:</p>
-<ul><pre class="bg-light"></code>#!/bin/magick -script
+<ul><pre class="bg-light text-dark"></code>#!/bin/magick -script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </code></pre></ul>
 

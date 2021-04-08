@@ -5,7 +5,7 @@
 <p>ImageMagick recommended practices <strong>strongly</strong> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
 
 
-<p class="bg-light">We are utilizing a new community <a target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a> service.  The previous <a target="_blank" href="https://legacy.imagemagick.org/discourse-server">discourse server</a> remains available to read legacy <a target="_blank" href="https://legacy.imagemagick.org/discourse-server~">discussions</a>.</p>
+<p class="bg-light text-dark">We are utilizing a new community <a target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a> service.  The previous <a target="_blank" href="https://legacy.imagemagick.org/discourse-server">discourse server</a> remains available to read legacy <a target="_blank" href="https://legacy.imagemagick.org/discourse-server~">discussions</a>.</p>
 
 <p>We discovered a bug in the pseudo-random generator prior to ImageMagick 7.0.9-11, the first 3 values repeated because the random state was not initialized properly.  As a consequence of the fix, expect a different numerical sequence when seeding (-seed).</p>
 

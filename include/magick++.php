@@ -47,19 +47,19 @@ following command compiles and links the source file <code>demo.cpp</code>
 to produce the executable <code>demo</code> (notice that quotes are
 backward quotes): 
 </p>
-<pre class="bg-light"><code>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
+<pre class="bg-light text-dark"><code>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
   `Magick++-config --ldflags --libs`
 </code></pre>
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="bg-light"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+<pre class="bg-light text-dark"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 </code></pre>
 
 <p>Windows users may get started by manually editing a project file
 for one of the Magick++ demo programs. 
 </p>
 <p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the InitializeMagick() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
-<pre class="bg-light"><code>int main( int argc, char ** argv) {
+<pre class="bg-light text-dark"><code>int main( int argc, char ** argv) {
   InitializeMagick(*argv);
   ...
 </code></pre>
@@ -68,7 +68,7 @@ Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>
 <p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
 
-<pre class="pre-scrollable bg-light"><code>
+<pre class="pre-scrollable bg-light text-dark"><code>
 #include &lt;Magick++.h> 
 #include &lt;iostream> 
 
