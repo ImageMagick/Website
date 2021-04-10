@@ -23,7 +23,7 @@ function crtout($s)
 function crt()
 {
   $p=0;
-  echo("<ul><pre class=\"highlight\"><code>");
+  echo("<ul><pre class=\"bg-light text-dark\"><code>");
   $arg_list = func_get_args();
   for ($i = 0; $i < func_num_args(); $i++) {
     if ($p == 0) {
