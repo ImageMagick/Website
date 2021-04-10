@@ -66,9 +66,9 @@
 
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
 
-<ul><?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?></ul>
+<?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 <p>You'll need the libraries as well:</p>
-<ul><?php crt("rpm -Uvh ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?></ul>
+<?php crt("rpm -Uvh ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 
 <p>Note, if there are missing dependencies, install them from the <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repo.</p>
 
@@ -82,7 +82,7 @@
 
 <p>Set the <code>MAGICK_HOME</code> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
-<ul><?php crt('export MAGICK_HOME="$HOME/ImageMagick-' . MagickLibVersionText . '"'); ?></ul>
+<?php crt('export MAGICK_HOME="$HOME/ImageMagick-' . MagickLibVersionText . '"'); ?>
 
 <p>If the <code>bin</code> subdirectory of the extracted package is not already in your executable search path, add it to your <code>PATH</code> environment variable. For example:</p>
 
