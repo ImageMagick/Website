@@ -857,6 +857,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:author=<var>author</var></td>
+    <td></td>
+  </tr>
+
+  <tr>
     <td>pdf:fit-to-page=<var>true</var></td>
     <td> </td>
   </tr>
@@ -872,6 +877,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:producer=<var>producer</var></td>
+    <td></td>
+  </tr>
+
+  <tr>
     <td>pdf:stop-on-error=<var>true</var></td>
     <td> </td>
   </tr>
@@ -879,6 +889,11 @@ use:</p>
   <tr>
     <td>pdf:thumbnail=<var>false</var></td>
     <td>Skip writing a thumbnail when saving a PDF file.</td>
+  </tr>
+
+  <tr>
+    <td>pdf:title=<var>title</var></td>
+    <td></td>
   </tr>
 
   <tr>
