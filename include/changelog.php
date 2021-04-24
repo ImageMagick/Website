@@ -1,7 +1,26 @@
-<div class="magick-header"><dl><dt>2021-03-20  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2021-04-17  7.0.11-8  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-8 GIT revision 18636:53a252607:20210417</li>
+<dt>2021-04-17  7.0.11-8  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> added support for pdf:author, pdf:producer and pdf:title when writing a    PDF file.</li>
+<dt>2021-04-09  7.0.11-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> constrain sub-image list.</li>
+  <li> -layers optimize no longer produces broken output (reference    https://github.com/ImageMagick/ImageMagick/issues/3520).</li>
+<dt>2021-04-03  7.0.11-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-6 GIT revision 18588:ea711b44c:20210403</li>
+<dt>2021-04-01  7.0.11-6  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> fix portable Windows build.</li>
+<dt>2021-03-28  7.0.11-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-5 GIT revision 18569:b934dca6b:20210328</li>
+<dt>2021-03-25  7.0.11-5  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> OpenCL will be disable by default, use the environment variable    MAGICK_OCL_DEVICE to turn it on or select the device to use.</li>
+<dt>2021-03-24  7.0.11-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> eliminate extraneous spaces in AC_PATH_PROG (reference    https://github.com/ImageMagick/ImageMagick/issues/3428).</li>
+  <li> fix handling of non-square images with -fft option.</li>
+  <li> enable FFTW support with --with-fftw configure script command-line option.</li>
+<dt>2021-03-20  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-4 GIT revision 18551:474c73cba:20210320</li>
 <dt>2021-03-13  7.0.11-4  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> support caption:split define (reference   https://github.com/ImageMagick/ImageMagick/discussions/3389).</li>
+  <li> support caption:split define (reference    https://github.com/ImageMagick/ImageMagick/discussions/3389).</li>
   <li> avoid an omp deadlock with policy string</li>
 <dt>2021-03-06  7.0.11-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-3 GIT revision 18521:10079791f:20210306</li>

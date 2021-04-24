@@ -3868,8 +3868,6 @@ convert the given image into a grayscale image. </p>
 <p>which is equivalent to:</p>
 
 <ul><pre class="bg-light text-dark">
-<code>magick in.png -colorspace RGB -colorspace Gray out.png</code>
-or
 <code>magick in.png -colorspace LinearGray out.png</code>
 </pre></ul>
 
