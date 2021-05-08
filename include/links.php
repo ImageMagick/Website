@@ -52,7 +52,7 @@
 
 <h2><a class="anchor" id="topics"></a>ImageMagick Topics</h2>
 <ul>
-  <dd class="col-md-8"><a href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/graphics/ImageMagick/">FreeBSD port</a></dd>
+  <dd class="col-md-8"><a href="https://svnweb.freebsd.org/ports/head/graphics/ImageMagick7/">FreeBSD port</a></dd>
   <dd class="col-md-8"><a href="http://directory.fsf.org/project/ImageMagick/">Free Software Foundation</a></dd>
   <dd class="col-md-8"><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/">Hyperscale Image Resizing</a> </dd>
   <dd class="col-md-8"><a href="http://pkgsrc.se/graphics/ImageMagick/">NetBSD</a></dd>
