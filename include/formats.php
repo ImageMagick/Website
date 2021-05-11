@@ -60,7 +60,7 @@ reasonable results.</p>
 including sub-formats). The following table provides a summary of
 the supported image formats.</p>
 
-<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tbody>
   <tr>
@@ -1271,7 +1271,7 @@ the supported image formats.</p>
 
 <p>ImageMagick supports a number of image format specifications which refer to images prepared via an algorithm, or input/output targets. The following table lists these pseudo-image formats:</p>
 
-<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tr>
     <th>Tag</th>
@@ -1515,7 +1515,7 @@ the supported image formats.</p>
 
 <p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <code>magick:</code> format tag may be used via the syntax <code>magick:</code><var>name</var> to request an embedded image (e.g. <code>magick:logo</code>). For backwards compatibility, the image specifications <code>GRANITE:</code>, <code>LOGO:</code>, <code>NETSCAPE:</code>, and <code>ROSE:</code> may also be used to request images with those names.</p>
 
-<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tr>
     <th>Tag</th>
@@ -1566,7 +1566,7 @@ the supported image formats.</p>
 
 <p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <code>pattern:</code> format tag may be used via the syntax <code>pattern:</code><var>name</var> to request an embedded pattern (e.g. <code>pattern:checkerboard</code>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
 
-<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tr>
     <th>Tag</th>
@@ -1959,7 +1959,7 @@ the supported image formats.</p>
 
 <p>ImageMagick provides a number of format identifiers which are used to add, remove, and save embedded profiles for images which can support embedded profiles. Image types which may contain embedded profiles are TIFF, JPEG, and PDF.</p>
 
-<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:87.5% !important;">
+<div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tbody>
   <tr>
