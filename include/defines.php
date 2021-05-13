@@ -842,6 +842,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>jxl:effort=<var>value</var></td>
+    <td>Set the jpeg-xl encoding effort. Valid values are in the range of 3 (falcon) to 9 (tortois).</td>
+  </tr>
+
+  <tr>
     <td>mng:need-cacheoff</td>
     <td>turn playback caching off for streaming MNG.</td>
   </tr>
