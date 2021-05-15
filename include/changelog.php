@@ -1,10 +1,32 @@
-<div class="magick-header"><dl><dt>2021-04-17  7.0.11-8  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2021-05-07  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-12 GIT revision 18696:f6f58a34c:20210507</li>
+<dt>2021-05-07  7.0.11-12  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> The HEIC depth image will now only be read when the define heic:depth-image    is true.</li>
+<dt>2021-05-06  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> -layers optimize no longer produces broken output (reference    https://github.com/ImageMagick/ImageMagick/issues/3520).</li>
+<dt>2021-05-04  7.0.11-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-11 GIT revision 18678:5d4dc32ea:20210504</li>
+<dt>2021-05-04  7.0.11-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> FL32 no longer returns scambled results (reference    https://github.com/ImageMagick/ImageMagick/issues/3614).</li>
+  <li> Ashlar pseudo-image format no longer crops labels in last row of tiles by    default (reference https://github.com/ImageMagick/ImageMagick/issues/3618).</li>
+<dt>2021-04-28  7.0.11-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-10 GIT revision 18658:ffe570952:20210428</li>
+<dt>2021-04-25  7.0.11-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Optimize CompareImageBounds().</li>
+  <li> Check image is not NULL before dereferencing.</li>
+<dt>2021-04-25  7.0.11-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-9 GIT revision 18...</li>
+<dt>2021-04-25  7.0.11-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> eliminate uninitialized value</li>
+  <li> Differences in computing linear gray (reference    https://github.com/ImageMagick/ImageMagick/issues/3571).</li>
+<dt>2021-04-17  7.0.11-8  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-8 GIT revision 18636:53a252607:20210417</li>
 <dt>2021-04-17  7.0.11-8  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> added support for pdf:author, pdf:producer and pdf:title when writing a    PDF file.</li>
+<dt>2021-04-10  7.0.11-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-7 GIT revision 18617:2a0925961:20210411</li>
 <dt>2021-04-09  7.0.11-7  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> constrain sub-image list.</li>
-  <li> -layers optimize no longer produces broken output (reference    https://github.com/ImageMagick/ImageMagick/issues/3520).</li>
 <dt>2021-04-03  7.0.11-6  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-6 GIT revision 18588:ea711b44c:20210403</li>
 <dt>2021-04-01  7.0.11-6  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
@@ -12,7 +34,7 @@
 <dt>2021-03-28  7.0.11-5  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.0.11-5 GIT revision 18569:b934dca6b:20210328</li>
 <dt>2021-03-25  7.0.11-5  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
-  <li> OpenCL will be disable by default, use the environment variable    MAGICK_OCL_DEVICE to turn it on or select the device to use.</li>
+  <li> OpenCL will be disabled by default, use the environment variable    MAGICK_OCL_DEVICE to turn it on or select the device to use.</li>
 <dt>2021-03-24  7.0.11-5  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> eliminate extraneous spaces in AC_PATH_PROG (reference    https://github.com/ImageMagick/ImageMagick/issues/3428).</li>
   <li> fix handling of non-square images with -fft option.</li>
