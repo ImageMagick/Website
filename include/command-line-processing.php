@@ -514,7 +514,7 @@ above.</p>
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
 <h5>Explicit Image Format</h5>
-  <p>Images can be stored in a mryiad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <code>image.jpg</code> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <code>image</code> in the raw red, green, and blue intensity format:
+  <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <code>image.jpg</code> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <code>image</code> in the raw red, green, and blue intensity format:
   </p>
 
 <ul><pre class="bg-light text-dark"><code>magick image.jpg rgb:image</code></pre></ul>
