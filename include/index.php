@@ -95,6 +95,10 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>Use adaptive histogram equalization to improve contrast in images.</td>
   </tr>
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-cache.php">Image cache</a></td>
+    <td>store and retrieve images efficiently.</td>
+  </tr>
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
     <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
