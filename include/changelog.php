@@ -1,5 +1,11 @@
-<div class="magick-header"><dl><dt>2021-05-07  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-12 GIT revision 18696:f6f58a34c:20210507</li>
+<div class="magick-header"><dl><dt>2021-05-16  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-13 GIT revision 18739:49773ef93:20210516</li>
+<dt>2021-05-12  7.0.11-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed reading and writing the XMP chunk in a WebP image (reference    https://github.com/ImageMagick/ImageMagick/discussions/3617).</li>
+<dt>2021-05-09  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> label and caption sanity check is too conservative.</li>
+<dt>2021-05-09  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-12 GIT revision 18703:04c9de9b0:20210509</li>
 <dt>2021-05-07  7.0.11-12  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> The HEIC depth image will now only be read when the define heic:depth-image    is true.</li>
 <dt>2021-05-06  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
