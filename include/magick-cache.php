@@ -32,4 +32,5 @@
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key D4HiNCZeRn put /opt/magick-cache movies/blob/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.mp4</code></pre></ul>
 <p> or</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key D4HiNCZeRn put /opt/magick-cache movies/meta/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.txt</code></pre></ul>
+<p>Images must be in a format that ImageMagick understands.  Metadata must be text.  Blobs can be any content including images, video, audio, or binary files.</p>
 </div>
