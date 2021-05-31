@@ -26,7 +26,7 @@
 <h5>List the Magick Cache Content</h5>
 <p>Perhaps you want to audit all the content you own:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key s5hPjbxEwS list /opt/magick-cache movies/image/mission-impossible/cast</code></pre></ul>
-<p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You can not get it, delete it, or list it.</p>
+<p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or list it.</p>
 <h5>Magick Cache is not just for Images</h5>
 <p>In addition to a type of <code>image</code>, you can store the image content in its original form, video, or audio as content type of <code>blob</code> or metadata with a content type of <code>meta</code>:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key D4HiNCZeRn put /opt/magick-cache movies/blob/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.mp4</code></pre></ul>
