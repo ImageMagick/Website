@@ -18,6 +18,13 @@
 <p>Eventually you will want retrieve your content, let's get our cast image from the cache:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key s5hPjbxEwS get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
 <p>Notice the original image was put in the Magick Cache in the JPEG format. Here we conveniently convert it to the PNG image format.</p>
+<p>The <code>-extract</code> option is useful when retrieving an image.  To extract a portion of the image, specify tile width, height, and offset:</p>
+
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -key s5hPjbxEwS -extract 100x100+0+0 get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
+<p>To resize instead, do not specify the offset:</p>
+
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -key s5hPjbxEwS -extract 100x100 get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
+
 <h5>Delete content from the Magick Cache</h5>
 <p>We can explicitedly delete content:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -key s5hPjbxEwS delete /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson</code></pre></ul>
