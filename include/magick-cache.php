@@ -5,6 +5,7 @@
 <p>The Magick Cache works in concert with <a href="https://imagemagick.org">ImageMagick</a>.  Download the <a href="https://github.com/ImageMagick/MagickCache">Magick Cache</a> and install.  You'll now want to create the cache and populate it with images, video, and associated metadata.</p>
 <h5>Create a Magick Cache</h5>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache create /opt/magick-cache</code></pre></ul>
+<p>Once you create the magick cache, you will want to populate it with resources including images, video, audio, or metadata.
 <h5>Put an image in the Magick Cache</h5>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Note, image identifier is an IRI composed of <em>project</em>/<em>type</em>/<em>resource-path</em>.  In this example, the project is <code>movies</code>, type is <code>image</code>, and the resource path is <code>mission-impossible/cast/rebecca-ferguson</code>.  The path uniquely identifies a resource.  Two different images cannot be stored with the same resource path.  Instead use something like <code>mission-impossible/cast/200508-rebecca-ferguson</code> and <code>mission-impossible/cast/200513-rebecca-ferguson</code></p>
