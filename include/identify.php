@@ -101,7 +101,7 @@ Image: rose.jpg
   Elapsed time: 0:01.000
   Version: ImageMagick 7.0.4-8 Q16 x86_64 http://imagemagick.org
 </code></pre>
-<p>Note, the image signature is generated from the pixel components, not the image metadata.</p>
+<p>Note: the image signature is generated from the pixel components, not the image metadata. Other properties (e.g., background color) may also be generated from the image as it is stored in memory, not from the file's metadata.</p>
 
 <p>To get the print size in inches of an image at 72 DPI, use:</p>
 
