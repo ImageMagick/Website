@@ -16,6 +16,7 @@
 <p>Where <code>passkey.txt</code> contains your passphrase.  Don't forget your cache key.  Without it, you will not be able to get, list, delete or expire your content.</p>
 <p>The cache key ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt -cipher-key passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
+<p>Note, blobs and metadata are stored in the cache in plaintext.</p>
 <h5>Get content from the Magick Cache</h5>
 <p>Eventually you will want retrieve your content, let's get our cast image from the cache:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
