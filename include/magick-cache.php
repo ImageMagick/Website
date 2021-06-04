@@ -14,6 +14,8 @@
 <p>Now, set a cache key and the time to live to 2 days.  Anytime after 1 day, the image will automatically expire with the <code>expire</code> function.  To get, expire, or delete the image, you will need to use the same cache key.</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Where <code>passkey.txt</code> contains your passphrase.  Don't forget your cache key.  Without it, you will not be able to get, list, delete or expire your content.</p>
+<p>The cache key ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt -cipher-key passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
 <h5>Get content from the Magick Cache</h5>
 <p>Eventually you will want retrieve your content, let's get our cast image from the cache:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
@@ -24,6 +26,10 @@
 <p>To resize instead, do not specify the offset:</p>
 
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt -extract 100x100 get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
+
+<p>If your image is scrambled, provide the cipher key to descrample it:</p>
+
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
 
 <h5>Delete content from the Magick Cache</h5>
 <p>We can explicitedly delete content:</p>
