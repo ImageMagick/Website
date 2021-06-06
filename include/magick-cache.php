@@ -6,6 +6,7 @@
 <h5>Create a Magick Cache</h5>
 <p>You'll need a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache create /opt/magick-cache</code></pre></ul>
+<p>Where `passkey.txt` contains your passkey. Don't forget your cache key. Without it, you will not be able to delete the cache.</p>
 <p>Once its created, you will want to populate it with content that includes images, video, audio, or metadata.
 <h5>Put content in the Magick Cache</h5>
 <p>Let's add a movie cast image to the cache to our newly created cache:</p>
@@ -37,17 +38,21 @@
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt delete /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson</code></pre></ul>
 <p>or we can delete cast images that have expired (exceeded their respective time to live), try this comand:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt expire /opt/magick-cache movies/image/mission-impossible/cast</code></pre></ul>
-<h5>List the Magick Cache content</h5>
+<h5>Identify the Magick Cache content</h5>
 <p>Perhaps you want to audit all the content you own:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt list /opt/magick-cache movies/image/mission-impossible/cast
 movies/image/mission-impossible/cast/rebecca-ferguson 1368x912 1:0:0:0 2021-05-30T17:41:42Z
-listed 1 resources</code></pre></ul>
+identified 1 resources</code></pre></ul>
 <p>Each entry includes the IRI, image dimensions, time to live, whether the resource is expired (denoted with a `*`), and the creation date.  For meta and blob content, the extent in bytes is listed.</p>
-<p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or list it.</p>
+<p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or identify it.</p>
 <h5>Magick Cache is not just for images</h5>
 <p>In addition to a type of <code>image</code>, you can store the image content in its original form, video, or audio as content type of <code>blob</code> or metadata with a content type of <code>meta</code>:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt put /opt/magick-cache movies/blob/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.mp4</code></pre></ul>
 <p> or</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt put /opt/magick-cache movies/meta/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.txt</code></pre></ul>
 <p>Images must be in a format that ImageMagick understands.  Metadata must be text.  Blobs can be any content including images, video, audio, or binary files.</p>
+<h5>Delete a Magick Cache</h5>
+<p>To completely delete all the content within a cache and the cache itself:</p>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache delete /opt/magick-cache</code></pre></ul>
+<p>Be careful, after this command, your cached content is irrevolcably lost.</p>
 </div>
