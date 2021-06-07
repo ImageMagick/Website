@@ -31,7 +31,7 @@
 
 <p>If your image is scrambled, provide the passphrase to descrample it:</p>
 
-<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -passphrase passphrase.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
 
 <h5>Delete content from the Magick Cache</h5>
 <p>We can explicitedly delete content:</p>
