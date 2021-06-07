@@ -16,7 +16,7 @@
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Where <code>passkey.txt</code> contains your passkey.  Don't forget your passkey.  Without it, you will not be able to get, list, delete or expire your content.</p>
 <p>The passkey ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -cipher-key passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -passphrase passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Note, blobs and metadata are stored in the cache in plaintext.</p>
 <h5>Get content from the Magick Cache</h5>
 <p>Eventually you will want retrieve your content, let's get our cast image from the cache:</p>
@@ -29,7 +29,7 @@
 
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -extract 100x100 get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
 
-<p>If your image is scrambled, provide the cipher key to descrample it:</p>
+<p>If your image is scrambled, provide the passphrase to descrample it:</p>
 
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt get /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson rebecca-ferguson.png</code></pre></ul>
 
