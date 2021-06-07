@@ -57,5 +57,5 @@ identified 1 resources</code></pre></ul>
 <h5>Delete a Magick Cache</h5>
 <p>To completely delete all the content within a cache and the cache itself:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt delete /opt/magick-cache</code></pre></ul>
-<p>Be careful, after this command, your cached content is irrevolcably lost.</p>
+<p>Be careful, after this command, your cached content is irrevocably lost.</p>
 </div>
