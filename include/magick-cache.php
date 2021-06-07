@@ -6,16 +6,16 @@
 <h5>Create a Magick Cache</h5>
 <p>You'll need a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt create /opt/magick-cache</code></pre></ul>
-<p>Where `passkey.txt` contains your cache key. Don't forget your cache key. Without it, you will not be able to list content in your cache or delete it.</p>
+<p>Where `passkey.txt` contains your passkey. Don't forget your passkey. Without it, you will not be able to list content in your cache or delete it.</p>
 <p>Once its created, you will want to populate it with content that includes images, video, audio, or metadata.
 <h5>Put content in the Magick Cache</h5>
 <p>Let's add a movie cast image to our newly created cache:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Note, the image identifier is an IRI composed of <em>project</em>/<em>type</em>/<em>resource-path</em>.  In this example, the project is <code>movies</code>, type is <code>image</code>, and the resource path is <code>mission-impossible/cast/rebecca-ferguson</code>.  The path uniquely identifies a resource.  Two different images cannot be stored with the same resource path.  Instead use something like <code>mission-impossible/cast/200508-rebecca-ferguson</code> and <code>mission-impossible/cast/200513-rebecca-ferguson</code>.</p>
-<p>Now, set a resource key and the time to live to 2 days.  Anytime after 1 day, the image will automatically expire with the <code>expire</code> function.  To get, expire, or delete the image, you will need to use the same cache key.</p>
+<p>Now, set a passkey and the time to live to 2 days.  Anytime after 1 day, the image will automatically expire with the <code>expire</code> function.  To get, expire, or delete the image, you will need to use the same passkey.</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
-<p>Where <code>passkey.txt</code> contains your resource key.  Don't forget your resource key.  Without it, you will not be able to get, list, delete or expire your content.</p>
-<p>The resource key ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
+<p>Where <code>passkey.txt</code> contains your passkey.  Don't forget your passkey.  Without it, you will not be able to get, list, delete or expire your content.</p>
+<p>The passkey ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt -cipher-key passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.jpg</code></pre></ul>
 <p>Note, blobs and metadata are stored in the cache in plaintext.</p>
 <h5>Get content from the Magick Cache</h5>
