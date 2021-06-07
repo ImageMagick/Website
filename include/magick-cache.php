@@ -5,7 +5,7 @@
 <p>The Magick Cache works in concert with <a href="https://imagemagick.org">ImageMagick</a>.  Download the <a href="https://github.com/ImageMagick/MagickCache">MagickCache</a> and install.  You'll now want to create the cache and populate it with images, video, and associated metadata.</p>
 <h5>Create a Magick Cache</h5>
 <p>You'll need a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache create /opt/magick-cache</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt create /opt/magick-cache</code></pre></ul>
 <p>Where `passkey.txt` contains your cache key. Don't forget your cache key. Without it, you will not be able to list content in your the cache or delete it.</p>
 <p>Once its created, you will want to populate it with content that includes images, video, audio, or metadata.
 <h5>Put content in the Magick Cache</h5>
@@ -46,7 +46,7 @@ identified 1 resources</code></pre></ul>
 <p>Each entry includes the IRI, image dimensions, time to live, whether the resource is expired (denoted with a `*`), and the creation date.  For meta and blob content, the extent in bytes is listed.</p>
 <p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or identify it.</p>
 <p>The magick owner can view all the content, including content you own, with this command:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache list /opt/magick-cache movies</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt list /opt/magick-cache movies</code></pre></ul>
 <p>Note, expired reesources are annotated with an asterisks.</p>
 <h5>Magick Cache is not just for images</h5>
 <p>In addition to a type of <code>image</code>, you can store the image content in its original form, video, or audio as content type of <code>blob</code> or metadata with a content type of <code>meta</code>:</p>
