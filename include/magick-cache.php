@@ -56,6 +56,6 @@ identified 1 resources</code></pre></ul>
 <p>Images must be in a format that ImageMagick understands.  Metadata must be text.  Blobs can be any content including images, video, audio, or binary files.</p>
 <h5>Delete a Magick Cache</h5>
 <p>To completely delete all the content within a cache and the cache itself:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache delete /opt/magick-cache</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt delete /opt/magick-cache</code></pre></ul>
 <p>Be careful, after this command, your cached content is irrevolcably lost.</p>
 </div>
