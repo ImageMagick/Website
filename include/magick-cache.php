@@ -6,7 +6,7 @@
 <h5>Create a Magick Cache</h5>
 <p>You'll need a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt create /opt/magick-cache</code></pre></ul>
-<p>Where `passkey.txt` contains your cache key. Don't forget your cache key. Without it, you will not be able to list content in your the cache or delete it.</p>
+<p>Where `passkey.txt` contains your cache key. Don't forget your cache key. Without it, you will not be able to list content in your cache or delete it.</p>
 <p>Once its created, you will want to populate it with content that includes images, video, audio, or metadata.
 <h5>Put content in the Magick Cache</h5>
 <p>Let's add a movie cast image to our newly created cache:</p>
