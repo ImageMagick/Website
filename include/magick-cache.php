@@ -41,10 +41,12 @@
 <h5>Identify the Magick Cache content</h5>
 <p>Perhaps you want to audit all the content you own:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt list /opt/magick-cache movies/image/mission-impossible/cast
-movies/image/mission-impossible/cast/rebecca-ferguson 1368x912 1:0:0:0 2021-05-30T17:41:42Z
+movies/image/mission-impossible/cast/rebecca-ferguson[1368x912] 406B 1:0:0:0 2021-05-30T17:41:42Z
 identified 1 resources</code></pre></ul>
 <p>Each entry includes the IRI, image dimensions, time to live, whether the resource is expired (denoted with a `*`), and the creation date.  For meta and blob content, the extent in bytes is listed.</p>
 <p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or identify it.</p>
+<p>The magick owner can view all the content, including content you own, with this command:</p>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache list /opt/magick-cache movies</code></pre></ul>
 <h5>Magick Cache is not just for images</h5>
 <p>In addition to a type of <code>image</code>, you can store the image content in its original form, video, or audio as content type of <code>blob</code> or metadata with a content type of <code>meta</code>:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -cache-key passkey.txt put /opt/magick-cache movies/blob/mission-impossible/cast/rebecca-ferguson 0200508-rebecca-ferguson.mp4</code></pre></ul>
