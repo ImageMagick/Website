@@ -46,7 +46,7 @@ identified 1 resources</code></pre></ul>
 <p>Each entry includes the IRI, image dimensions, time to live, whether the resource is expired (denoted with a `*`), and the creation date.  For meta and blob content, the extent in bytes is listed.</p>
 <p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get it, delete it, or identify it.</p>
 <p>The magick owner can view all the content, including content you own, with this command:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt list /opt/magick-cache movies</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt identify /opt/magick-cache /</code></pre></ul>
 <p>Note, expired reesources are annotated with an asterisks.</p>
 <h5>Magick Cache is not just for images</h5>
 <p>In addition to a type of <code>image</code>, you can store the image content in its original form, video, or audio as content type of <code>blob</code> or metadata with a content type of <code>meta</code>:</p>
@@ -56,6 +56,6 @@ identified 1 resources</code></pre></ul>
 <p>Images must be in a format that ImageMagick understands.  Metadata must be text.  Blobs can be any content including images, video, audio, or binary files.</p>
 <h5>Delete a Magick Cache</h5>
 <p>To completely delete all the content within a cache and the cache itself:</p>
-<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt delete /opt/magick-cache</code></pre></ul>
+<ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt delete /opt/magick-cache /</code></pre></ul>
 <p>Be careful, after this command, your cached content is irrevocably lost.</p>
 </div>
