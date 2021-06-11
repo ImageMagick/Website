@@ -1,7 +1,7 @@
 <div class="magick-header">
 <h1 class="text-center">Magick Cache: an Efficient Image Cache</h1>
 <p class="text-info">The Magick cache is a work in progress.  Do not use the cache in production services until version is at least 1.0.0.  It is currently 0.9.2. The Magick Cache requires ImageMagick version 7.0.11-14 or above.</p>
-<p class="lead magick-description">The Magick Cache stores and retrieves images (and other content) efficiently within milliseconds with a small memory footprint. In addition to images, you can store video, audio, and associated properties.  The cache supports virtually unlimited content upwards of billions of images making it suitable as a web image service.</p>
+<p class="lead magick-description">The MagickCache provides methods and tools to cache images, image sequences, video, audio or metadata in a local folder. Any content is memory-mapped for efficient retrieval.  Additional efficiences are possible by retrieving a portion of an image.  Content can persist or you can assign a time-to-live (TTL) to automatically expire content when the TTL is exceeded. MagickCache supports virtually unlimited content upwards of billions of images making it suitable as a web image service.</p>
 <p>The Magick Cache works in concert with <a href="https://imagemagick.org">ImageMagick</a>.  Download the <a href="https://github.com/ImageMagick/MagickCache">MagickCache</a> and install.  You'll now want to create the cache and populate it with images, video, and associated metadata.</p>
 <h5>Create a Magick Cache</h5>
 <p>You'll need a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
