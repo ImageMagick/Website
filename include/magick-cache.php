@@ -58,4 +58,6 @@ identified 1 resources</code></pre></ul>
 <p>To completely delete all the content within a cache:</p>
 <ul><pre class="bg-light text-dark"><code>$ magick-cache -passkey passkey.txt delete /opt/magick-cache /</code></pre></ul>
 <p>Be careful, after this command, your cached content is irrevocably lost.</p>
+<h5>Security</h5>
+<p>MagickCache security is not crytographically strong.  Instead it generates a unique hash for each resource ensuring the resource ID cannot be discovered.  A resource is accessible to both the user of the cache and the cache owner.  They are also accessible to anyone with sufficient privileges to access the MagickCache  disk path.</p>
 </div>
