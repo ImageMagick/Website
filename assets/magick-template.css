@@ -18,6 +18,11 @@ body {
   padding: 1.5rem 1.5rem;
 }
 
+.magick-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
 .magick-header {
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
