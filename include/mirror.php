@@ -15,7 +15,6 @@
   <dt>United States</dt>
     <dd><a href="https://download.imagemagick.org/ImageMagick/download/">https://imagemagick.org/download</a></dd>
     <dd><a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a> (Git)</dd>
-    <dd><a href="https://gitlab.com/ImageMagick">https://gitlab.com/ImageMagick</a> (Git Mirror)</dd>
   <dt>Select Binaries </dt>
     <dd><a href="http://www.macports.org/ports.php?by=name&amp;substr=imagemagick">http://www.macports.org/ports.php?by=name&amp;substr=imagemagick</a> (Mac OS X)</dd>
     <dd><a href="http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/">http://hpux.connect.org.uk/hppd/hpux/X11/Viewers/</a> (HP-UX 10.20 and 11.00)</dd>
