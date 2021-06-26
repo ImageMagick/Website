@@ -6,15 +6,16 @@
 <h5>Create a MagickCache</h5>
 <p>You will require a place to store and retrieve your content.  Let's create a cache on our local filesystem:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick-cache -passkey passkey.txt create /opt/magick-cache</samp></pre></ul>
-<p>Where `passkey.txt` contains your cache passkey. Don't forget your passkey. Without it, you will be unable to identify, expire, or delete content in your cache.</p>
-<p>Once its created, you will want to populate the cache with content that includes images, video, audio, or metadata.
+<p>Where `passkey.txt` contains your cache passkey. Don't lose your passkey. Without it, you will be unable to identify, expire, or delete content in your cache.</p>
+<p>You only need to create a MagickCache once.  You can, however, create more than one MagickCache with different paths.</p>
+<p>Once the MagickCache is created, you will want to populate the cache with content that includes images, video, audio, or metadata.
 <h5>Put content in the MagickCache</h5>
 <p>Let's add a movie cast image to our newly created cache:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick-cache put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</samp></pre></ul>
-<p>Note, the image identifier is an IRI composed of <em>project</em>/<em>type</em>/<em>resource-path</em>.  In this example, the project is <samp>movies</samp>, type is <samp>image</samp>, and the resource path is <samp>mission-impossible/cast/rebecca-ferguson</samp>.  The path uniquely identifies a resource.  Two different images cannot be stored with the same resource path.  Instead use something like <samp>mission-impossible/cast/20210508-rebecca-ferguson-1</samp> and <samp>mission-impossible/cast/20210508-rebecca-ferguson-2</samp>.</p>
+<p>Note, the image identifier is an IRI composed of <em>project</em>/<em>type</em>/<em>resource-path</em>.  In this example, the project is <samp>movies</samp>, type is <samp>image</samp>, and the resource path is <samp>mission-impossible/cast/rebecca-ferguson</samp>.  The path uniquely identifies a cache resource.  Two different images cannot be stored with the same resource path.  Instead use something like <samp>mission-impossible/cast/20210508-rebecca-ferguson-1</samp> and <samp>mission-impossible/cast/20210508-rebecca-ferguson-2</samp>.</p>
 <p>Now, let's set a resource passkey and the time to live to 2 days.  Anytime after the second day, the image is automatically deleted with the <samp>expire</samp> function.  To get, expire, or delete the image, you will need to use the same resource passkey:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick-cache -passkey passkey.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</samp></pre></ul>
-<p>Where <samp>passkey.txt</samp> contains your resource passkey.  Don't forget your passkey.  Without it, you will be unable to get, identify, expire or delete your content.</p>
+<p>Where <samp>passkey.txt</samp> contains your resource passkey.  Don't lose your passkey.  Without it, you will be unable to get, identify, expire or delete resources you own.</p>
 <p>The resource passkey ensures only you and the cache owner can access your image.  To prevent the cache owner from viewing its content, scramble it with:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick-cache -passkey passkey.txt -passphrase passphrase.txt -ttl "2 days" put /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.jpg</samp></pre></ul>
 <p>Note, blobs and metadata are stored in the cache in plaintext. To prevent snooping, scramble the content before you store it in the cache.</p>
@@ -45,7 +46,7 @@ movies/image/mission-impossible/cast/rebecca-ferguson[1368x912] 406B 1:0:0:0 202
 identified 1 resources</samp></pre></ul>
 <p>Each entry includes the IRI, image dimensions for images, the content extent in bytes, time to live, whether the resource is expired (denoted with a `*`), and the creation date.</p>
 <p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get, identify, expire or delete content that you do not own as determined by your secret passkey.</p>
-<p>The magick owner can get, identify, expire, or delete all the content, including content you own, with this command, for example:</p>
+<p>The MagickCache owner can get, identify, expire, or delete all the content, including content you own, with this command, for example:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick-cache -passkey passkey.txt identify /opt/magick-cache /</samp></pre></ul>
 <p>Note, expired reesources are annotated with an asterisks.</p>
 <h5>MagickCache is not just for Images</h5>
