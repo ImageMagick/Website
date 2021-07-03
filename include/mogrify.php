@@ -2,15 +2,14 @@
 <h1 class="text-center">Inline Image Modification</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <code>magick mogrify</code> program to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   This tool is similar to <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick convert</a> except that the original image file is <em>overwritten</em> (unless you change the file suffix with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format">-format</a> option) with any changes you request.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>mogrify</code> command or see below for sample usages of the command.</p>
+<p class="lead magick-description">Use the <samp>magick mogrify</samp> program to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   This tool is similar to <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick convert</a> except that the original image file is <em>overwritten</em> (unless you change the file suffix with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format">-format</a> option) with any changes you request.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>mogrify</samp> command or see below for sample usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <code>mogrify</code> command here to illustrate its usefulness and ease of use.  To get started, let's reduce the size of our
+<p>We list a few examples of the <samp>mogrify</samp> command here to illustrate its usefulness and ease of use.  To get started, let's reduce the size of our
 rose:</p>
 
-<pre class="bg-light text-dark"><code>magick mogrify -resize 50% rose.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick mogrify -resize 50% rose.jpg</samp></pre></ul>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -24,22 +23,20 @@ rose:</p>
 
 <p>You can resize all your JPEG images in a folder to a maximum dimension of 256x256 with this command:</p>
 
-<pre class="bg-light text-dark"><code>magick mogrify -resize 256x256 *.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick mogrify -resize 256x256 *.jpg</samp></pre></ul>
 
 <p>Finally, we convert all our PNG images in a folder to the JPEG format:</p>
 
-<pre class="bg-light text-dark"><code>magick mogrify -format jpg *.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick mogrify -format jpg *.png</samp></pre></ul>
 
 <p>Here image files 1.png, 2.png, etc., are left untouched and files 1.jpg, 2.jpg, etc., are created.  They are copies of their respective PNG images except are stored  in the JPEG image format.</p>
 
 
-<p>You can find additional examples of using <code>mogrify</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>mogrify</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>mogrify</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>mogrify</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
   <tbody>
