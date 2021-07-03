@@ -45,7 +45,7 @@ Image: rose.jpg
 <ul><pre class="bg-light text-dark"><samp>$ magick compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.gif
 85.05 (0.00129778) @ 353,157 </samp></pre></ul>
 
-<p>You can find additional examples of using <samp>compare</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>compare</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <p>Two images are considered similar if their difference according to the specified metric and fuzz value is 0, with the exception of the normalized cross correlation metric (NCC), where two images are considered similar when their normalized cross correlation is 1. The default metric is NCC.</p>
 
