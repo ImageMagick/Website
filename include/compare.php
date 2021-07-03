@@ -8,7 +8,7 @@
 
 <p>We list a few examples of the <samp>compare</samp> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one thats been sharpened:</p>
 
-o<ul><pre class="bg-light text-dark"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
+<ul><pre class="bg-light text-dark"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
 magick compare rose.jpg reconstruct.jpg difference.png
 magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre></ul>
 
