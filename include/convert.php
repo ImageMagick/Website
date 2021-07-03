@@ -1,16 +1,14 @@
 <div class="magick-header">
 <h1 class="text-center">Convert Between Image Formats</h1>
-<p class="lead magick-description">Use the <code>magick</code> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>magick</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <samp>magick</samp> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>magick</samp> command or see below for example usages of the command.</p>
 
-<p>We list a few examples of the <code>magick</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
+<p>We list a few examples of the <samp>magick</samp> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
-<pre class="bg-light text-dark"><code>magick convert rose.jpg rose.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick convert rose.jpg rose.png</samp></pre></ul>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<pre class="bg-light text-dark"><code>magick convert rose.jpg -resize 50% rose.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick convert rose.jpg -resize 50% rose.png</samp></pre></ul>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -24,10 +22,9 @@
 
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
-<pre class="bg-light text-dark"><code>magick convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
+<ul><pre class="bg-light text-dark"><samp>magick convert -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
-  -draw "text 20,55 \'Magick\'" fuzzy-magick.png
-</code></pre>
+  -draw "text 20,55 \'Magick\'" fuzzy-magick.png</samp></pre></ul>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png" width="320" height="85" alt="fuzzy-magick" /></a>
@@ -35,16 +32,15 @@
 
 <p>or here we resize an image with improved quality:</p>
 
-<pre class="bg-light text-dark"><code>magick convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
+<ul><pre class="bg-light text-dark"><samp>magick convert input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
-  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');
-</code></pre>
+  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');</samp></pre></ul>
 
-<p>You can find additional examples of using <code>magick</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>magick</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>magick</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>magick</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
