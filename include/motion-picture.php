@@ -36,7 +36,7 @@
 
 <p>ImageMagick supports these DPX properties:</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><code>dpx:file.copyright
+<ul><pre class="pre-scrollable bg-light text-dark"><samp>dpx:file.copyright
 dpx:file.creator
 dpx:file.filename
 dpx:file.project
@@ -82,35 +82,35 @@ dpx:television.video_signal
 dpx:television.white_level
 dpx:user.id
 dpx:user.data
-</code></pre></ul>
+</samp></pre></ul>
 
-<p>Look for any user data as the <code>dpx:user-data</code> image profile.</p>
+<p>Look for any user data as the <samp>dpx:user-data</samp> image profile.</p>
 
 <p> To determine which properties are associated with your DPX image, use this command for example:</p>
 
-<ul><pre class="bg-light text-dark"><code>magick identify -verbose bluebells.dpx
-</code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick identify -verbose bluebells.dpx
+</samp></pre></ul>
 
 <p>To identify a particular property, try this:</p>
 
-<ul><pre class="bg-light text-dark"><code>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
-</code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
+</samp></pre></ul>
 
 <p>Finally, to set a property:</p>
 
-<ul><pre class="bg-light text-dark"><code>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
-</code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
+</samp></pre></ul>
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>
 
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
 </p>
 
-<ul><pre class="bg-light text-dark"><code>-set gamma 1.7
+<ul><pre class="bg-light text-dark"><samp>-set gamma 1.7
 -set film-gamma 0.6
 -set reference-black 95
 -set reference-white 685
 -set profile dpx:user.data
-</code></pre></ul>
+</samp></pre></ul>
 
 </div>

@@ -61,15 +61,15 @@
 
 <p>After you write your MagickCore program, compile it like this:</p>
 
-<ul><pre class="bg-light text-dark"><code>cc -o core core.c `pkg-config --cflags --libs MagickWand`</code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>cc -o core core.c `pkg-config --cflags --libs MagickWand`</samp></pre></ul>
 
-<p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
+<p>Set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
 
-<ul><pre class="bg-light text-dark"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre></ul>
 
 <p>Here is a example program that utilizes the MagickCore API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;string.h>
 #include &lt;time.h>
@@ -131,10 +131,10 @@ int main(int argc,char **argv)
   exception=DestroyExceptionInfo(exception);
   MagickCoreTerminus();
   return(0);
-}</code></pre></ul>
+}</samp></pre></ul>
 <p><a class="anchor" id="image-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><code>#include &lt;stdio.h>
+<ul><pre class="pre-scrollable bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;MagickCore/MagickCore.h>
@@ -250,5 +250,5 @@ int main(int argc,char **argv)
   image_info=DestroyImageInfo(image_info);
   MagickCoreTerminus();
   return(0);
-}</code></pre></ul>
+}</samp></pre></ul>
 </div>

@@ -1,7 +1,23 @@
-<div class="magick-header"><dl><dt>2021-05-16  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-13 GIT revision 18739:49773ef93:20210516</li>
+<div class="magick-header"><dl><dt>2021-06-20  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-1 GIT revision 18826:1f1b43ea7:20210620</li>
+<dt>2021-06-19  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Correct TGA orientation (reference    https://github.com/ImageMagick/ImageMagick/issues/3844).</li>
+<dt>2021-06-12  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-0 GIT revision 18806:d64f1bb3a:20210612</li>
+<dt>2021-06-02  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> SVG no longer hangs when handling class in &lt;defs&gt; (reference    https://github.com/ImageMagick/ImageMagick/issues/3818).</li>
+  <li> Bump minor version (reference    https://github.com/ImageMagick/ImageMagick/issues/3768)</li>
+<dt>2021-06-02  7.0.11-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Raise exception for invalid compose:args geometry (reference    https://github.com/ImageMagick/ImageMagick/issues/3765).</li>
+<dt>2021-05-31  7.0.11-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-14 GIT revision 18775:354f421e4:20210531</li>
+<dt>2021-05-20  7.0.11-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added support for reading and writing 16-bit jxl images.</li>
+<dt>2021-05-17  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-13 GIT revision 18751:0365211b2:20210517</li>
 <dt>2021-05-12  7.0.11-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> Fixed reading and writing the XMP chunk in a WebP image (reference    https://github.com/ImageMagick/ImageMagick/discussions/3617).</li>
+  <li> Added support to set the jpeg-xl encoding effort with    -define jxl:effort=&lt;number&gt;</li>
 <dt>2021-05-09  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> label and caption sanity check is too conservative.</li>
 <dt>2021-05-09  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>

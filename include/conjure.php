@@ -1,18 +1,18 @@
 <div class="magick-header">
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a> • <a href="#msl">Magick Scripting Language (MSL)</a> </p>
 
-<p class="lead magick-description">The <code>conjure</code> program gives you the ability to perform custom image processing tasks from a script written in the Magick Scripting Language (MSL).  MSL is XML-based and consists of action statements with attributes.  Actions include reading an image, processing an image, getting attributes from an image, writing an image, and more.  An attribute is a key/value pair that modifies the behavior of an action.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>conjure</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">The <samp>conjure</samp> program gives you the ability to perform custom image processing tasks from a script written in the Magick Scripting Language (MSL).  MSL is XML-based and consists of action statements with attributes.  Actions include reading an image, processing an image, getting attributes from an image, writing an image, and more.  An attribute is a key/value pair that modifies the behavior of an action.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>conjure</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <code>conjure</code> command here to illustrate its usefulness and ease of use. To get started, here is simple <code>conjure</code> command:</p>
+<p>We list a few examples of the <samp>conjure</samp> command here to illustrate its usefulness and ease of use. To get started, here is simple <samp>conjure</samp> command:</p>
 
-<ul><pre class="bg-light text-dark"><code>magick conjure -dimensions 400x400 msl:incantation.msl
-</code></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
+</samp></pre></ul>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
 
-<ul><pre class="bg-light text-dark"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;read filename="image.gif" /&gt;
   &lt;get width="base-width" height="base-height" /&gt;
@@ -21,11 +21,11 @@
   &lt;print output="Image sized from %[base-width]x%[base-height] to %[resize-width]x%[resize-height].\n" /&gt;
   &lt;write filename="image.png" /&gt;
 &lt;/image&gt;
-</code></pre></ul>
+</samp></pre></ul>
 
 <p>In this example, a family stayed home for their vacation but as far as their friends are concerned they went to a beautiful beach in the Caribbean:</p>
 
-<ul><pre class="bg-light text-dark"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;group>
     &lt;image id="family">
         &lt;read filename="family.gif"/>
@@ -42,20 +42,20 @@
     &lt;/image>
     &lt;write filename="family-vacation.png"/>
 &lt;/group>
-</code></pre></ul>
+</samp></pre></ul>
 
 <p>Here we display the width in pixels of text for a particular font and pointsize.</p>
 
-<ul><pre class="bg-light text-dark"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;query-font-metrics text="ImageMagick" font="helvetica" pointsize="48" /&gt;
   &lt;print output="Text width is %[msl:font-metrics.width] pixels.\n" /&gt;
 &lt;/image&gt;
-</code></pre></ul>
+</samp></pre></ul>
 
-<p>The <code>query-font-metrics</code> tag supports these properties:</p>
+<p>The <samp>query-font-metrics</samp> tag supports these properties:</p>
 
-<ul><pre class="bg-light text-dark"><code>msl:font-metrics.pixels_per_em.x
+<ul><pre class="bg-light text-dark"><samp>msl:font-metrics.pixels_per_em.x
 msl:font-metrics.pixels_per_em.y
 msl:font-metrics.ascent
 msl:font-metrics.descent
@@ -68,19 +68,19 @@ msl:font-metrics.bounds.x2
 msl:font-metrics.bounds.y2
 msl:font-metrics.origin.x
 msl:font-metrics.origin.y
-</code></pre></ul>
+</samp></pre></ul>
 
 <p>MSL supports most methods and attributes discussed in the <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">Perl API for ImageMagick</a>.
 </p>
 
-<p>In addition, MSL supports the <code>swap</code> element with a single <code>indexes</code> element.</p>
+<p>In addition, MSL supports the <samp>swap</samp> element with a single <samp>indexes</samp> element.</p>
 
-<p>You can find additional examples of using <code>conjure</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>conjure</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>conjure</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>conjure</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
 <thead>
@@ -140,7 +140,7 @@ msl:font-metrics.origin.y
 </table>
 
 <h2><a class="anchor" id="msl"></a>Magick Scripting Language</h2>
-<p>The <code>conjure</code> command recognizes these MSL elements.  Any element with a strike-thru is not supported yet.</p>
+<p>The <samp>conjure</samp> command recognizes these MSL elements.  Any element with a strike-thru is not supported yet.</p>
 <table class="table table-sm table-hover caption-top">
 <caption>Magick Scripting Language (MSL)</caption>
 <thead>
