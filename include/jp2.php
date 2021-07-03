@@ -11,38 +11,31 @@
 
 <p>Use this command to convert a JPEG-2000 image to the PNG image format:</p>
 
-<pre class="bg-light text-dark"><code>magick wizard.jp2 wizard.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.jp2 wizard.png </samp></pre></ul>
 
 <p>Let's convert a JPEG image to a lossless JPEG-2000 image:</p>
 
-<pre class="bg-light text-dark"><code>magick wizard.jpg -quality 0 wizard.jp2
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.jpg -quality 0 wizard.jp2 </samp></pre></ul>
 
 <p>Here we extract an area from the image:</p>
 
-<pre class="bg-light text-dark"><code>magick 'wizard.jp2[640x480+0+0]' wizard.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick 'wizard.jp2[640x480+0+0]' wizard.png </samp></pre></ul>
 
 <p>Extract a particular tile from the image:</p>
 
-<pre class="bg-light text-dark"><code>magick 'wizard.jp2[2]' wizard.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick 'wizard.jp2[2]' wizard.png </samp></pre></ul>
 
 <p>Specify a subsampling factor:</p>
 
-<pre class="bg-light text-dark"><code>magick wizard.png -colorspace YUV -sampling-factor 2,2 wizard.jp2
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.png -colorspace YUV -sampling-factor 2,2 wizard.jp2 </samp></pre></ul>
 
 <p>Save a tiled JPEG-2000 image:</p>
 
-<pre class="bg-light text-dark"><code>magick wizard.png 'wizard.png[512x512]'
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.png 'wizard.png[512x512]' </samp></pre></ul>
 
 <p>Write a digital Cinema 4K profile compliant codestream:</p>
 
-<pre class="bg-light text-dark"><code>magick wizard.png -resize 4096x2160! -depth 12 wizard.jp2
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.png -resize 4096x2160! -depth 12 wizard.jp2 </samp></pre></ul>
 
 <p>Here is a complete list of JPEG-2000 decoding options:</p>
 

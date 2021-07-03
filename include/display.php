@@ -2,35 +2,31 @@
 <h1 class="text-center">Image Viewer</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <code>display</code> program to display an image or image sequence on any X server.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>display</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <samp>display</samp> program to display an image or image sequence on any X server.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>display</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <code>display</code> command here to illustrate its usefulness and ease of use.  To get started, lets display an image in the JPEG format:</p>
+<p>We list a few examples of the <samp>display</samp> command here to illustrate its usefulness and ease of use.  To get started, lets display an image in the JPEG format:</p>
 
-<pre class="bg-light text-dark"><code>magick display rose.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick display rose.jpg </samp></pre></ul>
 
 <p>To tile a slate texture onto the root window, use:</p>
 
-<pre class="bg-light text-dark"><code>magick display -size 1280x1024 -window root slate.png
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick display -size 1280x1024 -window root slate.png </samp></pre></ul>
 
 <p>To display a visual image directory of all your JPEG images, use:</p>
 
-<pre class="bg-light text-dark"><code>magick display 'vid:*.jpg'
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick display 'vid:*.jpg' </samp></pre></ul>
 
 <p>The display program defaults to the X screen resolution.  To display vector formats at their intended size, override the default resolution:</p>
 
-<pre class="bg-light text-dark"><code>magick display -density 72 drawing.svg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick display -density 72 drawing.svg </samp></pre></ul>
 
-<p>You can find additional examples of using <code>display</code> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>display</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>display</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>display</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
   <tbody>

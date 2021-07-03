@@ -39,7 +39,7 @@
 
 <h3>Percent Escape Handling</h3>
 
-<p>If you request a percent escape such as <code>%[key]</code> the setting
+<p>If you request a percent escape such as <samp>%[key]</samp> the setting
 is looked for in the following order until the first match has been
 found...</p>
 
@@ -48,10 +48,10 @@ found...</p>
     'fx:'.  This includes and calculations and or globs of those prefixes such
     as 'exif:*' or 'artifact:*' (see below).</li>
 
-<li>If <code>key</code> contains a glob pattern (but no known prefix)
+<li>If <samp>key</samp> contains a glob pattern (but no known prefix)
     search free-form properties table.</li>
 
-<li>If <code>key</code> is a special image 'attribute' name (see list
+<li>If <samp>key</samp> is a special image 'attribute' name (see list
     above) return the associated or calculated image attribute.</li>
 
 <li>Search for setting as a free-form 'property'</li>
@@ -68,11 +68,10 @@ insensitive manner. </p>
 free-form string tables directly, allowing you to override the above sequence,
 and avoid accessing an attribute or property of the same name.</p>
 
-<pre class="bg-light text-dark"><code>%[artifact:<var>setting</var>]
-%[option:<var>setting</var>]
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>%[artifact:<var>setting</var>]
+%[option:<var>setting</var>] </samp></pre></ul>
 
-<p>Escape handling requires access to an image container.  If none are available, a blank image is created to ensure the expression can be processed and a value returned.  For example, <code>magick -print "%[fx:.8765/3.14]" null: null:</code>.</p>
+<p>Escape handling requires access to an image container.  If none are available, a blank image is created to ensure the expression can be processed and a value returned.  For example, <samp>magick -print "%[fx:.8765/3.14]" null: null:</samp>.</p>
 
 <h3>Single Letter Attribute Percent Escapes</h3>
 
@@ -285,21 +284,20 @@ filename, type, width, height. </p>
 </table></div>
 
 <p>Here is a sample command and its output for an image with filename
-<code>bird.miff</code> and whose width is 512 and height is 480.</p>
+<samp>bird.miff</samp> and whose width is 512 and height is 480.</p>
 
-<pre class="bg-light text-dark"><code>-> identify -format "%m:%f %wx%h" bird.miff
-MIFF:bird.miff 512x480
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>-> identify -format "%m:%f %wx%h" bird.miff
+MIFF:bird.miff 512x480 </samp></pre></ul>
 
 <p>Note that all single letter percent escapes can also be used using long
-form (from IM version 6.7.6-9, see next). For example <code>%[f]</code> is
-equivalent to the <code>%f</code> short form. </p>
+form (from IM version 6.7.6-9, see next). For example <samp>%[f]</samp> is
+equivalent to the <samp>%f</samp> short form. </p>
 
 <p><b>WARNING</b>: short form percent escapes are NOT performed when the percent
-is after a number.  For example,  <code>10%x10</code> does not expand the
-<code>%x</code> as a percent escape.  If you specifically want to expand the
+is after a number.  For example,  <samp>10%x10</samp> does not expand the
+<samp>%x</samp> as a percent escape.  If you specifically want to expand the
 'x', use the long form which overrides this special case. EG:
-<code>10%[x]10</code>. </p>
+<samp>10%[x]10</samp>. </p>
 
 <p>Also be warned that calculated attributes can take some time to generate,
 especially for large images.</p>
@@ -357,7 +355,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull]</a></td>
-    <td>points that form a convex hull around the foreground object.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
+    <td>points that form a convex hull around the foreground object.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
   </tr>
   <tr>
     <td>%[copyright]</td>
@@ -441,7 +439,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[minimum-bounding-box]</a></td>
-    <td>Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, <code>minimum-bounding-box:angle</code>, and <code>minimum-bounding-box:unrotate</code>.</td>
+    <td>Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <samp>minimum-bounding-box:area</samp>, <samp>minimum-bounding-box:width</samp>, <samp>minimum-bounding-box:height</samp>, <samp>minimum-bounding-box:angle</samp>, and <samp>minimum-bounding-box:unrotate</samp>.</td>
   </tr>
   <tr>
     <td>%[opaque]</td>
@@ -585,7 +583,7 @@ images, typically the current image list).</p>
 artifacts, being an internal operational setting, is not saved with images (if
 such is possible). </p>
 
-<p>For example when you use <code>-define 'distort:viewport=100x100'</code> you
+<p>For example when you use <samp>-define 'distort:viewport=100x100'</samp> you
 are in fact generating a global option, which the <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#distort"
 >-distort</a> operator will use to modify its behavior (distorted output
@@ -596,7 +594,7 @@ of a list of images (specifically a 'Wand' of images). As such they are
 identical, in that a Option, is simply a global Artifact for all the
 associated images. </p>
 
-<p>As such you can use <code>-set 'option:distort:viewport' '100x100'</code> to
+<p>As such you can use <samp>-set 'option:distort:viewport' '100x100'</samp> to
 achieve the same result of setting a Artifact for the disort operation to use.
 </p>
 
@@ -604,7 +602,7 @@ achieve the same result of setting a Artifact for the disort operation to use.
 
 <p>The Core library ('MagickCore') does not generally directly understand
 Global Options. As such, continuing the previous example, the
-<code>DistortImages()</code> function only looks up an artifact to discover if
+<samp>DistortImages()</samp> function only looks up an artifact to discover if
 a 'viewport' has been provided to it. </p>
 
 <p>How Global Options are used when a library function requests an Artifact is
@@ -631,12 +629,11 @@ Artifact. </p>
 now list all free-form string properties, artifacts, and options, (but not
 specific image attributes) using...</p>
 
-<pre class="bg-light text-dark"><code>magick ... \
+<ul><pre class="bg-light text-dark"><samp>magick ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \
-   ...
-</code></pre>
+   ...  </samp></pre></ul>
 
 <p> The format of glob patterns are very specific and as such is generally
 only used to list specific settings, such as when debugging, rather than being
@@ -647,33 +644,30 @@ used for image processing use. </p>
 
 <p>There are some special prefixes (before the first ':') which performs
 calculations based on the user provided string that follows that prefix.  For
-example you can do a numerical calculation use <code>%[fx:...]</code> to
+example you can do a numerical calculation use <samp>%[fx:...]</samp> to
 evaluate the given <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 
-<pre class="bg-light text-dark"><code>%[fx:<var>expression</var>]
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>%[fx:<var>expression</var>] </samp></pre></ul>
 
-<p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a
+<p>Use <samp>pixel:</samp> or <samp>hex:</samp> to evaluate a pixel color as defined by the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
-<pre class="bg-light text-dark"><code>%[pixel:<var>expression</var>]
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>%[pixel:<var>expression</var>] </samp></pre></ul>
 
-<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <code>-define pixel:compliance=css</code>)</p>.
+<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define pixel:compliance=css</samp>)</p>.
 
 <h3>Specific Profile Percent Escape Prefixes</h3>
 
 <p>You can also use the following special formatting syntax to print EXIF
 mage meta-data that was included in the image read in:</p>
 
-<pre class="bg-light text-dark"><code>%[EXIF:<var>tag</var>]
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>%[EXIF:<var>tag</var>] </samp></pre></ul>
 
 <p>Choose <var>tag</var> from the following:</p>
 
-<pre class="pre-scrollable bg-light text-dark"><code>
+<ul><pre class="pre-scrollable bg-light text-dark"><samp>
 *  (print all EXIF tags, in keyword=data format)
 !  (print all EXIF tags, in tag_number data format)
 #hhhh (print data for EXIF tag #hhhh)
@@ -758,8 +752,7 @@ SubjectLocation
 ExposureIndex
 SensingMethod
 FileSource
-SceneType
-</code></pre>
+SceneType </samp></pre></ul>
 <br/>
 <p>Surround the format specification with quotation marks to prevent your
 shell from misinterpreting any spaces and square brackets.</p>
@@ -767,12 +760,11 @@ shell from misinterpreting any spaces and square brackets.</p>
 <p>The following special formatting syntax can be used to print IPTC
 information contained in the file:</p>
 
-<pre class="bg-light text-dark"><code>%[IPTC:<var>dataset</var>:<var>record</var>]
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>%[IPTC:<var>dataset</var>:<var>record</var>] </samp></pre></ul>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
 
-<pre class="pre-scrollable bg-light text-dark:">
+<ul><pre class="pre-scrollable bg-light text-dark:"><samp>
   Envelope Record
   1:00  Model Version
   1:05  Destination
@@ -857,6 +849,5 @@ ObjectData Record
   8:10   Subfile
 
 Post ObjectData Descriptor Record
-  9:10   Confirmed ObjectData Size
-</code></pre>
+  9:10   Confirmed ObjectData Size</samp></pre></ul>
 </div>
