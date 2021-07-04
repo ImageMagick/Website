@@ -1482,11 +1482,7 @@ image outside the overlay area. It is disabled by default.  You can enable this 
 
 <p class="magick-description">Use pixel compression specified by <var>type</var> when writing the image.</p>
 
-<p>Choices are: <samp>None</samp>, <samp>BZip</samp>, <code
->Fax</samp>, <samp>Group4</samp>, <code
->JPEG</samp>,  <samp>JPEG2000</samp>, <code
->Lossless</samp>, <samp>LZW</samp>, <code
->RLE</samp> or <samp>Zip</samp>.</p>
+<p>Choices are: <samp>None</samp>, <samp>BZip</samp>, <samp>Fax</samp>, <samp>Group4</samp>, <samp>JPEG</samp>,  <samp>JPEG2000</samp>, <samp>Lossless</samp>, <samp>LZW</samp>, <samp>RLE</samp> or <samp>Zip</samp>.</p>
 
 <p>To print a complete list of compression types, use <a href="#list">-list
 compress</a>.</p>
@@ -5180,8 +5176,7 @@ the original image. </p>
 saturation by 10% and leave the hue unchanged, use <a
 href="#modulate">-modulate 120,90</a>.</p>
 
-<p>Use <a href="#set">-set</a> attribute of '<code
->option:modulate:colorspace</samp>' to specify which colorspace to
+<p>Use <a href="#set">-set</a> attribute of '<samp>option:modulate:colorspace</samp>' to specify which colorspace to
 modulate.  Choose from <samp>HCL</samp>, <samp>HCLp</samp>, <samp>HSB</samp>, <samp>HSI</samp>, <samp>HSL</samp> (the default), <samp>HSV</samp>, <samp>HWB</samp>, or <samp>LCH</samp> (LCHuv).  For example,</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
