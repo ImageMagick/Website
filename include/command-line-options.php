@@ -2936,6 +2936,8 @@ then the effective period is the <var>half</var> the <var>QuantumRange</var>.</p
 0.5 + 0.5 × cos(2 π <b><var>u</var></b> × <var>value</var>).
 </p>
 
+<p>Use <a href="#set">-set</a> '<samp>option:evaluate:clamp=false</samp> to prevent clamping of the evaluation</p>
+
 <p>See also the <a href="#function" >-function</a> operator, which is a
 multi-value version of evaluate. </p>
 
