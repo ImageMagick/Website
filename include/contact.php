@@ -30,6 +30,8 @@
         $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\btraffic/i",$message) != 0)
         $status="Message not sent: solicitations not permitted.";
+      if (preg_match("/\brevenue/i",$message) != 0)
+        $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bmonetiz/i",$message) != 0)
         $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bpartnership/i",$message) != 0)
