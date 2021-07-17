@@ -7047,7 +7047,7 @@ you to extract the result of the <a href="#trim">-trim</a> operation from the
 image.  Use a <a href="#repage">+repage</a> to remove the virtual canvas page
 information if it is unwanted.</p>
 
-<p>If the trimmed image 'disappears' an warning is produced, and a special
+<p>If the trimmed image 'disappears' a warning is produced, and a special
 single pixel transparent 'missed' image is returned, in the same way as when a
 <a href="#crop">-crop</a> operation 'misses' the image proper. </p>
 
