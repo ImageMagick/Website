@@ -1201,6 +1201,16 @@ use:</p>
   </tr>
 
   <tr>
+    <td>video:pixel-format=<var>value</var></td>
+    <td>Set the pixel format option of ffpmeg.</td>
+  </tr>
+
+  <tr>
+    <td>video:vsync=<var>value</var></td>
+    <td>Set the vsync option of ffpmeg.</td>
+  </tr>
+
+  <tr>
     <td colspan=2><p></p></td>
   </tr>
 
