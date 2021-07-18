@@ -42,7 +42,7 @@ Image: rose.jpg
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
-<ul><pre class="bg-light text-dark"><samp>$ magick compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.gif
+<ul><pre class="bg-light text-dark"><samp>$ magick compare -metric RMSE -subimage-search logo.png wizard.jpg similarity.tif
 85.05 (0.00129778) @ 353,157 </samp></pre></ul>
 
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
