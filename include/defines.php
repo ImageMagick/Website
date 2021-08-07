@@ -910,6 +910,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pixel:compliance=<var>{none|undefined|svg|mvg|x11|xpm}</var></td>
+    <td>In combination with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
+  </tr>
+
+  <tr>
     <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>

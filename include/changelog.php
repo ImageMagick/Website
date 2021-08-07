@@ -1,4 +1,18 @@
-<div class="magick-header"><dl><dt>2021-06-20  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2021-07-18  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-4 GIT revision 18915:eddd1d9d5:20210718</li>
+<dt>2021-07-17  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> trim no longer returns an empty image on 1-pixel width input (reference    https://github.com/ImageMagick/ImageMagick/issues/3896).</li>
+  <li> remove virtual canvas offset from difference image.</li>
+<dt>2021-07-17  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-3 GIT revision 18901:692e6e059:20210717</li>
+<dt>2021-06-26  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> system() is not supported under IOS.</li>
+  <li> accelerate subimage-search with FFT's (contributed by Fred).</li>
+<dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-2 GIT revision 18831:601356f1d:20210625</li>
+<dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> malloc() corruption fix (reference    https://github.com/ImageMagick/ImageMagick6/issues/159).</li>
+<dt>2021-06-20  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-1 GIT revision 18826:1f1b43ea7:20210620</li>
 <dt>2021-06-19  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Correct TGA orientation (reference    https://github.com/ImageMagick/ImageMagick/issues/3844).</li>

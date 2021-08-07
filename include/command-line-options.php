@@ -2721,7 +2721,7 @@ image sequence.</p>
 <p class="magick-description">Detect edges within an image.</p>
 
 <div style="margin: auto;">
-  <h3><a class="anchor" id="emboss"></a>-emboss <var>radius</var></h3>
+  <h3><a class="anchor" id="emboss"></a>-emboss <var>radius</var>{x<var>sigma</var></h3>
 </div>
 
 <p class="magick-description">Emboss an image.</p>
