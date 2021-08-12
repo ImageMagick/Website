@@ -696,6 +696,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>dng:read-thumbnail=<var>true</var></td>
+    <td>Read the embedded thumbnail and store it as a profile called 'dng:thumbnail'.</td>
+  </tr>
+
+  <tr>
     <td>dng:use-auto-wb=<var>true</var></td>
     <td>Compute the white balance by averaging the entire image.</td>
   </tr>
