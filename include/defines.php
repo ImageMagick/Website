@@ -679,6 +679,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>dng:no-auto-bright=<var>true</var></td>
+    <td>Disable the histogram-based white level.</td>
+  </tr>
+
+  <tr>
     <td>dng:output-color=<var>value</var></td>
     <td>Select the output colorspace. The choices are:
     0 - Raw color (unique to each camera),
@@ -688,11 +693,6 @@ use:</p>
     4 - Kodak ProPhoto RGB D65,
     5 - XYZ,
     6 - ACES</td>
-  </tr>
-
-  <tr>
-    <td>dng:use-auto-bright=<var>false</var></td>
-    <td>Disable the histogram-based white level.</td>
   </tr>
 
   <tr>
