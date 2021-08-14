@@ -936,8 +936,7 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p>For example, to create 3 grayscale images from the red, green, and blue channels of an image, use:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-channel-fx "red; green; blue"
-</samp></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>-channel-fx "red; green; blue"</samp></pre></ul>
 
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
@@ -945,8 +944,10 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 <ul><pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
 </samp></pre></ul>
 <p>Use a similar command to define a read mask:</p>
-<ul><pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png
-</samp></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre></ul>
+
+<p>In this example, we compute the mean RGB value for all opaque pixels of an image:</p>
+<ul><pre class="bg-light text-dark"><samp>magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</samp></pre></ul>
 
 <p>Add <samp>-debug pixel</samp> prior to the <samp>-channel-fx</samp> option to track the channel morphology.</p>
 
