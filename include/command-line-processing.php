@@ -419,7 +419,7 @@ setting for more specifics.</p>
 
 <h5>Basic adjustments to width and height; the operators <samp>%</samp>, <samp>^</samp>, and <samp>!</samp> </h5>
 <p>Here, just below, are a few simple examples of <var>geometry</var>, showing how it might be used as an argument to the <?php option("resize")?> option. We'll use the internal image <samp>logo:</samp> for our input image.
-<a href="<?php echo $_SESSION['RelativePath']?>/../images/logo.png">
+<a href="<?php echo $_SESSION['RelativePath']?>/../image/logo.png">
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
 </p>
 
