@@ -36,6 +36,8 @@
         $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bpartnership/i",$message) != 0)
         $status="Message not sent: solicitations not permitted.";
+      if (preg_match("/\bsponsor/i",$message) != 0)
+        $status="Message not sent: solicitations not permitted.";
       if (!$address)
         $status="Message not sent: e-mail address is required.";
       if (strpos($address,'@') == false)
