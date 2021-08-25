@@ -299,6 +299,8 @@ current <a href="#background">-background</a> color setting, and their
 position relative to each other can be controlled by the current <a
 href="#gravity">-gravity</a> setting. </p>
 
+<p>For more flexible options, including the abiity to add space between images,
+use <a href="#smush">-smush</a>.</p>
 
 <div style="margin: auto;">
   <h3><a class="anchor" id="attenuate"></a>-attenuate <var>value</var></h3>
