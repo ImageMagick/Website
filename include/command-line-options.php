@@ -299,7 +299,7 @@ current <a href="#background">-background</a> color setting, and their
 position relative to each other can be controlled by the current <a
 href="#gravity">-gravity</a> setting. </p>
 
-<p>For more flexible options, including the abiity to add space between images,
+<p>For more flexible options, including the ability to add space between images,
 use <a href="#smush">-smush</a>.</p>
 
 <div style="margin: auto;">
