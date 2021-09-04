@@ -91,8 +91,8 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram Equalization</a></td>
-    <td>Use adaptive histogram equalization to improve contrast in images.</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram equalization</a></td>
+    <td>use adaptive histogram equalization to improve contrast in images.</td>
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-cache.php">Image cache</a></td>
