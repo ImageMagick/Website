@@ -1,10 +1,24 @@
-<div class="magick-header"><dl><dt>2021-07-18  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-4 GIT revision 18915:eddd1d9d5:20210718</li>
+<div class="magick-header"><dl><dt>2021-09-04  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-6 GIT revision 19025:1161978e8:20210904</li>
+<dt>2021-08-21  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Tweak the bilevel image type (reference    https://github.com/ImageMagick/ImageMagick/issues/4121).</li>
+  <li> Converting from LAB to RGB leads to wrong colors (reference    https://github.com/ImageMagick/ImageMagick/issues/4105).</li>
+<dt>2021-08-21  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-5 GIT revision 18995:8f77c3c9c:20210821 </li>
+<dt>2021-08-12  7.1.0-5  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option (-dng:read-thumbnail=true) to read the thumbnail of a raw    image and store it as a profile called dng:thumbnail.</li>
+<dt>2021-07-26  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> heap-based buffer overflow in TIFF coder (alert from Hunter Mitchell).</li>
+  <li> grayscale image write optimization.</li>
+<dt>2021-07-18  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-4 GIT revision 18926:8eb9c6c48:20210718</li>
 <dt>2021-07-17  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> trim no longer returns an empty image on 1-pixel width input (reference    https://github.com/ImageMagick/ImageMagick/issues/3896).</li>
   <li> remove virtual canvas offset from difference image.</li>
 <dt>2021-07-17  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-3 GIT revision 18901:692e6e059:20210717</li>
+<dt>2021-07-03  7.1.0-3  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option to set the pixel format option of ffmpeg when reading or    writing a video file with -define video:pixel-format=&lt;value&gt;.</li>
 <dt>2021-06-26  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> system() is not supported under IOS.</li>
   <li> accelerate subimage-search with FFT's (contributed by Fred).</li>
@@ -14,8 +28,8 @@
   <li> malloc() corruption fix (reference    https://github.com/ImageMagick/ImageMagick6/issues/159).</li>
 <dt>2021-06-20  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-1 GIT revision 18826:1f1b43ea7:20210620</li>
-<dt>2021-06-19  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Correct TGA orientation (reference    https://github.com/ImageMagick/ImageMagick/issues/3844).</li>
+<dt>2021-06-19  7.1.0-1  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option to set the vsync option of ffmpeg when reading or writing a    video file with -define video:vsync=&lt;value&gt;.</li>
 <dt>2021-06-12  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-0 GIT revision 18806:d64f1bb3a:20210612</li>
 <dt>2021-06-02  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
