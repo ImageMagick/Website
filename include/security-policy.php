@@ -49,7 +49,7 @@ convert: no images defined `wizard.jpg'</pre></ul>
 &lt;policy domain="module" rights="none" pattern="*" />
 &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></samp></pre></ul>
 
-<p>The module policy enables or disables a complete module for both read or write.  To just read or write an image format, use the `coder` policy instead.  For example, we disable reading just a few Postscript related formats, you can still write them:</p>
+<p>The module policy enables or disables a complete module for both read or write.  To just read or write an image format, use the coder policy instead.  For example, we disable reading just a few Postscript related formats, you can still write them:</p>
 <ul><pre class="bg-light text-dark"><samp>&lt;policy domain="coder" rights="write" pattern="{PDF,PS,PS2,PS3,XPS}" /></samp></pre></ul>
 
 <p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero resulting in a minor performance penalty.  You can also securely delete any temporary files for increased security.  The value is the number of times to shred (replace its content with random data) before deleting a temporary file.  For example,</p>
