@@ -70,7 +70,7 @@
 </ol>
 
 <p>You can find a detailed explanation of each of the constituent parts of the command-line in the sections that follow.</p>
-
+'
 <h2><a class="anchor" id="input"></a>Input Filename</h2>
 
 <p>ImageMagick extends the concept of an input filename to include:</p>
@@ -307,7 +307,7 @@ may be smaller than the whole image and resizing all the frames into the same
 size may result in an unexpected output. In such a case,
 <?php option("coalesce")?> should be used to prepare those frames.</p>
 
-<h5<a class="anchor" id="channel"></a>Image Channel Operator</h5>
+<h5><a class="anchor" id="channel"></a>Image Channel Operator</h5>
 <p>Operate directly on image channels:</p>
 <ul>
 <?php options("channel-fx", "separate");
@@ -328,7 +328,7 @@ these image sequence operators:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick mikayla.png picnic.png beach.png -append vacation.png</samp></pre></ul>
 
-<h5"><a class="anchor" id="geometry"></a>Image Geometry</h5>
+<h5><a class="anchor" id="geometry"></a>Image Geometry</h5>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
