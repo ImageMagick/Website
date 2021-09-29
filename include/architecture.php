@@ -49,7 +49,7 @@
 
 <p>The ImageMagick pixel cache is a repository for image pixels with up to 32 channels.  The channels are stored contiguously at the depth specified when ImageMagick was built.  The channel depths are 8 bits-per-pixel component for the Q8 version of ImageMagick, 16 bits-per-pixel component for the Q16 version, and 32 bits-per-pixel component for the Q32 version.  By default pixel components are 32-bit floating-bit <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range</a> quantities. The channels can hold any value but typically contain red, green, blue, and alpha intensities or cyan, magenta, yellow, black and alpha intensities.  A channel might contain the colormap indexes for colormapped images or the black channel for CMYK images.  The pixel cache storage may be heap memory, disk-backed memory mapped, or on disk.  The pixel cache is reference-counted.  Only the cache properties are copied when the cache is cloned.  The cache pixels are subsequently copied only when you signal your intention to update any of the pixels.</p>
 
-<h3>Create the Pixel Cache</h3>
+<h2>Create the Pixel Cache</h2>
 
 <p>The pixel cache is associated with an image when it is created and it is initialized when you try to get or put pixels.  Here are three common methods to associate a pixel cache with an image:</p>
 
@@ -84,7 +84,7 @@ if (image == (Image *) NULL)
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
 
-<h3><a class="anchor" id="authentic-pixels"></a>Access the Pixel Cache</h3>
+<h2><a class="anchor" id="authentic-pixels"></a>Access the Pixel Cache</h2>
 
 <p>Once the pixel cache is associated with an image, you typically want to get, update, or put pixels into it.  We refer to pixels inside the image region as <a href="#authentic-pixels">authentic pixels</a> and outside the region as <a href="#virtual-pixels">virtual pixels</a>.  Use these methods to access the pixels in the cache:</p>
 <ul>
@@ -158,7 +158,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>gives you the pixels you asked for without complaint, even though some are not within the confines of the image region.</p>
 
-<h3><a class="anchor" id="virtual-pixels"></a>Virtual Pixels</h3>
+<h2><a class="anchor" id="virtual-pixels"></a>Virtual Pixels</h2>
 
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
  <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <?php option("virtual-pixel"); ?> option from the command line.  The methods include:</p>
@@ -197,7 +197,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 </dl>
 
 
-<h3>Cache Storage and Resource Requirements</h3>
+<h2>Cache Storage and Resource Requirements</h2>
 
 <p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is cheap but it is also very slow, upwards of 1000 times slower than memory.  We can get some speed improvements, up to 5 times, if we use memory mapping to the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
@@ -295,13 +295,13 @@ Resource limits:
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
 
 
-<h3>Distributed Pixel Cache</h3>
+<h2>Distributed Pixel Cache</h2>
 <p>A distributed pixel cache is an extension of the traditional pixel cache available on a single host.  The distributed pixel cache may span multiple servers so that it can grow in size and transactional capacity to support very large images.  Start up the pixel cache server on one or more machines.  When you read or operate on an image and the local pixel cache resources are exhausted, ImageMagick contacts one or more of these remote pixel servers to store or retrieve pixels.  The distributed pixel cache relies on network bandwidth to marshal pixels to and from the remote server.  As such, it will likely be significantly slower than a pixel cache utilizing local storage (e.g. memory, disk, etc.).</p>
 <ul><pre class="bg-light text-dark"><samp>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
 magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
 </samp></pre></ul>
 
-<h3>Cache Views</h3>
+<h2>Cache Views</h2>
 
 <p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
 <ul><pre class="pre-scrollable bg-light text-dark"><samp>CacheView
@@ -327,12 +327,12 @@ if (y &lt; (ssize_t) source-&gt;rows)
   { /* an exception was thrown */ }
 </samp></pre></ul>
 
-<h3>Magick Pixel Cache Format</h3>
+<h2>Magick Pixel Cache Format</h2>
 
 <p>Recall that each image format is decoded by ImageMagick and the pixels are deposited in the pixel cache.  If you write an image, the pixels are read from the pixel cache and encoded as required by the format you are writing (e.g. GIF, PNG, etc.).  The Magick Pixel Cache (MPC) format is designed to eliminate the overhead of decoding and encoding pixels to and from an image format.  MPC writes two files.  One, with the extension <samp>.mpc</samp>, retains all the properties associated with the image or image sequence (e.g. width, height, colorspace, etc.) and the second, with the extension <samp>.cache</samp>, is the pixel cache in the native raw format.  When reading an MPC image file, ImageMagick reads the image properties and memory maps the pixel cache on disk eliminating the need for decoding the image pixels.  The trade-off is in disk space.  MPC is generally larger in file size than most other image formats.</p>
 <p>The most efficient use of MPC image files is a write-once, read-many-times pattern.  For example, your workflow requires extracting random blocks of pixels from the source image.  Rather than re-reading and possibly decompressing the source image each time, we use MPC and map the image directly to memory.</p>
 
-<h3>Best Practices</h3>
+<h2>Best Practices</h2>
 
 <p>Although you can request any pixel from the pixel cache, any block of pixels, any scanline, multiple scanlines, any row, or multiple rows with the GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels, GetCacheViewVirtualPixels(), GetCacheViewAuthenticPixels(), and QueueCacheViewAuthenticPixels() methods, ImageMagick is optimized to return a few pixels or a few pixels rows at time.  There are additional optimizations if you request a single scanline or a few scanlines at a time.  These methods also permit random access to the pixel cache, however, ImageMagick is optimized for sequential access.  Although you can access scanlines of pixels sequentially from the last row of the image to the first, you may get a performance boost if you access scanlines from the first row of the image to the last, in sequential order.</p>
 
@@ -590,7 +590,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <p>You can further increase performance by reducing lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library.  To enable, add <samp>--with-tcmalloc</samp> to the <samp>configure</samp> command-line when you build ImageMagick.</p>
 
-<h5>Threading Performance</h5>
+<h4>Threading Performance</h4>
 <p>It can be difficult to predict behavior in a parallel environment.   Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize.  The only way to be certain of optimal performance, in terms of the number of threads, is to benchmark.   ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads.  This can help you identify how many threads is the most efficient in your environment.  For this benchmark we sharpen a 1920x1080 image of a model 10 times with 1 to 12 threads:</p>
 <ul><pre class="bg-light text-dark"><samp>$ magick -bench 10 model.png -sharpen 5x2 null:
 Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810

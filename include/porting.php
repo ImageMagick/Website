@@ -135,7 +135,7 @@ options, and more global use of 'image properties' (more commonly known as
 
 <p>As a consequence of using an array structure for variable pixel channels, auto-vectorization compilers have additional opportunities to speed up pixel loops.</p>
 
-<h5>Pixel Accessors</h5>
+<h4>Pixel Accessors</h4>
 <p>You can access pixel channel as array elements (e.g. <samp>pixel[1]</samp>) or use convenience accessors to get or set pixel channels:</p>
 
 <ul><pre class="bg-light text-dark"><samp>GetPixela()                  SetPixela()
@@ -161,7 +161,7 @@ GetPixelY()                  SetPixelY()</samp></pre></ul>
 
 <p>You can find these accessors defined in the header file, <samp>MagickCore/pixel-accessor.h</samp></p>
 
-<h5>Pixel Traits</h5>
+<h4>Pixel Traits</h4>
 <p>Each pixel channel includes one or more of these traits:</p>
 <dl class="row">
 <dt class="col-md-4">Undefined</dt>
@@ -198,9 +198,9 @@ GetPixelYTraits()        SetPixelYTraits()</samp></pre></ul>
 NegateImage(image,exception);
 (void) SetImageChannelMask(image,channel_mask);</samp></pre></ul>
 
-<h5>Pixel User Channels</h5>
+<h4>Pixel User Channels</h4>
 <p>In version 7, we introduce pixel user channels.  Traditionally we utilize 4 channels, red, green, blue, and alpha.   For CMYK we also have a black channel.  User channels are designed to contain whatever additional channel information that makes sense for your application.  Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel.  You can associate traits with the user channels so that when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.</p>
-<h5>Pixel Metacontent</h5>
+<h4>Pixel Metacontent</h4>
 <p>In version 7, we introduce pixel metacontent.  Metacontent is content about content. So rather than being the content itself, it's something that describes or is associated with the content.  Here the content is a pixel.  The pixel metacontent is for your exclusive use (internally the data is just copied, it is not modified) and is accessed with these MagickCore API methods:</p>
 <ul><pre class="bg-light text-dark"><samp>SetImageMetacontentExtent()
 GetImageMetacontentExtent()
@@ -327,7 +327,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 </p>
 <p>Previously, command-line arguments were limited to 4096 characters, with ImageMagick version 7 the limit has increased to 131072 characters.</p>
 
-<h3>Command Changes</h3>
+<h2>Command Changes</h2>
 <p>Here are a list of changes to the ImageMagick commands:</p>
 <dl class="row">
 <dt class="col-md-4">magick</dt>
@@ -350,7 +350,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke them from the <samp>magick</samp> utility, for example, use <samp>magick convert logo: logo.png</samp> to invoke the <samp>magick</samp> utility.
 </dd></dl>
 
-<h3>Behavioral Changes</h3>
+<h2>Behavioral Changes</h2>
 <p>Image settings are applied to each image on the command line.  To associate a setting with a particular image, use parenthesis to remove ambiguity.  In this example we assign a unique page offset to each image:</p>
 <ul><pre class="bg-light text-dark"><samp>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</samp></pre></ul>
 
@@ -373,7 +373,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 
 <p>Use <samp>-define morphology:showKernel=1</samp> to post the morphology or convolution kernel.  Previously it was <samp>-define showKernel=1</samp>.</p>
 
-<h3>New Options</h3>
+<h2>New Options</h2>
 <p>ImageMagick version 7 supports these new options, though most are limited
 to the "<samp>magick</samp>" command, or to use in "<samp>magick</samp>"
 scripts.</p>
@@ -461,7 +461,7 @@ scripts.</p>
 
 </dl>
 
-<h3>Changed Options</h3>
+<h2>Changed Options</h2>
 <p>These options are known to have changed, in some way.</p>
 <dl class="row">
 <dt class="col-md-4">-bias</dt>
@@ -474,7 +474,7 @@ scripts.</p>
 <dd class="col-md-8">this option is now an image operator.  The PREVIEW image format has been removed.</dd>
 </dl>
 
-<h3>Deprecated warning given, but will work (for now)</h3>
+<h2>Deprecated warning given, but will work (for now)</h2>
 <dl class="row">
 <dt class="col-md-4">-affine</dt>
 <dd class="col-md-8">Replaced by <samp>-draw "affine ..."</samp>. (see transform)</dd>
@@ -496,7 +496,7 @@ scripts.</p>
 <dd class="col-md-8">Replaced by <samp>-distort Affine "..."</samp>.</dd>
 </dl>
 
-<h3>Deprecated warning given, and ignored (for now)</h3>
+<h2>Deprecated warning given, and ignored (for now)</h2>
 <p>Almost 'plus' (+) option that did not do anything has been marked as
 deprecated, and does nothing. It does not even have associated code.  For
 example "+annotate", "+resize", "+clut", and "+draw" .</p>
@@ -514,7 +514,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <dd class="col-md-8">Replaced by <samp>-color-matrix</samp>.</dd>
 </dl>
 
-<h3>Removed / Replaced Options ("no such option" error and abort)</h3>
+<h2>Removed / Replaced Options ("no such option" error and abort)</h2>
 
 <dl class="row">
 <dt class="col-md-4">-interpolate filter</dt>
@@ -528,11 +528,11 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 </dl>
 <h2><a class="anchor" id="summary"></a>Version 7 Change Summary</h2>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>
-<h5>High Dynamic Range Imaging</h5>
+<h4>High Dynamic Range Imaging</h4>
 <ul>
 <li>ImageMagick version 7 enables HDRI by default.  Expect more accurate image processing results with higher memory requirements and possible slower processing times.  You can disable this feature for resource constrained system such as a cell phone with a slight loss of accuracy for certain algorithms (e.g. resizing).</li>
 </ul>
-<h5>Pixels</h5>
+<h4>Pixels</h4>
 <ul>
 <li>Pixels are no longer addressed with PixelPacket structure members (e.g. red, green, blue, opacity) but as an array of channels (e.g. pixel[PixelRedChannel]).</li>
 <li>Use convenience macros to access pixel channels (e.g. GetPixelRed(), SetPixelRed()).</li>
@@ -542,20 +542,20 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <li>Use the <var>metacontent</var> channel  to associate metacontent with each pixel.</li>
 <li>All color packet structures, PixelPacket, LongPacket, and DoublePacket, are consolidated to a single color structure, PixelInfo.</li>
 </ul>
-<h5>Alpha</h5>
+<h4>Alpha</h4>
 <ul>
 <li>We support alpha rather than opacity (0 transparent; QuantumRange opaque).</li>
 <li>Use GetPixelAlpha() or SetPixelAlpha() to get or set the alpha pixel channel value.</li>
 </ul>
-<h5>Grayscale</h5>
+<h4>Grayscale</h4>
 <ul>
 <li>Grayscale images consume one pixel channel in ImageMagick version 7.  To process RGB, set the colorspace to RGB (e.g. -colorspace sRGB).</li>
 </ul>
-<h5>Masks</h5>
+<h4>Masks</h4>
 <ul>
 <li>ImageMagick version 6 only supports read mask in limited circumstances.  Version 7 supports both a read and write mask.  The read mask is honored by most image-processing algorithms.</li>
 </ul>
-<h5>MagickCore API</h5>
+<h4>MagickCore API</h4>
 <ul>
 <li>Almost all image processing algorithms are now channel aware.</li>
 <li>MagickCore, version 7, adds an ExceptionInfo argument to those methods that lacked it in version 6, e.g. <samp>NegateImage(image,MagickTrue,exception);</samp></li>
@@ -564,7 +564,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <li>The InterpolatePixelMethod enum is now PixelInterpolateMethod.</li>
 <li>To account for variable pixel channels, images may now return a different signature.</li>
 </ul>
-<h5>Deprecated Methods</h5>
+<h4>Deprecated Methods</h4>
 <ul>
 <li>All ImageMagick version 6 MagickCore and MagickWand deprecated methods are removed and no longer available in ImageMagick version 7.</li>
 <li>All MagickCore channel method analogs are removed (e.g. NegateImageChannels()).  For version 7, use pixel traits instead.</li>

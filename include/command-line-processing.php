@@ -88,13 +88,13 @@
 
 <p>These extensions are explained in the next few paragraphs.</p>
 
-<h5>Filename Globbing</h5>
+<h4>Filename Globbing</h4>
 <p>In Linux shells, certain characters such as the asterisk (<samp>*</samp>) and question mark (<samp>?</samp>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <samp>1.jpg</samp>, <samp>2.jpg</samp>, <samp>3.jpg</samp>, <samp>4.jpg</samp>, and <samp>5.jpg</samp> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
 </p>
 
 <ul><pre class="bg-light text-dark"><samp>magick *.jpg images.gif</samp></pre></ul>
 
-<h5>Explicit Image Format</h5>
+<h4>Explicit Image Format</h4>
 <p>Images are stored in a myriad of image formats including
 the better known JPEG, PNG, TIFF and others.  ImageMagick must know the format
 of the image before it can be read and processed.  Most formats have a
@@ -113,14 +113,14 @@ so we explicitly set one:
 
 <ul><pre class="bg-light text-dark"><samp>magick -size 640x480 -depth 8 rgb:image image.png</samp></pre></ul>
 
-<h5>Built-in Images and Patterns</h5>
+<h4>Built-in Images and Patterns</h4>
 
 <p>ImageMagick has a number of built-in <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-images">images</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
 </p>
 
 <ul><pre class="bg-light text-dark"><samp>magick -size 640x480 pattern:checkerboard checkerboard.png</samp></pre></ul>
 
-<h5>STDIN, STDOUT, and file descriptors</h5>
+<h4>STDIN, STDOUT, and file descriptors</h4>
 <p>Linux and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <samp>-</samp>.  In this example we pipe the output of
   <?php cmd("magick"); ?> to the <?php cmd("display"); ?> program:
 </p>
@@ -143,7 +143,7 @@ so we explicitly set one:
 
 <ul><pre class="bg-light text-dark"><samp>magick gif:fd:3 jpg:fd:4 -append tif:fd:5</samp></pre></ul>
 
-<h5>Selecting Frames</h5>
+<h4>Selecting Frames</h4>
 <p>Some images formats contain more than one image frame.  Perhaps you only want the first image, or the last, or some number of images in-between.  You can specify which image frames to read by appending the image filename with the frame range enclosed in brackets.  Here our image (an animated GIF) contains more than one frame but we only want the first:
 </p>
 
@@ -168,7 +168,7 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 <p>Notice that in the last two commands, a single image is written. The output in this case, where the image type is MNG, is a multi-frame file because the MNG format supports multiple frames. Had the output format been JPG, which only supports single frames, the output would have consisted of separate frames. More about that below, in the section about the <a href="#output">Output Filename</a>.
 </p>
 
-<h5>Selecting an Image Region</h5>
+<h4>Selecting an Image Region</h4>
 <p>Raw images are a sequence of color intensities without additional meta information such as width, height, or image signature.  With raw image formats, you must specify the image width and height but you can also specify a region of the image to read.  In our example, the image is in the raw 8-bit RGB format and is 6000 pixels wide and 4000 pixels high.  However, we only want a region of 600 by 400 near the center of the image:
 </p>
 
@@ -180,7 +180,7 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 
 <ul><pre class="bg-light text-dark"><samp>magick -size 6000x4000 -depth 8 -extract 600x400+1900+2900 rgb:image image.jpg</samp></pre></ul>
 
-<h5>Inline Image Resize</h5>
+<h4>Inline Image Resize</h4>
 <p>It is sometimes convenient to resize an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
@@ -193,7 +193,7 @@ is read:
 
 <ul><pre class="bg-light text-dark"><samp>magick '*.jpg[120x120]' thumbnail%03d.png</samp></pre></ul>
 
-<h5>Inline Image Crop</h5>
+<h4>Inline Image Crop</h4>
 <p>It is sometimes convenient to crop an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
@@ -205,7 +205,7 @@ is read:
 <ul><pre class="bg-light text-dark"><samp>magick '*.jpg[120x120+10+5]' thumbnail%03d.png</samp></pre></ul>
 
 
-<h5>Filename References</h5>
+<h4>Filename References</h4>
 
 <p>There are two methods to use a filename to reference other image filenames.
 The first is with '<samp>@</samp>' which reads image filenames separated by white space from the specified file.  Assume the file <samp>myimages.txt</samp> consists of a list of filenames, like so:
@@ -246,7 +246,7 @@ image-3.jpg
 image-4.jpg
 image-5.jpg</pre></ul>
 
-<h5>Stream Buffering</h5>
+<h4>Stream Buffering</h4>
 <p>By default, the input stream is buffered.  To ensure information on the source file or terminal is read as soon as its available, set the buffer size to 0:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick logo: gif:- | magick display -define stream:buffer-size=0 gif:-</samp></pre></ul>
@@ -264,7 +264,7 @@ image-5.jpg</pre></ul>
 <li><a href="#stack">Image Stack</a></li>
 </ul>
 
-<h5><a class="anchor" id="setting"></a>Image Setting</h5>
+<h4><a class="anchor" id="setting"></a>Image Setting</h4>
 
 <p>An image setting persists as it appears on the command-line and may affect
 subsequent processing such as reading an image, an image operator, or when
@@ -281,7 +281,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick -channel RGB wand.png wizard.png images.png</samp></pre></ul>
 
-<h5><a class="anchor" id="operator"></a>Image Operator</h5>
+<h4><a class="anchor" id="operator"></a>Image Operator</h4>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
@@ -307,14 +307,14 @@ may be smaller than the whole image and resizing all the frames into the same
 size may result in an unexpected output. In such a case,
 <?php option("coalesce")?> should be used to prepare those frames.</p>
 
-<h5<a class="anchor" id="channel"></a>Image Channel Operator</h5>
+<h5<a class="anchor" id="channel"></a>Image Channel Operator</h4>
 <p>Operate directly on image channels:</p>
 <ul>
 <?php options("channel-fx", "separate");
 ?>
 </ul>
 
-<h5><a class="anchor" id="sequence"></a>Image Sequence Operator</h5>
+<h4><a class="anchor" id="sequence"></a>Image Sequence Operator</h4>
 
 <p>An image sequence operator differs from a setting in that it affects an
 image sequence immediately as it appears on the command-line.  Choose from
@@ -328,7 +328,7 @@ these image sequence operators:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick mikayla.png picnic.png beach.png -append vacation.png</samp></pre></ul>
 
-<h5"><a class="anchor" id="geometry"></a>Image Geometry</h5>
+<h5"><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
@@ -417,7 +417,7 @@ setting for more specifics.</p>
 </table></div>
 
 
-<h5>Basic adjustments to width and height; the operators <samp>%</samp>, <samp>^</samp>, and <samp>!</samp> </h5>
+<h4>Basic adjustments to width and height; the operators <samp>%</samp>, <samp>^</samp>, and <samp>!</samp> </h4>
 <p>Here, just below, are a few simple examples of <var>geometry</var>, showing how it might be used as an argument to the <?php option("resize")?> option. We'll use the internal image <samp>logo:</samp> for our input image.
 <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo.png">
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
@@ -438,7 +438,7 @@ magick logo: -resize '100x200!' dochThinWiz.png</samp></pre></ul>
 
 <p>We see that ImageMagick is very good about preserving aspect ratios of images, to prevent distortion of your favorite photos and images. But you might really want the dimensions to be <samp>100x200</samp>, thereby stretching the image. In this case just tell ImageMagick you really mean it (!) by appending an exclamation operator to the geometry. This will force the image size to exactly what you specify. So, for example, if you specify <samp>100x200!</samp> the dimensions will become exactly 100x200 (giving a small, vertically elongated wizard).</p>
 
-<h5>Bounding the width, height, and area; the operators <samp>&gt;</samp>, <samp>&lt;</samp>, and <samp>@</samp> </h5>
+<h4>Bounding the width, height, and area; the operators <samp>&gt;</samp>, <samp>&lt;</samp>, and <samp>@</samp> </h4>
 <p>
 Here are a few more examples:
 </p>
@@ -460,7 +460,7 @@ magick logo: -resize '100x200&lt;' wiz4.png</samp></pre></ul>
 <p class="text-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <samp>&lt;</samp> or <samp>&gt;</samp> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <samp>^</samp>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
 </p>
 
-<h5>Offsets in geometry</h5>
+<h4>Offsets in geometry</h4>
 <p>
 Here are some examples to illustrate the use of <var>offsets</var> in <var>geometry</var> arguments. One typical use of offsets is in conjunction with the
 <?php option("region")?> option. This option allows many other options to modify the pixels within a specified rectangular subregion of an image. As such, it needs to be given the width and height of that region, and also an <var>offset</var> into the image, which is a pair of coordinates that indicate the location of the region within the larger image. Below, in the first example, we specify a region of size <samp>100x200</samp> to be located at the <var>xy</var>–coordinates <var>x</var>=10, <var>y</var>=20. Let's use the usual algebraic notation (<var>x</var>,<var>y</var>)=(10,20), for convenience.
@@ -478,7 +478,7 @@ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</samp><
 </p>
 
 
-<h5><a class="anchor" id="stack"></a>Image Stack</h5>
+<h4><a class="anchor" id="stack"></a>Image Stack</h4>
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
@@ -513,14 +513,14 @@ above.</p>
 
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
-<h5>Explicit Image Format</h5>
+<h4>Explicit Image Format</h4>
   <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <samp>image.jpg</samp> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <samp>image</samp> in the raw red, green, and blue intensity format:
   </p>
 
 <ul><pre class="bg-light text-dark"><samp>magick image.jpg rgb:image</samp></pre></ul>
 
 
-<h5>Standard Out</h5>
+<h4>Standard Out</h4>
   <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
@@ -528,7 +528,7 @@ above.</p>
 
 <p>Here the explicit format is optional.  The GIF image format has a signature that uniquely identifies it so ImageMagick can readily recognize the format as GIF.</p>
 
-<h5>Filename References</h5>
+<h4>Filename References</h4>
 <p>Optionally, use an embedded formatting character to write a sequential image list.  Suppose our output filename is <samp>image-%d.jpg</samp> and our image list includes 3 images.  You can expect these images files to be written:
 </p>
 
@@ -552,7 +552,7 @@ image-2.jpg</pre></ul>
 
 <p>Use <samp>-define filename:literal=true</samp> to bypass interpretting embedded formatting characters and instead use the filename literally.</p>
 
-<h5>Stream Buffering</h5>
+<h4>Stream Buffering</h4>
 
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
 

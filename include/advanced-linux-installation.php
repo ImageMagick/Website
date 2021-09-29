@@ -493,14 +493,14 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre></ul>
 
 <p>Chances are the download, configure, build, and install of ImageMagick went flawlessly as it is intended, however, certain systems and environments may cause one or more steps to fail.  We discuss a few problems we've run across and how to take corrective action to ensure you have a working release of ImageMagick</p>
 
-<h5>Build Problems</h5>
+<h4>Build Problems</h4>
 <p>If the build complains about missing dependencies (e.g. <var>.deps/source.PLO</var>), add <samp>--disable-dependency-tracking</samp> to your <samp>configure</samp> command line.</p>
 
 <p>Some systems may fail to link at build time due to unresolved symbols. Try adding the LDFLAGS to the <samp>configure</samp> command line:</p>
 
 <ul><pre class="bg-light text-dark"><samp>configure LDFLAGS='-L/usr/local/lib -R/usr/local/lib' </samp></pre></ul>
 
-<h5>Dynamic Linker Run-time Bindings</h5>
+<h4>Dynamic Linker Run-time Bindings</h4>
 <p>On some systems, ImageMagick may not find its shared library, <var>libMagick.so</var>.  Try running the <samp>ldconfig</samp> with the library path:</p>
 
 <ul><pre class="bg-light text-dark"><samp>/sbin/ldconfig /usr/local/lib </samp></pre></ul>
@@ -509,7 +509,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre></ul>
 
 <ul><pre class="bg-light text-dark"><samp>ldd `which convert` </samp></pre></ul>
 
-<h5>Delegate Libraries</h5>
+<h4>Delegate Libraries</h4>
 <p>On occasion you may receive these warnings:</p>
 <ul><pre class="bg-light text-dark"><samp>no decode delegate for this image format
 no encode delegate for this image format </samp></pre></ul>
@@ -523,7 +523,7 @@ no encode delegate for this image format </samp></pre></ul>
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>
 
-<h5>PerlMagick</h5>
+<h4>PerlMagick</h4>
 <p>If PerlMagick fails to link with a message similar to <var>libperl.a is not found</var>, rerun <samp>configure</samp> with the <samp>--enable-shared</samp> or <samp>--enable-shared --with-modules</samp> options.</p>
 
 </div>

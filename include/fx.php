@@ -96,7 +96,7 @@
 
 <h2><a class="anchor" id="anatomy"></a>The Anatomy of an FX Expression</h2>
 
-<h5>The FX Expression Language</h5>
+<h4>The FX Expression Language</h4>
 
 <p>The formal FX expression language is defined here:</p>
 
@@ -185,7 +185,7 @@
   	<dd class="col-md-8"> .e.g. <samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp><dd>
 </dl>
 
-<h5>The FX Expression</h5>
+<h4>The FX Expression</h4>
 
 <p>An FX expression may include any combination of the following:</p>
 <dl class="row">
@@ -297,7 +297,7 @@
 <br/>
 
 
-<h5>Source Images</h5>
+<h4>Source Images</h4>
 
 <p>The symbols <samp>u</samp> and <samp>v</samp> refer to the first and second images, respectively, in the current image sequence.  Refer to a particular image in a sequence by appending its index to any image reference (usually <samp>u</samp>), with a zero index for the beginning of the sequence. A negative index counts from the end.  For example, <samp>u[0]</samp> is the first image in the sequence, <samp>u[2]</samp> is the third, <samp>u[-1]</samp> is the last image, and <samp>u[t]</samp> is the current image. The current image can also be referenced by <samp>s</samp>. If the sequence number exceeds the length of the sequence, the count is wrapped. Thus in a 3-image sequence,  <samp>u[-1]</samp>, <samp>u[2]</samp>, and <samp>u[5]</samp> all refer to the same (third) image.</p>
 
@@ -321,7 +321,7 @@
 </ul>
 
 <br/>
-<h5>Accessing Pixels</h5>
+<h4>Accessing Pixels</h4>
 
 <p>All color values are normalized to the range of 0.0 to 1.0.  The alpha channel ranges from 0.0 (fully transparent) to 1.0 (fully opaque).</p>
 
@@ -341,7 +341,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>A position outside the boundary of the image retrieves a value dictated by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#virtual-pixel">-virtual-pixel</a> option setting.</p>
 
-<h5>Apply an Expression to Select Image Channels</h5>
+<h4>Apply an Expression to Select Image Channels</h4>
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <samp>alpha.png</samp> with the average of the green channels from the images <samp>alpha.png</samp> and <samp>beta.png</samp>, use:</p>
 
@@ -349,7 +349,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 </samp></pre></ul>
 
 
-<h5>Results</h5>
+<h4>Results</h4>
 
 <p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> operator evaluates the given expression for each channel (set by <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>) of each pixel in the first image (<samp>u</samp>) in the sequence. The computed values are temporarily stored in a copy (clone) of that first image until all the pixels have been processed, after which this single new image replaces the list of images in the current image sequence.  As such, in the previous example the updated version of <samp>alpha.png</samp> replaces both of the original images, <samp>alpha.png</samp> and <samp>beta.png</samp>, before being saved as <samp>gamma.png</samp>.</p>
 

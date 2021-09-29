@@ -37,7 +37,7 @@
     </td></tr>
 </table></div>
 
-<h3>Percent Escape Handling</h3>
+<h2>Percent Escape Handling</h2>
 
 <p>If you request a percent escape such as <samp>%[key]</samp> the setting
 is looked for in the following order until the first match has been
@@ -73,7 +73,7 @@ and avoid accessing an attribute or property of the same name.</p>
 
 <p>Escape handling requires access to an image container.  If none are available, a blank image is created to ensure the expression can be processed and a value returned.  For example, <samp>magick -print "%[fx:.8765/3.14]" null: null:</samp>.</p>
 
-<h3>Single Letter Attribute Percent Escapes</h3>
+<h2>Single Letter Attribute Percent Escapes</h2>
 
 <p>Here are common single letter escapes (short form) is used to report the most
 common attributes and properties of an image, such as: the image filename
@@ -302,7 +302,7 @@ is after a number.  For example,  <samp>10%x10</samp> does not expand the
 <p>Also be warned that calculated attributes can take some time to generate,
 especially for large images.</p>
 
-<h3>Long Form Attribute Percent Escapes</h3>
+<h2>Long Form Attribute Percent Escapes</h2>
 
 <p>In addition to the above specific and calculated attributes are recognized
 when enclosed in braces (long form):</p>
@@ -535,7 +535,7 @@ when enclosed in braces (long form):</p>
   </tr>
 </table></div>
 
-<h3>Properties</h3>
+<h2>Properties</h2>
 
 <p>All other long forms of percent escapes (not single letter long form) are
 handled in a case insensitive manner. Such escapes will attempt to look
@@ -568,7 +568,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#set" >-set</a>.
 images when write, if the image file format allows. </p>
 
 
-<h3>Artifacts and Options</h3>
+<h2>Artifacts and Options</h2>
 
 <p>The previous percent escapes are associated with the primary Attributes and
 Properties. Which is the original and primary focus of such percent escapes.
@@ -623,7 +623,7 @@ Options, only per-image Artifacts. </p>
 Artifact. </p>
 
 
-<h3>Glob-Pattern Listing of Properties, Artifacts and Options</h3>
+<h2>Glob-Pattern Listing of Properties, Artifacts and Options</h2>
 
 <p>The <var>setting</var> can contain a glob pattern. As such you can
 now list all free-form string properties, artifacts, and options, (but not
@@ -640,7 +640,7 @@ only used to list specific settings, such as when debugging, rather than being
 used for image processing use. </p>
 
 
-<h3>Calculated Percent Escape Prefixes</h3>
+<h2>Calculated Percent Escape Prefixes</h2>
 
 <p>There are some special prefixes (before the first ':') which performs
 calculations based on the user provided string that follows that prefix.  For
@@ -658,7 +658,7 @@ expression:</p>
 
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define pixel:compliance=css</samp>)</p>.
 
-<h3>Specific Profile Percent Escape Prefixes</h3>
+<h2>Specific Profile Percent Escape Prefixes</h2>
 
 <p>You can also use the following special formatting syntax to print EXIF
 mage meta-data that was included in the image read in:</p>

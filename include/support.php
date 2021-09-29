@@ -44,19 +44,19 @@
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
 <legend>Sponsor the ImageMagick Project</legend>
-<h3>Github</a></h3>
+<h2>Github</a></h2>
 <p>ImageMagick Studio LLC is the organization that designs, maintains, and enhances the ImageMagick software suite. In the past, we paid for the privilege of producing free software out of our own pockets. Now, to help defray costs associated with network bandwidth, development software, computer hardware, taxes, legal, and other expenses, we accept donations from individuals or companies like yourself.</p>
 <ul>
 <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
 </ul>
-<h3><a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J">Paypal</a></h3>
+<h2><a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J">Paypal</a></h2>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
 
 <ul>
 <a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J"><img "image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Sponsor ImageMagick" width="92" height="26"</img></a>
 </ul>
 
-<h3>Bitcoin</h3>
+<h2>Bitcoin</h2>
 <p>Our Bitcoin Address is: <a href="bitcoin:bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k?label=ImageMagick%20Donation">bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k</a>.  Or you can reference the below QR code:</p>
 <ul>
 <dt class="col-md-4"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>

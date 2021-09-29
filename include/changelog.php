@@ -1,19 +1,25 @@
-<div class="magick-header"><dl><dt>2021-09-04  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-6 GIT revision 19025:1161978e8:20210904</li>
+<div class="magick-header"><dl><dt>2021-09-12  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-7 GIT revision 19095:d368d3c6b:20210912</li>
+<dt>2021-09-11  7.1.0-7  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed incorrect check when module is used as the domain in policy.xml    that could allow the use of a disabled module. (reference    https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qvhr-jj4p-j2qr).</li>
+<dt>2021-09-06  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Prevent color reduction merging into one color (reference    https://github.com/ImageMagick/ImageMagick/issues/4059)</li>
+<dt>2021-09-04  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-6 GIT revision 19033:7c589e780:20210904</li>
 <dt>2021-08-21  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Tweak the bilevel image type (reference    https://github.com/ImageMagick/ImageMagick/issues/4121).</li>
   <li> Converting from LAB to RGB leads to wrong colors (reference    https://github.com/ImageMagick/ImageMagick/issues/4105).</li>
 <dt>2021-08-21  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-5 GIT revision 18995:8f77c3c9c:20210821 </li>
+  <li> Release ImageMagick version 7.1.0-5 GIT revision 18995:8f77c3c9c:20210821</li>
 <dt>2021-08-12  7.1.0-5  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
-  <li> Added option (-dng:read-thumbnail=true) to read the thumbnail of a raw    image and store it as a profile called dng:thumbnail.</li>
+  <li> Added option (-dng:read-thumbnail=true) to read the thumbnail of a raw    Image and store it as a profile called dng:thumbnail.</li>
 <dt>2021-07-26  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> heap-based buffer overflow in TIFF coder (alert from Hunter Mitchell).</li>
-  <li> grayscale image write optimization.</li>
+  <li> Heap-based buffer overflow in TIFF coder (alert from Hunter Mitchell).</li>
+  <li> Grayscale image write optimization.</li>
 <dt>2021-07-18  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-4 GIT revision 18926:8eb9c6c48:20210718</li>
 <dt>2021-07-17  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> trim no longer returns an empty image on 1-pixel width input (reference    https://github.com/ImageMagick/ImageMagick/issues/3896).</li>
+  <li> Trim no longer returns an empty image on 1-pixel width input (reference    https://github.com/ImageMagick/ImageMagick/issues/3896).</li>
   <li> remove virtual canvas offset from difference image.</li>
 <dt>2021-07-17  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-3 GIT revision 18901:692e6e059:20210717</li>
@@ -21,7 +27,7 @@
   <li> Added option to set the pixel format option of ffmpeg when reading or    writing a video file with -define video:pixel-format=&lt;value&gt;.</li>
 <dt>2021-06-26  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> system() is not supported under IOS.</li>
-  <li> accelerate subimage-search with FFT's (contributed by Fred).</li>
+  <li> Accelerate subimage-search with FFT's (contributed by Fred).</li>
 <dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-2 GIT revision 18831:601356f1d:20210625</li>
 <dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>

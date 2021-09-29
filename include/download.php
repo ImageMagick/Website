@@ -170,7 +170,7 @@ display logo.gif</samp></pre></ul>
 
 <p><a href="http://www.cloudgoessocial.net/2011/03/21/im-xcode4-ios4-3/">~Claudio</a> provides iOS builds of ImageMagick.</p>
 
-<h5>Download iOS Distribution</h5>
+<h4>Download iOS Distribution</h4>
 
 <p>You can download the iOS distribution directly from ImageMagick's <a href="https://download.imagemagick.org/ImageMagick/download/iOS">repository</a>.</p>
 
@@ -183,7 +183,7 @@ display logo.gif</samp></pre></ul>
 
 <p>The first one includes headers and compiled libraries that have been used to compile ImageMagick. Most users would need this one.</p>
 
-<h5>ImageMagick compiling script for iOS OS and iOS Simulator</h5>
+<h4>ImageMagick compiling script for iOS OS and iOS Simulator</h4>
 
 <p>To run the script:</p>
 <ul><pre class="bg-light text-dark"><samp>./imagemagick_compile.sh <var>VERSION</var></samp></pre></ul>
@@ -198,7 +198,7 @@ display logo.gif</samp></pre></ul>
 
 <p>Upon successful compilation a folder called <samp>IMPORT_ME</samp> is created on your <samp>~/Desktop</samp>. You can import it into your Xcode project.</p>
 
-<h5>Xcode project settings</h5>
+<h4>Xcode project settings</h4>
 
 <p>After including everything into Xcode please also make sure to have these settings (Build tab of the project information):</p>
 <ul>
@@ -213,7 +213,7 @@ display logo.gif</samp></pre></ul>
 <li>Value: -Dmacintosh=1</li>
 </ul>
 
-<h5>Sample project</h5>
+<h4>Sample project</h4>
 
 <p>A <a href="http://www.cloudgoessocial.net/im_iphone/IM_Test.zip">sample project </a> is available for download. It is not updated too often, but it does give an idea of all the settings and some ways to play around with ImageMagick in an iOS application.</p>
 
