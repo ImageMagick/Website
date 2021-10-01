@@ -386,7 +386,7 @@ display logo.gif</samp></pre></ul>
 
 <p>Verify its <a href="https://download.imagemagick.org/ImageMagick/download/binaries/digest.rdf">message digest</a>.</p>
 
-<p>To verify ImageMagick is working properly, type the following in an Command Prompt window:</p>
+<p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick logo: logo.gif
 magick identify logo.gif
