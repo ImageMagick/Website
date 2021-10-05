@@ -1,4 +1,14 @@
-<div class="magick-header"><dl><dt>2021-09-12  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
+<div class="magick-header"><dl><dt>2021-09-26  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-9 GIT revision 19...</li>
+<dt>2021-09-26  7.1.0-9  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Squash a dump truck load of VisualStudio compiler warnings.</li>
+<dt>2021-09-19  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> improve wrapping between words and within words (reference    https://github.com/ImageMagick/ImageMagick/discussions/4227).</li>
+<dt>2021-09-18  7.1.0-8  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-8 GIT revision 19115:428fe1921:20210918</li>
+<dt>2021-09-17  7.1.0-8  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Check for `null` in InvokeDelegate() (reference    https://github.com/ImageMagick/ImageMagick/issues/4225).</li>
+<dt>2021-09-12  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-7 GIT revision 19095:d368d3c6b:20210912</li>
 <dt>2021-09-11  7.1.0-7  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> Fixed incorrect check when module is used as the domain in policy.xml    that could allow the use of a disabled module. (reference    https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qvhr-jj4p-j2qr).</li>
