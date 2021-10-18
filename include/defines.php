@@ -636,6 +636,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>{caption,label}:{max,start}-pointsize=<var>value</var></td>
+    <td>This sets the bounding pointsize to use when searching for the pointsize where the text annotation fits within the image boundaries.</td>
+  </tr>
+
+  <tr>
     <td>dcm:display-range=<var>reset</var></td>
     <td>Set the display range to the minimum and maximum pixel values for the
     DCM image format.</td>
