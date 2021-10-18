@@ -637,7 +637,7 @@ use:</p>
 
   <tr>
     <td>{caption,label}:{max,start}-pointsize=<var>value</var></td>
-    <td>This sets the bounding pointsize to use when searching for the pointsize where the text annotation fits within the image boundaries.</td>
+    <td>This sets the bounding pointsize to use when searching for the maximum pointsize where the text annotation still fits within the image boundaries.</td>
   </tr>
 
   <tr>
