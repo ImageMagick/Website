@@ -736,6 +736,24 @@ use:</p>
   </tr>
 
   <tr>
+    <td>heic:chroma=<var>value</var></td>
+    <td>set the HEIC chroma parameter.</td>
+    </td>
+  </tr>
+
+  <tr>
+    <td>heic:depth-image=<var>true</var></td>
+    <td>extract the depth image if the container has one.</td>
+    </td>
+  </tr>
+
+  <tr>
+    <td>heic:speed=<var>value</var></td>
+    <td>set the HEIC speed parameter.</td>
+    </td>
+  </tr>
+
+  <tr>
     <td>heic:preserve-orientation=<var>true</var></td>
     <td>Preserve the original EXIF orientation during HEIC decoding and rotate 
     the pixels accordingly. By default, EXIF orientation is reset to "1" to 
