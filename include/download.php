@@ -23,7 +23,7 @@
 
   <tr>
     <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/magick">magick</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourages you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment. Simply replace <samp>policy.xml</samp> in this AppImage container with your custom policies.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment. Simply replace <samp>policy.xml</samp> in this AppImage container with your custom policies.</td>
   </tr>
 
   <tr>

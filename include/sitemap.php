@@ -14,7 +14,7 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>: ImageMagick depends on external resources including configuration files, loadable modules, fonts, and environment variables.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security policy</a>: best practices strongly encourages you to configure a security policy that suits your local environment.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security policy</a>: best practices strongly encourage you to configure a security policy that suits your local environment.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/license.php">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/export.php">Export classification</a>: export control status of ImageMagick.</li>
