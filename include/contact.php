@@ -17,7 +17,8 @@
         $status="Message not sent: message is required.";
       if (strlen($message) < 32)
         $status="Message not sent: message does not have sufficient content.";
-      if ((preg_match("/\blink\b/i",$message) != 0) &&
+      if ((preg_match("/\bseo\b/i",$message) != 0) &&
+          (preg_match("/\bbacklink\b/i",$message) != 0) &&
           (preg_match("/\bexchange\b/i",$message) != 0))
         $status="Message not sent: solicitations not permitted.";
       if (preg_match("/\bad\b/i",$message) != 0)

@@ -1,7 +1,19 @@
-<div class="magick-header"><dl><dt>2021-09-26  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-9 GIT revision 19...</li>
-<dt>2021-09-26  7.1.0-9  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+<div class="magick-header"><dl><dt>2021-10-23  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-11 GIT revision 19293:f18599b05:20211023</li>
+<dt>2021-10-11  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> fix connected component abort trap (reference    https://github.com/ImageMagick/ImageMagick/issues/4372).</li>
+  <li> fix possible unitialized values (reference    https://github.com/ImageMagick/ImageMagick/issues/4379).</li>
+  <li> fix stack overflow when parsing malicious tiff image file (report from    Muhammad Aldo Firmansyah).</li>
+<dt>2021-10-10  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-10 GIT revision 19236:07ebe6b6e:20211010</li>
+<dt>2021-10-03  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> improved algorithm for automatic calculation of pointsize for caption and    labels.</li>
+  <li> support -auto-orient option in the identify utlity.</li>
+<dt>2021-10-03  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-9 GIT revision 19220:7921bf068:20211003</li>
+<dt>2021-10-03  7.1.0-9  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> Squash a dump truck load of VisualStudio compiler warnings.</li>
+  <li> improved algorithm for automatic calculation of word breaks and pointsize    for caption and labels.</li>
 <dt>2021-09-19  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> improve wrapping between words and within words (reference    https://github.com/ImageMagick/ImageMagick/discussions/4227).</li>
 <dt>2021-09-18  7.1.0-8  &lt;quetzlzacatenango@image...&gt;</dt>
