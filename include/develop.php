@@ -70,7 +70,7 @@
 
   <dt class="col-md-4"><a class="anchor" id="php"></a>PHP</dt>
 
-<dd class="col-md-8"><a href="http://pecl.php.net/package/imagick">IMagick</a> is a native PHP extension to create and modify images using the ImageMagick API.  Documentation for the extension is available <a href="http://php.net/imagick">here</a>.</dd>
+<dd class="col-md-8"><a href="http://pecl.php.net/package/imagick">IMagick</a> is a native PHP extension to create and modify images using the ImageMagick API.  Documentation for the extension is available <a href="http://php.net/imagick">here</a>, and a site showing examples is available at <a href="https://phpimagick.com">PHPImagick.com</a>.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 <dd class="col-md-8"><a href="https://github.com/francodacosta/phmagick">phMagick</a> is a wrapper class for ImageMagick, wrapping the most common web image manipulation actions in easy to use functions, but allowing full access to ImageMagick's power by issuing system calls to it's command-line programs.</dd>
