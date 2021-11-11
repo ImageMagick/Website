@@ -1171,6 +1171,13 @@ use:</p>
   </tr>
 
   <tr>
+    <td>psd:replicate-profile=<var>true</var></td>
+    <td>This option can be used to copy the image profile to all the images
+    instead of only the first image that is returned.
+    </td>
+  </tr>
+
+  <tr>
     <td>svg:xml-parse-huge=<var>true</var></td>
     <td>Enable rendering of a very large SVG for which you trust the source</td>
   </tr>
