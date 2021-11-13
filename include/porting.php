@@ -134,6 +134,7 @@ options, and more global use of 'image properties' (more commonly known as
 <p>The colormap indexes and black pixel channel (for the CMYK colorspace) are no longer stored in the index channel, previously accessed with GetAuthenticIndexQueue() and GetCacheViewAuthenticIndexQueue().  Instead they are now a first class pixel channel and accessed as a member of the pixel array (e.g. <samp>pixel[4]</samp>) or with the convenience pixel accessor methods GetPixelIndex(), SetPixelIndex(), GetPixelBlack(), and SetPixelBlack().</p>
 
 <p>As a consequence of using an array structure for variable pixel channels, auto-vectorization compilers have additional opportunities to speed up pixel loops.</p>
+<p>The `sync` channel in IMv6 was really a flag instead of a channel.  In IMv7, we instead use a flag: <samp>-define compose:sync=false</samp>.</p>
 
 <h4>Pixel Accessors</h4>
 <p>You can access pixel channel as array elements (e.g. <samp>pixel[1]</samp>) or use convenience accessors to get or set pixel channels:</p>
