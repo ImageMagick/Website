@@ -261,6 +261,10 @@ below. </p>
 <p> The math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
 composition effects, becoming involved. </p>
 
+<p>Use <code>-define compose:sync=false</code> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
+
+<p>This define is not applied to the lighting composition methods (see below) even though they are closely related to mathematical composition methods.</p>
+
 <p>The following lighting composition methods are also available. </p>
 
 <table class="table table-sm table-hover">
