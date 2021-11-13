@@ -404,6 +404,13 @@ setting for more specifics.</p>
     <td><var>x</var>:<var>y</var></td>
     <td>Here x and y denotes an aspect ratio (e.g. 3:2 = 1.5).</td>
   </tr>
+  <tr>
+    <td><var>x</var>:<var>y</var>^</td>
+    <td>remove rows or columns to achieve the given aspect ratio</td>
+  </tr>
+  <tr>
+    <td><var>x</var>:<var>y</var>#</td>
+    <td>add rows or columns to achieve the given aspect ratio</td>
   </tr>
   <tr>
     <td>{<var>size</var>}{<var>offset</var>}</td>
