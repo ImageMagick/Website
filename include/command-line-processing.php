@@ -406,11 +406,11 @@ setting for more specifics.</p>
   </tr>
   <tr>
     <td><var>x</var>:<var>y</var>^</td>
-    <td>remove rows or columns to achieve the given aspect ratio</td>
+    <td>remove rows or columns to achieve the given aspect ratio.</td>
   </tr>
   <tr>
     <td><var>x</var>:<var>y</var>#</td>
-    <td>add rows or columns to achieve the given aspect ratio</td>
+    <td>add rows or columns to achieve the given aspect ratio.</td>
   </tr>
   <tr>
     <td>{<var>size</var>}{<var>offset</var>}</td>
