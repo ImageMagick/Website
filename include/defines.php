@@ -107,6 +107,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>compose:compose=<var>on|off</var></td>
+    <td>This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</td>
+  </tr>
+
+  <tr>
     <td>connected-components:angle-threshold=<var>value</var></td>
     <td>Merges any region with equivalent ellipse angle smaller than 
     <var>value</var> into its surrounding region or largest neighbor.
