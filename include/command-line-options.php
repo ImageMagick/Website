@@ -2964,7 +2964,7 @@ specification or precede with a <a href="#gravity">-gravity</a> setting.  To
 specify how to compose the image with the background, use <a href="#compose"
 >-compose</a>.</p>
 
-<p>This command reduces or expands a JPEG image to fit on an 800x600
+<p>The following command reduces or expands a JPEG image to fit on an 800x600
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
@@ -2972,6 +2972,15 @@ image is centered on an 800x600 black canvas: </p>
   -gravity center -extent 800x600 -quality 92 output.jpg
 </samp></pre></ul>
 
+<p>The command can also be used with a ratio. If the image is not already at that ratio,
+it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has
+the expected effects.
+  
+<p>The following command crops a JPEG image so that it has a 4:3 ratio:</p>
+
+<ul><pre class="bg-light text-dark"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
+</samp></pre></ul>
+  
 <p><?php seeGeometry(); ?></p>
 
 <div style="margin: auto;">
