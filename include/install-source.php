@@ -71,6 +71,8 @@ to compile the program and on completion run the program.</p>
 
 <p>Press <kbd>Next</kbd> and click on the multi-threaded static build.  Now press, on <kbd>Next</kbd> twice and finally <kbd>Finish</kbd>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <kbd>Open->Project</kbd> and select the VisualStaticMT workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/</kbd>  folder.  Finally, choose <kbd>Build->Build Solution</kbd> to compile and build the ImageMagick distribution.</p>
 
+<p>The configure.exe utility can also be run on the command line instead of through the GUI wizard. You can see an example in <a href="https://github.com/ImageMagick/ImageMagick/blob/18e15da2dc6ceae05e95077f85e9d67dac31c5d8/.github/workflows/release.yml#L212">our GitHub actions build</a>.</p>
+
 <p>To verify ImageMagick is working properly, launch a MS-DOS Command Prompt window and type</p>
 
 <?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "convert logo: image.jpg"); ?>
