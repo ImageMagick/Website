@@ -1,21 +1,35 @@
-<div class="magick-header"><dl><dt>2021-10-23  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-11 GIT revision 19293:f18599b05:20211023</li>
+<div class="magick-header"><dl><dt>2021-11-14  7.1.0-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> The profile of a PSD file will no longer be copied to all the images, only    the first returned image will contain the profile. To re-enable the old    behavior add -define psd:replicate-profile=true.</li>
+<dt>2021-11-01  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-14 GIT revision 19332:bb886ff39:20211101</li>
+<dt>2021-11-01  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Fix broken release.</li>
+<dt>2021-10-28  7.1.0-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-13 GIT revision 19325:987f36b50:20211028</li>
+<dt>2021-10-28  7.1.0-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fix stack overflow when parsing malicious ps image file (report from    Muhammad Aldo Firmansyah).</li>
+<dt>2021-10-25  7.1.0-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-12 GIT revision 19318:113f8f901:20211025</li>
+<dt>2021-10-15  7.1.0-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Fix x64 build.</li>
+<dt>2021-10-24  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-11 GIT revision 19313:fbf76f2ef:20211024</li>
 <dt>2021-10-11  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> fix connected component abort trap (reference    https://github.com/ImageMagick/ImageMagick/issues/4372).</li>
-  <li> fix possible unitialized values (reference    https://github.com/ImageMagick/ImageMagick/issues/4379).</li>
-  <li> fix stack overflow when parsing malicious tiff image file (report from    Muhammad Aldo Firmansyah).</li>
+  <li> Fix connected component abort trap (reference    https://github.com/ImageMagick/ImageMagick/issues/4372).</li>
+  <li> Fix possible unitialized values (reference    https://github.com/ImageMagick/ImageMagick/issues/4379).</li>
+  <li> Fix stack overflow when parsing malicious tiff image file (report from    Muhammad Aldo Firmansyah).</li>
 <dt>2021-10-10  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-10 GIT revision 19236:07ebe6b6e:20211010</li>
 <dt>2021-10-03  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> improved algorithm for automatic calculation of pointsize for caption and    labels.</li>
-  <li> support -auto-orient option in the identify utlity.</li>
+  <li> Improved algorithm for automatic calculation of pointsize for caption and    labels.</li>
+  <li> Support -auto-orient option in the identify utlity.</li>
 <dt>2021-10-03  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-9 GIT revision 19220:7921bf068:20211003</li>
 <dt>2021-10-03  7.1.0-9  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> Squash a dump truck load of VisualStudio compiler warnings.</li>
-  <li> improved algorithm for automatic calculation of word breaks and pointsize    for caption and labels.</li>
+  <li> Improved algorithm for automatic calculation of word breaks and pointsize    for caption and labels.</li>
 <dt>2021-09-19  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> improve wrapping between words and within words (reference    https://github.com/ImageMagick/ImageMagick/discussions/4227).</li>
+  <li> Improve wrapping between words and within words (reference    https://github.com/ImageMagick/ImageMagick/discussions/4227).</li>
 <dt>2021-09-18  7.1.0-8  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-8 GIT revision 19115:428fe1921:20210918</li>
 <dt>2021-09-17  7.1.0-8  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
