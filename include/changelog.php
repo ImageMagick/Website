@@ -1,9 +1,13 @@
-<div class="magick-header"><dl><dt>2021-11-14  7.1.0-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+<div class="magick-header"><dl><dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-15 GIT revision 19...</li>
+<dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> fix alpha channel calculation of arithmetic divide compose operator.</li>
+<dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-14 GIT revision 19349:2ba5cdf42:20211114</li>
+<dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Support '#' modifier to aspect ratio geometry (e.g., 3:2#).</li>
+<dt>2021-11-11  7.1.0-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> The profile of a PSD file will no longer be copied to all the images, only    the first returned image will contain the profile. To re-enable the old    behavior add -define psd:replicate-profile=true.</li>
-<dt>2021-11-01  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-14 GIT revision 19332:bb886ff39:20211101</li>
-<dt>2021-11-01  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Fix broken release.</li>
 <dt>2021-10-28  7.1.0-13  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-13 GIT revision 19325:987f36b50:20211028</li>
 <dt>2021-10-28  7.1.0-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
