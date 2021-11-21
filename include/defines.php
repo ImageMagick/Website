@@ -1199,13 +1199,18 @@ use:</p>
   </tr>
 
   <tr>
-    <td>tiff:exif-properties=<var>true</var></td>
-    <td>Enable reading the EXIF properties.</td>
+    <td>tiff:exif-properties=<var>false</var></td>
+    <td>Disable reading the EXIF properties.</td>
   </tr>
 
   <tr>
     <td>tiff:fill-order=<var>msb|lsb</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>tiff:gps-properties=<var>false</var></td>
+    <td>Disable reading the GPS properties.</td>
   </tr>
 
   <tr>
