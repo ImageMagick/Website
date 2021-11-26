@@ -229,7 +229,7 @@ Rec709Luminance</samp></pre></ul>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
 <ul><pre class="bg-light text-dark"><samp>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</samp></pre></ul>
 <p>Here we protect certain pixels from change:</p>
-<ul><pre class="bg-light text-dark"><samp>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +mask rose_blue.png</samp></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +write-mask rose_blue.png</samp></pre></ul>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
 <ul><pre class="bg-light text-dark">
