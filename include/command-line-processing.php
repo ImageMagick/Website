@@ -522,6 +522,8 @@ above.</p>
 
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
+<p>Instead of an output filename, you use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#exit">-exit</a> to completely prevent any image write.</p>
+
 <h4>Explicit Image Format</h4>
   <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <samp>image.jpg</samp> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <samp>image</samp> in the raw red, green, and blue intensity format:
   </p>
