@@ -531,6 +531,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>registry:option:pedantic=<var>true | false</var></td>
+    <td>By default, if a command-line option is also a filename (e.g., -quality), it is intrepetted as a filename.  Set this option to <samp>true</samp> to interpret it as an option. </td>
+  </tr>
+
+  <tr>
     <td>resample:verbose=<var>true</var></td>
     <td>Output the cylindrical filter lookup table created by the EWA 
     (Elliptical Weighted Average) resampling algorithm. Note this table 
