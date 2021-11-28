@@ -88,6 +88,8 @@
 
 <p>These extensions are explained in the next few paragraphs.</p>
 
+<p>Note, by default, if a command-line option is also a filename (e.g., <samp>-quality</samp>), it is intrepetted as a filename.  Use <samp>-define registry:option:pedantic=true</samp> to instead interpret it as an option. </p>
+
 <h4>Filename Globbing</h4>
 <p>In Linux shells, certain characters such as the asterisk (<samp>*</samp>) and question mark (<samp>?</samp>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <samp>1.jpg</samp>, <samp>2.jpg</samp>, <samp>3.jpg</samp>, <samp>4.jpg</samp>, and <samp>5.jpg</samp> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
 </p>
@@ -307,7 +309,7 @@ may be smaller than the whole image and resizing all the frames into the same
 size may result in an unexpected output. In such a case,
 <?php option("coalesce")?> should be used to prepare those frames.</p>
 
-<h5<a class="anchor" id="channel"></a>Image Channel Operator</h4>
+<h4><a class="anchor" id="channel"></a>Image Channel Operator</h4>
 <p>Operate directly on image channels:</p>
 <ul>
 <?php options("channel-fx", "separate");
@@ -328,7 +330,7 @@ these image sequence operators:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick mikayla.png picnic.png beach.png -append vacation.png</samp></pre></ul>
 
-<h5"><a class="anchor" id="geometry"></a>Image Geometry</h4>
+<h4><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
 <p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
