@@ -1119,6 +1119,10 @@ display logo.mgk
 
 <p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
 
+<p>Before you build, set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
+
+<ul><pre class="bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre></ul>
+
 <h2><a class="anchor" id="filters"></a>Custom Image Filters</h2>
 
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
@@ -1393,5 +1397,9 @@ Image: logo:
 
 
 <p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
+
+<p>Before you build, set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
+
+<ul><pre class="bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre></ul>
 
 </div>
