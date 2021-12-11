@@ -254,6 +254,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>exif:sync=false</td>
+    <td>By default, the resolution of the image is synced with the EXIF profile.  Use this define to ignore the EXIF profile.</td>
+  </tr>
+
+  <tr>
     <td>filename:literal=<var>true</var></td>
     <td>By default, an output filename can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpretting embedded formatting characters and instead use the filename literally.</td>
   </tr>
