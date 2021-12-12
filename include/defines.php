@@ -254,7 +254,7 @@ use:</p>
   </tr>
 
   <tr>
-    <td>exif:sync=false</td>
+    <td>exif:sync-image=false</td>
     <td>By default, the resolution of the image is synced with the EXIF profile.  Use this define to ignore the EXIF profile.</td>
   </tr>
 
