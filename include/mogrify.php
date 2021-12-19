@@ -612,6 +612,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#integral">-integral</a></td>
+    <td>Calculate the sum of values (pixel values) in the image</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#intent">-intent <var>type</var></a></td>
     <td>type of rendering intent when managing the image color</td>
   </tr>
