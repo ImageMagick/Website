@@ -737,6 +737,12 @@ $image-&gt;[$x]-&gt;Frame("100x200");
   </tr>
 
   <tr>
+    <td>Integral</td>
+    <td>&nbsp;</td>
+    <td>calculate the sum of values (pixel values) in the image.</td>
+  </tr>
+
+  <tr>
     <td>InverseDiscreteFourierTransform</td>
     <td>magnitude=&gt;{True, False}</td>
     <td>implements the inverse discrete Fourier transform (DFT)</td>
