@@ -242,6 +242,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>DEBUG</td>
+    <td>W</td>
+    <td>Raw pixel debug file, likely only useful to the developers</td>
+    <td></td>
+  </tr>
+
+  <tr>
     <td>DIB</td>
     <td>RW</td>
     <td>Microsoft Windows Device Independent Bitmap</td>
