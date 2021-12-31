@@ -18,6 +18,12 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png" width="70" height="46" alt="rose" /></a>
 </ul>
 
+<p>Or suppose you want to blend a bear into a stream seamlessly.  Try this command:</p>
+<ul><pre class="bg-light text-dark"><samp>magick stream.jpg \( bear.jpg mask.png -compose CopyAlpha -composite \) \
+  -define compose:args=300x0.0001 -compose seamless-blend -geometry +30+30 \
+  -composite bear-in-stream.png </samp></pre></ul>
+<p>The mask identifies the bear so ImageMagick can distinquish the foreground object (the bear) from the background (the stream).  Seamless blending is an iterative process.  Here, we limit the iterations to 300 or less if the blending converges (difference in iterations has an RMSE of less than 0.0001).</p>
+
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick convert -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
