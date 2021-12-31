@@ -261,7 +261,7 @@ below. </p>
 <p> The math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
 composition effects, becoming involved. </p>
 
-<p>Use <code>-define compose:sync=false</code> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
+<p>Use <samp>-define compose:sync=false</samp> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
 
 <p>This define is not applied to the lighting composition methods (see below) even though they are closely related to mathematical composition methods.</p>
 
@@ -431,7 +431,7 @@ setting in the "<samp>composite</samp>" command.  For example... </p>
 $_SESSION['RelativePath']?>/../script/command-line-options.php#composite"
 >-composite</a> operator, using the special <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a>
-attribute of '<code class="arg">compose:args</samp>'.  This means you can now
+attribute of <samp>compose:args</samp>.  This means you can now
 make use of these special augmented <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#compose"
 >-compose</a> methods, those the argument and the method both need to be set
@@ -458,7 +458,7 @@ with a brief summary of what they do. For more details see the equivalent
     <br/>Dissolve the 'source' image by the percentage given before overlaying
         'over' the 'destination' image. If <var>src_percent</var> is
         greater than 100, it starts dissolving the main image so it will
-        become transparent at a value of '<code class="arg">200</samp>'.  If
+        become transparent at a value of <samp>200</samp>.  If
         both percentages are given, each image are dissolved to the
         percentages given.
     </td>
@@ -578,6 +578,13 @@ with a brief summary of what they do. For more details see the equivalent
     <br/><br/>
     </td>
   </tr>
+  <tr>
+    <td>seamless-blend</td>
+    <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
+    <p>Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image.  The distortion is the RMSE between each iteration, a good start might be <samp>300x0.0001</samp>.</p>
+    </td>
+  </tr>
+
 
   </tbody>
 </table>
