@@ -581,7 +581,7 @@ with a brief summary of what they do. For more details see the equivalent
   <tr>
     <td>seamless-blend</td>
     <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
-    <p>Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image.  The distortion is the RMSE between each iteration, a good start might be <samp>300x0.0001</samp>.</p>
+    <p>Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image.  The distortion is the RMSE between each iteration, a good start might be <samp>300x0.0001</samp>.  Note, seamless blending requires the HDRI feature.</p>
     </td>
   </tr>
 
