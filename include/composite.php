@@ -21,7 +21,7 @@
 <p>Or suppose you want to blend a bear into a stream seamlessly.  Try this command:</p>
 <ul><pre class="bg-light text-dark"><samp>magick stream.jpg bear.jpg mask.png -define compose:args=400x0.00003 \
   -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
-<p>The mask identifies the bear so ImageMagick can distinquish the foreground object (the bear) from the background (the stream).  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.00003). Note, seamless blending requires the HDRI feature.</p>
+<p>The mask distinquishes the foreground object (the bear) from the background (the stream).  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.00003). Note, seamless blending requires the HDRI feature.</p>
 
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
