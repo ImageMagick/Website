@@ -18,11 +18,6 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png" width="70" height="46" alt="rose" /></a>
 </ul>
 
-<p>Or suppose you want to blend a bear into a stream seamlessly.  Try this command:</p>
-<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg mask.png -define compose:args=400x0.0002+100 \
-  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
-<p>The mask distinquishes the foreground object (the bear) from the blending area that surrounds the foreground object from the area that is to be ignored.  The foreground object is pure white.  The area to be ignored is pure black.  Any value in-between is the area to ignore.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending requires the HDRI feature.</p>
-
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick convert -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
@@ -37,6 +32,11 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
   <img style="margin-top:25px; margin-bottom:25px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png" width="70" height="70" alt="red ball" /></a>
 </ul>
+
+<p>Or suppose you want to blend a bear into a stream seamlessly.  Try this command:</p>
+<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg mask.png -define compose:args=400x0.0002+100 \
+  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
+<p>The mask distinquishes the foreground object (the bear) from the blending area that surrounds the foreground object from the area that is to be ignored.  The foreground object is pure white.  The area to be ignored is pure black.  Any value in-between is the area to blend.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, for seamless blending to work effectively, it requires the HDRI feature.</p>
 
 <p>You can find additional examples of using <samp>composite</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
 
