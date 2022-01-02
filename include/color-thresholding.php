@@ -23,7 +23,7 @@
 <p>Now, pick two RGB colors: <samp>sRGB(159,150,0)</samp> and <samp>sRGB(205,100,45):</samp></p>
 
 <ul><pre class="code">magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</samp></ul>
-￼
+
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, select one sRGB color and convert it to HSV and offset its values low and high to generate the start and stop HSV colors. Use -colorspace HSV to convert the image to HSV. For our HSV example, we pick <samp>sRGB(183,132,20)</samp> and convert to HSV:</p>
@@ -37,13 +37,13 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 <p>Now, offset its HSV values as H=41+-20, S=89+-10, and V=72+-10, to create the start color (-) and stop color (+):</p>
 
 <ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold 'hsv(21,79%,62%)-hsv(61,99%,85%)' monet.gif</pre></ul>
-￼
+
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, pick two RGB colors. Use <samp>-colorspace HSV</samp> to convert the image to HSV, and apply the RGB start and stop colors.  Choose <samp>sRGB(158,77,33)</samp> and <samp>sRGB(213,217,2)</samp>:</p>
 
 <ul><pre class="code">magick monet.jpg -colorspace HSV -color-threshold "sRGB(158,77,33)-sRGB(213,217,2)" monet.gif</pre></ul>
-￼
+
 <p>Here is the expected results:</p>
 
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
@@ -65,6 +65,6 @@ magick xc:"sRGB(205,100,45)" -colorspace gray txt:
 <ul><pre class="code">magick monet.jpg -colorspace gray -color-threshold 'gray(46.4152%)-gray(55.3278%)' monet.gif</pre></ul>
 
 <p>Here is the results of the color thresholding operation:</p>
-￼
+
 <ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-gray.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
 </div>
