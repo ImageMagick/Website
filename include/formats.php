@@ -966,7 +966,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/phoboslab/qoi">QOI</a></td>
+    <td><a href="https://qoiformat.org/">QOI</a></td>
     <td>RW</td>
     <td>Quite OK Image Forma</td>
     <td>Fast, lossless image compression.</td>
