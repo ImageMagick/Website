@@ -966,6 +966,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://github.com/phoboslab/qoi">QOI</a></td>
+    <td>RW</td>
+    <td>Quite OK Image Forma</td>
+    <td>Fast, lossless image compression.</td>
+  </tr>
+
+  <tr>
     <td>RAD</td>
     <td>R</td>
     <td>Radiance image file</td>
