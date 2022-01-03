@@ -34,9 +34,12 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
 </ul>
 
 <p>Or suppose you want to blend a bear into a stream seamlessly.  Try this command:</p>
-<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg mask.png -define compose:args=400x0.0002+100 \
+<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 \
   -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
-<p>The mask distinquishes the foreground object (the bear) from the blending area that surrounds the foreground object from the area that is to be ignored.  The foreground object is pure white.  The area to be ignored is pure black.  Any value in-between is the area to blend (e.g., #FE).  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
+<p>The mask marks the area around the bear to blend.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
+<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg /( bear.jpg -read-mask only_bear.png \) bear_mask.png -define compose:args=400x0.0002+100 \
+  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
+<p>Here we create read mask that marks the foreground object from its background.  No blending is applied to the foreground object, just its surroundings.</p>
 
 <p>You can find additional examples of using <samp>composite</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
 
