@@ -8,7 +8,7 @@
         <ul>
             <li><strong>Mac OS X:</strong> has built-in support for OpenCL. No other actions required.</li>
             <li><strong>Linux/Windows:</strong> on supported platforms, install required drivers to enable OpenCL.</li>
-            <li><strong>Mobile:</strong> ImageMagick's OpenCL support is not available on mobile platforms (IOS/Android).</li>
+            <li><strong>Mobile:</strong> ImageMagick's OpenCL support is not available on mobile OSes (IOS/Android).</li>
         </ul>
     </li>
     <li><strong>Compile-time flag:</strong> ImageMagick's OpenCL must be explicitly enabled when compiling. This is done by running <samp>configure</samp> with <samp>--enable-opencl</samp> flag set.</li>
