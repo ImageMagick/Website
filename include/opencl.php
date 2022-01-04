@@ -24,7 +24,7 @@
   grayscale
   motion-blur
   resize</pre></ul>
-        The following filters are OpenCL accelerated as well but they require alpha channel to be enabled, e.g. <samp>MAGICK_OCL_DEVICE=true magick sample.jpg -alpha on -despeckle null:</samp>.
+        The following filters are OpenCL accelerated as well, but they require alpha channel to be enabled, e.g. <samp>MAGICK_OCL_DEVICE=true magick sample.jpg -alpha on -despeckle null:</samp>.
 <ul><pre class="bg-light text-dark">  despeckle
   equalize
   modulate</pre></ul>
