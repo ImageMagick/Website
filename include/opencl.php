@@ -4,7 +4,7 @@
 
 <ol>
     <li><strong>GPU platform:</strong> AMD or Intel GPUs are supported. NVIDIA support is not enabled at the moment.</li>
-    <li><strong>Plataforms and drivers:</strong>
+    <li><strong>OS and drivers:</strong>
         <ul>
             <li><strong>Mac OS X:</strong> has built-in support for OpenCL. No other actions required.</li>
             <li><strong>Linux/Windows:</strong> on supported platforms, install required drivers to enable OpenCL.</li>
