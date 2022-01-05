@@ -66,9 +66,6 @@
   if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
     $use_sts = false;
   }
-  if (preg_match('/^PHP (\d+\.)?(\d+\.)?(\*|\d+) Development Server$/', $_SERVER["SERVER_SOFTWARE"]) === 1) {
-    $use_sts = false;
-  }
   if ($use_sts && isset($_SERVER['HTTPS'])) {
     header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload');
   } elseif ($use_sts && !isset($_SERVER['HTTPS'])) {
