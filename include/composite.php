@@ -22,7 +22,7 @@
 
 <ul><pre class="bg-light text-dark"><samp>magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
 magick -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
--channel A -gaussian-blur 0x8 white-highlight.png
+  -channel A -gaussian-blur 0x8 white-highlight.png
 magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre></ul>
 
 <ul>
@@ -37,8 +37,9 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
 <ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 \
   -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
 <p>The mask marks the area around the bear to blend.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
-<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg /( bear.jpg -read-mask only_bear.png \) bear_mask.png -define compose:args=400x0.0002+100 \
-  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg /( bear.jpg -read-mask only_bear.png \) bear_mask.png \
+  -define compose:args=400x0.0002+100 -compose seamless-blend -geometry +30+30 -composite \
+  bear-in-stream.png </samp></pre></ul>
 <p>Here we create read mask that marks the foreground object from its background.  No blending is applied to the foreground object, just its surroundings.</p>
 
 <p>You can find additional examples of using <samp>composite</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
