@@ -303,7 +303,7 @@ handling or its replacement, which will allow you to ignore reported errors
 and continue processing (as appropriate due to error) in co-processes or
 interactive usage. </p>
 
-<p>With the IMv7 parser, activated by the `magick` utility, settings are applied to each image in memory in turn (if any). While an option: only need to be applied once globally. Using the other utilities directly, or as an argument to the `magick` CLI (e.g. `magick convert`) utilizes the legacy parser.</p>
+<p>With the IMv7 parser, activated by the `magick` utility, settings are applied to each image in memory in turn (if any). While an option: only need to be applied once globally. Using the other utilities directly, or as an argument to the `magick` CLI (e.g. `magick`) utilizes the legacy parser.</p>
 
 <p>The parenthesis options used to 'push' the current image list, and image
 settings (EG: '<samp>(</samp>' and '<samp>)</samp>' ) on to a stack now has
@@ -348,7 +348,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
 <dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
-<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke them from the <samp>magick</samp> utility, for example, use <samp>magick convert logo: logo.png</samp> to invoke the <samp>magick</samp> utility.
+<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke them from the <samp>magick</samp> utility, for example, use <samp>magick logo: logo.png</samp> to invoke the <samp>magick</samp> utility.
 </dd></dl>
 
 <h2>Behavioral Changes</h2>

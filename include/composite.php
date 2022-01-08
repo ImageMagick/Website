@@ -20,8 +20,8 @@
 
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick convert -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
-magick convert -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
+<ul><pre class="bg-light text-dark"><samp>magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
+magick -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
 -channel A -gaussian-blur 0x8 white-highlight.png
 magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre></ul>
 
