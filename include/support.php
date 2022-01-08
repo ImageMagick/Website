@@ -18,6 +18,7 @@
   <dt class="col-md-12"><a href="https://www.futureweb.at/"> <img class="clearfix" src="https://imagemagick.org/image/futureweb_red.png" width="143" height="160" alt="[Futureweb – Your Austrian Webdesign & Hosting Company]" /></a>  Futureweb – Your Austrian Webdesign &amp; Hosting Company.</dt><br/>
 <!-- code signing certificate -->
   <dt class="col-md-12"><a href="https://www.leaderssl.com"> <img class="clearfix" src="https://imagemagick.org/image/leaderssl.png" width="162" height="42" alt="[LeaderSSL]" /></a>  We enable secure connections for websites.</dt><br/>
+  <dt class="col-md-12"><a href="https://www.orekahealth.com/"> <img class="clearfix" src="https://imagemagick.org/image/oreka-logo.webp" width="200" height="120" alt="[Oreka Health]" /></a>  Take control of your personal data.</dt><br/>
 </dl>
 
 <h2><a class="anchor" id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>
@@ -38,25 +39,25 @@
 <li>Provide technical writers to assist with the development of commercial-grade technical documentation.</li>
 <li>Donate a quality SWOP or Eurostandard ICC profile to use as a default CMYK to RGB conversion profile.</li>
 <li>Donate a workstation with a modern processor and plenty of memory and disk.  We would use it for our primary development environment.</li>
-<li>Donate a Windows laptop so we can build and test ImageMagick under Windows 10.</li>
+<li>Donate a Windows laptop so we can build and test ImageMagick under Windows 11.</li>
 <li>Make a monetary contribution:</li></ul>
 
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
 <legend>Sponsor the ImageMagick Project</legend>
-<h3>Github</a></h3>
+<h2>Github</a></h2>
 <p>ImageMagick Studio LLC is the organization that designs, maintains, and enhances the ImageMagick software suite. In the past, we paid for the privilege of producing free software out of our own pockets. Now, to help defray costs associated with network bandwidth, development software, computer hardware, taxes, legal, and other expenses, we accept donations from individuals or companies like yourself.</p>
 <ul>
 <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
 </ul>
-<h3><a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J">Paypal</a></h3>
+<h2><a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J">Paypal</a></h2>
 <p>For direct monetary contributions, click on the donate button to contribute thru Paypal or with a credit card:</p>
 
 <ul>
 <a href="https://www.paypal.com/biz/fund?id=9XPKRUWDXRR8J"><img "image" src="https://imagemagick.org/image/donate.png" border="0" name="submit" alt="Sponsor ImageMagick" width="92" height="26"</img></a>
 </ul>
 
-<h3>Bitcoin</h3>
+<h2>Bitcoin</h2>
 <p>Our Bitcoin Address is: <a href="bitcoin:bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k?label=ImageMagick%20Donation">bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k</a>.  Or you can reference the below QR code:</p>
 <ul>
 <dt class="col-md-4"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>

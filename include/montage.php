@@ -2,14 +2,13 @@
 <h1 class="text-center">Juxtapose Image Thumbnails on a Canvas</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <code>montage</code> program to create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>montage</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <samp>montage</samp> program to create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>montage</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <code>montage</code> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
+<p>We list a few examples of the <samp>montage</samp> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
-<pre class="bg-light text-dark"><code>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg </samp></pre></ul>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -26,8 +25,7 @@
 
 <p>Ok, let's add some decorations:</p>
 
-<pre class="bg-light text-dark"><code>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg </samp></pre></ul>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -42,16 +40,18 @@
   </a>
 </ul>
 
-<p>You can find additional examples of using <code>montage</code> at <a href="https://legacy.imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>montage</samp> at <a href="https://legacy.imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
-<h5>Ashlar Pseudo-image Format</h5>
+<h4>Ashlar Pseudo-image Format</h4>
 <p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitedly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
-<pre class="bg-light text-dark"><code>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</code></pre>
-<p>This is designed to quickly view a collection of images. To have more control over the layout of your image tiles, use the <code>montage</code> command instead.</p>
+
+<ul><pre class="bg-light text-dark"><samp>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</samp></pre></ul>
+
+<p>This is designed to quickly view a collection of images. To have more control over the layout of your image tiles, use the <samp>montage</samp> command instead.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>montage</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>montage</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
   <tbody>

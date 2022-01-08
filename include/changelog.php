@@ -1,5 +1,101 @@
-<div class="magick-header"><dl><dt>2021-05-07  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.0.11-12 GIT revision 18696:f6f58a34c:20210507</li>
+<div class="magick-header"><dl><dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-15 GIT revision 19...</li>
+<dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> fix alpha channel calculation of arithmetic divide compose operator.</li>
+<dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-14 GIT revision 19349:2ba5cdf42:20211114</li>
+<dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Support '#' modifier to aspect ratio geometry (e.g., 3:2#).</li>
+<dt>2021-11-11  7.1.0-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> The profile of a PSD file will no longer be copied to all the images, only    the first returned image will contain the profile. To re-enable the old    behavior add -define psd:replicate-profile=true.</li>
+<dt>2021-10-28  7.1.0-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-13 GIT revision 19325:987f36b50:20211028</li>
+<dt>2021-10-28  7.1.0-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fix stack overflow when parsing malicious ps image file (report from    Muhammad Aldo Firmansyah).</li>
+<dt>2021-10-25  7.1.0-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-12 GIT revision 19318:113f8f901:20211025</li>
+<dt>2021-10-15  7.1.0-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Fix x64 build.</li>
+<dt>2021-10-24  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-11 GIT revision 19313:fbf76f2ef:20211024</li>
+<dt>2021-10-11  7.1.0-11  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Fix connected component abort trap (reference    https://github.com/ImageMagick/ImageMagick/issues/4372).</li>
+  <li> Fix possible unitialized values (reference    https://github.com/ImageMagick/ImageMagick/issues/4379).</li>
+  <li> Fix stack overflow when parsing malicious tiff image file (report from    Muhammad Aldo Firmansyah).</li>
+<dt>2021-10-10  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-10 GIT revision 19236:07ebe6b6e:20211010</li>
+<dt>2021-10-03  7.1.0-10  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Improved algorithm for automatic calculation of pointsize for caption and    labels.</li>
+  <li> Support -auto-orient option in the identify utlity.</li>
+<dt>2021-10-03  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-9 GIT revision 19220:7921bf068:20211003</li>
+<dt>2021-10-03  7.1.0-9  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Squash a dump truck load of VisualStudio compiler warnings.</li>
+  <li> Improved algorithm for automatic calculation of word breaks and pointsize    for caption and labels.</li>
+<dt>2021-09-19  7.1.0-9  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Improve wrapping between words and within words (reference    https://github.com/ImageMagick/ImageMagick/discussions/4227).</li>
+<dt>2021-09-18  7.1.0-8  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-8 GIT revision 19115:428fe1921:20210918</li>
+<dt>2021-09-17  7.1.0-8  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Check for `null` in InvokeDelegate() (reference    https://github.com/ImageMagick/ImageMagick/issues/4225).</li>
+<dt>2021-09-12  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-7 GIT revision 19095:d368d3c6b:20210912</li>
+<dt>2021-09-11  7.1.0-7  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed incorrect check when module is used as the domain in policy.xml    that could allow the use of a disabled module. (reference    https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qvhr-jj4p-j2qr).</li>
+<dt>2021-09-06  7.1.0-7  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Prevent color reduction merging into one color (reference    https://github.com/ImageMagick/ImageMagick/issues/4059)</li>
+<dt>2021-09-04  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-6 GIT revision 19033:7c589e780:20210904</li>
+<dt>2021-08-21  7.1.0-6  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Tweak the bilevel image type (reference    https://github.com/ImageMagick/ImageMagick/issues/4121).</li>
+  <li> Converting from LAB to RGB leads to wrong colors (reference    https://github.com/ImageMagick/ImageMagick/issues/4105).</li>
+<dt>2021-08-21  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-5 GIT revision 18995:8f77c3c9c:20210821</li>
+<dt>2021-08-12  7.1.0-5  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option (-dng:read-thumbnail=true) to read the thumbnail of a raw    Image and store it as a profile called dng:thumbnail.</li>
+<dt>2021-07-26  7.1.0-5  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Heap-based buffer overflow in TIFF coder (alert from Hunter Mitchell).</li>
+  <li> Grayscale image write optimization.</li>
+<dt>2021-07-18  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-4 GIT revision 18926:8eb9c6c48:20210718</li>
+<dt>2021-07-17  7.1.0-4  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Trim no longer returns an empty image on 1-pixel width input (reference    https://github.com/ImageMagick/ImageMagick/issues/3896).</li>
+  <li> remove virtual canvas offset from difference image.</li>
+<dt>2021-07-17  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-3 GIT revision 18901:692e6e059:20210717</li>
+<dt>2021-07-03  7.1.0-3  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option to set the pixel format option of ffmpeg when reading or    writing a video file with -define video:pixel-format=&lt;value&gt;.</li>
+<dt>2021-06-26  7.1.0-3  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> system() is not supported under IOS.</li>
+  <li> Accelerate subimage-search with FFT's (contributed by Fred).</li>
+<dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-2 GIT revision 18831:601356f1d:20210625</li>
+<dt>2021-06-25  7.1.0-2  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> malloc() corruption fix (reference    https://github.com/ImageMagick/ImageMagick6/issues/159).</li>
+<dt>2021-06-20  7.1.0-1  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-1 GIT revision 18826:1f1b43ea7:20210620</li>
+<dt>2021-06-19  7.1.0-1  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added option to set the vsync option of ffmpeg when reading or writing a    video file with -define video:vsync=&lt;value&gt;.</li>
+<dt>2021-06-12  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-0 GIT revision 18806:d64f1bb3a:20210612</li>
+<dt>2021-06-02  7.1.0-0  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> SVG no longer hangs when handling class in &lt;defs&gt; (reference    https://github.com/ImageMagick/ImageMagick/issues/3818).</li>
+  <li> Bump minor version (reference    https://github.com/ImageMagick/ImageMagick/issues/3768)</li>
+<dt>2021-06-02  7.0.11-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Raise exception for invalid compose:args geometry (reference    https://github.com/ImageMagick/ImageMagick/issues/3765).</li>
+<dt>2021-05-31  7.0.11-14  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-14 GIT revision 18775:354f421e4:20210531</li>
+<dt>2021-05-20  7.0.11-14  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added support for reading and writing 16-bit jxl images.</li>
+<dt>2021-05-17  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-13 GIT revision 18751:0365211b2:20210517</li>
+<dt>2021-05-12  7.0.11-13  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed reading and writing the XMP chunk in a WebP image (reference    https://github.com/ImageMagick/ImageMagick/discussions/3617).</li>
+  <li> Added support to set the jpeg-xl encoding effort with    -define jxl:effort=&lt;number&gt;</li>
+<dt>2021-05-09  7.0.11-13  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> label and caption sanity check is too conservative.</li>
+<dt>2021-05-09  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.0.11-12 GIT revision 18703:04c9de9b0:20210509</li>
 <dt>2021-05-07  7.0.11-12  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> The HEIC depth image will now only be read when the define heic:depth-image    is true.</li>
 <dt>2021-05-06  7.0.11-12  &lt;quetzlzacatenango@image...&gt;</dt>

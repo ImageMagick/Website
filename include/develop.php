@@ -1,6 +1,29 @@
 <div class="magick-header">
 <h1 class="text-center">Develop</h1>
-<p class="lead magick-description">The functionality of ImageMagick is typically utilized from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> or you can use the features from programs written in your favorite language. Choose from these interfaces: <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ada">G2F</a> (Ada), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickCore</a> (C), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickWand</a> (C), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ch">ChMagick</a> (Ch), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#com_">ImageMagickObject</a> (COM+), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c__">Magick++</a> (C++), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#java">JMagick</a> (Java), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#javascript">WASM-ImageMagick</a> (Javascript/Typescript), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#julia">JuliaIO</a> (Julia), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#lisp">L-Magick</a> (Lisp), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#lua">Lua</a> (LuaJIT), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#neko">NMagick</a> (Neko/haXe), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#dot-net">Magick.NET</a> (.NET), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#pascal">PascalMagick</a> (Pascal),  <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#perl">PerlMagick</a> (Perl), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#php">IMagick</a> (PHP), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#python">PythonMagick</a> (Python), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#r">magick</a> (R), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ruby">RMagick</a> (Ruby), <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#tcl">TclMagick</a> (Tcl/TK), or <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#wasm">WASM</a>. With a language interface, use ImageMagick to modify or create images dynamically and <var>automagically</var>.</p>
+<p class="lead magick-description">The functionality of ImageMagick is typically utilized from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> or you can use the features from programs written in your favorite language. Choose from these interfaces: 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ada">G2F</a> (Ada), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickCore</a> (C), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickWand</a> (C), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ch">ChMagick</a> (Ch), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#com_">ImageMagickObject</a> (COM+), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c__">Magick++</a> (C++), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#java">JMagick</a> (Java), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#javascript">WASM-ImageMagick</a> (Javascript/Typescript), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#julia">JuliaIO</a> (Julia), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#kmagick">KMagick</a> (Kotlin), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#lisp">L-Magick</a> (Lisp), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#lua">Lua</a> (LuaJIT), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#neko">NMagick</a> (Neko/haXe), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#dot-net">Magick.NET</a> (.NET), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#pascal">PascalMagick</a> (Pascal), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#perl">PerlMagick</a> (Perl), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#php">IMagick</a> (PHP), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#python">PythonMagick</a> (Python), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#r">magick</a> (R), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ruby">RMagick</a> (Ruby), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#tcl">TclMagick</a> (Tcl/TK), 
+or <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#wasm">WASM</a>. 
+With a language interface, use ImageMagick to modify or create images dynamically and <var>automagically</var>.</p>
 <p>Choose from these language interfaces:</p>
 
 <dl class="row">
@@ -35,6 +58,9 @@
 
 <dd class="col-md-8"><a href="https://github.com/JuliaIO/ImageMagick.jl">JuliaIO</a> provides an object-oriented Julia interface to ImageMagick.</dd>
 
+<dt class="col-md-4"><a class="anchor" id="kmagick"></a>KMagick</dt>
+  <dd class="col-md-8"><a href="https://github.com/cherryleafroad/kmagick">KMagick</a> provides Kotlin bindings to ImageMagick.</dd>
+  
   <dt class="col-md-4"><a class="anchor" id="labview"></a>LabVIEW</dt>
 
 <dd class="col-md-8"><a href="http://forums.lavag.org/downloads-file90.html">LVOOP ImageMagick</a> is an object-oriented LabVIEW interface to ImageMagick.</dd>
@@ -70,7 +96,7 @@
 
   <dt class="col-md-4"><a class="anchor" id="php"></a>PHP</dt>
 
-<dd class="col-md-8"><a href="http://pecl.php.net/package/imagick">IMagick</a> is a native PHP extension to create and modify images using the ImageMagick API.  Documentation for the extension is available <a href="http://php.net/imagick">here</a>.</dd>
+<dd class="col-md-8"><a href="http://pecl.php.net/package/imagick">IMagick</a> is a native PHP extension to create and modify images using the ImageMagick API.  Documentation for the extension is available <a href="http://php.net/imagick">here</a>, and a site showing examples is available at <a href="https://phpimagick.com">PHPImagick.com</a>.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 <dd class="col-md-8"><a href="https://github.com/francodacosta/phmagick">phMagick</a> is a wrapper class for ImageMagick, wrapping the most common web image manipulation actions in easy to use functions, but allowing full access to ImageMagick's power by issuing system calls to it's command-line programs.</dd>

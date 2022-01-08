@@ -5,7 +5,7 @@
 <p>This option creates one or more definitions for coders and decoders to use
 while reading and writing image data.  Definitions are generally used to
 control image file format coder modules, and image processing operations,
-beyond what is provided by normal means.  Defined settings are listed in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> information ("<code>info:</code>" output format) as "Artifacts". </p>
+beyond what is provided by normal means.  Defined settings are listed in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> information ("<samp>info:</samp>" output format) as "Artifacts". </p>
 
 <p>If <var>value</var> is missing for a definition, an empty-valued
 definition of a flag is created with that name. This used to control on/off
@@ -20,15 +20,13 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<pre class="bg-light text-dark"><code>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps </samp></pre></ul>
 
 <p>Set attributes of the image registry by prefixing the value with
-<code>registry:</code>.  For example, to set a temporary path to put work files,
+<samp>registry:</samp>.  For example, to set a temporary path to put work files,
 use:</p>
 
-<pre class="bg-light text-dark"><code>-define registry:temporary-path=/data/tmp
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>-define registry:temporary-path=/data/tmp </samp></pre></ul>
 
 <p>Here is a list of recognized defines:</p>
 
@@ -46,7 +44,7 @@ use:</p>
 
   <tr>
     <td>auto-threshold:verbose</td>
-    <td>return derived threshold as the <code>auto-threshold:threshold</code> image property.</td>
+    <td>return derived threshold as the <samp>auto-threshold:threshold</samp> image property.</td>
   </tr>
 
   <tr>
@@ -106,6 +104,11 @@ use:</p>
     whose value is above the quantum range to the quantum range (e.g. 65535)
     otherwise the pixel value remains unchanged.  Define supported in
     ImageMagick 6.9.1-3 and above.</td>
+  </tr>
+
+  <tr>
+    <td>compose:compose=<var>on|off</var></td>
+    <td>This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</td>
   </tr>
 
   <tr>
@@ -248,6 +251,11 @@ use:</p>
   <tr>
     <td>dither:diffusion-amount=<var>X%</var></td>
     <td>Set the amount of diffusion to use with Floyd-Steinberg diffusion</td>
+  </tr>
+
+  <tr>
+    <td>exif:sync-image=false</td>
+    <td>By default, the resolution of the image is synced with the EXIF profile.  Use this define to ignore the EXIF profile.</td>
   </tr>
 
   <tr>
@@ -462,7 +470,7 @@ use:</p>
   <tr>
     <td>phash:normalize=<var>true</var></td>
     <td>Normalize the phash metric by dividing by the number of channels
-    specified by <code>-define phash:colorspaces</code> when using compare
+    specified by <samp>-define phash:colorspaces</samp> when using compare
     -metric phash. (as of IM 7.0.3-8)</td>
   </tr>
 
@@ -483,7 +491,7 @@ use:</p>
 
   <tr>
     <td>preserve-timestamp=<var>true|false</var></td>
-    <td>Preserve file timestamp (<code>mogrify</code> only).</td>
+    <td>Preserve file timestamp (<samp>mogrify</samp> only).</td>
   </tr>
 
   <tr>
@@ -493,12 +501,12 @@ use:</p>
 
   <tr>
     <td>quantum:format=<var>type</var></td>
-    <td>Set the type to <code>floating-point</code> to specify a floating-point
+    <td>Set the type to <samp>floating-point</samp> to specify a floating-point
     format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
     to preserve negative values. If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 16 is
     included, the result is a single precision floating point format.
     If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 32 is included, the result is
-    double precision floating point format. For signed pixel data, use <code>-define quantum:format=signed</code></td>
+    double precision floating point format. For signed pixel data, use <samp>-define quantum:format=signed</samp></td>
   </tr>
 
   <tr>
@@ -516,8 +524,8 @@ use:</p>
  <tr>
     <td>quantum:polarity=<var>photometric-interpretation</var></td>
     <td>Set the photometric-interpretation of an image (typically for TIFF
-    image file format) to either <code>min-is-black</code> (default) or
-    <code>min-is-white</code>.</td>
+    image file format) to either <samp>min-is-black</samp> (default) or
+    <samp>min-is-white</samp>.</td>
   </tr>
 
   <tr>
@@ -525,6 +533,11 @@ use:</p>
     <td>Set attributes of the image registry, for example, 
     registry:temporary-path=/data/tmp.
     </td>
+  </tr>
+
+  <tr>
+    <td>registry:option:pedantic=<var>true | false</var></td>
+    <td>By default, if a command-line option is also a filename (e.g., -quality), it is intrepetted as a filename.  Set this option to <samp>true</samp> to interpret it as an option. </td>
   </tr>
 
   <tr>
@@ -638,6 +651,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>{caption,label}:{max,start}-pointsize=<var>value</var></td>
+    <td>This sets the bounding pointsize to use when searching for the maximum pointsize where the text annotation still fits within the image boundaries.</td>
+  </tr>
+
+  <tr>
     <td>dcm:display-range=<var>reset</var></td>
     <td>Set the display range to the minimum and maximum pixel values for the
     DCM image format.</td>
@@ -681,6 +699,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>dng:no-auto-bright=<var>true</var></td>
+    <td>Disable the histogram-based white level.</td>
+  </tr>
+
+  <tr>
     <td>dng:output-color=<var>value</var></td>
     <td>Select the output colorspace. The choices are:
     0 - Raw color (unique to each camera),
@@ -693,8 +716,8 @@ use:</p>
   </tr>
 
   <tr>
-    <td>dng:use-auto-bright=<var>false</var></td>
-    <td>Disable the histogram-based white level.</td>
+    <td>dng:read-thumbnail=<var>true</var></td>
+    <td>Read the embedded thumbnail and store it as a profile called 'dng:thumbnail'.</td>
   </tr>
 
   <tr>
@@ -710,7 +733,7 @@ use:</p>
   <tr>
     <td>dot:layout-engine=<var>value</var></td>
     <td>Specify the layout engine for the DOT image format (e.g.
-    <code>neato</code>).</td>
+    <samp>neato</samp>).</td>
   </tr>
 
   <tr>
@@ -730,6 +753,24 @@ use:</p>
     of a viewing transform. The viewing transform enables applications to 
     represent a set of simple edits as a list of "commands" which are applied 
     to the image in real time without altering the original image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:chroma=<var>value</var></td>
+    <td>set the HEIC chroma parameter.</td>
+    </td>
+  </tr>
+
+  <tr>
+    <td>heic:depth-image=<var>true</var></td>
+    <td>extract the depth image if the container has one.</td>
+    </td>
+  </tr>
+
+  <tr>
+    <td>heic:speed=<var>value</var></td>
+    <td>set the HEIC speed parameter.</td>
+    </td>
   </tr>
 
   <tr>
@@ -798,16 +839,16 @@ use:</p>
 
   <tr>
     <td>jpeg:dct-method=<var>value</var></td>
-    <td>Choose from <code>default</code>, <code>fastest</code>,
-    <code>float</code>, <code>ifast</code>, and <code>islow</code>.</td>
+    <td>Choose from <samp>default</samp>, <samp>fastest</samp>,
+    <samp>float</samp>, <samp>ifast</samp>, and <samp>islow</samp>.</td>
   </tr>
 
   <tr>
     <td>jpeg:extent=<var>value</var></td>
-    <td>Restrict the maximum JPEG file size, for example <code>-define
-    jpeg:extent=400KB</code>.  The JPEG encoder will search for the highest
+    <td>Restrict the maximum JPEG file size, for example <samp>-define
+    jpeg:extent=400KB</samp>.  The JPEG encoder will search for the highest
     compression quality level that results in an output file that does not
-    exceed the value. The <code>-quality</code> option also will be respected
+    exceed the value. The <samp>-quality</samp> option also will be respected
     starting with version 6.9.2-5. Between 6.9.1-0 and 6.9.2-4, add -quality
     100 in order for the jpeg:extent to work properly. Prior to 6.9.1-0, the
     -quality setting was ignored.</td>
@@ -836,7 +877,7 @@ use:</p>
   <tr>
     <td>jpeg:size=<var>geometry</var></td>
     <td>Set the size hint of a JPEG image, for
-    example, <code>-define jpeg:size=128x128</code>.
+    example, <samp>-define jpeg:size=128x128</samp>.
     It is most useful for increasing performance and reducing the memory
     requirements when reducing the size of a large JPEG image.</td>
   </tr>
@@ -912,6 +953,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pixel:compliance=<var>{none|undefined|svg|mvg|x11|xpm}</var></td>
+    <td>In combination with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
+  </tr>
+
+  <tr>
     <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>
@@ -975,7 +1021,7 @@ use:</p>
     Value = <var>png24</var> and <var>png48</var>
     allow transparency, only if a single color is fully transparent and that
     color does not also appear in an opaque pixel; such transparency is
-    written in a PNG <code>tRNS</code> chunk.
+    written in a PNG <samp>tRNS</samp> chunk.
     Value = <var>png00</var> causes the image to inherit its
     color-type and bit-depth from the input image, if the input was also
     a PNG.</td>
@@ -1000,40 +1046,40 @@ use:</p>
     <p>The "include-chunk" and "exclude-chunk" lists only affect the behavior
     of the PNG encoder and have no effect on the PNG decoder.</p>
 
-    <p>As a special case, if the <code>sRGB</code> chunk is excluded and
-    the <code>gAMA</code> chunk is included, the <code>gAMA</code> chunk will
+    <p>As a special case, if the <samp>sRGB</samp> chunk is excluded and
+    the <samp>gAMA</samp> chunk is included, the <samp>gAMA</samp> chunk will
     only be written if gamma is not 1/2.2, since most decoders assume
     sRGB and gamma=1/2.2 when no colorspace information is included in
     the PNG file.  Because the list is processed from left to right, you
     can achieve this with a single define:</p>
 
-    <pre class="bg-light text-dark"><code>-define png:include-chunk=none,gAMA
-    </code></pre>
+    <pre class="bg-light text-dark"><samp>-define png:include-chunk=none,gAMA
+    </samp></pre>
 
-    <p>As a special case, if the <code>sRGB</code> chunk is not excluded and
+    <p>As a special case, if the <samp>sRGB</samp> chunk is not excluded and
     the PNG encoder recognizes that the image contains the sRGB ICC profile,
-    the PNG encoder will write the <code>sRGB</code> chunk instead of the
+    the PNG encoder will write the <samp>sRGB</samp> chunk instead of the
     entire ICC profile.  To force the PNG encoder to write the sRGB
-    profile as an <code>iCCP</code> chunk in the output PNG instead of the
-    <code>sRGB</code> chunk, exclude the <code>sRGB</code> chunk.</p>
+    profile as an <samp>iCCP</samp> chunk in the output PNG instead of the
+    <samp>sRGB</samp> chunk, exclude the <samp>sRGB</samp> chunk.</p>
 
-    <p>The critical PNG chunks <code>IHDR</code>, <code>PLTE</code>,
-    <code>IDAT</code>, and <code>IEND</code> cannot be excluded.  Any such
+    <p>The critical PNG chunks <samp>IHDR</samp>, <samp>PLTE</samp>,
+    <samp>IDAT</samp>, and <samp>IEND</samp> cannot be excluded.  Any such
     entries appearing in the list will be ignored.</p>
 
-    <p>If the ancillary PNG <code>tRNS</code> chunk is excluded and the
+    <p>If the ancillary PNG <samp>tRNS</samp> chunk is excluded and the
     image has transparency, the PNG colortype is forced to be 4 or 6
     (GRAY_ALPHA or RGBA).  If the image is not transparent, then the
-    <code>tRNS</code> chunk isn't written anyhow, and there is no effect
+    <samp>tRNS</samp> chunk isn't written anyhow, and there is no effect
     on the PNG colortype of the output image.</p>
 
     <p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#strip">-strip</a>
     option does the equivalent of the following for PNG output:</p>
 
-    <pre class="bg-light text-dark"><code>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</code></pre>
+    <pre class="bg-light text-dark"><samp>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</samp></pre>
 
     <p>The default behavior is to include all known PNG ancillary chunks
-    plus ImageMagick's private <code>vpAg</code> ("virtual page") chunk,
+    plus ImageMagick's private <samp>vpAg</samp> ("virtual page") chunk,
     and to exclude all PNG chunks that are unknown to ImageMagick,
     regardless of their PNG "copy-safe" status as described in the
     PNG specification.</p>
@@ -1041,11 +1087,11 @@ use:</p>
     <p>Any chunk names that are not known to ImageMagick are ignored
     if they appear in either the "include-chunk" or "exclude-chunk" list.
     The ancillary chunks currently known to ImageMagick are
-    <code>bKGD</code>, <code>cHRM</code>, <code>gAMA</code>, <code>iCCP</code>,
-    <code>oFFs</code>, <code>pHYs</code>, <code>sRGB</code>, <code>tEXt</code>,
-    <code>tRNS</code>, <code>vpAg</code>, and <code>zTXt</code>.</p>
+    <samp>bKGD</samp>, <samp>cHRM</samp>, <samp>gAMA</samp>, <samp>iCCP</samp>,
+    <samp>oFFs</samp>, <samp>pHYs</samp>, <samp>sRGB</samp>, <samp>tEXt</samp>,
+    <samp>tRNS</samp>, <samp>vpAg</samp>, and <samp>zTXt</samp>.</p>
 
-    <p>You can also put <code>date</code> in the list to include or exclude
+    <p>You can also put <samp>date</samp> in the list to include or exclude
     the "Date:create" and "Date:modify" text chunks that ImageMagick normally
     inserts in the output PNG.</p></td>
   </tr>
@@ -1067,16 +1113,16 @@ use:</p>
   <tr>
     <td>png:preserve-iCCP[=<var>true</var>]</td>
     <td>By default, the PNG decoder and encoder examine any ICC profile
-    that is present, either from an <code>iCCP</code> chunk in the PNG
+    that is present, either from an <samp>iCCP</samp> chunk in the PNG
     input or supplied via an option, and if the profile is recognized
-    to be the sRGB profile, converts it to the <code>sRGB</code> chunk.
-    You can use <code>-define png:preserve-iCCP</code> to prevent
-    this from happening; in such cases the <code>iCCP</code> chunk
-    will be read or written and no <code>sRGB</code> chunk will be
+    to be the sRGB profile, converts it to the <samp>sRGB</samp> chunk.
+    You can use <samp>-define png:preserve-iCCP</samp> to prevent
+    this from happening; in such cases the <samp>iCCP</samp> chunk
+    will be read or written and no <samp>sRGB</samp> chunk will be
     written.  There are some ICC profiles that claim to be sRGB but
     have various errors that cause them to be rejected by libpng16; such
-    profiles are recognized anyhow and converted to the <code>sRGB</code>
-    chunk, but are rejected if the <code>-define png:preserve-iCCP</code>
+    profiles are recognized anyhow and converted to the <samp>sRGB</samp>
+    chunk, but are rejected if the <samp>-define png:preserve-iCCP</samp>
     is present. Note that not all "sRGB" ICC profiles are recognized
     yet; we will add them to the list as we encounter them.</td>
   </tr>
@@ -1140,6 +1186,13 @@ use:</p>
   </tr>
 
   <tr>
+    <td>psd:replicate-profile=<var>true</var></td>
+    <td>This option can be used to copy the image profile to all the images
+    instead of only the first image that is returned.
+    </td>
+  </tr>
+
+  <tr>
     <td>svg:xml-parse-huge=<var>true</var></td>
     <td>Enable rendering of a very large SVG for which you trust the source</td>
   </tr>
@@ -1156,13 +1209,18 @@ use:</p>
   </tr>
 
   <tr>
-    <td>tiff:exif-properties=<var>true</var></td>
-    <td>Enable reading the EXIF properties.</td>
+    <td>tiff:exif-properties=<var>false</var></td>
+    <td>Disable reading the EXIF properties.</td>
   </tr>
 
   <tr>
     <td>tiff:fill-order=<var>msb|lsb</var></td>
     <td> </td>
+  </tr>
+
+  <tr>
+    <td>tiff:gps-properties=<var>false</var></td>
+    <td>Disable reading the GPS properties.</td>
   </tr>
 
   <tr>
@@ -1200,6 +1258,16 @@ use:</p>
     <td>tiff:tile-geometry=<var>WxH</var></td>
     <td>Set the tile size for pyramid tiffs. Requires the suffix
     PTIF: before the outputname.</td>
+  </tr>
+
+  <tr>
+    <td>video:pixel-format=<var>value</var></td>
+    <td>Set the pixel format option of ffpmeg.</td>
+  </tr>
+
+  <tr>
+    <td>video:vsync=<var>value</var></td>
+    <td>Set the vsync option of ffpmeg.</td>
   </tr>
 
   <tr>

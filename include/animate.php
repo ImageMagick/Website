@@ -2,26 +2,24 @@
 <h1 class="text-center">Animation Viewer</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <code>animate</code> program to animate an image sequence on any X server.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>animate</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <samp>animate</samp> program to animate an image sequence on any X server.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>animate</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <code>animate</code> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
+<p>We list a few examples of the <samp>animate</samp> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
 
-<pre class="bg-light text-dark"><code>magick animate movie.gif
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick animate movie.gif </samp></pre></ul>
 
 <p>To animate a directory of JPEG images, use:</p>
 
-<pre class="bg-light text-dark"><code>magick animate *.jpg
-</code></pre>
+<ul><pre class="bg-light text-dark"><samp>magick animate *.jpg </samp></pre></ul>
 
-<p>You can find additional examples of using <code>animate</code> in <a href="https://legacy.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>animate</samp> in <a href="https://legacy.imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>animate</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>animate</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover">
   <tbody>

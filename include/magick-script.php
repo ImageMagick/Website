@@ -1,23 +1,23 @@
 <div class="magick-header">
 <h1 class="text-center">Image Scripting Language</h1>
-<p class="lead magick-description">Use the <code>magick-script</code> scripting language to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <code>magick</code> command or see below for example usages of the command.</p>
+<p class="lead magick-description">Use the <samp>magick-script</samp> scripting language to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>magick</samp> command or see below for example usages of the command.</p>
 
 <p>Here is an example script:</p>
 
-<ul><pre class="bg-light text-dark"><code>#!/bin/env magick-script
+<ul><pre class="bg-light text-dark"><samp>#!/bin/env magick-script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</code></pre></ul>
+</samp></pre></ul>
 
-<p>Or use the <code>magick</code> utility with the scripting option like this:</p>
-<ul><pre class="bg-light text-dark"></code>#!/bin/magick -script
+<p>Or use the <samp>magick</samp> utility with the scripting option like this:</p>
+<ul><pre class="bg-light text-dark"></samp>#!/bin/magick -script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</code></pre></ul>
+</samp></pre></ul>
 
-<p>You can find additional examples of using <code>magick-script</code> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>magick-script</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>magick</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>magick</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">

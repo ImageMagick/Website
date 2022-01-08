@@ -2,15 +2,15 @@
 <h1 class="text-center">Cite</h1>
 <p class="lead magick-description">Learn how to cite ImageMagick in your work.  Choose from these citation formats:</p>
 
-<h5>Citation in APA style</h5>
+<h4>Citation in APA style</h4>
 <ul><pre class="bg-light text-dark"><samp>The ImageMagick Development Team. (2021). ImageMagick. Retrieved from https://imagemagick.org</samp></pre></ul>
 
-<h5>Citation in Vancouver style</h5>
+<h4>Citation in Vancouver style</h4>
 <ul><pre class="bg-light text-dark"><samp>1. The ImageMagick Development Team. ImageMagick [Internet]. 2021. Available from: https://imagemagick.org</samp></pre></ul>
 
-<h5>Citation in Harvard style</h5>
+<h4>Citation in Harvard style</h4>
 <ul><pre class="bg-light text-dark"><sampl>The ImageMagick Development Team, 2021. ImageMagick, Available at: https://imagemagick.org.</samp></pre></ul>
-<h5>Citation in Bibtex format</h5>
+<h4>Citation in Bibtex format</h4>
 <ul><pre class="bg-light text-dark"><samp>@software{imagemagick,
   author = {{The ImageMagick Development Team}},
   title = {ImageMagick},

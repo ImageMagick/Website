@@ -8,7 +8,7 @@
       */
       $description=$this->description;
       if (!empty($title))
-        $description="$title - $this->description";
+        $description="$title – $this->description";
       $keywords=strtolower($title);
       $keywords=str_replace('  ',' ',$keywords);
       $keywords=str_replace(',','',$keywords);
@@ -17,9 +17,9 @@
       $meta="<meta charset=\"utf-8\" >\n";
       $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" >\n";
       if (empty($title))
-        $meta.="  <title>$this->sitename - $this->slogan</title>\n";
+        $meta.="  <title>$this->sitename – $this->slogan</title>\n";
       else
-        $meta.="  <title>$this->sitename - $title</title>\n";
+        $meta.="  <title>$this->sitename – $title</title>\n";
       $meta.="  <meta name=\"application-name\" content=\"$this->application_name\">\n";
       $meta.="  <meta name=\"description\" content=\"$this->description\">\n";
       $meta.="  <meta name=\"application-url\" content=\"$this->application_url\">\n";
