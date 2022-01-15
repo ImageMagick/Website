@@ -2,7 +2,7 @@
 
 function bull()
 {
-	echo(" • ");
+	echo("&bull;");
 }
 
 function option($opt, $sign="-")
