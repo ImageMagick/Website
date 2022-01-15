@@ -403,6 +403,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="http://im.snibgo.com/fmttxt.htm">FTXT</a></td>
+    <td>RW</td>
+    <td>Read and Write Pixels as Formatted Text</td>
+    <td>We use 'ftxt:' for defines rather than 'fmttxt:', e.g. 'ftxt:format'.</td>
+  </tr>
+
+  <tr>
     <td><a href="http://www.fileformat.info/format/gif/egff.htm">GIF</a></td>
     <td>RW</td>
     <td>CompuServe Graphics Interchange Format</td>
