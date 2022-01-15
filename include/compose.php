@@ -454,8 +454,8 @@ with a brief summary of what they do. For more details see the equivalent
     <td>dissolve</td>
     <td>Arguments:
         <var>src_percent</var>[x<var>dst_percent</var>]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dissolve">-dissolve</a>
-    <br/>Dissolve the 'source' image by the percentage given before overlaying
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dissolve">-dissolve</a>.
+    Dissolve the 'source' image by the percentage given before overlaying
         'over' the 'destination' image. If <var>src_percent</var> is
         greater than 100, it starts dissolving the main image so it will
         become transparent at a value of <samp>200</samp>.  If
@@ -469,8 +469,8 @@ with a brief summary of what they do. For more details see the equivalent
     <td>Arguments:
         <var>src_percent</var>[x<var>dst_percent</var>]
     <br/>Equivalent to "<samp>composite</samp>" <a
-        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#blend">-blend</a>
-    <br/>Average the images together ('plus') according to the percentages
+        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#blend">-blend</a>.
+    Average the images together ('plus') according to the percentages
         given and each pixels transparency.  If only a single percentage value
         is given it sets the weight of the composite or 'source' image, while
         the background image is weighted by the exact opposite amount. That is
@@ -484,9 +484,9 @@ with a brief summary of what they do. For more details see the equivalent
     <td>mathematics</td>
     <td>Arguments: <var>A, B, C, D</var>
     <br/>Not available in "<samp>composite</samp>" at this time.
-    <br/>Merge the source and destination images according to the formula
-    <br/>     <samp>A*Sc*Dc + B*Sc + C*Dc + D</samp>
-    <br/>Can be used to generate a custom composition method that would
+    Merge the source and destination images according to the formula
+    <ul><samp>A*Sc*Dc + B*Sc + C*Dc + D</samp></ul>
+    Can be used to generate a custom composition method that would
         otherwise need to be implemented using the slow <a
         href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> DIY image operator.
     </td>
@@ -496,8 +496,8 @@ with a brief summary of what they do. For more details see the equivalent
     <td>modulate</td>
     <td>Arguments:
         <var>brightness</var>[x<var>saturation</var>]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#watermark">-watermark</a>
-    <br/>Take a grayscale image (with alpha mask) and modify the destination
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#watermark">-watermark</a>.
+    Take a grayscale image (with alpha mask) and modify the destination
         image's brightness according to watermark image's grayscale value and
         the <var>brightness</var> percentage.  The destinations
         color saturation attribute is just direct modified by the <var>saturation</var> percentage, which defaults to 100 percent
@@ -510,8 +510,8 @@ with a brief summary of what they do. For more details see the equivalent
     <td>displace</td>
     <td>Arguments:
         <var>X-scale</var>[x<var>Y-scale</var>][!][%]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#displace">-displace</a>
-    <br/>With this option, the 'overlay' image, and optionally the 'mask'
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#displace">-displace</a>.
+    With this option, the 'overlay' image, and optionally the 'mask'
         image, is used as a relative displacement map, which is used to
         displace the lookup of what part of the destination image is seen at
         each point of the overlaid area.  Much like the displacement map is a
@@ -539,7 +539,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>Arguments:
         <var>X-scale</var>[x<var>Y-scale</var>[+<var>X-center</var>+<var>Y-center</var>]][!][%]
     <br/>Not available in "<samp>composite</samp>" at this time.
-    <br/>Exactly as per 'Displace' (above), but using absolute coordinates,
+    Exactly as per 'Displace' (above), but using absolute coordinates,
         relative to the center of the overlay (or that given).  Basically
         allows you to generate absolute distortion maps where 'black' will
         look up the left/top edge, and 'white' looks up the bottom/right
@@ -558,8 +558,8 @@ with a brief summary of what they do. For more details see the equivalent
     <td>Arguments:
         <var>Width</var>[x<var>Height</var>[+<var>Angle</var>][+<var>Angle2</var>]]
     <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo
-        $_SESSION['RelativePath']?>/../script/command-line-options.php#blur-composite">-blur</a>
-    <br/>A Variable Blur Mapping Composition method, where each pixel in the
+        $_SESSION['RelativePath']?>/../script/command-line-options.php#blur-composite">-blur</a>.
+    A Variable Blur Mapping Composition method, where each pixel in the
         overlaid region is replaced with an Elliptical Weighted Average (EWA),
         with an ellipse (typically a circle) of the given sigma size, scaled
         according to overlay (source image) grayscale mapping.
@@ -581,13 +581,13 @@ with a brief summary of what they do. For more details see the equivalent
   <tr>
     <td>seamless-blend</td>
     <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
-    <td>Seamlessly inserts the overlay image onto the background image. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled.
+    <p>Seamlessly inserts the overlay image onto the background image. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
     </td>
   </tr>
   <tr>
     <td>saliency-blend</td>
     <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
-    <td>Merges the overlay image with the background image such that the image that is most salient (has the most detail) at a given pixel will show in the result. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled. Saliency-blending will be a bit slower than seamless blending.
+    <p>Merges the overlay image with the background image such that the image that is most salient (has the most detail) at a given pixel will show in the result. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled. Saliency-blending will be a bit slower than seamless blending.</p>
     </td>
   </tr>
 
