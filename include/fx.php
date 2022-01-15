@@ -358,7 +358,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <samp>%[fx:]</samp> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <samp>s</samp> and <samp>t</samp> successively refer to the current image and its index, while <samp>i</samp> and <samp>j</samp> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace rgb  \
+<ul><pre class="bg-light text-dark"><samp>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace gray  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]\n' info:
 Red channel of NW corner of image #0 is 0.464883
 Red channel of NW corner of image #1 is 0.184582
