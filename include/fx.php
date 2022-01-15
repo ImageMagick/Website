@@ -4,7 +4,7 @@
 
 <a class="anchor" id="fx"></a>
 
-<p class="lead magick-description">Use the FX special effects image operator to apply a mathematical expression to an image or image channels.  Use FX to:</p>
+<p class="lead magick-description">Use the <a href="http://im.snibgo.com/fxnew.htm">FX special effects image operator</a> to apply a mathematical expression to an image or image channels.  Use FX to:</p>
 
 <ul>
   <li>create canvases, gradients, mathematical colormaps</li>
