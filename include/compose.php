@@ -581,7 +581,13 @@ with a brief summary of what they do. For more details see the equivalent
   <tr>
     <td>seamless-blend</td>
     <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
-    <p>This operator requires a mask.  Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image.  The distortion is the RMSE between each iteration, a good start might be <samp>300x0.0001</samp>.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
+    <td>Seamlessly inserts the overlay image onto the background image. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled.
+    </td>
+  </tr>
+  <tr>
+    <td>saliency-blend</td>
+    <td>Arguments: <var>max-iterations</var>x<var>distortion</var>
+    <td>Merges the overlay image with the background image such that the image that is most salient (has the most detail) at a given pixel will show in the result. This operator requires a mask. Set the maximum iterations and distortion when seamlessly blending a foreground object onto a background image. The distortion is the RMSE between each iteration, a good start might be 300x0.0001. Note, seamless blending works most effectively when the HDRI feature is enabled. Saliency-blending will be a bit slower than seamless blending.
     </td>
   </tr>
 
