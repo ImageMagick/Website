@@ -303,7 +303,7 @@
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2.0" image.jpg
+<ul><pre class="bg-light text-dark"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
 </samp></pre></ul>
 
 <p>By default, the image to which <samp>p</samp>, <samp>r</samp>, <samp>g</samp>, <samp>b</samp>, <samp>a</samp>, etc., are applied is the current image <samp>s</samp> in the image list. This is equivalent to <samp>u</samp> except when used in an escape sequence <samp>%[fx:...]</samp>. </p>
