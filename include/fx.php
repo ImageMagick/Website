@@ -367,7 +367,7 @@ Red channel of NW corner of image #1 is 0.184582
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <samp>-set</samp> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
 <ul><pre class="bg-light text-dark"><samp>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
-  -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif"
+  -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif
 </samp></pre></ul>
 
 <p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
