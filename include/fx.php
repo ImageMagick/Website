@@ -248,7 +248,7 @@
 <dt class="col-md-4"> <samp>cos(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> cosine function</dd>
 <dt class="col-md-4"> <samp>cosh(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> hyperbolic cosine function</dd>
 <dt class="col-md-4"> <samp>debug(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> print <var>x</var> (useful for debugging your expression)</dd>
-<dt class="col-md-4"> <samp>do(</samp><var>expression</var>, <var>condition test</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
+<dt class="col-md-4"> <samp>do(</samp><var>condition</var>, <var>statements</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <samp>drc(</samp><var>x</var>,<var>y</var><samp>)</samp></dt><dd class="col-md-8"> dynamic range compression (knee curve); drc(<var>x</var>,<var>y</var>)=(<var>x</var>)/(<var>y</var>*(<var>x</var>-1)+1); -1&lt;<var>y</var>&lt;1 </dd>
 <dt class="col-md-4"> <samp>erf(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <samp>exp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
