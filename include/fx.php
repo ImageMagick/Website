@@ -150,6 +150,9 @@
      <dd><samp>m</samp>: magenta</dd>
      <dd><samp>k</samp>: black</dd>
 
+     <dd><samp>all</samp>: all channels</dd>
+     <dd><samp>this</samp>: this channel</dd>
+
      <dd><samp>intensity</samp>: pixel intensity</dd>
 
      <dd><samp>hue</samp>: pixel hue</dd>
