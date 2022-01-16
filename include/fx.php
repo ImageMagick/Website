@@ -375,7 +375,7 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>This example tests the difference between two images, measured by RMSE. If the difference is greater than 0.1 it returns 1; otherwise it returns 0:</p>
 
-ul><pre class="bg-light text-dark"><samp>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre></ul>
+<ul><pre class="bg-light text-dark"><samp>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre></ul>
 
 <p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
 
