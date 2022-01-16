@@ -3489,7 +3489,7 @@ input image filename is <var>image.gif</var>, the output image
 filename becomes <var>image.tiff</var>.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="format_identify_"></a>-format <var>string</var></h2>
+  <h2><a class="anchor" id="format_identify_"></a>-format <var>expression</var></h2>
 </div>
 
 <p class="magick-description">Output formatted image characteristics.</p>
