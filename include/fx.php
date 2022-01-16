@@ -293,7 +293,7 @@
 <li>only one ternary conditional (e.g. x ? y : z) per statement</li>
 <li>statements are assignments or the final expression to return</li>
 <li>an assignment starts a statement, it is not an operator</li>
-<li>single character variables are reserved.  Assignments to reserved built-ins do not throw an exception and have no effect;  e.g. <samp>r=3.0; r</samp> returns the pixel red color value, not 3.0</li>
+<li>single character variables are reserved.  Assignments to reserved built-ins throw an exception;  e.g. <samp>r=3.0; r</samp> returns <em>Attempted assignment to non-UserSymbol 'r' at '3.0'</em>.</li>
 <li>unary operators have a lower priority than binary operators, that is, the unary minus (negation) has lower precedence than exponentiation, so -3^2 is interpreted as -(3^2) = -9.  Use parentheses to clarify your intent (e.g. (-3)^2 = 9).</li>
 <li>care must be exercised when using the slash ('/') symbol. The string of characters <var>1/2x</var> is interpreted as (1/2)x. The contrary interpretation should be written explicitly as 1/(2x). Again, the use of parentheses helps clarify the meaning and should be used whenever there is any chance of misinterpretation.</li>
 </ul>
