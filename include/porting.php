@@ -529,7 +529,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 </dl>
 <h2><a class="anchor" id="performance"></a>Performance Improvements</h2>
 <p>Operating on grayscale images is significantly improved as only one channel is required.  Previously, grayscale required three channels.</p>
-<p>The performance of <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">-fx</a> option has increased by one or two orders of magnitude.</p>
+<p>The performance of <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">-fx</a> option has increased by one to two orders of magnitude.</p>
 
 <h2><a class="anchor" id="summary"></a>Version 7 Change Summary</h2>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>
