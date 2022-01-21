@@ -214,7 +214,7 @@
 <dt class="col-md-4"> <samp>~</samp><var>x</var></dt><dd class="col-md-8"> logical NOT operator, return value 1.0 if <var>not</var> <var>x</var> &gt; 0,  otherwise 0.0</dd>
 <dt class="col-md-4"> <samp>+</samp><var>x</var></dt><dd class="col-md-8"> unary plus, return 1.0*value</dd>
 <dt class="col-md-4"> <samp>-</samp><var>x</var></dt><dd class="col-md-8"> unary minus, return -1.0*value</dd>
-<dt class="col-md-4"> <var>x</var> <samp>?</samp> <var>y</var> <samp>:</samp> <var>z</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>y</var> if <var>x</var> != 0, otherwise <var>z</var>; only one ternary conditional permitted per statement</dd>
+<dt class="col-md-4"> <var>condition</var> <samp>?</samp> <var>true-statements</var> <samp>:</samp> <var>false-statements</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>true-statements</var> if <var>condition</var> != 0, otherwise <var>false-statements</var>; only one ternary conditional permitted per statement</dd>
 <dt class="col-md-4"> <var>x</var> <samp>=</samp> <var>y</var></dt><dd class="col-md-8">assignment; single character variables are reserved, instead use 2 or more characters, letter combinations only (e.g. Xi not X1)</dd>
 <dt class="col-md-4"> <var>x</var> <samp>;</samp> <var>y</var></dt><dd class="col-md-8">statement separator </dd>
 <dt class="col-md-4"> <samp>phi</samp></dt><dd class="col-md-8"> constant (1.618034...)</dd>
@@ -253,11 +253,11 @@
 <dt class="col-md-4"> <samp>erf(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <samp>exp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
 <dt class="col-md-4"> <samp>floor(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> largest integral value not greater than argument</dd>
-<dt class="col-md-4"> <samp>for(</samp><var>initialization</var>, <var>condition test</var>, <var>expression</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
+<dt class="col-md-4"> <samp>for(</samp><var>initialize</var>, <var>condition</var>, <var>statements</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <samp>gauss(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> gaussian function; gauss(<var>x</var>)=exp(<var>-x*x/2</var>)/sqrt(2*pi)</dd>
 <dt class="col-md-4"> <samp>gcd(</samp><var>x</var>,<var>y</var><samp>)</samp></dt><dd class="col-md-8"> greatest common denominator</dd>
 <dt class="col-md-4"> <samp>hypot(</samp><var>x</var>,<var>y</var><samp>)</samp></dt><dd class="col-md-8"> the square root of x<sup>2</sup>+y<sup>2</sup></dd>
-<dt class="col-md-4"> <samp>if(</samp><var>condition test</var>, <var>nonzero-expression</var>, <var>zero-expression</var><samp>)</samp></dt><dd class="col-md-8"> interpret expression depending on condition</dd>
+<dt class="col-md-4"> <samp>if(</samp><var>condition</var>, <var>nonzero-statements</var>, <var>zero-statements</var><samp>)</samp></dt><dd class="col-md-8"> interpret expression depending on condition</dd>
 <dt class="col-md-4"> <samp>int(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> greatest integer function (return greatest integer less than or equal to <var>x</var>)</dd>
 <dt class="col-md-4"> <samp>isnan(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8">return 1.0 if <var>x</var> is NAN, 0.0 otherwise</dd>
 <dt class="col-md-4"> <samp>j0(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> Bessel functions of <var>x</var> of the first kind of order 0</dd>
@@ -283,7 +283,7 @@
 <dt class="col-md-4"> <samp>tan(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> tangent function</dd>
 <dt class="col-md-4"> <samp>tanh(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> hyperbolic tangent function</dd>
 <dt class="col-md-4"> <samp>trunc(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> round to integer, towards zero</dd>
-<dt class="col-md-4"> <samp>while(</samp><var>condition test</var>, <var>expression</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
+<dt class="col-md-4"> <samp>while(</samp><var>condition</var>, <var>statements</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <samp>image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</samp></dt><dd class="col-md-8"> image attributes</dd>
 </dl>
 <p>The expression semantics include these rules:</p>
