@@ -344,6 +344,8 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>A position outside the boundary of the image retrieves a value dictated by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#virtual-pixel">-virtual-pixel</a> option setting.</p>
 
+<p>Specify <samp>u.r</samp> to specify the red channel of the current image. If you don't specify a channel qualifier, you get the current channel. Use <samp>mean.this</samp> to set the output channel to the mean of just the input channel.  Use <samp>mean.all</samp> to set the overall mean of the input channels.</p>
+
 <h4>Apply an Expression to Select Image Channels</h4>
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <samp>alpha.png</samp> with the average of the green channels from the images <samp>alpha.png</samp> and <samp>beta.png</samp>, use:</p>
