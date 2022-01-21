@@ -1,7 +1,40 @@
-<div class="magick-header"><dl><dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-15 GIT revision 19...</li>
+<div class="magick-header"><dl><dt>2021-01-01  7.1.0-20  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-20 GIT revision 19...</li>
+<dt>2022-01-09  7.1.0-20  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added support for ARM64 to the Visual Studio build on Windows.</li>
+  <li> Removed ImageMagickObject from the Windows installer.</li>
+<dt>2021-01-01  7.1.0-20  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Support seamless blending of a foreground and background image.</li>
+  <li> Support saliency blending of a foreground and background image.</li>
+  <li> Support QOI image format.</li>
+  <li> Perist frame delay when converting APNG to Webp (reference    https://github.com/ImageMagick/ImageMagick/issues/4704).</li>
+  <li> -fx performance increase by one or two orders of magnitude (reference    https://github.com/ImageMagick/ImageMagick/discussions/4533).</li>
+  <li> Add support for formatted text (reference    https://github.com/ImageMagick/ImageMagick/discussions/4515).</li>
+<dt>2021-12-22  7.1.0-19  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-19 GIT revision 19456:d7f1b2b9b:20211222</li>
+<dt>2021-12-22  7.1.0-19  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Support -integral option.</li>
+  <li> Possible DoS for certain SVG constructs (reference    https://github.com/ImageMagick/ImageMagick/issues/4626).</li>
+<dt>2021-12-18  7.1.0-18  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-18 GIT revision 19447:6c7d62f7d:20211218</li>
+<dt>2021-12-11  7.1.0-18  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Support face index for font collections, e.g. msgothic.ttc[1].</li>
+<dt>2021-12-11  7.1.0-18  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Improved adjustment of page offset when resizing an image.</li>
+<dt>2021-12-04  7.1.0-17  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-17 GIT revision 19425:e66261ffe:20211204</li>
+<dt>2021-11-27  7.1.0-17  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Set threads to 1 when using ASAN to avoid false positive memory leaks.</li>
+<dt>2021-11-21  7.1.0-16  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-16 GIT revision 19398:7dc99d829:20211121</li>
+<dt>2021-11-21  7.1.0-16  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Fixed an OpenCL build problem.</li>
+<dt>2021-11-20  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-15 GIT revision 19380:8098f3335:20211120</li>
+<dt>2021-11-20  7.1.0-15  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
+  <li> Added support for reading extra channels in a PSD file (reference    https://github.com/ImageMagick/ImageMagick/issues/4499).</li>
 <dt>2021-11-15  7.1.0-15  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> fix alpha channel calculation of arithmetic divide compose operator.</li>
+  <li> Fix alpha channel calculation of arithmetic divide compose operator.</li>
 <dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
   <li> Release ImageMagick version 7.1.0-14 GIT revision 19349:2ba5cdf42:20211114</li>
 <dt>2021-11-13  7.1.0-14  &lt;quetzlzacatenango@image...&gt;</dt>
