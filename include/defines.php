@@ -376,6 +376,15 @@ use:</p>
   </tr>
 
   <tr>
+    <td>h:format=<var>value</var></td>
+    <td>Set the image encoding format use when writing a C-style header.
+    <var>format</var> can be any output format supported by ImageMagick
+    except for <var>h</var> and <var>magick</var>.  If this
+    option is omitted, the default is <var>GIF</var> for PseudoClass
+    images and <var>PNM</var> for DirectClass images.</td>
+  </tr>
+
+  <tr>
     <td>fourier:normalize=<var>inverse</var></td>
     <td>Set the location for the FFT/IFT normalization as use by
     <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fft">+-fft</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#ift">+-ift</a>. The default is
@@ -388,12 +397,8 @@ use:</p>
   </tr>
 
   <tr>
-    <td>h:format=<var>value</var></td>
-    <td>Set the image encoding format use when writing a C-style header.
-    <var>format</var> can be any output format supported by ImageMagick
-    except for <var>h</var> and <var>magick</var>.  If this
-    option is omitted, the default is <var>GIF</var> for PseudoClass
-    images and <var>PNM</var> for DirectClass images.</td>
+    <td>fx:debug=true</td>
+    <td>Debug <samp>-fx</samp> expression.</td>
   </tr>
 
   <tr>
