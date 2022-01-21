@@ -45,6 +45,52 @@
   -shadow 80x3+3+3 \) +swap -background none -layers merge \) -insert 0 -gravity center \
   -append -background white -gravity center -extent 320x200 cylinder_shaded.png</samp></pre></ul>
 
+<p>Run this script contributed by <a href="https://github.com/geemack">Geemack</a>.   You'll get a glimpse of the power and versatility of the ImageMagick command-line:</p>
+<ul><pre class="pre-scrollable bg-light text-dark"><samp>magick \
+   -background none \
+   -size 960x960 \
+   xc:black \
+   \( xc:darkred -duplicate 1 +append \) \
+   xc:gold \
+   \( xc:teal -duplicate 2 +append \) \
+   -modulate 100,100,"%[fx:rand()*200]" \
+   xc:white \
+   -scale x1 \
+   +append \
+   -write mpr:clut \
+   +delete \
+   radial-gradient: \
+   mpr:clut \
+   -clut \
+   -scale 100x4% \
+   -wave "%[fx:rand()*24+24]"x"%[fx:w/ceil(rand()*4+1)]" \
+   -extent "%[w]x%[w]" \
+   -roll +0+"%[fx:(rand()*w*0.05)+(w*0.51)]" \
+   \( +clone -blur 0x4 \) \
+   -insert 0 \
+   -composite \
+   -duplicate "%[fx:floor(rand()*3+3)*2-1]" \
+   -set option:rot "%[fx:180/n]" \
+   -virtual-pixel tile \
+   -virtual-pixel none \
+   -distort SRT "%[fx:t*360/n]" \
+   +repage \
+   -flatten \
+   -extent 100x50% \
+   \( +clone -rotate 180 \) \
+   -append \
+   +channel \
+   -virtual-pixel none \
+   -distort SRT "0.96 %[fx:rand()*360]" \
+   \( +clone -flop \) \
+   +repage \
+   -insert "%[fx:round(rand())]" \
+   -background black \
+   -flatten \
+   -brightness-contrast 20,20 \
+   -normalize \
+      dragonfire.png</samp></pre></ul>
+<p>Under Windows, change the backslash (\) to <samp>^</samp> and double-up the percent (%) signs.</p>
 <p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
 
 <p>See <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
