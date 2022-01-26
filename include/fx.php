@@ -184,8 +184,8 @@
     <dd class="col-md-8"> do(), for(), while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
-  <dt class="col-md-4"> image settings:</dt>
-  	<dd class="col-md-8"> .e.g. <samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp><dd>
+  <dt class="col-md-4"> user settings:</dt>
+  	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="bg-light text-dark"><samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp></pre><dd>
 </dl>
 
 <h4>The FX Expression</h4>
