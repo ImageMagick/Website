@@ -223,7 +223,7 @@ msl:font-metrics.origin.y
   </tr>
 
   <tr>
-    <td><strike>autoorient</strike></td>
+    <td>autoorient</td>
     <td> </td>
     <td>adjusts an image so that its orientation is suitable for viewing (i.e. top-left orientation)</td>
   </tr>
