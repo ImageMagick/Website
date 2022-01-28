@@ -183,7 +183,7 @@
   <dt class="col-md-4"> iterators:</dt>
     <dd class="col-md-8"> do(), for(), while()</dd>
   <dt class="col-md-4"> image attributes:</dt>
-  	<dd class="col-md-8"> image.depth, image.kurtosis, image.maxima, image.minima, image.resolution.x, image.resolution.y, image.skewness, image.standard_deviation</dd>
+  	<dd class="col-md-8"> s.depth, s.kurtosis, s.maxima, s.minima, s.resolution.x, s.resolution.y, s.skewness, s.standard_deviation</dd>
   <dt class="col-md-4"> user settings:</dt>
   	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="bg-light text-dark"><samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp></pre><dd>
 </dl>
@@ -214,7 +214,7 @@
 <dt class="col-md-4"> <samp>~</samp><var>x</var></dt><dd class="col-md-8"> logical NOT operator, return value 1.0 if <var>not</var> <var>x</var> &gt; 0,  otherwise 0.0</dd>
 <dt class="col-md-4"> <samp>+</samp><var>x</var></dt><dd class="col-md-8"> unary plus, return 1.0*value</dd>
 <dt class="col-md-4"> <samp>-</samp><var>x</var></dt><dd class="col-md-8"> unary minus, return -1.0*value</dd>
-<dt class="col-md-4"> <var>condition</var> <samp>?</samp> <var>true-statements</var> <samp>:</samp> <var>false-statements</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>true-statements</var> if <var>condition</var> != 0, otherwise <var>false-statements</var>; only one ternary conditional permitted per statement</dd>
+<dt class="col-md-4"> <var>condition</var> <samp>?</samp> <var>true-statements</var> <samp>:</samp> <var>false-statements</var> </dt><dd class="col-md-8">ternary conditional expression, return value <var>true-statements</var> if <var>condition</var> != 0, otherwise <var>false-statements</var></dd>
 <dt class="col-md-4"> <var>x</var> <samp>=</samp> <var>y</var></dt><dd class="col-md-8">assignment; single character variables are reserved, instead use 2 or more characters, letter combinations only (e.g. Xi not X1)</dd>
 <dt class="col-md-4"> <var>x</var> <samp>;</samp> <var>y</var></dt><dd class="col-md-8">statement separator </dd>
 <dt class="col-md-4"> <samp>phi</samp></dt><dd class="col-md-8"> constant (1.618034...)</dd>
