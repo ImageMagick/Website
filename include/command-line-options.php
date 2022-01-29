@@ -7092,7 +7092,7 @@ remove all the background from the image.  The amount of background that is
 tolerated in an edge specified as a percent.  0% means no background is tolerated.
 50% means an edge can contain up to 50% pixels that are background per the fuzz-factor.</p>
 
-<p>Use <samp><a href="#define">-define</a> trim:edges={north,east,south,west}</samp> separated by commas to only trim the specified edges of the image, e.g. <samp>-define trim:edges=north,south</samp>.</p>
+<p>Use <samp><a href="#define">-define</a> trim:edges={north,east,south,west}</samp> separated by commas to only trim the specified edges of the image, e.g. <samp>-define trim:edges=north,south -fuzz 5% -trim</samp>.</p>
 
 <p>Use <samp><a href="#background">-background</a> <em>background-color</em></samp> to
 identify background color surrounding the region of interest.</p>
