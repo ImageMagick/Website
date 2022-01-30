@@ -94,6 +94,8 @@
 
 <p>See <a href="https://legacy.imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
+<p>The <samp>-fx</samp> option replaces any image sequence with a clone of the first image updated with the results of the expression.  If you prefer to apply the expression to each image in the image sequence, use <samp>+fx</samp> instead.</p>
+
 <p>The next section discusses the FX expression language.</p>
 
 <h2><a class="anchor" id="anatomy"></a>The Anatomy of an FX Expression</h2>
