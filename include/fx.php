@@ -4,7 +4,7 @@
 
 <a class="anchor" id="fx"></a>
 
-<p class="lead magick-description">Use the <a href="http://im.snibgo.com/fxnew.htm" target="_blank">FX special effects image operator</a> to apply a mathematical expression to an image or image channels.  Use FX to:</p>
+<p class="lead magick-description">The <a href="http://im.snibgo.com/fxnew.htm" target="_blank">FX special effects image operator</a> applies a mathematical expression to each pixel channel of an image.  Use FX to:</p>
 
 <ul>
   <li>create canvases, gradients, mathematical colormaps</li>
@@ -14,6 +14,8 @@
   <li>convolve or merge neighboring pixels together</li>
   <li>generate image metrics or 'fingerprints'</li>
 </ul>
+
+<p>The operator loops through all the pixels of an image and all the channels of each pixel and returns a new image with the results.  The expression can reference any image in the image sequence, but only a copy of the first image is returned with suitable updates per your expression.</p>
 
 <p>The expression can be simple:</p>
 
