@@ -24,7 +24,7 @@ performed on multiple images stored in STL containers.
 </p>
 <h2>Documentation</h2>
 <a class="anchor" id="documentation"></a>
-<p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../api/magick++-classes.php">documentation</a> is
+<p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/index.html">documentation</a> is
 provided for all Magick++ classes, class methods, and template
 functions which comprise the API.  See a <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2>Obtaining Magick++</h2>
