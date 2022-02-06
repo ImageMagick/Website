@@ -7,12 +7,12 @@
 
 <p>We list a few examples of the <samp>conjure</samp> command here to illustrate its usefulness and ease of use. To get started, here is simple <samp>conjure</samp> command:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
+</samp></pre>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
 
-<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="bg-light text-dark mx-4"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;read filename="image.gif" /&gt;
   &lt;get width="base-width" height="base-height" /&gt;
@@ -21,11 +21,11 @@
   &lt;print output="Image sized from %[base-width]x%[base-height] to %[resize-width]x%[resize-height].\n" /&gt;
   &lt;write filename="image.png" /&gt;
 &lt;/image&gt;
-</samp></pre></ul>
+</samp></pre>
 
 <p>In this example, a family stayed home for their vacation but as far as their friends are concerned they went to a beautiful beach in the Caribbean:</p>
 
-<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre class="bg-light text-dark mx-4"><samp>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;group>
     &lt;image id="family">
         &lt;read filename="family.gif"/>
@@ -42,20 +42,20 @@
     &lt;/image>
     &lt;write filename="family-vacation.png"/>
 &lt;/group>
-</samp></pre></ul>
+</samp></pre>
 
 <p>Here we display the width in pixels of text for a particular font and pointsize.</p>
 
-<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="bg-light text-dark mx-4"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
   &lt;query-font-metrics text="ImageMagick" font="helvetica" pointsize="48" /&gt;
   &lt;print output="Text width is %[msl:font-metrics.width] pixels.\n" /&gt;
 &lt;/image&gt;
-</samp></pre></ul>
+</samp></pre>
 
 <p>The <samp>query-font-metrics</samp> tag supports these properties:</p>
 
-<ul><pre class="bg-light text-dark"><samp>msl:font-metrics.pixels_per_em.x
+<pre class="bg-light text-dark mx-4"><samp>msl:font-metrics.pixels_per_em.x
 msl:font-metrics.pixels_per_em.y
 msl:font-metrics.ascent
 msl:font-metrics.descent
@@ -68,7 +68,7 @@ msl:font-metrics.bounds.x2
 msl:font-metrics.bounds.y2
 msl:font-metrics.origin.x
 msl:font-metrics.origin.y
-</samp></pre></ul>
+</samp></pre>
 
 <p>MSL supports most methods and attributes discussed in the <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">Perl API for ImageMagick</a>.
 </p>

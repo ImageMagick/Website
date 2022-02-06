@@ -137,14 +137,14 @@
 
 <p>Other key value pairs are permitted.  If a value contains whitespace it must be enclosed with braces as illustrated here:</p>
 
-<ul><pre class="bg-light text-dark"><samp>id=ImageMagick
+<pre class="bg-light text-dark mx-4"><samp>id=ImageMagick
 class=PseudoClass  colors=256  matte=False
 columns=1280  rows=1024  depth=8
 compression=RLE
 colorspace=RGB
 copyright={© 1999-2017 ImageMagick Studio LLC}
 &#8942;
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note that <var>key = value</var> combinations may be separated by <var>newlines</var> or spaces and may occur in any order within the header.  Comments (within braces) may appear anywhere before the colon.</p>
 

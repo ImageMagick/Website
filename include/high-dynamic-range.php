@@ -19,14 +19,14 @@
 
 <p>To disable the HDRI version of ImageMagick, use this Linux/Linux command:</p>
 
-<ul><pre class="bg-light text-dark"><samp>./configure --disable-hdri
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>./configure --disable-hdri
+</samp></pre>
 
 <p>Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="https://imagemagick.org/script/install-source.php">Install from Windows Source</a>.</p>
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick identify -version
+<pre class="bg-light text-dark mx-4"><samp>magick identify -version
 Features: HDRI
-</samp></pre></ul>
+</samp></pre>
 </div>

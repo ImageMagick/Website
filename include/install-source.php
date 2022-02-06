@@ -4,8 +4,8 @@
 
 <p class="lead magick-description">Chances are, ImageMagick is already installed on your computer if you are using some flavor of Linux, and its likely not installed if you are using some form of Windows.  In either case, you can type the following to find out:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick identify -version
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>magick identify -version
+</samp></pre>
 
 <p>If the <a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="<?php echo $_SESSION['RelativePath']?>/../script/changelog.php">changes</a> to the ImageMagick distribution.</p>
 
@@ -29,23 +29,23 @@
 <?php crt("./configure --with-modules"); ?>
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
-<ul><pre class="bg-light text-dark"><samp>sudo make install
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>sudo make install
+</samp></pre>
 
 <p>You may need to configure the dynamic linker run-time bindings:</p>
 
-<ul><pre class="bg-light text-dark"><samp>sudo ldconfig /usr/local/lib
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>sudo ldconfig /usr/local/lib
+</samp></pre>
 
 <p>Finally, verify the ImageMagick install worked properly, type</p>
 
-<ul><pre class="bg-light text-dark"><samp>/usr/local/bin/convert logo: logo.gif
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>/usr/local/bin/convert logo: logo.gif
+</samp></pre>
 
 <p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript and Freetype are prerequisites, otherwise expect the EPS, PS, PDF and text annotations tests to fail.</p>
 
-<ul><pre class="bg-light text-dark"><samp>make check
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>make check
+</samp></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://legacy.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
@@ -57,12 +57,12 @@
 
 <p>Clone the Github repo:<p>
 
-<ul><pre class="bg-light text-dark"><samp>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</samp></pre>
 
 
 <p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://download.imagemagick.org/ImageMagick/download/windows">ImageMagick-Windows.zip</a> from <a href="https://download.imagemagick.org/ImageMagick/download/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/ImageMagick/download/digest.rdf">message digest</a>.</p>
 
-<ul><pre class="bg-light text-dark"><samp>unzip ImageMagick-windows.zip</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>unzip ImageMagick-windows.zip</samp></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
 <p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
@@ -79,8 +79,8 @@ to compile the program and on completion run the program.</p>
 <p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call Magick/convert from any directory.<p>
 <p>For a more comprehensive test, run the ImageMagick validation suite:</p>
 
-<ul><pre class="bg-light text-dark"><samp>validate
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>validate
+</samp></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://legacy.imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 

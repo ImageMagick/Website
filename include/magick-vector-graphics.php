@@ -5,10 +5,10 @@
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="develop.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
+<pre class="bg-light text-dark mx-4"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
-</samp></pre></ul>
+</samp></pre>
 
 <p>and here is the result:</p>
 
@@ -18,7 +18,7 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
 
 <p>When the drawing gets sufficiently complex, we recommend you assemble the graphic primitives into a MVG file. For our example, we use <a href="../source/piechart.mvg">piechart.mvg</a>:</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><samp>push graphic-context
+<pre class="pre-scrollable bg-light text-dark mx-4"><samp>push graphic-context
   viewbox 0 0 624 369
   affine 0.283636 0 0 0.283846 -0 -0
   push graphic-context
@@ -168,12 +168,12 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
     pop graphic-context
   pop graphic-context
 pop graphic-context
-</samp></pre></ul>
+</samp></pre>
 
 <p>to render a pie chart with this command:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick mvg:piechart.mvg piechart.png
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>magick mvg:piechart.mvg piechart.png
+</samp></pre>
 
 <p>which produces this rendering:</p>
 
@@ -183,15 +183,15 @@ pop graphic-context
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick mvg:piechart.svg piechart.jpg
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>magick mvg:piechart.svg piechart.jpg
+</samp></pre>
 
 
 <p>to produce the same pie chart we created with the MVG language.</p>
 
 <p>Drawing is available from many of the ImageMagick <a href="develop.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.php">MagickWand</a> language: </p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><samp>(void) PushDrawingWand(draw_wand);
+<pre class="pre-scrollable bg-light text-dark mx-4"><samp>(void) PushDrawingWand(draw_wand);
 {
   const PointInfo points[6] =
   {
@@ -216,7 +216,7 @@ pop graphic-context
   DrawPolygon(draw_wand,6,points);
 }
 (void) PopDrawingWand(draw_wand);
-</samp></pre></ul>
+</samp></pre>
 
 <h2><a class="anchor" id="overview"></a>MVG Overview</h2>
 
@@ -224,24 +224,24 @@ pop graphic-context
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
-<ul><pre class="bg-light text-dark"><samp>push graphic-context
+<pre class="bg-light text-dark mx-4"><samp>push graphic-context
   viewbox 0 0 width height
   [ any other MVG commands ]
 pop graphic-context
-</samp></pre></ul>
+</samp></pre>
 
 <p>Pattern syntax (saving and restoring context):</p>
 
-<ul><pre class="bg-light text-dark"><samp>push pattern id x,y width,height
+<pre class="bg-light text-dark mx-4"><samp>push pattern id x,y width,height
  push graphic-context
   [ drawing commands ]
  pop graphic-context
 pop pattern
-</samp></pre></ul>
+</samp></pre>
 
 <p>an example is (%s is a identifier string):</p>
 
-<ul><pre class="bg-light text-dark"><samp>push defs
+<pre class="bg-light text-dark mx-4"><samp>push defs
  push pattern %s 10,10 20,20
   push graphic-context
    fill red
@@ -253,28 +253,28 @@ pop pattern
   pop graphic-context
  pop pattern
 pop defs
-</samp></pre></ul>
+</samp></pre>
 
 <p>For image tiling use:</p>
 
-<ul><pre class="bg-light text-dark"><samp>push pattern id x,y width,height
+<pre class="bg-light text-dark mx-4"><samp>push pattern id x,y width,height
  image Copy ...
 pop pattern
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note you can use the pattern for either the fill or stroke like:</p>
 
-<ul><pre class="bg-light text-dark"><samp>stroke url(#%s)
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>stroke url(#%s)
+</samp></pre>
 
 <p>or</p>
 
-<ul><pre class="bg-light text-dark"><samp>fill url(#%s)
-</samp></pre></ul>
+<pre class="bg-light text-dark mx-4"><samp>fill url(#%s)
+</samp></pre>
 
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
-<ul><pre class="bg-light text-dark"><samp>push defs
+<pre class="bg-light text-dark mx-4"><samp>push defs
  push clip-path "myClipPath"
   push graphic-context
    rectangle 10,10 20,20
@@ -282,7 +282,7 @@ pop pattern
  pop clip-path
 pop defs
 clip-path url(#myClipPath)
-</samp></pre></ul>
+</samp></pre>
 
 <h2><a class="anchor" id="primitives"></a>Drawing Primitives</h2>
 
@@ -324,24 +324,24 @@ clip-path url(#myClipPath)
   <tr>
     <td><a class="anchor" id="clip-rule"></a>clip-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<ul><pre class="bg-light text-dark"><samp>evenodd
-nonzero</samp></pre></ul></td>
+<pre class="bg-light text-dark mx-4"><samp>evenodd
+nonzero</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="clip-units"></a>clip-units <var>units</var></td>
     <td>Choose from these unit types:
-<ul><pre class="bg-light text-dark"><samp>userSpace
+<pre class="bg-light text-dark mx-4"><samp>userSpace
 userSpaceOnUse
-objectBoundingBox</samp></pre></ul></td>
+objectBoundingBox</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="color"></a>color <var>x</var>,<var>y</var> <var>method</var></td>
     <td>Choose from these method types:
-<ul><pre class="bg-light text-dark"><samp>point
+<pre class="bg-light text-dark mx-4"><samp>point
 replace
 floodfill
 filltoborder
-reset</samp></pre></ul></td>
+reset</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="compliance"></a>compliance <var>type</var></td>
@@ -350,10 +350,10 @@ reset</samp></pre></ul></td>
   <tr>
     <td><a class="anchor" id="decorate"></a>decorate <var>type</var></td>
     <td>Choose from these types of decorations:
-<ul><pre class="bg-light text-dark"><samp>none
+<pre class="bg-light text-dark mx-4"><samp>none
 line-through
 overline
-underline</samp></pre></ul></td>
+underline</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="ellipse"></a>ellipse <var>center<sub>x</sub></var>,<var>center<sub>y</sub></var>   <var>radius<sub>x</sub></var>,<var>radius<sub>y</sub></var>   <var>arc<sub>start</sub></var>,<var>arc<sub>stop</sub></var></td>
@@ -370,8 +370,8 @@ underline</samp></pre></ul></td>
   <tr>
     <td><a class="anchor" id="fill-rule"></a>fill-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<ul><pre class="bg-light text-dark"><samp>evenodd
-nonzero</samp></pre></ul></td>
+<pre class="bg-light text-dark mx-4"><samp>evenodd
+nonzero</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="font"></a>font <var>name</var></td>
@@ -388,7 +388,7 @@ nonzero</samp></pre></ul></td>
   <tr>
     <td><a class="anchor" id="font-stretch"></a>font-stretch <var>type</var></td>
     <td>Choose from these stretch types:
-<ul><pre class="bg-light text-dark"><samp>all
+<pre class="bg-light text-dark mx-4"><samp>all
 normal
 ultra-condensed
 extra-condensed
@@ -397,20 +397,20 @@ semi-condensed
 semi-expanded
 expanded
 extra-expanded
-ultra-expanded</samp></pre></ul></td>
+ultra-expanded</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="font-style"></a>font-style <var>style</var></td>
     <td>Choose from these styles:
-<ul><pre class="bg-light text-dark"><samp>all
+<pre class="bg-light text-dark mx-4"><samp>all
 normal
 italic
-oblique</samp></pre></ul></td>
+oblique</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="font-weight"></a>font-weight <var>weight</var></td>
     <td>Choose from these weights:
-<ul><pre class="bg-light text-dark"><samp>all
+<pre class="bg-light text-dark mx-4"><samp>all
 normal
 bold
 100
@@ -421,19 +421,19 @@ bold
 600
 700
 800
-900</samp></pre></ul></td>
+900</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="gradient-units"></a>gradient-units <var>units</var></td>
     <td>Choose from these units:
-<ul><pre class="bg-light text-dark"><samp>userSpace
+<pre class="bg-light text-dark mx-4"><samp>userSpace
 userSpaceOnUse
-objectBoundingBox</samp></pre></ul></td>
+objectBoundingBox</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="gravity"></a>gravity <var>type</var></td>
     <td>Choose from these gravity types:
-<ul><pre class="bg-light text-dark"><samp>NorthWest
+<pre class="bg-light text-dark mx-4"><samp>NorthWest
 North
 NorthEast
 West
@@ -441,7 +441,7 @@ Center
 East
 SouthWest
 South
-SouthEast</samp></pre></ul></td>
+SouthEast</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="compose"></a>image <var>compose x,y width,height 'filename'</var></td>
@@ -636,11 +636,11 @@ SouthEast</samp></pre></ul></td>
   <tr>
     <td><a class="anchor" id="matte"></a>matte <var>x,y method</var></td>
     <td>Choose from these methods:
-<ul><pre class="bg-light text-dark"><samp>point
+<pre class="bg-light text-dark mx-4"><samp>point
 replace
 floodfill
 filltoborder
-reset</samp></pre></ul></td>
+reset</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="offset"></a>offset <var>offset</var></td>
@@ -757,16 +757,16 @@ reset</samp></pre></ul></td>
   <tr>
     <td><a class="anchor" id="stroke-linecap"></a>stroke-linecap <var>type</var></td>
     <td>Choose from these cap types:
-<ul><pre class="bg-light text-dark"><samp>butt
+<pre class="bg-light text-dark mx-4"><samp>butt
 round
-square</samp></pre></ul></td>
+square</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="stroke-linejoin"></a>stroke-linejoin <var>type</var></td>
     <td>Choose from these join types:
-<ul><pre class="bg-light text-dark"><samp>bevel
+<pre class="bg-light text-dark mx-4"><samp>bevel
 miter
-round</samp></pre></ul></td>
+round</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="stroke-miterlimit"></a>stroke-miterlimit <var>limit</var></td>
