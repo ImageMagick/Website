@@ -4,14 +4,14 @@
 
 <p>Here is an example script:</p>
 
-<ul><pre class="bg-light text-dark"><samp>#!/bin/env magick-script
+<pre class="bg-light text-dark"><samp>#!/bin/env magick-script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</samp></pre></ul>
+</samp></pre>
 
 <p>Or use the <samp>magick</samp> utility with the scripting option like this:</p>
-<ul><pre class="bg-light text-dark"></samp>#!/bin/magick -script
+<pre class="bg-light text-dark"></samp>#!/bin/magick -script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
-</samp></pre></ul>
+</samp></pre>
 
 <p>You can find additional examples of using <samp>magick-script</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

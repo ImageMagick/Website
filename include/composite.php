@@ -8,7 +8,7 @@
 
 <p>We list a few examples of the <samp>composite</samp> command here to illustrate its usefulness and ease of use.  To get started, lets overlay a smiley face over a rose:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick composite -gravity center smile.gif  rose: rose-over.png </samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick composite -gravity center smile.gif  rose: rose-over.png </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/smile.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/smile.gif" width="48" height="48" alt="smile" /></a>
@@ -20,10 +20,10 @@
 
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
+<pre class="bg-light text-dark"><samp>magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
 magick -size 70x70 canvas:none -draw 'circle 35,35 35,20' -negate \
   -channel A -gaussian-blur 0x8 white-highlight.png
-magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre></ul>
+magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/white-highlight.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/white-highlight.png" width="70" height="70" alt="white highlight" /></a>
@@ -34,12 +34,12 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
 </ul>
 
 <p>Or suppose you want to blend a bear into a stream <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamlessly</a>.  Try this command:</p>
-<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 \
-  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 \
+  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre>
 <p>The mask marks the area around the bear to blend.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
-<ul><pre class="bg-light text-dark"><samp>magick -verbose stream.jpg \( bear.jpg -read-mask only_bear.png \) bear_mask.png \
+<pre class="bg-light text-dark"><samp>magick -verbose stream.jpg \( bear.jpg -read-mask only_bear.png \) bear_mask.png \
   -define compose:args=400x0.0002+100 -compose seamless-blend -geometry +30+30 -composite \
-  bear-in-stream.png </samp></pre></ul>
+  bear-in-stream.png </samp></pre>
 <p>Here we create read mask that marks the foreground object from its background. No blending is applied to the foreground object, just its surroundings. The read-mask preserves the colors of the bear and prevents them from lightening as in the first example. Note that read-masks must be black on white background as opposed to normal masks, which are white on black background.</p>
 
 <p>You can find additional examples of using <samp>composite</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>

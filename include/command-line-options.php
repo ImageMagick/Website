@@ -59,8 +59,8 @@ strings, such as '<samp>%d</samp>' or '<samp>%03d</samp>', are familiar to those
 who have used the standard <samp>printf()</samp>' C-library function. As an
 example, the command</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg
+</samp></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
 <a href="#morph">-morph</a>), named: my00morph.jpg, my01morph.jpg,
@@ -120,20 +120,20 @@ href="#distort">-distort</a> method '<samp>Affineprojection</samp> for more
 information </p>
 
 
-<ul><pre class="bg-light text-dark"><samp>-affine <var>s<sub>x</sub></var>,0,0,<var>s<sub>y</sub></var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-affine <var>s<sub>x</sub></var>,0,0,<var>s<sub>y</sub></var>
+</samp></pre>
 
 <p>Translation by a displacement (<var>t<sub>x</sub></var>, <var>t<sub>y</sub></var>) is accomplished like so:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-affine 1,0,0,1,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-affine 1,0,0,1,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>
+</samp></pre>
 
 <p>Rotate clockwise about the origin (the upper left-hand corner) by an angle
 <var>a</var> by letting <var>c</var> = cos(<var>a</var>), <var>s</var>
 = sin(<var>a</var>), and using the following.</p>
 
-<ul><pre class="bg-light text-dark"><samp>-affine <var>c</var>,<var>s</var>,-<var>s</var>,<var>c</var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-affine <var>c</var>,<var>s</var>,-<var>s</var>,<var>c</var>
+</samp></pre>
 
 <p>The cumulative effect of a sequence of <a href="#affine" >-affine</a>
 transformations can be accomplished by instead by a single <a href="#affine"
@@ -459,13 +459,13 @@ consider the following command and its output.  Modify the benchmark with the
 -duration to run the benchmark for a fixed number of seconds and -concurrent
 to run the benchmark in parallel (requires the OpenMP feature).</p>
 
-<ul><pre class="bg-light text-dark"><samp>$ magick logo: -resize 200% -bench 5 logo.png
+<pre class="bg-light text-dark"><samp>$ magick logo: -resize 200% -bench 5 logo.png
 Performance[1]: 5i 1.344ips 1.000e 3.710u 0:03.720
 Performance[2]: 5i 1.634ips 0.549e 3.890u 0:03.060
 Performance[3]: 5i 2.174ips 0.618e 3.190u 0:02.300
 Performance[4]: 5i 1.678ips 0.555e 3.810u 0:02.980
 Performance[4]: 5i 0.875657ips 6.880u 0:05.710
-</samp></pre></ul>
+</samp></pre>
 
 <p>In this example, 5 iterations were completed at 2.174 iterations per
 second, using 3 threads and 3.190 seconds of the user allotted time, for
@@ -753,8 +753,8 @@ instead.</p>
 
 <p>For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-caption "%m:%f %wx%h"  bird.miff
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-caption "%m:%f %wx%h"  bird.miff
+</samp></pre>
 
 <p>produces an image caption of <samp>MIFF:bird.miff 512x480</samp> (assuming
 that the image <samp>bird.miff</samp> has a width of 512 and a height of
@@ -769,7 +769,7 @@ that the image <samp>bird.miff</samp> has a width of 512 and a height of
 
 <p>Here is an example color correction collection:</p>
 
-<ul><pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;ColorCorrectionCollection xmlns="urn:ASC:CDL:v1.2"&gt;
   &lt;ColorCorrection id="cc06668"&gt;
     &lt;SOPNode&gt;
@@ -782,7 +782,7 @@ that the image <samp>bird.miff</samp> has a width of 512 and a height of
     &lt;/SATNode&gt;
   &lt;/ColorCorrection&gt;
 &lt;/ColorCorrectionCollection&gt;
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="channel"></a>-channel <var>type</var></h2>
@@ -813,12 +813,12 @@ abbreviated as a concatenation of the letters '<samp>R</samp>', '<samp>G</samp>'
 
 <p>For example, to only select the <samp>Red</samp> and <samp>Blue</samp> channels
 you can use any of the following:</p>
-<ul><pre class="bg-light text-dark">
+<pre class="bg-light text-dark">
 <samp>-channel Red,Blue</samp>
 <samp>-channel R,B</samp>
 <samp>-channel RB</samp>
 <samp>-channel 0,2</samp>
-</pre></ul>
+</pre>
 
 <p>All the channels that are present in an image can be specified using the
 special channel type <samp>All</samp>. Not all operators are 'channel capable',
@@ -928,28 +928,28 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p>The expression consists of one or more channels, either mnemonic or numeric (e.g. red or 0, green or 1, etc.), separated by certain operation symbols as follows:</p>
 
-<ul><pre class="bg-light text-dark"><samp>&lt;=&gt;  exchange two channels (e.g. red&lt;=&gt;blue)
+<pre class="bg-light text-dark"><samp>&lt;=&gt;  exchange two channels (e.g. red&lt;=&gt;blue)
 =&gt;   copy one channel to another channel (e.g. red=&gt;green)
 =    assign a constant value to a channel (e.g. red=50%)
 ,    write new image with channels in the specified order (e.g. red, green)
 ;    add a new output image for the next set of channel operations (e.g. red; green; blue)
 |    move to the next input image for the source of channel data (e.g. | gray=>alpha)
-</samp></pre></ul>
+</samp></pre>
 
 <p>For example, to create 3 grayscale images from the red, green, and blue channels of an image, use:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-channel-fx "red; green; blue"</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-channel-fx "red; green; blue"</samp></pre>
 
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<ul><pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
+</samp></pre>
 <p>Use a similar command to define a read mask:</p>
-<ul><pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre>
 
 <p>In this example, we compute the mean RGB value for all opaque pixels of an image:</p>
-<ul><pre class="bg-light text-dark"><samp>magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</samp></pre>
 
 <p>Add <samp>-debug pixel</samp> prior to the <samp>-channel-fx</samp> option to track the channel morphology.</p>
 
@@ -1008,8 +1008,8 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
 
 <p>For example, in the command</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick cockatoo.tif -clip -negate negated.tif
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick cockatoo.tif -clip -negate negated.tif
+</samp></pre>
 
 <p>only the pixels within the clipping path are negated.</p>
 
@@ -1193,14 +1193,14 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <p>As an example, to add contrast to an image with offsets, try this command:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick kittens.jpg -color-matrix \
+<pre class="bg-light text-dark"><samp>magick kittens.jpg -color-matrix \
   " 1.5 0.0 0.0 0.0, 0.0, -0.157 \
     0.0 1.5 0.0 0.0, 0.0, -0.157 \
     0.0 0.0 1.5 0.0, 0.0, -0.157 \
     0.0 0.0 0.0 1.0, 0.0,  0.0 \
     0.0 0.0 0.0 0.0, 1.0,  0.0 \
     0.0 0.0 0.0 0.0, 0.0,  1.0" kittens.png
-</samp></pre></ul>
+</samp></pre>
 <div style="margin: auto;">
   <h2><a class="anchor" id="colorspace"></a>-colorspace <var>value</var></h2>
 </div>
@@ -1209,7 +1209,7 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <p>Choices are:</p>
 
-<ul><pre class="bg-light text-dark"><samp>CMY          CMYK         Gray         HCL
+<pre class="bg-light text-dark"><samp>CMY          CMYK         Gray         HCL
 HCLp         HSB          HSI          HSL
 HSV          HWB          Jzazbz       Lab
 LCHab        LCHuv        LMS          Log
@@ -1218,7 +1218,7 @@ RGB          scRGB        sRGB         Transparent
 xyY          XYZ          YCbCr        YCC
 YDbDr        YIQ          YPbPr        YUV
 Undefined
-</samp></pre></ul>
+</samp></pre>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
 
@@ -1352,10 +1352,10 @@ href="#separate">-separate</a>, so long as the channel settings are the same.
 Thus, in the following example, the final image should be a copy of the
 original.  </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick original.png -channel RGB -separate sepimage.png
+<pre class="bg-light text-dark"><samp>magick original.png -channel RGB -separate sepimage.png
 convert sepimage-0.png sepimage-1.png sepimage-2.png -channel RGB \
   -combine imagecopy.png
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="comment"></a>-comment <var>string</var></h2>
@@ -1382,8 +1382,8 @@ instead.</p>
 
 <p>For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-comment "%m:%f %wx%h"  bird.miff
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-comment "%m:%f %wx%h"  bird.miff
+</samp></pre>
 
 <p>produces an image comment of <samp>MIFF:bird.miff 512x480</samp> (assuming
 that the image <samp>bird.miff</samp> has a width of 512 and a height of
@@ -1397,14 +1397,14 @@ that the image <samp>bird.miff</samp> has a width of 512 and a height of
 
 <p>This is a convert version of "<samp>compare</samp>" for two same sized images. The syntax is as follows, but other metrics are allowed.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png reference.png -metric RMSE -compare \ <br/> difference.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.png reference.png -metric RMSE -compare \ <br/> difference.png
+</samp></pre>
 
 <p>To get the metric value use the string format "%[distortion]".</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png reference.png -metric RMSE -compare -format \
+<pre class="bg-light text-dark"><samp>magick image.png reference.png -metric RMSE -compare -format \
    "%[distortion]" info:
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="complex"></a>-complex <var>operator</var></h2>
@@ -1414,14 +1414,14 @@ that the image <samp>bird.miff</samp> has a width of 512 and a height of
 
 Choose from these operators:
 
-<ul><pre class="bg-light text-dark"><samp>add
+<pre class="bg-light text-dark"><samp>add
 conjugate
 divide
 magnitude-phase
 multiply
 real-imaginary
 subtract
-</samp></pre></ul>
+</samp></pre>
 
 <p>Optionally specify the <samp>divide</samp> operator SNR with <samp><a href="#define">-define</a> complex:snr=float</samp>.</p>
 
@@ -1538,8 +1538,8 @@ contrast.</p>
 
 <p>For a more pronounced effect you can repeat the option:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose: -contrast -contrast rose_c2.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick rose: -contrast -contrast rose_c2.png
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="contrast-stretch"></a>-contrast-stretch <var>black-point</var><br />-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h2>
@@ -1693,8 +1693,8 @@ a comma-separated list consisting of one or more of the following domains:
 
 <p>For example, to log cache and blob events, use.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -debug "Cache,Blob" rose: rose.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick -debug "Cache,Blob" rose: rose.png
+</samp></pre>
 
 <p>The <samp>User</samp> domain is normally empty, but developers can log user
 events in their private copy of ImageMagick.</p>
@@ -1778,15 +1778,15 @@ is case-dependent.</p>
 
 <p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
+</samp></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
 <samp>registry:</samp>.  For example, to set a temporary path to put work files,
 use:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-define registry:temporary-path=/data/tmp
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-define registry:temporary-path=/data/tmp
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="delay"></a>-delay <var>ticks</var> <br />-delay <var>ticks</var>x<var>ticks-per-second</var> {<var>&lt;</var>} {<var>&gt;</var>}</h2>
@@ -2349,10 +2349,10 @@ perspective distortion of the built-in "rose:" image. Note how spaces were
 used to group the 4 sets of coordinate pairs, to make it easier to read and
 understand.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose:  -virtual-pixel black \
+<pre class="bg-light text-dark"><samp>magick rose:  -virtual-pixel black \
   -distort Perspective '0,0,0,0  0,45,0,45  69,0,60,10  69,45,60,35' \
    rose_3d_rotated.gif"
-</samp></pre></ul>
+</samp></pre>
 
 <p>If more that the required number of coordinate pairs are given for
 a distortion, the distortion method is 'least squares' fitted to produce the
@@ -2373,10 +2373,10 @@ images become smaller (minified) in the output, which is very common when
 using '<samp>perspective</samp>' distortion. For example here we view
 a infinitely tiled 'plane' all the way to the horizon. </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
+<pre class="bg-light text-dark"><samp>magick -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
   -distort perspective  '0,0,5,45  89,0,45,46  0,89,0,89  89,89,89,89' \
    checks_tiled.jpg
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note that a infinitely tiled perspective images involving the horizon can
 be very slow, because of the number of pixels that are compressed to generate
@@ -2580,8 +2580,8 @@ optional comma. </p>
 <p>As an example, to define a circle centered at 100,100 that extends to
 150,150 use:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-draw 'circle 100,100 150,150'
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-draw 'circle 100,100 150,150'
+</samp></pre>
 
 <p>The <samp>Bezier</samp> primitive creates a spline curve and requires three
 or points to define its shape. The first and last points are the
@@ -2597,9 +2597,9 @@ to draw complex curves, it is highly recommended either to use the
 <samp>path</samp> primitive or to draw multiple four-point bezier segments with
 the start and end knots of each successive segment repeated. For example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-draw 'bezier 20,50 45,100 45,0 70,50'
+<pre class="bg-light text-dark"><samp>-draw 'bezier 20,50 45,100 45,0 70,50'
 -draw 'bezier 70,50 95,100 95,0 120,50'
-</samp></pre></ul>
+</samp></pre>
 
 <p>A <samp>path</samp> represents an outline of an object, defined in terms of
 moveto (set a new current point), lineto (draw a straight line), curveto (draw
@@ -2614,8 +2614,8 @@ href="http://www.w3.org/TR/SVG/paths.html">Paths</a>.)</p>
 image keyword with the composite operator, image location, image size, and
 filename:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-draw 'image SrcOver 100,100 225,225 image.jpg'
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-draw 'image SrcOver 100,100 225,225 image.jpg'
+</samp></pre>
 
 <p>You can use 0,0 for the image size, which means to use the actual
 dimensions found in the image header. Otherwise, it is scaled to the given
@@ -2634,7 +2634,7 @@ single or double quotes.</p>
 <p>For example, the following annotates the image with <samp>Works like
 magick!</samp> for an image titled <samp>bird.miff</samp>. </p>
 
-<ul><pre class="bg-light text-dark"><samp>-draw "text 100,100 'Works like magick!'"</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-draw "text 100,100 'Works like magick!'"</samp></pre>
 
 <p>See the <a href="#annotate">-annotate</a> option for another convenient way
 to annotate an image with text.</p>
@@ -2642,7 +2642,7 @@ to annotate an image with text.</p>
 <p>The <samp>rotate</samp> primitive rotates subsequent shape primitives and
 text primitives about the origin of the main image:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-draw "rotate 45 text 10,10 'Works like magick!'"</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-draw "rotate 45 text 10,10 'Works like magick!'"</samp></pre>
 
 <p>The <samp>translate</samp> primitive translates subsequent shape and text
 primitives.</p>
@@ -2664,12 +2664,12 @@ reinitialized from the initial affine matrix.</p>
 fill color (see <a href="#fill">-fill</a>). Follow the pixel coordinate with
 a method:</p>
 
-<ul><pre class="bg-light text-dark"><samp>point
+<pre class="bg-light text-dark"><samp>point
 replace
 floodfill
 filltoborder
 reset
-</samp></pre></ul>
+</samp></pre>
 
 <p>Consider the target pixel as that specified by your coordinate. The
 <samp>point</samp> method recolors the target pixel. The <samp>replace</samp>
@@ -2751,13 +2751,13 @@ Decipher an Image</a>.</p>
 
 <p>Choose from</p>
 
-<ul><pre class="bg-light text-dark"><samp>AdobeCustom     AdobeExpert
+<pre class="bg-light text-dark"><samp>AdobeCustom     AdobeExpert
 AdobeStandard   AppleRoman
 BIG5            GB2312
 Latin 2         None
 SJIScode        Symbol
 Unicode         Wansung
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="endian"></a>-endian <var>type</var></h2>
@@ -2975,9 +2975,9 @@ specify how to compose the image with the background, use <a href="#compose"
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick input.jpg -resize 800x600 -background black -compose Copy \
+<pre class="bg-light text-dark"><samp>magick input.jpg -resize 800x600 -background black -compose Copy \
   -gravity center -extent 800x600 -quality 92 output.jpg
-</samp></pre></ul>
+</samp></pre>
 
 <p>The command can also be used with a ratio. If the image is not already at that ratio,
 it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has
@@ -2985,8 +2985,8 @@ the expected effects.
   
 <p>The following command crops a JPEG image so that it has a 4:3 ratio:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
+</samp></pre>
   
 <p><?php seeGeometry(); ?></p>
 
@@ -2999,23 +2999,23 @@ the expected effects.
 <p>This option is most useful for extracting a subregion of a very large raw
 image.  Note that these two commands are equivalent:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \
+<pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \
   image.rgb image.png",
 convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
   image.rgb image.png"
-</samp></pre></ul>
+</samp></pre>
 
 <p>If you omit the offsets, as in</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -extract 640x480 \
+<pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -extract 640x480 \
   image.rgb image.png
-</samp></pre></ul>
+</samp></pre>
 
 <p>the image is <var>resized</var> to the specified dimensions instead,
 equivalent to:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
+</samp></pre>
 
 <p><?php seeGeometry(); ?></p>
 
@@ -3043,14 +3043,14 @@ and <a href="command-line-options.php#weight">-weight</a>.  </p>
 
 <p class="magick-description">Display (co-occurrence matrix) texture measure features for each channel in the image in each of four directions (horizontal, vertical, left and right diagonals) for the specified distance.</p>
 
-<ul><pre class="bg-light text-dark"><samp>Angular Second Moment       Sum Entropy
+<pre class="bg-light text-dark"><samp>Angular Second Moment       Sum Entropy
 Contrast                    Entropy
 Correlation                 Difference Variance
 Sum of Squares Variance     Difference Entropy
 Inverse Difference Moment   Information Measure of Correlation 1
 Sum Average                 Information Measure of Correlation 2
 Sum Variance                Maximum Correlation Coefficient
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="fft"></a>-fft</h2>
@@ -3086,14 +3086,14 @@ formats that do not limit the color or compress the image. Thus, MIFF, TIF,
 PFM, EXR and PNG are the recommended image formats to use. All of these
 formats, except PNG support multi-frame images. So for example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png -fft fft_image.miff
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.png -fft fft_image.miff
+</samp></pre>
 
 <p>generates a magnitude image as <samp>fft_image.miff[0]</samp> and a phase
 image as <samp>fft_image.miff[1]</samp>. Similarly,</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png -fft fft_image.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.png -fft fft_image.png
+</samp></pre>
 
 <p>generates a magnitude image as <samp>fft_image-0.png</samp> and a phase image
 as <samp>fft_image-1.png</samp>. If you prefer this representation, then you can
@@ -3118,9 +3118,9 @@ function into what is usually called the spectrum. A log function is used to
 enhance the darker values more in comparison to the lighter values. This can
 be done, for example, as follows:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick fft_image.miff[0] -contrast-stretch 0 \
+<pre class="bg-light text-dark"><samp>magick fft_image.miff[0] -contrast-stretch 0 \
   -evaluate log 1000 fft_image_spectrum.png"
-</samp></pre></ul>
+</samp></pre>
 
 <p>where either <a href="#contrast-stretch">-contrast-stretch</a> 0 or <a
 href="#auto-level">-auto-level</a> is used to scale the image to full dynamic
@@ -3177,10 +3177,10 @@ the parentheses from being interpreted by your shell.</p>
 
 <p>For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-fill blue
+<pre class="bg-light text-dark"><samp>-fill blue
 -fill "#ddddff"
 -fill "rgb(255,255,255)"
-</samp></pre></ul>
+</samp></pre>
 
 <p>See <a href="#draw">-draw</a> for further details.</p>
 
@@ -3196,11 +3196,11 @@ the parentheses from being interpreted by your shell.</p>
 operations such as <a href="#resize">-resize</a> and <a href="#distort"
 >-distort</a>. For example you can use a simple resize filter such as:</p>
 
-<ul><pre class="bg-light text-dark"><samp>Point       Hermite       Cubic
+<pre class="bg-light text-dark"><samp>Point       Hermite       Cubic
 Box         Gaussian      Catrom
 Triangle    Quadratic     Mitchell
 CubicSpline
-</samp></pre></ul>
+</samp></pre>
 
 <p>Use <samp>-define filter:lobes={2,3,4}</samp> to specify the support size for filtering for the <samp>CubicSpline</samp> filter.</p>
 
@@ -3215,10 +3215,10 @@ function that the <a href="#filter" >-filter</a> setting defines.   That is
 using these functions will define a 'Windowed' filter, appropriate to the
 operator involved.  Windowed filters include: </p>
 
-<ul><pre class="bg-light text-dark"><samp>Lanczos       Hamming       Parzen
+<pre class="bg-light text-dark"><samp>Lanczos       Hamming       Parzen
 Blackman      Kaiser        Welsh
 Hanning       Bartlett      Bohman
-</samp></pre></ul>
+</samp></pre>
 
 <p>Also one special self-windowing filter is also provided
 <samp>Lagrange</samp>, which will automagically re-adjust its function depending
@@ -3353,26 +3353,26 @@ href="#set" >-set</a>):-</p>
 
 <p>For example, to get a 8 lobe jinc windowed sinc filter (Genseng filter?):</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png \
+<pre class="bg-light text-dark"><samp>magick image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
   -resize 150% image.jpg"
-</samp></pre></ul>
+</samp></pre>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png \
+<pre class="bg-light text-dark"><samp>magick image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
   -resize 150% image.jpg"
-</samp></pre></ul>
+</samp></pre>
 
 <p>To extract the data for a raw windowing function, combine it with
 a '<samp>Box</samp>' filter.  For example the '<samp>Welch</samp> parabolic
 windowing function. </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick null: -define filter:filter=Box \
+<pre class="bg-light text-dark"><samp>magick null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
   -define filter:verbose=1 \
@@ -3380,7 +3380,7 @@ windowing function. </p>
 gnuplot
   set grid
   plot \"window_welch.dat\" with lines
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note that the use of expert options is provided for image processing experts
 who have studied and understand how resize filters work. Without this
@@ -3555,11 +3555,11 @@ ImageMagick 6.4.8−8.)</p>
 <p>Here,  <var>parameters</var> is a comma-separated list of
 numerical values. The number of values varies depending on which <var>function</var> is selected. Choose the <var>function</var> from:</p>
 
-<ul><pre class="bg-light text-dark"><samp>Polynomial
+<pre class="bg-light text-dark"><samp>Polynomial
 Sinusoid
 Arcsin
 Arctan
-</samp></pre></ul>
+</samp></pre>
 
 <p>To print a complete list of <a href="#function">-function</a> operators,
 use <a href="#list">-list function</a>. Descriptions follow.</p>
@@ -3571,13 +3571,13 @@ use <a href="#list">-list function</a>. Descriptions follow.</p>
 these being the coefficients of a polynomial, in decreasing order of degree.
 That is, entering</p>
 
-<ul><pre class="bg-light text-dark"><samp>-function Polynomial <var>a</var><sub><var>n</var></sub>,<var>a</var><sub><var>n</var>-1</sub>,...<var>a</var><sub>1</sub>,<var>a</var><sub>0</sub>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-function Polynomial <var>a</var><sub><var>n</var></sub>,<var>a</var><sub><var>n</var>-1</sub>,...<var>a</var><sub>1</sub>,<var>a</var><sub>0</sub>
+</samp></pre>
 
 <p>will invoke a polynomial function given by</p>
 
-<ul><pre class="bg-light text-dark"><samp><var>a</var><sub><var>n</var></sub> <b><var>u</var></b><sup><var>n</var></sup> + <var>a</var><sub><var>n</var>-1</sub> <b><var>u</var></b><sup><var>n</var>-1</sup> + ··· <var>a</var><sub>1</sub> <b><var>u</var></b> + <var>a</var><sub>0</sub>,
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp><var>a</var><sub><var>n</var></sub> <b><var>u</var></b><sup><var>n</var></sup> + <var>a</var><sub><var>n</var>-1</sub> <b><var>u</var></b><sup><var>n</var>-1</sup> + ··· <var>a</var><sub>1</sub> <b><var>u</var></b> + <var>a</var><sub>0</sub>,
+</samp></pre>
 
 <p>where <b><var>u</var></b> is pixel's original normalized channel value.</p>
 
@@ -3626,23 +3626,23 @@ desired.</p>
 sinusoidally by setting frequency, phase shift, amplitude, and a bias. These
 values are given as one to four parameters, as follows,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-function <samp>Sinusoid</samp> <var>freq</var>,[<var>phase</var>,[<var>amp</var>,[<var>bias</var>]]]
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-function <samp>Sinusoid</samp> <var>freq</var>,[<var>phase</var>,[<var>amp</var>,[<var>bias</var>]]]
+</samp></pre>
 
 <p>where <var>phase</var> is in degrees. (The domain [0,1] of the function
 corresponds to 0 through <var>freq</var>×360 degrees.)
 The result is that if a pixel's normalized channel value is originally
 <b><var>u</var></b>, its resulting normalized value is given by </p>
 
-<ul><pre class="bg-light text-dark"><samp><var>amp</var> * sin(2*π* (<var>freq</var> * <b><var>u</var></b> + <var>phase</var> / 360)) + <var>bias</var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp><var>amp</var> * sin(2*π* (<var>freq</var> * <b><var>u</var></b> + <var>phase</var> / 360)) + <var>bias</var>
+</samp></pre>
 
 <p> For example, the following generates a curve that starts and ends at 0.9
 (when <b><var>u</var></b>=0 and 1, resp.), oscillating three times between
 .7−.2=.5 and .7+.2=.9. </p>
 
-<ul><pre class="bg-light text-dark"><samp>-function Sinusoid 3,-90,.2,.7
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-function Sinusoid 3,-90,.2,.7
+</samp></pre>
 
 <p>The default values of <var>amp</var> and <var>bias</var> are both .5. The default for <var>phase</var>
 is 0.</p>
@@ -3671,15 +3671,15 @@ and can be used to generate cylindrical distortion and displacement maps.
 The curve can be adjusted relative to both the input values and output range
 of values.</p>
 
-<ul><pre class="bg-light text-dark"><samp>-function <samp>ArcSin</samp> <var>width</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-function <samp>ArcSin</samp> <var>width</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
+</samp></pre>
 
 <p>with all values given in terms of normalized color values (0.0 for black,
 1.0 for white). Defaulting to values covering the full range from 0.0 to 1.0
 for bout input (<var>width</var>), and output (<var>width</var>) values. '<samp>1.0,0.5,1.0,0.5</samp>' </p>
 
-<ul><pre class="bg-light text-dark"><samp><var>range</var>/π * asin( 2/<var>width</var> * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp><var>range</var>/π * asin( 2/<var>width</var> * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
+</samp></pre>
 
 </dd>
 <dt class="col-md-4">ArcTan</dt>
@@ -3688,14 +3688,14 @@ for bout input (<var>width</var>), and output (<var>width</var>) values. '<samp>
 limit values at infinities, though a center using the given slope value.
 All these values can be adjusted via the arguments.</p>
 
-<ul><pre class="bg-light text-dark"><samp>-function <samp>ArcTan</samp> <var>slope</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-function <samp>ArcTan</samp> <var>slope</var>,[<var>center</var>,[<var>range</var>,[<var>bias</var>]]]
+</samp></pre>
 
 <p>Defaulting to '<samp>1.0,0.5,1.0,0.5</samp>'.
 </p>
 
-<ul><pre class="bg-light text-dark"><samp><var>range</var>/π * atan( <var>slope</var>*π * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp><var>range</var>/π * atan( <var>slope</var>*π * ( <b><var>u</var></b> - <var>center</var> ) ) + <var>bias</var>
+</samp></pre>
   </dd>
 </dl>
 </div>
@@ -3763,8 +3763,8 @@ is useful if the image is of a known gamma but not set as an image attribute
 display gamma; e.g., if your image is sRGB and you want to write a PNG gAMA
 chunk, use</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick input.png +gamma .45455 output.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick input.png +gamma .45455 output.png
+</samp></pre>
 
 <p>(0.45455 is 1/2.2)</p>
 
@@ -3852,9 +3852,9 @@ that point. (In addition, the <a href="#gravity">-gravity</a> affects the
 region itself, which is <var>centered</var> at the pixel
 coordinate (60,70). (<?php seeGeometry();?>)</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png -gravity Center -region 10x10-40+20 \
+<pre class="bg-light text-dark"><samp>magick image.png -gravity Center -region 10x10-40+20 \
   -negate output.png
-</samp></pre></ul>
+</samp></pre>
 
 <p>When used as an option to <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/composite.php">composite</a>, <a
@@ -3879,24 +3879,24 @@ convert the given image into a grayscale image. </p>
 
 <p>For example, to convert an image to (linear) Rec709Luminance grayscale,  type:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -grayscale Rec709Luminance out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick in.png -grayscale Rec709Luminance out.png
+</samp></pre>
 
 <p>which is equivalent to:</p>
 
-<ul><pre class="bg-light text-dark">
+<pre class="bg-light text-dark">
 <samp>magick in.png -colorspace LinearGray out.png</samp>
-</pre></ul>
+</pre>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -grayscale Rec709Luma out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick in.png -grayscale Rec709Luma out.png
+</samp></pre>
 
 <p>which is equivalent to:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -colorspace Gray out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick in.png -colorspace Gray out.png
+</samp></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
 regardless of the current colorpsace of the image. But a 'mathematical'
@@ -3926,8 +3926,8 @@ dimensions.  Create it with the <samp>HALD:</samp> prefix (e.g. HALD:8).  You
 can apply any color transformation to the Hald image and then use this option
 to apply the transform to the image. </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png hald.png -hald-clut transform.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.png hald.png -hald-clut transform.png
+</samp></pre>
 
 <p>This option provides a convenient method for you to use Gimp or Photoshop
 to make color corrections to the Hald CLUT image and subsequently apply them
@@ -4035,13 +4035,13 @@ href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a>,
 <p>For example, depending upon the image format used to store the result of
 the <a href="#fft">-fft</a>, one would use either</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick fft_image.miff -ift fft_image_ift.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick fft_image.miff -ift fft_image_ift.png
+</samp></pre>
 
 <p>or</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick fft_image-0.png fft_image-1.png -ift fft_image_ift.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick fft_image-0.png fft_image-1.png -ift fft_image_ift.png
+</samp></pre>
 
 <p>The resulting image may need to be cropped due to padding introduced when
 the original image, prior to the <a href="#fft">-fft</a> or <a
@@ -4154,7 +4154,7 @@ function.</p>
 
 <p>Operators affected by the <a href="#intensity" >-intensity</a> setting include:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-adaptive-blur
+<pre class="bg-light text-dark"><samp>-adaptive-blur
 -adaptive-sharpen
 -black-threshold
 -clut (when mapping greyscale CLUT image to alpha channel if set by -channels)
@@ -4170,7 +4170,7 @@ function.</p>
 -threshold
 -tint
 -white-threshold
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="intent"></a>-intent <var>type</var></h2>
@@ -4194,14 +4194,14 @@ Perceptual, Relative, Saturation</samp>.</p>
 
 <p>Choose from:</p>
 
-<ul><pre class="bg-light text-dark"><samp>none
+<pre class="bg-light text-dark"><samp>none
 line
 plane
 partition
 JPEG
 GIF
 PNG
-</samp></pre></ul>
+</samp></pre>
 
 <p>This option is used to specify the type of interlacing scheme for raw image
 formats such as <samp>RGB</samp> or <samp>YUV</samp>.</p>
@@ -4339,8 +4339,8 @@ Properties</a> for details of the percent escape codes.</p>
 
 <p>For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-label "%m:%f %wx%h"  bird.miff
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-label "%m:%f %wx%h"  bird.miff
+</samp></pre>
 
 <p>assigns an image label of <samp>MIFF:bird.miff 512x480</samp> to the
 "<samp>bird.miff</samp>" image and whose width is 512 and height is 480, as it
@@ -4737,12 +4737,12 @@ any limit is reached, ImageMagick fails in some fashion but attempts to take
 compensating actions, if possible. For example, the following limits
 memory:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-limit memory 32MiB -limit map 64MiB
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-limit memory 32MiB -limit map 64MiB
+</samp></pre>
 
 <p>Use <a href="#list">-list resource</a> to list the current limits. For example, our system shows these limits:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-> identify -list resource
+<pre class="bg-light text-dark"><samp>-> identify -list resource
 Resource limits:
   Width: 100MP
   Height: 100MP
@@ -4754,7 +4754,7 @@ Resource limits:
   Thread: 12
   Throttle: 0
   Time: unlimited
-</samp></pre></ul>
+</samp></pre>
 
 <p>Requests for pixel storage to keep intermediate images are satisfied by one
 of three resource categories: in-memory pool, memory-mapped files pool, and
@@ -4787,8 +4787,8 @@ example, assume you have a web interface that processes images uploaded from
 the Internet.  To assure ImageMagick does not exceed 10MiB of memory you can
 simply set the area limit to 10MiB:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-limit area 10MB
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-limit area 10MB
+</samp></pre>
 
 <p>Now whenever a large image is processed, the pixels are automagically
 cached to disk instead of memory.  This of course implies that large images
@@ -4797,8 +4797,8 @@ be an order of magnitude faster than on disk.  Because your web site users
 might inadvertently upload a huge image to process, you should set a disk
 limit as well:</p>
 
-<ul><pre class="bg-light text-dark"><samp>-limit area 10MB -limit disk 500MB
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-limit area 10MB -limit disk 500MB
+</samp></pre>
 
 <p>Here ImageMagick stops processing if an image requires more than 500MB of disk storage.</p>
 
@@ -4871,7 +4871,7 @@ normalization of mathematical images. </p>
 
 <p class="magick-description">Print a list of supported arguments for various options or settings.  Choose from these list types:</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><samp>
+<pre class="pre-scrollable bg-light text-dark"><samp>
 Align
 Alpha
 Boolean
@@ -4942,14 +4942,14 @@ Type
 Units
 Validate
 VirtualPixel
-</samp></pre></ul>
+</samp></pre>
 
 <p>These lists vary depending on your version of ImageMagick. Use "<samp>-list
 list</samp>" to get a complete listing of all the "<samp>-list</samp>" arguments
 available:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick identify -list list
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick identify -list list
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="log"></a>-log <var>string</var></h2>
@@ -4982,8 +4982,8 @@ characters:</p>
 
 <p>For example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -debug coder -log "%u %m:%l %e" in.gif out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick -debug coder -log "%u %m:%l %e" in.gif out.png
+</samp></pre>
 
 <p>The default behavior is to print all of the components.</p>
 
@@ -5018,13 +5018,13 @@ times.</p>
 
 <p>Choose from these <var>Standard Colormap</var> types:</p>
 
-<ul><pre class="bg-light text-dark"><samp>best
+<pre class="bg-light text-dark"><samp>best
 default
 gray
 red
 green
 blue
-</samp></pre></ul>
+</samp></pre>
 
 <p>The <var>X server</var> must support the <var>Standard
 Colormap</var> you choose, otherwise an error occurs.  Use <samp>list</samp> as
@@ -5212,8 +5212,8 @@ href="#modulate">-modulate 120,90</a>.</p>
 <p>Use <a href="#set">-set</a> attribute of '<samp>option:modulate:colorspace</samp>' to specify which colorspace to
 modulate.  Choose from <samp>HCL</samp>, <samp>HCLp</samp>, <samp>HSB</samp>, <samp>HSI</samp>, <samp>HSL</samp> (the default), <samp>HSV</samp>, <samp>HWB</samp>, or <samp>LCH</samp> (LCHuv).  For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="moments"></a>-moments</h2>
@@ -5319,14 +5319,14 @@ which should be used in preference.</p>
 <p>Use <a href="#noise">+noise</a> followed by a noise <var>type</var> to add noise to an image. Choose from these noise
 types:</p>
 
-<ul><pre class="bg-light text-dark"><samp>Gaussian
+<pre class="bg-light text-dark"><samp>Gaussian
 Impulse
 Laplacian
 Multiplicative
 Poisson
 Random
 Uniform
-</samp></pre></ul>
+</samp></pre>
 
 <p>The amount of noise added can be controlled by the <samp><a
 href="#attenuate" >-attenuate</a></samp> setting. If unset the value is
@@ -5400,7 +5400,7 @@ given number of <var>levels</var> per color channel.</p>
 
 <p>You can choose from these standard threshold maps:</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><samp>
+<pre class="pre-scrollable bg-light text-dark"><samp>
 threshold   1x1   Threshold 1x1 (non-dither)
 checks      2x1   Checkerboard 2x1 (dither)
 o2x2        2x2   Ordered 2x2 (dispersed)
@@ -5420,7 +5420,7 @@ c6x6b       c6x6  Circles 6x6 (black)
 c6x6w             Circles 6x6 (white)
 c7x7b       c7x7  Circles 7x7 (black)
 c7x7w             Circles 7x7 (white)
-</samp></pre></ul>
+</samp></pre>
 
 <p> The <samp>threshold</samp> generated a simple 50% threshold of the image.
 This could be used with <var >level</var> to do the equivalent of <a
@@ -5458,12 +5458,12 @@ after being created. </p>
 
 <p>Choose from these orientations:</p>
 
-<ul><pre class="bg-light text-dark"><samp>bottom-left    right-top
+<pre class="bg-light text-dark"><samp>bottom-left    right-top
 bottom-right   top-left
 left-bottom    top-right
 left-top       undefined
 right-bottom
-</samp></pre></ul>
+</samp></pre>
 
 <p>To print a complete list of orientations, use the <a href="#list" >-list
 orientation</a> option.</p>
@@ -5486,7 +5486,7 @@ href="#page">-page</a> <samp>Letter+43+43</samp>).</p>
 
 <p>Use <var>media</var> as shorthand to specify the dimensions (<var>width</var>x<var>height</var>) of the <var>PostScript</var> page in dots per inch or a TEXT page in pixels.
 The choices for paper sizes are: <samp>4x6</samp>, <samp>5x7</samp>, <samp>7x9</samp>, <samp>8x10</samp>, <samp>9x11</samp>, <samp>9x12</samp>, <samp>10x13</samp>, <samp>10x14</samp>, <samp>11x17</samp>, <samp>4A0</samp>, <samp>2A0</samp>, <samp>a0</samp>, <samp>a1</samp>, <samp>a2</samp>, <samp>a3</samp>, <samp>a4</samp>, <samp>a4small</samp>, <samp>a5</samp>, <samp>a6</samp>, <samp>a7</samp>, <samp>a8</samp>, <samp>a9</samp>, <samp>a10</samp>, <samp>archa</samp>, <samp>archb</samp>, <samp>archC</samp>, <samp>archd</samp>, <samp>arche</samp>, <samp>b0</samp>, <samp>b1</samp>, <samp>b10</samp>, <samp>b2</samp>, <samp>b3</samp>, <samp>b4</samp>, <samp>b5</samp>, <samp>b6</samp>, <samp>b7</samp>, <samp>b8</samp>, <samp>b9</samp>, <samp>c0</samp>, <samp>c1</samp>, <samp>c2</samp>, <samp>c3</samp>, <samp>c4</samp>, <samp>c5</samp>, <samp>c6</samp>, <samp>c7</samp>, <samp>csheet</samp>, <samp>dsheet</samp>, <samp>esheet</samp>, <samp>executive</samp>, <samp>flsa</samp>, <samp>flse</samp>, <samp>folio</samp>, <samp>halfletter</samp>, <samp>isob0</samp>, <samp>isob1</samp>, <samp>isob10</samp>, <samp>isob2</samp>, <samp>isob3</samp>, <samp>isob4</samp>, <samp>isob5</samp>, <samp>isob6</samp>, <samp>isob7</samp>, <samp>isob8</samp>, <samp>isob9</samp>, <samp>jisb0</samp>, <samp>jisb1</samp>, <samp>jisb2</samp>, <samp>jisb3</samp>, <samp>jisb4</samp>, <samp>jisb5</samp>, <samp>jisb6</samp>, <samp>ledger</samp>, <samp>legal</samp>, <samp>letter</samp>, <samp>lettersmall</samp>, <samp>monarch</samp>, <samp>quarto</samp>, <samp>statement</samp>, <samp>tabloid</samp>. To determine the cooresponding size in pixels at 72DPI, use this command for example:</p>
-<ul><pre class="bg-light text-dark"><samp>magick xc: -format "%[papersize:a4]" info:</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick xc: -format "%[papersize:a4]" info:</samp></pre>
 
 <p>This option is also used to place subimages when writing to a multi-image
 format that supports offsets, such as GIF89 and MNG. When used for this
@@ -5619,7 +5619,7 @@ visible effect.</p>
 <samp>magick file.png -preview Gamma Preview:gamma.png</samp>). Choose from
 these previews:</p>
 
-<ul><pre class="pre-scrollable bg-light text-dark"><samp>
+<pre class="pre-scrollable bg-light text-dark"><samp>
 AddNoise
 Blur
 Brightness
@@ -5649,7 +5649,7 @@ Spread
 Swirl
 Threshold
 Wave
-</samp></pre></ul>
+</samp></pre>
 
 <p>To print a complete list of previews, use the <a href="#list">-list preview</a> option.</p>
 
@@ -5701,8 +5701,8 @@ used. Instead, simply write the file to an image format such as <var>APP1, 8BIM,
 
 <p>Set <samp>-define precision:highres-transform=true</samp> to increase the transform precision.  Note, there is a slight performance penalty as the high-precision transform is floating point rather than unsigned.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick cockatoo.jpg profile.exif
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick cockatoo.jpg profile.exif
+</samp></pre>
 
 <p>It is important to note that results may depend on whether or not the
 original image already has an included profile. Also, keep in mind that <a
@@ -5711,8 +5711,8 @@ therefore a conversion is made each time it is encountered, in order, in the
 command-line. For instance, in the following example, if the original image is
 CMYK with profile, a CMYK-CMYK-RGB conversion results.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
+</samp></pre>
 
 <p>Furthermore, since ICC profiles are not necessarily symmetric, extra
 conversion steps can yield unwanted results.  CMYK profiles are often very
@@ -6025,9 +6025,9 @@ filter.</p>
 coding.  If your image is gamma-corrected, you can remove the nonlinear gamma
 correction, apply the transform, then restore it like this:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
+<pre class="bg-light text-dark"><samp>magick portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
   -quality 92 passport.jpg
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note, some resampling functions are damped oscillations in approximation of a Sinc function.  As such, you may get negative lobes if your release of ImageMagick is HDRI-enabled.  To eliminate them, add <a href="#clamp">-clamp</a> to your command-line.</p>
 
@@ -6257,19 +6257,19 @@ a global 'artifact' which are automatically assigned (and any <a href="<?php
 echo $_SESSION['RelativePath'] ?>/../script/escape.php" >Format Percent
 Escapes</a> expanded) to images as they are read in.  For example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>$ magick rose: -set comment 'Rose is a rose is a rose is a rose' rose.jpg
+<pre class="bg-light text-dark"><samp>$ magick rose: -set comment 'Rose is a rose is a rose is a rose' rose.jpg
 identify -format %c rose.jpg
 Rose is a rose is a rose is a rose
-</samp></pre></ul>
+</samp></pre>
 
 <p>The set value can also make use of <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image
 Properties</a> in the defined value.  For example:</p>
 
-<ul><pre class="bg-light text-dark"><samp>$ magick rose: -set origsize '%wx%h' -resize 50% \
+<pre class="bg-light text-dark"><samp>$ magick rose: -set origsize '%wx%h' -resize 50% \
   -format 'Old size = %[origsize]  New size = %wx%h' info:
 Old size = 70x46  New size = 35x23
-</samp></pre></ul>
+</samp></pre>
 
 <p>Other well known 'properties' that are available include:
 '<samp>date:create</samp>' and '<samp>date:modify</samp>' and
@@ -6285,15 +6285,15 @@ attribute. </p>
 <p>This option can also associate a colorspace or profile with your image.
 For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
+</samp></pre>
 
 <p>Some 'properties' must be defined in a specific way to be used. For
 example only 'properties' prefixed with "<samp>filename:</samp>" can be used to
 modify the output filename of an image. For example</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
+</samp></pre>
 
 <p>If the setting value is prefixed with "<samp>option:</samp>" the setting will
 be saved as a global "Artifact" exactly as if it was set using the <a
@@ -6302,9 +6302,9 @@ can be used to pass 'attributes' and 'properties' of one specific image,
 in a way that allows you to use them in a completely different image, even if
 the original image has long since been modified or destroyed. For example: </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose:  -set option:rosesize '%wx%h' -delete 0 \
+<pre class="bg-light text-dark"><samp>magick rose:  -set option:rosesize '%wx%h' -delete 0 \
   label:'%[rosesize]'   label_size_of_rose.gif"
-</samp></pre></ul>
+</samp></pre>
 
 <p>Note that <a href="<?php echo $_SESSION['RelativePath']
 ?>/../script/escape.php" >Format Percent Escapes</a> will only match
@@ -6319,8 +6319,8 @@ previously-formatted ancillary chunks into the output PNG file, using
 the commandline option as shown below or by setting the profile via a
 programming interface:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
+</samp></pre>
 
 <p>where <var>x</var> is a location flag and
 <var>filename</var> is a file containing the chunk
@@ -6334,9 +6334,9 @@ of the same type, then add a short unique string after the "x" to prevent
 subsequent profiles from overwriting the preceding ones, e.g.,</p>
 
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -set profile PNG-chunk-b01:file01 \
+<pre class="bg-light text-dark"><samp>magick in.png -set profile PNG-chunk-b01:file01 \
   -profile PNG-chunk-b02:file02 out.png
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="shade"></a>-shade <var>azimuth</var>x<var>elevation</var></h2>
@@ -6413,16 +6413,16 @@ important to note, since horizontal and vertical shears do not
 <var>commute</var>, i.e., the order matters in a sequence of shears. For
 example, the following two commands are not equivalent.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick logo: -shear 20x0 -shear 0x60 logo-sheared.png
+<pre class="bg-light text-dark"><samp>magick logo: -shear 20x0 -shear 0x60 logo-sheared.png
 convert logo: -shear 0x60 -shear 20x0 logo-sheared.png
-</samp></pre></ul>
+</samp></pre>
 
 <p>The first of the two commands above is equivalent to the following, except
 for the amount of empty space created; the command that follows generates
 a smaller image, and so is a better choice in terms of time and space.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick logo: -shear 20x60 logo-sheared.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick logo: -shear 20x60 logo-sheared.png
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="sigmoidal-contrast"></a>-sigmoidal-contrast <var>contrast</var>x<var>mid-point</var></h2>
@@ -6484,12 +6484,12 @@ image or tell the number of colors in a <samp>MAP</samp> image file, (e.g. -size
 
 <p>For Photo CD images, choose from these sizes:</p>
 
-<ul><pre class="bg-light text-dark"><samp>192x128
+<pre class="bg-light text-dark"><samp>192x128
 384x256
 768x512
 1536x1024
 3072x2048
-</samp></pre></ul>
+</samp></pre>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="sketch"></a>-sketch <var>radius</var><br />-sketch <var>radius</var>{x<var>sigma</var>}+<var>angle</var></h2>
@@ -6702,7 +6702,7 @@ values range from 0 to the maximum value the storage type can support.</p>
 <p>This setting suggests a type of stretch that ImageMagick should try to
 apply to the currently selected font family. Select <var>fontStretch</var> from the following.</p>
 
-<ul><pre class="bg-light text-dark"><samp>Any
+<pre class="bg-light text-dark"><samp>Any
 Condensed
 Expanded
 ExtraCondensed
@@ -6712,7 +6712,7 @@ SemiCondensed
 SemiExpanded
 UltraCondensed
 UltraExpanded
-</samp></pre></ul>
+</samp></pre>
 
 <p>To print a complete list of stretch types, use <a href="#list">-list
 stretch</a>.</p>
@@ -6755,11 +6755,11 @@ href="#style">-style</a>, and <a href="#weight">-weight</a>. </p>
 the currently selected font family. Select <var>fontStyle</var> from
 the following.</p>
 
-<ul><pre class="bg-light text-dark"><samp>Any
+<pre class="bg-light text-dark"><samp>Any
 Italic
 Normal
 Oblique
-</samp></pre></ul>
+</samp></pre>
 
 <p>For other settings that affect fonts, see the options <a
 href="#font">-font</a>, <a href="#family">-family</a>, <a
@@ -6874,17 +6874,17 @@ red values, while those at or below 50% red would be set to 0 in the red
 channel. The green, blue, and alpha channels (if present) would be unchanged.
 </p>
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -channel red -threshold 50% out.png
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick in.png -channel red -threshold 50% out.png
+</samp></pre>
 
 <p>As (possibly) impractical but instructive examples, the following would
 generate an all-black and an all-white image with the same dimensions as the
 input image.</p>
 
 
-<ul><pre class="bg-light text-dark"><samp>magick in.png -channel RGB -threshold 100% black.png
+<pre class="bg-light text-dark"><samp>magick in.png -channel RGB -threshold 100% black.png
 convert in.png -channel RGB -threshold -1 white.png
-</samp></pre></ul>
+</samp></pre>
 
 <p> See also <?php option("black-threshold"); ?> and <?php option("white-threshold"); ?>.
 </p>
@@ -6960,8 +6960,8 @@ under the <a href="#format">-format</a> option.</p>
 
 <p>For example,</p>
 
-<ul><pre class="bg-light text-dark"><samp>-title "%m:%f %wx%h"
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>-title "%m:%f %wx%h"
+</samp></pre>
 
 <p>produces an image title of <samp>MIFF:bird.miff 512x480</samp> for an image
 titled <samp>bird.miff</samp> and whose width is 512 and height is 480.</p>
@@ -6975,8 +6975,8 @@ titled <samp>bird.miff</samp> and whose width is 512 and height is 480.</p>
 
 <p>This option applies the transformation matrix from a previous <a href="#affine">-affine</a> option.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
+</samp></pre>
 
 
 <p>This operator has been now been superseded by the  <a
@@ -7112,8 +7112,8 @@ href="#type">-type</a> option can be used to override this behavior. For
 example, to prevent a JPEG from being written in grayscale format even though
 only gray pixels are present, use.</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick bird.png -type TrueColor bird.jpg
-</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick bird.png -type TrueColor bird.jpg
+</samp></pre>
 
 <p>Similarly, use <a href="#type">-type TrueColorAlpha</a> to force the
 encoder to write an alpha channel even though the image is opaque, if the
@@ -7270,11 +7270,11 @@ href="#list">-list virtual-pixel</a> option.</p>
 
 <p>Choose from these visual classes:</p>
 
-<ul><pre class="bg-light text-dark"><samp>StaticGray    TrueColor
+<pre class="bg-light text-dark"><samp>StaticGray    TrueColor
 GrayScale     DirectColor
 StaticColor   default
 PseudoColor   visual id
-</samp></pre></ul>
+</samp></pre>
 
 <p>The X server must support the visual you choose, otherwise an error occurs.
 If a visual is not specified, the visual class that can display the most

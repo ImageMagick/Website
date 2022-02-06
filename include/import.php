@@ -8,11 +8,11 @@
 
 <p>We list a few examples of the <samp>import</samp> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick import rose.jpg </samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick import rose.jpg </samp></pre>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick import -window root screen.ps </samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick import -window root screen.ps </samp></pre>
 
 <p>You can find additional examples of using <samp>import</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

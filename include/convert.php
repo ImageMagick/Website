@@ -4,11 +4,11 @@
 
 <p>We list a few examples of the <samp>magick</samp> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose.jpg rose.png</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick rose.jpg rose.png</samp></pre>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick rose.jpg -resize 50% rose.png</samp></pre></ul>
+<pre class="bg-light text-dark"><samp>magick rose.jpg -resize 50% rose.png</samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -22,9 +22,9 @@
 
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
+<pre class="bg-light text-dark"><samp>magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
-  -draw "text 20,55 \'Magick\'" fuzzy-magick.png</samp></pre></ul>
+  -draw "text 20,55 \'Magick\'" fuzzy-magick.png</samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/fuzzy-magick.png" width="320" height="85" alt="fuzzy-magick" /></a>
@@ -32,9 +32,9 @@
 
 <p>or here we resize an image with improved quality:</p>
 
-<ul><pre class="bg-light text-dark"><samp>magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
+<pre class="bg-light text-dark"><samp>magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
-  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');</samp></pre></ul>
+  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png');</samp></pre>
 
 <p>You can find additional examples of using <samp>magick</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
