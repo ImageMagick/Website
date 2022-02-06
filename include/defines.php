@@ -20,13 +20,13 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<pre class="bg-light text-dark"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps </samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps </samp></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
 <samp>registry:</samp>.  For example, to set a temporary path to put work files,
 use:</p>
 
-<pre class="bg-light text-dark"><samp>-define registry:temporary-path=/data/tmp </samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>-define registry:temporary-path=/data/tmp </samp></pre>
 
 <p>Here is a list of recognized defines:</p>
 
@@ -1058,7 +1058,7 @@ use:</p>
     the PNG file.  Because the list is processed from left to right, you
     can achieve this with a single define:</p>
 
-    <pre class="bg-light text-dark"><samp>-define png:include-chunk=none,gAMA
+    <pre class="bg-light text-dark mx-4"><samp>-define png:include-chunk=none,gAMA
     </samp></pre>
 
     <p>As a special case, if the <samp>sRGB</samp> chunk is not excluded and
@@ -1081,7 +1081,7 @@ use:</p>
     <p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#strip">-strip</a>
     option does the equivalent of the following for PNG output:</p>
 
-    <pre class="bg-light text-dark"><samp>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</samp></pre>
+    <pre class="bg-light text-dark mx-4"><samp>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</samp></pre>
 
     <p>The default behavior is to include all known PNG ancillary chunks
     plus ImageMagick's private <samp>vpAg</samp> ("virtual page") chunk,
