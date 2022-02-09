@@ -6896,7 +6896,7 @@ convert in.png -channel RGB -threshold -1 white.png
 <p class="magick-description">Create a thumbnail of the image.</p>
 
 <p>This is similar to <a href="#resize">-resize</a>, except it is optimized
-for performance.  In addition, comments and color profiles are removed, and <samp>Thumb</samp> properties are set.  This option respects <a href="#filter">-filter</a>, e.g., for additonal performance, use  <samp>-filter box</samp>.</p>
+for performance.  In addition, comments and color profiles are removed, and <samp>Thumb</samp> properties are set.  This option respects <a href="#filter">-filter</a>, e.g., for additional performance but with a slight degradation in quality, use  <samp>-filter box</samp>.</p>
 
 <p><?php seeGeometry();?></p>
 
