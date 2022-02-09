@@ -25,6 +25,6 @@
   <dt class="col-md-4"><a class="anchor" id="stream"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a></dt><dd class="col-md-8">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <samp>stream</samp> desirable when working with large images or when you require raw pixel components.</dd>
 </dl>
 <p>Your installation may have direct ImageMagick version 6 compatibility links.  If so, you can access the tools directly by referring to them by name.  For example,
-<pre class="bg-light text-dark"><samp>magick identify -verbose myImage.png</samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>magick identify -verbose myImage.png</samp></pre>
 
 </div>
