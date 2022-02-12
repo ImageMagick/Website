@@ -53,7 +53,7 @@
 
 <p>The legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick follow:</p>
 
-<p>Copyright © 1999-2021 ImageMagick Studio LLC, a non-profit organization dedicated to making software imaging solutions freely available.</p>
+<p>Copyright © 1999 ImageMagick Studio LLC, a non-profit organization dedicated to making software imaging solutions freely available.</p>
 
 <p><b>1. Definitions</b>.</p>
 
