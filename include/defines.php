@@ -918,6 +918,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:hide-annotations=<var>true</var></td>
+    <td>hide annotations associated with the page Annots key.</td>
+  </tr>
+
+  <tr>
     <td>pdf:interpolate=<var>true</var></td>
     <td>enable interpolation while rendering</td>
   </tr>
