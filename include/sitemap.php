@@ -41,7 +41,6 @@
 <dl class="magick-list-unstyled">
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Install from a binary distribution</a>: install a ready-to-run Linux or Windows executable.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/ImageMagickObject.php">Install ImageMagickObject COM+ component</a>: install the Windows ImageMagick COM+ component.</li>
 </dl>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tools</h2>

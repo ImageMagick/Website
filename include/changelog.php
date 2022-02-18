@@ -1,5 +1,29 @@
-<div class="magick-header"><dl><dt>2021-01-01  7.1.0-20  &lt;quetzlzacatenango@image...&gt;</dt>
-  <li> Release ImageMagick version 7.1.0-20 GIT revision 19...</li>
+<div class="magick-header"><dl><dt>2022-02-13  7.1.0-25  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-25 GIT revision 19...</li>
+<dt>2021-02-13  7.1.0-25  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> incontinuity in straight segment of polyline (reference    https://github.com/ImageMagick/ImageMagick/issues/4837).</li>
+<dt>2022-02-12  7.1.0-24  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-24 GIT revision 19683:26523979f:20220212</li>
+<dt>2021-02-06  7.1.0-24  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> optimize reading of XPM properties.</li>
+  <li> the GIF Netscape block must appear immediately after the global color table.</li>
+<dt>2022-02-05  7.1.0-23  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-23 GIT revision 19647:706986228:20220205</li>
+<dt>2021-02-02  7.1.0-23  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> limit recursion when reading the VID image format.</li>
+  <li> improperly resizing memory due to errant check (reference    https://github.com/ImageMagick/ImageMagick/issues/4807).</li>
+<dt>2022-01-29  7.1.0-22  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-22 GIT revision 19618:cb0ac9022:20220129</li>
+<dt>2021-01-29  7.1.0-22  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> limit colorname length to avoid possible DoS</li>
+  <li> restore MPRI URI in SVG</li>
+<dt>2022-01-28  7.1.0-21  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-21 GIT revision 19609:f084a86ec:20220128</li>
+<dt>2021-01-24  7.1.0-21  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> PDF now shows the correct Unicode title (reference  https://github.com/ImageMagick/ImageMagick/issues/4771).</li>
+  <li> optimize Fx image statistics (reference    https://github.com/ImageMagick/ImageMagick/discussions/4533).</li>
+<dt>2022-01-21  7.1.0-20  &lt;quetzlzacatenango@image...&gt;</dt>
+  <li> Release ImageMagick version 7.1.0-20 GIT revision 19585:2cd840776:20220121 </li>
 <dt>2022-01-09  7.1.0-20  Dirk Lemstra &lt;dirk@lem.....org&gt;</dt>
   <li> Added support for ARM64 to the Visual Studio build on Windows.</li>
   <li> Removed ImageMagickObject from the Windows installer.</li>

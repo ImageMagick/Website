@@ -5,7 +5,6 @@
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickCore</a> (C), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c">MagickWand</a> (C), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#ch">ChMagick</a> (Ch), 
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#com_">ImageMagickObject</a> (COM+), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#c__">Magick++</a> (C++), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#java">JMagick</a> (Java), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#javascript">WASM-ImageMagick</a> (Javascript/Typescript), 
@@ -34,10 +33,6 @@ With a language interface, use ImageMagick to modify or create images dynamicall
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 
 <dd class="col-md-8"><a href="https://imagemagick.org/ChMagick">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
-
-  <dt class="col-md-4"><a class="anchor" id="com_"></a>COM+</dt>
-
-<dd class="col-md-8">Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/ImageMagickObject.php">ImageMagickObject</a> to convert, compose, and edit images from a Windows COM+ compatible component.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="c__"></a>C++</dt>
 
