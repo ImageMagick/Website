@@ -2979,14 +2979,14 @@ image is centered on an 800x600 black canvas: </p>
   -gravity center -extent 800x600 -quality 92 output.jpg
 </samp></pre>
 
-<p>The command can also be used with a ratio. If the image is not already at that ratio,
-it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has
-the expected effects.
+<p>The command can also be used with a ratio. If the image is not already at that ratio, it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has the expected effects.
   
 <p>The following command crops a JPEG image so that it has a 4:3 ratio:</p>
 
 <pre class="bg-light text-dark mx-4"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
 </samp></pre>
+
+<p>Append <samp>&lt;</samp> to pad only if the image smaller than the specified width/height.  Append <samp>&gt;</samp> to crop only if the image larger than the specified width/height.</p>
   
 <p><?php seeGeometry(); ?></p>
 
