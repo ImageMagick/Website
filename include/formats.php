@@ -1085,6 +1085,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>STRIMG</td>
+    <td>RW</td>
+    <td>String to images and back</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>SUN</td>
     <td>RW</td>
     <td>SUN Rasterfile</td>
