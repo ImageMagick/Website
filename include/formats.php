@@ -476,7 +476,7 @@ the supported image formats.</p>
     <td>HTML</td>
     <td>RW</td>
     <td>Hypertext Markup Language with a client-side image map</td>
-    <td>Also known as <samp>HTM</samp>. Requires <a href="http://user.it.uu.se/%7Ejan/html2ps.html">html2ps</a> to read.</td>
+    <td>Also known as <samp>HTM</samp>. Requires <a href="http://user.it.uu.se/%7Ejan/html2ps.html">html2ps</a> to read.  Note, the <samp>\\xff</samp> character is not permitted in any filename when exporting client-side image maps.</td>
   </tr>
 
   <tr>
