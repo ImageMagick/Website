@@ -406,7 +406,7 @@ the supported image formats.</p>
     <td><a href="http://im.snibgo.com/fmttxt.htm">FTXT</a></td>
     <td>RW</td>
     <td>Read and Write Pixels as Formatted Text</td>
-    <td>We use 'ftxt:' for defines rather than 'fmttxt:', e.g. 'ftxt:format'.</td>
+    <td>We use 'ftxt:' for defines rather than 'fmttxt:', e.g. 'ftxt:format'. Note, some systems require you escape the backslash character.</td>
   </tr>
 
   <tr>
