@@ -2986,7 +2986,7 @@ image is centered on an 800x600 black canvas: </p>
 <pre class="bg-light text-dark mx-4"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
 </samp></pre>
 
-<p>Append <samp>&lt;</samp> to pad only if the image smaller than the specified width/height.  Append <samp>&gt;</samp> to crop only if the image larger than the specified width/height.</p>
+<p>Append <samp>&lt;</samp> to pad only if the image is smaller than the specified size <em>and</em> not crop if the image is larger (i.e. no-op).  Append <samp>&gt;</samp> to crop only if the image is larger than the specified size <em>and</em> not extend if the image is smaller. (i.e. no-op).</p>
   
 <p><?php seeGeometry(); ?></p>
 
