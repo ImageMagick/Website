@@ -358,6 +358,10 @@ when enclosed in braces (long form):</p>
     <td>points that form a convex hull around the foreground object.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
   </tr>
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull:extreme-points]</a></td>
+    <td>return the top, right, bottom, and left extreme points of the convex hull.</td>
+  </tr>
+  <tr>
     <td>%[copyright]</td>
     <td>ImageMagick Copyright String</td>
   </tr>

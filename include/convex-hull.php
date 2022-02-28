@@ -10,6 +10,8 @@
 magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:
 </pre>
 
+<p>Use <samp>%[convex-hull:extreme-points]</samp> to only return the top, right, bottom, and left extreme points.</p>
+
 <p>where the string format is sensitive to an optional <samp>-fuzz</samp> value and to an optional background color specified by the define. The command above will find the background color automatically according to the fuzz value unless the background color is defined. The fuzz value defaults to 0 when not specified.</p>
 
 <p>For example, consider the following white rectangle on a black background:</p>
