@@ -174,7 +174,7 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 
 <p>The default is to step one frame at a time so frames 0, 1, 2, and 3 are returned.  Set the step to 2 with <samp>-define frames:step=2</samp> and we instead get frames 0 and 2.</p>
 
-<p>Finally, you can read more than one image from a sequence, out-of-order. The next command gets the third image in the sequence, followed by the second, and then the fourth:
+<p>Finally, you can read more than one image from a sequence, out-of-order. The next command gets the fourth image in the sequence, followed by the third, and then the fifth:
 </p>
 
 <pre class="bg-light text-dark mx-4"><samp>magick 'images.gif[3,2,4]' images.mng</samp></pre>
