@@ -468,7 +468,7 @@ the supported image formats.</p>
   <tr>
     <td>HRZ</td>
     <td>RW</td>
-    <td>Slow Scane TeleVision</td>
+    <td>Slow Scan TeleVision</td>
     <td> </td>
   </tr>
 
