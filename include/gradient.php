@@ -5,16 +5,17 @@
 <p>For a linear gradient, the operator is either:</p>
 
 <pre class="bg-light text-dark mx-4"><samp>gradient:
-gradient:color1-color2 </samp></pre>
+gradient:<em>fromColor</em>
+gradient:<em>fromColor</em>-<em>toColor</em></samp></pre>
+
+<p>The default <em>fromcolor</em> is white and the <em>toColor</em> is black unless overridden, e.g., <samp>gradient:gray</samp> returns a gradient from gray to black.</p>
 
 <p> The for a radial gradient, the operator is either:</p>
 
 <pre class="bg-light text-dark mx-4"><samp>radial-gradient:
-radial-gradient:color1-color2 </samp></pre>
+radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 
-<p> In the above, color1 is the fromColor and color2 is the toColor, as described in more detail below. The default is white for color1 and black for color2, i.e., white-black.</p> 
-
-<p>The default for a linear gradient has color1 at the top of the image and color2 at the bottom of the image. Similarly, the default for a radial gradient has color1 at the center of the image and color2 at the boundary of the image.</p>
+<p>The default for a linear gradient has <em>fromColor</em> at the top of the image and <em>toColor</em> at the bottom of the image. Similarly, the default for a radial gradient has <em>fromColor</em> at the center of the image and <em>toColor</em> at the boundary of the image.</p>
 
 <p>Gradient colors may be any valid color defined per <a href="https://imagemagick.org/script/color.php" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Linux systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
 
@@ -41,14 +42,14 @@ magick -size 256x256 gradient:white-black -colorspace RGB -colorspace gray linea
 <pre class="bg-light text-dark mx-4"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
 magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gray linea_radial_gradient.png </samp></pre>
 
-<p>As of IM 6.9.2.5, gradients have been enhanced through the use of several -defines.</p>
+<p>Gradients are affected by these defines:</p>
 
 <table class="table table-sm table-hover">
   <tr>
     <td><samp>-define gradient:vector=<var>x1</var>,<var>y1</var>, <var>x2</var>,<var>y2</var></samp></td>
     <td>Specifies the direction of the linear gradient going from vector1 
-    (x1,y1) to vector2 (x2,y2). Color1 (fromColor) will be located at vector 
-    position x1,y1 and color2 (toColor) will be located at vector position 
+    (x1,y1) to vector2 (x2,y2). <em>fromColor</em> is located at vector 
+    position x1,y1 and <em>toColor</em> is located at vector position 
     x2,y2.</td>
   </tr>
 
@@ -69,9 +70,9 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
   <tr>
     <td><samp>-define gradient:angle=<var>angle in degrees</var></samp></td>
     <td>For a linear gradient, this specifies the direction of the gradient 
-    going from color1 to color2 in a clockwise positive manner relative to 
-    north (up). For a radial gradient, this specifies the rotation of the 
-    gradient in a clockwise positive manner from its normal X-Y 
+    going from <em>fromColor</em> to <em>toColor</em> in a clockwise positive
+    manner relative to north (up). For a radial gradient, this specifies the
+    rotation of the gradient in a clockwise positive manner from its normal X-Y 
     orientation.</td>
   </tr>
 
@@ -79,7 +80,7 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
     <td><samp>-define gradient:bounding-box=<var>width</var>x<var>height</var>+<var>x</var>+<var>y</var></samp></td>
     <td>Limits the gradient to a larger or smaller region than the image 
     dimensions. If the region defined by the bounding box is smaller than the 
-    image, then color1 will be the color of the background.</td>
+    image, <em>fromColor</em> is the color of the background.</td>
   </tr>
 </table>
 
@@ -111,7 +112,7 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 
 <p>Examples</p>
 
-<p>The default linear gradient may also be generated in any of the following ways (or by reversing the direction and swapping color1 and color2):</p>
+<p>The default linear gradient may also be generated in any of the following ways (or by reversing the direction and swapping <em>fromColor</em> and <em>toColor</em>):</p>
 
 <pre class="bg-light text-dark mx-4"><samp>magick -size 256x128 -define gradient:direction=north gradient:black-white linear_gradient_default.png
 magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradient_default.png </samp></pre>
@@ -121,7 +122,7 @@ magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradie
 
 <pre class="bg-light text-dark mx-4"><samp>magick -size 128x256 gradient: -rotate 90 linear_gradient_east.png </samp></pre>
 
-<p>can be generate by either of the following (or by reversing the direction and swapping color1 and color2):</p>
+<p>can be generate by either of the following (or by reversing the direction and swapping <em>fromColor</em> and <em>toColor</em>):</p>
 
 <pre class="bg-light text-dark mx-4"><samp>magick -size 256x128 -define gradient:direction=east gradient:black-white linear_gradient_east.png
 magick -size 256x128 -define gradient:angle=90 gradient:black-white linear_gradient_east.png </samp></pre>
@@ -148,7 +149,7 @@ magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white ra
 magick -size 256x128 -define gradient:radii=128,64 radial-gradient:black-white radial_gradient_ellipse.png </samp></pre>
 <p><img src="/script/../image/gradients/radial_gradient_ellipse.png" width="256" height="128"></p>
 
-<pre class="bg-light text-dark mx-4"><samp>conmagickvert -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre>
 
 <p><img src="/script/../image/gradients/radial_gradient_ellipse_angle45.png" width="256" height="256"></p>
 
