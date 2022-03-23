@@ -69,8 +69,8 @@
     <td>the gamma of the image.  If it is not specified, a gamma of 1.0 (linear brightness response) is assumed.</td>
   </tr>
   <tr>
-    <td>id = ImageMagick</td>
-    <td>identifies the file as a MIFF-format image file.  This key is required and has no default.  Although this key can appear anywhere in the header, it should start as the first key of the header in column 1.  This will allow programs like <samp>file</samp>(1) to easily identify the file as MIFF.</td>
+    <td>id=ImageMagick</td>
+    <td>identifies the file as a MIFF-format image file.  This key is required, can only appear once, and has no default.  Although this key can appear anywhere in the header, it should start as the first key of the header in column 1.  This will allow programs like <samp>file</samp>(1) to easily identify the file as MIFF.</td>
 	</tr>
 	<tr>
     <td>iterations = <var>value</var></td>
