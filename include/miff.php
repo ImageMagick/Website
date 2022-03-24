@@ -70,7 +70,7 @@
   </tr>
   <tr>
     <td>id=ImageMagick</td>
-    <td>identifies the file as a MIFF-format image file.  This key is required, can only appear once, and has no default.  Although this key can appear anywhere in the header, it should start as the first key of the header in column 1.  This will allow programs like <samp>file</samp>(1) to easily identify the file as MIFF.</td>
+    <td>identifies the file as a MIFF-format image file.  This key is required, must be the first key-value pair, can only appear once, and has no default.  Although this key can appear anywhere in the header, it should start as the first key of the header in column 1.  This will allow programs like <samp>file</samp>(1) to easily identify the file as MIFF.</td>
 	</tr>
 	<tr>
     <td>iterations = <var>value</var></td>
