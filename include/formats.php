@@ -143,13 +143,6 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="http://www.fileformat.info/format/cgm/egff.htm">CGM</a></td>
-    <td>R</td>
-    <td>Computer Graphics Metafile</td>
-    <td>Requires <a href="http://www.agocg.ac.uk/train/cgm/ralcgm.htm">ralcgm</a> to render CGM files.</td>
-  </tr>
-
-  <tr>
     <td><a href="http://www.cineon.com/ff_draft.php">CIN</a></td>
     <td>RW</td>
     <td>Kodak Cineon Image Format</td>
@@ -365,13 +358,6 @@ the supported image formats.</p>
     <td>RW</td>
     <td>Group 3 TIFF</td>
     <td>This format is a fixed width of 1728 as required by the standard.  See <a href="#TIFF">TIFF</a> format. Note that FAX machines use non-square pixels which are 1.5 times wider than they are tall but computer displays use square pixels so FAX images may appear to be narrow unless they are explicitly resized using a resize specification of <samp>100x150%</samp>.</td>
-  </tr>
-
-  <tr>
-    <td><a href="http://homepage.usask.ca/~ijm451/fig/">FIG</a></td>
-    <td>R</td>
-    <td>FIG graphics format</td>
-    <td>Requires <a href="ftp://ftp.x.org/contrib/applications/drawing_tools/transfig">TransFig</a>.</td>
   </tr>
 
   <tr>
