@@ -7094,6 +7094,8 @@ tolerated in an edge specified as a percent.  0% means no background is tolerate
 
 <p>Use <samp><a href="#define">-define</a> trim:edges={north,east,south,west}</samp> separated by commas to only trim the specified edges of the image, e.g. <samp>-define trim:edges=north,south -fuzz 5% -trim</samp>.</p>
 
+<p>Use <samp><a href="#define">-define</a> trim:minSize=<var>geometry</var></samp> limit the trim to the specified size.</p>
+
 <p>Use <samp><a href="#background">-background</a> <em>background-color</em></samp> to
 identify background color surrounding the region of interest.</p>
 

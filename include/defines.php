@@ -584,6 +584,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>trim:minSize=<var>geometry</var></td>
+    <td>Limit the trim to the specified size.</td>
+  </tr>
+
+  <tr>
     <td>type:features=<var>string</var></td>
     <td>Add a font feature to be used by the RAQM delegate during complex 
     text layout. This is usually used to turn on optional font features that 
