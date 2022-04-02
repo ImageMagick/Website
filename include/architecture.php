@@ -1,6 +1,6 @@
 <div class="magick-header"> 
 <h1 class="text-center">Architecture</h1>
-<p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#stream">Streaming Pixels</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
+<p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#multispectral">Multispectral Images</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#stream">Streaming Pixels</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
 
 <p class="lead magick-description">The citizens of Oz were quite content with their benefactor, the all-powerful Wizard.  They accepted his wisdom and benevolence without ever questioning the who, why, and where of his power.  Like the citizens of Oz, if you feel comfortable that ImageMagick can help you convert, edit, or compose your images without knowing what goes on behind the curtain, feel free to skip this section.  However, if you want to know more about the software and algorithms behind ImageMagick, read on.  To fully benefit from this discussion, you should be comfortable with image nomenclature and be familiar with computer programming.</p>
 
@@ -367,37 +367,6 @@ magick image.mpc -crop 100x100+200+0 +repage 3.png
 
 <p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
 
-<h2><a class="anchor" id="stream"></a>Streaming Pixels</h2>
-
-<p>ImageMagick provides for streaming pixels as they are read from or written to an image.  This has several advantages over the pixel cache.  The time and resources consumed by the pixel cache scale with the area of an image, whereas the pixel stream resources scale with the width of an image.  The disadvantage is the pixels must be consumed as they are streamed so there is no persistence.</p>
-
-<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#ReadStream">ReadStream()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#WriteStream">WriteStream()</a> with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
-<pre class="pre-scrollable bg-light text-dark mx-4"><samp>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
-{
-  register const Quantum
-    *p;
-
-  MyData
-    *my_data;
-
-  my_data=(MyData *) image->client_data;
-  p=(Quantum *) pixels;
-  if (p != (const Quantum *) NULL)
-    {
-      /* process pixels here */
-    }
-  return(columns);
-}
-
-...
-
-/* invoke the pixel stream here */
-image_info->client_data=(void *) MyData;
-image=ReadStream(image_info,&amp;StreamPixels,exception);
-</samp></pre>
-
-<p>We also provide a lightweight tool, <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a>, to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a> desirable when working with large images or when you require raw pixel components.  A majority of the image formats stream pixels (red, green, and blue) from left to right and top to bottom.  However, a few formats do not support this common ordering (e.g. the PSD format).</p>
-
 <h2><a class="anchor" id="properties"></a>Image Properties and Profiles</h2>
 
 <p>Images have metadata associated with them in the form of properties (e.g. width, height, description, etc.) and profiles (e.g. EXIF, IPTC, color management).  ImageMagick provides convenient methods to get, set, or update image properties and get, set, update, or apply profiles.  Some of the more popular image properties are associated with the Image structure in the MagickCore API.  For example:</p>
@@ -428,6 +397,40 @@ profile=GetImageProfile(image,"EXIF");
 if (profile != (StringInfo *) NULL)
   (void) PrintStringInfo(stdout,"EXIF",profile);
 </samp></pre>
+
+<h2><a class="anchor" id="multispectral"></a>Multispectral Images</h2>
+<p>ImageMagick internally supports multispectral images beyond five channels.  However, there is only a subset of image formats that support five or more channels.  FTXT and MPC have full support for multispectral images up to 64 channels, whereas TIFF and MIFF can currently only support up to six channels (CMYKA with one meta channel).  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
+
+<h2><a class="anchor" id="stream"></a>Streaming Pixels</h2>
+
+<p>ImageMagick provides for streaming pixels as they are read from or written to an image.  This has several advantages over the pixel cache.  The time and resources consumed by the pixel cache scale with the area of an image, whereas the pixel stream resources scale with the width of an image.  The disadvantage is the pixels must be consumed as they are streamed so there is no persistence.</p>
+
+<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#ReadStream">ReadStream()</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php#WriteStream">WriteStream()</a> with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
+<pre class="pre-scrollable bg-light text-dark mx-4"><samp>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
+{
+  register const Quantum
+    *p;
+
+  MyData
+    *my_data;
+
+  my_data=(MyData *) image->client_data;
+  p=(Quantum *) pixels;
+  if (p != (const Quantum *) NULL)
+    {
+      /* process pixels here */
+    }
+  return(columns);
+}
+
+...
+
+/* invoke the pixel stream here */
+image_info->client_data=(void *) MyData;
+image=ReadStream(image_info,&amp;StreamPixels,exception);
+</samp></pre>
+
+<p>We also provide a lightweight tool, <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a>, to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">stream</a> desirable when working with large images or when you require raw pixel components.  A majority of the image formats stream pixels (red, green, and blue) from left to right and top to bottom.  However, a few formats do not support this common ordering (e.g. the PSD format).</p>
 
 <h2><a class="anchor" id="tera-pixel"></a>Large Image Support</h2>
 <p>ImageMagick can read, process, or write mega-, giga-, or tera-pixel image sizes.  An image width or height can range from 1 to 2 giga-pixels on a 32 bit OS (up to 2147483647 rows/columns) and up to 9 exa-pixels on a 64-bit OS (up to 9223372036854775807 rows/columns).  Note, that some image formats have restrictions on image size.  For example, Photoshop images are limited to 300,000 pixels for width or height.  Here we resize an image to a quarter million pixels square:</p>
