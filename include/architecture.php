@@ -1,6 +1,6 @@
 <div class="magick-header"> 
 <h1 class="text-center">Architecture</h1>
-<p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#multispectral">Multispectral Images</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#stream">Streaming Pixels</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
+<p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#multispectral">Multispectral Imagery</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#stream">Streaming Pixels</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
 
 <p class="lead magick-description">The citizens of Oz were quite content with their benefactor, the all-powerful Wizard.  They accepted his wisdom and benevolence without ever questioning the who, why, and where of his power.  Like the citizens of Oz, if you feel comfortable that ImageMagick can help you convert, edit, or compose your images without knowing what goes on behind the curtain, feel free to skip this section.  However, if you want to know more about the software and algorithms behind ImageMagick, read on.  To fully benefit from this discussion, you should be comfortable with image nomenclature and be familiar with computer programming.</p>
 
@@ -398,8 +398,8 @@ if (profile != (StringInfo *) NULL)
   (void) PrintStringInfo(stdout,"EXIF",profile);
 </samp></pre>
 
-<h2><a class="anchor" id="multispectral"></a>Multispectral Images</h2>
-<p>ImageMagick internally supports multispectral images beyond five channels.  However, there is only a subset of image formats that support five or more channels.  FTXT and MPC have full support for multispectral images up to 64 channels, whereas TIFF and MIFF can currently only support up to six channels (CMYKA with one meta channel).  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
+<h2><a class="anchor" id="multispectral"></a>Multispectral Imagery</h2>
+<p>ImageMagick internally supports multispectral images beyond five bands.  However, there is only a subset of image formats that support five or more bands.  FTXT and MPC have full support for multispectral images up to 64 bands, whereas TIFF and MIFF can currently only support up to six bands (CMYKA with one meta channel).  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
 
 <h2><a class="anchor" id="stream"></a>Streaming Pixels</h2>
 
