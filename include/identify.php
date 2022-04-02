@@ -303,11 +303,6 @@ transparent, extract, background, or shape the alpha channel</td>
     <td>suppress all warning messages</td>
   </tr>
 
- <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#read-mask">-read-mask <var>filename</var></a></td>
-    <td>associate a read mask with the image</td>
-  </tr>
-
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
     <td>pay attention to warning messages.</td>
