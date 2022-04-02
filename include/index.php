@@ -131,7 +131,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral Imagery</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a></td>
     <td>support multispectral imagery up to 64 bands.</td>
   </tr>
   <tr>
