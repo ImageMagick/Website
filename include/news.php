@@ -4,7 +4,7 @@
 
 <p>ImageMagick recommended practices <strong>strongly</strong> encourage you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
 
-<p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a>.  TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
+<p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
 <p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="https://imagemagick.org/script/fx.php">Fx</a> special-effects image operator interpretter.  It has vastly improved error checking and performance.</p>
 

@@ -399,7 +399,7 @@ if (profile != (StringInfo *) NULL)
 </samp></pre>
 
 <h2><a class="anchor" id="multispectral"></a>Multispectral Imagery</h2>
-<p>ImageMagick supports multispectral images where all new channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  FTXT, MIFF, MPC, and TIFF have full support for multispectral images up to 64 bands.  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
+<p>ImageMagick supports multispectral images where all new channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and FTXT have full support for multispectral images up to 64 bands.  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
 
 <h2><a class="anchor" id="stream"></a>Streaming Pixels</h2>
 
