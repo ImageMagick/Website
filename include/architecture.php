@@ -399,7 +399,7 @@ if (profile != (StringInfo *) NULL)
 </samp></pre>
 
 <h2><a class="anchor" id="multispectral"></a>Multispectral Imagery</h2>
-<p>ImageMagick internally supports multispectral images beyond five bands.  However, there is only a subset of image formats that support five or more bands.  FTXT and MPC have full support for multispectral images up to 64 bands, whereas TIFF and MIFF can currently only support up to six bands (CMYKA with one meta channel).  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
+<p>ImageMagick supports multispectral images where all new channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  FTXT, MIFF, MPC, and TIFF have full support for multispectral images up to 64 bands.  If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
 
 <h2><a class="anchor" id="stream"></a>Streaming Pixels</h2>
 
