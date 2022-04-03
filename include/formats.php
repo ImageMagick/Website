@@ -391,7 +391,7 @@ the supported image formats.</p>
   <tr>
     <td><a href="http://im.snibgo.com/fmttxt.htm">FTXT</a></td>
     <td>RW</td>
-    <td>Read and Write Pixels as Formatted Text</td>
+    <td>Read and write multispectral channels as formatted text</td>
     <td>We use 'ftxt:' for defines rather than 'fmttxt:', e.g. 'ftxt:format'. Note, some systems require you escape the backslash character.</td>
   </tr>
 
@@ -587,7 +587,7 @@ the supported image formats.</p>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/miff.php">MIFF</a></td>
     <td>RW</td>
-    <td>Magick image file format</td>
+    <td>Magick multispectral image file format</td>
     <td>This format persists all image attributes known to ImageMagick.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
@@ -940,7 +940,7 @@ the supported image formats.</p>
   <tr>
     <td><a href="http://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">PSD</a></td>
     <td>RW</td>
-    <td>Adobe Photoshop bitmap file</td>
+    <td>Adobe Photoshop multispectral bitmap file</td>
     <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
   </tr>
 
@@ -1108,7 +1108,7 @@ the supported image formats.</p>
   <tr>
     <td><a href="http://www.libtiff.org/">TIFF</a></td>
     <td>RW</td>
-    <td>Tagged Image File Format</td>
+    <td>Tagged image file multispectral format</td>
     <td>Also known as <samp>TIF</samp>. Requires <a href="http://www.libtiff.org/">tiff-v3.6.1.tar.gz</a> or later.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the rows per strip (e.g. <samp>-define tiff:rows-per-strip=8</samp>).  To define the tile geometry, use for example, <samp>-define tiff:tile-geometry=128x128</samp>. To specify a <var>signed</var> format, use  <samp>-define quantum:format=signed</samp>. To specify a single-precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 64 for a double-precision floating-point format.  Use <samp>-define quantum:polarity=min-is-black</samp> or <samp>-define quantum:polarity=min-is-white</samp> toggle the photometric interpretation for a bilevel image.  Specify the extra samples as associated or unassociated alpha with, for example, <samp>-define tiff:alpha=unassociated</samp>.  Set the fill order with <samp>-define tiff:fill-order=msb|lsb</samp>. Set the TIFF endianness with <samp>-define tiff:endian=msb|lsb</samp>. Use <samp>-define tiff:exif-properties=false</samp> to skip reading the EXIF properties.  Use <samp>-define tiff:gps-properties=false</samp> to skip reading the GPS properties. You can set a number of TIFF software attributes including document name, host computer, artist, timestamp, make, model, software, and copyright.  For example, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set tiff:software "My Company"</a>. If you want to ignore certain TIFF tags, use this option: <samp>-define tiff:ignore-tags=comma-separated-list-of-tag-IDs</samp>. Since version 6.9.1-4 there is support for reading photoshop layers in TIFF files, this can be disabled with <samp>-define tiff:ignore-layers=true</samp>. To preserve compression of the source image, use: <samp>-define tiff:preserve-compression=true</samp>.</td>
   </tr>
 
