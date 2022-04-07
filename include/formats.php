@@ -1129,7 +1129,7 @@ the supported image formats.</p>
   <tr>
     <td>TXT</td>
     <td>RW</td>
-    <td>Raw text file</td>
+    <td>Multispectral raw text file</td>
     <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define txt:compliance=css</samp>).</td>
   </tr>
 
