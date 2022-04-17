@@ -479,6 +479,9 @@ MagickBooleanType
 ssize_t
   y;
 
+/*
+  Acquire a cache view to enable parallelism.
+*/
 status=MagickTrue;
 image_view=AcquireVirtualCacheView(image,exception);
 #pragma omp parallel for schedule(static,4) shared(status)
@@ -495,6 +498,9 @@ for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
 
   if (status == MagickFalse)
     continue;
+  /*
+    Get a row of pixels.
+  */
   q=GetCacheViewAuthenticPixels(image_view,0,y,image-&gt;columns,1,exception);
   if (q == (Quantum *) NULL)
     {
@@ -504,6 +510,9 @@ for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
   metacontent=GetCacheViewAuthenticMetacontent(image_view);
   for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
   {
+    /*
+      Set the pixel color.
+    */
     SetPixelRed(image,...,q);
     SetPixelGreen(image,...,q);
     SetPixelBlue(image,...,q);
@@ -512,9 +521,15 @@ for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
       metacontent[indexes+x]=...;
     q+=GetPixelChannels(image);
   }
+  /*
+    Sync the updated pixels to the pixel cache.
+  */
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
 }
+/*
+  Destroy the cache view.
+*/
 image_view=DestroyCacheView(image_view);
 if (status == MagickFalse)
   perror("something went wrong");
@@ -1232,10 +1247,9 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
   assert((*images)->signature == MagickCoreSignature);
   (void) argc;
   (void) argv;
-  image=(*images);
   status=MagickTrue;
   progress=0;
-  for ( ; image != (Image *) NULL; image=GetNextImageInList(image))
+  for (image=(*images); image != (Image *) NULL; image=GetNextImageInList(image))
   {
     CacheView
       *image_view;
