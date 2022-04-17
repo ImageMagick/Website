@@ -106,8 +106,7 @@ ssize_t
   x,
   y;
 
-destination=CloneImage(source,source->columns,source->rows,MagickTrue,
-  exception);
+destination=CloneImage(source,source->columns,source->rows,MagickTrue,exception);
 if (destination == (Image *) NULL)
   { /* an exception was thrown */ }
 for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
@@ -199,13 +198,13 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <h2>Cache Storage and Resource Requirements</h2>
 
-<p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is plentiful and cheap but it is also very slow, upwards of 1000 times slower than memory.  We can get some speed improvements, up to 5 times, if we use memory mapping to the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
+<p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is plentiful and cheap, but it is also very slow-- upwards of 1000 times slower than accessing pixels in memory.  We can get some speed improvements, up to 5 times, if we memory-map the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
 <dl class="row">
   <dt class="col-md-4">width</dt>
-  <dd class="col-md-8">maximum width of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
+  <dd class="col-md-8">maximum width of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</dd>
   <dt class="col-md-4">height</dt>
-  <dd class="col-md-8">maximum height of an image.  Exceed this limit and an exception is thrown and processing stops.</dd>
+  <dd class="col-md-8">maximum height of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</dd>
   <dt class="col-md-4">area</dt>
   <dd class="col-md-8">maximum area in bytes of any one image that can reside in the pixel cache memory.  If this limit is exceeded, the image is automagically cached to disk and optionally memory-mapped.</dd>
   <dt class="col-md-4">memory</dt>
@@ -213,11 +212,11 @@ if (y &lt; (ssize_t) source-&gt;rows)
   <dt class="col-md-4">map</dt>
   <dd class="col-md-8">maximum amount of memory map in bytes to allocate for the pixel cache.</dd>
   <dt class="col-md-4">disk</dt>
-  <dd class="col-md-8">maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, the pixel cache is not created and a fatal exception is thrown.</dd>
+  <dd class="col-md-8">maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, a fatal exception is thrown, and all processing stops.</dd>
   <dt class="col-md-4">files</dt>
-  <dd class="col-md-8">maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk, but without a speed penalty due to repeated open/close calls.</dd>
+  <dd class="col-md-8">maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk without a speed penalty by reducing the number of pixel cache open/close system calls.</dd>
   <dt class="col-md-4">thread</dt>
-  <dd class="col-md-8">maximum number of threads that are permitted to run in parallel.</dd>
+  <dd class="col-md-8">maximum number of threads that are permitted to run in parallel.  Your system may choose a number of threads that is less that this value. ImageMagick chooses  an optimum number of threads by default, which is usually the number of cores on your host. Set this value to 1 and all parallel regions are executed by one thread. </dd>
   <dt class="col-md-4">time</dt>
   <dd class="col-md-8">maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
 </dl>
@@ -240,36 +239,75 @@ Resource limits:
 </samp></pre>
 
 <p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>, includes these policy limits to help prevent a denial-of-service:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policymap>
-  &lt;!-- temporary path must be a preexisting writable directory -->
-  &lt;policy domain="resource" name="temporary-path" value="/tmp"/>
-  &lt;policy domain="resource" name="memory" value="256MiB"/>
-  &lt;policy domain="resource" name="map" value="512MiB"/>
-  &lt;policy domain="resource" name="width" value="8KP"/>
-  &lt;policy domain="resource" name="height" value="8KP"/>
+<pre class="pre-scrollable bg-light text-dark mx-4"><samp>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE policymap [
+&lt;!ELEMENT policymap (policy)+>
+&lt;!ELEMENT policy (#PCDATA)>
+&lt;!ATTLIST policy domain (delegate|coder|filter|path|resource) #IMPLIED>
+&lt;!ATTLIST policy name CDATA #IMPLIED>
+&lt;!ATTLIST policy rights CDATA #IMPLIED>
+&lt;!ATTLIST policy pattern CDATA #IMPLIED>
+&lt;!ATTLIST policy value CDATA #IMPLIED>
+]>
+&lt;!--
+  Configure ImageMagick policies.
+
+  Domains include system, delegate, coder, filter, path, or resource.
+
+  Rights include none, read, write, and execute.  Use | to combine them,
+  for example: "read | write" to permit read from, or write to, a path.
+
+  Use a glob expression as a pattern.
+
+  Suppose we do not want users to process MPEG video images:
+
+    &lt;policy domain="delegate" rights="none" pattern="mpeg:decode" />
+
+  Here we do not want users reading images from HTTP:
+
+    &lt;policy domain="coder" rights="none" pattern="HTTP" />
+
+  Lets prevent users from executing any image filters:
+
+    &lt;policy domain="filter" rights="none" pattern="*" />
+
+  The /repository file system is restricted to read only.  We use a glob
+  expression to match all paths that start with /repository:
+  
+    &lt;policy domain="path" rights="read" pattern="/repository/*" />
+
+  Any large image is cached to disk rather than memory:
+
+    &lt;policy domain="resource" name="area" value="1GB"/>
+
+  Define arguments for the memory, map, area, and disk resources with
+  SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for
+  each instance of ImageMagick (e.g. policy memory limit 1GB, -limit 2GB
+  exceeds policy maximum so memory limit is 1GB).
+-->
+&lt;policymap>
+  &lt;policy domain="resource" name="temporary-path" value="/opt/tmp"/> 
+  &lt;policy domain="resource" name="memory" value="256MiB"/> 
+  &lt;policy domain="resource" name="list-length" value="32"/> 
+  &lt;policy domain="resource" name="width" value="8KP"/> 
+  &lt;policy domain="resource" name="height" value="8KP"/> 
+  &lt;policy domain="resource" name="map" value="512MiB"/> 
   &lt;policy domain="resource" name="area" value="16KP"/>
-  &lt;policy domain="resource" name="disk" value="1GiB"/>
-  &lt;policy domain="resource" name="file" value="768"/>
+  &lt;policy domain="resource" name="disk" value="1GiB"/> 
+  &lt;policy domain="resource" name="file" value="768"/> 
   &lt;policy domain="resource" name="thread" value="2"/>
-  &lt;policy domain="resource" name="throttle" value="0"/>
-  &lt;policy domain="resource" name="time" value="120"/>
-  &lt;policy domain="resource" name="list-length" value="128"/>
+  &lt;policy domain="resource" name="time" value="120"/> 
   &lt;policy domain="system" name="precision" value="6"/>
-  &lt;policy domain="cache" name="shared-secret" stealth="true" value="replace with your secret phrase"/>
-  &lt;policy domain="coder" rights="none" pattern="MVG" />
-  &lt;policy domain="coder" rights="none" pattern="EPS" />
-  &lt;policy domain="coder" rights="none" pattern="PS" />
-  &lt;policy domain="coder" rights="none" pattern="PS2" />
-  &lt;policy domain="coder" rights="none" pattern="PS3" />
-  &lt;policy domain="coder" rights="none" pattern="PDF" />
-  &lt;policy domain="coder" rights="none" pattern="XPS" />
+  &lt;policy domain="cache" name="memory-map" value="anonymous"/>
+  &lt;policy domain="cache" name="synchronize" value="true"/>
+  &lt;policy domain="cache" stealth="true" name="shared-secret" value="replace with your secret phrase"/>
+  &lt;policy domain="coder" rights="none" pattern="URL" />
+  &lt;policy domain="coder" rights="write" pattern="{HTTP,HTTPS,MVG}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
-  &lt;policy domain="delegate" rights="none" pattern="HTTPS" />  <!--  prevent 'curl' program from reading HTTPS URL's -->
-  &lt;policy domain="delegate" rights="none" pattern="SHOW" />
-  &lt;policy domain="delegate" rights="none" pattern="WIN" />
-  &lt;policy domain="path" rights="none" pattern="@*"/>  <!-- indirect reads not permitted -->
-</samp></pre>
-<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory.With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8 you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS"). The policy also prevents indirect reads.  If you want to, for example, read text from a file (e.g. caption:@myCaption.txt), you'll need to remove this policy.</p>
+  &lt;policy domain="path" rights="none" pattern="@*"/>
+  &lt;policy domain="system" name="font" value="/my-system-fonts/arial-unicode.ttf"/>
+&lt;/policymap></samp></pre>
+<p>Since we process multiple simultaneous sessions, we don't want any one session consuming all the available memory. With this policy, large images are cached to disk. If the image is too large and exceeds the pixel cache disk limit, the program exits. In addition, we place a time limit to prevent any run-away processing tasks. If any one image has a width or height that exceeds 8192 pixels, an exception is thrown and processing stops. As of ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (set the pattern to "*"). Note, prior to this release, use a domain of "coder" to prevent delegate usage (e.g. domain="coder" rights="none" pattern="HTTPS"). The policy also prevents indirect reads.  If you want to, for example, read text from a file (e.g. caption:@myCaption.txt), you'll need to remove this policy.</p>
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
@@ -305,24 +343,28 @@ magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2
 
 <p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
 <pre class="pre-scrollable bg-light text-dark mx-4"><samp>CacheView
-  *view_1,
-  *view_2;
+  *first_row,
+  *last_row;
 
-view_1=AcquireVirtualCacheView(source,exception);
-view_2=AcquireVirtualCacheView(source,exception);
+first_row=AcquireVirtualCacheView(source,exception);
+last_row=AcquireVirtualCacheView(source,exception);
 for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
 {
-  u=GetCacheViewVirtualPixels(view_1,0,y,source-&gt;columns,1,exception);
-  v=GetCacheViewVirtualPixels(view_2,0,source-&gt;rows-y-1,source-&gt;columns,1,exception);
-  if ((u == (const Quantum *) NULL) || (v == (const Quantum *) NULL))
+  const Quantum
+    *p,
+    *q;
+
+  p=GetCacheViewVirtualPixels(first_row,0,y,source-&gt;columns,1,exception);
+  q=GetCacheViewVirtualPixels(last_row,0,source-&gt;rows-y-1,source-&gt;columns,1,exception);
+  if ((p == (const Quantum *) NULL) || (q == (const Quantum *) NULL))
     break;
   for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)
   {
-    /* do something with u &amp; v here */
+    /* do something with p &amp; q here */
   }
 }
-view_2=DestroyCacheView(view_2);
-view_1=DestroyCacheView(view_1);
+last_row=DestroyCacheView(last_row);
+first_row=DestroyCacheView(first_row);
 if (y &lt; (ssize_t) source-&gt;rows)
   { /* an exception was thrown */ }
 </samp></pre>
