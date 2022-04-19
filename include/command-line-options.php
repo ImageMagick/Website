@@ -6725,7 +6725,7 @@ href="#style">-style</a>, and <a href="#weight">-weight</a>. </p>
   <h2><a class="anchor" id="strip"></a>-strip</h2>
 </div>
 
-<p class="magick-description">Strip the image of any profiles, comments or these PNG chunks: bKGD,cHRM,EXIF,gAMA,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date.</p>
+<p class="magick-description">Strip the image of any profiles, comments or these PNG chunks: bKGD,cHRM,EXIF,gAMA,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date. To remove the orientation chunk, <samp>orNT</samp>, set the orientation to undefined, e.g., <samp>-orient Undefined</samp>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="stroke"></a>-stroke <var>color</var></h2>

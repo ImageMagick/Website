@@ -1103,7 +1103,7 @@ use:</p>
     if they appear in either the "include-chunk" or "exclude-chunk" list.
     The ancillary chunks currently known to ImageMagick are
     <samp>bKGD</samp>, <samp>cHRM</samp>, <samp>gAMA</samp>, <samp>iCCP</samp>,
-    <samp>oFFs</samp>, <samp>pHYs</samp>, <samp>sRGB</samp>, <samp>tEXt</samp>,
+    <samp>oFFs</samp>, <samp>orNT</samp>, <samp>pHYs</samp>, <samp>sRGB</samp>, <samp>tEXt</samp>,
     <samp>tRNS</samp>, <samp>vpAg</samp>, and <samp>zTXt</samp>.</p>
 
     <p>You can also put <samp>date</samp> in the list to include or exclude
