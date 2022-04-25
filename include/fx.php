@@ -63,7 +63,7 @@
 <pre class="bg-light text-dark mx-4"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
-  channel(4.28,3.86,6.68,0)/255; max(0,p+pnoise)' noisy.png
+  channel(4.28,3.86,6.68,0,0)/255; max(0,p+pnoise)' noisy.png
 </samp></pre>
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
@@ -121,7 +121,7 @@
   <dt class="col-md-4"> math functions: </dt>
      <dd class="col-md-8"> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
   <dt class="col-md-4"> channel functions: </dt>
-    <dd class="col-md-8"> channel(r,g,b,a), channel(c,m,y,k,a)</dd>
+    <dd class="col-md-8"> set up to 5 channels, e.g., channel(r,g,b,a,0) or channel(c,m,y,k,a)</dd>
   <dt class="col-md-4"> color names:</dt>
     <dd class="col-md-8"> red, cyan, black, etc.</dd>
   <dt class="col-md-4"> color functions:</dt>
