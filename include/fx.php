@@ -121,7 +121,7 @@
   <dt class="col-md-4"> math functions: </dt>
      <dd class="col-md-8"> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
   <dt class="col-md-4"> channel functions: </dt>
-    <dd class="col-md-8"> set up to 5 channels, e.g., channel(r,g,b,a,0) or channel(c,m,y,k,a)</dd>
+    <dd class="col-md-8"> define up to 5 pixel channels</dd>
   <dt class="col-md-4"> color names:</dt>
     <dd class="col-md-8"> red, cyan, black, etc.</dd>
   <dt class="col-md-4"> color functions:</dt>
@@ -246,7 +246,7 @@
 <dt class="col-md-4"> <samp>atanh(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> inverse hyperbolic tangent function</dd>
 <dt class="col-md-4"> <samp>atan2(</samp><var>y</var>,<var>x</var><samp>)</samp></dt><dd class="col-md-8"> arc tangent function of two variables</dd>
 <dt class="col-md-4"> <samp>ceil(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8">smallest integral value not less than argument</dd>
-<dt class="col-md-4"> <samp>channel(</samp><var>r</var>,<var>g</var>,<var>b</var>,<var>a</var><samp>)</samp></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
+<dt class="col-md-4"> <samp>channel(</samp><var>r</var>,<var>g</var>,<var>b</var>,<var>a</var>,<var>0</var><samp>)</samp></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
 <dt class="col-md-4"> <samp>channel(</samp><var>c</var>,<var>m</var>,<var>y</var>,<var>k</var>,<var>a</var><samp>)</samp></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
 <dt class="col-md-4"> <samp>clamp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> clamp value</dd>
 <dt class="col-md-4"> <samp>cos(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> cosine function</dd>
