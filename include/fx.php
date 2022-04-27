@@ -63,7 +63,7 @@
 <pre class="bg-light text-dark mx-4"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
-  channel(4.28,3.86,6.68,0,0)/255; max(0,p+pnoise)' noisy.png
+  channel(4.28,3.86,6.68)/255; max(0,p+pnoise)' noisy.png
 </samp></pre>
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
@@ -246,8 +246,7 @@
 <dt class="col-md-4"> <samp>atanh(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> inverse hyperbolic tangent function</dd>
 <dt class="col-md-4"> <samp>atan2(</samp><var>y</var>,<var>x</var><samp>)</samp></dt><dd class="col-md-8"> arc tangent function of two variables</dd>
 <dt class="col-md-4"> <samp>ceil(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8">smallest integral value not less than argument</dd>
-<dt class="col-md-4"> <samp>channel(</samp><var>r</var>,<var>g</var>,<var>b</var>,<var>a</var>,<var>0</var><samp>)</samp></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
-<dt class="col-md-4"> <samp>channel(</samp><var>c</var>,<var>m</var>,<var>y</var>,<var>k</var>,<var>a</var><samp>)</samp></dt><dd class="col-md-8">select numeric argument based on current channel</dd>
+<dt class="col-md-4"> <samp>channel(</samp>...<samp>)</samp></dt><dd class="col-md-8">supports from zero to five arguments, e.g., channel(0.1) sets the first channel to 0.1 and zero's the other channels.</dd>
 <dt class="col-md-4"> <samp>clamp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> clamp value</dd>
 <dt class="col-md-4"> <samp>cos(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> cosine function</dd>
 <dt class="col-md-4"> <samp>cosh(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> hyperbolic cosine function</dd>
