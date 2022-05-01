@@ -43,9 +43,15 @@ use:</p>
   </tr>
 
   <tr>
+    <td>ashlar:best-fit</td>
+    <td>align tiles on both the left  and right edges.</td>
+  </tr>
+
+  <tr>
     <td>ashlar:tiles</td>
     <td>set the maximum number of image tiles to render per canvas.</td>
   </tr>
+
   <tr>
     <td>auto-threshold:verbose</td>
     <td>return derived threshold as the <samp>auto-threshold:threshold</samp> image property.</td>
