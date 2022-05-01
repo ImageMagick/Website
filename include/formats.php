@@ -1307,7 +1307,7 @@ the supported image formats.</p>
     <td>ASHLAR</td>
     <td>W</td>
     <td>Image sequence laid out in continuous irregular courses</td>
-    <td>By default, a reasonable canvas size and border width is determined relative to the image collection you provide.  You can explicitedly set the canvas size and border width by appending to the filename, e.g. <samp>ashlar:canvas.png[1024x768+4+4]</samp>. By default, alignment is along the left edge.  Use <samp>-define ashlar:best-fit=true</samp> to align on both the left  and right edges.  You can label the image tiles with, for example, <samp>-label %f</samp>. By default, all image tiles are rendered on one canvas.  Use <samp>-define ashlar:tiles=50</samp>, for example, to render at most 50 tiles on any one canvas.</td>
+    <td>By default, a reasonable canvas size and border width is determined relative to the image collection you provide.  You can explicitedly set the canvas size and border width by appending to the filename, e.g. <samp>ashlar:canvas.png[1024x768+4+4]</samp>. By default, alignment is along the left edge.  Use <samp>-define ashlar:best-fit=true</samp> to align on both the left  and right edges.  You can label the image tiles with, for example, <samp>-label %f</samp>. By default, all image tiles are rendered on a single canvas.  Use <samp>-define ashlar:tiles=50</samp>, for example, to render at most 50 tiles per canvas.</td>
   </tr>
 
   <tr>
