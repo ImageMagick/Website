@@ -43,6 +43,10 @@ use:</p>
   </tr>
 
   <tr>
+    <td>ashlar:tiles</td>
+    <td>set the maximum number of image tiles to render per canvas.</td>
+  </tr>
+  <tr>
     <td>auto-threshold:verbose</td>
     <td>return derived threshold as the <samp>auto-threshold:threshold</samp> image property.</td>
   </tr>
