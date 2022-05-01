@@ -68,7 +68,7 @@
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick -size 400x400 xc:black -colorspace gray -fx " \
+<pre class="bg-light text-dark mx-4"><samp>magick -size 400x400 xc:gray -fx " \
   Xi=2.4*i/w-1.2; \
   Yj=2.4*j/h-1.2; \
   for (pixel=0.0, (hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0), \
@@ -87,7 +87,7 @@
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick xc: -channel gray -fx " \
+<pre class="bg-light text-dark mx-4"><samp>magick xc:gray -fx " \
   for (prime=2, prime &lt; 30, composite=0; \
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
       if (composite &lt;= 0, debug(prime), ); prime++)" null:</samp></pre>
