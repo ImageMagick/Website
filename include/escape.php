@@ -203,7 +203,7 @@ filename, type, width, height. </p>
   </tr>
   <tr>
     <td>%A</td>
-    <td>image transparency channel enabled (true/false)</td>
+    <td>image transparency channel. Values include Undefined (no transparency channel), Blend, Copy, or Update. </td>
   </tr>
   <tr>
     <td>%B</td>
