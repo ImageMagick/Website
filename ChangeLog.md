@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-33](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-32...7.1.0-33) - 2022-05-07
+
+### Merged
+
+- autotools: Add ws2_32 library with MagickCore for Win32 platform [`#5119`](https://github.com/ImageMagick/ImageMagick/pull/5119)
+- Avoid NULL pointer dereference in coders/wmf.c [`#5117`](https://github.com/ImageMagick/ImageMagick/pull/5117)
+
+### Commits
+
+- beta release [`600c455`](https://github.com/ImageMagick/ImageMagick/commit/600c455b84e471b700880653a6316c75b238bdc3)
+- possible null dereference [`4e085a2`](https://github.com/ImageMagick/ImageMagick/commit/4e085a2d4a968856b85a3152b97330f257c57e0d)
+- improved error checking [`2e5c976`](https://github.com/ImageMagick/ImageMagick/commit/2e5c976bbf64c77265bfc13727ff584759906f23)
+- Also create an arm64 installer. [`c84fcf5`](https://github.com/ImageMagick/ImageMagick/commit/c84fcf5d794e82411c740841dabfabf48e84aa66)
+- Also create portable arm64 binaries. [`6126915`](https://github.com/ImageMagick/ImageMagick/commit/6126915469c6e6523250c604e63f91686787bd14)
+- eliminate coverity defect [`4cec11d`](https://github.com/ImageMagick/ImageMagick/commit/4cec11d25697bf36279de36639cc5516c4ae4b40)
+- eliminate Coverity defect [`0364622`](https://github.com/ImageMagick/ImageMagick/commit/03646225cbf3346d8ae455a0abbb2607cdb0e8e0)
+- eliminate Coverity defect [`a619616`](https://github.com/ImageMagick/ImageMagick/commit/a619616e7ee750543f97e77d2a64dcfcda3c6df1)
+- https://github.com/ImageMagick/ImageMagick/discussions/5099 [`43da986`](https://github.com/ImageMagick/ImageMagick/commit/43da9864b5642e6c75c820b5d2241f5c9770e431)
+- prevent memory leak on exception [`0157eb8`](https://github.com/ImageMagick/ImageMagick/commit/0157eb86a847443671a480dd3d2e8fca64fed16a)
+- the tiles per page cannot be zero [`fecf247`](https://github.com/ImageMagick/ImageMagick/commit/fecf247fb9a6eae8fc719b413553822bc3d1fe78)
+- check security policy before reading an -fx expression from a file [`c53fb96`](https://github.com/ImageMagick/ImageMagick/commit/c53fb964bcd9fa05fb9f5670e13ffdf65ad97147)
+- fix exception on a valid ternary @ https://github.com/ImageMagick/ImageMagick/discussions/4533 [`64b5fe6`](https://github.com/ImageMagick/ImageMagick/commit/64b5fe68ac7edd0baef7271c127c7bdf49a573b3)
+- display the image pixel cache type [`759029d`](https://github.com/ImageMagick/ImageMagick/commit/759029dd82c11157a5a6b61d36fff6d2588f1f34)
+- change order of pixel cache type [`3529df8`](https://github.com/ImageMagick/ImageMagick/commit/3529df8399eadd863a7696ff5f48d887bae93fcb)
+- change order of pixel cache type [`bacb357`](https://github.com/ImageMagick/ImageMagick/commit/bacb3574e5138e819abf8ab904d5ea3079764700)
+- use the correct property key for arithmetic coding [`0184b6c`](https://github.com/ImageMagick/ImageMagick/commit/0184b6cb7b72436aa5eefcd8b1612a88b601bae5)
+- Reverted patch because HDRI should always be highres. [`4e20a27`](https://github.com/ImageMagick/ImageMagick/commit/4e20a27b8790d8308f0477723f4998184db2d432)
+- the maximum dissolve factor is 1.0 [`452c436`](https://github.com/ImageMagick/ImageMagick/commit/452c436c509792dfc582c3efc80ac11875731590)
+- Removed duplicate check. [`b108dbd`](https://github.com/ImageMagick/ImageMagick/commit/b108dbd243d7f36ef1be32c574524a88f3dd4156)
+- Fixed possible memory leak reported in #5121. [`9c957a6`](https://github.com/ImageMagick/ImageMagick/commit/9c957a6d66ead61d6a36bd20935b402db257792b)
+- Removed to heif_filetype_yes_unsupported check to resolved the issue reported in #5123. [`47898c6`](https://github.com/ImageMagick/ImageMagick/commit/47898c655bc726da6d7fdd41b70a6a73c5754cb0)
+- possible memory leak @ https://github.com/ImageMagick/ImageMagick/issues/5121 [`b0c1967`](https://github.com/ImageMagick/ImageMagick/commit/b0c1967fe17ddb59d2b26112efc0465bd01c971f)
+- eliminate compiler warnings [`a10a570`](https://github.com/ImageMagick/ImageMagick/commit/a10a57044ae285c0f33159a53f3c8a3e1c297b82)
+- eliminate compiler warnings [`3fa3d9f`](https://github.com/ImageMagick/ImageMagick/commit/3fa3d9fc2ead42461cfb2c2cd47d6b60d681cc96)
+- conditional logging [`53fb342`](https://github.com/ImageMagick/ImageMagick/commit/53fb3423ebf9fc3da08ab61d5b186c5203e76f9e)
+- eliminate compiler warnings [`a429f44`](https://github.com/ImageMagick/ImageMagick/commit/a429f447c7f3d34bf71c2c0a1df249e694d6ce2a)
+- background kept when making cylinder @ https://github.com/ImageMagick/ImageMagick/discussions/5112 [`925a6c5`](https://github.com/ImageMagick/ImageMagick/commit/925a6c5d87ab5372d0b8b073819416e4ef5db312)
+- cosmetic [`d4d5ca2`](https://github.com/ImageMagick/ImageMagick/commit/d4d5ca2dd981a37408e7a97e407c1d5632312c07)
+- possible memory leak @ https://github.com/ImageMagick/ImageMagick/issues/5131 [`8ed6d1d`](https://github.com/ImageMagick/ImageMagick/commit/8ed6d1d52957b74c75ec8037ad698f714b9fb918)
+- release [`4e6f7b1`](https://github.com/ImageMagick/ImageMagick/commit/4e6f7b1ee2ee736e466edf0efad09c0033be2ca7)
+- release [`39baedd`](https://github.com/ImageMagick/ImageMagick/commit/39baedd0019edb3b69749b314633d6ad9428bcb9)
+
 ## [7.1.0-32](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-31...7.1.0-32) - 2022-04-30
 
 ### Merged
