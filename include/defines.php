@@ -847,12 +847,13 @@ use:</p>
   </tr>
 
   <tr>
+    <td>jpeg:arithmetic-coding=<var>on|off</var></td>
+     <td>enable/disable Huffman optimization.</td>
+  </tr>
+
+  <tr>
     <td>jpeg:block-smoothing=<var>on|off</var></td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>jpeg:coding=<var>arithmetic</var></td>
-     <td>enable Huffman optimization.</td>
   </tr>
 
   <tr>

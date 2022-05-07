@@ -6,6 +6,8 @@
 
 <p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
+<p>We now provide <a href="https://imagemagick.org/script/download.php#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
+
 <p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="https://imagemagick.org/script/fx.php">Fx</a> special-effects image operator interpretter.  It has vastly improved error checking and performance.</p>
 
 <p><a href="https://github.com/fmw42">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamless and saliency blending</a> composite operators.</p>
