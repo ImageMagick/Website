@@ -5465,6 +5465,8 @@ left-top       undefined
 right-bottom
 </samp></pre>
 
+<p>Note, this is a setting.  This merely sets the orientation metadata, and does not change the image.</p>
+
 <p>To print a complete list of orientations, use the <a href="#list" >-list
 orientation</a> option.</p>
 
