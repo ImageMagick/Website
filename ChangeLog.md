@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-34](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-33...7.1.0-34) - 2022-05-15
+
+### Commits
+
+- beta release [`68a0412`](https://github.com/ImageMagick/ImageMagick/commit/68a041269ddfc43dc334022176395592d179dba2)
+- require min 3 channels for compositing [`5d38476`](https://github.com/ImageMagick/ImageMagick/commit/5d38476b487766c1fc03f22193ed6d81aff917d6)
+- PDF to PBM no longer returning all white @ https://github.com/ImageMagick/ImageMagick/issues/5134 [`8e605a2`](https://github.com/ImageMagick/ImageMagick/commit/8e605a2a3b8bb54393ffbf14b5d9af0973091aad)
+- Removed incorrect method definition from the header file. [`18ccd96`](https://github.com/ImageMagick/ImageMagick/commit/18ccd96e8e9fc5707273287aab466485abf9c69d)
+- fix build with -Werror @ https://github.com/ImageMagick/ImageMagick6/pull/177 [`0dcacb8`](https://github.com/ImageMagick/ImageMagick/commit/0dcacb8ca5b1b986ce1599a7b9642fc08deb328b)
+- clarify usage [`186578a`](https://github.com/ImageMagick/ImageMagick/commit/186578a5a7a653441f6270624f6124c258bc83e7)
+- eliminate compiler warnings [`4fe856b`](https://github.com/ImageMagick/ImageMagick/commit/4fe856bdfa99ec43ca8843ba5bf9f9ba7db57c03)
+- latest autoconf/automake config [`4b69c54`](https://github.com/ImageMagick/ImageMagick/commit/4b69c54f928e76199d9fec740a2058c69ac15e74)
+- cosmetic [`2722c2f`](https://github.com/ImageMagick/ImageMagick/commit/2722c2fa6004efdc5d33ccd85db9e99a2c3ae85b)
+- cosmetic [`78a1988`](https://github.com/ImageMagick/ImageMagick/commit/78a19889d28b045254a1dbf4431e2fdf5c839daa)
+- automake/autoconf update [`a772a53`](https://github.com/ImageMagick/ImageMagick/commit/a772a53cde76526ba5dadd10254b18d7c8a04cff)
+- automake/autoconf update [`9d882e4`](https://github.com/ImageMagick/ImageMagick/commit/9d882e45df2b47e09467e996b3019ff1df14be0b)
+- correct check for Magick++ compliance [`f4d8e6e`](https://github.com/ImageMagick/ImageMagick/commit/f4d8e6ec87e10802c7ab3fe99991ae28d0d7473c)
+- automake/autoconf remove obselete macros [`644472a`](https://github.com/ImageMagick/ImageMagick/commit/644472a70043ce3b85f8e77ad0d67d5e2f7ffd2f)
+- build RPM tweaks [`40bc17c`](https://github.com/ImageMagick/ImageMagick/commit/40bc17c866d6a1e8bbabf1496d0e68c5b4b8dc8d)
+- tweak BZIP2 autoconf macro [`af5fdcd`](https://github.com/ImageMagick/ImageMagick/commit/af5fdcd2129bf0e8651d0a7f827e4abec77f5c0e)
+- do not change grayscale colorspace to sRGB when compositing [`05074b2`](https://github.com/ImageMagick/ImageMagick/commit/05074b260d5eddbfa76e5d3bb68e50d1c122dc08)
+- release [`f2934c5`](https://github.com/ImageMagick/ImageMagick/commit/f2934c5212ae38aea2b8d21bbdf22dcc31e3903e)
+
 ## [7.1.0-33](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-32...7.1.0-33) - 2022-05-07
 
 ### Merged
