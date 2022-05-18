@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-35](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-34...7.1.0-35) - 2022-05-16
+
+### Commits
+
+- beta release [`e37bfbd`](https://github.com/ImageMagick/ImageMagick/commit/e37bfbdac1842265bbe1e3da7b61dd8580d947b5)
+- remove special use case of Kmeans for color reduction @ https://github.com/ImageMagick/ImageMagick/issues/5152 [`53d7d06`](https://github.com/ImageMagick/ImageMagick/commit/53d7d0693138f2f63c099260c224bcbc4802972f)
+- fix temporary file leak [`7496436`](https://github.com/ImageMagick/ImageMagick/commit/74964367f92291090d5919a12a167a2051c90f90)
+- one-off release due to "-monochrome command no longer dithers grayscale [`ff6dbbb`](https://github.com/ImageMagick/ImageMagick/commit/ff6dbbbec9cfac49f3a6217e51717139bde840ff)
+
 ## [7.1.0-34](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-33...7.1.0-34) - 2022-05-15
 
 ### Commits
