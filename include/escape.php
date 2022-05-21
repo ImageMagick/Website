@@ -382,6 +382,10 @@ when enclosed in braces (long form):</p>
     <td>how well an image resembles a reference image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compare" >-compare</a>)</td>
   </tr>
   <tr>
+    <td>%[dominant-color]</td>
+    <td>return the dominate image color in hex.  Preceed usage with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#kmeans" >-kmeans</a>.</td>
+  </tr>
+  <tr>
     <td>%[entropy]</td>
     <td>CALCULATED: entropy of the image</td>
   </tr>
