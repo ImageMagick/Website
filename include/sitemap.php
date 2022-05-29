@@ -9,7 +9,7 @@
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
-  <li><a href="https://legacy.imagemagick.org/Usage/">Anthony Thyssen's examples of ImageMagick usage</a>:  a comprehensive tutorial of using ImageMagick from the command line.</li>
+  <li><a href="https://imagemagick.org/Usage/">Anthony Thyssen's examples of ImageMagick usage</a>:  a comprehensive tutorial of using ImageMagick from the command line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">Color names</a>: how to specify a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA color.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>: ImageMagick depends on external resources including configuration files, loadable modules, fonts, and environment variables.</li>
@@ -117,7 +117,7 @@
 <div class="pre-scrollable bg-light text-dark table-responsive" style="font-size:smaller !important;">
 <table class="table table-sm table-hover">
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/anim_basics/">Animation</a></td>
+    <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
@@ -153,15 +153,15 @@
     <td>smallest area convex polygon containing the image foreground objects. In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/crop/">Decorate</a></td>
+    <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>
     <td>add a border or frame to an image.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
+    <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
     <td><a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25405">Canny edge detection</a>, <a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25476">Hough lines</a>.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
+    <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
     <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
@@ -169,7 +169,7 @@
     <td>offload intermediate pixel storage to one or more remote servers.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/draw/">Draw</a></td>
+    <td><a href="https://imagemagick.org/Usage/draw/">Draw</a></td>
     <td>add shapes or text to an image.</td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@
     <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
+    <td><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
     <td>correct for, or induce image distortions including perspective.</td>
   </tr>
   <tr>
@@ -221,7 +221,7 @@
     <td>juxtapose image thumbnails on an image canvas.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
+    <td><a href="https://imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
@@ -229,7 +229,7 @@
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
+    <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
     <td><a href="https://legacy.imagemagick.org/discourse-server~/viewtopic6519.html?f=4&t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server~/viewtopic6519.html?f=4&t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
@@ -237,11 +237,11 @@
     <td>map visually identical images to the same or similar hash-- useful in image retrieval, authentication, indexing, or copy detection as well as digital watermarking.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/blur/">Special effects</a></td>
+    <td><a href="https://imagemagick.org/Usage/blur/">Special effects</a></td>
     <td>blur, sharpen, threshold, or tint an image.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/text/">Text &amp; comments</a></td>
+    <td><a href="https://imagemagick.org/Usage/text/">Text &amp; comments</a></td>
     <td>insert descriptive or artistic text in an image.</td>
   </tr>
   <tr>
@@ -249,11 +249,11 @@
     <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/resize/">Transform</a></td>
+    <td><a href="https://imagemagick.org/Usage/resize/">Transform</a></td>
     <td>resize, rotate, deskew, crop, flip or trim an image.</td>
   </tr>
   <tr>
-    <td><a href="https://legacy.imagemagick.org/Usage/masking/">Transparency</a></td>
+    <td><a href="https://imagemagick.org/Usage/masking/">Transparency</a></td>
     <td>render portions of an image invisible.</td>
   </tr>
   <tr>

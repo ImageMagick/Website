@@ -13,7 +13,7 @@
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </samp></pre>
 
-<p>You can find additional examples of using <samp>magick-script</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>magick-script</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

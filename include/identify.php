@@ -124,7 +124,7 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01 </samp></pre>
 
 <pre class="bg-light text-dark mx-4"><samp>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png</samp></pre>
 
-<p>You can find additional examples of using <samp>magick identify</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>magick identify</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

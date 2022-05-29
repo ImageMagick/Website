@@ -494,7 +494,7 @@ negative results without clipping to the color value range
 href="<?php echo $_SESSION['RelativePath']
 ?>/../script/high-dynamic-range.php" >High Dynamic-Range Images</a>. For more
 about HDRI go the ImageMagick <a
-href="https://legacy.imagemagick.org/Usage/basics/#hdri" >Usage</a> pages or this
+href="https://imagemagick.org/Usage/basics/#hdri" >Usage</a> pages or this
 <a
 href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
 entry.  </p>
@@ -1602,7 +1602,7 @@ negative results without clipping to the color value range (0..QuantumRange).
 See the discussion on HDRI implementations of ImageMagick on the page <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High
 Dynamic-Range Images</a>. For more about HDRI go the ImageMagick <a
-href="https://legacy.imagemagick.org/Usage/basics/#hdri">Usage</a> pages or this
+href="https://imagemagick.org/Usage/basics/#hdri">Usage</a> pages or this
 <a href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
 entry.  </p>
 
@@ -3152,7 +3152,7 @@ images.</p>
 href="<?php echo $_SESSION['RelativePath']
 ?>/../script/high-dynamic-range.php" >High Dynamic-Range Images</a>. For more
 about HDRI go the ImageMagick <a
-href="https://legacy.imagemagick.org/Usage/basics/#hdri" >Usage</a> pages, <a
+href="https://imagemagick.org/Usage/basics/#hdri" >Usage</a> pages, <a
 href="http://www.fmwconcepts.com/imagemagick/fourier_transforms/fourier.html"
 >Fred's Fourier Processing With ImageMagick page</a> or this <a
  href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging" >Wikipedia</a>
@@ -5255,7 +5255,7 @@ argument determine how many images to interpolate between each image. </p>
 
 <p class="magick-description">Apply a morphology method to the image.</p>
 
-<p>See <a href="https://legacy.imagemagick.org/Usage/morphology/" >IM Usage Examples, Morphology</a>. </p>
+<p>See <a href="https://imagemagick.org/Usage/morphology/" >IM Usage Examples, Morphology</a>. </p>
 
 
 <div style="margin: auto;">

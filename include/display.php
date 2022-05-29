@@ -22,7 +22,7 @@
 
 <pre class="bg-light text-dark mx-4"><samp>magick display -density 72 drawing.svg </samp></pre>
 
-<p>You can find additional examples of using <samp>display</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>display</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

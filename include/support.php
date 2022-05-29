@@ -18,7 +18,6 @@
   <dt class="col-md-12"><a href="https://www.futureweb.at/"> <img class="clearfix" src="https://imagemagick.org/image/futureweb_red.png" width="143" height="160" alt="[Futureweb – Your Austrian Webdesign & Hosting Company]" /></a>  Futureweb – Your Austrian Webdesign &amp; Hosting Company.</dt><br/>
 <!-- code signing certificate -->
   <dt class="col-md-12"><a href="https://www.leaderssl.com"> <img class="clearfix" src="https://imagemagick.org/image/leaderssl.png" width="162" height="42" alt="[LeaderSSL]" /></a>  We enable secure connections for websites.</dt><br/>
-  <dt class="col-md-12"><a href="https://www.orekahealth.com/"> <img class="clearfix" src="https://imagemagick.org/image/oreka-logo.webp" width="200" height="120" alt="[Oreka Health]" /></a>  Take control of your personal data.</dt><br/>
 </dl>
 
 <h2><a class="anchor" id="contribute"></a>Contribute a Bug Fix or Enhancement</h2>

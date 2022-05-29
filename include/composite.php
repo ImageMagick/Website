@@ -42,7 +42,7 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
   bear-in-stream.png </samp></pre>
 <p>Here we create read mask that marks the foreground object from its background. No blending is applied to the foreground object, just its surroundings. The read-mask preserves the colors of the bear and prevents them from lightening as in the first example. Note that read-masks must be black on white background as opposed to normal masks, which are white on black background.</p>
 
-<p>You can find additional examples of using <samp>composite</samp> in <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
+<p>You can find additional examples of using <samp>composite</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

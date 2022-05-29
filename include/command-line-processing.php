@@ -53,13 +53,13 @@
   -roll +0+"%[fx:(rand()*w*0.05)+(w*0.51)]" \( +clone -blur 0x4 \) -insert 0 -composite \
   -duplicate "%[fx:floor(rand()*3+3)*2-1]" -set option:rot "%[fx:180/n]" -virtual-pixel tile \
   -virtual-pixel none -distort SRT "%[fx:t*360/n]" +repage -flatten -extent 100x50% \
-  \( +clone -rotate 180 \) -append +channel -virtual-pixel none -distort SRT "0.96 \
-  %[fx:rand()*360]" \( +clone -flop \) +repage -insert "%[fx:round(rand())]" \
-  -background black -flatten -brightness-contrast 20,20 -normalize dragonFire.png</samp></pre>
+  \( +clone -rotate 180 \) -append +channel -virtual-pixel none -distort SRT "0.96 %[fx:rand()*360]" \
+  \( +clone -flop \) +repage -insert "%[fx:round(rand())]" -background black \
+  -flatten -brightness-contrast 20,20 -normalize dragonFire.png</samp></pre>
 <p>To ensure the script can run under Windows, change any backslash-parens (\() to just parens, the backslash (\) to <samp>^</samp>, and double-up the percent (%) signs.</p>
 <p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
 
-<p>See <a href="https://legacy.imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
+<p>See <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 
 <h2><a class="anchor" id="anatomy"></a>The Anatomy of the Command-line</h2>
 <p>The ImageMagick command-line consists of</p>
