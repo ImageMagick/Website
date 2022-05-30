@@ -257,6 +257,13 @@ display logo.gif</samp></pre>
   </thead>
   <tbody>
   <tr>
+  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-arm64-static.exe";
+  ?>
+      <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+   <td>ARM64 static at 16 bits-per-pixel component</td>
+  </tr>
+
+  <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-x64-static.exe";
   ?>
       <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
@@ -282,6 +289,13 @@ display logo.gif</samp></pre>
   ?>
     <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
    <td>Win64 dynamic at 16 bits-per-pixel component</td>
+  </tr>
+
+  <tr>
+  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-arm64-dll.exe";
+  ?>
+    <td><a href= "https://download.imagemagick.org/ImageMagick/download/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
+    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
