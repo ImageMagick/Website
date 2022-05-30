@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-36](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-35...7.1.0-36) - 2022-05-30
+
+### Commits
+
+- beta release [`cfdb489`](https://github.com/ImageMagick/ImageMagick/commit/cfdb4897c6a2212c83be207f4dd5344b0d373d3e)
+- Corrected the avif check to fix the issue reported in #5159. [`c638f3f`](https://github.com/ImageMagick/ImageMagick/commit/c638f3fbfc0517b5b3b1d69f67c16bb874fb6719)
+- introducing the `dominant-color` property [`9135de4`](https://github.com/ImageMagick/ImageMagick/commit/9135de494c057fbe1cbb5193ba6cb4158a6520bd)
+- improve dominant color reporting [`3077a6c`](https://github.com/ImageMagick/ImageMagick/commit/3077a6cc430a57869ee0fa56f3b3a5e65f3f15a3)
+- Updated CodeQL Action. [`b7b90a1`](https://github.com/ImageMagick/ImageMagick/commit/b7b90a1498dc74b8d24bbd4923c61f7d0ee6a125)
+- Try with different permissions. [`c092510`](https://github.com/ImageMagick/ImageMagick/commit/c092510ca5bb408fd07fdbbd7b566f04bb51eef3)
+- Corrected permission name. [`0014ddf`](https://github.com/ImageMagick/ImageMagick/commit/0014ddfb2af800cb45c11dfb3396ded1abc65525)
+- Corrected pragma comments due to repository renames. [`ad98584`](https://github.com/ImageMagick/ImageMagick/commit/ad985843a21055fe0639410e75fe52e94c7ff2f1)
+- Added arm64 to the main build. [`5eb9b2b`](https://github.com/ImageMagick/ImageMagick/commit/5eb9b2b2906714a7dc437d3fbd8dea470e2d2516)
+- cosmetic [`967fc1c`](https://github.com/ImageMagick/ImageMagick/commit/967fc1ceb84319e3234400a096d5fbd3efee5cbf)
+- Download ChangeLog after cloning the repositories. [`7b0bf73`](https://github.com/ImageMagick/ImageMagick/commit/7b0bf732d5907d5a0f0cadb5bf2e17edee70319d)
+- latest ImageMagick documentation [`0442c9d`](https://github.com/ImageMagick/ImageMagick/commit/0442c9d0ff3fceb24128705b44fd25a7b2c69c9c)
+- release [`cd1add4`](https://github.com/ImageMagick/ImageMagick/commit/cd1add42d5583a842788450bd768bfd2c3851786)
+
 ## [7.1.0-35](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-34...7.1.0-35) - 2022-05-16
 
 ### Commits
