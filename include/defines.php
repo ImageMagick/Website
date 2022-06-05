@@ -484,9 +484,7 @@ use:</p>
 
   <tr>
     <td>phash:normalize=<var>true</var></td>
-    <td>Normalize the phash metric by dividing by the number of channels
-    specified by <samp>-define phash:colorspaces</samp> when using compare
-    -metric phash. (as of IM 7.0.3-8)</td>
+    <td>Normalize the phash metric</td>
   </tr>
 
   <tr>
