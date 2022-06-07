@@ -774,6 +774,30 @@ use:</p>
   </tr>
 
   <tr>
+    <td>ftxt:chsep=<var>value</var></td>
+    <td>A single text character that separates channel values for reading and
+    writing. Default: "," (Comma).</td>
+  </tr>
+
+  <tr>
+    <td>ftxt:format=<var>value</var></td>
+    <td>The format string for writing and reading. Default: "\x,\y:\c".
+    For escapes \x etc, see
+    [ftxt: formatted text](http://im.snibgo.com/fmttxt.htm).</td>
+  </tr>
+
+  <tr>
+    <td>ftxt:hasalpha=<var>value</var></td>
+    <td>Whether the text has an alpha channel, for reading only.
+    Default: false.</td>
+  </tr>
+
+  <tr>
+    <td>ftxt:nummeta=<var>value</var></td>
+    <td>The number of meta channels, for reading only. Default 0 (Zero).</td>
+  </tr>
+
+  <tr>
     <td>heic:chroma=<var>value</var></td>
     <td>set the HEIC chroma parameter.</td>
     </td>
@@ -801,7 +825,8 @@ use:</p>
 
   <tr>
     <td>icon:auto-resize</td>
-    <td>Automatically stores multiple sizes when writing an ico image (requires a 256x256 input image).</td>
+    <td>Automatically stores multiple sizes when writing an ico image
+    (requires a 256x256 input image).</td>
   </tr>
 
   <tr>
