@@ -6274,8 +6274,8 @@ Old size = 70x46  New size = 35x23
 </samp></pre>
 
 <p>Other well known 'properties' that are available include:
-'<samp>date:create</samp>' and '<samp>date:modify</samp>' and
-'<samp>signature</samp>'. </p>
+<samp>date:timestamp</samp>, <samp>date:create</samp>,
+<samp>date:modify</samp>, and <samp>signature</samp>. </p>
 
 <p>The <a href="#repage">-repage</a> operator will also allow you to modify
 the '<samp>page</samp>' attribute of an image for images already in memory (also
