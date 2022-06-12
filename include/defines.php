@@ -238,11 +238,6 @@ use:</p>
   </tr>
 
   <tr>
-    <td>date:precision</td>
-    <td>Set the maximum number of characters printed for any timestamp.</td>
-  </tr>
-
-  <tr>
     <td>deskew:auto-crop=<var>true</var></td>
     <td>auto crop the image after deskewing.</td>
   </tr>
@@ -551,6 +546,11 @@ use:</p>
     <td>Set attributes of the image registry, for example, 
     registry:temporary-path=/data/tmp.
     </td>
+  </tr>
+
+  <tr>
+    <td>registry:date:precision=<var>length</var></td>
+    <td>Set the maximum number of characters printed for any timestamp.</td>
   </tr>
 
   <tr>
