@@ -117,9 +117,6 @@ Path: ImageMagick-7/policy.xml
   Policy: Resource
     name: temporary-path
     value: /opt/tmp
-  Policy: System
-    name: precision
-    value: 6
   Policy: Coder
     rights: Write 
     pattern: {HTTP,HTTPS,MVG,PS,PDF}
