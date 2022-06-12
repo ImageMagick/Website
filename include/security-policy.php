@@ -30,7 +30,6 @@
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
   &lt;policy domain="cache" name="synchronize" value="true"/>
   &lt;policy domain="cache" name="shared-secret" value="<em>my-secret-passphrase</em>" stealth="True"/>
-  &lt;policy domain="system" name="precision" value="6"/>
   &lt;policy domain="system" name="shred" value="1"/>
 &lt;/policymap></samp></pre>
 
