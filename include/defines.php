@@ -238,6 +238,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>date:precision</td>
+    <td>Set the maximum number of characters printed for any timestamp.</td>
+  </tr>
+
+  <tr>
     <td>deskew:auto-crop=<var>true</var></td>
     <td>auto crop the image after deskewing.</td>
   </tr>

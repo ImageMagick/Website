@@ -209,7 +209,7 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
   <tr>
     <td>MAGICK_DATE_PRECISION</td>
-    <td>Set the maximum number of characters to be printed for any timestamp.</td>
+    <td>Set the maximum number of characters printed for any timestamp.</td>
   </tr>
   <tr>
     <td>MAGICK_DEBUG</td>
