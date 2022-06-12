@@ -208,6 +208,10 @@ $MAGICK_FONT_PATH</samp></pre>
     <td>Set path where ImageMagick can locate its configuration files.  Use this search path to search for configuration (.xml) files. The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#configure">default search path</a>.</td>
   </tr>
   <tr>
+    <td>MAGICK_DATE_PRECISION</td>
+    <td>Set the maximum number of characters to be printed for any timestamp.</td>
+  </tr>
+  <tr>
     <td>MAGICK_DEBUG</td>
     <td>Set debug options.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug</a> for a description of debugging options.</td>
   </tr>
