@@ -102,7 +102,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
 <dd class="col-md-8"><a href="http://wand-py.org/">Wand</a> is a ctypes-based ImagedMagick binding library for Python.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
-<dd class="col-md-8"><a href="https://download.imagemagick.org/ImageMagick/download/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
+<dd class="col-md-8"><a href="https://imagemagick.org/archive/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 <dd class="col-md-8"><a href="http://www.assembla.com/wiki/show/pythonmagickwand">PythonMagickWand</a> is an object-oriented Python interface to MagickWand based on ctypes.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>

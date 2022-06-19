@@ -1177,7 +1177,7 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
 display logo.mgk
 </samp></pre>
 
-<p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
+<p>We provide the <a href="https://imagemagick.org/archive/kits/">Magick Coder Kit</a> to help you get started writing your own custom coder.</p>
 
 <p>Before you build, set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
 
@@ -1455,7 +1455,7 @@ Image: logo:
 </samp></pre>
 
 
-<p>We provide the <a href="https://download.imagemagick.org/ImageMagick/download/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
+<p>We provide the <a href="https://imagemagick.org/archive/kits/">Magick Filter Kit</a> to help you get started writing your own custom image filter.</p>
 
 <p>Before you build, set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
 

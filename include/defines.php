@@ -559,6 +559,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>registry:precision=<var>value</var></td>
+    <td>Set the maximum number of significant digits to be printed.</td>
+  </tr>
+
+  <tr>
     <td>resample:verbose=<var>true</var></td>
     <td>Output the cylindrical filter lookup table created by the EWA 
     (Elliptical Weighted Average) resampling algorithm. Note this table 

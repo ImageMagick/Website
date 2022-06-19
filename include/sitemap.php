@@ -28,10 +28,10 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li> <dl class="magick-list-unstyled">
     <li><a href="https://imagemagick.org/download">Linux source</a>: Linux source distributions.</li>
-    <li><a href="https://download.imagemagick.org/ImageMagick/download/windows">Windows source</a>: Windows source distributions.</li>
-    <li><a href="https://download.imagemagick.org/ImageMagick/download/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
+    <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
+    <li><a href="https://imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
     <li><a href="https://github.com/ImageMagick">Git repository</a>: stable and development source releases.</li>
-    <li><a href="https://download.imagemagick.org/ImageMagick/download/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
+    <li><a href="https://imagemagick.org/archive/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
   </dl> </li>
 </dl>
 
@@ -81,7 +81,7 @@
     <li><a href="http://code.google.com/p/nmagick">nMagick</a>: is a port of the ImageMagick library to the haXe and Neko platforms.</li>
     <li><a href="http://wiki.freepascal.org/PascalMagick">PascalMagick</a>: a Pascal binding for the MagickWand API and also the low-level MagickCore library.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
-    <li><a href="https://download.imagemagick.org/ImageMagick/download/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
+    <li><a href="https://imagemagick.org/archive/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
     <li><a href="http://rmagick.rubyforge.org/">RMagick</a>: is an interface between the Ruby programming language and ImageMagick.</li>
     <li><a href="http://tclmagick.sourceforge.net/">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
   </ul></li>
@@ -158,7 +158,7 @@
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
-    <td><a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25405">Canny edge detection</a>, <a href="https://legacy.imagemagick.org/discourse-server~/viewtopic37d8.html?f=4&t=25476">Hough lines</a>.</td>
+    <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic37d8.html?f=4&t=25405">Canny edge detection</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic37d8.html?f=4&t=25476">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
@@ -230,7 +230,7 @@
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
-    <td><a href="https://legacy.imagemagick.org/discourse-server~/viewtopic6519.html?f=4&t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server~/viewtopic6519.html?f=4&t=25504">mean-shift</a>.</td>
+    <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic6519.html?f=4&t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic6519.html?f=4&t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
     <td><a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html">Perceptual hash</a></td>

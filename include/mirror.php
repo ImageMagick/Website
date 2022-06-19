@@ -13,7 +13,7 @@
   <dt>Russia</dt>
     <dd><a href="https://mirror.surf/imagemagick/ ">https://mirror.surf/imagemagick/ </a></dd>
   <dt>United States</dt>
-    <dd><a href="https://download.imagemagick.org/ImageMagick/download/">https://imagemagick.org/download</a></dd>
+    <dd><a href="https://imagemagick.org/archive/">https://imagemagick.org/download</a></dd>
     <dd><a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a> (Git)</dd>
   <dt>Select Binaries </dt>
     <dd><a href="http://www.macports.org/ports.php?by=name&amp;substr=imagemagick">http://www.macports.org/ports.php?by=name&amp;substr=imagemagick</a> (Mac OS X)</dd>
