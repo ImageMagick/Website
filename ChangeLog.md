@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-39](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-38...7.1.0-39) - 2022-06-20
+
+### Commits
+
+- beta release [`77932cb`](https://github.com/ImageMagick/ImageMagick/commit/77932cb9424f81fca686942bd8cb97b2eafc6065)
+- Fixed possible memory leak. [`12a1b25`](https://github.com/ImageMagick/ImageMagick/commit/12a1b25e47deb28129815e9f50c7624dd70a3a46)
+- support floating point formats [`7093702`](https://github.com/ImageMagick/ImageMagick/commit/70937026d08d11a488899c2d36dff1c3b45b5151)
+- initialize date:precision in private TimerComponentGenesis() method [`fce5298`](https://github.com/ImageMagick/ImageMagick/commit/fce5298f22272ae8439b95316b5981d61bb301c9)
+- check for -1 is not required [`68fb3c5`](https://github.com/ImageMagick/ImageMagick/commit/68fb3c56279ede6a30bfdd6348f3806811354132)
+- refactor date:precision flow [`6df26f2`](https://github.com/ImageMagick/ImageMagick/commit/6df26f22cf373c0fcf491e2d1b6033d74bccfcab)
+- eliminate compiler warning [`2dda00a`](https://github.com/ImageMagick/ImageMagick/commit/2dda00ae5f67024b5fd22b752eb6521bf83a006c)
+- release [`21a5642`](https://github.com/ImageMagick/ImageMagick/commit/21a5642bc3c5b17c8e4e6cad9e1f41eeb6be9677)
+
 ## [7.1.0-38](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-37...7.1.0-38) - 2022-06-19
 
 ### Commits
