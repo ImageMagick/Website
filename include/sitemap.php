@@ -27,7 +27,7 @@
 <dl class="magick-list-unstyled">
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li> <dl class="magick-list-unstyled">
-    <li><a href="https://imagemagick.org/download">Linux source</a>: Linux source distributions.</li>
+    <li><a href="https://imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
     <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
     <li><a href="https://imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
     <li><a href="https://github.com/ImageMagick">Git repository</a>: stable and development source releases.</li>
