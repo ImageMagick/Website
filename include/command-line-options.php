@@ -1225,7 +1225,7 @@ Undefined
 <p>For a more accurate color conversion to or from the linear RGB, CMYK, or grayscale colorspaces, use the <a href="#profile">-profile</a> option.  Note, ImageMagick assumes the sRGB colorspace if the image format does not indicate otherwise.  For colorspace conversion, the gamma function is first removed to produce linear RGB.</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
         <caption>Conversion of RGB to Other Color Spaces</caption>
         <tr><th valign="middle">CMY</th></tr>
         <tr><td valign="middle">C=<var>QuantumRange</var>−R</td></tr>
@@ -2031,7 +2031,7 @@ and meaning of the floating point values depends on the distortion <var>method</
 <p>Choose from these distortion types:</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
     <th style="width: 8%">Method</th>
     <th>Description</th>
@@ -2814,7 +2814,7 @@ normalized pixels are used, they are restored, following the other
 calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <col width="25%" />
   <col width="75%" />
   <thead>
@@ -3237,7 +3237,7 @@ use of these expert settings (see also <a href="#define" >-define</a> and <a
 href="#set" >-set</a>):-</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
     <td>-define filter:blur=<var>factor</var></td>
     <td>Scale the X axis of the filter (and its window). Use &gt; 1.0 for
@@ -3589,7 +3589,7 @@ href="#level">-level</a> operator also affects channels linearly. Some
 correspondences follow.</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
         <td>-evaluate Set <var>value</var> </td>
         <td>-function Polynomial <var>value</var></td>
@@ -3652,7 +3652,7 @@ is 0.</p>
 varying amplitude, phase and bias. The correspondence is as follows.</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
         <td>-evaluate Sin <var>freq</var> </td>
         <td>-function Sinusoid <var>freq</var>,0 </td>
@@ -4387,7 +4387,7 @@ which may represent either a set of overlaid 'image layers', a GIF disposal
 animation, or a fully-'coalesced' animation sequence. </p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th style="width: 8%">Method</th>

@@ -2,7 +2,7 @@
 <p class="lead magick-description">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a> or in montage <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#label" >-label</a>, to print various properties and other settings associated with an image.</p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-hover">
+<table class="table table-hover table-striped">
 <tr>
     <td><b>Profile Data</b></td>
     <td>Such as EXIF: data, containing focal lengths, exposures, dates, and in
@@ -80,7 +80,7 @@ common attributes and properties of an image, such as: the image filename
 filename, type, width, height. </p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
     <td>\</td>
     <td>backslash, the next character is literal and not subject to interpretation</td>
@@ -308,7 +308,7 @@ especially for large images.</p>
 when enclosed in braces (long form):</p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
     <td>%[basename]</td>
     <td>base filename, no suffixes (as %t)</td>

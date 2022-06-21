@@ -33,7 +33,7 @@ use:</p>
 
 <div class="table-responsive" style="font-size:smaller !important;">
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tr>
     <th align="center" colspan=2>Command-line Defines</th>
   </tr>

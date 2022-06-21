@@ -366,7 +366,7 @@ setting for more specifics.</p>
 
 
 <div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <col width="20%"/> <col width="80%"/>
   <thead>
   <tr>

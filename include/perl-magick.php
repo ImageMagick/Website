@@ -203,7 +203,7 @@ $p-&gt;Convolve([1, 2, 1, 2, 4, 2, 1, 2, 1]);   # 3x3 Gaussian kernel
 
 <p>Use the methods listed below to either read, write, or display an image or image sequence:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Read or Write Methods</caption>
 <thead>
   <colgroup>
@@ -299,7 +299,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
 <p>And here is a list of other image manipulation methods you can call:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Image Manipulation Methods</caption>
 <thead>
   <tr>
@@ -1292,7 +1292,7 @@ can use the integers 1 and 0.</p>
 
 <p>And here is a list of all the image attributes you can set:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Image Attributes</caption>
 <thead>
   <tr>
@@ -1706,7 +1706,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
 <p>In addition to all the attributes listed in <a href="#set-attribute">Set an Image Attribute</a> , you can get these additional attributes:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Image Attributes</caption>
 <thead>
   <tr>
@@ -1974,7 +1974,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
 <p>Mathematically and visually annotate the difference between an image and its reconstruction with the Compare() method.  The method supports these parameters:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Compare Parameters</caption>
 <thead>
   <tr>
@@ -2036,7 +2036,7 @@ $difference->Display();
 
 <p>And here is a list of Montage() parameters you can set:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Montage Parameters</caption>
 <thead>
   <tr>
@@ -2165,7 +2165,7 @@ South, SouthEast</td>
 format in memory instead of on disk. PerlMagick supports
 blobs in any of these image <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> and provides methods to convert a blob to or from a particular image format.</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Blob Methods</caption>
 <thead>
   <tr>
@@ -2213,7 +2213,7 @@ $image-&gt;BlobToImage(@blob);
 
 <p>Use these methods to obtain direct access to the image pixels:</p>
 
-<table class="table table-sm table-hover caption-top">
+<table class="table table-sm table-hover table-striped caption-top">
 <caption>Direct-access to Image Pixels</caption>
 <thead>
   <tr>

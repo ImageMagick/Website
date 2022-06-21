@@ -35,7 +35,7 @@ floating-point mathematics rather than simple boolean operations.</p>
 
 <p>The following alpha blending (Duff-Porter) compose methods are available:</p>
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
@@ -142,7 +142,7 @@ the rest of the image outside the overlaid area.  </p>
 
 <p>The following mathematical composition methods are also available. </p>
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
@@ -267,7 +267,7 @@ composition effects, becoming involved. </p>
 
 <p>The following lighting composition methods are also available. </p>
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
@@ -375,7 +375,7 @@ composition effects, becoming involved. </p>
 
 <p>Also included are these special purpose compose methods:</p>
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
@@ -443,7 +443,7 @@ separately.  For example... </p>
 with a brief summary of what they do. For more details see the equivalent
 "composite" command option name.  </p>
 
-<table class="table table-sm table-hover">
+<table class="table table-sm table-hover table-striped">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
