@@ -266,9 +266,9 @@
   </tr>
 </table>
 </div>
-
+<br/>
 
 <h2><a class="anchor" id="legacy"></a>ImageMagick Legacy</h2>
-<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a></p>
+<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.  We have archived <a href="https://imagemagick.org/discourse-server/">legacy ImageMagick discussions</a>.</p>
 </div>
 
