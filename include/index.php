@@ -12,7 +12,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
-<div class="table-responsive" style="font-size:smaller !important;">
+<div class="table-responsive pre-scrollable" style="font-size:smaller !important;">
 <table class="table table-sm table-hover table-striped">
   <tr>
     <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
@@ -168,7 +168,7 @@ Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&am
   </tr>
 </table>
 </div>
-
+<br/>
 <p><a href="https://imagemagick.org/Usage/" target="_blank">Examples of ImageMagick Usage</a> shows how to use ImageMagick from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command-line</a> to accomplish any of these tasks and much more. Also, see <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations. With <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>, use ImageMagick without having to install ImageMagick on your server or desktop. Finally, see <a href="http://im.snibgo.com/">Snibgo's ImageMagick Cookbook</a> for Windows-based ImageMagick scripting.</p>
 
 <h4><a class="anchor" id="community"></a>Community</h4>
