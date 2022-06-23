@@ -234,7 +234,7 @@
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
-    <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic6519.html?f=4&t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic6519.html?f=4&t=25504">mean-shift</a>.</td>
+    <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
     <td><a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html">Perceptual hash</a></td>
