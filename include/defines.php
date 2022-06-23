@@ -956,13 +956,23 @@ use:</p>
   </tr>
 
   <tr>
-    <td>pdf:fit-page=<var>geometry</var></td>
-    <td><var>Geometry</var> specifies the scaling dimensions for resizing when the PDF is being read. The geometry is either WxH{%} or page size. No offsets are allowed. (introduced in IM 6.8.8-8)</td>
+    <td>pdf:author=<var>author</var></td>
+    <td>Sets the author of the document</td>
   </tr>
 
   <tr>
-    <td>pdf:author=<var>author</var></td>
-    <td></td>
+    <td>pdf:create-epoch=<var>seconds</var></td>
+    <td>Sets the creation time of the document</td>
+  </tr>
+
+  <tr>
+    <td>pdf:creator=<var>creator</var></td>
+    <td>Sets the creator of the document</td>
+  </tr>
+
+  <tr>
+    <td>pdf:fit-page=<var>geometry</var></td>
+    <td><var>Geometry</var> specifies the scaling dimensions for resizing when the PDF is being read. The geometry is either WxH{%} or page size. No offsets are allowed. (introduced in IM 6.8.8-8)</td>
   </tr>
 
   <tr>
@@ -981,13 +991,28 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:keywords=<var>keywords</var></td>
+    <td>Sets the keywords of the document</td>
+  </tr>
+
+  <tr>
+    <td>pdf:modify-epoch=<var>seconds</var></td>
+    <td>Sets the modification time of the document</td>
+  </tr>
+
+  <tr>
     <td>pdf:page-direction=<var>right-to-left</var></td>
     <td> </td>
   </tr>
 
   <tr>
     <td>pdf:producer=<var>producer</var></td>
-    <td></td>
+    <td>Sets the producer of the document</td>
+  </tr>
+
+  <tr>
+    <td>pdf:subject=<var>subject</var></td>
+    <td>Sets the subject of the document</td>
   </tr>
 
   <tr>
@@ -1002,7 +1027,7 @@ use:</p>
 
   <tr>
     <td>pdf:title=<var>title</var></td>
-    <td></td>
+    <td>Sets the title of the document</td>
   </tr>
 
   <tr>
