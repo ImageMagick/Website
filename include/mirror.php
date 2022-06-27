@@ -7,6 +7,9 @@
     <dd><a href="https://mirror.dogado.de/imagemagick/">https://mirror.dogado.de/imagemagick/</a></dd>
     <dd><a href="https://mirror.checkdomain.de/imagemagick/">http://mirror.checkdomain.de/imagemagick/</a></dd>
     <dd><a href="ftp://mirror.checkdomain.de/imagemagick/">ftp://mirror.checkdomain.de/imagemagick/</a></dd>
+  <dt>Poland</dt>
+    <dd><a href="https://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/">https://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/</a></dd>
+    <dd><a href="rsync://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/">rsync://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/</a></dd>
   <dt>Sweden</dt>
     <dd><a href="https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
     <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
