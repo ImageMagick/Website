@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-40](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-39...7.1.0-40) - 2022-07-03
+
+### Commits
+
+- beta release [`15fbf4d`](https://github.com/ImageMagick/ImageMagick/commit/15fbf4da67cd51f903c13adbebd40eda1bfff047)
+- prevent undefined shift [`2b10479`](https://github.com/ImageMagick/ImageMagick/commit/2b10479483641a0dd3092650edd4964b591cf3b9)
+- prevent possible buffer overflow [`a854a0a`](https://github.com/ImageMagick/ImageMagick/commit/a854a0a8af977a1b67830f02a53d9eb4d877e10d)
+- correct copy/paste error [`b11d647`](https://github.com/ImageMagick/ImageMagick/commit/b11d64704f46cedade2ca3cdcebbc8d1f315035e)
+- We need to free the stream ourselves when the call to FT_Open_Face fails. [`a1eb122`](https://github.com/ImageMagick/ImageMagick/commit/a1eb12255c950825c96714d86d6a69e8e83bc9e2)
+- Added missing call to DestroyString. [`bc786da`](https://github.com/ImageMagick/ImageMagick/commit/bc786dac768bd5013cd497c5788aea7a0f02e873)
+- MVG requires seekable stream [`16f316e`](https://github.com/ImageMagick/ImageMagick/commit/16f316e33a66c67dfc13cd4cbe82097bee90f7e5)
+- Added extra malloc method to avoid early calls to the policy checks on Windows. [`57e7129`](https://github.com/ImageMagick/ImageMagick/commit/57e7129d4e75dee3024e7ad1fba6b18356ec10d0)
+- Removed defines. [`d868d16`](https://github.com/ImageMagick/ImageMagick/commit/d868d16a8c0548d144223e33896f3c0e6a4677e2)
+- Only check for dll's in non static build. [`59be75e`](https://github.com/ImageMagick/ImageMagick/commit/59be75ecd4d310edc8ea4de73d42f871dcee0580)
+- Set the client name and path earlier. [`b26efc7`](https://github.com/ImageMagick/ImageMagick/commit/b26efc7a6fba5c683c4e3a0447654a2785541dd2)
+- fix background opacity rounding @ https://github.com/ImageMagick/ImageMagick/issues/5264 [`b42d5cb`](https://github.com/ImageMagick/ImageMagick/commit/b42d5cbea9bb289130094d6299ff4897b75ab37b)
+- empty result on conversion from tiff to pdf @ https://github.com/ImageMagick/ImageMagick/issues/5256 [`9075c30`](https://github.com/ImageMagick/ImageMagick/commit/9075c3037b37b09b188626ff68559083328c6809)
+- Corrected patch that was made for #5256. [`002a038`](https://github.com/ImageMagick/ImageMagick/commit/002a0380bd6828201574a05ce9484e8136871086)
+- Pass negative interline_spacing to pango [`7e20db5`](https://github.com/ImageMagick/ImageMagick/commit/7e20db545aade7638047341bccdfb31807525d82)
+- Also check extension to fix possible stack overflow. [`acae312`](https://github.com/ImageMagick/ImageMagick/commit/acae31224ed02694b25570e6ce121925d8c0227c)
+- eliminate possible buffer overflow [`309dfda`](https://github.com/ImageMagick/ImageMagick/commit/309dfda1122f08fcf349b6f611b3b6df994d9297)
+- set group 4 photometric to min-is-white [`6ab6a3f`](https://github.com/ImageMagick/ImageMagick/commit/6ab6a3f141d0c2dd4a3b52dea0db6cdb807f1fab)
+- dasharray requires non-zero values [`19cdaf1`](https://github.com/ImageMagick/ImageMagick/commit/19cdaf1154a4fdfcff9551724dbe8b44a89765e0)
+- cosmetic [`75249eb`](https://github.com/ImageMagick/ImageMagick/commit/75249ebf0800f785e451337c6b70072195d5f866)
+- eliminate compiler warning [`d192518`](https://github.com/ImageMagick/ImageMagick/commit/d19251872eea427615ecc2b5f3726cd91ec19480)
+- only permit one rows/columns keyword [`972f445`](https://github.com/ImageMagick/ImageMagick/commit/972f445c9064afefa0e61cfc906aa102e0ee45fb)
+- Moved allocation back to the correct spot to avoid bypassing SetImageExtent. [`9a8c352`](https://github.com/ImageMagick/ImageMagick/commit/9a8c352c06613c557c3ba5113b79afaae429c1c4)
+- Also restore setting quantum_info to null. [`bc14685`](https://github.com/ImageMagick/ImageMagick/commit/bc146855d32c1fbac33a9d0c9f8b2dbc9f83cec1)
+- revert [`5e87813`](https://github.com/ImageMagick/ImageMagick/commit/5e87813a9935e9b5ed634e601bf5b329cfc765bf)
+- eliminate uninitialized value warning [`8584fcd`](https://github.com/ImageMagick/ImageMagick/commit/8584fcd4b162abc22229e3555dbd08f820057ee3)
+- Make sure all text strings are freed when realloc fails. [`76693a4`](https://github.com/ImageMagick/ImageMagick/commit/76693a4cbd42bfa77cb089a3033fe19c7c1f7650)
+- Reset primitive_info inside RenderMVGContent because this address could point to another address. [`e2bf123`](https://github.com/ImageMagick/ImageMagick/commit/e2bf123cbaff9dcde654116a933b202cffac2e18)
+- Always check if .text is set instead. [`dd2791b`](https://github.com/ImageMagick/ImageMagick/commit/dd2791b0fdb7175f0e658b76637ed7aead5ed95c)
+- eliminate uninitialized alpha pixel [`7f01237`](https://github.com/ImageMagick/ImageMagick/commit/7f0123790b85438962b60c362d0bfe2557ce1c2c)
+- remove debugging mod [`1ad7086`](https://github.com/ImageMagick/ImageMagick/commit/1ad70866a53f588031c50821bfcd743de7c66df9)
+- eliminate compiler warning [`51e2b04`](https://github.com/ImageMagick/ImageMagick/commit/51e2b04a82aad68a06219ab620e41c00acdb43fc)
+- recognize read-mask & write-mask for -channel option [`6b8d6f9`](https://github.com/ImageMagick/ImageMagick/commit/6b8d6f9ff85b8ccfcd6e281782878bd91eee2b2d)
+- eliminate compiler warning [`e32bd1d`](https://github.com/ImageMagick/ImageMagick/commit/e32bd1d99f8d690fcfe2bc941b981bd71a0af68a)
+- fix scrambled image @ https://github.com/ImageMagick/ImageMagick/issues/5291 [`e8a2735`](https://github.com/ImageMagick/ImageMagick/commit/e8a273560c58dc2a099b2989d5cfcd0021e40d51)
+- yikes, misspelled 'level' [`7ad1916`](https://github.com/ImageMagick/ImageMagick/commit/7ad19164011001630f10f62a5116d54f5769d5f8)
+- release [`de7e8cd`](https://github.com/ImageMagick/ImageMagick/commit/de7e8cd106af3d7f13ba4fb1a7ef2ef5e3aa6a07)
+
 ## [7.1.0-39](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-38...7.1.0-39) - 2022-06-20
 
 ### Commits
