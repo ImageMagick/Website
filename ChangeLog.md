@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-40...7.1.0-41) - 2022-07-06
+
+### Commits
+
+- beta release [`19f1a50`](https://github.com/ImageMagick/ImageMagick/commit/19f1a50371acc1f4eaead23d097523319e64894a)
+- preserve input depth @ https://github.com/ImageMagick/ImageMagick6/issues/188 [`a69791d`](https://github.com/ImageMagick/ImageMagick/commit/a69791d9fbe91f1428ab1f75d3493649d96fba19)
+- cosmetic [`56dba8e`](https://github.com/ImageMagick/ImageMagick/commit/56dba8e426519c4e95405b2018618edafe434daf)
+- update to latest automake/autoconf release [`52d6892`](https://github.com/ImageMagick/ImageMagick/commit/52d689220fc5d5b2e2fc0fc4389ee781764bf07e)
+- recognize SVG file if it starts with whitespace @ https://github.com/ImageMagick/ImageMagick/issues/5294 [`db042fb`](https://github.com/ImageMagick/ImageMagick/commit/db042fbefdb06f71b8e1e01a78c245b35983b492)
+- Removed unused stealth flag. [`316b9d5`](https://github.com/ImageMagick/ImageMagick/commit/316b9d5ae46463697400536923585843fe294aa2)
+- Removed used path field. [`ed8d481`](https://github.com/ImageMagick/ImageMagick/commit/ed8d481cacaec90db2f4883661c359aebe2f5fa1)
+- Removed unused target field. [`92d2fe1`](https://github.com/ImageMagick/ImageMagick/commit/92d2fe198173cab3bf1faf610784647e209f61c7)
+- Removed unused exempt field. [`3036966`](https://github.com/ImageMagick/ImageMagick/commit/3036966f9a9cd59f9e76fbe48bcf0aadce026dcb)
+- Added extra option to the skip spaces to the MagicInfo. [`1563f07`](https://github.com/ImageMagick/ImageMagick/commit/1563f074ff2e6cc3f3e2e218acfc112dc90ee288)
+- Always start at the start of the string when comparing the magic value. [`be46ed6`](https://github.com/ImageMagick/ImageMagick/commit/be46ed631986a01f725191ff49e3c93d744fa10e)
+- cosmetic [`c4a9a8b`](https://github.com/ImageMagick/ImageMagick/commit/c4a9a8bd598c1c480f0a10a911a22b15889171d4)
+- avoid OMP deadlock @ https://github.com/ImageMagick/ImageMagick/issues/5301 [`1de5b94`](https://github.com/ImageMagick/ImageMagick/commit/1de5b94fb832d3b7d2909764cb6a4e5dd2d12c3d)
+- release [`8a38ada`](https://github.com/ImageMagick/ImageMagick/commit/8a38adadf20522c8f39f81200109f99976d29bec)
+
 ## [7.1.0-40](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-39...7.1.0-40) - 2022-07-03
 
 ### Commits
