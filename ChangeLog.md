@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-42](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-41...7.1.0-42) - 2022-07-09
+
+### Commits
+
+- incorrect pointer update when computing median @ https://github.com/ImageMagick/ImageMagick/issues/5298 [`e29f487`](https://github.com/ImageMagick/ImageMagick/commit/e29f487ccdbe9f971fa69f16785767b2484a8f0e)
+- beta release [`3a3baa9`](https://github.com/ImageMagick/ImageMagick/commit/3a3baa91cfee5af70f87266f33db54917739ba19)
+- Added extra check because the flag was removed in 0.21-Beta1. [`0b13828`](https://github.com/ImageMagick/ImageMagick/commit/0b13828b46ac7fc83a1eb677bda602285f8f04cd)
+- the -transparent-color option accepts colornames @ https://github.com/ImageMagick/ImageMagick/discussions/5297 [`ce18e42`](https://github.com/ImageMagick/ImageMagick/commit/ce18e422f951fa3e2627539b7bc0b03082176eea)
+- fix MVG stroke-opacity issues [`6cd5112`](https://github.com/ImageMagick/ImageMagick/commit/6cd511240400d5be19a95811a54de302186d5afd)
+- map channel parameter to pixel channel offset @ https://github.com/ImageMagick/ImageMagick/issues/5308 [`6bd722b`](https://github.com/ImageMagick/ImageMagick/commit/6bd722bfdd21ea03c7a309d11f0f1d18af6e2f1c)
+- release [`396d87c`](https://github.com/ImageMagick/ImageMagick/commit/396d87cf05f21810b1f64ac3f7d1d26653a90b96)
+
 ## [7.1.0-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-40...7.1.0-41) - 2022-07-06
 
 ### Commits
