@@ -406,6 +406,14 @@ when enclosed in braces (long form):</p>
     <td>original height of image (when it was read in)</td>
   </tr>
   <tr>
+    <td>%[histogram:contrast-stretch]</td>
+    <td>computed min and max contrast stretch percentage</td>
+  </tr>
+  <tr>
+    <td>%[histogram:linear-stretch]</td>
+    <td>computed min and max linear stretch percentage</td>
+  </tr>
+  <tr>
     <td>%[input]</td>
     <td>&nbsp;</td>
   </tr>
