@@ -200,26 +200,47 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is plentiful and cheap, but it is also very slow-- upwards of 1000 times slower than accessing pixels in memory.  We can get some speed improvements, up to 5 times, if we memory-map the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
-<dl class="row">
-  <dt class="col-md-4">width</dt>
-  <dd class="col-md-8">maximum width of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</dd>
-  <dt class="col-md-4">height</dt>
-  <dd class="col-md-8">maximum height of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</dd>
-  <dt class="col-md-4">area</dt>
-  <dd class="col-md-8">maximum area in bytes of any one image that can reside in the pixel cache memory.  If this limit is exceeded, the image is automagically cached to disk and optionally memory-mapped.</dd>
-  <dt class="col-md-4">memory</dt>
-  <dd class="col-md-8">maximum amount of memory in bytes to allocate for the pixel cache from the heap.</dd>
-  <dt class="col-md-4">map</dt>
-  <dd class="col-md-8">maximum amount of memory map in bytes to allocate for the pixel cache.</dd>
-  <dt class="col-md-4">disk</dt>
-  <dd class="col-md-8">maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, a fatal exception is thrown, and all processing stops.</dd>
-  <dt class="col-md-4">files</dt>
-  <dd class="col-md-8">maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk without a speed penalty by reducing the number of pixel cache open/close system calls.</dd>
-  <dt class="col-md-4">thread</dt>
-  <dd class="col-md-8">maximum number of threads that are permitted to run in parallel.  Your system may choose a number of threads that is less that this value. ImageMagick chooses  an optimum number of threads by default, which is usually the number of cores on your host. Set this value to 1 and all parallel regions are executed by one thread. </dd>
-  <dt class="col-md-4">time</dt>
-  <dd class="col-md-8">maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</dd>
-</dl>
+<div class="table-responsive" style="font-size:smaller !important;">
+<table class="table table-sm table-hover table-striped">
+  <tr>
+    <td>width</td>
+    <td>maximum width of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>maximum height of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</td>
+  </tr>
+  <tr>
+    <td>area</td>
+    <td>maximum area in bytes of any one image that can reside in the pixel cache memory.  If this limit is exceeded, the image is automagically cached to disk and optionally memory-mapped.</td>
+  </tr>
+  <tr>
+    <td>memory</td>
+    <td>maximum amount of memory in bytes to allocate for the pixel cache from the heap.</td>
+  </tr>
+  <tr>
+    <td>map</td>
+    <td>maximum amount of memory map in bytes to allocate for the pixel cache.</td>
+  </tr>
+  <tr>
+    <td>disk</td>
+    <td>maximum amount of disk space in bytes permitted for use by the pixel cache.  If this limit is exceeded, a fatal exception is thrown, and all processing stops.</td>
+  </tr>
+  <tr>
+    <td>files</td>
+    <td>maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand. This behavior permits a large number of images to be accessed simultaneously on disk without a speed penalty by reducing the number of pixel cache open/close system calls.</td>
+  </tr>
+  <tr>
+    <td>thread</td>
+    <td>maximum number of threads that are permitted to run in parallel.  Your system may choose a number of threads that is less that this value. ImageMagick chooses  an optimum number of threads by default, which is usually the number of cores on your host. Set this value to 1 and all parallel regions are executed by one thread. </td>
+  </tr>
+  <tr>
+    <td>time</td>
+    <td>maximum number of seconds that the process is permitted to execute.  Exceed this limit and an exception is thrown and processing stops.</td>
+  </tr>
+</table>
+</div>
+<br/>
 
 <p>Note, these limits pertain to the ImageMagick pixel cache.  Certain algorithms within ImageMagick do not respect these limits nor does any of the external delegate libraries (e.g. JPEG, TIFF, etc.).</p>
 
