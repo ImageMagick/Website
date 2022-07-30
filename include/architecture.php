@@ -162,38 +162,70 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
  <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <?php option("virtual-pixel"); ?> option from the command line.  The methods include:</p>
 
-<dl class="row">
-<dt class="col-md-4">background</dt>
-<dd class="col-md-8">the area surrounding the image is the background color</dd>
-<dt class="col-md-4">black</dt>
-<dd class="col-md-8">the area surrounding the image is black</dd>
-<dt class="col-md-4">checker-tile</dt>
-<dd class="col-md-8">alternate squares with image and background color</dd>
-<dt class="col-md-4">dither</dt>
-<dd class="col-md-8">non-random 32x32 dithered pattern</dd>
-<dt class="col-md-4">edge</dt>
-<dd class="col-md-8">extend the edge pixel toward infinity (default)</dd>
-<dt class="col-md-4">gray</dt>
-<dd class="col-md-8">the area surrounding the image is gray</dd>
-<dt class="col-md-4">horizontal-tile</dt>
-<dd class="col-md-8">horizontally tile the image, background color above/below</dd>
-<dt class="col-md-4">horizontal-tile-edge</dt>
-<dd class="col-md-8">horizontally tile the image and replicate the side edge pixels</dd>
-<dt class="col-md-4">mirror</dt>
-<dd class="col-md-8">mirror tile the image</dd>
-<dt class="col-md-4">random</dt>
-<dd class="col-md-8">choose a random pixel from the image</dd>
-<dt class="col-md-4">tile</dt>
-<dd class="col-md-8">tile the image</dd>
-<dt class="col-md-4">transparent</dt>
-<dd class="col-md-8">the area surrounding the image is transparent blackness</dd>
-<dt class="col-md-4">vertical-tile</dt>
-<dd class="col-md-8">vertically tile the image, sides are background color</dd>
-<dt class="col-md-4">vertical-tile-edge</dt>
-<dd class="col-md-8">vertically tile the image and replicate the side edge pixels</dd>
-<dt class="col-md-4">white</dt>
-<dd class="col-md-8">the area surrounding the image is white</dd>
-</dl>
+<div class="table-responsive" style="font-size:smaller !important;">
+<table class="table table-sm table-hover table-striped">
+  <tr>
+    <td>background</td>
+    <td>the area surrounding the image is the background color</td>
+  </tr>
+  <tr>
+    <td>black</td>
+    <td>the area surrounding the image is black</td>
+  </tr>
+  <tr>
+    <td>checker-tile</td>
+    <td>alternate squares with image and background color</td>
+  </tr>
+  <tr>
+    <td>dither</td>
+    <td>non-random 32x32 dithered pattern</td>
+  </tr>
+  <tr>
+    <td>edge</td>
+    <td>extend the edge pixel toward infinity (default)</td>
+  </tr>
+  <tr>
+    <td>gray</td>
+    <td>the area surrounding the image is gray</td>
+  </tr>
+  <tr>
+    <td>horizontal-tile</td>
+    <td>horizontally tile the image, background color above/below</td>
+  </tr>
+  <tr>
+    <td>horizontal-tile-edge</td>
+    <td>horizontally tile the image and replicate the side edge pixels</td>
+  </tr>
+  <tr>
+    <td>mirror</td>
+    <td>mirror tile the image</td>
+  </tr>
+  <tr>
+    <td>random</td>
+    <td>choose a random pixel from the image</td>
+  </tr>
+  <tr>
+    <td>tile</td>
+    <td>tile the image</td>
+  </tr>
+  <tr>
+    <td>transparent</td>
+    <td>the area surrounding the image is transparent blackness</td>
+  </tr>
+  <tr>
+    <td>vertical-tile</td>
+    <td>vertically tile the image, sides are background color</td>
+  </tr>
+  <tr>
+    <td>vertical-tile-edge</td>
+    <td>vertically tile the image and replicate the side edge pixels</td>
+  </tr>
+  <tr>
+    <td>white</td>
+    <td>the area surrounding the image is white</td>
+  </tr>
+</table>
+</div>
 
 
 <h2>Cache Storage and Resource Requirements</h2>
