@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-45](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-44...7.1.0-45) - 2022-07-31
+
+### Merged
+
+- Update Readme.md [`#5320`](https://github.com/ImageMagick/ImageMagick/pull/5320)
+
+### Commits
+
+- beta release [`9e3fa16`](https://github.com/ImageMagick/ImageMagick/commit/9e3fa1679410d511c691d5f6eb09f7d0a2ae0e3f)
+- beta release [`ca18a05`](https://github.com/ImageMagick/ImageMagick/commit/ca18a0519b5ee0d08505f8fe8e6be2ef4fde212b)
+- omp_init_lock() has undefined behavior if the lock is already init'ed @ https://github.com/ImageMagick/ImageMagick/issues/5360 [`fc4744f`](https://github.com/ImageMagick/ImageMagick/commit/fc4744f79987ba5309ab4e5cb95faacab2ca72a9)
+- verify Freetype delegate library is version 2.8 or above [`8a25b36`](https://github.com/ImageMagick/ImageMagick/commit/8a25b36867cc5872e9ebde7e83e96a0600d2eebe)
+- Whitespace. [`70e7690`](https://github.com/ImageMagick/ImageMagick/commit/70e7690706e79d653bbb35aeb6b603cceb82bea7)
+- Changed checks for libtiff. [`ee1f26f`](https://github.com/ImageMagick/ImageMagick/commit/ee1f26ff19ae070d91fab8415a9f7950a2b4d19d)
+- conditionally destroy mutux [`b4f429f`](https://github.com/ImageMagick/ImageMagick/commit/b4f429ff28ca7d0ad172e567c01deb8b7503ac5d)
+- lock/unlock mutex assumes an initialized lock [`deb080b`](https://github.com/ImageMagick/ImageMagick/commit/deb080b28ef0216e2d0785db923445dee4e8fc41)
+- Removed MAGICKCORE_HAVE_TIFF checks. [`c6f8c5e`](https://github.com/ImageMagick/ImageMagick/commit/c6f8c5e49f1747eb7cf2b98f5d70ea77d66bc6cf)
+- Removed variables that are set but never used. [`e973979`](https://github.com/ImageMagick/ImageMagick/commit/e973979e6fa1746616b08b01a9d8fd07d9089bb4)
+- fix -evaluate Pow 2 issue @ https://github.com/ImageMagick/ImageMagick/issues/5376 [`a318c2d`](https://github.com/ImageMagick/ImageMagick/commit/a318c2da8115312ccf2f3d5b22e5ac9e9fcc1f6d)
+- cosmetic [`94deb70`](https://github.com/ImageMagick/ImageMagick/commit/94deb70e6b2e773b3d4a3a4ef54df6377b501896)
+- set virtual pixel method for connected components algorithm @ https://github.com/ImageMagick/ImageMagick/issues/5368 [`d65a985`](https://github.com/ImageMagick/ImageMagick/commit/d65a985729b50762f1e352e128db245dba7a3fea)
+- eliminate compiler issues / warnings [`fc11d83`](https://github.com/ImageMagick/ImageMagick/commit/fc11d8357eeae86c2ef33f899846af10f64f7fd7)
+- fix cast from provenance-free integer type to pointer type @ https://github.com/ImageMagick/ImageMagick/discussions/5380 [`6e29345`](https://github.com/ImageMagick/ImageMagick/commit/6e29345c58386f30ebad04adae636b81ef1333c6)
+- https://github.com/ImageMagick/ImageMagick/pull/5320 [`8e395fd`](https://github.com/ImageMagick/ImageMagick/commit/8e395fdae15e427ef0dc4f09b60ac8089b3f6530)
+- authenticate distributed cache [`d8d651e`](https://github.com/ImageMagick/ImageMagick/commit/d8d651e5724287315d3eae12557830e3a6be4030)
+- cosmetic [`aad18ad`](https://github.com/ImageMagick/ImageMagick/commit/aad18ad71a50a30cf9ea9c647171b75ee89fae77)
+- eliminate compiler warning [`10e6f75`](https://github.com/ImageMagick/ImageMagick/commit/10e6f7578850c1c71fa995f01e1ea84c7604d5af)
+- divide NCC by the # of channels @ https://github.com/dlemstra/Magick.NET/issues/1220 [`64bdc88`](https://github.com/ImageMagick/ImageMagick/commit/64bdc8865b329395b2921ea9ce2e2f0623f197be)
+- release [`d9369f5`](https://github.com/ImageMagick/ImageMagick/commit/d9369f5ef4580cf365c1950db78327689f5cb250)
+- improve distributed cache exception messages [`d80f6a7`](https://github.com/ImageMagick/ImageMagick/commit/d80f6a7cd7b569d39ae657bd9ebe1ef3f57f8f95)
+- release [`e32676e`](https://github.com/ImageMagick/ImageMagick/commit/e32676e0a7626768f98e851be1c28cb611acfacc)
+
 ## [7.1.0-44](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-41...7.1.0-44) - 2022-07-24
 
 ### Merged
