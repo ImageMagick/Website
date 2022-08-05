@@ -882,7 +882,7 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#radial-blur">-radial-blur <var>angle</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#rotational-blur">-rotational-blur <var>angle</var></a></td>
     <td>radial blur the image</td>
   </tr>
 

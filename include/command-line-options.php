@@ -225,7 +225,6 @@
   <li><a class="dropdown-item" href="#quantize">quantize</a></li>
   <li><a class="dropdown-item" href="#quiet">quiet</a></li>
   <li><a class="dropdown-divider" href="#"><b>R</b></a></li>
-  <li><a class="dropdown-item" href="#radial-blur">radial-blur</a></li>
   <li><a class="dropdown-item" href="#raise">raise</a></li>
   <li><a class="dropdown-item" href="#random-threshold">random-threshold</a></li>
   <li><a class="dropdown-item" href="#range-threshold">range-threshold</a></li>
@@ -244,6 +243,7 @@
   <li><a class="dropdown-item" href="#reverse">reverse</a></li>
   <li><a class="dropdown-item" href="#roll">roll</a></li>
   <li><a class="dropdown-item" href="#rotate">rotate</a></li>
+  <li><a class="dropdown-item" href="#rotational-blur">rotational-blur</a></li>
   <li><a class="dropdown-divider" href="#"><b>S</b></a></li>
   <li><a class="dropdown-item" href="#sample">sample</a></li>
   <li><a class="dropdown-item" href="#sampling-factor">sampling-factor</a></li>
@@ -1218,7 +1218,7 @@ include the following.
 <a href="#negate">-negate</a>,
 <a href="#normalize">-normalize</a>,
 <a href="#ordered-dither">-ordered-dither</a>,
-<a href="#radial-blur">-radial-blur</a>,
+<a href="#rotational-blur">-rotational-blur</a>,
 <a href="#random-threshold">-random-threshold</a>,
 <a href="#range-threshold">-range-threshold</a>,
 <a href="#separate">-separate</a>,
@@ -6151,15 +6151,6 @@ GIF, and PNG8.</p>
 
 <p class="magick-description">Suppress all warning messages. Error messages are still reported.</p>
 
-<div style="margin: auto;">
-  <h2><a class="anchor" id="radial-blur"></a>-radial-blur  <var>angle</var></h2>
-</div>
-
-<p class="magick-description">Blur around the center of the image.</p>
-
-<p>Note that this is actually a rotational blur rather than a radial and as
-such actually mis-named. </p>
-
 <p>The <a href="#virtual-pixel">-virtual-pixel</a> setting will determine how
 pixels which are outside the image proper are blurred into the final result.
 </p>
@@ -6409,6 +6400,14 @@ filled with the <samp>background</samp> color. </p>
 '<samp>ScaleRotateTranslate</samp>' distort method. </p>
 
 <p>The page or virtual canvas information of the image is also rotated.  Use a <a href="#repage">+repage</a> to remove the virtual canvas page information if it is unwanted.</p>
+
+<div style="margin: auto;">
+  <h2><a class="anchor" id="rotational-blur"></a>-rotational-blur <var>angle</var></h2>
+</div>
+
+<p class="magick-description">Blur around the center of the image.</p>
+
+<p>This operation used to be called "-radial-blur".</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="sample"></a>-sample <var>geometry</var></h2>
