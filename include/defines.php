@@ -43,6 +43,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>annotate:word-break</td>
+    <td>sets whether line breaks appear wherever the text would otherwise overflow its content box.  Choose from <samp>normal</samp>, the default, or <samp>break-word</samp>.</td>
+  </tr>
+
+  <tr>
     <td>ashlar:best-fit</td>
     <td>align tiles on both the left  and right edges.</td>
   </tr>
