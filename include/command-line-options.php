@@ -328,6 +328,7 @@
   <li><a class="dropdown-item" href="#white-threshold">white-threshold</a></li>
   <li><a class="dropdown-item" href="#window">window</a></li>
   <li><a class="dropdown-item" href="#window-group">window-group</a></li>
+  <li><a class="dropdown-item" href="#word-break">word-break</a></li>
   <li><a class="dropdown-item" href="#write">write</a></li>
   <li><a class="dropdown-item" href="#write-mask">write-mask</a></li>
   </ul>
@@ -7727,6 +7728,12 @@ href="#colors">-colors</a> to reduce the number of colors.</p>
 </div>
 
 <p class="magick-description">Specify the window group.</p>
+
+<div style="margin: auto;">
+  <h2><a class="anchor" id="word-break"></a>-wordbreak <var>type</var></h2>
+</div>
+
+<p class="magick-description">Sets whether line breaks appear wherever the text would otherwise overflow its content box.  Choose from <samp>normal</samp>, the default, or <samp>break-word</samp>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="write"></a>-write <var>filename</var></h2>

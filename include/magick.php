@@ -1257,6 +1257,11 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#word-break">-word-break <var>type</var></a></td>
+    <td>sets whether line breaks appear wherever the text would otherwise overflow its content box.  Choose from <samp>normal</samp>, the default, or <samp>break-word</samp>.</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write">-write <var>filename</var></a></td>
     <td>write images to this file</td>
   </tr>
