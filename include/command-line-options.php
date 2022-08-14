@@ -7730,7 +7730,7 @@ href="#colors">-colors</a> to reduce the number of colors.</p>
 <p class="magick-description">Specify the window group.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="word-break"></a>-wordbreak <var>type</var></h2>
+  <h2><a class="anchor" id="word-break"></a>-word-break <var>type</var></h2>
 </div>
 
 <p class="magick-description">Sets whether line breaks appear wherever the text would otherwise overflow its content box.  Choose from <samp>normal</samp>, the default, or <samp>break-word</samp>.</p>
