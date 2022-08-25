@@ -1350,17 +1350,17 @@ use:</p>
 
   <tr>
     <td>video:intermediate-format=<var>{pam,webp}</var></td>
-    <td>Set the video intermediate format option of <samp>ffpmeg</samp>.</td>
+    <td>Set the video intermediate format option of <samp>ffmpeg</samp>.</td>
   </tr>
 
   <tr>
     <td>video:pixel-format=<var>value</var></td>
-    <td>Set the pixel format option of <samp>ffpmeg</samp>.</td>
+    <td>Set the pixel format option of <samp>ffmpeg</samp>.</td>
   </tr>
 
   <tr>
     <td>video:vsync=<var>value</var></td>
-    <td>Set the vsync option of <samp>ffpmeg</samp>.</td>
+    <td>Set the vsync option of <samp>ffmpeg</samp>.</td>
   </tr>
 
   <tr>
