@@ -5543,7 +5543,7 @@ saturation by 10% and leave the hue unchanged, use <a
 href="#modulate">-modulate 120,90</a>.</p>
 
 <p>Use <a href="#set">-set</a> attribute of '<samp>option:modulate:colorspace</samp>' to specify which colorspace to
-modulate.  Choose from <samp>HCL</samp>, <samp>HCLp</samp>, <samp>HSB</samp>, <samp>HSI</samp>, <samp>HSL</samp> (the default), <samp>HSV</samp>, <samp>HWB</samp>, or <samp>LCH</samp> (LCHuv).  For example,</p>
+modulate.  Choose from <samp>HCL</samp>, <samp>HCLp</samp>, <samp>HSB</samp>, <samp>HSI</samp>, <samp>HSL</samp> (the default), <samp>HSV</samp>, <samp>HWB</samp>, or <samp>LCH</samp> (LCHab).  For example,</p>
 
 <pre class="bg-light text-dark mx-4"><samp>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
 </samp></pre>
