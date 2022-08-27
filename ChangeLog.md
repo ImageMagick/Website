@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-47](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-46...7.1.0-47) - 2022-08-27
+
+### Merged
+
+- The effect of modulate:colorspace LCH is different for palette and true color images. [`#5470`](https://github.com/ImageMagick/ImageMagick/pull/5470)
+
+### Commits
+
+- beta release [`d1be0fd`](https://github.com/ImageMagick/ImageMagick/commit/d1be0fd485f786041401d25a0f554cbd680e653e)
+- correct normalization for the complex magnitude-phase option [`d4904e5`](https://github.com/ImageMagick/ImageMagick/commit/d4904e56f4fbda286cfca3661b9a1d4bf93c8279)
+- Check for quantum pad overflow (issue notification from hardik) [`2305c70`](https://github.com/ImageMagick/ImageMagick/commit/2305c702ea8d2d911f1be2e7690103e2f3cc8a2e)
+- more conservative pad check [`f2398de`](https://github.com/ImageMagick/ImageMagick/commit/f2398de5b897203c36eade3b6cbc754fd57d003a)
+- Run autogen with --no-po4a. [`2b3ffd9`](https://github.com/ImageMagick/ImageMagick/commit/2b3ffd976bd8c6845bcf279a99708fa013734a7f)
+- Added missing LDFLAGS for the oss-fuzz build. [`afee576`](https://github.com/ImageMagick/ImageMagick/commit/afee576934f3e4865d131f4691d77b743c7cb5e9)
+- Also use clang in our codespace. [`825d09e`](https://github.com/ImageMagick/ImageMagick/commit/825d09edb97affa63aafcb24b0b512392389ce7f)
+- eliminate undefined behavior, fuzz issue from Hardik [`2dc49e8`](https://github.com/ImageMagick/ImageMagick/commit/2dc49e8b98051d1ed1eb52f84c93941e2f3f9bc8)
+- check for extra samples when computing pad, alert from Hardik [`e389397`](https://github.com/ImageMagick/ImageMagick/commit/e389397b2be1a1b586923f279b1f2c36b28b1eb0)
+- eliminate pointer overflow, alert from Hardik [`264d91e`](https://github.com/ImageMagick/ImageMagick/commit/264d91e02a2e9c6ec318d751956000d19d5617fc)
+- Updated gitignore. [`ed0ebb9`](https://github.com/ImageMagick/ImageMagick/commit/ed0ebb953ad962712e5687b16479924bfdbd6611)
+- raw image property unit error @ https://github.com/ImageMagick/ImageMagick/issues/5492 [`6391584`](https://github.com/ImageMagick/ImageMagick/commit/6391584f62fa767a4666d3b8678eca4d957ba7e8)
+- Also link libsharpyuv. [`41c6b78`](https://github.com/ImageMagick/ImageMagick/commit/41c6b783621b4c58050b73f9039092a9259d9ada)
+- Also link ubsan. [`60ef02c`](https://github.com/ImageMagick/ImageMagick/commit/60ef02c735e16eb08d8b6fa491b657d011356c79)
+- Added json to the .editorconfig. [`5c0e94d`](https://github.com/ImageMagick/ImageMagick/commit/5c0e94d485e7f6eaffc39ed7b6420d318e52d7c1)
+- Try to disable recommendations. [`793c633`](https://github.com/ImageMagick/ImageMagick/commit/793c6330643dc07d9582d56622658df2d1590c48)
+- Force CXX compiler. [`07f3b48`](https://github.com/ImageMagick/ImageMagick/commit/07f3b487f9860fd4eb9422f1a906d0fe83b6fd1c)
+- Removed LDFLAGS. [`695b0f5`](https://github.com/ImageMagick/ImageMagick/commit/695b0f58f73304b144dc66bdb2f9a2785ff7cac1)
+- squash heap-buffer-overflow, PoC TIFF from Hardik [`30ccf9a`](https://github.com/ImageMagick/ImageMagick/commit/30ccf9a0da1f47161b5935a95be854fe84e6c2a2)
+- cosmetic [`d91623c`](https://github.com/ImageMagick/ImageMagick/commit/d91623c1234ae3b4da3f680b05d404af68bcbbf6)
+- Also build jpeg-xl with oss-fuzz. [`7dcef54`](https://github.com/ImageMagick/ImageMagick/commit/7dcef546b9463d021e46d8eb16d3a611df1b6ddb)
+- release [`47c6f10`](https://github.com/ImageMagick/ImageMagick/commit/47c6f10607fd1b1e6e9226cd9869479902b65821)
+
 ## [7.1.0-46](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-45...7.1.0-46) - 2022-08-17
 
 ### Commits
@@ -93,7 +124,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - improve distributed cache exception messages [`d80f6a7`](https://github.com/ImageMagick/ImageMagick/commit/d80f6a7cd7b569d39ae657bd9ebe1ef3f57f8f95)
 - release [`e32676e`](https://github.com/ImageMagick/ImageMagick/commit/e32676e0a7626768f98e851be1c28cb611acfacc)
 
-## [7.1.0-44](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-41...7.1.0-44) - 2022-07-24
+## [7.1.0-44](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-43...7.1.0-44) - 2022-07-24
 
 ### Merged
 
@@ -101,17 +132,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
-- incorrect pointer update when computing median @ https://github.com/ImageMagick/ImageMagick/issues/5298 [`e29f487`](https://github.com/ImageMagick/ImageMagick/commit/e29f487ccdbe9f971fa69f16785767b2484a8f0e)
-- beta release [`3a3baa9`](https://github.com/ImageMagick/ImageMagick/commit/3a3baa91cfee5af70f87266f33db54917739ba19)
-- Added extra check because the flag was removed in 0.21-Beta1. [`0b13828`](https://github.com/ImageMagick/ImageMagick/commit/0b13828b46ac7fc83a1eb677bda602285f8f04cd)
-- the -transparent-color option accepts colornames @ https://github.com/ImageMagick/ImageMagick/discussions/5297 [`ce18e42`](https://github.com/ImageMagick/ImageMagick/commit/ce18e422f951fa3e2627539b7bc0b03082176eea)
-- fix MVG stroke-opacity issues [`6cd5112`](https://github.com/ImageMagick/ImageMagick/commit/6cd511240400d5be19a95811a54de302186d5afd)
-- map channel parameter to pixel channel offset @ https://github.com/ImageMagick/ImageMagick/issues/5308 [`6bd722b`](https://github.com/ImageMagick/ImageMagick/commit/6bd722bfdd21ea03c7a309d11f0f1d18af6e2f1c)
-- release [`396d87c`](https://github.com/ImageMagick/ImageMagick/commit/396d87cf05f21810b1f64ac3f7d1d26653a90b96)
-- beta release [`c9ea9fd`](https://github.com/ImageMagick/ImageMagick/commit/c9ea9fd96d950849d381ce41250609d4c329303c)
-- release [`71011cf`](https://github.com/ImageMagick/ImageMagick/commit/71011cf1d38ea9bc5eac52fee433b58569b24167)
-- beta release [`8718d62`](https://github.com/ImageMagick/ImageMagick/commit/8718d62924c78a8b323e8dc5962eea151edebd38)
-- release [`c95ef31`](https://github.com/ImageMagick/ImageMagick/commit/c95ef31d1ed702cc502f06202b17fee39e27ced9)
 - beta release [`54080fc`](https://github.com/ImageMagick/ImageMagick/commit/54080fc7ee70731bc07a204b77efaf6b28c3ff08)
 - beta release [`34683fa`](https://github.com/ImageMagick/ImageMagick/commit/34683fa9106788f63bca0ac2a6255de4b38bc4ce)
 - ... [`220a680`](https://github.com/ImageMagick/ImageMagick/commit/220a6800956959970ac9d9d03fc595564736c8a6)
@@ -169,6 +189,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - release [`ad83b6a`](https://github.com/ImageMagick/ImageMagick/commit/ad83b6a2921687661a91ffd9e3db33f82db8408f)
 - release [`520a724`](https://github.com/ImageMagick/ImageMagick/commit/520a7245e8069fb3367b2fef790978a77b3e2a9a)
 - release [`6cd515d`](https://github.com/ImageMagick/ImageMagick/commit/6cd515dee3010d6d5accfacb2a2943fdc8dc16f8)
+
+## [7.1.0-43](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-42...7.1.0-43) - 2022-07-09
+
+### Commits
+
+- beta release [`c9ea9fd`](https://github.com/ImageMagick/ImageMagick/commit/c9ea9fd96d950849d381ce41250609d4c329303c)
+- release [`71011cf`](https://github.com/ImageMagick/ImageMagick/commit/71011cf1d38ea9bc5eac52fee433b58569b24167)
+- beta release [`8718d62`](https://github.com/ImageMagick/ImageMagick/commit/8718d62924c78a8b323e8dc5962eea151edebd38)
+- release [`c95ef31`](https://github.com/ImageMagick/ImageMagick/commit/c95ef31d1ed702cc502f06202b17fee39e27ced9)
+
+## [7.1.0-42](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-41...7.1.0-42) - 2022-07-09
+
+### Commits
+
+- incorrect pointer update when computing median @ https://github.com/ImageMagick/ImageMagick/issues/5298 [`e29f487`](https://github.com/ImageMagick/ImageMagick/commit/e29f487ccdbe9f971fa69f16785767b2484a8f0e)
+- beta release [`3a3baa9`](https://github.com/ImageMagick/ImageMagick/commit/3a3baa91cfee5af70f87266f33db54917739ba19)
+- Added extra check because the flag was removed in 0.21-Beta1. [`0b13828`](https://github.com/ImageMagick/ImageMagick/commit/0b13828b46ac7fc83a1eb677bda602285f8f04cd)
+- the -transparent-color option accepts colornames @ https://github.com/ImageMagick/ImageMagick/discussions/5297 [`ce18e42`](https://github.com/ImageMagick/ImageMagick/commit/ce18e422f951fa3e2627539b7bc0b03082176eea)
+- fix MVG stroke-opacity issues [`6cd5112`](https://github.com/ImageMagick/ImageMagick/commit/6cd511240400d5be19a95811a54de302186d5afd)
+- map channel parameter to pixel channel offset @ https://github.com/ImageMagick/ImageMagick/issues/5308 [`6bd722b`](https://github.com/ImageMagick/ImageMagick/commit/6bd722bfdd21ea03c7a309d11f0f1d18af6e2f1c)
+- release [`396d87c`](https://github.com/ImageMagick/ImageMagick/commit/396d87cf05f21810b1f64ac3f7d1d26653a90b96)
 
 ## [7.1.0-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-40...7.1.0-41) - 2022-07-06
 
