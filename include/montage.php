@@ -246,6 +246,11 @@ transparent, extract, background, or shape the alpha channel</td>
     <td>extract area from image</td>
   </tr>
 
+ <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#family">-family <var>name</var></a></td>
+    <td>render text with this font family</td>
+  </tr>
+
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fill">-fill <var>color</var></a></td>
     <td>color to use when filling a graphic primitive</td>

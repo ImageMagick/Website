@@ -2,7 +2,7 @@
 
 function crtprompt()
 {
-  echo('<span class="crtprompt">$ </span>');
+  echo('<span class="crtprompt"><br/>$ </span>');
 }
 
 function crtin($s)
