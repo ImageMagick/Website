@@ -5,6 +5,70 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-48](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-47...7.1.0-48) - 2022-09-11
+
+### Merged
+
+- png.c: Remove the extra space character in "%8lu " [`#5513`](https://github.com/ImageMagick/ImageMagick/pull/5513)
+
+### Commits
+
+- Corrected setting the flags. [`15861e0`](https://github.com/ImageMagick/ImageMagick/commit/15861e07b34c3195991f4aca7f05f8e861691e9c)
+- Adding new jpeg-xl libraries. [`2addb6a`](https://github.com/ImageMagick/ImageMagick/commit/2addb6a1e1c12924a35a96bec32813e5561f0300)
+- Disable shared build for jpeg-xl in oss-fuzz build. [`2d7655b`](https://github.com/ImageMagick/ImageMagick/commit/2d7655b8e92ea254c58053403e4fc37f466f6fba)
+- beta release [`6e21089`](https://github.com/ImageMagick/ImageMagick/commit/6e21089cbd7be66b15e7963408035fa122ab488a)
+- Also clone libjxl. [`69012fa`](https://github.com/ImageMagick/ImageMagick/commit/69012fa495e6c415be511ce537fb0b79c1ff715b)
+- heap-buffer-overflow for crafted TIFF image; alert from Hardik [`1f82e81`](https://github.com/ImageMagick/ImageMagick/commit/1f82e81bead325f02f5d71d217452f97b864d3d3)
+- Moved getting the distance to a separate method. [`d31664a`](https://github.com/ImageMagick/ImageMagick/commit/d31664a7b5ec3b1aa8f96ff90d27c639d5c20024)
+- incorrect bounds checking for draw affine @ https://github.com/ImageMagick/ImageMagick/issues/5497 [`c8b0c9d`](https://github.com/ImageMagick/ImageMagick/commit/c8b0c9d6b95668994b192aba42b8cf8386b9e0a0)
+- Also add cc to the editorconfig settings. [`1818a8f`](https://github.com/ImageMagick/ImageMagick/commit/1818a8f83f5ea614ee9a5cbb4e74cfae91424ff2)
+- Code style changes. [`df86708`](https://github.com/ImageMagick/ImageMagick/commit/df867085416b85b468841911b398065ea91de5af)
+- Change size checks. [`d071d51`](https://github.com/ImageMagick/ImageMagick/commit/d071d518e1038f9b4c35c98dc554150344720cc0)
+- No longer make the ping fuzzer format specific. [`3195a4c`](https://github.com/ImageMagick/ImageMagick/commit/3195a4ca58bba46e08e774ae47518dc6b29366a6)
+- Corrected check. [`9a22a14`](https://github.com/ImageMagick/ImageMagick/commit/9a22a14d114f3d820ecaff029b8c9f77caa8ced5)
+- fix memory issues for the unit tests [`81a8bc4`](https://github.com/ImageMagick/ImageMagick/commit/81a8bc4abcc3f1b161845456aea901087a81186c)
+- check to ensure image # is &gt;= 0 [`cb4ccbc`](https://github.com/ImageMagick/ImageMagick/commit/cb4ccbc40c84495301279e0e78ffed94b0b5ac23)
+- correct PSNR distortion @ https://github.com/ImageMagick/ImageMagick/issues/5504 [`2d88ff2`](https://github.com/ImageMagick/ImageMagick/commit/2d88ff2eb2d9afbd42f6190bf4084b5ce799f454)
+- fix PSNR to return the correct location for similarity search @ https://github.com/ImageMagick/ImageMagick/issues/5504# Please enter the commit message for your changes. Lines starting [`9094277`](https://github.com/ImageMagick/ImageMagick/commit/90942775a5b8716c7d4f0a58af97304493538bec)
+- properly handle a PSNR of 0 (undefined) [`dfbf39d`](https://github.com/ImageMagick/ImageMagick/commit/dfbf39d83af7cf6709b5910b8a9c76db163f19ea)
+- Set raw_info-&gt;params.user_flip to 0 to prevent auto-orientation of the image (thanks totoestcontent) (#5326). [`5a543ba`](https://github.com/ImageMagick/ImageMagick/commit/5a543bad4954be35c99828d1a1f20bff1d3614e5)
+- return normalized PSNR distortion [`751829c`](https://github.com/ImageMagick/ImageMagick/commit/751829cd4c911d7a42953a47c1f73068d9e7da2f)
+- log10(0) is -inf [`56aa72d`](https://github.com/ImageMagick/ImageMagick/commit/56aa72d0166d19fbac1cd337d7bab98b94988d1a)
+- log10(0) is -inf [`4538e0b`](https://github.com/ImageMagick/ImageMagick/commit/4538e0b7776592090474022c52e73387a9af0182)
+- enable the -auto-level option @ https://github.com/ImageMagick/ImageMagick/issues/5524 [`5c6d1cd`](https://github.com/ImageMagick/ImageMagick/commit/5c6d1cd07129084d597aa6de6fd3752cfdbcbecc)
+- Added missing inline. [`46a918e`](https://github.com/ImageMagick/ImageMagick/commit/46a918e0b11d1213f6ab06e9b98a640133b0092e)
+- Removed define that was only used once. [`3d876c8`](https://github.com/ImageMagick/ImageMagick/commit/3d876c8cb817dab680d6595899cc89304317d0c7)
+- validate class name [`debcebf`](https://github.com/ImageMagick/ImageMagick/commit/debcebf3501cedb6cc5928727e62d3520d681928)
+- validate stroke width [`71a79c3`](https://github.com/ImageMagick/ImageMagick/commit/71a79c3f0ad728cd32092997db9f2a848334295b)
+- render empty labels @ https://github.com/ImageMagick/ImageMagick/issues/5530 [`2397a41`](https://github.com/ImageMagick/ImageMagick/commit/2397a41ca3945e67d656d689e4982002c017652f)
+- support -family option @ https://github.com/ImageMagick/ImageMagick/issues/5531 [`b5ae039`](https://github.com/ImageMagick/ImageMagick/commit/b5ae039da8bff594d9d736e50b4973ab2e0e07f3)
+- recognize CSS-style family font list @ https://github.com/ImageMagick/ImageMagick/issues/5531 [`2d44f06`](https://github.com/ImageMagick/ImageMagick/commit/2d44f06a6790dbcefb96e0a7a5becb2cbe15faad)
+- throw exception for empty label @ https://github.com/ImageMagick/ImageMagick/issues/5530 [`0d501b6`](https://github.com/ImageMagick/ImageMagick/commit/0d501b66a677e5fd440529edc92fd2d60bf1fa60)
+- move alpha from meta channels @ https://github.com/ImageMagick/ImageMagick/issues/5521 (patch from Dirk) [`77561be`](https://github.com/ImageMagick/ImageMagick/commit/77561be40bb1cd102b73fdf71323b4ec8a733793)
+- Tiny optimization. [`66f41de`](https://github.com/ImageMagick/ImageMagick/commit/66f41deff9174ffca5129f7964f92a3e6c82d2cd)
+- Removed duplicate check. [`54f3998`](https://github.com/ImageMagick/ImageMagick/commit/54f39980165651e1df00a897acfc225760af48d2)
+- Reverted incorrect patch. [`d57f539`](https://github.com/ImageMagick/ImageMagick/commit/d57f539f7ec5274f5cf3e01fac31ba72a49dc8c6)
+- create a single instance of MagickLog10() method in private header [`d6061d9`](https://github.com/ImageMagick/ImageMagick/commit/d6061d9bbc646bf7f7ef467b0d375cb44064a890)
+- Run autoreconf -fiv before running configure. [`cc1a92b`](https://github.com/ImageMagick/ImageMagick/commit/cc1a92b6c861c1f27d11468a5532db365675f989)
+- Install extra packages. [`dd0b3fb`](https://github.com/ImageMagick/ImageMagick/commit/dd0b3fbaefd98f93a1c6b7981cc7d2f386701774)
+- Try to fix the clang build. [`b361e96`](https://github.com/ImageMagick/ImageMagick/commit/b361e9650e07d0326c8510ff4e4618dcfbcd3c07)
+- Another attempt to fix the clang build. [`0a535ff`](https://github.com/ImageMagick/ImageMagick/commit/0a535ff4c21dee12e67b83d98e843aa1f4aed70a)
+- Revert changes. [`5a84c82`](https://github.com/ImageMagick/ImageMagick/commit/5a84c828159133dd44dee1531cd725d9a8c715e4)
+- Silenced warnings. [`2ad0471`](https://github.com/ImageMagick/ImageMagick/commit/2ad04718fd02d35af723fd384993c6a7d0f44144)
+- Also install git. [`94fdfc9`](https://github.com/ImageMagick/ImageMagick/commit/94fdfc9d9822782c4a9aab1470948637f722adb1)
+- Also set CXX. [`de8c6d6`](https://github.com/ImageMagick/ImageMagick/commit/de8c6d69e8490f6e6295957042f44b7598a9e3ba)
+- Also set CXX for app-image build. [`4d7f1a7`](https://github.com/ImageMagick/ImageMagick/commit/4d7f1a7e8b23b4d33f5534ab9064219202873f54)
+- Use env instead. [`3a66612`](https://github.com/ImageMagick/ImageMagick/commit/3a666127f8b132187a7c66a7f4a470e433a1f1e9)
+- Corrected variable. [`87ed754`](https://github.com/ImageMagick/ImageMagick/commit/87ed7542141d407a4d00cf089de4303d5541e40a)
+- Corrected clone for the freetype project. [`2823eb9`](https://github.com/ImageMagick/ImageMagick/commit/2823eb9b06e6bb5961d65b8e8d21c1dc000bbb62)
+- Corrected folder. [`6f5dd74`](https://github.com/ImageMagick/ImageMagick/commit/6f5dd7419a840553b2ab287d7880292f8b9298dc)
+- Use GitHub mirror instead. [`8ba9e67`](https://github.com/ImageMagick/ImageMagick/commit/8ba9e67d34fb860fc4e02d752885bbe8a8e17070)
+- Fix HEIF header include path for MINGW [`fa72362`](https://github.com/ImageMagick/ImageMagick/commit/fa72362104cb9b4924808d5cb77386f9b4e73d5d)
+- fix short reallocation @ https://github.com/ImageMagick/ImageMagick/issues/5553 [`fdab524`](https://github.com/ImageMagick/ImageMagick/commit/fdab52405409fee5d7c02fe4e60d5474caa54498)
+- proper overflow check [`ca72d98`](https://github.com/ImageMagick/ImageMagick/commit/ca72d98bf1bc3ba6b87e73c4e5627994ab6c8240)
+- don't transform to sRGB colorspace if already in a compatible colorspace @ https://github.com/ImageMagick/ImageMagick/discussions/5543 [`c1ca247`](https://github.com/ImageMagick/ImageMagick/commit/c1ca2476540dd2f55ac108a190a75ff83a207a9c)
+- release [`c243c92`](https://github.com/ImageMagick/ImageMagick/commit/c243c92818c376315650f6d8340e7e62e9a14a9e)
+
 ## [7.1.0-47](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-46...7.1.0-47) - 2022-08-27
 
 ### Merged
