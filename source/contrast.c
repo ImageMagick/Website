@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <wand/MagickWand.h>
+#include <MagickWand/MagickWand.h>
 
 int main(int argc,char **argv)
 {
-#define QuantumScale  ((MagickRealType) 1.0/(MagickRealType) QuantumRange)
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
 #define ThrowWandException(wand) \
