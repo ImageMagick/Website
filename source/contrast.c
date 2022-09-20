@@ -25,12 +25,12 @@ int main(int argc,char **argv)
   MagickBooleanType
     status;
 
-  MagickPixelPacket
-    pixel;
-
   MagickWand
     *contrast_wand,
     *image_wand;
+
+  PixelInfo
+    pixel;
 
   PixelIterator
     *contrast_iterator,
@@ -85,7 +85,7 @@ int main(int argc,char **argv)
       pixel.green=SigmoidalContrast(pixel.green);
       pixel.blue=SigmoidalContrast(pixel.blue);
       pixel.index=SigmoidalContrast(pixel.index);
-      PixelSetMagickColor(contrast_pixels[x],&pixel);
+      PixelSetPixelColor(contrast_pixels[x],&pixel);
     }
     (void) PixelSyncIterator(contrast_iterator);
   }

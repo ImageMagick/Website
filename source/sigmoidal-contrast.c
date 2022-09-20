@@ -10,7 +10,7 @@ static MagickBooleanType SigmoidalContrast(PixelView *contrast_view,
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
 
-  MagickPixelPacket
+  PixelInfo
     pixel;
 
   PixelWand
@@ -27,7 +27,7 @@ static MagickBooleanType SigmoidalContrast(PixelView *contrast_view,
     pixel.green=SigmoidalContrast(pixel.green);
     pixel.blue=SigmoidalContrast(pixel.blue);
     pixel.index=SigmoidalContrast(pixel.index);
-    PixelSetMagickColor(pixels[x],&pixel);
+    PixelSetPixelColor(pixels[x],&pixel);
   }
 }
 
@@ -50,11 +50,11 @@ int main(int argc,char **argv)
   MagickBooleanType
     status;
 
-  MagickPixelPacket
-    pixel;
-
   MagickWand
     *contrast_wand;
+
+  PixelInfo
+    pixel;
 
   PixelView
     *contrast_view;
