@@ -3,8 +3,8 @@
 #include <math.h>
 #include <MagickWand/MagickWand.h>
 
-static MagickBooleanType SigmoidalContrast(PixelView *contrast_view,
-  void *context)
+static MagickBooleanType SigmoidalContrast(WandView *contrast_view,
+  const ssize_t y,const int thread_id,void *context)
 {
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
@@ -15,11 +15,15 @@ static MagickBooleanType SigmoidalContrast(PixelView *contrast_view,
   PixelWand
     **pixels;
 
+  RectangleInfo
+    extent;
+
   register ssize_t
     x;
 
-  pixels=GetPixelViewPixels(contrast_view);
-  for (x=0; x < (ssize_t) GetPixelViewWidth(contrast_view); x++)
+  extent=GetWandViewExtent(contrast_view);
+  pixels=GetWandViewPixels(contrast_view);
+  for (x=0; x < (ssize_t) extent.width; x++)
   {
     PixelGetMagickColor(pixels[x],&pixel);
     pixel.red=SigmoidalContrast(pixel.red);
@@ -28,6 +32,7 @@ static MagickBooleanType SigmoidalContrast(PixelView *contrast_view,
     pixel.index=SigmoidalContrast(pixel.index);
     PixelSetPixelColor(pixels[x],&pixel);
   }
+  return(MagickTrue);
 }
 
 int main(int argc,char **argv)
@@ -55,7 +60,7 @@ int main(int argc,char **argv)
   PixelInfo
     pixel;
 
-  PixelView
+  WandView
     *contrast_view;
 
   if (argc != 3)
@@ -74,13 +79,13 @@ int main(int argc,char **argv)
   /*
     Sigmoidal non-linearity contrast control.
   */
-  contrast_view=NewPixelView(contrast_wand);
-  if (contrast_view == (PixelView *) NULL)
+  contrast_view=NewWandView(contrast_wand);
+  if (contrast_view == (WandView *) NULL)
     ThrowWandException(contrast_wand);
-  status=UpdatePixelViewIterator(contrast_view,SigmoidalContrast,(void *) NULL);
+  status=UpdateWandViewIterator(contrast_view,SigmoidalContrast,(void *) NULL);
   if (status == MagickFalse)
     ThrowWandException(contrast_wand);
-  contrast_view=DestroyPixelView(contrast_view);
+  contrast_view=DestroyWandView(contrast_view);
   /*
     Write the image then destroy it.
   */

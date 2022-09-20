@@ -193,12 +193,13 @@ int main(int argc,char **argv)
 <p><a class="anchor" id="wand-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
 <pre class="pre-scrollable bg-light text-dark mx-4"><samp>#include &lt;stdio.h>
+#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;MagickWand/MagickWand.h>
 
-static MagickBooleanType SigmoidalContrast(WandView *pixel_view,
-  const ssize_t y,const int id,void *context)
+static MagickBooleanType SigmoidalContrast(WandView *contrast_view,
+  const ssize_t y,const int thread_id,void *context)
 {
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
@@ -212,45 +213,38 @@ static MagickBooleanType SigmoidalContrast(WandView *pixel_view,
   RectangleInfo
     extent;
 
-  register long
+  register ssize_t
     x;
 
   extent=GetWandViewExtent(contrast_view);
   pixels=GetWandViewPixels(contrast_view);
-  for (x=0; x &lt; (long) (extent.width-extent.height); x++)
+  for (x=0; x &lt; (ssize_t) extent.width; x++)
   {
-    PixelGetMagickColor(pixels[x],&amp;pixel);
+    PixelGetMagickColor(pixels[x],&pixel);
     pixel.red=SigmoidalContrast(pixel.red);
     pixel.green=SigmoidalContrast(pixel.green);
     pixel.blue=SigmoidalContrast(pixel.blue);
     pixel.index=SigmoidalContrast(pixel.index);
-    PixelSetPixelColor(contrast_pixels[x],&amp;pixel);
+    PixelSetPixelColor(pixels[x],&pixel);
   }
   return(MagickTrue);
 }
 
 int main(int argc,char **argv)
 {
-#define ThrowViewException(view) \
-{ \
-  description=GetWandViewException(view,&amp;severity); \
-  (void) fprintf(stderr,"%s %s %lu %s\n",GetMagickModule(),description); \
-  description=(char *) MagickRelinquishMemory(description); \
-  exit(-1); \
-}
 #define ThrowWandException(wand) \
 { \
-  description=MagickGetException(wand,&amp;severity); \
+  char \
+    *description; \
+ \
+  ExceptionType \
+    severity; \
+ \
+  description=MagickGetException(wand,&severity); \
   (void) fprintf(stderr,"%s %s %lu %s\n",GetMagickModule(),description); \
   description=(char *) MagickRelinquishMemory(description); \
   exit(-1); \
 }
-
-  char
-    *description;
-
-  ExceptionType
-    severity;
 
   MagickBooleanType
     status;
