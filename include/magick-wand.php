@@ -91,7 +91,6 @@ int main(int argc,char **argv)
 
 int main(int argc,char **argv)
 {
-#define QuantumScale  ((MagickRealType) 1.0/(MagickRealType) QuantumRange)
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
 #define ThrowWandException(wand) \
@@ -201,7 +200,6 @@ int main(int argc,char **argv)
 static MagickBooleanType SigmoidalContrast(WandView *pixel_view,
   const ssize_t y,const int id,void *context)
 {
-#define QuantumScale  ((MagickRealType) 1.0/(MagickRealType) QuantumRange)
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
 
