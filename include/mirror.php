@@ -15,6 +15,8 @@
     <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
   <dt>Russia</dt>
     <dd><a href="https://mirror.surf/imagemagick/ ">https://mirror.surf/imagemagick/ </a></dd>
+  <dt>Switzerland</dt>
+    <dd><a href="https://mirror.metanet.ch/imagemagick/">https://mirror.metanet.ch/imagemagick/</a></dd>
   <dt>United States</dt>
     <dd><a href="https://imagemagick.org/archive/">https://imagemagick.org/archive</a></dd>
     <dd><a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a> (Git)</dd>
