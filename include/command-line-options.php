@@ -6345,7 +6345,7 @@ ignored, and the <a href="#gravity">-gravity</a> option has no effect.</p>
 <p>If the <a href="#filter">-filter</a> option
 or <samp>-define filter:option=value</samp> precedes the <a
 href="#resize">-resize</a> option, the image is resized with the specified
-filter.</p>
+orthogonal filter.</p>
 
 <p>Many image processing algorithms assume your image is in a linear-light
 coding.  If your image is gamma-corrected, you can remove the nonlinear gamma
