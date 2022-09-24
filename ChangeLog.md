@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-49](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-48...7.1.0-49) - 2022-09-24
+
+### Merged
+
+- Fixed magnify confusing colorspaces other than linear-RGB. [`#5569`](https://github.com/ImageMagick/ImageMagick/pull/5569)
+- Fix timespec assignment on AIX [`#5565`](https://github.com/ImageMagick/ImageMagick/pull/5565)
+
+### Commits
+
+- beta release [`01d9f84`](https://github.com/ImageMagick/ImageMagick/commit/01d9f843dab9e3116bc34598f736ff0d832ec862)
+- eliminate compiler warning [`199cd42`](https://github.com/ImageMagick/ImageMagick/commit/199cd42215a6cb98f67cfd39fa5b8d0f3a8fd1be)
+- check exception signature [`43913c8`](https://github.com/ImageMagick/ImageMagick/commit/43913c8f62a196787eaeaccfb48de19e47b49186)
+- improved JP2 header checking [`a83914e`](https://github.com/ImageMagick/ImageMagick/commit/a83914e22cdb73cf5489183bdfd4049e1ae583a2)
+- assign appropriate timespec members individually rather than collectively [`2afa60c`](https://github.com/ImageMagick/ImageMagick/commit/2afa60c9c1d74743a2481cfe28d0aa220e5600d8)
+- prevent integer overflow @ oss-fuzz [`6524996`](https://github.com/ImageMagick/ImageMagick/commit/6524996a008b72f5a51efbf78aa0ea1f892ff2a1)
+- eliminate use of unitialized variable [`dacfc37`](https://github.com/ImageMagick/ImageMagick/commit/dacfc37aed2c878ef47cf73f85611d76f1959a81)
+- Changes build options for libheif. [`071e83b`](https://github.com/ImageMagick/ImageMagick/commit/071e83be4c1d12ab1633fbe587e910e719ab867a)
+- Fixed writing duplicate profiles that was reported in #5537. [`8af10ce`](https://github.com/ImageMagick/ImageMagick/commit/8af10ce75526e82b500b1a6cfc827c3b56d67b49)
+- earlier check for maximum channels [`9a630bd`](https://github.com/ImageMagick/ImageMagick/commit/9a630bdc9f9f6e5ecd9776e9ef42184dbcf0f786)
+- cast unsigned char to int before 8-bit shift [`2cac30d`](https://github.com/ImageMagick/ImageMagick/commit/2cac30d690adb3cb105473462bc8d2c7e4e8fb69)
+- Added missing typecast. [`bcac20d`](https://github.com/ImageMagick/ImageMagick/commit/bcac20d0c6a6cd7e95f678c7d50002329ea1ef9d)
+- exit on EOF @ https://github.com/ImageMagick/ImageMagick6/issues/197 [`f1337d8`](https://github.com/ImageMagick/ImageMagick/commit/f1337d85b058da0a168a5a6bb7ba65fd5e1e4711)
+- forgot to reset the pointer when updating the wand view [`a909485`](https://github.com/ImageMagick/ImageMagick/commit/a909485d86cb32f26fe261009523ee26c378508d)
+- clone the image when calling NewWandView() [`4e7883c`](https://github.com/ImageMagick/ImageMagick/commit/4e7883c352972cf3b06418d24b5d89f199b199aa)
+- don't clone image [`cf50a01`](https://github.com/ImageMagick/ImageMagick/commit/cf50a01d457fa9943d49e167c38f6461795e59b9)
+- some efficiency by using virtual rather than authentic pixels [`1631289`](https://github.com/ImageMagick/ImageMagick/commit/163128974322fb9a933bc53925bc69972009769f)
+- revert [`48a4cce`](https://github.com/ImageMagick/ImageMagick/commit/48a4cce8d5193d6bf9e54135bba5085aa57ecb79)
+- cosmetic [`c3746a5`](https://github.com/ImageMagick/ImageMagick/commit/c3746a509be1f6b470769ad7d0d1eaba71b00fbe)
+- release [`7a3f3f1`](https://github.com/ImageMagick/ImageMagick/commit/7a3f3f1bdbcc95a212a45484fab76225d84e289c)
+
 ## [7.1.0-48](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-47...7.1.0-48) - 2022-09-11
 
 ### Merged
