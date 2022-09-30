@@ -809,7 +809,7 @@ use:</p>
 
   <tr>
     <td>heic:chroma=<var>value</var></td>
-    <td>set the HEIC chroma parameter.</td>
+    <td>set the HEIC chroma parameter. Possible values are: "420", "422", "444". Default is "420".</td>
     </td>
   </tr>
 
@@ -821,7 +821,7 @@ use:</p>
 
   <tr>
     <td>heic:speed=<var>value</var></td>
-    <td>set the HEIC speed parameter.</td>
+    <td>set the HEIC speed parameter. Integer value from 0-9. Default is 5.</td>
     </td>
   </tr>
 
