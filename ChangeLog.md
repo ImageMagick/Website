@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-50](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-49...7.1.0-50) - 2022-10-08
+
+### Merged
+
+- Fix DDS file DDPF_LUMINANCE type of data [`#5452`](https://github.com/ImageMagick/ImageMagick/pull/5452)
+
+### Commits
+
+- beta release [`9f4d7d5`](https://github.com/ImageMagick/ImageMagick/commit/9f4d7d51e1cc2c8be8672703da3e860ff57bc86d)
+- Removed default quality of 50. [`d0b8d6e`](https://github.com/ImageMagick/ImageMagick/commit/d0b8d6e92e82cd9b4d8dac3d0de63717fbc0c561)
+- Use the new api of jpeg-xl 0.7.0. [`1246eab`](https://github.com/ImageMagick/ImageMagick/commit/1246eab3cea5e69a5f659c8aa4a4451f10b5c9e0)
+- Set the minimum jpeg-xl version to 0.7.0 [`67e6c68`](https://github.com/ImageMagick/ImageMagick/commit/67e6c683380270e5f49c7da4f243bd38843b364a)
+- Corrected setting the properties that should be set when the image has an alpha channels. [`401f580`](https://github.com/ImageMagick/ImageMagick/commit/401f58079c96dd4d8f62ac8b73224a8dee278de0)
+- Adjust num_color_channels when the image is grayscale. [`1a2117e`](https://github.com/ImageMagick/ImageMagick/commit/1a2117e46a2787e79bc3a64a857564915f1b0258)
+- Use ReadStrip method when bit depth is higher than 8 (#5597) [`f95bf0b`](https://github.com/ImageMagick/ImageMagick/commit/f95bf0b432fd252fb587badcc776eafbfaccd722)
+- Added support for reading the resolution of an xcf file (#5549). [`7f0348c`](https://github.com/ImageMagick/ImageMagick/commit/7f0348ca8d1e774d65dda49661b280ffcbeb4dfb)
+- Minor style change. [`c50602c`](https://github.com/ImageMagick/ImageMagick/commit/c50602cc46b62b8342b8802b980714793f1730e0)
+- Correct distance calculation. [`c3f5009`](https://github.com/ImageMagick/ImageMagick/commit/c3f5009299a9047c5e8c4d4f39bc617ae768ad9c)
+- Perform ChannelGeometry checks earlier. [`7eb960d`](https://github.com/ImageMagick/ImageMagick/commit/7eb960d23c937890d6ed53b2567c8efaef2ae86b)
+- Corrected version format to be compatible with Ghostscript 10.00.0 (#5618) [`d5349ca`](https://github.com/ImageMagick/ImageMagick/commit/d5349ca2ff3772b4d3b994e1450c1c57b7f1232e)
+- Correct quotes around the password, the old way no longer works with version 10.00.0 of Ghostscript. [`82bbf4c`](https://github.com/ImageMagick/ImageMagick/commit/82bbf4c49a2ffec5980981b867ab93bbe033d9c7)
+- Read and use the offset instead of skipping it (#5604). [`bb4018a`](https://github.com/ImageMagick/ImageMagick/commit/bb4018a4dc61147b37d3c42d85e5893ca5e2a279)
+- Corrected bounds calculation ($5623). [`5118534`](https://github.com/ImageMagick/ImageMagick/commit/5118534487b0060fc35d573aff9bf69b33dc1e16)
+- fix incorrect handling of SQ groups in header @ https://github.com/ImageMagick/ImageMagick/issues/5606 [`0bc1022`](https://github.com/ImageMagick/ImageMagick/commit/0bc102241840ff8eacd000c3436f6fe71085a9bd)
+- support 1-bit pixels [`740ac65`](https://github.com/ImageMagick/ImageMagick/commit/740ac6550558dc454d003cf3883580cf7994de84)
+- release [`f032690`](https://github.com/ImageMagick/ImageMagick/commit/f032690e5ed2b15873516220fb8dcdda82924988)
+
 ## [7.1.0-49](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-48...7.1.0-49) - 2022-09-24
 
 ### Merged
