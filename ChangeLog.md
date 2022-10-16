@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-51](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-50...7.1.0-51) - 2022-10-16
+
+### Commits
+
+- beta release [`fea7eed`](https://github.com/ImageMagick/ImageMagick/commit/fea7eed9c4067e6b9ded49da23790eb54c7d8d2b)
+- obtain scene from image structure [`53eb353`](https://github.com/ImageMagick/ImageMagick/commit/53eb353a1a4487c5dcf887e11fc7381f2deb08f0)
+- prevent undefined shift [`742374a`](https://github.com/ImageMagick/ImageMagick/commit/742374aed7d086bd310cc8eb3432df55fa86c3c0)
+- Added private api to go through a linked list without using semaphores. [`212020f`](https://github.com/ImageMagick/ImageMagick/commit/212020f5e6a7b2bd13d0bbf0e4668f093a8e79af)
+- Fixed build. [`e53a959`](https://github.com/ImageMagick/ImageMagick/commit/e53a9593542b07253b2ddc29300e4d2f01365858)
+- latest automake configuration [`a88a3b5`](https://github.com/ImageMagick/ImageMagick/commit/a88a3b5b6a81e4d123e31928402c4fce2ccd7476)
+- fix undefined-shift in ReadTGAImage @ https://oss-fuzz.com/testcase?key=5129864151957504 [`fcaddfb`](https://github.com/ImageMagick/ImageMagick/commit/fcaddfb00da9271885cc1233d209bae0d8bd3353)
+- prevent divide by zero exception [`1cf41df`](https://github.com/ImageMagick/ImageMagick/commit/1cf41df5db4aa83c5620a146cd107d10d2b2cdb5)
+- release [`aea87b5`](https://github.com/ImageMagick/ImageMagick/commit/aea87b538fdb0e464ac3bbc7941127119baac5dd)
+
 ## [7.1.0-50](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-49...7.1.0-50) - 2022-10-08
 
 ### Merged
