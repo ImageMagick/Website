@@ -21,7 +21,7 @@
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "./configure", "<br/>", "make"); ?>
+<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "./configure", "", "make"); ?>
 
 <p>If build fails, try <samp>gmake</samp> instead.</p>
 
@@ -75,7 +75,7 @@ to compile the program and on completion run the program.</p>
 
 <p>To verify ImageMagick is working properly, launch a MS-DOS Command Prompt window and type</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "<br/>", "convert logo: image.jpg"); ?>
+<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "convert logo: image.jpg"); ?>
 <p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call Magick/convert from any directory.<p>
 <p>For a more comprehensive test, run the ImageMagick validation suite:</p>
 
