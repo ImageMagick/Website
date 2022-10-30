@@ -637,10 +637,10 @@ the supported image formats.</p>
     <td>MPR</td>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
-    <td>This format permits you to write to and read images from memory.  The image persists until the program exits.  For example, let's use the MPR to create a checkerboard:
+    <td>This format permits you to write to and read images from memory.  The image persists until you explicity delete it or the program exits.  For example, let's use the MPR to create a checkerboard:
 <pre class="bg-light text-dark mx-4"><samp>magick \( -size 15x15 canvas:black canvas:white -append \) \
   \( +clone -flip \) +append -write mpr:checkers +delete \
-  -size 240x240 tile:mpr:checkers board.png </samp></pre>
+  -size 240x240 tile:mpr:checkers +set registry:mpr:checkers board.png </samp></pre>
   </td>
   </tr>
 
