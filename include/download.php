@@ -96,7 +96,7 @@ export LD_LIBRARY_PATH</samp></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: logo.gif
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: logo.gif
 identify logo.gif
 display logo.gif</samp></pre>
 
@@ -156,7 +156,7 @@ display logo.gif</samp></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: logo.gif
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: logo.gif
 identify logo.gif
 display logo.gif</samp></pre>
 
@@ -445,7 +445,7 @@ display logo.gif</samp></pre>
 
 <p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: logo.gif
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: logo.gif
 magick identify logo.gif
 magick logo.gif win:</samp></pre>
 
@@ -453,7 +453,7 @@ magick logo.gif win:</samp></pre>
 
 <p>Note, use a double quote (<samp>"</samp>) rather than a single quote (<samp>'</samp>) for the ImageMagick command line under Windows:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
 <p>Use two double quotes for VBScript scripts:</p>
 <pre class="bg-light text-dark mx-4"><samp>Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</samp></pre>

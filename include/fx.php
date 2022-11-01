@@ -19,7 +19,7 @@
 
 <p>The expression can be simple:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
 </samp></pre>
 
 <p>Here, we convert a black to a navy blue image:</p>
@@ -32,7 +32,7 @@
 
 <p>Or the expression can be complex:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick rose: \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick rose: \
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
   rose-sigmoidal.png
 </samp></pre>
@@ -47,7 +47,7 @@
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick -size 70x70 canvas: \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \
   radial-gradient.png
 </samp></pre>
@@ -60,7 +60,7 @@
 
 <p>This FX expression adds random noise to an image:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
   channel(4.28,3.86,6.68)/255; max(0,p+pnoise)' noisy.png
@@ -68,7 +68,7 @@
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick -size 400x400 xc:gray -fx " \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 400x400 xc:gray -fx " \
   Xi=2.4*i/w-1.2; \
   Yj=2.4*j/h-1.2; \
   for (pixel=0.0, (hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0), \
@@ -87,7 +87,7 @@
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick xc:gray -fx " \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick xc:gray -fx " \
   for (prime=2, prime &lt; 30, composite=0; \
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
       if (composite &lt;= 0, debug(prime), ); prime++)" null:</samp></pre>
@@ -189,7 +189,7 @@
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> s.depth, s.kurtosis, s.maxima, s.mean, s.minima, s.resolution.x, s.resolution.y, s.skewness, s.standard_deviation</dd>
   <dt class="col-md-4"> user settings:</dt>
-  	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="bg-light text-dark mx-4"><samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp></pre><dd>
+  	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="bg-light text-dark mx-4 cli"><samp>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp></pre><dd>
 </dl>
 
 <h4>The FX Expression</h4>
@@ -309,14 +309,14 @@
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
+<pre class="bg-light text-dark mx-4 cli"><samp>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
 </samp></pre>
 
 <p>By default, the image to which <samp>p</samp>, <samp>r</samp>, <samp>g</samp>, <samp>b</samp>, <samp>a</samp>, etc., are applied is the current image <samp>s</samp> in the image list. This is equivalent to <samp>u</samp> except when used in an escape sequence <samp>%[fx:...]</samp>. </p>
 
 <p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel red</a> instructs <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> to modify only the green channel; nothing in the red or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
 </samp></pre>
 
 <ul>
@@ -353,7 +353,7 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <samp>alpha.png</samp> with the average of the green channels from the images <samp>alpha.png</samp> and <samp>beta.png</samp>, use:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
+<pre class="bg-light text-dark mx-4 cli"><samp>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
 </samp></pre>
 
 
@@ -374,13 +374,13 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <samp>-set</samp> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
   -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif
 </samp></pre>
 
 <p>This example tests the difference between two images, measured by RMSE. If the difference is greater than 0.1 it returns 1; otherwise it returns 0:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre>
 
 <p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
 

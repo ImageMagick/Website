@@ -8,19 +8,19 @@
 
 <p>We list a few examples of the <samp>display</samp> command here to illustrate its usefulness and ease of use.  To get started, lets display an image in the JPEG format:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick display rose.jpg </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick display rose.jpg </samp></pre>
 
 <p>To tile a slate texture onto the root window, use:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick display -size 1280x1024 -window root slate.png </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick display -size 1280x1024 -window root slate.png </samp></pre>
 
 <p>To display a visual image directory of all your JPEG images, use:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick display 'vid:*.jpg' </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick display 'vid:*.jpg' </samp></pre>
 
 <p>The display program defaults to the X screen resolution.  To display vector formats at their intended size, override the default resolution:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick display -density 72 drawing.svg </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick display -density 72 drawing.svg </samp></pre>
 
 <p>You can find additional examples of using <samp>display</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/">Graphics from the Command Line</a>.  Further discussion is available in  <a href="https://www.ibm.com/developerworks/library/l-graf2/">More Graphics from the Command Line</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

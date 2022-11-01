@@ -388,7 +388,7 @@ Resource limits:
 
 <h2>Distributed Pixel Cache</h2>
 <p>A distributed pixel cache is an extension of the traditional pixel cache available on a single host.  The distributed pixel cache may span multiple servers so that it can grow in size and transactional capacity to support very large images.  Start up the pixel cache server on one or more machines.  When you read or operate on an image and the local pixel cache resources are exhausted, ImageMagick contacts one or more of these remote pixel servers to store or retrieve pixels.  The distributed pixel cache relies on network bandwidth to marshal pixels to and from the remote server.  As such, it will likely be significantly slower than a pixel cache utilizing local storage (e.g. memory, disk, etc.).</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
 magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
 </samp></pre>
 
@@ -448,13 +448,13 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>A great majority of image formats and algorithms restrict themselves to a fixed range of pixel values from 0 to some maximum value, for example, the Q16 version of ImageMagick permit intensities from 0 to 65535.  High dynamic-range imaging (HDRI), however, permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  Enable <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">HDRI</a> at ImageMagick build time to deal with high dynamic-range images, but be mindful that each pixel component is a 32-bit floating point value. In addition, pixel values are not clamped by default so some algorithms may have unexpected results due to out-of-band pixel values than the non-HDRI version.</p>
 
 <p>If you are dealing with large images, make sure the pixel cache is written to a disk area with plenty of free space.  Under Linux, this is typically <samp>/tmp</samp> and for Windows, <samp>c:/temp</samp>.  You can tell ImageMagick to write the pixel cache to an alternate location and conserve memory with these options:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
 </samp></pre>
 
 <p>Set global resource limits for your environment in the <samp>policy.xml</samp> configuration file.</p>
 
 <p>If you plan on processing the same image many times, consider the MPC format.  Reading a MPC image has near-zero overhead because its in the native pixel cache format eliminating the need for decoding the image pixels.  Here is an example:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick image.tif image.mpc
+<pre class="bg-light text-dark mx-4 cli"><samp>magick image.tif image.mpc
 magick image.mpc -crop 100x100+0+0 +repage 1.png
 magick image.mpc -crop 100x100+100+0 +repage 2.png
 magick image.mpc -crop 100x100+200+0 +repage 3.png
@@ -529,30 +529,30 @@ image=ReadStream(image_info,&amp;StreamPixels,exception);
 
 <h2><a class="anchor" id="tera-pixel"></a>Large Image Support</h2>
 <p>ImageMagick can read, process, or write mega-, giga-, or tera-pixel image sizes.  An image width or height can range from 1 to 2 giga-pixels on a 32 bit OS (up to 2147483647 rows/columns) and up to 9 exa-pixels on a 64-bit OS (up to 9223372036854775807 rows/columns).  Note, that some image formats have restrictions on image size.  For example, Photoshop images are limited to 300,000 pixels for width or height.  Here we resize an image to a quarter million pixels square:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick logo: -resize 250000x250000 logo.miff
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -resize 250000x250000 logo.miff
 </samp></pre>
 
 <p>For large images, memory resources will likely be exhausted and ImageMagick will instead create a pixel cache on disk.  Make sure you have plenty of temporary disk space.  If your default temporary disk partition is too small, tell ImageMagick to use another partition with plenty of free space.  For example:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -define registry:temporary-path=/data/tmp logo:  \ <br/>     -resize 250000x250000 logo.miff
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -define registry:temporary-path=/data/tmp logo:  \ <br/>     -resize 250000x250000 logo.miff
 </samp></pre>
 
 <p>To ensure large images do not consume all the memory on your system, force the image pixels to memory-mapped disk with resource limits:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -define registry:temporary-path=/data/tmp -limit memory 16mb \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -define registry:temporary-path=/data/tmp -limit memory 16mb \
   logo: -resize 250000x250000 logo.miff
 </samp></pre>
 
 <p>Here we force all image pixels to disk:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -define registry:temporary-path=/data/tmp -limit area 0 \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -define registry:temporary-path=/data/tmp -limit area 0 \
   logo: -resize 250000x250000 logo.miff
 </samp></pre>
 
 <p>Caching pixels to disk is about 1000 times slower than memory.  Expect long run times when processing large images on disk with ImageMagick.  You can monitor progress with this command:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -monitor -limit memory 2GiB -limit map 4GiB -define registry:temporary-path=/data/tmp \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -monitor -limit memory 2GiB -limit map 4GiB -define registry:temporary-path=/data/tmp \
   logo: -resize 250000x250000 logo.miff
 </samp></pre>
 
 <p>For really large images, or if there is limited resources on your host, you can utilize a distributed pixel cache on one or more remote hosts:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
 magick -distribute-cache 6668 &amp;  // start on 192.168.100.51
 magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
@@ -726,13 +726,13 @@ Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
 <p>ImageMagick includes support for heterogeneous distributed processing with the <a href="http://en.wikipedia.org/wiki/OpenCL">OpenCL</a> framework.  OpenCL kernels within ImageMagick permit image processing algorithms to execute across heterogeneous platforms consisting of CPUs, GPUs, and other processors.  Depending on your platform, speed-ups can be an order of magnitude faster than the traditional single CPU.</p>
 
 <p>First verify that your version of ImageMagick includes support for the OpenCL feature:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick identify -version
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -version
 Features: DPC Cipher Modules OpenCL OpenMP(4.5)
 </samp></pre>
 
 <p>If so, run this command to realize a significant speed-up for image convolution:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick image.png -convolve '-1, -1, -1, -1, 9, -1, -1, -1, -1' convolve.png
+<pre class="bg-light text-dark mx-4 cli"><samp>magick image.png -convolve '-1, -1, -1, -1, 9, -1, -1, -1, -1' convolve.png
 </samp></pre>
 
 <p>If an accelerator is not available or if the accelerator fails to respond, ImageMagick reverts to the non-accelerated convolution algorithm.</p>
@@ -1226,7 +1226,7 @@ static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
 }</samp></pre>
 
 <p>To invoke the custom coder from the command line, use these commands:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick logo: logo.mgk
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: logo.mgk
 display logo.mgk
 </samp></pre>
 
@@ -1491,7 +1491,7 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
 
 <p>To invoke the custom filter from the command line, use this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: -process \"analyze\" -verbose info:
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -process \"analyze\" -verbose info:
 Image: logo:
   Format: LOGO (ImageMagick Logo)
   Class: PseudoClass

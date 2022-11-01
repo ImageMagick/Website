@@ -26,7 +26,7 @@
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -version
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -version
 Features: HDRI
 </samp></pre>
 </div>
