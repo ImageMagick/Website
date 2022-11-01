@@ -8,10 +8,10 @@
 
 <p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick label.gif +matte \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick label.gif -alpha Set \
   \( +clone  -shade 110x90 -normalize -negate +clone  -compose Plus -composite \) \
-  \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -matte \) \
-  -delete 0 +swap  -compose Multiply -composite  button.gif");</samp></pre>
+  \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -alpha Off \) \
+  -delete 0 +swap  -compose Multiply -composite  button.gif</samp></pre>
 
 <p class="text-info">This example command is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<samp>\</samp>). The backslash is the Linux <var>line-continuation</var> character. In the Windows shell, use a carat character (<samp>^</samp>) for line-continuation. We use the Linux style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command-lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Linux (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
 
