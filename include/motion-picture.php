@@ -88,17 +88,17 @@ dpx:user.data
 
 <p> To determine which properties are associated with your DPX image, use this command for example:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -verbose bluebells.dpx
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -verbose bluebells.dpx
 </samp></pre>
 
 <p>To identify a particular property, try this:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -format "%[dpx:television.time.code]" bluebells.dpx
 </samp></pre>
 
 <p>Finally, to set a property:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
+<pre class="bg-light text-dark mx-4 cli"><samp>magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
 </samp></pre>
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>

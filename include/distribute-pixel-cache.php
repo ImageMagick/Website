@@ -6,7 +6,7 @@
 &lt;policy domain="cache" name="shared-secret" value="<em>passhrase</em>" stealth="true"/> </samp></pre>
 
 <p>Here we create two distributed pixel caches and utilize them from our desktop:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
 magick -distribute-cache 6668 &amp;  # start on 192.168.100.51
 magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \

@@ -59,18 +59,18 @@
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.net') ||
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
     {
-      header("Location: https://imagemagick.org/index.php");
+      header("Location: http://imagemagick.org/index.php");
       exit;
     }
-  $use_sts = true;
-  if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
+  $use_sts = false;
+  if ($_SERVER["SERVER_ADDR"] == "192.168.137.1") {
     $use_sts = false;
   }
   if ($use_sts && isset($_SERVER['HTTPS'])) {
     header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload');
   } elseif ($use_sts && !isset($_SERVER['HTTPS'])) {
     header('Status-Code: 301');
-    header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+    header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
   }
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
