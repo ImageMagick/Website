@@ -1410,7 +1410,7 @@ the supported image formats.</p>
   <tr>
     <td>MASK</td>
     <td>RW</td>
-    <td>Image mask</td>
+    <td>Grayscale image mask.  A sequence is emitted if the source image has more than one mask.</td>
     <td> </td>
   </tr>
 
