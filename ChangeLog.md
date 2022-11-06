@@ -5,6 +5,64 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-52](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-51...7.1.0-52) - 2022-11-06
+
+### Merged
+
+- coders: Enable opening https files in mingw [`#5727`](https://github.com/ImageMagick/ImageMagick/pull/5727)
+- utilities: Enable support for unicode paths in mingw [`#5713`](https://github.com/ImageMagick/ImageMagick/pull/5713)
+
+### Commits
+
+- beta release [`bf925a7`](https://github.com/ImageMagick/ImageMagick/commit/bf925a7f1dd56b4306fed0a3802477eb83df13f8)
+- support optional extension area [`42bae95`](https://github.com/ImageMagick/ImageMagick/commit/42bae95a16abed5251a43e9fe8022a84d838b4cd)
+- check extension attribute type to set the alpha channel [`7b771b4`](https://github.com/ImageMagick/ImageMagick/commit/7b771b4368c3a5348816877be6d0f103338fc89a)
+- Pass image's type instead of colorspace to IsGrayImageType [`d3539ae`](https://github.com/ImageMagick/ImageMagick/commit/d3539aed98e9eda9c93c4ab480d2bd700ce9334f)
+- cosmetic [`839984c`](https://github.com/ImageMagick/ImageMagick/commit/839984c93c81e553104703ea09d0412333df730e)
+- eliminate unnecessary file open when globbing (thanks to P Antoine) [`73dd9de`](https://github.com/ImageMagick/ImageMagick/commit/73dd9deace2a19c6e63e4890dc37bda1f703fc5c)
+- OCE-2022-70: DoS at Stdin [`09e738e`](https://github.com/ImageMagick/ImageMagick/commit/09e738e84bd78c473771804de821e99f82d99219)
+- possible DoS @ stdin (OCE-2022-70); possible arbitrary file leak (OCE-2022-72) [`05673e6`](https://github.com/ImageMagick/ImageMagick/commit/05673e63c919e61ffa1107804d1138c46547a475)
+- revert scene check [`2752356`](https://github.com/ImageMagick/ImageMagick/commit/27523561a72a9934a851120693ed0fedb524d30e)
+- Use new certificate. [`e9da157`](https://github.com/ImageMagick/ImageMagick/commit/e9da157073da96391f6184e3746889f2c772d730)
+- cosmetic [`3aa3062`](https://github.com/ImageMagick/ImageMagick/commit/3aa30627a2b3fc84f9bb53ca9ce9e4f8612c60aa)
+- enhanced delete list parsing [`5118724`](https://github.com/ImageMagick/ImageMagick/commit/511872451db40249f6d4126124f3cd837e233754)
+- cosmetic [`4ba2bbc`](https://github.com/ImageMagick/ImageMagick/commit/4ba2bbc3447ec38eb5e133517d93c03f6cc35962)
+- support `-delete registry:NAME` to delete images from the system registry [`fe5eeb8`](https://github.com/ImageMagick/ImageMagick/commit/fe5eeb8656fb00623e3297b43b6b58ba3715517d)
+- support `-delete registry:NAME` to delete images from the system registry [`ba541de`](https://github.com/ImageMagick/ImageMagick/commit/ba541deb8a7f86e411ea64c74df00e9c50758904)
+- string optimization [`d78b958`](https://github.com/ImageMagick/ImageMagick/commit/d78b958aa52de33f7ecb3390e2a8f27864627c53)
+- allow for EOF [`d0bee0b`](https://github.com/ImageMagick/ImageMagick/commit/d0bee0b3e9bbfbe849f013cd04da497dcfb023c8)
+- Use new private api. [`2d0b7fc`](https://github.com/ImageMagick/ImageMagick/commit/2d0b7fcc16daa4bd746dafb4e71c0c69fb94a280)
+- Whitespace. [`3193b5e`](https://github.com/ImageMagick/ImageMagick/commit/3193b5e397b70a53760ffa4ea060f241e94e1e24)
+- Renamed variable [`fa28e60`](https://github.com/ImageMagick/ImageMagick/commit/fa28e609ae4f7568d14be1f43145aa2983358ade)
+- rotate HLS by 120 degrees (private email from John Z) [`5f4ad1d`](https://github.com/ImageMagick/ImageMagick/commit/5f4ad1d97e485800f173e350271b65ebc96af8fa)
+- Use the new ElementInfo api. [`ead0c10`](https://github.com/ImageMagick/ImageMagick/commit/ead0c1053b937e2ff8644d6193a960749d93cce5)
+- blob byte optimization [`6fac1c9`](https://github.com/ImageMagick/ImageMagick/commit/6fac1c98fa392b635754e7359187155ede91ed88)
+- add check for grayscale image @ https://github.com/ImageMagick/ImageMagick/issues/5705 [`e7d354e`](https://github.com/ImageMagick/ImageMagick/commit/e7d354eaad7e38918a60d0ad201493b5a5c6972a)
+- optimize reading blob string [`4ff14c8`](https://github.com/ImageMagick/ImageMagick/commit/4ff14c8d62762f4a84626e286782b9ff5b12a6cc)
+- proper boundary check [`79cd5a5`](https://github.com/ImageMagick/ImageMagick/commit/79cd5a5421ad551e0a4592bc7b31a79c8796074d)
+- register WebP mime type [`c3f81bc`](https://github.com/ImageMagick/ImageMagick/commit/c3f81bc6823c45f75469a29720808f463c9bd7db)
+- fix monochrome colormap [`b4193e8`](https://github.com/ImageMagick/ImageMagick/commit/b4193e8e4d85ef0a3c2775527f01a0aa146f2d64)
+- Fixed possible null reference. [`ffd7221`](https://github.com/ImageMagick/ImageMagick/commit/ffd7221e800a9784096544cc198bb93e9c0a9d6a)
+- Use the ElementInfo api instead. [`7a2b09b`](https://github.com/ImageMagick/ImageMagick/commit/7a2b09b5ceabfeb63c31f966d29010739e9e5114)
+- Another fix. [`ad532fa`](https://github.com/ImageMagick/ImageMagick/commit/ad532fa542b1a64389d51b4ca18bf451d6bd4f8a)
+- set blob EOF flag [`bc1e75c`](https://github.com/ImageMagick/ImageMagick/commit/bc1e75ccf6f975a1345ff574540545dc46c0e4d5)
+- Use the ElementInfo api and fixed return value of SetLogEventMask. [`d80fafe`](https://github.com/ImageMagick/ImageMagick/commit/d80fafec97e3451ea8a6122b9deb2b24bd346d45)
+- Earlier unlock of semaphore. [`d4ae038`](https://github.com/ImageMagick/ImageMagick/commit/d4ae038ca89b0f6dd8e18604328a30433ecf42c7)
+- Fixed unlock of semaphore. [`9d98dad`](https://github.com/ImageMagick/ImageMagick/commit/9d98dadb26761c8e30f5c46511ca5c6b851baad8)
+- latest autoconf update [`5d3d9e2`](https://github.com/ImageMagick/ImageMagick/commit/5d3d9e2489e658db9a60dd67a603dd5a58c0e110)
+- Use the ElementInfo api. [`dc5bb28`](https://github.com/ImageMagick/ImageMagick/commit/dc5bb280f0d2e8709cddfe613f9652fe89bddd51)
+- Use the ElementInfo api. [`ae600a1`](https://github.com/ImageMagick/ImageMagick/commit/ae600a1b06ee209191793b3b391e553c19053576)
+- Code cleanup. [`13ba626`](https://github.com/ImageMagick/ImageMagick/commit/13ba626c30b93721669b4cab8f4b44128c168749)
+- Use the ElementInfo api. [`24a4cd0`](https://github.com/ImageMagick/ImageMagick/commit/24a4cd039a90ffd1580f50fe8680707d77dedba3)
+- Fixed bug that was introduced when using the ElementInfo api. [`f9d96c7`](https://github.com/ImageMagick/ImageMagick/commit/f9d96c7033e81dcc50b9a881bde0b94059957b59)
+- https://github.com/ImageMagick/ImageMagick/pull/5713 [`fb70c5b`](https://github.com/ImageMagick/ImageMagick/commit/fb70c5b55254484b9b2a2e0b5393a9e90b6108f6)
+- robust support of masks in MPC and MIFF [`9f0f4b2`](https://github.com/ImageMagick/ImageMagick/commit/9f0f4b23817add28e073b94dbff81035416f71cf)
+- https://github.com/ImageMagick/ImageMagick/pull/5713 [`914e376`](https://github.com/ImageMagick/ImageMagick/commit/914e376e2ec2cde8ea1f1e90d556a6267446b732)
+- https://github.com/ImageMagick/ImageMagick/issues/5680 [`11df7ff`](https://github.com/ImageMagick/ImageMagick/commit/11df7ff61d9cb73b7eae888f58473d2fca226ce4)
+- https://github.com/ImageMagick/ImageMagick/issues/5680 [`43ba8a6`](https://github.com/ImageMagick/ImageMagick/commit/43ba8a6f2079eaf1dff0d1a749b6be3731943175)
+- initialize package key [`878da43`](https://github.com/ImageMagick/ImageMagick/commit/878da433b3ea9dae46bbbe8b42d55bb03d1084a4)
+- release [`04ee6ce`](https://github.com/ImageMagick/ImageMagick/commit/04ee6cec572251279db13cba52a59eaef12f5652)
+
 ## [7.1.0-51](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-50...7.1.0-51) - 2022-10-16
 
 ### Commits
