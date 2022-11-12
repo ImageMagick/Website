@@ -567,7 +567,7 @@ the supported image formats.</p>
     <td><a href="https://jpeg.org/jpegxl">JXL</a></td>
     <td>RW</td>
     <td>JPEG XL image coding system</td>
-    <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl.git">JPEG XL</a> delegate library. Use <samp>-define jxl:effort=<i>integer</i></samp> to set the effort and <samp>-define jxl:decoding-speed=<i>integer</i></samp> to set the decoding speed.</td>
+    <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl.git">JPEG XL</a> delegate library. Use <samp>-define jxl:effort=<i>integer</i></samp> to set the effort and <samp>-define jxl:decoding-speed=<i>integer</i></samp> to set the decoding speed. To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats and 16 for half-precision.</td>
   </tr>
 
   <tr>
