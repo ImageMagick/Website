@@ -1375,7 +1375,7 @@ operation. </p>
 
 <p class="magick-description">Clip along a named path from the 8BIM profile.</p>
 
-<p>This is identical to <a href="#clip">-clip</a> except choose a specific clip path in the event the image has more than one path available. </p>
+<p>This is identical to <a href="#clip">-clip</a> except choose a specific clip path in the event the image has more than one path available. ImageMagick supports UTF-8 encoding.  If your named path is in a different encoding, use `iconv` to convert the clip path name to that encoding otherwise the path name will not match.</p>
 
 <p>Use <a href="#clip-path">+clip-path</a> to disable clipping for subsequent operations.</p>
 
