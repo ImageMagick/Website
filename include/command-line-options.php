@@ -392,8 +392,7 @@ strings, such as '<samp>%d</samp>' or '<samp>%03d</samp>', are familiar to those
 who have used the standard <samp>printf()</samp>' C-library function. As an
 example, the command</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg
-</samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg</samp></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
 <a href="#morph">-morph</a>), named: my00morph.jpg, my01morph.jpg,
@@ -2889,7 +2888,9 @@ a <samp>rectangle</samp> followed by the width and height of the rounded corners
 to be removed.</p>
 
 <p>The <samp>circle</samp> primitive makes a disk (filled) or circle (unfilled).
-Give the center and any point on the perimeter (boundary).</p>
+Give the center and any point on the perimeter (boundary). Note, using a translation you can remove the need to calculate the circles edge coordinate, but can just give the radius directly:</p>
+
+<pre class="bg-light text-dark mx-4"><samp>magick -size 100x60 xc: -stroke SeaGreen  -fill PaleGreen -strokewidth 2 -draw 'translate 50,30 circle 0,0 25,0' circle.gif</samp></pre>
 
 <p>The <samp>arc</samp> primitive is used to inscribe an elliptical segment in
 to a given rectangle. An <samp>arc</samp> requires the two corners used for
