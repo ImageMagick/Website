@@ -342,8 +342,16 @@
 
 <p class="magick-description">Adaptively blur pixels, with decreasing effect near edges.</p>
 
-<p>A Gaussian operator of the given radius and standard deviation (<var>sigma</var>) is used. If <var>sigma</var> is not given it
-defaults to 1.</p>
+<p>A Gaussian operator of the given radius and standard deviation (<var>sigma</var>) is used. If <var>sigma</var> is not given it defaults to 1.</p>
+
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adaptive-resize"></a>-adaptive-resize <var>geometry</var></h2>
@@ -366,6 +374,14 @@ href="#gravity">-gravity</a> option has no effect.</p>
 <p>A Gaussian operator of the given radius and standard deviation
 (<var>sigma</var>) is used. If <var>sigma</var> is not given it
 defaults to 1.</p>
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adjoin"></a>-adjoin</h2>
@@ -913,11 +929,11 @@ the background image is weighted by the exact opposite amount. That is a
 
 <p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/></p>
 
-<p>The <var >Sigma</var> value is the important argument, and
+<p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
 
-<p>The <var >Radius</var> is only used to determine the size of the
-array which will hold the calculated Gaussian distribution. It should be an
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
 integer.  If not given, or set to zero, IM will calculate the largest possible
 radius that will provide meaningful results for the Gaussian distribution.
 </p>
@@ -4118,10 +4134,10 @@ chunk, use</p>
 
 <p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/> </p>
 
-<p>The <var >Sigma</var> value is the important argument, and
+<p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
 
-<p>The <var >Radius</var> is only used to determine the size of the
+<p>The <var>radius</var> is only used to determine the size of the
 array which will hold the calculated Gaussian distribution. It should be an
 integer.  If not given, or set to zero, IM will calculate the largest possible
 radius that will provide meaningful results for the Gaussian distribution.
@@ -6542,6 +6558,16 @@ of the color clusters is returned.</p>
 <p>Blurs those pixels that are less than or equal to the threshold in
 contrast. The threshold may be expressed as a fraction of <var>QuantumRange</var> or as a percentage.</p>
 
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
+
+
 <div style="margin: auto;">
   <h2><a class="anchor" id="separate"></a>-separate</h2>
 </div>
@@ -6711,6 +6737,15 @@ Otherwise, this option is ignored. The default is <samp>True</samp>.</p>
 <p class="magick-description">Sharpen the image.</p>
 
 <p>Use a Gaussian operator of the given radius and standard deviation (sigma).</p>
+
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of sharpening that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="shave"></a>-shave <var>geometry</var></h2>
@@ -7512,6 +7547,15 @@ with the <a href="#density">-density</a> option.</p>
 convolved with a Gaussian operator of the given radius and standard deviation
 (sigma). For reasonable results, radius should be larger than sigma. Use
 a radius of 0 to have the method select a suitable radius.</p>
+
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of sharpening that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <p>The parameters are:</p>
 
