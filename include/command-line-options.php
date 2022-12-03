@@ -7644,7 +7644,7 @@ percentage, which defaults to 100 percent (no color change). </p>
   <h2><a class="anchor" id="wavelet-denoise"></a>-wavelet-denoise <var>threshold</var><br />-wavelet-denoise <var>threshold</var>x<var>softness</var></h2>
 </div>
 
-<p class="magick-description">Removes noise from the image using a wavelet transform.  The threshold is the value below which everything is considered noise and ranges from 0.0 (none) to QuantumRange or use percent (e.g. 5%). Softness attenuates the threshold and typically ranges from 0.0 (none) to 1.0.  The higher the value the more noise that remains in the image.</p>
+<p class="magick-description">Removes noise from the image using a wavelet transform.  The threshold is the value below which everything is considered noise and ranges from 0.0 (none) to QuantumRange or use percent (e.g. 5%). Softness attenuates the threshold and typically ranges from 0.0 (none, default) to 1.0.  The higher the value, the more noise that remains in the image.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="weight"></a>-weight <var>fontWeight</var></h2>
