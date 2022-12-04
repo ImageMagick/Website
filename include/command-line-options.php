@@ -1074,7 +1074,16 @@ symbol is no different than leaving it off.</p>
 
 <p class="magick-description">Canny edge detector uses a multi-stage algorithm to detect a wide range of edges in the image.</p>
 
-<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown. The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
+<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown.</p>
+<p>The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+  
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="caption"></a>-caption <var>string</var></h2>
