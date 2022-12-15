@@ -4,9 +4,7 @@
 
 <p>ImageMagick is written in C and is available for a wide range of operating systems, including Linux, macOS, and Windows. It can be used as a standalone application, or as a library that can be integrated into other software programs.</p>
 
-<p>The current release is ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#linux">Linux</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">Windows</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#macosx">Mac Os X</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">iOS</a>, <a href="https://github.com/MolotovCherry/Android-ImageMagick7">Android</a> OS, and others.</p>
-
-<p>The authoritative ImageMagick web site is <a href="https://imagemagick.org/">https://imagemagick.org</a>. The authoritative source code repository is <a href="https://github.com/ImageMagick/ImageMagick" target="_blank">https://github.com/ImageMagick/ImageMagick</a>.  We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/" target="_blank">https://legacy.imagemagick.org</a>.</p>
+<p>The authoritative ImageMagick web site is <a href="https://imagemagick.org/">https://imagemagick.org</a>. The authoritative source code repository is <a href="https://github.com/ImageMagick/ImageMagick" target="_blank">https://github.com/ImageMagick/ImageMagick</a>.  The current release is ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>. We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/" target="_blank">https://legacy.imagemagick.org</a>.</p>
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
 
