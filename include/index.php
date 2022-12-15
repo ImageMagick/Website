@@ -1,16 +1,21 @@
 <div class="magick-header">
 <h1 class="text-center">ImageMagick</h1>
-<p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" title="And Now a Touch of Magick"><img class="img-fluid magick-icon" id="logo" alt="And Now a Touch of Magick" width="265" height="352" src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.jpg" /></a> 
-Use ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969" target="_blank">&#174;</a></sup> to create, edit, compose, or convert digital images.  It can read and write images in a variety of <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> (over 200) including PNG, JPEG, GIF, WebP, HEIC, SVG, PDF, <a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">EXR</a> and TIFF.  ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</p>
+<p class="lead magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" title="And Now a Touch of Magick"><img class="img-fluid magick-icon" id="logo" alt="And Now a Touch of Magick" width="265" height="352" src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.jpg" /></a> ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969" target="_blank">&#174;</a></sup> is a free and  <a href="https://imagemagick.org/script/license.php">open-source</a> software suite for displaying, converting, and editing raster image and vector image files. It can read and write over 200 image file <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a>, and can support a wide range of image manipulation operations, such as resizing, cropping, and color correction.</p>
 
-<p>ImageMagick is free software delivered as a ready-to-run binary distribution or as source code that you may use, copy, modify, and distribute in both open and proprietary applications. It is distributed under a derived Apache 2.0 <a href="https://imagemagick.org/script/license.php">license</a>.</p>
-<p>ImageMagick utilizes multiple computational threads to increase performance and can read, process, or write mega-, giga-, or tera-pixel image sizes.</p>
+<p>ImageMagick is written in C and is available for a wide range of operating systems, including Linux, macOS, and Windows. It can be used as a standalone application, or as a library that can be integrated into other software programs.</p>
 
 <p>The current release is ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>.  It runs on <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#linux">Linux</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#windows">Windows</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#macosx">Mac Os X</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">iOS</a>, <a href="https://github.com/MolotovCherry/Android-ImageMagick7">Android</a> OS, and others.</p>
 
 <p>The authoritative ImageMagick web site is <a href="https://imagemagick.org/">https://imagemagick.org</a>. The authoritative source code repository is <a href="https://github.com/ImageMagick/ImageMagick" target="_blank">https://github.com/ImageMagick/ImageMagick</a>.  We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/" target="_blank">https://legacy.imagemagick.org</a>.</p>
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
+
+<p>One of the key features of ImageMagick is its support for scripting and automation. This allows users to create complex image manipulation pipelines that can be run automatically, without the need for manual intervention. This can be especially useful for tasks that require the processing of large numbers of images, or for tasks that need to be performed on a regular basis.</p>
+
+<p>In addition to its core image manipulation capabilities, ImageMagick also includes a number of other features, such as support for animation, color management, and image rendering. These features make it a versatile tool for a wide range of image-related tasks, including graphic design, scientific visualization, and digital art.</p>
+
+<p>Overall, ImageMagick is a powerful and versatile software suite for displaying, converting, and editing image files. Its support for scripting and automation, along with its other features, make it a valuable tool for a wide range of image-related tasks.</p>
+
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
 <div class="table-responsive pre-scrollable" style="font-size:smaller !important;">
 <table class="table table-sm table-hover table-striped">
