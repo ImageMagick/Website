@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-54](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-53...7.1.0-54) - 2022-12-10
+
+### Merged
+
+- remove todo, cause cHRM+gAMA is never sRGB [`#5851`](https://github.com/ImageMagick/ImageMagick/pull/5851)
+
+### Commits
+
+- beta release [`b21075c`](https://github.com/ImageMagick/ImageMagick/commit/b21075c9177d911f5aa36b20a86dab965987bd2e)
+- Only write the gAMA chunk if the sRGB chunk is written too. However, write the gAMA chunk if gamma is not 1.0/2.2 and no sRGB chunk (https://github.com/ImageMagick/ImageMagick/issues/5850) [`b516099`](https://github.com/ImageMagick/ImageMagick/commit/b51609986ae9d40ed0ea68bd8698a90f6d498b1f)
+- correct EXIF profile length (https://github.com/ImageMagick/ImageMagick/issues/5768) [`2e2a2e0`](https://github.com/ImageMagick/ImageMagick/commit/2e2a2e0f8103c932ced7d730e0650153d6785f3a)
+- correct EXIF profile extraction from JXL images (https://github.com/ImageMagick/ImageMagick/issues/5768) [`cf133fa`](https://github.com/ImageMagick/ImageMagick/commit/cf133fa1249e0404f8c7f91d78d734f3b60e5ae7)
+- add additional comments to the coder [`696a5b5`](https://github.com/ImageMagick/ImageMagick/commit/696a5b5bb70afc18a1857f044ecb207335dcc856)
+- skip zero-length profiles (https://github.com/ImageMagick/ImageMagick/issues/5856) [`6741cd2`](https://github.com/ImageMagick/ImageMagick/commit/6741cd2c56479981c614370b448a0ecde3ef8fc0)
+- check for profile length of zero [`abf01f3`](https://github.com/ImageMagick/ImageMagick/commit/abf01f32c001bc32b450160a29ea51c8613d73ab)
+- cosmetic. [`3cc61f7`](https://github.com/ImageMagick/ImageMagick/commit/3cc61f7863239010ae71bb0cbedb7fc85fa36806)
+- correct Image::compare documentation (https://github.com/ImageMagick/ImageMagick/discussions/5869) [`dd97eea`](https://github.com/ImageMagick/ImageMagick/commit/dd97eeadb959bf2d6435a2ea0a8cf4f1306f42b9)
+- support polling of image processing operation progress (https://github.com/ImageMagick/ImageMagick/discussions/5868) [`e27cd48`](https://github.com/ImageMagick/ImageMagick/commit/e27cd48e1b51f8618f7c6a4be57992b47c411874)
+- add checks for null tags when monitoring [`ee2f46b`](https://github.com/ImageMagick/ImageMagick/commit/ee2f46b29088781f21acf6450e0623843348b25a)
+- release [`f5cf5ba`](https://github.com/ImageMagick/ImageMagick/commit/f5cf5baadc0ff473322ce86098b4f2bd2ebd3e13)
+
 ## [7.1.0-53](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-52...7.1.0-53) - 2022-12-04
 
 ### Merged
