@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-55](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-54...7.1.0-55) - 2022-12-17
+
+### Merged
+
+- fix: small error in docs [`#5882`](https://github.com/ImageMagick/ImageMagick/pull/5882)
+
+### Commits
+
+- beta release [`39fc3f2`](https://github.com/ImageMagick/ImageMagick/commit/39fc3f2ef164b208811dc17d02126d9f89172e06)
+- proper Exif profile handling in HEIC (https://github.com/ImageMagick/ImageMagick/issues/5647) [`1c7af54`](https://github.com/ImageMagick/ImageMagick/commit/1c7af5461d4defbcfcac2a8db3e4fb1a81324861)
+- keep tiles approximately same size across multiple frames [`e10b7a9`](https://github.com/ImageMagick/ImageMagick/commit/e10b7a9a34b7305ae680722c91f0af0de5ad0676)
+- cosmetic [`1447648`](https://github.com/ImageMagick/ImageMagick/commit/144764880ad3692850fc5fe3c08a38b398d31a6e)
+- ... [`4d27812`](https://github.com/ImageMagick/ImageMagick/commit/4d278125fd13e5b8348501575201ee109898e003)
+- latest documentation updates [`5281cd2`](https://github.com/ImageMagick/ImageMagick/commit/5281cd2fd7d65ace08c4b3c4449c9dc31de04a05)
+- lastest CSS updates [`b7b8950`](https://github.com/ImageMagick/ImageMagick/commit/b7b8950e7977be018040861981fb177de1566a77)
+- release [`f06bc90`](https://github.com/ImageMagick/ImageMagick/commit/f06bc90b5989b39d36b04c362d3195df1dc92b05)
+- release [`6edfae3`](https://github.com/ImageMagick/ImageMagick/commit/6edfae3829240aedef8a3a79b23c2fa1fd4c688f)
+
 ## [7.1.0-54](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-53...7.1.0-54) - 2022-12-10
 
 ### Merged
