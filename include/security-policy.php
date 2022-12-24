@@ -2,13 +2,17 @@
 <h1 class="text-center">Security Policy</h1>
 <p class="text-center"><a href="#policy">Security Policy </a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
-<p class="text-info">It is highly recommended by ImageMagick to set up a security policy that is appropriate for your local environment.</p>
+<p class="text-info">ImageMagick strongly advises setting up a security policy that is suitable for your local environment.</p>
 
 <p class="lead magick-description">The default policy is open, which is useful for ImageMagick installations running in a secure environment, such as in a Docker container or behind a firewall.</p>
 
-<p>Security and convenience are often at odds with each other. For optimal security, you can limit ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can cover aspects like memory usage, allowable paths for reading and writing, the number of images allowed in a sequence, the maximum time a workflow can run, the amount of disk space allowed for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. These policies can help secure your environment and also ensure that ImageMagick is a responsible member of your local environment, such as by preventing overloading with large images.</p>
+<p>ImageMagick is a tool that allows you to manipulate images. While it offers a range of features and capabilities, there is often a trade-off between security and convenience. To ensure optimal security, you can restrict ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can include details such as memory usage limits, allowed paths for reading and writing, limits on the number of images in a sequence, maximum workflow runtime, allowed disk space for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. By customizing the security policy, you can help secure your environment and ensure that ImageMagick is a responsible member of your local system, such as by preventing overloading with large images.</p>
 
-<p>For example, if you accidentally download an image from the internet that has been crafted to generate a 20000 by 20000 pixel image, ImageMagick may try to allocate the necessary resources (such as memory and disk space) and your system may deny the request or cause the program to exit. Alternatively, your computer may become temporarily slow or unresponsive, or ImageMagick may be forced to abort. To avoid such situations, you can set limits in the <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a> configuration file. You may wonder why ImageMagick does not already come with reasonable limits built in. The reason is that what is reasonable for one environment may not be reasonable for another. For example, you may have ImageMagick sandboxed in a secure environment, while someone else may use it to process images on a publicly accessible website. Or, ImageMagick may be running on a host with 1TB of memory, while another instance is running on a tablet with limited resources. In the case of the host with large memory, it may make sense to allow giga-pixel image processing, but not on the tablet. If you are using ImageMagick on a public website, you may want to increase security by disabling the MVG or HTTPS coders. Ultimately, it is up to you to decide what limits are reasonable based on your specific environment. To help you get started, ImageMagick provides a policy with reasonable limits, but it is recommended that you modify it to suit your local environment, such as this set of polices:</p>
+<p>It is important to set limits on ImageMagick's resource usage to prevent potentially harmful situations. For example, if you accidentally download an image from the internet that has been crafted to generate a very large image (e.g., 20000 by 20000 pixels), ImageMagick may try to allocate the necessary resources (such as memory and disk space) and your system may deny the request or cause the program to exit. Alternatively, your computer may become temporarily slow or unresponsive, or ImageMagick may be forced to abort. To avoid such situations, you can set limits in the <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a> configuration file.</p>
+
+<p>Keep in mind that what is considered reasonable for one environment may not be suitable for another. For example, you may have ImageMagick sandboxed in a secure environment, while someone else may use it to process images on a publicly accessible website. Or, ImageMagick may be running on a host with a lot of memory, while another instance is running on a device with limited resources. In the case of the host with large memory, it may make sense to allow large image processing, but not on the device with limited resources. If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</p>
+
+<p>To help you get started, ImageMagick provides a default policy with reasonable limits, but it is recommended that you modify it to suit your local environment. For example, you may want to set limits on memory usage, allowable paths for reading and writing, the number of images allowed in a sequence, the maximum time a workflow can run, and the amount of disk space allowed for image pixels. Ultimately, it is up to you to decide what limits are appropriate based on your specific environment and needs.</p>
 
 <pre class="pre-scrollable bg-light text-dark mx-4 text-dark mx-4"><samp>&lt;policymap>
   &lt;!-- temporary path must be a preexisting writable directory -->
@@ -33,7 +37,9 @@
   &lt;policy domain="system" name="shred" value="1"/>
 &lt;/policymap></samp></pre>
 
-<p>Since we process multiple sessions at the same time, we don't want any one session to consume all of the available memory. To prevent this, large images are cached to disk with this policy. If an image is too large and exceeds the pixel cache disk limit, the program will exit. Additionally, we have set a time limit to prevent any processing tasks that run for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, an exception will be thrown and processing will stop. As of ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <samp>coder</samp> and set rights to <samp>none</samp> and the pattern to <samp>HTTPS</samp> to prevent delegate usage. We also prevent users from executing any image filters and prevent indirect reads. If you want to, for example, read text from a file (e.g. <samp>caption:@myCaption.txt</samp>), you'll need to disable this path policy.</p>
+<p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, processing will stop and an exception will be thrown.</p>
+
+<p>Starting with ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <samp>coder</samp> and set rights to none and the pattern to HTTPS to prevent delegate usage. Additionally, users are prevented from executing any image filters and from performing indirect reads. If you want to, for example, read text from a file (e.g. <samp>caption:@myCaption.txt</samp>), you'll need to disable this path policy.</p>
 
 <p>Policy patterns are <em>case sensitive</em>.  To get expected behavior, coders and modules must be upper-case (e.g. "EPS" not "eps") or use a case-insensitive pattern such as <samp>[Pp][Nn][Gg]</samp>.</p>
 
@@ -137,7 +143,7 @@ Path: [built-in]
 
 <h2><a class="anchor" id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
 
-<p>When writing image pixels to disk, ImageMagick firsts preallocates the disk file, which is much faster than fully populating the file with zeros.  To further increase performance, we memory-map the file on disk.  With memory-mapping, we get an increase in performance (up to 5x), however, there remains a possibility that as the disk file is populated, it may run out of free space.  The OS then throws a SIGBUS signal which prevents ImageMagick from continuing.  To prevent a SIGBUS, use this security policy:
+<p>When writing image pixels to disk, ImageMagick first preallocates the disk file, which is faster than fully populating the file with zeros. To improve performance even further, the file is memory-mapped on disk. This can result in an increase in performance of up to 5 times, but there is a possibility that the disk file may run out of free space as it is populated, causing the operating system (OS) to throw a SIGBUS signal which prevents ImageMagick from continuing. To prevent a SIGBUS signal from occurring, use this security policy:</p>
 
 <pre class="bg-light text-dark mx-4">
 &lt;policy domain="cache" name="synchronize" value="True"/>
@@ -160,14 +166,21 @@ Path: [built-in]
 <p>If you spot a security flaw in ImageMagick, post your concern as an issue to
 <a href="https://github.com/ImageMagick/ImageMagick/issues">GitHub</a>.  Be sure to include how to reproduce the security flaw and a link to any images needed to reproduce the flaw.  Alternatively, <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a> and select <samp>Security Issue</samp> as the issue.</p>
 
-<p>In addition to the security policy, you can make ImageMagick safer by ...</p>
-<ul>
-<li>keeping ImageMagick up-to-date.  The latest releases have fixes for any security flaws we discovered in the past;</li>
-<li>sanitizing any filenames or command line options you pass to ImageMagick;</li>
-<li>running ImageMagick in a sanitized software container such as Docker;</li>
-<li>running ImageMagick as the least-privileged user (e.g. <samp>nobody</samp>);</li>
-<li>explicitly setting the image file type.  For example, use the filename <samp>png:image.png</samp> rather than <samp>image.png</samp>.  Without an explicit image type in the filename, ImageMagick guesses the image type.</li>
-<li>do not create temporary files in shared directories, instead specify a private area to store only ImageMagick temporary files by setting the <samp>temporary-path</samp> security policy or the <samp>-define registry:temporary-path=/data/magick</samp> command-line option.</li>
-</ul>
+<p>There are several ways to keep ImageMagick safer:<p>
+<ol>
+<li>Use web-safe image formats: Limiting ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG can help increase security.</li>
+
+<li>Customize the security policy: You can customize the security policy to fit the needs of your local environment or organizational policies. This policy can cover aspects such as memory usage, allowable paths for reading and writing, the number of images allowed in a sequence, the maximum time a workflow can run, the amount of disk space allowed for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied.</li>
+
+<li>Set limits on resource usage: You can set limits on resources such as memory usage, disk space, and workflow runtime to prevent potentially harmful situations.</li>
+
+<li>Use sandboxing: Sandboxing is a security technique that allows you to run a program in a restricted environment to prevent it from accessing sensitive information or making changes to the system.</li>
+
+<li>Disable potentially dangerous coders: If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</li>
+
+<li>Prevent execution of image filters and indirect reads: You can prevent users from executing image filters and performing indirect reads to increase security.</li>
+
+<li>Use a current version of ImageMagick: It is important to use a current version of ImageMagick to take advantage of the latest security fixes and updates.</li>
+</ol>
 
 </div>
