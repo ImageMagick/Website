@@ -4420,7 +4420,7 @@ and imaginary images from the frequency domain to a single image in the normal
 <p>By default the IFT is not normalized (and the FFT is). Use "<samp><a href="#define" >-define</a> fourier:normalize=inverse</samp> to explicitly normalize the IFT and unnormalize the FFT.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="illuminant"></a>-illuminant  <var>method</var><</h2>
+  <h2><a class="anchor" id="illuminant"></a>-illuminant  <var>method</var></h2>
 </div>
 
 <p class="magick-description">reference illuminant. Choose from <samp>A</samp>, <samp>B</samp>, <samp>C</samp>, <samp>D50</samp>, <samp>D55</samp>, <samp>D65</samp>, <samp>E</samp>, <samp>F2</samp>, <samp>F7</samp>, or <samp>F11</samp>.</p>
