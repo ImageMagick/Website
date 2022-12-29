@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-56](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-55...7.1.0-56) - 2022-12-28
+
+### Commits
+
+- beta release [`12096ae`](https://github.com/ImageMagick/ImageMagick/commit/12096ae0c0b331c4f43d421222e009da496c6100)
+- Removed CHANGELOG.md [`42dd9c3`](https://github.com/ImageMagick/ImageMagick/commit/42dd9c32a6003ab89c63e472b801af55aa0d80ec)
+- Added discussion template for the help category. [`c030396`](https://github.com/ImageMagick/ImageMagick/commit/c030396a15043b64da69eddd68b99e9af5b4bea0)
+- Added missing label. [`c37a32b`](https://github.com/ImageMagick/ImageMagick/commit/c37a32bb84972870fc1161ad7e9ff15312013589)
+- Add operating system as input field. [`b2cf040`](https://github.com/ImageMagick/ImageMagick/commit/b2cf040c56f479cfe453d80d30d93c4b3104e2ab)
+- Use same template as help for development category. [`b039726`](https://github.com/ImageMagick/ImageMagick/commit/b03972642727c312b6d2536845df48cabeb05c05)
+- note those pesky NULL entities [`269e8fd`](https://github.com/ImageMagick/ImageMagick/commit/269e8fdc934a3ae7d4a506ac4d917896bffd219e)
+- rework beta badge [`3b7bf5b`](https://github.com/ImageMagick/ImageMagick/commit/3b7bf5b57417d446d6c988682f6f07cf4b55aab4)
+- set character encoding to UTF-8 [`c5dfb89`](https://github.com/ImageMagick/ImageMagick/commit/c5dfb892f1ed271d755db5746c72a091a649b034)
+- support hue colorspace quantization [`44fd848`](https://github.com/ImageMagick/ImageMagick/commit/44fd848e86448e7b81b3e7bf4ea4356c766f2306)
+- check for EOF [`f7a3464`](https://github.com/ImageMagick/ImageMagick/commit/f7a3464ff37cb32b8a1dfad7be7b3058f18fac46)
+- convert to sRGB if soruce colorspace is not sRGB compatible | CMYK [`189f9d4`](https://github.com/ImageMagick/ImageMagick/commit/189f9d4ce7e69afd5591372fdd0cf11fbb640835)
+- lastest method signatures [`30bfc0f`](https://github.com/ImageMagick/ImageMagick/commit/30bfc0fff7e14f79df96216389a8d54f2c35bcd4)
+- inline method [`d859abb`](https://github.com/ImageMagick/ImageMagick/commit/d859abbe4fe20de3c7a931751e43384c06f2993d)
+- account for TIFF offset in Exif profile [`21da4fc`](https://github.com/ImageMagick/ImageMagick/commit/21da4fc514acca9687df8a62b90ecf56742d8c98)
+- Added supported for reading animated jpeg-xl [`3c45046`](https://github.com/ImageMagick/ImageMagick/commit/3c450467bf4a1b6cabbb0a15d856efa4972efe63)
+- Added mime type. [`f540fc2`](https://github.com/ImageMagick/ImageMagick/commit/f540fc2bcfc5564aa5c2dfc16604a353e55522e2)
+- Use JXL_DEC_FRAME event instead to create the next image to make sure identify shows all the frames. [`85a39a3`](https://github.com/ImageMagick/ImageMagick/commit/85a39a3a332ebe9d83d8fe5637937f5cd8f33e21)
+- Removed whitespace. [`4685da1`](https://github.com/ImageMagick/ImageMagick/commit/4685da16f0674ce92e82c045b654a5a1327e5ee7)
+- Initialize without memset. [`807e518`](https://github.com/ImageMagick/ImageMagick/commit/807e5185a8494a2351e17beb3d0bd586ef7e17d0)
+- Use image_info instead. [`f374d6d`](https://github.com/ImageMagick/ImageMagick/commit/f374d6df3cb3e831037a43c218f33b73d72e8c47)
+- Set frame distance to zero for lossless image. [`82138ea`](https://github.com/ImageMagick/ImageMagick/commit/82138eaa88f03b91732f4b658edba1d67e097b70)
+- Initialize without memset. [`d63af13`](https://github.com/ImageMagick/ImageMagick/commit/d63af1388853dcbcc610fc01ad24b699c9b32a40)
+- you can never have too many unit tests [`28ee717`](https://github.com/ImageMagick/ImageMagick/commit/28ee7175a43cfcdaddccc5c18e4266c15d26f152)
+- release [`a9de416`](https://github.com/ImageMagick/ImageMagick/commit/a9de41600d18144e298a0cdcc98b9870a59058b6)
+
 ## [7.1.0-55](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-54...7.1.0-55) - 2022-12-17
 
 ### Merged
