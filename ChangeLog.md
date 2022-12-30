@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-57](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-56...7.1.0-57) - 2022-12-30
+
+### Commits
+
+- beta release [`56814b9`](https://github.com/ImageMagick/ImageMagick/commit/56814b9707389efd9b9b072ca319a8bd662c5fd0)
+- Added support for writing animated jxl images. [`555b2cd`](https://github.com/ImageMagick/ImageMagick/commit/555b2cda13b41aaf343a283fa175df46e22c3f65)
+- respect the TIFF offset prefix (https://github.com/ImageMagick/ImageMagick/issues/5768) [`df099de`](https://github.com/ImageMagick/ImageMagick/commit/df099dee7e06a50bf3ae12651790aa32f0090e62)
+- slight optimization + cosmetic [`648ee44`](https://github.com/ImageMagick/ImageMagick/commit/648ee44cf4cc12641dcb714446e393ca656cd502)
+- remove spurious Exif namespace (https://github.com/ImageMagick/ImageMagick/issues/5768) [`7b0e2a9`](https://github.com/ImageMagick/ImageMagick/commit/7b0e2a914ded4b3f7e2fb3649090b541b70b8d8b)
+- release [`d68553b`](https://github.com/ImageMagick/ImageMagick/commit/d68553b17abcd3f8afa0cd46aabe0bfab26083fe)
+- release [`eadf378`](https://github.com/ImageMagick/ImageMagick/commit/eadf378a6f4e088c32fa5eda62ca6c41d8a84c9c)
+
 ## [7.1.0-56](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-55...7.1.0-56) - 2022-12-28
 
 ### Commits
