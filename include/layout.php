@@ -50,9 +50,6 @@
     <div class="collapse navbar-collapse" id="magick-navbars">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link <?php IsActive($topic,'Home'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Home</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
         </li>
         <li class="nav-item">
