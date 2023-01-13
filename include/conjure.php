@@ -75,9 +75,6 @@ msl:font-metrics.origin.y
 
 <p>In addition, MSL supports the <samp>swap</samp> element with a single <samp>indexes</samp> element.</p>
 
-<p>You can find additional examples of using <samp>conjure</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
-
-
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
 <p>The <samp>conjure</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>

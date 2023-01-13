@@ -14,7 +14,7 @@
 
 <pre class="bg-light text-dark mx-4"><samp>magick import -window root screen.ps </samp></pre>
 
-<p>You can find additional examples of using <samp>import</samp> in <a href="http://www.ibm.com/developerworks/library/l-graf/?ca=dnt-428">Graphics from the Command Line</a>.  Further discussion is available in  <a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>import</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>

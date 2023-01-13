@@ -17,7 +17,6 @@
   <dd class="col-md-8"><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/">Efficient Image Resizing With ImageMagick</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0606.pdf">ImageMagick, Part One</a></dd>
   <dd class="col-md-8"><a href="http://www.jpeek.com/articles/linuxmag/0607.pdf">ImageMagick, Part Two</a></dd>
-  <dd class="col-md-8"><a href="http://www.ibm.com/developerworks/library/l-graf2/?ca=dgr-lnxw15GraphicsLine">More Graphics from the Command Line</a></dd>
 </ul>
 
 <h2><a class="anchor" id="program-interfaces"></a>Program Interface Tutorials</h2>
