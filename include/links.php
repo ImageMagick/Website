@@ -22,7 +22,6 @@
 <h2><a class="anchor" id="program-interfaces"></a>Program Interface Tutorials</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="http://www.ibm.com/developerworks/library/os-mosperl/">Create Mosaic Images with Perl and ImageMagick</a></dd>
   <dd class="col-md-8"><a href="http://www.sitepoint.com/article/dynamic-images-imagemagick">Create Dynamic Images with ImageMagick</a></dd>
   <dd class="col-md-8"><a href="http://www.ioncannon.net/php/75/how-to-compile-imagemagick-for-php-by-hand/">How to compile ImageMagick for PHP by hand</a></dd>
   <dd class="col-md-8"><a href="http://members.shaw.ca/el.supremo/MagickWand/">MagickWand Examples in C</a></dd>
