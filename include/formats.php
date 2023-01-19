@@ -1109,7 +1109,7 @@ the supported image formats.</p>
     <td>TGA</td>
     <td>RW</td>
     <td>Truevision Targa image</td>
-    <td>Also known as formats <samp>ICB</samp>, <samp>VDA</samp>, and <samp>VST</samp>.</td>
+    <td>Also known as formats <samp>ICB</samp>, <samp>VDA</samp>, and <samp>VST</samp>. Use <samp>-define tga:preserve-orientation=true</samp> to preserve the image orientation.</td>
   </tr>
 
   <tr>

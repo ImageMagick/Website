@@ -1286,6 +1286,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>tga:preserve-orientation=<var>true</var></td>
+    <td>Preserve the image orientation.</td>
+  </tr>
+
+  <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
     <td>Specify the alpha extra samples as associated, unassociated or
     unspecified.</td>
