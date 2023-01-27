@@ -70,8 +70,8 @@ function addCliTranslations() {
     var cliLinuxList = [];
     var cliSelectList = [];
     for (let pre of pres) {
-        var samp = pre.childNodes[0];
-        if(samp.tagName.toLowerCase() == "samp") {
+        var samp = pre.querySelector("samp");
+        if(samp != null) {
             var translated = addLinuxWindowsCLIToggle(samp);
             if(translated.length == 2)
             {
@@ -93,7 +93,7 @@ function setCliLanguage(language){
 
     var display_windows = language == "Windows" ? "inherit" : "none";
     var display_linux = language == "Linux" ? "inherit" : "none";
-    var display_batch = language == "Bat File" ? "inherit" : "none";
+    var display_batch = language == "Batch File" ? "inherit" : "none";
     for( let node of imagemagick_cli_lists["windows"])
     {
         node.style.display = display_windows;
