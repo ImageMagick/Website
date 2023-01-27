@@ -1,5 +1,11 @@
 <?php
   /*
+    Make sure variables are defined.
+  */
+  if (!isset($title)) { $title = ""; }
+  if (!isset($topic)) { $topic = ""; }
+  if (!isset($description)) { $description = ""; }
+  /*
     Start a session and return content from the cache if its exists.
   */
   if (!ini_get('date.timezone')) {
