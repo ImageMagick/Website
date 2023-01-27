@@ -23,8 +23,11 @@
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/../cache/' . $script;
+  $useCache=!isset($dynamic_content);
+  if (isset($_ENV['MAGICK_WEBSITE_DISABLE_CACHE']))
+    $useCache=false;
   session_name('ImageMagick');
-  if (isset($dynamic_content)) {
+  if (!$useCache) {
     session_cache_limiter('private_no_expire, must-revalidate');
   } else {
     if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
@@ -85,7 +88,7 @@
   SiteHeader($description);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
-  if (!isset($dynamic_content)) {
+  if ($useCache) {
     file_put_contents($cacheName,ob_get_contents());
   }
   session_unset();
