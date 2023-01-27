@@ -85,7 +85,7 @@
   require_once($_SESSION['AbsolutePath'] . '/../function/option.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
-  SiteHeader($description);
+  SiteHeader($title,$topic,$description);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
   if ($useCache) {

@@ -9,7 +9,7 @@
     }
   }
 
-  function SiteHeader($description)
+  function SiteHeader($title,$topic,$description)
   {
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
