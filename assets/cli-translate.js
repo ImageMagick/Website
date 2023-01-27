@@ -3,17 +3,10 @@ var imagemagick_cli_lists = null;
 function addSelectOptions(node)
 {
     var selectCliLanguageNode = document.createElement("select");
-    selectCliLanguageNode.className += "btn text-dark bg-light mx-4";
-    selectCliLanguageNode.style.fontSize=".75rem";
-    selectCliLanguageNode.style.float="right";
-    selectCliLanguageNode.style.clear="both";
-    selectCliLanguageNode.style.position="relative";
-    selectCliLanguageNode.style.top="-18px";
-    selectCliLanguageNode.style.height="22px";
-    selectCliLanguageNode.style.padding="0px";
+    selectCliLanguageNode.className += "btn text-dark bg-light mx-4 cli-select-button";
     selectCliLanguageNode.onchange = function(){setCliChanged(this)};
     selectCliLanguageNode.title = "Change Operating System Syntax";
-    var selectCliLanguageOptions = ["Linux","Windows","Bat File"];
+    var selectCliLanguageOptions = ["Linux","Windows","Batch File"];
 
     for(let option of selectCliLanguageOptions){
         var optionNode = document.createElement("option");

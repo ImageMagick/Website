@@ -55,3 +55,13 @@ a.anchor {
   max-height: 340px;
   overflow-y: scroll;
 }
+
+.cli-select-button{
+  font-size:.75rem;
+  float:right;
+  clear:both;
+  position:relative;
+  top:-18px;
+  height:22px;
+  padding:0px;
+}
