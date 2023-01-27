@@ -6,8 +6,9 @@ html {
 }
 
 body {
-  color: #555;
-  padding-top: 3.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
 }
 
 .container {

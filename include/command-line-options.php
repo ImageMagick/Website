@@ -342,8 +342,16 @@
 
 <p class="magick-description">Adaptively blur pixels, with decreasing effect near edges.</p>
 
-<p>A Gaussian operator of the given radius and standard deviation (<var>sigma</var>) is used. If <var>sigma</var> is not given it
-defaults to 1.</p>
+<p>A Gaussian operator of the given radius and standard deviation (<var>sigma</var>) is used. If <var>sigma</var> is not given it defaults to 1.</p>
+
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adaptive-resize"></a>-adaptive-resize <var>geometry</var></h2>
@@ -366,6 +374,14 @@ href="#gravity">-gravity</a> option has no effect.</p>
 <p>A Gaussian operator of the given radius and standard deviation
 (<var>sigma</var>) is used. If <var>sigma</var> is not given it
 defaults to 1.</p>
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adjoin"></a>-adjoin</h2>
@@ -392,8 +408,7 @@ strings, such as '<samp>%d</samp>' or '<samp>%03d</samp>', are familiar to those
 who have used the standard <samp>printf()</samp>' C-library function. As an
 example, the command</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg
-</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: rose: -morph 15 my%02dmorph.jpg</samp></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
 <a href="#morph">-morph</a>), named: my00morph.jpg, my01morph.jpg,
@@ -914,11 +929,11 @@ the background image is weighted by the exact opposite amount. That is a
 
 <p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/></p>
 
-<p>The <var >Sigma</var> value is the important argument, and
+<p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
 
-<p>The <var >Radius</var> is only used to determine the size of the
-array which will hold the calculated Gaussian distribution. It should be an
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
 integer.  If not given, or set to zero, IM will calculate the largest possible
 radius that will provide meaningful results for the Gaussian distribution.
 </p>
@@ -1059,7 +1074,16 @@ symbol is no different than leaving it off.</p>
 
 <p class="magick-description">Canny edge detector uses a multi-stage algorithm to detect a wide range of edges in the image.</p>
 
-<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown. The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
+<p>The thresholds range from 0 to 100% (e.g. -canny 0x1+10%+30%) with {<var>+lower-percent</var>} &lt; {<var>+upper-percent</var>}. If {<var>+upper-percent</var>} is increased but {<var>+lower-percent</var>} remains the same, lesser edge components will be detected, but their lengths will be the same. If {<var>+lower-percent</var>} is increased but {<var>+upper-percent</var>} is the same, the same number of edge components will be detected but their lengths will be shorter. The default thresholds are shown.</p>
+<p>The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+  
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="caption"></a>-caption <var>string</var></h2>
@@ -1375,7 +1399,7 @@ operation. </p>
 
 <p class="magick-description">Clip along a named path from the 8BIM profile.</p>
 
-<p>This is identical to <a href="#clip">-clip</a> except choose a specific clip path in the event the image has more than one path available. </p>
+<p>This is identical to <a href="#clip">-clip</a> except choose a specific clip path in the event the image has more than one path available. ImageMagick supports UTF-8 encoding.  If your named path is in a different encoding, use `iconv` to convert the clip path name to that encoding otherwise the path name will not match.</p>
 
 <p>Use <a href="#clip-path">+clip-path</a> to disable clipping for subsequent operations.</p>
 
@@ -2889,7 +2913,9 @@ a <samp>rectangle</samp> followed by the width and height of the rounded corners
 to be removed.</p>
 
 <p>The <samp>circle</samp> primitive makes a disk (filled) or circle (unfilled).
-Give the center and any point on the perimeter (boundary).</p>
+Give the center and any point on the perimeter (boundary). Note, by using a translation, you can remove the need to calculate the circles edge coordinate, but can just give the radius directly:</p>
+
+<pre class="bg-light text-dark mx-4"><samp>magick -size 100x60 xc: -stroke SeaGreen  -fill PaleGreen -strokewidth 2 -draw 'translate 50,30 circle 0,0 25,0' circle.gif</samp></pre>
 
 <p>The <samp>arc</samp> primitive is used to inscribe an elliptical segment in
 to a given rectangle. An <samp>arc</samp> requires the two corners used for
@@ -4117,10 +4143,10 @@ chunk, use</p>
 
 <p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/> </p>
 
-<p>The <var >Sigma</var> value is the important argument, and
+<p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
 
-<p>The <var >Radius</var> is only used to determine the size of the
+<p>The <var>radius</var> is only used to determine the size of the
 array which will hold the calculated Gaussian distribution. It should be an
 integer.  If not given, or set to zero, IM will calculate the largest possible
 radius that will provide meaningful results for the Gaussian distribution.
@@ -4394,7 +4420,7 @@ and imaginary images from the frequency domain to a single image in the normal
 <p>By default the IFT is not normalized (and the FFT is). Use "<samp><a href="#define" >-define</a> fourier:normalize=inverse</samp> to explicitly normalize the IFT and unnormalize the FFT.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="illuminant"></a>-illuminant  <var>method</var><</h2>
+  <h2><a class="anchor" id="illuminant"></a>-illuminant  <var>method</var></h2>
 </div>
 
 <p class="magick-description">reference illuminant. Choose from <samp>A</samp>, <samp>B</samp>, <samp>C</samp>, <samp>D50</samp>, <samp>D55</samp>, <samp>D65</samp>, <samp>E</samp>, <samp>F2</samp>, <samp>F7</samp>, or <samp>F11</samp>.</p>
@@ -6541,6 +6567,16 @@ of the color clusters is returned.</p>
 <p>Blurs those pixels that are less than or equal to the threshold in
 contrast. The threshold may be expressed as a fraction of <var>QuantumRange</var> or as a percentage.</p>
 
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of blurring that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
+
+
 <div style="margin: auto;">
   <h2><a class="anchor" id="separate"></a>-separate</h2>
 </div>
@@ -6710,6 +6746,15 @@ Otherwise, this option is ignored. The default is <samp>True</samp>.</p>
 <p class="magick-description">Sharpen the image.</p>
 
 <p>Use a Gaussian operator of the given radius and standard deviation (sigma).</p>
+
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of sharpening that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="shave"></a>-shave <var>geometry</var></h2>
@@ -7512,6 +7557,15 @@ convolved with a Gaussian operator of the given radius and standard deviation
 (sigma). For reasonable results, radius should be larger than sigma. Use
 a radius of 0 to have the method select a suitable radius.</p>
 
+<p>The <var>sigma</var> value is the important argument, and
+determines the actual amount of sharpening that will take place. </p>
+
+<p>The <var>radius</var> is only used to determine the size of the
+array which holds the calculated Gaussian distribution. It should be an
+integer.  If not given, or set to zero, IM will calculate the largest possible
+radius that will provide meaningful results for the Gaussian distribution.
+</p>
+
 <p>The parameters are:</p>
 
 <div class="pre-scrollable bg-light text-dark mx-4">
@@ -7643,7 +7697,7 @@ percentage, which defaults to 100 percent (no color change). </p>
   <h2><a class="anchor" id="wavelet-denoise"></a>-wavelet-denoise <var>threshold</var><br />-wavelet-denoise <var>threshold</var>x<var>softness</var></h2>
 </div>
 
-<p class="magick-description">Removes noise from the image using a wavelet transform.  The threshold is the value below which everything is considered noise and ranges from 0.0 (none) to QuantumRange or use percent (e.g. 5%). Softness attenuates the threshold and typically ranges from 0.0 (none) to 1.0.  The higher the value the more noise that remains in the image.</p>
+<p class="magick-description">Removes noise from the image using a wavelet transform.  The threshold is the value below which everything is considered noise and ranges from 0.0 (none) to QuantumRange or use percent (e.g. 5%). Softness attenuates the threshold and typically ranges from 0.0 (none, default) to 1.0.  The higher the value, the more noise that remains in the image.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="weight"></a>-weight <var>fontWeight</var></h2>
