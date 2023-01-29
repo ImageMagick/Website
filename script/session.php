@@ -30,7 +30,7 @@
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/../cache/' . $script;
   $useCache=!isset($dynamic_content);
-  if (isset($_ENV['MAGICK_WEBSITE_DISABLE_CACHE']))
+  if (isset($_SERVER['MAGICK_DISABLE_CACHE']) && $_SERVER['MAGICK_DISABLE_CACHE'] == "true")
     $useCache=false;
   session_name('ImageMagick');
   if (!$useCache) {
@@ -72,7 +72,8 @@
       exit;
     }
   $use_sts = true;
-  if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
+  if (($_SERVER["SERVER_ADDR"] == "10.144.245.30") ||
+      (isset($_SERVER["MAGICK_DEVCONTAINER"]) && $_SERVER["MAGICK_DEVCONTAINER"] == "true")) {
     $use_sts = false;
   }
   if ($use_sts && isset($_SERVER['HTTPS'])) {
