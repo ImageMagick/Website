@@ -88,8 +88,8 @@
 </samp>, in the Authenticate field and fill in the remaining fields.  Press Send to forward your message to the ImageMagick wizards:</p>
   <br/>
   <form method="post" name="post" id="post" action="<?php echo $_SESSION['RelativePath']?>/../script/contact.php" enctype="application/x-www-form-urlencoded">
-  <div class="table-responsive" style="font-size:smaller !important;">
-  <table class="table table-sm table-hover table-striped">
+  <div>
+  <table class="table table-sm table-hover table-striped table-responsive">
     <tr>
       <td><label id="authenticate" title="Your authentication code">Authenticate</label></td>
 <?php

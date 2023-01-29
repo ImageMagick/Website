@@ -129,8 +129,8 @@ Options used to compile and link:
 
 <p>Here are the optional features you can configure:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>--enable-shared</td>
     <td>build the  shared libraries and support for loading coder and process modules. Shared libraries are preferred because they allow programs to share common code, making the individual programs much smaller. In addition shared libraries are required in order for PerlMagick to be dynamically loaded by an installed PERL (otherwise an additional PERL (PerlMagick) must be installed.
@@ -183,8 +183,8 @@ Options used to compile and link:
 
 <p>Here are the optional packages you can configure:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>--with-quantum-depth</td>
     <td>number of bits in a pixel quantum (default 16).

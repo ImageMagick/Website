@@ -162,8 +162,8 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
  <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <?php option("virtual-pixel"); ?> option from the command line.  The methods include:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>background</td>
     <td>the area surrounding the image is the background color</td>
@@ -232,8 +232,8 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>Recall that this simple and elegant design of the ImageMagick pixel cache comes at a cost in terms of storage and processing speed.  The pixel cache storage requirements scales with the area of the image and the bit depth of the pixel components.  For example, if we have a 640 by 480 image and we are using the non-HDRI Q16 version of ImageMagick, the pixel cache consumes image <var>width * height * bit-depth / 8 * channels</var> bytes or approximately 2.3 mebibytes (i.e. 640 * 480 * 2 * 4).  Not too bad, but what if your image is 25000 by 25000 pixels?  The pixel cache requires approximately 4.7 gibibytes of storage.  Ouch.  ImageMagick accounts for possible huge storage requirements by caching large images to disk rather than memory.  Typically the pixel cache is stored in memory using heap memory. If heap memory is exhausted, we create the pixel cache on disk and attempt to memory-map it. If memory-map memory is exhausted, we simply use standard disk I/O.  Disk storage is plentiful and cheap, but it is also very slow-- upwards of 1000 times slower than accessing pixels in memory.  We can get some speed improvements, up to 5 times, if we memory-map the disk-based cache.  These decisions about storage are made <var>automagically</var> by the pixel cache manager negotiating with the operating system.  However, you can influence how the pixel cache manager allocates the pixel cache with <var>cache resource limits</var>.  The limits include:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>width</td>
     <td>maximum width of an image.  Exceed this limit and an exception is thrown and the operation discontinues.</td>

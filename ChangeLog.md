@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-59](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-58...7.1.0-59) - 2023-01-28
+
+### Merged
+
+- Strip EOI marker from HEIC/JXL Exif payload [`#6005`](https://github.com/ImageMagick/ImageMagick/pull/6005)
+- Fix for space handling in appimage path [`#5993`](https://github.com/ImageMagick/ImageMagick/pull/5993)
+
+### Commits
+
+- beta release [`44f7797`](https://github.com/ImageMagick/ImageMagick/commit/44f779728fd0a6e2d4dccff51bc8e7f9c0dd54d2)
+- initialize RLE pixels [`7b3eb56`](https://github.com/ImageMagick/ImageMagick/commit/7b3eb56aeb5882e52669e0d06b3425a3649a32c1)
+- Replace tabs with spaces. [`30d823e`](https://github.com/ImageMagick/ImageMagick/commit/30d823eb749bee9a341ba9393438ee42b8b96500)
+- wrong byte order [`010bbd2`](https://github.com/ImageMagick/ImageMagick/commit/010bbd2068f7d9da1c980f3393e2f5ecdc688ff4)
+- Code style changes. [`ddb90b8`](https://github.com/ImageMagick/ImageMagick/commit/ddb90b8502d37715ad9b21c521bc25782536561c)
+- Revert incorrect change... [`5075742`](https://github.com/ImageMagick/ImageMagick/commit/5075742b7e62ed3a6833684bf47aa85a2268e65d)
+- only support WPG postscript embedded images [`89ed3a8`](https://github.com/ImageMagick/ImageMagick/commit/89ed3a846a1d2fbe866f891de3e0d16edf43a4e0)
+- SETJMP_IS_THREAD_SAFE symbol requires namespace prefix (https://github.com/ImageMagick/ImageMagick/discussions/4123) [`7e53875`](https://github.com/ImageMagick/ImageMagick/commit/7e53875836c3d8950b3f848600f0c6bd682fe7fe)
+- add MAGICKCORE prefix [`da36023`](https://github.com/ImageMagick/ImageMagick/commit/da36023786cf83f769a37cb84ef25721d41d19d4)
+- add MAGICKCORE namespace prefix [`cd2d51c`](https://github.com/ImageMagick/ImageMagick/commit/cd2d51c5fe66f3118df075c644c2ea2c50fa19c9)
+- remedy uninitialized value [`8fd36bc`](https://github.com/ImageMagick/ImageMagick/commit/8fd36bc22690b2cad1fd3a4e1f4f0532f9d43ced)
+- permit setting colormap with empty pixel cache [`44e4444`](https://github.com/ImageMagick/ImageMagick/commit/44e44441f0cfe382d1574bea71e8ebdf0f324f2c)
+- ensure code will compile with an ANSI-C compiler [`7b33aac`](https://github.com/ImageMagick/ImageMagick/commit/7b33aacbc8fbdb20026c339874e0b7739c8ebd68)
+- Code cleanup. [`3354da9`](https://github.com/ImageMagick/ImageMagick/commit/3354da99df1615afa4c561571f610993b22824e2)
+- Fixed implementation. [`db40940`](https://github.com/ImageMagick/ImageMagick/commit/db4094037e4422ba6278037a4c318c98d42c7e6d)
+- Minor refactoring. [`039b26d`](https://github.com/ImageMagick/ImageMagick/commit/039b26d605a78f67f11166d8d6628c9832f450b4)
+- Don't raise exception when photoshop layers could not be read (#6004). [`5bef560`](https://github.com/ImageMagick/ImageMagick/commit/5bef560e862bd7bc3767f62931da37a495ed42c6)
+- cosmetic [`b39694b`](https://github.com/ImageMagick/ImageMagick/commit/b39694be7b6fc3cf3a2f96190869e96b2609998d)
+- improve support for PNG iTXt chunk [`929dffc`](https://github.com/ImageMagick/ImageMagick/commit/929dffcefc4ccc0e09e49094d2da754cded8be2a)
+- release [`e812c5e`](https://github.com/ImageMagick/ImageMagick/commit/e812c5efb8f4f7ed66ff9e6c90eb5024ad7c2ea7)
+- Delay release. [`d045a60`](https://github.com/ImageMagick/ImageMagick/commit/d045a60f030e33525a821392e1c19c1bfd47adba)
+- release [`3699462`](https://github.com/ImageMagick/ImageMagick/commit/3699462804a9f626460d0c5f91255893ea8d994f)
+- release [`eda3e73`](https://github.com/ImageMagick/ImageMagick/commit/eda3e7366d46ad5904c593ad2508396978d05764)
+
 ## [7.1.0-58](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-57...7.1.0-58) - 2023-01-22
 
 ### Merged

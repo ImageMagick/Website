@@ -181,8 +181,8 @@ $MAGICK_FONT_PATH</samp></pre>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>HOME</td>
     <td>Set path to search for configuration files in <samp>$HOME/.config/ImageMagick</samp> if the directory exists.</td>

@@ -31,9 +31,9 @@ use:</p>
 <p>Here is a list of recognized defines:</p>
 
 
-<div class="table-responsive" style="font-size:smaller !important;">
+<div>
 
-<table class="table table-sm table-hover table-striped">
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <th align="center" colspan=2>Command-line Defines</th>
   </tr>

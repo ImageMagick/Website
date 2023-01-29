@@ -15,8 +15,8 @@
 <p>Overall, ImageMagick is a powerful and versatile software suite for displaying, converting, and editing image files. Its support for scripting and automation, along with its other features, make it a valuable tool for a wide range of image-related tasks.</p>
 
 <p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
-<div class="table-responsive pre-scrollable" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div class="pre-scrollable">
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
     <td>create a GIF animation sequence from a group of images.</td>
