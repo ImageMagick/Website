@@ -39,8 +39,8 @@
 
 <p>Here is a complete list of JPEG-2000 decoding options:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>jp2:quality-layers=<var>x</var></td>
     <td>set the maximum number of quality layers to decode.</td>
@@ -53,8 +53,8 @@
 
 <p>Here is a complete list of JPEG-2000 encoding options:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>jp2:number-resolutions=<var>x</var></td>
     <td>number of resolutions to encode.</td>

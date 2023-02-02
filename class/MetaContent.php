@@ -1,6 +1,16 @@
 <?php
   class MetaContent
   {
+    public $application_name;
+    public $application_url;
+    public $company_name;
+    public $description;
+    public $email;
+    public $generator;
+    public $keywords2;
+    public $sitename;
+    public $slogan;
+
     function metadata($title)
     {
       /*

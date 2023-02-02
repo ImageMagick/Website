@@ -1,5 +1,11 @@
 <?php
   /*
+    Make sure variables are defined.
+  */
+  if (!isset($title)) { $title = ""; }
+  if (!isset($topic)) { $topic = ""; }
+  if (!isset($description)) { $description = ""; }
+  /*
     Start a session and return content from the cache if its exists.
   */
   if (!ini_get('date.timezone')) {
@@ -9,22 +15,25 @@
     ob_start();
   }
   elseif (strpos(' ' . $_SERVER['HTTP_ACCEPT_ENCODING'],'x-gzip') == false) {
-      if (strpos(' ' . $_SERVER['HTTP_ACCEPT_ENCODING'],'gzip') == false) {
-        ob_start();
-      }
-      elseif(!ob_start("ob_gzhandler")) {
-        ob_start();
-      }
+    if (strpos(' ' . $_SERVER['HTTP_ACCEPT_ENCODING'],'gzip') == false) {
+      ob_start();
+    }
+    elseif(!ob_start("ob_gzhandler")) {
+      ob_start();
+    }
   }
   elseif (!ob_start("ob_gzhandler")) {
-      ob_start();
+    ob_start();
   }
   $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
   $path=$path['dirname'];
   $script=basename($_SERVER['SCRIPT_FILENAME']);
   $cacheName=$path . '/../cache/' . $script;
+  $useCache=!isset($dynamic_content);
+  if (isset($_SERVER['MAGICK_DISABLE_CACHE']) && $_SERVER['MAGICK_DISABLE_CACHE'] == "true")
+    $useCache=false;
   session_name('ImageMagick');
-  if (isset($dynamic_content)) {
+  if (!$useCache) {
     session_cache_limiter('private_no_expire, must-revalidate');
   } else {
     if (file_exists($cacheName) && ((time()-10800) < filemtime($cacheName))) {
@@ -63,7 +72,8 @@
       exit;
     }
   $use_sts = true;
-  if ($_SERVER["SERVER_ADDR"] == "10.144.245.30") {
+  if (($_SERVER["SERVER_ADDR"] == "10.144.245.30") ||
+      (isset($_SERVER["MAGICK_DEVCONTAINER"]) && $_SERVER["MAGICK_DEVCONTAINER"] == "true")) {
     $use_sts = false;
   }
   if ($use_sts && isset($_SERVER['HTTPS'])) {
@@ -85,7 +95,7 @@
   SiteHeader($title,$topic,$description);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
-  if (!isset($dynamic_content)) {
+  if ($useCache) {
     file_put_contents($cacheName,ob_get_contents());
   }
   session_unset();

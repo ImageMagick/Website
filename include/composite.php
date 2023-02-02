@@ -48,7 +48,7 @@ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.p
 
 <p>The <samp>composite</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
-<table class="table table-sm table-hover table-striped">
+<table class="table table-sm table-hover table-striped table-responsive">
   <tbody>
   <tr>
     <th align="left">Option</th>

@@ -12,8 +12,8 @@
 
 <p>Here is a complete list of WebP encoding options:</p>
 
-<div class="table-responsive" style="font-size:smaller !important;">
-<table class="table table-sm table-hover table-striped">
+<div>
+<table class="table table-sm table-hover table-striped table-responsive">
   <thead>
   <tr>
     <th scope="col">Option</th>

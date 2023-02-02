@@ -32,9 +32,9 @@ use:</p>
 <p>Here is a list of recognized defines:</p>
 
 
-<div class="table-responsive" style="font-size:smaller !important;">
+<div>
 
-<table class="table table-sm table-hover table-striped">
+<table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <th align="center" colspan=2>Command-line Defines</th>
   </tr>
@@ -1284,6 +1284,11 @@ use:</p>
   <tr>
     <td>svg:xml-parse-huge=<var>true</var></td>
     <td>Enable rendering of a very large SVG for which you trust the source</td>
+  </tr>
+
+  <tr>
+    <td>tga:preserve-orientation=<var>true</var></td>
+    <td>Preserve the image orientation.</td>
   </tr>
 
   <tr>

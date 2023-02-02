@@ -70,6 +70,8 @@ convert: no images defined `wizard.jpg'</pre>
 <p>As of ImageMagick version 7.0.4-23, you can limit the maximum number of images in a sequence.  For example, to limit an image sequence to at most 64 frames, use:</p>
 <pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="resource" name="list-length" value="64"/></samp></pre>
 
+<p>Note, numeric values in policies are floating-point with an optional SI prefix (e.g., 10MiB).</p>
+
 <p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
@@ -140,6 +142,8 @@ Path: [built-in]
   Policy: Undefined
     rights: None</pre>
 <p>Notice the <samp>shared-secret</samp> policy is not listed due to the <samp>stealth</samp> property.</p>
+
+<p>Doyensec provides a policy evaluator tool that can assist you in designing and auditing your security policy.  The tool is found at <a href="https://imagemagick-secevaluator.doyensec.com/">imagemagick-secevaluator.doyensec.com</a>.</p>
 
 <h2><a class="anchor" id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
 
