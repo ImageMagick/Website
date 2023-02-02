@@ -5879,6 +5879,8 @@ present with a value other than <var>NorthWest</var>.</p>
 
 <p>Use <a href="#page">+page</a> to remove the page settings for an image.</p>
 
+<p>To print a complete list of pagesizes, use <a href="#list">-list pagesize</a> option.</p>
+
 <div style="margin: auto;">
   <h2><a class="anchor" id="paint"></a>-paint <var>radius</var></h2>
 </div>
