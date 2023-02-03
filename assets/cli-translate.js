@@ -120,4 +120,4 @@ function addCliTranslations() {
   imagemagick_cli_lists = createCliLists();
 }
 
-addCliTranslations();
+setTimeout(addCliTranslations, 0);
