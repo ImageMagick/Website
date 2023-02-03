@@ -66,10 +66,12 @@ function addCliTranslations() {
       copyNode.classList.add("cli-windows");
       copyNode.style.display = "none";
       translateLinuxToWindows(copyNode);
+
       let batchNode = copyNode.cloneNode(true);
       batchNode.classList.add("cli-batch");
       batchNode.style.display = "none";
       translateWindowsToBatch(batchNode);
+
       if(batchNode.innerHTML == node.innerHTML) { // No change, ignore.
           copyNode.remove();
           return [];
@@ -91,13 +93,12 @@ function addCliTranslations() {
       let samp = pre.querySelector("samp");
       if (samp != null) {
         let translated = addLinuxWindowsCLIToggle(samp);
-          if(translated.length == 2)
-          {
-              cliLinuxList.push(samp);
-              cliWindowsList.push(translated[0]);
-              cliBatchList.push(translated[1]);
-              cliSelectList.push(addSelectOptions(pre))
-          }
+        if(translated.length == 2) {
+            cliLinuxList.push(samp);
+            cliWindowsList.push(translated[0]);
+            cliBatchList.push(translated[1]);
+            cliSelectList.push(addSelectOptions(pre))
+        }
       }
     }
 
