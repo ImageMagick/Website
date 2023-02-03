@@ -4,14 +4,18 @@ function addCliTranslations() {
   function setCliChanged(selectNode) {
     let language = selectNode.value;
 
+    let display_windows = language == "Windows" ? "inherit" : "none";
+    let display_linux = language == "Linux" ? "inherit" : "none";
+    let display_batch = language == "Batch file" ? "inherit" : "none";
+
     for (let node of imagemagick_cli_lists["windows"]) {
-      node.style.display = language == "Windows" ? "inherit" : "none";
+      node.style.display = display_windows;
     }
     for (let node of imagemagick_cli_lists["linux"]) {
-      node.style.display = language == "Linux" ? "inherit" : "none";;
+      node.style.display = display_linux;
     }
     for (let node of imagemagick_cli_lists["batch"]) {
-      node.style.display = language == "Batch file" ? "inherit" : "none";
+      node.style.display = display_batch;
     }
     for (let node of imagemagick_cli_lists["select"]) {
       node.value = language;
