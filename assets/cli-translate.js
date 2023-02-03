@@ -39,26 +39,26 @@ function addCliTranslations() {
     return selectCliLanguageNode;
   }
 
-  const imagemagick_linux_to_windows_replacements = new Map([
-    [/\\\s*\n/gm, "^\n"], //replace newlines with ^\n
-    [/\s?\\(\(|\))\s?/gm, " $1 "], // unesecape parens, add space on either side to ensure compatibility "word\)" is valid in linux in windows "word)" is not.
-    [/\\!/gm,"!"], // unescape exclamation point.
-    [/'/gm, "\""], //single quote to double quote, breaks on nested quotes.
-    [/\&|\||\<|\>/gm, "\\$&"], //Escape &,|,<,> - note: appears unused.
-  ]);
-
-  const imagemagick_linux_to_windows_bat_replacements = new Map([
-    [/%/gm, "%%"], //Double up % signs. Needed for bat files, but not for CMD.
-    [/^\s*#/gm, "::"], //Replace UNIX comment # with two colons. No support for inline comments.
-  ])
-
   function translateLinuxToWindows(node) {
+    const imagemagick_linux_to_windows_replacements = new Map([
+      [/\\\s*\n/gm, "^\n"], //replace newlines with ^\n
+      [/\s?\\(\(|\))\s?/gm, " $1 "], // unesecape parens, add space on either side to ensure compatibility "word\)" is valid in linux in windows "word)" is not.
+      [/\\!/gm,"!"], // unescape exclamation point.
+      [/'/gm, "\""], //single quote to double quote, breaks on nested quotes.
+      [/\&|\||\<|\>/gm, "\\$&"], //Escape &,|,<,> - note: appears unused.
+    ]);
+
     imagemagick_linux_to_windows_replacements.forEach(function(value,key) {
       node.innerHTML = node.innerHTML.replaceAll(key,value);
     });
   }
 
   function translateWindowsToBatch(node) {
+    const imagemagick_linux_to_windows_bat_replacements = new Map([
+      [/%/gm, "%%"], //Double up % signs. Needed for bat files, but not for CMD.
+      [/^\s*#/gm, "::"], //Replace UNIX comment # with two colons. No support for inline comments.
+    ])
+
     imagemagick_linux_to_windows_bat_replacements.forEach(function(value,key) {
       node.innerHTML = node.innerHTML.replaceAll(key,value);
     });
