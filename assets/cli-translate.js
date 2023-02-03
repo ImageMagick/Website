@@ -2,10 +2,6 @@ function addCliTranslations() {
   let imagemagick_cli_lists = null;
 
   function setCliChanged(selectNode) {
-    if (imagemagick_cli_lists == null) {
-      imagemagick_cli_lists = createCliLists();
-    }
-
     let language = selectNode.value;
 
     for (let node of imagemagick_cli_lists["windows"]) {
@@ -17,7 +13,7 @@ function addCliTranslations() {
     for (let node of imagemagick_cli_lists["batch"]) {
       node.style.display = language == "Batch file" ? "inherit" : "none";
     }
-    for (let node of imagemagick_cli_lists["select"] ) {
+    for (let node of imagemagick_cli_lists["select"]) {
       node.value = language;
     }
   }
@@ -25,6 +21,7 @@ function addCliTranslations() {
   function addSelectOptions(node) {
     let selectCliLanguageNode = document.createElement("select");
     selectCliLanguageNode.className += "btn text-dark bg-light mx-4 cli-select-button";
+    selectCliLanguageNode.style.display = "none";
     selectCliLanguageNode.onchange = function(){setCliChanged(this)};
     selectCliLanguageNode.title = "Change operating system syntax";
     let selectCliLanguageOptions = ["Linux","Windows","Batch file"];
@@ -113,6 +110,9 @@ function addCliTranslations() {
   }
 
   imagemagick_cli_lists = createCliLists();
+  for (let node of imagemagick_cli_lists["select"]) {
+    node.style.display = null;
+  }
 }
 
 setTimeout(addCliTranslations, 0);
