@@ -15,7 +15,7 @@ function addCliTranslations() {
       node.style.display = language == "Linux" ? "inherit" : "none";;
     }
     for (let node of imagemagick_cli_lists["batch"]) {
-      node.style.display = language == "Batch File" ? "inherit" : "none";
+      node.style.display = language == "Batch file" ? "inherit" : "none";
     }
     for (let node of imagemagick_cli_lists["select"] ) {
       node.value = language;
@@ -26,8 +26,8 @@ function addCliTranslations() {
     let selectCliLanguageNode = document.createElement("select");
     selectCliLanguageNode.className += "btn text-dark bg-light mx-4 cli-select-button";
     selectCliLanguageNode.onchange = function(){setCliChanged(this)};
-    selectCliLanguageNode.title = "Change Operating System Syntax";
-    let selectCliLanguageOptions = ["Linux","Windows","Batch File"];
+    selectCliLanguageNode.title = "Change operating system syntax";
+    let selectCliLanguageOptions = ["Linux","Windows","Batch file"];
 
     for (let option of selectCliLanguageOptions) {
       let optionNode = document.createElement("option");
