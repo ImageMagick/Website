@@ -5,7 +5,7 @@
 <p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="develop.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
+<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
 </samp></pre>
@@ -172,7 +172,7 @@ pop graphic-context
 
 <p>to render a pie chart with this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick mvg:piechart.mvg piechart.png
+<pre class="bg-light text-dark mx-4 cli"><samp>magick mvg:piechart.mvg piechart.png
 </samp></pre>
 
 <p>which produces this rendering:</p>
@@ -183,7 +183,7 @@ pop graphic-context
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick mvg:piechart.svg piechart.jpg
+<pre class="bg-light text-dark mx-4 cli"><samp>magick mvg:piechart.svg piechart.jpg
 </samp></pre>
 
 

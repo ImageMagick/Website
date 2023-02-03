@@ -400,18 +400,18 @@ Options used to compile and link:
 
 <p>To confirm your installation of the ImageMagick distribution was successful, ensure that the installation directory is in your executable search path and type:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick logo: logo.gif
+<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: logo.gif
 identify logo.gif</samp></pre>
 
 <p>The ImageMagick logo is displayed on your X11 display.</p>
 
 <p>To verify the ImageMagick build configuration, type:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -list configure</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -list configure</samp></pre>
 
 <p>To list which image formats are supported , type:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -list format </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -list format </samp></pre>
 
 <p>For a more comprehensive test, you run the ImageMagick test suite by typing:</p>
 
@@ -519,7 +519,7 @@ no encode delegate for this image format </samp></pre>
 
 <p>Now reconfigure, rebuild, and reinstall ImageMagick.  To verify JPEG is now properly supported within ImageMagick, use this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -list format </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -list format </samp></pre>
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>
 

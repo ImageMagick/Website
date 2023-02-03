@@ -7,7 +7,7 @@
 
 <p>We list a few examples of the <samp>conjure</samp> command here to illustrate its usefulness and ease of use. To get started, here is simple <samp>conjure</samp> command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
+<pre class="bg-light text-dark mx-4 cli"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
 </samp></pre>
 
 <p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>

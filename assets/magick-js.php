@@ -6,5 +6,6 @@
   header('Expires: ' . gmdate('D, d M Y H:i:s',time()+604800) . ' GMT');
   header("Content-type: text/javascript; charset=utf-8");
   readfile('bootstrap.bundle.min.js');
+  readfile('cli-translate.min.js');
   ob_end_flush();
 ?>

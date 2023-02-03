@@ -1,4 +1,5 @@
 <div class="magick-header">
+<div id="cli-examples"></div>
 
 <p class="lead magick-description">This page descibed the Image composition methods that is used to define how
 two images should be merged together in various image operations.  For the
@@ -437,7 +438,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick ... -compose blend  -define compose:args=50,50 -composite ...  </samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick ... -compose blend  -define compose:args=50,50 -composite ...  </samp></pre>
 
 <p>The following is a table of these special 'argumented' compose methods,
 with a brief summary of what they do. For more details see the equivalent

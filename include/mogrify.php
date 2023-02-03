@@ -9,7 +9,7 @@
 <p>We list a few examples of the <samp>mogrify</samp> command here to illustrate its usefulness and ease of use.  To get started, let's reduce the size of our
 rose:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick mogrify -resize 50% rose.jpg</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick mogrify -resize 50% rose.jpg</samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -23,11 +23,11 @@ rose:</p>
 
 <p>You can resize all your JPEG images in a folder to a maximum dimension of 256x256 with this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick mogrify -resize 256x256 *.jpg</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick mogrify -resize 256x256 *.jpg</samp></pre>
 
 <p>Finally, we convert all our PNG images in a folder to the JPEG format:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick mogrify -format jpg *.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick mogrify -format jpg *.png</samp></pre>
 
 <p>Here image files 1.png, 2.png, etc., are left untouched and files 1.jpg, 2.jpg, etc., are created.  They are copies of their respective PNG images except are stored  in the JPEG image format.</p>
 

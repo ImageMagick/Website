@@ -118,11 +118,11 @@ image.raw RGB 640x480 sRGB 9kb 0.000u 0:01 </samp></pre>
 
 <p>To display the convex hull and minimum bounding box attributes of the image, use:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -define identify:convex-hull=true image.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -define identify:convex-hull=true image.png</samp></pre>
 
 <p>Here is a special define that outputs the location of the minimum or maximum pixel of the image:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -precision 5 -define identify:locate=maximum -define identify:limit=3 image.png</samp></pre>
 
 <p>You can find additional examples of using <samp>magick identify</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

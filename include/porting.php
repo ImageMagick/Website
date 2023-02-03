@@ -219,7 +219,7 @@ Rec601Luminance
 Rec709Luma
 Rec709Luminance</samp></pre>
 <p>For example,</p>
-<pre class="bg-light text-dark mx-4"><samp>magick myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick myImage.png -intensity Rec709Luminance -colorspace gray myImage.jpg</samp></pre>
 
 <h2><a class="anchor" id="grayscale"></a>Grayscale</h2>
 <p>Previously, grayscale images were Rec601Luminance and consumed 4 channels: red, green, blue, and alpha.  With version 7, grayscale consumes only 1 channel requiring far less resources as a result.</p>
@@ -229,7 +229,7 @@ Rec709Luminance</samp></pre>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
 <pre class="bg-light text-dark mx-4"><samp>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</samp></pre>
 <p>Here we protect certain pixels from change:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +write-mask rose_blue.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +write-mask rose_blue.png</samp></pre>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
 <pre class="bg-light text-dark mx-4">
@@ -353,10 +353,10 @@ be applied to expand the one channel into separate RGB (or other) channels.
 
 <h2>Behavioral Changes</h2>
 <p>Image settings are applied to each image on the command line.  To associate a setting with a particular image, use parenthesis to remove ambiguity.  In this example we assign a unique page offset to each image:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...</samp></pre>
 
 <p>By default, image operations such as convolution blends alpha with each channel.  To convolve each channel independently, deactivate the alpha channel as follows:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick ... -alpha discrete -blur 0x1 ...</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick ... -alpha discrete -blur 0x1 ...</samp></pre>
 <p>To remove the alpha values from your image, use <samp>-alpha off</samp>. If you want to instead persist the alpha channel but not blend the alpha pixels for certain image processing operations, use <samp>-alpha deactivate</samp> instead.</p>
 <p>Some options have changed in ImageMagick version 7.  These include:</p>
 <dl>
@@ -421,9 +421,9 @@ scripts.</p>
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png</samp></pre>
 <p>Use a similar command to define a read mask:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre>
+<pre class="bg-light text-dark mx-4 cli"><samp>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre>
 
 <p>Add <samp>-debug pixel</samp> prior to the <samp>-channel-fx</samp> option to track the channel morphology.</p>
 
