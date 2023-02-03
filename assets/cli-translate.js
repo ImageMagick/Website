@@ -1,6 +1,27 @@
 function addCliTranslations() {
   let imagemagick_cli_lists = null;
 
+  function setCliChanged(selectNode) {
+    if (imagemagick_cli_lists == null) {
+      imagemagick_cli_lists = createCliLists();
+    }
+
+    let language = selectNode.value;
+
+    for (let node of imagemagick_cli_lists["windows"]) {
+      node.style.display = language == "Windows" ? "inherit" : "none";
+    }
+    for (let node of imagemagick_cli_lists["linux"]) {
+      node.style.display = language == "Linux" ? "inherit" : "none";;
+    }
+    for (let node of imagemagick_cli_lists["batch"]) {
+      node.style.display = language == "Batch File" ? "inherit" : "none";
+    }
+    for (let node of imagemagick_cli_lists["select"] ) {
+      node.value = language;
+    }
+  }
+
   function addSelectOptions(node) {
     let selectCliLanguageNode = document.createElement("select");
     selectCliLanguageNode.className += "btn text-dark bg-light mx-4 cli-select-button";
@@ -89,32 +110,6 @@ function addCliTranslations() {
       "batch": cliBatchList,
       "select": cliSelectList
     };
-  }
-
-  function setCliLanguage(language){
-    if (imagemagick_cli_lists == null) {
-      imagemagick_cli_lists = createCliLists();
-    }
-
-    let display_windows = language == "Windows" ? "inherit" : "none";
-    let display_linux = language == "Linux" ? "inherit" : "none";
-    let display_batch = language == "Batch File" ? "inherit" : "none";
-    for (let node of imagemagick_cli_lists["windows"]) {
-      node.style.display = display_windows;
-    }
-    for (let node of imagemagick_cli_lists["linux"]) {
-      node.style.display = display_linux;
-    }
-    for (let node of imagemagick_cli_lists["batch"]) {
-      node.style.display = display_batch;
-    }
-    for (let node of imagemagick_cli_lists["select"] ) {
-      node.value = language;
-    }
-  }
-
-  function setCliChanged(selectNode){
-    setCliLanguage(selectNode.value);
   }
 
   imagemagick_cli_lists = createCliLists();
