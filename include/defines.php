@@ -1,5 +1,4 @@
 <div class="magick-header">
-<div id="cli-examples"></div>
 
 <p class="magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
 
