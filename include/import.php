@@ -1,5 +1,4 @@
 <div class="magick-header">
-<div id="cli-examples"></div>
 <h1 class="text-center">Screenshot Utility</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
