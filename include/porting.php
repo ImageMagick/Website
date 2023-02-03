@@ -274,7 +274,7 @@ convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha 
 <h2><a class="anchor" id="deprecate"></a>Deprecated Features Removed</h2>
 <p>All deprecated features from ImageMagick version 6 are removed in version 7.  These include the <samp>Magick-config</samp> and <samp>Wand-config</samp> configuration utilities.  Instead use:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magickCore-config
+<pre class="bg-light text-dark mx-4"><samp>MagickCore-config
 MagickWand-config</samp></pre>
 <p>The FilterImage() method has been removed.  Use ConvolveImage() instead.</p>
 
