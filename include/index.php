@@ -5,7 +5,7 @@
 <p>ImageMagick is written in C and is available for a wide range of operating systems, including Linux, macOS, and Windows. It can be used as a standalone application, or as a library that can be integrated into other software programs.</p>
 
 <p>The main website for ImageMagick can be found at <a href="https://imagemagick.org">https://imagemagick.org</a>. The most recent version available is ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php"><?php echo MagickLibVersionText . MagickLibSubversion; ?></a>. The source code for this software can be accessed through the repository located at <a href="https://github.com/ImageMagick/ImageMagick" target="_blank">https://github.com/ImageMagick/ImageMagick</a>. In addition, a legacy version of ImageMagick, version 6, is also still maintained and can be found at <a href="https://legacy.imagemagick.org" target="_blank">https://legacy.imagemagick.org</a>.</p>
-<p>ImageMagick strongly advises setting up a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that is suitable for your local environment.</p>
+<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
 
