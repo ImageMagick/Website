@@ -5,6 +5,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-61](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-60...7.1.0-61) - 2023-02-05
+
+### Merged
+
+- Fix wonky wording in SECURITY.md [`#6033`](https://github.com/ImageMagick/ImageMagick/pull/6033)
+- Link MagickCore to urlmon when targeting Windows [`#6032`](https://github.com/ImageMagick/ImageMagick/pull/6032)
+
+### Commits
+
+- beta release [`b236524`](https://github.com/ImageMagick/ImageMagick/commit/b236524b27cfee49e58b938687024099b917de35)
+- fix copyright [`e23ce3b`](https://github.com/ImageMagick/ImageMagick/commit/e23ce3bc66b26b2e7c63be6a77bc700810eac993)
+- Whitespace [`d2079f1`](https://github.com/ImageMagick/ImageMagick/commit/d2079f18721f3e44ea6f5a0d5b550c823517570f)
+- Corrected the seek implementation (https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=55325). [`977e449`](https://github.com/ImageMagick/ImageMagick/commit/977e449b4190f8d1bc300a44d1e80f89da483ba5)
+- add support for -list pagesize [`ae4f311`](https://github.com/ImageMagick/ImageMagick/commit/ae4f311e3468cfc23cfb92c5f38940b8d3240ea4)
+- Silenced warning. [`3c67022`](https://github.com/ImageMagick/ImageMagick/commit/3c6702293ed035fb8bb2a6491068a6b2b121c84e)
+- Brotli files are no longer installed. [`12b2f5f`](https://github.com/ImageMagick/ImageMagick/commit/12b2f5f4f5f7e770264b180978def9380a5bba3a)
+- Fuzzing build now also requires -lbrotlicommon. [`8ceca5d`](https://github.com/ImageMagick/ImageMagick/commit/8ceca5d5fb388f73f7b7fc624fa484611693e949)
+- Disable LOSSLESS_SUPPORTED checks for libjpeg turbo because they break with their latest code. [`1175c9c`](https://github.com/ImageMagick/ImageMagick/commit/1175c9c3197cfcd21970772a62b1a6135c8d68f0)
+- Removed -static suffix. [`574684e`](https://github.com/ImageMagick/ImageMagick/commit/574684e5eca990dc2e9a7183d960d1b6d9f088b2)
+- disable setting profile:&lt;filename&gt; property as it is a security risk [`8235d35`](https://github.com/ImageMagick/ImageMagick/commit/8235d35d41f8d3cbd0c20612c406129593dbbf73)
+- eliminate compiler warning [`a975e1b`](https://github.com/ImageMagick/ImageMagick/commit/a975e1b83bf7386c9adf56b4d3d14998090bdaed)
+- revert [`c97c0db`](https://github.com/ImageMagick/ImageMagick/commit/c97c0db432ad971b19163e0787626d3cf3947aed)
+- move `-set profile` handling to CLI [`2f6db24`](https://github.com/ImageMagick/ImageMagick/commit/2f6db246a38236567e11f16a0f0ebdca9954f431)
+- Moved check for @ (indirect read) to FileToString and also check the policy inside that method. [`790764e`](https://github.com/ImageMagick/ImageMagick/commit/790764e49b3b30dc36fd2d56dcc9a0245f75860d)
+- add a null byte to the iTXt chunk [`62e47eb`](https://github.com/ImageMagick/ImageMagick/commit/62e47eb4a21393211f54577536fc57339af9cecb)
+- remove redundant path policy check [`1e2379f`](https://github.com/ImageMagick/ImageMagick/commit/1e2379f3c457c100854fdfed1ed141fed8c0c394)
+- revert [`9c9d90f`](https://github.com/ImageMagick/ImageMagick/commit/9c9d90f7cdb9af44a2c68bbaf3e6c00917943963)
+- update signatures [`2e616bd`](https://github.com/ImageMagick/ImageMagick/commit/2e616bde4d44b96f36fdcb552d22a5cfbc6e7862)
+- ... [`88ccc99`](https://github.com/ImageMagick/ImageMagick/commit/88ccc99c92f9e67be046dea788494adfa89d06e8)
+- update example [`f66786e`](https://github.com/ImageMagick/ImageMagick/commit/f66786e016266d951d556646c0c5d6ca20be4b57)
+- ... [`f13c503`](https://github.com/ImageMagick/ImageMagick/commit/f13c503844f531ecb766b8ab3227ef32374f9440)
+- cosmetic [`4e9ab48`](https://github.com/ImageMagick/ImageMagick/commit/4e9ab480a6c63ba896e9308b0b546a409c9bfc42)
+- allow SI units with --with-cache configure option [`6558dbb`](https://github.com/ImageMagick/ImageMagick/commit/6558dbbd880dc1caa49c9f7d319d668e61c2dcab)
+- Autogenerate release notes. [`d50e08f`](https://github.com/ImageMagick/ImageMagick/commit/d50e08f9bad4e43e0e7b563ae7f5642324cbe0fe)
+- latest automake updates [`2dbe2c6`](https://github.com/ImageMagick/ImageMagick/commit/2dbe2c65c8cce6f32eb8198f62e0556c1cf611c6)
+- latest automake updates [`1abcc73`](https://github.com/ImageMagick/ImageMagick/commit/1abcc73353026b110e3ab10b903c7f658404bede)
+- eliminate unterminated macro [`68358d7`](https://github.com/ImageMagick/ImageMagick/commit/68358d70389840b9a44be08974d0d5f40ada096a)
+- cosmetic [`4319441`](https://github.com/ImageMagick/ImageMagick/commit/431944147432e6facbfe20eff4074780172a5ab8)
+- Don't use container when creating ChangeLog.md [`08d4a9d`](https://github.com/ImageMagick/ImageMagick/commit/08d4a9d1cf7dd24677577bb108cb1f18245b57b6)
+- Don't use container when creating ChangeLog.md [`df5148e`](https://github.com/ImageMagick/ImageMagick/commit/df5148e25cbd8d1ca6d8a24695bab2d2c4660ffa)
+- improve decompression errors [`6b11831`](https://github.com/ImageMagick/ImageMagick/commit/6b11831de742e3de6d227865c7507ebbb56a502d)
+- release [`d396287`](https://github.com/ImageMagick/ImageMagick/commit/d3962875c233e7dfe741e86a2e65ad28c8c6c05f)
+
 ## [7.1.0-60](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-59...7.1.0-60) - 2023-01-29
 
 ### Commits
