@@ -2,7 +2,7 @@
 <h1 class="text-center">Security Policy</h1>
 <p class="text-center"><a href="#policy">Security Policy </a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
-<p class="text-info">ImageMagick strongly advises setting up a security policy that is suitable for your local environment.</p>
+<p class="text-info">It is strongly recommended to establish a security policy suitable for your local environment before utilizing ImageMagick.</p>
 
 <p class="lead magick-description">The default policy is open, which is useful for ImageMagick installations running in a secure environment, such as in a Docker container or behind a firewall.</p>
 
