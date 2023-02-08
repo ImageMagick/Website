@@ -575,7 +575,7 @@ image-2.jpg</pre>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick *.jpg +adjoin page-%d.pdf</samp></pre>
 
-<p>Use <samp>-define filename:literal=true</samp> to bypass interpretting embedded formatting characters and instead use the filename literally.</p>
+<p>Use <samp>-define filename:literal=true</samp> to bypass interpreting embedded formatting characters and instead use the filename literally.</p>
 
 <h4>Stream Buffering</h4>
 
