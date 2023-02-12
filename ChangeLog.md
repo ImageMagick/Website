@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0-62](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-61...7.1.0-62) - 2023-02-12
+
+### Merged
+
+- add `BC5_UNORM` compression support [`#6039`](https://github.com/ImageMagick/ImageMagick/pull/6039)
+
+### Commits
+
+- beta release [`a8dc29d`](https://github.com/ImageMagick/ImageMagick/commit/a8dc29d0d2d8f9c4fb5441a388fa36f10d49827f)
+- beta release [`79ff987`](https://github.com/ImageMagick/ImageMagick/commit/79ff9879a88a56627c743a716f83dc62656d2600)
+- support filenames with embedded characters (https://github.com/ImageMagick/ImageMagick/issues/6040) [`3c49ec1`](https://github.com/ImageMagick/ImageMagick/commit/3c49ec13f6d143f5a36dcb10a8e3433dbbc25a3c)
+- cast from character to short [`361a40f`](https://github.com/ImageMagick/ImageMagick/commit/361a40fbd87dd626449ca3613ee70c36ed1335a9)
+- Fix EOI marker detection for Exif [`0a3c9ed`](https://github.com/ImageMagick/ImageMagick/commit/0a3c9ed40f6e34eeda9f2d5b437e33f49817fb7c)
+- improve bounds checking [`03b12db`](https://github.com/ImageMagick/ImageMagick/commit/03b12db7d67c4069f72dfa0bd75e35eaffebc538)
+- Added BC5Compression. [`6ef17a6`](https://github.com/ImageMagick/ImageMagick/commit/6ef17a6e9539bf66cdf73788e127348878547682)
+- Code style changes. [`89826e5`](https://github.com/ImageMagick/ImageMagick/commit/89826e5b12db1344550236fd4a0f60c4d76ae0bf)
+- Changed order. [`3a69948`](https://github.com/ImageMagick/ImageMagick/commit/3a69948d93b5c00d4d49c15342e8da7db58071ce)
+- More code style changes. [`322e4bc`](https://github.com/ImageMagick/ImageMagick/commit/322e4bce666cbb8ca6ee5df27db79cbc52124486)
+- Another minor change. [`b5df91a`](https://github.com/ImageMagick/ImageMagick/commit/b5df91a8c0ebec6854940bd892f794d6827a470a)
+- Avoid typecasting. [`5d002fd`](https://github.com/ImageMagick/ImageMagick/commit/5d002fd6e37dbcc05a4b3ace00a4a0a99c9feb94)
+- There is no need to set the alpha channel. [`f01454c`](https://github.com/ImageMagick/ImageMagick/commit/f01454c8814de622bd99ef9dcede46591cb008ab)
+- alpha_trait should be undefined for ReadBC5. [`75aac78`](https://github.com/ImageMagick/ImageMagick/commit/75aac78f97f01db1363dd84c0a40d9ff0e9bc03b)
+- handle undefined EXIF tag (https://github.com/ImageMagick/ImageMagick/issues/6052) [`e0b640e`](https://github.com/ImageMagick/ImageMagick/commit/e0b640e0e4660f24455134df240ac0da8f12ba15)
+- Update SECURITY.md [`a8668be`](https://github.com/ImageMagick/ImageMagick/commit/a8668be21f6976f9306462cf84f17f0351b71f53)
+- eliminate compiler warnings [`74b3683`](https://github.com/ImageMagick/ImageMagick/commit/74b3683a4c6c22d42019c753377ae844755e6dab)
+- release [`32ce406`](https://github.com/ImageMagick/ImageMagick/commit/32ce406898b6f9992103cc0ee353f31a0e83f063)
+
 ## [7.1.0-61](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-60...7.1.0-61) - 2023-02-05
 
 ### Merged
