@@ -335,7 +335,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[channels]</td>
-    <td>??? channels in use - colorspace ???</td>
+    <td>colorspace neumonic followed by total number of channels and meta channets, e.g., <code>cmyka 8.3</code> indicates a CMYK image with alpha channel for a total of 8 channels and 3 meta channels.</td>
   </tr>
   <tr>
     <td>%[colors]</td>
