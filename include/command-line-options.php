@@ -1308,7 +1308,7 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 <p>In this example, we compute the mean RGB value for all opaque pixels of an image:</p>
 <pre class="bg-light text-dark mx-4 cli"><samp>magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</samp></pre>
 
-<p>Let's create two meta channels and populate it with the gray pixels:</p>
+<p>Let's create two meta channels and populate them with a copy of the gray pixels:</p>
 <pre class="bg-light text-dark mx-4 cli"><samp>magick gray.pgm -channel-fx "gray=>meta, gray=>meta1" gray.tif</samp></pre>
 <p>Notice we save the results into a TIFF image file.  Not all formats support multipectral images.  TIFF, MIFF, MPC, and FTXT do.</p>
 
