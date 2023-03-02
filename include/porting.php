@@ -333,7 +333,7 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dl class="row">
 <dt class="col-md-4">magick</dt>
 <dd class="col-md-8">The "<samp>magick</samp>" command is the new primary command of the Shell
-    API, replacing the old "<samp>magick</samp>" command. This allows you to
+    API, replacing the old "<samp>convert</samp>" command. This allows you to
     create a 'magick script' of the form  "<samp>#!/path/to/command/magick
     -script</samp>", or pipe options into a command "<samp>magick -script
     -</samp>, as a background process. </dd>
