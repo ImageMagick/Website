@@ -104,7 +104,7 @@ use:</p>
 
   <tr>
     <td>compose:clip-to-self=<var>true|false</var></td>
-    <td>Some <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> methods can modify the 
+    <td>Some <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> methods can modify the
     'destination' image outside the overlay area.  It is disabled by default.</td>
   </tr>
 
@@ -123,14 +123,14 @@ use:</p>
 
   <tr>
     <td>connected-components:angle-threshold=<var>value</var></td>
-    <td>Merges any region with equivalent ellipse angle smaller than 
+    <td>Merges any region with equivalent ellipse angle smaller than
     <var>value</var> into its surrounding region or largest neighbor.
     Supported in Imagemagick 7.0.9.24.</td>
   </tr>
 
   <tr>
     <td>connected-components:area-threshold=<var>value</var></td>
-    <td>Merges any region with area smaller than <var>value</var> into its 
+    <td>Merges any region with area smaller than <var>value</var> into its
     surrounding region or largest neighbor.  Thresholds can optionally include ranges, e.g. 410-1600.</td>
   </tr>
 
@@ -142,23 +142,23 @@ use:</p>
 
   <tr>
     <td>connected-components:circularity-threshold=<var>value</var></td>
-    <td>Merge any region with circularity smaller than <var>value</var> 
-    into its surrounding region or largest neighbor. Circularity is 
+    <td>Merge any region with circularity smaller than <var>value</var>
+    into its surrounding region or largest neighbor. Circularity is
     computed as 4*pi*area/perimeter^2.
     Supported in Imagemagick 7.0.9.24.</td>
   </tr>
 
   <tr>
     <td>connected-components:diameter-threshold=<var>value</var></td>
-    <td>Merge any region with diameter smaller than <var>value</var> 
-    into its surrounding region or largest neighbor. Diameter is 
+    <td>Merge any region with diameter smaller than <var>value</var>
+    into its surrounding region or largest neighbor. Diameter is
     computed as sqrt(4*area/pi).
     Supported in Imagemagick 7.0.9.24.</td>
   </tr>
 
   <tr>
     <td>connected-components:eccentricity-threshold=<var>value</var></td>
-    <td>Merge any region with equivalent ellipse eccentricity smaller 
+    <td>Merge any region with equivalent ellipse eccentricity smaller
     than <var>value</var> into its surrounding region or largest neighbor.
     Supported in Imagemagick 7.0.9.24.</td>
   </tr>
@@ -185,7 +185,7 @@ use:</p>
 
   <tr>
     <td>connected-components:major-axis-threshold=<var>value</var></td>
-    <td>Merge any region with equivalent ellipse major axis diameter smaller 
+    <td>Merge any region with equivalent ellipse major axis diameter smaller
     than <var>value</var> into its surrounding region or largest neighbor.
     Supported in Imagemagick 7.0.9.24.</td>
   </tr>
@@ -231,7 +231,7 @@ use:</p>
     range scaling. The ^ flag assures the kernel is 'zero-summing', for
     example when some values are positive and some are negative as in edge
     detection kernels. The origin addition adds that value to the center
-    pixel of the kernel. This produces an effect that is like adding the image 	
+    pixel of the kernel. This produces an effect that is like adding the image
     that many times to the result of the filtered image. The typical value
     is 1 so that the original image is added to the result of the convolution.
     The default is 0.</td>
@@ -281,107 +281,107 @@ use:</p>
 
   <tr>
     <td>filter:b=<var>value</var></td>
-    <td>Redefine the spline factor used for cubic filters such as Cubic, 
-    Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing 
-    function. If only one of the b or c values are defined, the other is 
-    set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c 
+    <td>Redefine the spline factor used for cubic filters such as Cubic,
+    Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing
+    function. If only one of the b or c values are defined, the other is
+    set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c
     values was defined in a research paper by Mitchell-Netravali.</td>
   </tr>
 
   <tr>
     <td>filter:blur=<var>factor</var></td>
-    <td>Scale the X axis of the filter (and its window). Use > 1.0 for blurry 
-    or &lt; 1.0 for sharp. This should only be used with Gaussian and 
-    Gaussian-like filters simple filters, or you may not get the 
+    <td>Scale the X axis of the filter (and its window). Use > 1.0 for blurry
+    or &lt; 1.0 for sharp. This should only be used with Gaussian and
+    Gaussian-like filters simple filters, or you may not get the
     expected results.</td>
   </tr>
 
   <tr>
     <td>filter:c=<var>value</var></td>
-    <td>Redefine the Keys alpha factor used for cubic filters such as Cubic, 
-    Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing 
-    function. If only one of the b or c values are defined, the other is 
-    set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c 
+    <td>Redefine the Keys alpha factor used for cubic filters such as Cubic,
+    Catrom, Mitchel, and Hermite, as well as the Parzen cubic windowing
+    function. If only one of the b or c values are defined, the other is
+    set so as to generate a 'Cubic-Keys' filter. The meaning of the b and c
     values was defined in a research paper by Mitchell-Netravali.</td>
   </tr>
 
   <tr>
     <td>filter:kaiser-alpha=<var>value</var></td>
-    <td>Set the Kaiser window alpha value. When it is multiplied by 'PI', 
-    it is equivalent to "kaiser-beta" and will override that setting. 
-    It only affects the Kaiser windowing function and does not affect 
+    <td>Set the Kaiser window alpha value. When it is multiplied by 'PI',
+    it is equivalent to "kaiser-beta" and will override that setting.
+    It only affects the Kaiser windowing function and does not affect
     any other attributes.</td>
   </tr>
 
   <tr>
     <td>filter:kaiser-beta=<var>value</var></td>
-    <td>Set the Kaiser window beta value. It only affects Kaiser windowing 
-    function and does not affect any other attributes. Before ImageMagick 
-    v6.7.6-10, this option was known as "filter:alpha" (an inheritance 
-    from the very old "zoom" program). It was changed to bring the function 
-    in line with more modern academic research usage and better assign it 
+    <td>Set the Kaiser window beta value. It only affects Kaiser windowing
+    function and does not affect any other attributes. Before ImageMagick
+    v6.7.6-10, this option was known as "filter:alpha" (an inheritance
+    from the very old "zoom" program). It was changed to bring the function
+    in line with more modern academic research usage and better assign it
     be more definitive. The default value is 6.5</td>
   </tr>
 
  <tr>
     <td>filter:lobes=<var>count</var></td>
-    <td>Set the number of lobes to use for the Sinc/Bessel filter. 
-    This is an alternate way of specifying the 'support' range of the filter, 
-    that is designed to be more suited to windowed filters, especially when 
+    <td>Set the number of lobes to use for the Sinc/Bessel filter.
+    This is an alternate way of specifying the 'support' range of the filter,
+    that is designed to be more suited to windowed filters, especially when
     used for image distorts.</td>
   </tr>
 
   <tr>
     <td>filter:sigma=<var>value</var></td>
-    <td>Set the 'sigma' value used to define the Gaussian filter. 
-    The default sigma value is '0.5'. It only affects the Gaussian filter, 
-    but does not shrink (but may enlarge) the filter's 'support'. 
-    It can be used to generate very small blurs, but without the filter 
-    'missing' pixels due to using a small support setting. 
-    A larger value of '0.707' (a value of '1/sqrt(2)') is another 
+    <td>Set the 'sigma' value used to define the Gaussian filter.
+    The default sigma value is '0.5'. It only affects the Gaussian filter,
+    but does not shrink (but may enlarge) the filter's 'support'.
+    It can be used to generate very small blurs, but without the filter
+    'missing' pixels due to using a small support setting.
+    A larger value of '0.707' (a value of '1/sqrt(2)') is another
     common setting.</td>
   </tr>
 
   <tr>
     <td>filter:support=<var>radius</var></td>
-    <td>Set the filter support radius. It defines how large the filter 
-    should be and thus directly defines how slow the filtered resampling 
-    process is. All filters have a default 'preferred' support size. 
-    Some filters like Lagrange and windowed filters adjust themselves 
-    depending on this value. With simple filters this value either does 
-    nothing (but slow the resampling), or will clip the filter function 
+    <td>Set the filter support radius. It defines how large the filter
+    should be and thus directly defines how slow the filtered resampling
+    process is. All filters have a default 'preferred' support size.
+    Some filters like Lagrange and windowed filters adjust themselves
+    depending on this value. With simple filters this value either does
+    nothing (but slow the resampling), or will clip the filter function
     in a detrimental way.</td>
   </tr>
 
   <tr>
     <td>filter:verbose=<var>true</var></td>
-    <td>Enable printing of information about the final internal 
-    filter selection to standard output. This includes a commented header 
-    on the filter settings being used and data allowing the filter weights 
-    to be easily graphed. Note however that some filters are internally 
-    defined in terms of other filters. The Lanczos filter, for example, 
-    is defined in terms of a SincFast windowed SincFast filter, while 
-    the Mitchell filter is defined as a general Cubic family filter 
+    <td>Enable printing of information about the final internal
+    filter selection to standard output. This includes a commented header
+    on the filter settings being used and data allowing the filter weights
+    to be easily graphed. Note however that some filters are internally
+    defined in terms of other filters. The Lanczos filter, for example,
+    is defined in terms of a SincFast windowed SincFast filter, while
+    the Mitchell filter is defined as a general Cubic family filter
     with specific 'B' and 'C' settings.</td>
   </tr>
 
   <tr>
     <td>filter:window=<var>filter_function</var></td>
-    <td>The IIR (infinite impulse response) filters Sinc and Jinc are 
-    windowed (brought down to zero over the defined support range) with 
-    the given filter. This allows you to specify a filter function to be 
-    used as a windowing function for these IIR filters. Many of the defined 
-    filters are actually windowing functions for these IIR filters. A typical 
+    <td>The IIR (infinite impulse response) filters Sinc and Jinc are
+    windowed (brought down to zero over the defined support range) with
+    the given filter. This allows you to specify a filter function to be
+    used as a windowing function for these IIR filters. Many of the defined
+    filters are actually windowing functions for these IIR filters. A typical
     choices is Box, (which effectively turns off the windowing function).</td>
   </tr>
-  
+
   <tr>
     <td>filter:window-support=<var>radius</var></td>
-    <td>Scale the windowing function to this size. This causes 
-    the windowing (or self-windowing Lagrange filter) to act is if the 
-    support window is larger than what is actually supplied to the calling 
-    operator. The filter, however, is still clipped to the true support 
-    size that is provided. If unset, this will equal the normal filter 
+    <td>Scale the windowing function to this size. This causes
+    the windowing (or self-windowing Lagrange filter) to act is if the
+    support window is larger than what is actually supplied to the calling
+    operator. The filter, however, is still clipped to the true support
+    size that is provided. If unset, this will equal the normal filter
     support size.</td>
   </tr>
 
@@ -438,7 +438,7 @@ use:</p>
 
   <tr>
     <td>kmeans:seed-colors=<var>color-list</var></td>
-    <td>Initialize the colors, where color-list is a semicolon delimited 
+    <td>Initialize the colors, where color-list is a semicolon delimited
     list of seed colors (e.g. red;sRGB(19,167,254);#00ffff)</td>
   </tr>
 
@@ -450,14 +450,14 @@ use:</p>
 
   <tr>
     <td>magnify:method=<var>value</var></td>
-    <td>Choose the method of pixel art magnification. The choices are: 
-    eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X (default), 
+    <td>Choose the method of pixel art magnification. The choices are:
+    eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X (default),
     scale3X, xbr2X</td>
   </tr>
 
   <tr>
     <td>modulate:colorspace=<var>colorspace</var></td>
-    <td>Define the colorspace to use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#modulate">-modulate</a>. 
+    <td>Define the colorspace to use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#modulate">-modulate</a>.
     Any hue-based colorspace may be use. The default is HSL.</td>
   </tr>
 
@@ -496,9 +496,9 @@ use:</p>
 
   <tr>
     <td>precision:highres-transform=<var>true</var></td>
-    <td>Increase the profile transform precision. Note, there is a slight 
-    performance penalty as the high-precision transform is floating point 
-    rather than unsigned. It is important to note that results may depend 
+    <td>Increase the profile transform precision. Note, there is a slight
+    performance penalty as the high-precision transform is floating point
+    rather than unsigned. It is important to note that results may depend
     on whether or not the original image already has an included profile.</td>
   </tr>
 
@@ -524,13 +524,13 @@ use:</p>
 
   <tr>
     <td>quantum:maximum=<var>value</var></td>
-    <td>Maximum value for certain image types such as DCM. If not set, the 
+    <td>Maximum value for certain image types such as DCM. If not set, the
     the maximum value is QuantumRange.</td>
   </tr>
 
   <tr>
     <td>quantum:minimum=<var>value</var></td>
-    <td>Minimum value for certain image types such as DCM. If not set, the 
+    <td>Minimum value for certain image types such as DCM. If not set, the
     the minimum value is zero.</td>
   </tr>
 
@@ -543,7 +543,7 @@ use:</p>
 
   <tr>
     <td>registry:<var>attribute</var>=<var>value</var></td>
-    <td>Set attributes of the image registry, for example, 
+    <td>Set attributes of the image registry, for example,
     registry:temporary-path=/data/tmp.
     </td>
   </tr>
@@ -565,9 +565,9 @@ use:</p>
 
   <tr>
     <td>resample:verbose=<var>true</var></td>
-    <td>Output the cylindrical filter lookup table created by the EWA 
-    (Elliptical Weighted Average) resampling algorithm. Note this table 
-    uses a squared radius lookup value. This is typically only used for 
+    <td>Output the cylindrical filter lookup table created by the EWA
+    (Elliptical Weighted Average) resampling algorithm. Note this table
+    uses a squared radius lookup value. This is typically only used for
     debugging EWA resampling.
     </td>
   </tr>
@@ -590,9 +590,9 @@ use:</p>
 
   <tr>
     <td>trim:percent-background=<var>X%</var></td>
-    <td>Set the amount of background that is tolerated in an edge. It is 
-    specified as a percent. 0% means no background is tolerated. 
-    50% means an edge can contain up to 50% pixels that are background per 
+    <td>Set the amount of background that is tolerated in an edge. It is
+    specified as a percent. 0% means no background is tolerated.
+    50% means an edge can contain up to 50% pixels that are background per
     the fuzz-factor.</td>
   </tr>
 
@@ -608,21 +608,21 @@ use:</p>
 
   <tr>
     <td>type:features=<var>string</var></td>
-    <td>Add a font feature to be used by the RAQM delegate during complex 
-    text layout. This is usually used to turn on optional font features that 
-    are not enabled by default, but can be also used to turn off default font 
+    <td>Add a font feature to be used by the RAQM delegate during complex
+    text layout. This is usually used to turn on optional font features that
+    are not enabled by default, but can be also used to turn off default font
     features. Features include those to control kerning, ligature and Arabic.</td>
   </tr>
 
   <tr>
     <td>type:hinting=<var>false</var></td>
-    <td>Disable font hinting. Proper glyph rendering needs the scaled points 
-    to be aligned along the target device pixel grid, through an operation 
-    often called hinting. One of its main purposes is to ensure that important 
-    widths and heights are respected throughout the whole font. (For example, 
-    it is very often desirable that the ‘I’ and the ‘T’ glyphs have their 
-    central vertical line of the same pixel width. Hinting also manages 
-    features like stems and overshoots, which can cause problems at small 
+    <td>Disable font hinting. Proper glyph rendering needs the scaled points
+    to be aligned along the target device pixel grid, through an operation
+    often called hinting. One of its main purposes is to ensure that important
+    widths and heights are respected throughout the whole font. (For example,
+    it is very often desirable that the ‘I’ and the ‘T’ glyphs have their
+    central vertical line of the same pixel width. Hinting also manages
+    features like stems and overshoots, which can cause problems at small
     pixel sizes.</td>
   </tr>
 
@@ -673,8 +673,8 @@ use:</p>
 
   <tr>
     <td>bmp:subtype=<var>value</var></td>
-    <td>BMP channel depth subtypes. The choices are: RGB555, RGB565, ARGB4444, 
-    ARGB1555. Only support in BMP (BMP4). BMP3 and BMP2 do not contain header 
+    <td>BMP channel depth subtypes. The choices are: RGB555, RGB565, ARGB4444,
+    ARGB1555. Only support in BMP (BMP4). BMP3 and BMP2 do not contain header
     fields to support these options.</td>
   </tr>
 
@@ -691,13 +691,13 @@ use:</p>
 
   <tr>
     <td>dcm:rescale=<var>true</var></td>
-     <td>Enable interpretation of the rescale slope and intercept settings 
+     <td>Enable interpretation of the rescale slope and intercept settings
      in the file.</td>
   </tr>
 
   <tr>
     <td>dcm:rescale=<var>true</var></td>
-    <td>Enable interpretation of the rescale slope and intercept settings 
+    <td>Enable interpretation of the rescale slope and intercept settings
     in the file.</td>
   </tr>
 
@@ -771,15 +771,15 @@ use:</p>
 
   <tr>
     <td>exr:color-type=<var>value</var></td>
-    <td>Specify the color type for the EXR format: RGB, RGBA, YC, YCA, Y, 
+    <td>Specify the color type for the EXR format: RGB, RGBA, YC, YCA, Y,
     YA, R, G, B, A).</td>
   </tr>
 
   <tr>
     <td>fpx:view=<var>value</var></td>
-    <td>Specify the FlashPix viewing object, which contains the specification 
-    of a viewing transform. The viewing transform enables applications to 
-    represent a set of simple edits as a list of "commands" which are applied 
+    <td>Specify the FlashPix viewing object, which contains the specification
+    of a viewing transform. The viewing transform enables applications to
+    represent a set of simple edits as a list of "commands" which are applied
     to the image in real time without altering the original image.</td>
   </tr>
 
@@ -827,8 +827,8 @@ use:</p>
 
   <tr>
     <td>heic:preserve-orientation=<var>true</var></td>
-    <td>Preserve the original EXIF orientation during HEIC decoding and rotate 
-    the pixels accordingly. By default, EXIF orientation is reset to "1" to 
+    <td>Preserve the original EXIF orientation during HEIC decoding and rotate
+    the pixels accordingly. By default, EXIF orientation is reset to "1" to
     match the actual orientation of pixels in HEIC.
     </td>
   </tr>
@@ -1052,7 +1052,7 @@ use:</p>
 
   <tr>
     <td>png:color-type=<var>value</var></td>
-    <td>Desired bit-depth and color-type for PNG output.  You can force the 
+    <td>Desired bit-depth and color-type for PNG output.  You can force the
     PNG encoder to use a different bit-depth and color-type than it would have
     normally selected, but only if this does not cause any loss of image
     quality. Any attempt to reduce image quality is treated as an error and no
@@ -1186,7 +1186,7 @@ use:</p>
 
   <tr>
     <td>png:ignore-crc[=<var>true</var>]</td>
-    <td>When you know your image has no CRC or ADLER32 errors, this can speed 
+    <td>When you know your image has no CRC or ADLER32 errors, this can speed
     up decoding. It is also helpful in debugging bug reports from "fuzzers".</td>
   </tr>
 
@@ -1217,7 +1217,7 @@ use:</p>
 
   <tr>
     <td>png:swap-bytes[=<var>true</var>]</td>
-    <td>The PNG specification requires that any multi-byte integers be stored 
+    <td>The PNG specification requires that any multi-byte integers be stored
     in network byte order (MSB-LSB endian).  This option allows you to
     fix any invalid PNG files that have 16-bit samples stored incorrectly
     in little-endian order (LSB-MSB).  The "-define png:swap-bytes" option
@@ -1312,6 +1312,12 @@ use:</p>
   </tr>
 
   <tr>
+    <td>tiff:peg-tables-mode=<var>0-3</var></td>
+    <td>Set the TIFFTAG_JPEGTABLESMODE when the tiff file is written with
+    jpeg compression</td>
+  </tr>
+
+  <tr>
     <td>tiff:gps-properties=<var>false</var></td>
     <td>Disable reading the GPS properties.</td>
   </tr>
@@ -1328,12 +1334,12 @@ use:</p>
 
   <tr>
     <td>tiff:predictor=<var>[1, 2 or 3]</var></td>
-    <td>A mathematical operator that is applied to the image data before an 
-    encoding scheme is applied. The general idea is that subsequent pixels of 
-    an image resemble each other. Thus, substracting the information from a 
-    pixel that is already contained in previous one is likely to reduce its 
-    information density considerably and aid subsequent compression. 
-    1 = No prediction scheme used before coding. 2 = Horizontal differencing. 
+    <td>A mathematical operator that is applied to the image data before an
+    encoding scheme is applied. The general idea is that subsequent pixels of
+    an image resemble each other. Thus, substracting the information from a
+    pixel that is already contained in previous one is likely to reduce its
+    information density considerably and aid subsequent compression.
+    1 = No prediction scheme used before coding. 2 = Horizontal differencing.
     3 = Floating point horizontal differencing.</td>
   </tr>
 
@@ -1392,72 +1398,72 @@ use:</p>
 
   <tr>
     <td>gradient:angle=<var>angle (in degrees)</var></td>
-    <td>For a linear gradient, this specifies the direction of 
-    the gradient going from color1 to color2 in a clockwise 
-    positive manner relative to north (up). For a radial 
-    gradient, this specifies the rotation of the gradient in a 
+    <td>For a linear gradient, this specifies the direction of
+    the gradient going from color1 to color2 in a clockwise
+    positive manner relative to north (up). For a radial
+    gradient, this specifies the rotation of the gradient in a
     clockwise positive manner from its normal X-Y orientation.
     Supported in Imagemagick 6.9.2-5.</td>
    </tr>
 
   <tr>
     <td>gradient:bounding-box=<var>WxH+X+Y</var></td>
-    <td>Limit the gradient to a larger or smaller region than 
-    the image dimensions. If the region defined by the bounding 
-    box is smaller than the image, then color1 will be the color 
+    <td>Limit the gradient to a larger or smaller region than
+    the image dimensions. If the region defined by the bounding
+    box is smaller than the image, then color1 will be the color
     of the background.
     Supported in Imagemagick 6.9.2-5.</td>
   </tr>
 
   <tr>
     <td>gradient:center=<var>x,y</var></td>
-    <td>Specify the coordinates of the center point for the 
+    <td>Specify the coordinates of the center point for the
     radial gradient. The default is the center of the image.
     Supported in Imagemagick 6.9.2-5.</td>
   </tr>
 
   <tr>
     <td>gradient:direction=<var>value</var></td>
-    <td>Specify the direction of the linear gradient towards 
-    the top/bottom/left/right or diagonal corners. The choices are: 
+    <td>Specify the direction of the linear gradient towards
+    the top/bottom/left/right or diagonal corners. The choices are:
     NorthWest, North, Northeast, West, East, SouthWest, South, SouthEast.
     Supported in Imagemagick 6.9.2-5.</td>
    </tr>
 
   <tr>
     <td>gradient:extent=<var>value</var></td>
-    <td>Specify the shape of an image centered radial gradient. 
+    <td>Specify the shape of an image centered radial gradient.
     The choices are: Circle, Diagonal, Ellipse, Maximum, Minimum.
-    Circle and Maximum draw a circular radial gradient even for 
-    rectangular shaped images of radius equal to the larger of 
-    the half-width and half-height of the image. The Circle and 
-    Maximum options are both equivalent to the default radial 
-    gradient. The Minimum option draws a circular radial gradient 
-    even for rectangular shaped images of radius equal to the 
-    smaller of the half-width and half-height of the image. 
-    The Diagonal option draws a circular radial gradient even 
-    for rectangular shaped images of radius equal to the 
-    half-diagonal of the image. The Ellipse options draws an 
-    elliptical radial gradient for rectangular shaped images of  
+    Circle and Maximum draw a circular radial gradient even for
+    rectangular shaped images of radius equal to the larger of
+    the half-width and half-height of the image. The Circle and
+    Maximum options are both equivalent to the default radial
+    gradient. The Minimum option draws a circular radial gradient
+    even for rectangular shaped images of radius equal to the
+    smaller of the half-width and half-height of the image.
+    The Diagonal option draws a circular radial gradient even
+    for rectangular shaped images of radius equal to the
+    half-diagonal of the image. The Ellipse options draws an
+    elliptical radial gradient for rectangular shaped images of
     radii equal to half the width and half the height of the image.
     Supported in Imagemagick 6.9.2-5.</td>
    </tr>
 
   <tr>
     <td>gradient:radii=<var>x,y</var></td>
-    <td>Specify the x and y radii of the gradient. If the 
-    x radius and the y radius are equal, the shape of the 
-    radial gradient will be a circle. If they differ, then 
-    the shape will be an ellipse. The default values are the 
+    <td>Specify the x and y radii of the gradient. If the
+    x radius and the y radius are equal, the shape of the
+    radial gradient will be a circle. If they differ, then
+    the shape will be an ellipse. The default values are the
     maximum of the half width and half height of the image.
     Supported in Imagemagick 6.9.2-5.</td>
   </tr>
 
   <tr>
     <td>gradient:vector=<var>x1,y1,x2,y2</var></td>
-    <td>Specify the direction of the linear gradient going from 
-    vector1 (x1,y1) to vector2 (x2,y2). Color1 (fromColor) will be 
-    located at vector position x1,y1 and color2 (toColor) will be 
+    <td>Specify the direction of the linear gradient going from
+    vector1 (x1,y1) to vector2 (x2,y2). Color1 (fromColor) will be
+    located at vector position x1,y1 and color2 (toColor) will be
     located at vector position x2,y2.
     Supported in Imagemagick 6.9.2-5.</td>
   </tr>
@@ -1526,28 +1532,28 @@ use:</p>
     <td>pixel:compliance=<var>value</var></td>
     <td>Set the "pixel:" output format according to several standards.
     The choices are SVG, None, Undefined, MVG, X11, XPM. The default
-    list values for (s)RGB colors in the form of (s)rgb(r,g,b) or 
-    (s)rgba(r,g,b,a). Color names will no longer be presented. For sRGB or 
-    RGB colors, the SVG, X11, XPM and None options lists color names, 
-    if they exist. The MVG and Undefined options list hex values. When 
-    colors are presented or converted to hue-based colorspaces, the values 
-    listed will be integers for hue and percents for the other two components. 
-    For other colorspaces, values may be listed as either percents or 
-    fractional value. Setting the depth to 8 will limit values to the 8-bit 
+    list values for (s)RGB colors in the form of (s)rgb(r,g,b) or
+    (s)rgba(r,g,b,a). Color names will no longer be presented. For sRGB or
+    RGB colors, the SVG, X11, XPM and None options lists color names,
+    if they exist. The MVG and Undefined options list hex values. When
+    colors are presented or converted to hue-based colorspaces, the values
+    listed will be integers for hue and percents for the other two components.
+    For other colorspaces, values may be listed as either percents or
+    fractional value. Setting the depth to 8 will limit values to the 8-bit
     range, except for hue-based colors.</td>
   </tr>
 
   <tr>
     <td>txt:compliance=<var>value</var></td>
-    <td>Set the "txt:" format for the values in parentheses according to 
+    <td>Set the "txt:" format for the values in parentheses according to
     several standards. The choices are svg, none, undefined, mvg, x11, xpm.
     The default will list values for (s)RGB colors in the quantum range.
-    The SVG, X11, XPM, MVG and None options lists values in the 8-bit range 
-    for all Q-level compiles. The undefined option also lists values in the 
-    quantum range. When colors are presented or converted to hue-based 
-    colorspaces, the values listed will be integers for hue and percents for 
-    the other two components. For other colorspaces, values may be listed as 
-    either percents or fractional value. Setting the depth to 8 will limit 
+    The SVG, X11, XPM, MVG and None options lists values in the 8-bit range
+    for all Q-level compiles. The undefined option also lists values in the
+    quantum range. When colors are presented or converted to hue-based
+    colorspaces, the values listed will be integers for hue and percents for
+    the other two components. For other colorspaces, values may be listed as
+    either percents or fractional value. Setting the depth to 8 will limit
     values to the 8-bit range, except for hue-based colors.</td>
    </tr>
 
