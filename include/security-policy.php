@@ -28,7 +28,7 @@
   &lt;policy domain="resource" name="thread" value="2"/>
   &lt;policy domain="resource" name="time" value="120"/>
   &lt;policy domain="module" rights="none" pattern="URL" /> 
-  &lt;policy domain="coder" rights="write" pattern="{MSVG,MVG,PS,PDF,XPS}" />
+  &lt;policy domain="coder" rights="write" pattern="{MSVG,MVG,PS,PDF,RSVG,SVG,XPS}" />
   &lt;policy domain="filter" rights="none" pattern="*" />
   &lt;policy domain="path" rights="none" pattern="-"/>  &lt;!-- don't read/write from/to stdin/stdout -->
   &lt;policy domain="path" rights="none" pattern="/etc/*"/>  &lt;!-- don't read sensitive paths -->
