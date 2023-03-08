@@ -1006,6 +1006,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:printed=<var>true</var></td>
+    <td>Sets the -dPrinted option of Ghostscript</td>
+  </tr>
+
+  <tr>
     <td>pdf:producer=<var>producer</var></td>
     <td>Sets the producer of the document</td>
   </tr>
