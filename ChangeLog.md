@@ -5,6 +5,73 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-0](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-62...7.1.1-0) - 2023-03-08
+
+### Merged
+
+- improve Install-unix.txt [`#6105`](https://github.com/ImageMagick/ImageMagick/pull/6105)
+
+### Commits
+
+- beta release [`fd12019`](https://github.com/ImageMagick/ImageMagick/commit/fd12019f3650c63623f2b8888f0b6326f8156c4f)
+- Code cleanup. [`b430dc1`](https://github.com/ImageMagick/ImageMagick/commit/b430dc10bb14a14c891065a13306db97a4f00740)
+- Added support for reading ATI2 (BC5) images (#5919). [`7e5875b`](https://github.com/ImageMagick/ImageMagick/commit/7e5875b97e442f6b6f67e58d99d85b1ad2efbaf1)
+- correct RLE unpack algorithm [`a1bd818`](https://github.com/ImageMagick/ImageMagick/commit/a1bd8188b3ad679f0814ae3935e45e496381df19)
+- return total channels and meta channels [`8abb434`](https://github.com/ImageMagick/ImageMagick/commit/8abb43486dffc115b4e07ddef16296cc25e72d82)
+- do not exceed 64 pixel channels (https://github.com/ImageMagick/ImageMagick/issues/6075) [`8c97870`](https://github.com/ImageMagick/ImageMagick/commit/8c978704bf132799efbae94aade632a6a099a0e7)
+- properly detect an extra samples alpha channel (https://github.com/ImageMagick/ImageMagick/issues/6058) [`c6efe14`](https://github.com/ImageMagick/ImageMagick/commit/c6efe14959b8801471259d47858b177ea3890298)
+- Added extra check to resolve the issue reported in #6080 (-process ' '). [`2c2829b`](https://github.com/ImageMagick/ImageMagick/commit/2c2829bd2af469a957e30a5de96a2e763c1c16b9)
+- detect RLE error [`b2f4f4a`](https://github.com/ImageMagick/ImageMagick/commit/b2f4f4a2a45c1c9640aadeaace5ee926c92664ff)
+- check for sans fonts [`0427628`](https://github.com/ImageMagick/ImageMagick/commit/04276281471885e2200848330985df9fa9301a01)
+- check for NULL destination image [`295e075`](https://github.com/ImageMagick/ImageMagick/commit/295e0755b2d4d8352516209450969df015104a8a)
+- improved support for meta channels in TIFF format (https://github.com/ImageMagick/ImageMagick/discussions/4995) [`2ef0b31`](https://github.com/ImageMagick/ImageMagick/commit/2ef0b31c2e9a45965388407c4c757fe740ecfee1)
+- account for meta channels [`91e3c66`](https://github.com/ImageMagick/ImageMagick/commit/91e3c66c03852c64dd6e91f1040180dc8866a0c8)
+- the channel mask is irrelevant [`bb2274b`](https://github.com/ImageMagick/ImageMagick/commit/bb2274b5763a5445d7f0ccd5df15e5204db1366c)
+- revert [`847a5ae`](https://github.com/ImageMagick/ImageMagick/commit/847a5aeb330535096fd354ec97b3e040df0e140f)
+- generate correct statistics for meta channels (https://github.com/ImageMagick/ImageMagick/issues/6097) [`876785e`](https://github.com/ImageMagick/ImageMagick/commit/876785ecd5bd243779c18aff6712b9ae9bad01a4)
+- check for exceeding maximum channels [`63b53d3`](https://github.com/ImageMagick/ImageMagick/commit/63b53d3beea72b368bb2da6043c24b778d90e340)
+- set the number of meta channels [`1abb25d`](https://github.com/ImageMagick/ImageMagick/commit/1abb25dd08683974d1701989b96060bdc29acf3a)
+- Also build app-image with a pull request. [`cd1df2a`](https://github.com/ImageMagick/ImageMagick/commit/cd1df2af448041b6d86c5841ecdb402bb73380b1)
+- continuing effort to support multispectral imaging [`584a326`](https://github.com/ImageMagick/ImageMagick/commit/584a326978ce1e0a868cff473d41d509b3393552)
+- eliminate compiler warning [`844d21b`](https://github.com/ImageMagick/ImageMagick/commit/844d21bd6e42acf5bfead1baa8f23e2d079504fc)
+- No longer check for Noto Sans and Nimbus Sans to make sure the correct default is used on Windows. [`a0f7fbf`](https://github.com/ImageMagick/ImageMagick/commit/a0f7fbff738066c71076bcde29fb8b900a671277)
+- Restored missing null check. [`184cce1`](https://github.com/ImageMagick/ImageMagick/commit/184cce1636d0832effbad2ad6b71d19a7e4d4828)
+- check for negative LUT lookup (https://github.com/ImageMagick/ImageMagick/issues/6070) [`de5f368`](https://github.com/ImageMagick/ImageMagick/commit/de5f368ee961855112d29ef8929f3df8433bc1e5)
+- get MAGICK_FONT environment variable [`d8d0c9a`](https://github.com/ImageMagick/ImageMagick/commit/d8d0c9abdee8b0576ab2101783d48bc94141d24d)
+- valid compression filters are 0 through 9 (https://github.com/ImageMagick/ImageMagick/discussions/6108) [`552c2c5`](https://github.com/ImageMagick/ImageMagick/commit/552c2c566c025d81ae177780220709d97a47c80a)
+- Only allocate the sans_exception when we need to. [`03f0663`](https://github.com/ImageMagick/ImageMagick/commit/03f0663896d872f9facec8b6aebe75a4182710f0)
+- site: fix typo for compare [`033e255`](https://github.com/ImageMagick/ImageMagick/commit/033e2559e5ab77a5de46287f2287ae0bd809c25d)
+- clone latest documentation [`5819ff1`](https://github.com/ImageMagick/ImageMagick/commit/5819ff1fd0e88062f8fc8b5ca6b082199dba9714)
+- channel FX and meta-channels, work in progress [`62f1608`](https://github.com/ImageMagick/ImageMagick/commit/62f1608e896cf4ffd5b703085af2db103ad1b78a)
+- only set alpha trait for "alpha" mnemonic [`787c001`](https://github.com/ImageMagick/ImageMagick/commit/787c0018e878446cfd23489e7490d2a928cd14db)
+- add support for more than one meta channel [`b9c30c3`](https://github.com/ImageMagick/ImageMagick/commit/b9c30c3ee8c133dd415472b978272ca986c121b8)
+- support meta1 ... meta9 meta channels [`6b9f68f`](https://github.com/ImageMagick/ImageMagick/commit/6b9f68f14472e16d3f070dab77daafaa7350e016)
+- support meta0 channel [`05fe46f`](https://github.com/ImageMagick/ImageMagick/commit/05fe46f9633d68d2aa4b697cf5bb97b1c7416ea1)
+- still work to be done for multispectral images [`bead12a`](https://github.com/ImageMagick/ImageMagick/commit/bead12a05dee3e8adbdf32c85e1528cfd79e8424)
+- more fixes for multispectral support [`d1e4d78`](https://github.com/ImageMagick/ImageMagick/commit/d1e4d786aef7b1ecf98b0b8bac005ea2abf944d5)
+- identify a default font [`2ede725`](https://github.com/ImageMagick/ImageMagick/commit/2ede7250ffa558b42b88b8946c1f9a0c8c0315c7)
+- additional support for multisprectral images [`6b2ae4e`](https://github.com/ImageMagick/ImageMagick/commit/6b2ae4ebca0b4e5f698c45f68297615156ce25d2)
+- Also include optional libraries and deprecated code in the daily Windows build. [`0c00814`](https://github.com/ImageMagick/ImageMagick/commit/0c008149ca0e90287dc9cce58d1c699043c321eb)
+- Also include incompatible licenses in the daily Windows build. [`8573c43`](https://github.com/ImageMagick/ImageMagick/commit/8573c43cb86063d884d5616953034517334056e6)
+- Moved declaration of variable. [`779cb0c`](https://github.com/ImageMagick/ImageMagick/commit/779cb0c9c8d91b7b3863da0367f3ee8dbfa6338d)
+- Added option (tiff:jpeg-tables-mode) to set the TIFFTAG_JPEGTABLESMODE. [`455e3cb`](https://github.com/ImageMagick/ImageMagick/commit/455e3cba6768e8eae7231a395ea60b0ec36314dd)
+- throw exception for invalid channel type [`a59e589`](https://github.com/ImageMagick/ImageMagick/commit/a59e589eab4c01f5aaf74dbe40217a2a38655ed8)
+- eliminate compiler warnings [`25d9d29`](https://github.com/ImageMagick/ImageMagick/commit/25d9d2970c249b32fbc79c409298b5936ef06c62)
+- Fixed printing of the delegates when running configure. [`f73a3d1`](https://github.com/ImageMagick/ImageMagick/commit/f73a3d1a0663fd6dd58b0cc78c2541c41769fdd0)
+- do not permit MVG coder from rendering SVG/MSVG images [`f7de350`](https://github.com/ImageMagick/ImageMagick/commit/f7de350f571ad6216dd4a840732a36c89ea6fd0f)
+- Check for module instead of coder. [`accdd08`](https://github.com/ImageMagick/ImageMagick/commit/accdd08951d5fd055986176bfc55314fb6d5f4a8)
+- recursion detection [`83d6643`](https://github.com/ImageMagick/ImageMagick/commit/83d6643b5dc2afa67c699967e9f71ca2f821dce4)
+- recursion detection [`1010008`](https://github.com/ImageMagick/ImageMagick/commit/1010008fcc9f81eecaad13d08ea9ff18d1f8bb63)
+- Removed checks for PANGO_DELEGATE since we only use pangocairo. [`8f7e7aa`](https://github.com/ImageMagick/ImageMagick/commit/8f7e7aa1a0dc26a81a3d1c5d77c1fded5661108e)
+- Turns out we need to check for both pango and pangocairo to get the correct includes. [`e0f67d2`](https://github.com/ImageMagick/ImageMagick/commit/e0f67d257674f779168bfbac20584ee6b8dfb023)
+- recursion detection framework [`9d3dd91`](https://github.com/ImageMagick/ImageMagick/commit/9d3dd9192f6710ec8e10f5edda9b7bf67caeb232)
+- recursion detection [`9b2c57f`](https://github.com/ImageMagick/ImageMagick/commit/9b2c57f8794249f6b8fe2629c4ea01832d0a817f)
+- erecursion detection [`c5b23cb`](https://github.com/ImageMagick/ImageMagick/commit/c5b23cbf2119540725e6dc81f4deb25798ead6a4)
+- recursion detection fail [`d60d266`](https://github.com/ImageMagick/ImageMagick/commit/d60d2662f0e12f78d20fb1c90cc19dd1729233f7)
+- do not composite SVG to avoid possible recursion [`a3b0f6c`](https://github.com/ImageMagick/ImageMagick/commit/a3b0f6c0677e4db09236ccb0c934db7aef3cd52f)
+- Added pdf:printed define that can be used to set -dPrinted when executing Ghostscript (#6128). [`2e984f9`](https://github.com/ImageMagick/ImageMagick/commit/2e984f995bdc75fb5b956b8d35d7d4e511d97f7a)
+- release [`9009707`](https://github.com/ImageMagick/ImageMagick/commit/9009707d09287d168057cb6018b37b68dd586775)
+
 ## [7.1.0-62](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-61...7.1.0-62) - 2023-02-12
 
 ### Merged
