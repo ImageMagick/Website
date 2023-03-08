@@ -1007,7 +1007,7 @@ use:</p>
 
   <tr>
     <td>pdf:printed=<var>true</var></td>
-    <td>Sets the -dPrinted option of Ghostscript</td>
+    <td>Determines whether the file should be displayed or printed using the "screen" or "printer" options for annotations and images.</td>
   </tr>
 
   <tr>
