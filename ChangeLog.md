@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-1](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-0...7.1.1-1) - 2023-03-09
+
+### Merged
+
+- restore library symbol versioning to fix ABI break [`#6145`](https://github.com/ImageMagick/ImageMagick/pull/6145)
+
+### Commits
+
+- beta release [`3ac92ec`](https://github.com/ImageMagick/ImageMagick/commit/3ac92ec21130747d4eeba925886919ec5e8bc5ef)
+- PNG compression filters range from 0-5 [`1307d32`](https://github.com/ImageMagick/ImageMagick/commit/1307d322cd0736304863f18c52abd4def5cc171a)
+- check for c++ compiler [`ecf3739`](https://github.com/ImageMagick/ImageMagick/commit/ecf37396ee11377af9b3d254713b434f85181cf1)
+- support an array of metachannels without breaking the ABI [`25ce9ad`](https://github.com/ImageMagick/ImageMagick/commit/25ce9adb9dc3bec246682b493d0ce67bf51ba5a8)
+- release [`c557f0d`](https://github.com/ImageMagick/ImageMagick/commit/c557f0d12dac99d391a4ed4d7e8a74b5efe59f66)
+
 ## [7.1.1-0](https://github.com/ImageMagick/ImageMagick/compare/7.1.0-62...7.1.1-0) - 2023-03-08
 
 ### Merged
