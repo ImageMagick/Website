@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-3](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-2...7.1.1-3) - 2023-03-11
+
+### Merged
+
+- Add HEIC support to AppImage (Partially solve #4666) [`#6098`](https://github.com/ImageMagick/ImageMagick/pull/6098)
+
+### Commits
+
+- beta release [`0e525cc`](https://github.com/ImageMagick/ImageMagick/commit/0e525cc97ad7b0a31d817ab723905b035854e697)
+- synchronize meta channel names, e.g., meta0, meta1, etc. [`14255d0`](https://github.com/ImageMagick/ImageMagick/commit/14255d004f62599079b9fd2986211119d1dda791)
+- Also call MagickWandTerminus in TerminateMagick. [`55682a7`](https://github.com/ImageMagick/ImageMagick/commit/55682a795d1e707aaacbda847971677957f8da20)
+- MagickWandTerminus calls MagickCoreTermines so we don't need to call both of them. [`75e4766`](https://github.com/ImageMagick/ImageMagick/commit/75e4766e03eb9267c24419461ac1c8cb0396c7df)
+- fix memory leak in cloning DrawInfo structure (https://github.com/ImageMagick/ImageMagick/issues/6149) [`84d7ad1`](https://github.com/ImageMagick/ImageMagick/commit/84d7ad135f61073304053a7d9ab2cf66b63df0ef)
+- release [`c5d5e71`](https://github.com/ImageMagick/ImageMagick/commit/c5d5e7117fb07096158bcad05e1086f0c2fff172)
+
+## [7.1.1-2](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-1...7.1.1-2) - 2023-03-09
+
+### Commits
+
+- release [`f41f852`](https://github.com/ImageMagick/ImageMagick/commit/f41f852be7e5eb75ecd5d0b3e262ffed42795a1a)
+- release [`5d382e7`](https://github.com/ImageMagick/ImageMagick/commit/5d382e70c2f82534f0d1638cd21c1050af68af2f)
+
 ## [7.1.1-1](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-0...7.1.1-1) - 2023-03-09
 
 ### Merged
