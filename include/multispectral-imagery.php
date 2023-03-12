@@ -142,8 +142,8 @@ Image:
 <h5>Working with Multispectral Images</h5>
 <p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the meta channel:<p>
 <pre class="bg-light text-dark mx-4"><samp>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre>
-<p>The original cyan channel has an intensity of 10.  Its now, per the channel FX instructions, 50.<p>
+<p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <h5>Writing Multispectral Images</h5>
-<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other formats, the channels are not preserved-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
+<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
 <pre class="bg-light text-dark mx-4"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
 </div>
