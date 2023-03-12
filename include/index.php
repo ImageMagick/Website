@@ -138,7 +138,7 @@
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a></td>
     <td>support multispectral imagery up to 64 bands.</td>
   </tr>
   <tr>
