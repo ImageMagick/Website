@@ -145,5 +145,5 @@ Image:
 <p>The original cyan channel has an intensity of 10.  Its now, per the channel FX instructions, 50.<p>
 <h5>Writing Multispectral Images</h5>
 <p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other formats, the channels are not preserved-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="bg-light text-dark mx-4"><samp>magick multiMeta.tif -resize 50% resize.tif</samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
 </div>
