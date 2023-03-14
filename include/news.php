@@ -5,11 +5,9 @@
 
 <h4>Recent News</h4>
 
-<p>In order to enhance the support for multi-spectral images, we had to modify the enumeration values for PixelChannel, specifically for CompositeMaskPixelChannel and MetaPixelChannel. To properly support multiple meta channels such as meta, meta1, meta2, etc., MetaPixelChannel needed to be declared as the last channel enumeration. Although only a few apps currently support multispectral images, we anticipate minimal impact with this change. To accommodate the modification, we have incremented the release and library revision from 0 to 1.</p>
-
 <p>We recently updated Anthony's <a href="/../Usage">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
 
-<p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
+<p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
 <p>We now provide <a href="https://imagemagick.org/script/download.php#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
 
