@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-4](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-3...7.1.1-4) - 2023-03-18
+
+### Commits
+
+- beta release [`65712a9`](https://github.com/ImageMagick/ImageMagick/commit/65712a975f545c43484ab33a90b449a2052b70ec)
+- Removed check that will never be true. [`6422c97`](https://github.com/ImageMagick/ImageMagick/commit/6422c97d9bb4b798d6c57bfaf6ac8a4a9a04b703)
+- Removed unused private method. [`ec8c69e`](https://github.com/ImageMagick/ImageMagick/commit/ec8c69e34e1d2fd5947a6b625f958ab8cabdbe66)
+- improve default fatal exception handler [`858769e`](https://github.com/ImageMagick/ImageMagick/commit/858769e6450a411b082080998d4fb91085216b5f)
+- improve locale exception handling [`b10fda9`](https://github.com/ImageMagick/ImageMagick/commit/b10fda9acb9ec3a10676dd789be7a3bda398d717)
+- terminate loop on page sentinel (#https://github.com/ImageMagick/ImageMagick/issues/6158) [`06d3b28`](https://github.com/ImageMagick/ImageMagick/commit/06d3b282a43457da6b3a2d3f84c33e07064a1e98)
+- optimization [`2129847`](https://github.com/ImageMagick/ImageMagick/commit/2129847cd6b8f79ba10d2560a36b76de3311d5e6)
+- Moved setting the SetUnhandledExceptionFilter to magick.c (#6152) [`bb1841b`](https://github.com/ImageMagick/ImageMagick/commit/bb1841bfdfb85ac145ddb62ae7ea1717a3299d48)
+- Also call SetConsoleOutputCP in wmain() instead. [`72c3996`](https://github.com/ImageMagick/ImageMagick/commit/72c3996cf38909b3ab34c23cb2ce2fa16d140721)
+- cosmetic [`72f0a8e`](https://github.com/ImageMagick/ImageMagick/commit/72f0a8e08f6b21a438a63eed848b03730ab3c539)
+- Make sure that AsynchronousResourceComponentTerminus is exported. [`ca9ad33`](https://github.com/ImageMagick/ImageMagick/commit/ca9ad33a009e4cc7064cb4149d83ea2c2d3a6903)
+- We always need to do a seek in our FT_Stream_IoFunc implementation (https://gitlab.freedesktop.org/freetype/freetype/-/issues/1208). [`1288469`](https://github.com/ImageMagick/ImageMagick/commit/12884697a84f185243347069198ab393cae7396c)
+- Cosmetic. [`21db2a0`](https://github.com/ImageMagick/ImageMagick/commit/21db2a08eebf2d13a0af158eae1403b8ebcd73de)
+- accomodate UTF-8 image file names [`f8dc416`](https://github.com/ImageMagick/ImageMagick/commit/f8dc416e1ca3bac3692c3d2f1ce88ca1d685f8dc)
+- Newer versions of libtiff require the field_name to be set so we set it to a static dummy string. [`354f05a`](https://github.com/ImageMagick/ImageMagick/commit/354f05a620884e1a54463a89a35076ec97d5c57f)
+- set gamma to 1.0 for linear colorspaces (#https://github.com/ImageMagick/ImageMagick/issues/6157) [`c950eda`](https://github.com/ImageMagick/ImageMagick/commit/c950eda7bf5acf8fdf549126c45517dd890fb126)
+- release [`10ad43d`](https://github.com/ImageMagick/ImageMagick/commit/10ad43dc3e5113fa1969a55583a080c5a6a23f65)
+
 ## [7.1.1-3](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-2...7.1.1-3) - 2023-03-11
 
 ### Merged
