@@ -140,7 +140,7 @@ Image:
 </samp></pre>
 <p>Notice the channel depth and statistics associated with the two meta channels.<p>
 <h5>Working with Multispectral Images</h5>
-<p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the meta channel:<p>
+<p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
 <pre class="bg-light text-dark mx-4"><samp>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre>
 <p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <p>And in this example, we create two meta channels:</p>
