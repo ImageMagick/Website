@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-4...7.1.1-5) - 2023-03-26
+
+### Commits
+
+- beta release [`9b9fc9d`](https://github.com/ImageMagick/ImageMagick/commit/9b9fc9dfeee411817250b605daad082f82e08a3e)
+- offset to x1 for west gravity (#https://github.com/ImageMagick/ImageMagick/issues/6163) [`bb82582`](https://github.com/ImageMagick/ImageMagick/commit/bb82582f1e08cdb1f039820b532c99de2784c3bc)
+- optimization [`de1cc16`](https://github.com/ImageMagick/ImageMagick/commit/de1cc165239e32f6e7f3cf7744bc90cf4bba4142)
+- add additional meta channels [`c70f299`](https://github.com/ImageMagick/ImageMagick/commit/c70f299df861223dbab09ba92341e7c329f6bef7)
+- ensure source and hald images are in the same colorspace (#https://github.com/ImageMagick/ImageMagick/discussions/6173) [`852a723`](https://github.com/ImageMagick/ImageMagick/commit/852a723f1ea8a4dbf204f013173eb4e17ce4f0c1)
+- cosmetic [`71cc1d1`](https://github.com/ImageMagick/ImageMagick/commit/71cc1d17aae2181390a173de8f7291933ee8240f)
+- document multispectral imagery (after doc update) [`90e86d4`](https://github.com/ImageMagick/ImageMagick/commit/90e86d47392cc5d24c353c03256f5fc29c77cd27)
+- throw warning then writing image format with support for read but not write (https://github.com/ImageMagick/ImageMagick/discussions/6183) [`1083db7`](https://github.com/ImageMagick/ImageMagick/commit/1083db70529509e591baf643483746ef39ec785d)
+- MVG must be explicit [`4a24b8d`](https://github.com/ImageMagick/ImageMagick/commit/4a24b8dc1728052f5226f420b70530c29f6b16c4)
+- enable left bearing offset for undefined and west gravities [`7ba3a8a`](https://github.com/ImageMagick/ImageMagick/commit/7ba3a8a16af467b3b9d09d95d81747b2a9804adf)
+- no_interpolation member introduced in libraw 0.21 [`aba35a6`](https://github.com/ImageMagick/ImageMagick/commit/aba35a6ce00dca61a175f56dc4320db7192b4599)
+- Auto correct negative image positions and raise a warning instead. [`194e929`](https://github.com/ImageMagick/ImageMagick/commit/194e929793d7d9019051c5412d434b099c62b9c8)
+- Only write position offset since negative values are not allowed for rational (TIFFTAG_XRESOLUTION/TIFFTAG_YRESOLUTION). [`ffa3d25`](https://github.com/ImageMagick/ImageMagick/commit/ffa3d25689e9065624f6062522e25e4f03051466)
+- eliminate memory leak when writing the JPS image format [`71fa21b`](https://github.com/ImageMagick/ImageMagick/commit/71fa21bb1756b316c194dfcc7f59142f7ccec8fd)
+- release [`5eb3445`](https://github.com/ImageMagick/ImageMagick/commit/5eb344587cfd5af794ef07ec0ad7df99f7e2fa24)
+- module is a reserved work in C++ (20) [`92a5afc`](https://github.com/ImageMagick/ImageMagick/commit/92a5afcfaa497372aff3544748143128e9ac416e)
+- release [`2d24be5`](https://github.com/ImageMagick/ImageMagick/commit/2d24be538f286962c355cf422bb525375ac77998)
+
 ## [7.1.1-4](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-3...7.1.1-4) - 2023-03-18
 
 ### Commits
