@@ -74,10 +74,6 @@
     <td>the compression method to use. It controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are utilized, the encoder spends more time inspecting additional encoding possibilities and decide on the quality gain. Lower value might result in faster processing time at the expense of larger file size and lower compression quality.</td>
   </tr>
   <tr>
-    <td>near-lossless=<var>value</var></td>
-    <td>the near lossless encoding, between 0 (max-loss) and 100 (off).</td>
-  </tr>
-  <tr>
     <td>preprocessing=<var>value</var></td>
     <td>Choose from: 0=none, 1=segment-smooth, 2=pseudo-random dithering.</td>
   </tr>
