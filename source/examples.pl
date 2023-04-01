@@ -63,7 +63,7 @@ push(@$images,$example);
 print "Annotate...\n";
 $example=$model->Clone();
 $example->Label('Annotate');
-$example->Annotate(text=>'Magick',geometry=>'+0+20',font=>'Generic.ttf',
+$example->Annotate(font=>'Generic.ttf',text=>'Magick',geometry=>'+0+20',
   fill=>'gold',gravity=>'North',pointsize=>14);
 push(@$images,$example);
 
@@ -85,6 +85,12 @@ $example->Label('Auto Threshold');
 $example->AutoThreshold();
 push(@$images,$example);
 
+print "Bilateral Blur...\n";
+$example=$model->Clone();
+$example->Label('Bilateral Blur');
+$example->BilateralBlur('8x8');
+push(@$images,$example);
+
 print "Blur...\n";
 $example=$model->Clone();
 $example->Label('Blur');
@@ -95,6 +101,12 @@ print "Border...\n";
 $example=$model->Clone();
 $example->Label('Border');
 $example->Border(geometry=>'6x6',color=>'gold');
+push(@$images,$example);
+
+print "CLAHE...\n";
+$example=$model->Clone();
+$example->Label('CLAHE');
+$example->CLAHE('128x192+32+3');
 push(@$images,$example);
 
 print "Channel...\n";
@@ -503,9 +515,9 @@ push(@$images,$example);
 # Create image montage.
 #
 print "Montage...\n";
-$montage=$images->Montage(geometry=>'128x160+8+4>',gravity=>'Center',
-  tile=>'5x+10+200',compose=>'over',background=>'#ffffff',font=>'Generic.ttf',
-  pointsize=>18,fill=>'#600',stroke=>'none',shadow=>'true');
+$montage=$images->Montage(font=>'Generic.ttf',geometry=>'160x200+8+4>',
+  gravity=>'Center',tile=>'5x+10+200',compose=>'over',background=>'#ffffff',
+  pointsize=>20,fill=>'#600',stroke=>'none',shadow=>'true');
 
 $logo=Image::Magick->new();
 $logo->Read('logo:');
