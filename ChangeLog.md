@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-6](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-5...7.1.1-6) - 2023-04-02
+
+### Commits
+
+- beta release [`a680ab2`](https://github.com/ImageMagick/ImageMagick/commit/a680ab229d0115c62096828851242a6a4f30cea3)
+- Use const string instead. [`b094512`](https://github.com/ImageMagick/ImageMagick/commit/b0945129b022458c022a83ff0740889a9543e00f)
+- display -moments deprecation warning (#https://github.com/ImageMagick/ImageMagick/issues/6195) [`2ef7c36`](https://github.com/ImageMagick/ImageMagick/commit/2ef7c3652e780d8f4a1396ab7778e8814b0cc0ae)
+- set setting to True [`984294d`](https://github.com/ImageMagick/ImageMagick/commit/984294d86affe3af5d856c0ba3a5b399c5b4afd8)
+- conditional colormap [`89c07db`](https://github.com/ImageMagick/ImageMagick/commit/89c07db585f57fbda3cb2cf15e197b27a178054f)
+- Enabled OpenMP in the portable build. [`f92ab19`](https://github.com/ImageMagick/ImageMagick/commit/f92ab197cfabe8020c014818736e8bed71435d58)
+- enable near-lossless compression quality (https://github.com/ImageMagick/ImageMagick/discussions/6204) [`3331c9e`](https://github.com/ImageMagick/ImageMagick/commit/3331c9ed8bdbbdc548f8309a3fadf5b6e638bc98)
+- update documentation to use `magick` [`ad86745`](https://github.com/ImageMagick/ImageMagick/commit/ad867455b3cd6e726be11c67419b80dbeb6c9ac8)
+- switch http to https [`67d687e`](https://github.com/ImageMagick/ImageMagick/commit/67d687ef2b2c0c349120fcaad9ca3e6c3d9cb874)
+- uniform copyright [`71d27ee`](https://github.com/ImageMagick/ImageMagick/commit/71d27ee9c5fab945787547715581b7b48b4f5425)
+- channel 0 is a permitted channel (patch from @snibgo) [`4317238`](https://github.com/ImageMagick/ImageMagick/commit/43172387aee0432c1273c03fa30f925b15631fa3)
+- update multispectral imagery location [`a23b0f6`](https://github.com/ImageMagick/ImageMagick/commit/a23b0f6db3b66a8b0b0f3a5e9b86caf597d84a62)
+- enlarge image tile [`21fed7c`](https://github.com/ImageMagick/ImageMagick/commit/21fed7c3b44ecdd94c08a12f2d4ac28004cb6adc)
+- sharper [`7523d7e`](https://github.com/ImageMagick/ImageMagick/commit/7523d7e4057f6828a5f1c599a4b037354966a30c)
+- Removed unused includes. [`b359cb2`](https://github.com/ImageMagick/ImageMagick/commit/b359cb2b34a469a577bb6a33d3d0a7df844a3386)
+- Cosmetic. [`aee6ef6`](https://github.com/ImageMagick/ImageMagick/commit/aee6ef674a7682f626f778f984c1040ee2274e39)
+- Cosmetic [`f0af90e`](https://github.com/ImageMagick/ImageMagick/commit/f0af90e65fc66c79f69e78187c70af10b135dfa6)
+- Also set dpi-x and dpi-y when running rsvg-convert (#6214). [`d2e151e`](https://github.com/ImageMagick/ImageMagick/commit/d2e151ef619a70cfa5dd765619d8f64d8930c1f6)
+- Only write ResolutionResourceBlock when dpi is set (#6201). [`cc00cae`](https://github.com/ImageMagick/ImageMagick/commit/cc00cae94b58e8e4fcb93ed4ba8583289dd0a864)
+- possible heap buffer overflow (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-35q2-86c7-9247) [`d7a8bdd`](https://github.com/ImageMagick/ImageMagick/commit/d7a8bdd7bb33cf8e58bc01b4a4f2ea5466f8c6b3)
+- account for multiple meta channels (thanks to Dirk) [`359fc70`](https://github.com/ImageMagick/ImageMagick/commit/359fc70e904175c6ae49404f55fe9c3c071ad025)
+- Corrected return value of GetQuantumExtent for MultispectralQuantum. [`562360b`](https://github.com/ImageMagick/ImageMagick/commit/562360bb70990931e1380db2fd8b6cae39183f98)
+- There is no need to update the rows_remaining. [`8011e36`](https://github.com/ImageMagick/ImageMagick/commit/8011e3634772509bc11a5f4a41fa402fd5312853)
+- Improved calculation of the extent. [`142aa5b`](https://github.com/ImageMagick/ImageMagick/commit/142aa5b51f1b1359a0a583c8db7b6e52a9981642)
+- No longer "override" error message with NonconformingDrawingPrimitiveDefinition to improve error reporting. [`06186b1`](https://github.com/ImageMagick/ImageMagick/commit/06186b17f6ab292b582d57e8b0aeef66ed50293f)
+- multiply strip size by # of samples [`1be141e`](https://github.com/ImageMagick/ImageMagick/commit/1be141ef854916bf48bdda6f1ef0324fcde8cae9)
+- release [`b2dd67b`](https://github.com/ImageMagick/ImageMagick/commit/b2dd67b1681e23d0e0b9769d81bed23f05129e2a)
+
 ## [7.1.1-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-4...7.1.1-5) - 2023-03-26
 
 ### Commits
