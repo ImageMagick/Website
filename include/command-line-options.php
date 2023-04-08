@@ -1078,7 +1078,7 @@ symbol is no different than leaving it off.</p>
 <p>The <var>radius</var>{x<var>sigma</var>} controls a gaussian blur applied to the input image to reduce noise and smooth the edges.</p>
 <p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
-  
+
 <p>The <var>radius</var> is only used to determine the size of the
 array which holds the calculated Gaussian distribution. It should be an
 integer.  If not given, or set to zero, IM will calculate the largest possible
@@ -3346,14 +3346,14 @@ image is centered on an 800x600 black canvas: </p>
 </samp></pre>
 
 <p>The command can also be used with a ratio. If the image is not already at that ratio, it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has the expected effects.
-  
+
 <p>The following command crops a JPEG image so that it has a 4:3 ratio:</p>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick input.jpg -extent 4:3 -quality 92 output.jpg
 </samp></pre>
 
 <p>Append <samp>&lt;</samp> to pad only if the image is smaller than the specified size <em>and</em> not crop if the image is larger (i.e. no-op).  Append <samp>&gt;</samp> to crop only if the image is larger than the specified size <em>and</em> not extend if the image is smaller. (i.e. no-op).</p>
-  
+
 <p><?php seeGeometry(); ?></p>
 
 <div style="margin: auto;">
@@ -3397,7 +3397,7 @@ rendering text. If the family can be found it is used; if not, a default font
 "Courier" might be used if "System" is requested but not found). Note, the family can be a CSS-style font list.</p>
 
 <p>For other settings that affect fonts, see the options
-<a href="command-line-options.php#font">-font</a>, 
+<a href="command-line-options.php#font">-font</a>,
 <a href="command-line-options.php#pointsize">-pointsize</a>,
 <a href="command-line-options.php#stretch">-stretch</a>,
 <a href="command-line-options.php#style">-style</a>,
@@ -6098,7 +6098,7 @@ asymmetric since they involve 3−&gt;4 and 4−&gt;3 channel mapping.
 <p>For the JPEG and MPEG image formats, quality is 1 (lowest image quality and
 highest compression) to 100 (best quality but least effective compression).
 The default is to use the estimated quality of your input image if it can
-be determined, otherwise 92. When the quality is greater than 90, then the
+be determined, otherwise 92. When the quality is 90 or greater, then the
 chroma channels are not downsampled.
 Use the <a href="#sampling-factor">-sampling-factor</a> option to specify the
 factors for chroma downsampling.</p>
