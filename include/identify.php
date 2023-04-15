@@ -70,10 +70,10 @@ Image: rose.jpg
   Rendering intent: Perceptual
   Gamma: 0.454545
   Chromaticity:
-    red primary: (0.64,0.33)
-    green primary: (0.3,0.6)
-    blue primary: (0.15,0.06)
-    white point: (0.3127,0.329)
+    red primary: (0.64,0.33,0.03)
+    green primary: (0.3,0.6,0.1)
+    blue primary: (0.15,0.06,0.79)
+    white point: (0.3127,0.329,0.3583)
   Alpha color: grey74
   Background color: white
   Border color: srgb(223,223,223)
