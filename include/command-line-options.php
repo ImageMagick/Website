@@ -2215,7 +2215,9 @@ file header.</p>
 <p>The <a href="#density">-density</a> option sets an <var>attribute</var> and
 does not alter the underlying raster image. It may be used to adjust the
 rendered size for desktop publishing purposes by adjusting the scale applied
-to the pixels.  To change the number of pixels in the image so that it has the same physical dimensions (in inches or centimeters), use the <a href="#resample">-resample</a> option.</p>
+to the pixels.  To change the number of pixels in the image so that it has the
+same physical dimensions (in inches or centimeters), use the
+<a href="#resample">-resample</a> option.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="depth"></a>-depth <var>value</var></h2>
