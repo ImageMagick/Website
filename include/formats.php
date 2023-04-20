@@ -1404,7 +1404,7 @@ the supported image formats.</p>
     <td>MAP</td>
     <td>RW</td>
     <td>Colormap intensities and indices</td>
-    <td>Set -depth to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
+    <td>Set <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
   </tr>
 
   <tr>
