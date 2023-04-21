@@ -116,6 +116,9 @@
         <message name="ImageDoesNotHaveAnAlphaChannel">
           image does not have an alpha channel
         </message>
+        <message name="ImageDoesNotHaveAMaskChannel">
+          image does not have an mask channel
+        </message>
         <message name="ImageDoesNotHaveAThumbnail">
           image does not have a EXIF thumbnail
         </message>
@@ -324,14 +327,14 @@
           <message name="UnrecognizedAlphaChannelOption">
             unrecognized alpha channel option
           </message>
-          <message name="UnrecognizedBitsPerPixel">
-            unrecognized bits per pixel
-          </message>
           <message name="UnrecognizedImageCompression">
             unrecognized compression
           </message>
           <message name="UnrecognizedNumberOfColors">
             unrecognized number of colors
+          </message>
+          <message name="UnsupportedBitsPerPixel">
+            unsupported bits per pixel
           </message>
         </error>
         <fatalerror>
@@ -463,6 +466,9 @@
         <message name="URLNotFound">
           URL not found
         </message>
+        <message name="VectorGraphicsNestedTooDeeply">
+          vector graphics nested too deeply
+        </message>
       </error>
     </draw>
     <file>
@@ -499,6 +505,9 @@
         </message>
         <message name="ImageDepthNotSupported">
           image depth not supported
+        </message>
+        <message name="ImageSequenceRequired">
+          image sequence is required
         </message>
         <message name="ImageMorphologyDiffers">
           image morphology differs
@@ -537,6 +546,9 @@
       <warning>
         <message name="AssociateProfile">
           associate profile with image, a source and destination color profile required for transform
+        </message>
+        <message name="UnableToTransformColorspace">
+          unable to transform colorspace
         </message>
       </warning>
     </image>
@@ -610,7 +622,7 @@
         <message name="CompositeImageRequired">
           composite image required
         </message>
-        <message name="CurlyBrasesNestedTooDeeply">
+        <message name="CurlyBracesNestedTooDeeply">
           curly braces nested too deeply
         </message>
         <message name="DeprecatedOptionNoCode">
@@ -627,6 +639,9 @@
         </message>
         <message name="GeometryDoesNotContainImage">
           geometry does not contain image
+        </message>
+        <message name="ImageSequenceRequired">
+          image sequence is required
         </message>
         <message name="InterpretPropertyFailure">
           failure to interpret image property escapes
@@ -652,6 +667,9 @@
         <message name="ImagesAreNotTheSameSize">
           images are not the same size
         </message>
+        <message name="ImagePagesAreNotCoalesced">
+          image pages are not coalesced
+        </message>
         <message name="ImageSizeMustExceedBevelWidth">
           size must exceed bevel width
         </message>
@@ -660,6 +678,9 @@
         </message>
         <message name="KernelWidthMustBeAnOddNumber">
           kernel width must be an odd number
+        </message>
+        <message name="LabelExpected">
+          label expected
         </message>
         <message name="MapImageRequired">
           map image required
@@ -682,6 +703,9 @@
         </message>
         <message name="MustSpecifyAnImageName">
           must specify an image name
+        </message>
+        <message name="MustSpecifyImageDepth">
+          must specify image depth
         </message>
         <message name="MustSpecifyImageSize">
           must specify image size
@@ -760,6 +784,9 @@
         </message>
         <message name="UnbalancedParenthesis">
           unbalanced parenthesis
+        </message>
+        <message name="UndefinedVariable">
+          undefined variable
         </message>
         <message name="UnrecognizedAttribute">
           unrecognized attribute
@@ -981,6 +1008,9 @@
         <message name="NoSuchElement">
           no such element in list
         </message>
+        <message name="SetReadOnlyProperty">
+          attempt to set read-only property
+        </message>
         <message name="UnknownImageProperty">
           unknown image property
         </message>
@@ -995,7 +1025,7 @@
     <policy>
       <error>
         <message name="NotAuthorized">
-          not authorized
+          attempt to perform an operation not allowed by the security policy
         </message>
       </error>
     </policy>
@@ -1012,11 +1042,17 @@
     <resource>
       <limit>
         <error>
-          <message name="PixelCacheAllocationFailed">
-            pixel cache allocation failed
+          <message name="ListLengthExceedsLimit">
+            list length exceeds limit
           </message>
           <message name="MemoryAllocationFailed">
             memory allocation failed
+          </message>
+          <message name="PixelCacheAllocationFailed">
+            pixel cache allocation failed
+          </message>
+          <message name="TooManyExceptions">
+            too many exceptions
           </message>
           <message name="TooManyObjects">
             too many objects
@@ -1312,6 +1348,11 @@
         average image sequence
       </message>
     </Average>
+    <Blur>
+      <message name="Image">
+        blur image
+      </message>
+    </Blur>
     <Chop>
       <message name="Image">
         chop image
@@ -1435,11 +1476,11 @@
         load images
       </message>
     </Load>
-    <Magnfiy>
+    <Magnify>
       <message name="Image">
-        magnfiy image
+        magnify image
       </message>
-    </Magnfiy>
+    </Magnify>
     <MedianFilter>
       <message name="Image">
         filter image with neighborhood ranking
