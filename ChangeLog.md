@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-8](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-7...7.1.1-8) - 2023-04-22
+
+### Fixed
+
+- Added checks to make sure all bytes were read to resolve #6267. [`#6267`](https://github.com/ImageMagick/ImageMagick/issues/6267)
+
+### Commits
+
+- beta release [`35ec38f`](https://github.com/ImageMagick/ImageMagick/commit/35ec38f38915f5635ea2f8dcaa20c2960e711db5)
+- Treat warnings as errors in the MacOS build and enabled more warnings for that build. [`02b2aa6`](https://github.com/ImageMagick/ImageMagick/commit/02b2aa6bd80b50f9fbaaf9f72c77e04c3b6a9294)
+- Corrected compare. [`35505ca`](https://github.com/ImageMagick/ImageMagick/commit/35505caa6808e2b13e395750fc75fc785a2cfad4)
+- Not longer export methods that are not used in other parts of the library. [`01251e5`](https://github.com/ImageMagick/ImageMagick/commit/01251e5e41f9581597d586d73c2e562f70d66af8)
+- No longer call ParseMetaGeometry twice when we don't add a thumbnail. [`6a94dd8`](https://github.com/ImageMagick/ImageMagick/commit/6a94dd85257db6d8b0dd44d989e91ea0fbd65d3c)
+- Fix typo that caused a division by zero in #6263. [`78347b5`](https://github.com/ImageMagick/ImageMagick/commit/78347b5f0e6bc92358b86ec3eaded398ac1069f8)
+- don't reduct 3 to 1 channel gray if meta channels are present [`a8f6186`](https://github.com/ImageMagick/ImageMagick/commit/a8f6186d222aff99719c4dcd0d9f04ad03876d95)
+- The depth must be specified when reading a map image. [`2d6e2e9`](https://github.com/ImageMagick/ImageMagick/commit/2d6e2e9e28216942a55691f186b9f952342684c3)
+- validate pixel offset [`90e067c`](https://github.com/ImageMagick/ImageMagick/commit/90e067cddde91ac3cd7a660d6e99b6fde71b934c)
+- validate pixel offset [`d92cb0e`](https://github.com/ImageMagick/ImageMagick/commit/d92cb0e65707cfee6ca0adb58075dea04cbfc722)
+- release [`920f792`](https://github.com/ImageMagick/ImageMagick/commit/920f79206ff59f30a4cff22c9c9c393508b82663)
+
 ## [7.1.1-7](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-6...7.1.1-7) - 2023-04-16
 
 ### Merged
