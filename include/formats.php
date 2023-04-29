@@ -592,6 +592,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://gitlab.com/ImageMagick/MagickCache">MCR</a></td>
+    <td>RW</td>
+    <td>Magick Cache Repository</td>
+    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/miff.php">MIFF</a></td>
     <td>RW</td>
     <td>Magick multispectral image file format</td>
