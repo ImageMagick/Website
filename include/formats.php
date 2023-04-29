@@ -263,6 +263,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://gitlab.com/ImageMagick/MagickCache">DMR</a></td>
+    <td>RW</td>
+    <td>Digital media repository</td>
+    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.</td>
+  </tr>
+
+  <tr>
     <td><a href="http://www.adobe.com/products/dng/main.html">DNG</a></td>
     <td>R</td>
     <td>Digital Negative</td>
@@ -589,13 +596,6 @@ the supported image formats.</p>
     <td>R</td>
     <td>MATLAB image format</td>
     <td> </td>
-  </tr>
-
-  <tr>
-    <td><a href="https://gitlab.com/ImageMagick/MagickCache">MCR</a></td>
-    <td>RW</td>
-    <td>Magick Cache Repository</td>
-    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.</td>
   </tr>
 
   <tr>
