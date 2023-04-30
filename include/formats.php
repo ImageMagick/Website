@@ -266,7 +266,7 @@ the supported image formats.</p>
     <td><a href="https://gitlab.com/ImageMagick/MagickCache">DMR</a></td>
     <td>RW</td>
     <td>Digital media repository</td>
-    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.</td>
+    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.  Supported options include <samp>dmr:passkey</samp>, <samp>dmr:passphrase</samp>, and <samp>dmr:ttl</samp>.</td>
   </tr>
 
   <tr>
