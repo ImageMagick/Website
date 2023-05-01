@@ -820,16 +820,16 @@ use:</p>
   </tr>
 
   <tr>
-    <td>heic:speed=<var>value</var></td>
-    <td>set the HEIC speed parameter. Integer value from 0-9. Default is 5.</td>
-    </td>
-  </tr>
-
-  <tr>
     <td>heic:preserve-orientation=<var>true</var></td>
     <td>Preserve the original EXIF orientation during HEIC decoding and rotate
     the pixels accordingly. By default, EXIF orientation is reset to "1" to
     match the actual orientation of pixels in HEIC.
+    </td>
+  </tr>
+
+  <tr>
+    <td>heic:speed=<var>value</var></td>
+    <td>set the HEIC speed parameter. Integer value from 0-9. Default is 5.</td>
     </td>
   </tr>
 
