@@ -266,7 +266,7 @@ the supported image formats.</p>
     <td><a href="https://github.com/ImageMagick/MagickCache">DMR</a></td>
     <td>RW</td>
     <td>Digital media repository</td>
-    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.  Supported options include <samp>dmr:path</samp> (location of repository), <samp>dmr:passkey</samp> (key to open digital media repository), <samp>dmr:passphrase</samp> (optionally scramble or unscramble media resource), <samp>dmr:ttl</samp> (time-to-live), and <samp>dmr:meta</samp> (metadata).</td>
+    <td>Requires the <a href="https://gitlab.com/ImageMagick/MagickCache">MagickCache</a> delegate library.  Supported options include <samp>dmr:path</samp> (location of repository), <samp>dmr:passkey</samp> (key to open digital media repository), <samp>dmr:passphrase</samp> (optionally scramble or unscramble media resource), and <samp>dmr:ttl</samp> (time-to-live); Set the <samp>dmr:meta</samp> (metadata) property to store the resource as meta data.</td>
   </tr>
 
   <tr>
