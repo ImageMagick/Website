@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-9](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-8...7.1.1-9) - 2023-05-14
+
+### Merged
+
+- Add support for Oklab [`#6309`](https://github.com/ImageMagick/ImageMagick/pull/6309)
+
+### Commits
+
+- beta release [`0bb7454`](https://github.com/ImageMagick/ImageMagick/commit/0bb745472aaa2f3f658cd4e327d59acc4d1bd990)
+- Code cleanup of the fuzzers and silence warnings. [`d636ff4`](https://github.com/ImageMagick/ImageMagick/commit/d636ff40b511276949d85001a6dbf39652095fb6)
+- update autoconf configuration file [`699085f`](https://github.com/ImageMagick/ImageMagick/commit/699085f91e996e19c92e2da4fff3952ab19d0a4a)
+- framework for magick cache repository coder [`46fe429`](https://github.com/ImageMagick/ImageMagick/commit/46fe429c07fe2fd6a9533ed1de131907a12cf7d8)
+- support digital media repository [`0a439ab`](https://github.com/ImageMagick/ImageMagick/commit/0a439abbf12035b3d55ea214d1c36d8fa6a788c0)
+- check for NaN values [`c5762cc`](https://github.com/ImageMagick/ImageMagick/commit/c5762cc9ca05cdb28dddde2d2d395925f871722d)
+- alpha release of the digital media repository coder [`1b82a1d`](https://github.com/ImageMagick/ImageMagick/commit/1b82a1db1da3710d3de8a0be31c40fd3c5a7d798)
+- eliminate memory leak [`514070c`](https://github.com/ImageMagick/ImageMagick/commit/514070c6d818ba6d31a2ef68e8c4899dc0320b35)
+- bump minimum MagickCache version [`6f00ac4`](https://github.com/ImageMagick/ImageMagick/commit/6f00ac46abfc42e1ec0e4f5ba2490550e65495cc)
+- get the width of the main channel [`d4ac19b`](https://github.com/ImageMagick/ImageMagick/commit/d4ac19b2ea6451fad453f680e246d0eabafa6f23)
+- Use autoreconf -fiv instead. [`fb1e259`](https://github.com/ImageMagick/ImageMagick/commit/fb1e259f33582fcc630b5a66927d6b922253e011)
+- support meta resource type [`be401fb`](https://github.com/ImageMagick/ImageMagick/commit/be401fbdca6ee64d0266a2ce78486c8174047129)
+- The libheif project switched to cmake. [`6b76461`](https://github.com/ImageMagick/ImageMagick/commit/6b764618635898b86aed962ce18aba1722de9a94)
+- account for # channels in image [`402c32d`](https://github.com/ImageMagick/ImageMagick/commit/402c32d88b294abf92bb1414a4400a27d9f623c8)
+- Try to add libde265 to the linking to fix the fuzz build. [`7410474`](https://github.com/ImageMagick/ImageMagick/commit/7410474430f44ab0f3cd5d11ca83a51cd952c75a)
+- ensure blob and meta resource type can make a round trip [`3797114`](https://github.com/ImageMagick/ImageMagick/commit/379711417b449b5782d23e37a5d204e1d3194222)
+- only clone resource image, not blob or meta [`7a63f55`](https://github.com/ImageMagick/ImageMagick/commit/7a63f554dc0f986aa3ef2767d041a0f3294decd2)
+- Revert changes. [`f8feb2e`](https://github.com/ImageMagick/ImageMagick/commit/f8feb2ee1b03f0190ca4440777fb2330e3341ce1)
+- Corrected linker flags. [`3a1ce45`](https://github.com/ImageMagick/ImageMagick/commit/3a1ce456f0b02d456078906897b20265a3111ab5)
+- No longer use HOST_FILLORDER but force the user to specify it when they don't want LSB byte order (#6300). [`937d3dd`](https://github.com/ImageMagick/ImageMagick/commit/937d3ddf1ed658c40e52aeb8c5ef17dbc5c67248)
+- Tiny optimization. [`ac48d89`](https://github.com/ImageMagick/ImageMagick/commit/ac48d8951371e41f7f5e833034762122b8caea85)
+- Code style changes. [`783a78f`](https://github.com/ImageMagick/ImageMagick/commit/783a78f54798a1a48d27cbe8bf6c34ad6d40b478)
+- log gamma [`0cf104a`](https://github.com/ImageMagick/ImageMagick/commit/0cf104a57736ab6b0af196bc04dd9736b9429781)
+- rename Oklab to OkLab [`eb44114`](https://github.com/ImageMagick/ImageMagick/commit/eb441143c3449c76000229db9fdf917fee1ced9f)
+- revert [`afb52e3`](https://github.com/ImageMagick/ImageMagick/commit/afb52e3625afd8eeb99207ba02daabc977f19df1)
+- cosmetic [`d35b2ab`](https://github.com/ImageMagick/ImageMagick/commit/d35b2abef0df4c179b68f922798be6032fcd2565)
+- don't default grayscale to paletted for PNG (https://github.com/ImageMagick/ImageMagick/issues/6314) [`ac5f29e`](https://github.com/ImageMagick/ImageMagick/commit/ac5f29e7eb4fda06b465d9088d6035ed91c9f58e)
+- release [`776a88d`](https://github.com/ImageMagick/ImageMagick/commit/776a88df6a893d6aba78b2b184490f959d8b9d04)
+
 ## [7.1.1-8](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-7...7.1.1-8) - 2023-04-22
 
 ### Fixed
