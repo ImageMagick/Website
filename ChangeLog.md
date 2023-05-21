@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-10](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-9...7.1.1-10) - 2023-05-21
+
+### Commits
+
+- beta release [`e31343f`](https://github.com/ImageMagick/ImageMagick/commit/e31343f0153b3871985aa1deaab446d8d58197f2)
+- carefully crafted image files (TIM2, JPEG) no longer overflow buffer nor use heap after free (thanks to Juzhi Lu, Zhen Zhou, Likang Luo of NSFOCUS Security Team) [`1061db7`](https://github.com/ImageMagick/ImageMagick/commit/1061db7f80fdc9ef572ac60b55f408f7bab6e1b0)
+- cosmetic [`bbf3966`](https://github.com/ImageMagick/ImageMagick/commit/bbf396695bf678c0e39986d34f02fba3735b61a6)
+- Tweaks to devcontainer to also make it possible to run it locally [`dfb0b6e`](https://github.com/ImageMagick/ImageMagick/commit/dfb0b6e2c957269ef858e1858c806372c46945ae)
+- Switch to regular Ubuntu image instead. [`b1ea9fe`](https://github.com/ImageMagick/ImageMagick/commit/b1ea9fef2059c0f4e88a4084a4139b049c3219c4)
+- Make sure options are properly quoted to resolve the issue reported in #6338. [`d31c80d`](https://github.com/ImageMagick/ImageMagick/commit/d31c80d15a2c82fc1dd8e889e0f97b0219079a57)
+- Mark argument as unused. [`43e2cb6`](https://github.com/ImageMagick/ImageMagick/commit/43e2cb6e3004dec4a866ac5dd6b3122b4d0abf90)
+- possible RCE vulnerability (https://github.com/ImageMagick/ImageMagick/issues/6339) [`17c4859`](https://github.com/ImageMagick/ImageMagick/commit/17c4859bf4b1551185ab0b296e61b60b13969917)
+- properly cast double to size_t (https://github.com/ImageMagick/ImageMagick/issues/6341) [`3d6d98d`](https://github.com/ImageMagick/ImageMagick/commit/3d6d98d8a2be30d74172ab43b5b8e874d2deb158)
+- cosmetic [`8ce0403`](https://github.com/ImageMagick/ImageMagick/commit/8ce0403420cdb0bf492990d8a53fad3a8fa691c0)
+- Fixed MSYS2 build error. [`f9c9da1`](https://github.com/ImageMagick/ImageMagick/commit/f9c9da14cf2cb97ad0d0f8dc54ca40e36b25c7c4)
+- Forgot to save file before commit. [`7566fdd`](https://github.com/ImageMagick/ImageMagick/commit/7566fdd5913b8b01ed3c7446bc2da6807a118133)
+- Reverted the patch of https://github.com/ImageMagick/ImageMagick/issues/6339. [`99b72d8`](https://github.com/ImageMagick/ImageMagick/commit/99b72d81a3370a966a52ec2fa88dacda3f5b028e)
+- add caution when enabling pipe support [`1ff6dd4`](https://github.com/ImageMagick/ImageMagick/commit/1ff6dd499f53cd06a01a10e3da95cdb08db6c99a)
+- eliminate compiler warning [`4873197`](https://github.com/ImageMagick/ImageMagick/commit/4873197d1419d1b7e86598d5cd06bed4e20c6aef)
+- do not initialize structures on stack [`7c7d2fd`](https://github.com/ImageMagick/ImageMagick/commit/7c7d2fd59ffe88442660486f8235df854441c58b)
+- Use memset to initialize structures. [`68148d5`](https://github.com/ImageMagick/ImageMagick/commit/68148d54d18c90fa5d6fe383f9a2bb7d7dbec392)
+- incompatible function pointer types passing (https://github.com/ImageMagick/ImageMagick/issues/6347) [`2fbf938`](https://github.com/ImageMagick/ImageMagick/commit/2fbf9383c574d08327f7e41db50d613003857604)
+- Fixed Windows build. [`3b5d986`](https://github.com/ImageMagick/ImageMagick/commit/3b5d98645499de4d777e7d6e65d0be7966d9986e)
+- release [`fa1d7e6`](https://github.com/ImageMagick/ImageMagick/commit/fa1d7e6f1d026d1d70072b04a57857afdb47c29a)
+
 ## [7.1.1-9](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-8...7.1.1-9) - 2023-05-14
 
 ### Merged
