@@ -1214,7 +1214,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/WebP">WEBP</a></td>
     <td>RW</td>
     <td>Weppy image format</td>
-    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">WebP Encoding Options</a> for more details.</td>
+    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  The muxing delegate library is required to read animated Webp image containers. Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">WebP Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
