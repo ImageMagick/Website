@@ -488,6 +488,16 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pixel:compliance=<var>{none|undefined|svg|mvg|x11|xpm}</var></td>
+    <td>In combination with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
+  </tr>
+
+  <tr>
+    <td>png:bit-depth=<var>value</var></td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>profile:skip=<var>name1,name2,...</var></td>
     <td>Skip the named profile[s] when reading the image. Use skip="*" to
     skip all named profiles in the image. Many named profiles exist,
@@ -1042,16 +1052,6 @@ use:</p>
 
   <tr>
     <td>pdf:use-trimbox=<var>true</var></td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>pixel:compliance=<var>{none|undefined|svg|mvg|x11|xpm}</var></td>
-    <td>In combination with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
-  </tr>
-
-  <tr>
-    <td>png:bit-depth=<var>value</var></td>
     <td> </td>
   </tr>
 
