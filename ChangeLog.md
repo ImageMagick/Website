@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-11](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-10...7.1.1-11) - 2023-05-29
+
+### Merged
+
+- Optimize image and vector files to minimize filesizes and page loads [`#6352`](https://github.com/ImageMagick/ImageMagick/pull/6352)
+
+### Fixed
+
+- Swap order to fix #6347. [`#6347`](https://github.com/ImageMagick/ImageMagick/issues/6347)
+
+### Commits
+
+- beta release [`375e71b`](https://github.com/ImageMagick/ImageMagick/commit/375e71b67686549c4f5866d0b50db9ab20b324f8)
+- list compression options [`dc491e2`](https://github.com/ImageMagick/ImageMagick/commit/dc491e2ef06bfc266d7dcb396703e046f838c485)
+- cosmetic [`069ac80`](https://github.com/ImageMagick/ImageMagick/commit/069ac80cc234207edea3c64ced5c9ba84a91b71f)
+- build failure with --without-threads option [`4ea685b`](https://github.com/ImageMagick/ImageMagick/commit/4ea685bd83890ce2b9ab3a9606d460b41a895eec)
+- ensure mutex is initialized [`4553068`](https://github.com/ImageMagick/ImageMagick/commit/4553068cc7e1ffdf501702e173610d32d404a99c)
+- cosmetic [`b7c1554`](https://github.com/ImageMagick/ImageMagick/commit/b7c1554c60a54a9a37ec848d87870f4331d72ae8)
+- costmetic [`013d523`](https://github.com/ImageMagick/ImageMagick/commit/013d523d4cb28f3469a44062b6da6488b62c1c62)
+- eliminate compiler exception [`e771f13`](https://github.com/ImageMagick/ImageMagick/commit/e771f13799c66f7e4fe3645bd68b4e8a2b80903b)
+- eliminate compiler exception [`bb3d969`](https://github.com/ImageMagick/ImageMagick/commit/bb3d969bf6b8db382b6e066c12a8680f8c993b28)
+- Fixed the calculation of the clut_size to resolve the issue reported in: https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-xfwq-qg5m-83xr. [`fac0ea8`](https://github.com/ImageMagick/ImageMagick/commit/fac0ea8011704c675f65152a161427621cf07917)
+- cosmetic [`fd09cf9`](https://github.com/ImageMagick/ImageMagick/commit/fd09cf94aab30f3ad600e5bc3a6c61410a4d0d5b)
+- make sure count is not equal to zero when reading TIFF fields [`bea09ba`](https://github.com/ImageMagick/ImageMagick/commit/bea09ba258631cf7747aed1f434c5a56fa7876a3)
+- check colorspace before setting primaries [`fd736b6`](https://github.com/ImageMagick/ImageMagick/commit/fd736b6e8203bb3c642f21b95baac3285b15d693)
+- eliminate compiler exception [`e549f31`](https://github.com/ImageMagick/ImageMagick/commit/e549f311fb2dc3453df91caae5bf7933a3a65557)
+- Revert back to earlier version. [`241ceb0`](https://github.com/ImageMagick/ImageMagick/commit/241ceb06a4c4bc177e9f6358845ddd3f32d68e21)
+- Rename defines. [`ddb6b02`](https://github.com/ImageMagick/ImageMagick/commit/ddb6b02d8fa5756366553d9780687b57c7c216b8)
+- Added missing define and corrected MAGICKCORE_DPC_SUPPORT checks. [`3f81630`](https://github.com/ImageMagick/ImageMagick/commit/3f81630d1b9a56acd83435b548196a46eb85b906)
+- Refactor code to silence warnings. [`af284ad`](https://github.com/ImageMagick/ImageMagick/commit/af284ad66a65f0fc8721a750ccda12d5abf3930b)
+- Use num_threads instead because the number of threads is not related to images. [`442144c`](https://github.com/ImageMagick/ImageMagick/commit/442144c976cad2a2966a0b92a50f58862055aedd)
+- Silence warning when threading is disabled. [`8d0daa2`](https://github.com/ImageMagick/ImageMagick/commit/8d0daa252d9ca45c154243c44c5bdde4cb4720dc)
+- Added support for reading grayscale images. [`cffd9de`](https://github.com/ImageMagick/ImageMagick/commit/cffd9de73622c540b0e0e889c32445cef20c5a1c)
+- cosmetic [`bf6c895`](https://github.com/ImageMagick/ImageMagick/commit/bf6c8959e96b0e6874460c690572e1b108c9cc2c)
+- cosmetic [`54eeadf`](https://github.com/ImageMagick/ImageMagick/commit/54eeadf2989a835b24d66eec58dabc813099b6a6)
+- cosmetic [`0bede66`](https://github.com/ImageMagick/ImageMagick/commit/0bede6611e845be6b017b7c56d815f6598d27d90)
+- prevent possible integer overflow [`f04a7eb`](https://github.com/ImageMagick/ImageMagick/commit/f04a7eb3331672906bcae1be337c0ba0a4e8cbc1)
+- release [`11ffa6e`](https://github.com/ImageMagick/ImageMagick/commit/11ffa6eb4548644a718158daa286295ed3174054)
+
 ## [7.1.1-10](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-9...7.1.1-10) - 2023-05-21
 
 ### Commits
