@@ -962,7 +962,7 @@ the supported image formats.</p>
     <td>PTIF</td>
     <td>RW</td>
     <td>Pyramid encoded <a href="#TIFF">TIFF</a></td>
-    <td>Multi-resolution <a href="#TIFF">TIFF</a> containing successively smaller versions of the image down to the size of an icon.</td>
+    <td>Multi-resolution <a href="#TIFF">TIFF</a> containing successively smaller versions of the image down to the size of an icon.  Use <samp>-define ptif:pyramid</samp> to specify the min-base and levels of the pyramid, e.g. 64x4.</td>
   </tr>
 
   <tr>
