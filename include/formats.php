@@ -641,6 +641,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>MPO</td>
+    <td>R</td>
+    <td>Multi-picture Object</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td>MPR</td>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
