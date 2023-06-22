@@ -192,9 +192,9 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://wwwimages2.adobe.com/content/dam/acom/en/products/speedgrade/cc/pdfs/cube-lut-specification-1.0.pdf">CUBE</a></td>
+    <td>CUBE</td>
     <td>R</td>
-    <td>Cube Color lookup table converted to a HALD image</td>
+    <td>A lookup table containing math instructions to replace a color (based on RGB value) by another one. It's like a color grading preset.  This process is done pixel by pixel with a very high accuracy.</td>
     <td>Select levels like this: cube:Vibrant.cube[8] for level 8</td>
   </tr>
 
