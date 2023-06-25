@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-12](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-11...7.1.1-12) - 2023-06-25
+
+### Merged
+
+- Add support for DXGI_FORMAT_R10G10B10A2_UNORM [`#6423`](https://github.com/ImageMagick/ImageMagick/pull/6423)
+
+### Commits
+
+- beta release [`3c43475`](https://github.com/ImageMagick/ImageMagick/commit/3c43475bb5dc7eec9af3babc789bf8bf65677e90)
+- default colorspaces are xyY and HSB [`f45cb56`](https://github.com/ImageMagick/ImageMagick/commit/f45cb56383bda833708f08d6f8a580c833ffd1c9)
+- Check for _MSC_VER instead. [`cd00c90`](https://github.com/ImageMagick/ImageMagick/commit/cd00c904f9d6c01371b5d3451eaf23072c0cdd9d)
+- Changed options for heif build. [`3f9df4f`](https://github.com/ImageMagick/ImageMagick/commit/3f9df4fd698ca93b304dee4691d7f98e1a99ffc4)
+- check geometry boundaries [`a6f4445`](https://github.com/ImageMagick/ImageMagick/commit/a6f4445f6c559756066d102c25ade248f62742bf)
+- eliminate unintialized value [`1a9bd29`](https://github.com/ImageMagick/ImageMagick/commit/1a9bd29227753059ee7580168f5aa5f8020cb664)
+- multi-picture support (future) [`81c214c`](https://github.com/ImageMagick/ImageMagick/commit/81c214c7fba3d0086b07ad52057bdeea3ca270d8)
+- reject invalid BMP image @ https://github.com/ImageMagick/ImageMagick/issues/6393 [`cd6b437`](https://github.com/ImageMagick/ImageMagick/commit/cd6b43771b82392decefecadc86a9ba6fd30cad3)
+- support -define ptif:pyramid define [`3030b16`](https://github.com/ImageMagick/ImageMagick/commit/3030b16bc61b6216e6b0901dceb296f09a37a3ac)
+- eliminate OMP error (https://github.com/ImageMagick/ImageMagick/discussions/6399) [`6afa456`](https://github.com/ImageMagick/ImageMagick/commit/6afa45658ef7bbe6c8d3fa1655de822b385b380b)
+- separate all channels, not just one marked for update (#https://github.com/ImageMagick/ImageMagick/issues/6400) [`f6673cb`](https://github.com/ImageMagick/ImageMagick/commit/f6673cbe55664739b178a51daeacc6c7d104f17c)
+- cosmetic [`360fba4`](https://github.com/ImageMagick/ImageMagick/commit/360fba409cf552e3758163a3758e748c8ba0fcab)
+- cosmetic [`c29baa2`](https://github.com/ImageMagick/ImageMagick/commit/c29baa214d591de9f1045a8782361fef0d7efdd4)
+- move OMP guard inside conditional [`82c7014`](https://github.com/ImageMagick/ImageMagick/commit/82c701463f1ab5d89345397d0acce5ae78b08d14)
+- Fixed build. [`8926ea9`](https://github.com/ImageMagick/ImageMagick/commit/8926ea965803bdf47321cb02b5b16a3860bc7067)
+- latest CSS [`195a191`](https://github.com/ImageMagick/ImageMagick/commit/195a19168f8dfbfedc21b20a1ca3515bac96f524)
+- check the precision of the alpha channel [`d04a472`](https://github.com/ImageMagick/ImageMagick/commit/d04a47227637dbb3af9231b0107ccf9677bf985e)
+- support the MPO image format [`46985ca`](https://github.com/ImageMagick/ImageMagick/commit/46985cabc38b49e8b962b66ecb999a70e26b1963)
+- Fixed build on Windows. [`905b2d2`](https://github.com/ImageMagick/ImageMagick/commit/905b2d26e9e1c1fff6045916c2f0e0bb5c2fee02)
+- support JPEG alt signature [`593902e`](https://github.com/ImageMagick/ImageMagick/commit/593902e0fcd1b1323ea660496f55b2a299786a6e)
+- eliminate ANSI compiler warning [`12792bf`](https://github.com/ImageMagick/ImageMagick/commit/12792bf6f75addad5ef489d62c0c0673f87f1732)
+- There is no need to also code WebPEncode when WebPAnimEncoderAdd is used (#6415). [`f3ea247`](https://github.com/ImageMagick/ImageMagick/commit/f3ea247017fb3ac4b28201231109f8720ca84811)
+- https://github.com/ImageMagick/ImageMagick/issues/6422 [`efc1c0e`](https://github.com/ImageMagick/ImageMagick/commit/efc1c0e71755b5762e734e50e82a9be2f694382e)
+- update Linux built documentation [`2cc67c3`](https://github.com/ImageMagick/ImageMagick/commit/2cc67c37aa03cb574f317793ad27f7736cba140d)
+- Improved check when setting mem-&gt;max_memory_to_use. [`1242ca5`](https://github.com/ImageMagick/ImageMagick/commit/1242ca52b2e91ef80abc6d42a61ced65e0b90fbd)
+- Use the correct macro instead. [`a11148a`](https://github.com/ImageMagick/ImageMagick/commit/a11148a0dfa270c0b9f5073da7ca9e7f35a2edd3)
+- Turns out we already get the include from studio.h. [`3f6161b`](https://github.com/ImageMagick/ImageMagick/commit/3f6161b9cb1e64abc67ce066c819cad27d32e51b)
+- Added missing check to test if the blob could be opened (#6429) [`9fbd8f8`](https://github.com/ImageMagick/ImageMagick/commit/9fbd8f822ced6947d7558ff255d48e091a71477f)
+- Added extra flag for xz build. [`49b8727`](https://github.com/ImageMagick/ImageMagick/commit/49b8727c605a6c62b6a718778aaa40228a439609)
+- Patches for upcoming breaking changes in the jxl library. [`9db502e`](https://github.com/ImageMagick/ImageMagick/commit/9db502e6a70ca2534dfc78c09f156aa55f88dcfb)
+- Disable the jpeg encoder and decoder of libheif to work around linking issues in the oss-fuzz build. [`b3f8ed7`](https://github.com/ImageMagick/ImageMagick/commit/b3f8ed7a71896159804fecc16b5d35701807844e)
+- release [`a09d8dd`](https://github.com/ImageMagick/ImageMagick/commit/a09d8dd5e3a92362cf70c184670b23163587e6f8)
+
 ## [7.1.1-11](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-10...7.1.1-11) - 2023-05-29
 
 ### Merged
