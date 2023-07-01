@@ -80,7 +80,7 @@
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
     <li><a href="https://imagemagick.org/archive/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
     <li><a href="http://rmagick.rubyforge.org/">RMagick</a>: is an interface between the Ruby programming language and ImageMagick.</li>
-    <li><a href="http://tclmagick.sourceforge.net/">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
+    <li><a href="https://imagemagick.org/archive/tcl">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
   </ul></li>
 </dl>
 

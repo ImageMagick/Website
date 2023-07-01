@@ -135,7 +135,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
 <dt class="col-md-4"><a class="anchor" id="tcl"></a>Tcl/Tk</dt>
 
-<dd class="col-md-8"><a href="http://tclmagick.sourceforge.net/">TclMagick</a> a native Tcl-extension to the ImageMagick MagickWand API.</dd>
+<dd class="col-md-8"><a href="https://imagemagick.org/archive/tcl">TclMagick</a> a native Tcl-extension to the ImageMagick MagickWand API.</dd>
 
 <dt class="col-md-4"><a class="anchor" id="wasm"></a>WebAssembly</dt>
 <dd class="col-md-8"><a href="https://github.com/dlemstra/Magick.WASM">Magick.WASM</a> the WASM library for ImageMagick.</dd>
