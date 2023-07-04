@@ -139,7 +139,7 @@
   </tr>
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a></td>
-    <td>support multispectral imagery up to 32 bands, 18 of them meta channels.</td>
+    <td>support multispectral imagery up to 32 bands, 22 of them meta channels.</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
