@@ -6369,7 +6369,7 @@ continue to treat the image using its former resolution, ignoring the image
 resolution specified in the standard file header.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="resize"></a>-reshape <var>geometry</var></h2>
+  <h2><a class="anchor" id="reshape"></a>-reshape <var>geometry</var></h2>
 </div>
 
 <p class="magick-description">Reshape an image.</p>
