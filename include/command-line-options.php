@@ -238,6 +238,7 @@
   <li><a class="dropdown-item" href="#render">render</a></li>
   <li><a class="dropdown-item" href="#repage">repage</a></li>
   <li><a class="dropdown-item" href="#resample">resample</a></li>
+  <li><a class="dropdown-item" href="#reshape">reshape</a></li>
   <li><a class="dropdown-item" href="#resize">resize</a></li>
   <li><a class="dropdown-item" href="#respect-parentheses">respect-parentheses</a></li>
   <li><a class="dropdown-item" href="#reverse">reverse</a></li>
@@ -6366,6 +6367,12 @@ resample resolution.</p>
 embedded profile. If this profile exists in the image, then Photoshop will
 continue to treat the image using its former resolution, ignoring the image
 resolution specified in the standard file header.</p>
+
+<div style="margin: auto;">
+  <h2><a class="anchor" id="resize"></a>-reshape <var>geometry</var></h2>
+</div>
+
+<p class="magick-description">Reshape an image.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="resize"></a>-resize <var>geometry</var></h2>
