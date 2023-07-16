@@ -5,6 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-13](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-12...7.1.1-13) - 2023-07-16
+
+### Merged
+
+- Add Canon Raw v3 (CR3) as mime type [`#6450`](https://github.com/ImageMagick/ImageMagick/pull/6450)
+
+### Commits
+
+- beta release [`56f4789`](https://github.com/ImageMagick/ImageMagick/commit/56f4789405ac2d3abe23cb5dad3d9ccd383ab626)
+- beta release [`63e2617`](https://github.com/ImageMagick/ImageMagick/commit/63e261708a8e791ef5922a3da45aba3a6ff781b4)
+- MetaPixelChannel is no longer used, MetaPixelChannels should be used instead. [`237b8ec`](https://github.com/ImageMagick/ImageMagick/commit/237b8ec913113a6c1dfd0a413438005c2f810607)
+- heap-buffer-overflow in ImageMagick &lt;= 7.1.1-12, contributed by Hardik shah of Vehere (Dawn Treaders team) [`a531d28`](https://github.com/ImageMagick/ImageMagick/commit/a531d28e31309676ce8168c3b6dbbb5374b78790)
+- Corrected patch for heap-buffer-overflow reported by Hardik shah of Vehere. [`ac1f7ca`](https://github.com/ImageMagick/ImageMagick/commit/ac1f7ca1d88e14d30e5ae9bd30aad150bdbec20e)
+- Correct type of return value for TIFFReadTile and added more checks. [`6213344`](https://github.com/ImageMagick/ImageMagick/commit/6213344a66d69c6bb551e5bf7c521822daf42600)
+- Added extra for when TIFFReadEncodedStrip returns -1. [`0aea35f`](https://github.com/ImageMagick/ImageMagick/commit/0aea35f2adc3f6af7bfc687d923a56d92671bd97)
+- Code style changes. [`264acfc`](https://github.com/ImageMagick/ImageMagick/commit/264acfcdc3227ad6406bfd39b95af9f85b409024)
+- Reverted patch that broke SeparateImages. [`a765e3c`](https://github.com/ImageMagick/ImageMagick/commit/a765e3c502bac6fed9b9d929213ba124dbbe4465)
+- memory library with reduced synchronization overhead [`88e3964`](https://github.com/ImageMagick/ImageMagick/commit/88e39641b2e71e94a77cefdf4c9186543975931d)
+- fix proper scaling of Oklab colorspace [`d0f208b`](https://github.com/ImageMagick/ImageMagick/commit/d0f208b966c0fdbd32b94d86bef37928293e04ba)
+- We now need to build xz --disable-ifunc or otherwise this will result in a segfault. [`e5061bc`](https://github.com/ImageMagick/ImageMagick/commit/e5061bcdaba9efcb0319add0fe8c7d5d98eb9fc1)
+- cosmetic [`a8de149`](https://github.com/ImageMagick/ImageMagick/commit/a8de149e1aca79836319b31c8881537115e478ff)
+- Simplify check. [`3afd4ac`](https://github.com/ImageMagick/ImageMagick/commit/3afd4ac26938930cbd4be6c967381a47d3d60d53)
+- Corrected checks [`ee1c3af`](https://github.com/ImageMagick/ImageMagick/commit/ee1c3af7175a952eb00fca99a450da1b1403a65a)
+- Corrected declaration. [`ec470f3`](https://github.com/ImageMagick/ImageMagick/commit/ec470f33f6234bd176f7e8deaa5f417615b8a69f)
+- missing cast to `(int)` for PixelChannel [`920b778`](https://github.com/ImageMagick/ImageMagick/commit/920b778ffb9b0452821ba83305ac50516f1b02cb)
+- No longer use heic_corpus. [`317c022`](https://github.com/ImageMagick/ImageMagick/commit/317c022098804a23234c5ef9a3cd0b42a12da3f8)
+- cosmetic [`8ff0561`](https://github.com/ImageMagick/ImageMagick/commit/8ff0561d4eda90a3f3b0360bca51dfda1037cfae)
+- Store additional information when dng:read-thumbnail is specified so the user knows how to read the thumbnail data. [`9d79979`](https://github.com/ImageMagick/ImageMagick/commit/9d79979e795ad69fd7774afa72ddbed841eb5ddc)
+- support -reshape option [`4c104d0`](https://github.com/ImageMagick/ImageMagick/commit/4c104d03943a49de7ebdd427e09acb5d8bc37631)
+- check for insufficient image data in file [`3af9aa1`](https://github.com/ImageMagick/ImageMagick/commit/3af9aa1a1bccd673f589e813d980a57e515a06fa)
+- silence unsigned overflow [`a1d2267`](https://github.com/ImageMagick/ImageMagick/commit/a1d2267f0bc0155457603defeb0f32deadc23316)
+- Added missing typecast. [`b2199fa`](https://github.com/ImageMagick/ImageMagick/commit/b2199fa662b20c6679a53ceba8e7f9805a360d9d)
+- support &gt; 10 meta channel mnemonics [`ebeb132`](https://github.com/ImageMagick/ImageMagick/commit/ebeb1323065a9ca66e140e992394c9a1d468f83f)
+- Correct addition to resolve issue with negative interline_spacing values. [`ba0479f`](https://github.com/ImageMagick/ImageMagick/commit/ba0479f710ba98fe1305befe35ae62a9a51ebc8f)
+- https://github.com/ImageMagick/ImageMagick/issues/6476 [`5b3b6c2`](https://github.com/ImageMagick/ImageMagick/commit/5b3b6c27bc1b084a6e30fbf101a8eacaecabff89)
+- preferred unwinding order [`15efb42`](https://github.com/ImageMagick/ImageMagick/commit/15efb4222779fc61dd02832c00700fccd510f16b)
+- Minor tweaks. [`d339bed`](https://github.com/ImageMagick/ImageMagick/commit/d339bedcd606a39efba5dd7fa3f19521cc5617e2)
+- Fixed reading MPO image (#6475) [`2366b76`](https://github.com/ImageMagick/ImageMagick/commit/2366b767cf711753328944f082376bdfd916d8e8)
+- Make the MPO format explicit. [`650ef27`](https://github.com/ImageMagick/ImageMagick/commit/650ef2710f5f69605f82fde2c37e90a3337f5378)
+- Corrected types. [`51d16a0`](https://github.com/ImageMagick/ImageMagick/commit/51d16a0ce34d9f19d2a8ae9f7530ff75584dea48)
+- eliminate improbable integer overflow [`b939fa1`](https://github.com/ImageMagick/ImageMagick/commit/b939fa13bc23169514cc4aa34ceaf87fdccd4c20)
+- cosmetic [`f2bea15`](https://github.com/ImageMagick/ImageMagick/commit/f2bea15606cf1117e6e228f6c252eee0f1c2148f)
+- Fixed memory leak. [`491d1bf`](https://github.com/ImageMagick/ImageMagick/commit/491d1bf1c371746c781d811e0c721fade0b1c710)
+- release [`d5974ce`](https://github.com/ImageMagick/ImageMagick/commit/d5974ce50c84bee43731270a899d7a4a9500cc17)
+
 ## [7.1.1-12](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-11...7.1.1-12) - 2023-06-25
 
 ### Merged
