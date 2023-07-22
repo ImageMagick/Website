@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-14](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-13...7.1.1-14) - 2023-07-22
+
+### Commits
+
+- beta release [`e799547`](https://github.com/ImageMagick/ImageMagick/commit/e799547419e63780039bae9be9931b2c64612870)
+- No longer download build_dependencies.sh [`f5d0480`](https://github.com/ImageMagick/ImageMagick/commit/f5d048073412c7c704842dd3686608ef7f5df1c9)
+- support abbreviations for RTL and LTR text direction [`4a8152b`](https://github.com/ImageMagick/ImageMagick/commit/4a8152b806103335bab736c2fec41ce9c50fcee1)
+- note y_advance, implement top-to-bottom in the future [`01b0544`](https://github.com/ImageMagick/ImageMagick/commit/01b05442f67c26e89a7c4657681bb83196a06141)
+- prep for top-to-bottom rendering of text [`3911d74`](https://github.com/ImageMagick/ImageMagick/commit/3911d747b8e4279e2d8430bfd1f576ae6b6207c8)
+- alpha gradient fade now works with grayscale images (https://github.com/ImageMagick/ImageMagick/issues/6495) [`53f2595`](https://github.com/ImageMagick/ImageMagick/commit/53f259582d6d0acd4eff6ad771c42579b9c6f537)
+- check for possible IPTC overrun [`e284d83`](https://github.com/ImageMagick/ImageMagick/commit/e284d8387e728499435dbf8e6b694a21cbb906f6)
+- release [`15c472d`](https://github.com/ImageMagick/ImageMagick/commit/15c472d758e594246f26d3a7b9402a5aad627b0c)
+- account for hidden colormap index channel (https://github.com/ImageMagick/ImageMagick/issues/6507) [`af228bb`](https://github.com/ImageMagick/ImageMagick/commit/af228bb8bf2da5bda0410707656f45d3151e2079)
+- release [`562a80c`](https://github.com/ImageMagick/ImageMagick/commit/562a80c6d23910a20cf964a105c729d94307ca16)
+
 ## [7.1.1-13](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-12...7.1.1-13) - 2023-07-16
 
 ### Merged
