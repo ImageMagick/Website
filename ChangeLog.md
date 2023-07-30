@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-15](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-14...7.1.1-15) - 2023-07-30
+
+### Commits
+
+- beta release [`edf7a2a`](https://github.com/ImageMagick/ImageMagick/commit/edf7a2a8c7f5aa698f07ee93dfe09463bdeb27a5)
+- Make sure the correct image properties are set before calling SetImageExtent. [`c18f8c5`](https://github.com/ImageMagick/ImageMagick/commit/c18f8c55e36e4d77ccee6f4c854289b43a4203fb)
+- Corrected setting the quantum_type for rgba images. [`be52c60`](https://github.com/ImageMagick/ImageMagick/commit/be52c60c8bd1f441b47e29786dc23abb1e60c9f4)
+- enable entitiy substitution per local parser (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-v9p9-6pmh-r6rm) [`0a87eaf`](https://github.com/ImageMagick/ImageMagick/commit/0a87eaf381b46feb720022a444375122077881c1)
+- The -fx option, no long applied twice (https://github.com/ImageMagick/ImageMagick/discussions/6518) [`fac094a`](https://github.com/ImageMagick/ImageMagick/commit/fac094a007be57f2df02568e88286a121590c0cd)
+- ensure FL32 test suite properly survives a round trip (https://github.com/ImageMagick/ImageMagick/issues/6507) [`bfc9231`](https://github.com/ImageMagick/ImageMagick/commit/bfc923108e9294c1c2e7e2852ce93fa8247e7800)
+- Use AllChannels instead of DefaultChannels. [`c328565`](https://github.com/ImageMagick/ImageMagick/commit/c328565bec51fb2b907c9d4c7c7c904260da4350)
+- eliminate possible integer overflow [`b3881dc`](https://github.com/ImageMagick/ImageMagick/commit/b3881dc50aca2c7c6fa3c464b0ab5184ee7d187e)
+- images must be sRGB compatible to write FL32 [`ce38645`](https://github.com/ImageMagick/ImageMagick/commit/ce386456d51f5eb488c0da5d223aeca29ecc566f)
+- Update SECURITY.md [`f952997`](https://github.com/ImageMagick/ImageMagick/commit/f95299783498b93bcec75fb7605fcc38e1e401ec)
+- check for valid bits-per-pixel [`98eceff`](https://github.com/ImageMagick/ImageMagick/commit/98eceff6a30217804764705f2ba8f29df2934160)
+- release [`a0a5f3d`](https://github.com/ImageMagick/ImageMagick/commit/a0a5f3da4cd07919dd2d1bbae121e590b5f105e2)
+
 ## [7.1.1-14](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-13...7.1.1-14) - 2023-07-22
 
 ### Commits
