@@ -28,7 +28,7 @@
 
 <p>We encourage you to review each rule in your <code>policy.xml</code> configuration file.  Adjust the parameters according to your organization's requirements. You can modify the allowed image formats, set specific paths, and restrict certain operations based on your security needs.  Remember that customizing the security policy is a delicate balance between functionality and security. Overly restrictive policies might hinder legitimate image processing tasks, while overly permissive policies can introduce vulnerabilities.</p>
 
-<h2><a class="anchor" id="exampe"></a>Example Security Policy</h2>
+<h2><a class="anchor" id="example"></a>Example Security Policy</h2>
 
 <p>Here is an example security policy:</p>
 
