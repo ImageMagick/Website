@@ -1,6 +1,6 @@
 <div class="magick-header">
 <h1 class="text-center">Security Policy</h1>
-<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
+<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#example">Example Security Policy</a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
 <p class="text-info">It is strongly recommended to establish a security policy suitable for your local environment before utilizing ImageMagick.</p>
 
@@ -12,7 +12,25 @@
 
 <p>Keep in mind that what is considered reasonable for one environment may not be suitable for another. For example, you may have ImageMagick sandboxed in a secure environment, while someone else may use it to process images on a publicly accessible website. Or, ImageMagick may be running on a host with a lot of memory, while another instance is running on a device with limited resources. In the case of the host with large memory, it may make sense to allow large image processing, but not on the device with limited resources. If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</p>
 
-<p>To help you get started, ImageMagick provides a default policy with reasonable limits, but it is recommended that you modify it to suit your local environment. For example, you may want to set limits on memory usage, allowable paths for reading and writing, the number of images allowed in a sequence, the maximum time a workflow can run, and the amount of disk space allowed for image pixels. Ultimately, it is up to you to decide what limits are appropriate based on your specific environment and needs.</p>
+<p>To help you get started, as of version 7.1.1-16, ImageMagick provides security polices that you can select when installing ImageMagick.  Choose from:
+
+<ul>
+<dt>open</dt>
+<dd>The default policy for ImageMagick installations is the open security policy. This policy is designed for usage in secure settings like those protected by firewalls or within Docker containers. Within this framework, ImageMagick enjoys broad access to resources and functionalities. This policy provides convenient and adaptable options for image manipulation. However, it's important to note that it might present security vulnerabilities in less regulated conditions. Thus, organizations should thoroughly assess the appropriateness of the open policy according to their particular use case and security prerequisites.  </dd>
+<dt>limited</dt>
+<dd>The primary objective of the limited security policy is to find a middle ground between convenience and security. This policy involves the deactivation of potentially hazardous functionalities, like specific coders such as SVG or HTTP. Furthermore, it establishes several constraints on the utilization of resources like memory, storage, and processing duration, all of which are adjustable. This policy proves advantageous in situations where there's a need to mitigate the potential threat of handling possibly malicious or demanding images, all while retaining essential capabilities for prevalent image formats.</dt>
+<dt>secure</dt>
+<dd>This stringent security policy prioritizes the implementation of rigorous controls and restricted resource utilization to establish a profoundly secure setting while employing ImageMagick. It deactivates conceivably hazardous functionalities, including specific coders like SVG or HTTP. The policy promotes the tailoring of security measures to harmonize with the requirements of the local environment and the guidelines of the organization. This protocol encompasses explicit particulars like limitations on memory consumption, sanctioned pathways for reading and writing, confines on image sequences, the utmost permissible duration of workflows, allocation of disk space intended for image data, and even an undisclosed passphrase for remote connections. By adopting this robust policy, entities can elevate their overall security stance and alleviate potential vulnerabilities.</dt>
+<dt>websafe</dt>
+<dd>  This security protocol designed for web-safe usage focuses on situations where ImageMagick is applied in publicly accessible contexts, like websites.  It deactivates the capability to read from or write to any image formats other than web-safe formats like GIF, JPEG, and PNG. Additionally, this policy prohibits the execution of image filters and indirect reads, thereby thwarting potential security breaches. By implementing these limitations, the web-safe policy fortifies the safeguarding of systems accessible to the public, reducing the risk of exploiting ImageMagick's capabilities for potential attacks.</dd>
+</ul>
+<p>Under Linux, select the policy with the <code>--with-security-policy={open,limited,secure,websafe}</code> configure script option.  Under Windows, the choice is presented when you run the configure app.</p>
+
+<p>We encourage you to review each rule in your <code>policy.xml</code> configuration file.  Adjust the parameters according to your organization's requirements. You can modify the allowed image formats, set specific paths, and restrict certain operations based on your security needs.  Remember that customizing the security policy is a delicate balance between functionality and security. Overly restrictive policies might hinder legitimate image processing tasks, while overly permissive policies can introduce vulnerabilities.</p>
+
+<h2><a class="anchor" id="exampe"></a>Example Security Policy</h2>
+
+<p>Here is an example security policy:</p>
 
 <pre class="pre-scrollable bg-light text-dark mx-4 text-dark mx-4"><samp>&lt;policymap>
   &lt;!-- temporary path must be a preexisting writable directory -->
