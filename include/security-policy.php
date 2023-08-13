@@ -27,6 +27,7 @@
 <p>Under Linux, select the policy with the <code>--with-security-policy={open,limited,secure,websafe}</code> configure script option.  Under Windows, the choice is presented when you run the configure app.</p>
 
 <p>We encourage you to review each rule in your <code>policy.xml</code> configuration file.  Adjust the parameters according to your organization's requirements. You can modify the allowed image formats, set specific paths, and restrict certain operations based on your security needs.  Remember that customizing the security policy is a delicate balance between functionality and security. Overly restrictive policies might hinder legitimate image processing tasks, while overly permissive policies can introduce vulnerabilities.</p>
+<p>Note, the ImageMagick unit tests require the open security policy to pass.</p>
 
 <h2><a class="anchor" id="example"></a>Example Security Policy</h2>
 
