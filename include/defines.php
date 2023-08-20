@@ -765,13 +765,12 @@ use:</p>
 
   <tr>
     <td>dng:use-camera-wb=<var>true</var></td>
-    <td>Uses the white balance specified by the camera.</td>
+    <td>Uses the white balance specified by the camera.  Default is true.</td>
   </tr>
 
   <tr>
     <td>dot:layout-engine=<var>value</var></td>
-    <td>Specify the layout engine for the DOT image format (e.g.
-    <samp>neato</samp>).</td>
+    <td>Specify the layout engine for the DOT image format (e.g., <samp>neato</samp>).</td>
   </tr>
 
   <tr>
