@@ -806,4 +806,5 @@ round</samp></pre></td>
   </tr>
 </tbody>
 </table></div>
+<p>Note, the primitives are case sensitive, e.g., use <code>viewbox</code>, not <code>viewBox</code>.</p>
 </div>
