@@ -251,6 +251,7 @@
   <li><a class="dropdown-item" href="#scale">scale</a></li>
   <li><a class="dropdown-item" href="#scene">scene</a></li>
   <li><a class="dropdown-item" href="#screen">screen</a></li>
+  <li><a class="dropdown-item" href="#script">script</a></li>
   <li><a class="dropdown-item" href="#seed">seed</a></li>
   <li><a class="dropdown-item" href="#segment">segment</a></li>
   <li><a class="dropdown-item" href="#selective-blur">selective-blur</a></li>
@@ -6532,10 +6533,6 @@ light conditions. </p>
 
 <p>This option sets the scene number of an image or the first image in an image sequence.</p>
 
-<div style="margin: auto;">
-  <h2><a class="anchor" id="screen"></a>-screen</h2>
-</div>
-
 <p class="magick-description">Specify the screen to capture.</p>
 
 <p>This option indicates that the GetImage request used to obtain the image
@@ -6543,6 +6540,12 @@ should be done on the root window, rather than directly on the specified
 window. In this way, you can obtain pieces of other windows that overlap the
 specified window, and more importantly, you can capture menus or other popups
 that are independent windows but appear over the specified window.</p>
+
+<div style="margin: auto;">
+  <h2><a class="anchor" id="script"></a>-script</h2>
+</div>
+
+<p class="magick-description">interpret a <a href="<?php echo $_SESSION['RelativePath'] ?>/../script/escape.php" >script</a> of ImageMagick image processing commands.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="seed"></a>-seed</h2>
