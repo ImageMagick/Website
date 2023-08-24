@@ -6542,10 +6542,10 @@ specified window, and more importantly, you can capture menus or other popups
 that are independent windows but appear over the specified window.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="script"></a>-script</h2>
+  <h2><a class="anchor" id="script"></a>-script  <var>filename</var></h2>
 </div>
 
-<p class="magick-description">interpret a <a href="<?php echo $_SESSION['RelativePath'] ?>/../script/escape.php" >script</a> of ImageMagick image processing commands.</p>
+<p class="magick-description">Transfer control to the named file.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="seed"></a>-seed</h2>

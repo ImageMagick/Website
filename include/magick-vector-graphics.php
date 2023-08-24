@@ -707,7 +707,7 @@ reset</samp></pre></td>
     <td>the <em>id</em> is optional</td>
   </tr>
   <tr>
-    <td><a class="anchor" id="push-pattern"></a>push pattern <var>id radial x,y width,height</var></td>
+    <td><a class="anchor" id="push-pattern"></a>push pattern <var>id x,y width,height</var></td>
     <td></td>
   </tr>
   <tr>
