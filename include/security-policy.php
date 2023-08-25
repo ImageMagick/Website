@@ -108,7 +108,7 @@
   &lt;!-- Ensure all image data is fully flushed and synchronized to disk. -->
   &lt;policy domain="cache" name="synchronize" value="true"/>
   &lt;!-- Replace passphrase for secure distributed processing -->
-  &lt;!-- &lt;policy domain="cache" name="shared-secret" value="my-secret-passphrase" stealth="true"/> -->
+  &lt;!-- &lt;policy domain="cache" name="shared-secret" value="secret-passphrase" stealth="true"/> -->
   &lt;!-- Do not permit any delegates to execute. -->
   &lt;policy domain="delegate" rights="none" pattern="*"/>
   &lt;!-- Do not permit any image filters to load. -->
