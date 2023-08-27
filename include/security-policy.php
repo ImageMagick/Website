@@ -46,6 +46,13 @@
 &lt;!ATTLIST policy value CDATA #IMPLIED>
 ]>
 &lt;!--
+  Creating a security policy that fits your specific local environment
+  before making use of ImageMagick is highly advised. You can find guidance on
+  setting up this policy at https://imagemagick.org/script/security-policy.php,
+  and it's important to verify your policy using the validation tool located
+  at https://imagemagick-secevaluator.doyensec.com/.
+
+
   Secure ImageMagick security policy:
 
   This stringent security policy prioritizes the implementation of
