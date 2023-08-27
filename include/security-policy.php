@@ -132,7 +132,7 @@
        memory buffers and temporary files before they are freed or deleted. -->
   &lt;policy domain="system" name="shred" value="1"/>
   &lt;!-- Enable the initialization of buffers with zeros, resulting in a minor
-       performance penalty but with inmproved security. -->
+       performance penalty but with improved security. -->
   &lt;policy domain="system" name="memory-map" value="anonymous"/>
   &lt;!-- Set the maximum amount of memory in bytes that is permitted for
        allocation requests. -->
