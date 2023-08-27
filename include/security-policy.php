@@ -32,7 +32,7 @@
 
 <p>Here is an example security policy:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4 text-dark mx-4">&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre class="pre-scrollable bg-light text-dark mx-4 text-dark mx-4"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>
 &lt;!ATTLIST policymap xmlns CDATA #FIXED "">
@@ -135,7 +135,7 @@
   &lt;!-- Set the maximum amount of memory in bytes that is permitted for
        allocation requests. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
-&lt;/policymap></samp></pre>
+&lt;/policymap></code></pre>
 
 <p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, processing will stop and an exception will be thrown.</p>
 
