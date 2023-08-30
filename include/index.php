@@ -8,7 +8,7 @@
 
 <p>The main website for ImageMagick can be found at <a href="https://imagemagick.org">https://imagemagick.org</a>. The most recent version available is <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion; ?></a>. The source code for this software can be accessed through a <a href="https://github.com/ImageMagick/ImageMagick" target="_blank">repository</a>. In addition, we maintain a legacy version of ImageMagick, <a href="https://legacy.imagemagick.org" target="_blank">version 6</a>.</p>
 
-<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
+<p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.</p>
 
 <h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
 
