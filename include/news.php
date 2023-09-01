@@ -1,11 +1,10 @@
 <div class="magick-header">
 <h1 class="text-center">ImageMagick News</h1>
 
-<p class="text-info">ImageMagick recommended practices <strong>strongly</strong> encourage you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment.</p>
 
 <h4>Recent News</h4>
 
-<p>As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>: Open, Limited, Secure, and Websafe.<p>
+<p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.  As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>: Open, Limited, Secure, and Websafe.<p>
 
 <p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <samp>--enable-64bit-channel-masks</samp> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
 
