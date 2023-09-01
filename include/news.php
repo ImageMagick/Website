@@ -5,15 +5,20 @@
 
 <h4>Recent News</h4>
 
-<p>We recently updated Anthony's <a href="/../Usage">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
+<p>As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>: Open, Limited, Secure, and Websafe.<p>
 
-<p>Recent releases of ImageMagick 7 continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
+<p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <samp>--enable-64bit-channel-masks</samp> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
+
+<p>With recent releases of ImageMagick 7, we continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
 <p>We now provide <a href="https://imagemagick.org/script/download.php#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
 
 <p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="https://imagemagick.org/script/fx.php">Fx</a> special-effects image operator interpretter.  It has vastly improved error checking and performance.</p>
 
 <p><a href="https://github.com/fmw42">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamless and saliency blending</a> composite operators.</p>
+
+<p>We recently updated Anthony's <a href="/../Usage">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
+
 
 <h4>Related Software</h4>
 <p>The <a href="https://github.com/ImageMagick/MagickCache/">MagickCache</a> provides methods and tools to cache images, image sequences, video, audio or metadata in a local folder. Any content is memory-mapped for efficient retrieval. Additional efficiencies are possible by retrieving a portion of an image. Content can persist or you can assign a time-to-live (TTL) to automatically expire content when the TTL is exceeded. MagickCache supports virtually unlimited content upwards of billions of images making it suitable as a web image service.
