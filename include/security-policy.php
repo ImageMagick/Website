@@ -141,7 +141,7 @@
 
 <p>Starting with ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <samp>coder</samp> and set rights to none and the glob pattern to HTTPS to prevent delegate usage. Additionally, users are prevented from executing any image filters and from performing indirect reads. If you want to, for example, read text from a file (e.g. <samp>caption:@myCaption.txt</samp>), you'll need to disable this path policy.</p>
 
-<p>Policy <a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a> are <em>case sensitive</em>.  To get expected behavior, coders and modules must be upper-case (e.g. "EPS" not "eps") or use a case-insensitive pattern such as <samp>[Pp][Nn][Gg]</samp>.</p>
+<p>Policy <a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a>, before ImageMagick 7.1.1-16, are <em>case sensitive</em>.  To get expected behavior, coders and modules must be upper-case (e.g. "EPS" not "eps") or use a case-insensitive pattern such as <samp>[Pp][Nn][Gg]</samp>.</p>
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
