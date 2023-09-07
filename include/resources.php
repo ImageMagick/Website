@@ -61,7 +61,7 @@ when available, to attempt to quickly determine the internet media type of a
 file or data stream.
 </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/policy.xml">policy.xml</a></dt>
+<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/open-policy.xml">policy.xml</a></dt>
   <dd class="col-md-8">Configure ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
