@@ -5,6 +5,8 @@
       "DISABLE_CACHE": "true"
     }
   },
+  "onCreateCommand": "sudo apache2ctl start",
+  "forwardPorts": [ 7070 ],
   "customizations": {
     "vscode": {
       "extensions": [ "editorconfig.editorconfig" ],
@@ -12,7 +14,5 @@
         "extensions.ignoreRecommendations": true
       }
     }
-  },
-  "forwardPorts": [ 7070 ],
-  "onCreateCommand": "sudo apache2ctl start"
+  }
 }
