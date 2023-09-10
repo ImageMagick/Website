@@ -1305,6 +1305,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>tga:write-footer=<var>true</var></td>
+    <td>Enable writing of an empty optional footer.</td>
+  </tr>
+
+  <tr>
     <td>tiff:alpha=<var>associated|unassociated|unspecified</var></td>
     <td>Specify the alpha extra samples as associated, unassociated or
     unspecified.</td>
