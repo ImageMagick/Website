@@ -124,7 +124,7 @@
   <li><a class="dropdown-item" href="#font">font</a></li>
   <li><a class="dropdown-item" href="#foreground">foreground</a></li>
   <li><a class="dropdown-item" href="#format">format</a></li>
-  <li><a class="dropdown-item" href="#format_identify_">format[identify]</a></li>
+  <li><a class="dropdown-item" href="#format_identify">format[identify]</a></li>
   <li><a class="dropdown-item" href="#frame">frame</a></li>
   <li><a class="dropdown-item" href="#frame_import_">frame[import]</a></li>
   <li><a class="dropdown-item" href="#function">function</a></li>
@@ -3856,7 +3856,7 @@ input image filename is <var>image.gif</var>, the output image
 filename becomes <var>image.tiff</var>.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="format_identify_"></a>-format <var>expression</var></h2>
+  <h2><a class="anchor" id="format_identify"></a>-format <var>expression</var></h2>
 </div>
 
 <p class="magick-description">Output formatted image characteristics.</p>
@@ -4370,7 +4370,21 @@ handle negative offsets.</p>
 
 <p class="magick-description">Identify the format and characteristics of the image.</p>
 
-<p>This information is printed: image scene number (if its not zero); image name; image size and virtual page offset;  and the consumed user time  and the elapsed time.</p>
+<p>This information is printed by default:
+<ul>
+<li>image scene number (if its not zero)</li>
+<li>image name</li>
+<li>image format</li>
+<li>image size</li>
+<li>virtual page offset</li>
+<li>color depth</li>
+<li>colorspace</li>
+<li>file size in bytes</li>
+<li>consumed user time identifying the image</li>
+<li>elapsed time identifying the image</li>
+</ul></p>
+
+<p>To customize the attributes you want to identify, use <a href="#format_identify">-format</a>.</p>
 
 <p>If <a href="#colors">-colors</a> is also specified, the total unique colors
 in the image and color reduction error values are printed. Refer to <a
