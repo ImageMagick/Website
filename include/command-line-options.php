@@ -4370,11 +4370,7 @@ handle negative offsets.</p>
 
 <p class="magick-description">Identify the format and characteristics of the image.</p>
 
-<p>This information is printed: image scene number; image name; image size;
-the image class (<var>DirectClass</var> or <var>PseudoClass</var>); the total number of unique colors; and the
-number of seconds to read and transform the image. Refer to <a href="<?php
-echo $_SESSION['RelativePath']?>/../script/miff.php">MIFF</a> for
-a description of the image class.</p>
+<p>This information is printed: image scene number (if its not zero); image name; image size and virtual page offset;  and the consumed user time  and the elapsed time.</p>
 
 <p>If <a href="#colors">-colors</a> is also specified, the total unique colors
 in the image and color reduction error values are printed. Refer to <a
