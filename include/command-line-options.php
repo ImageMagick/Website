@@ -4384,7 +4384,7 @@ handle negative offsets.</p>
 <li>elapsed time identifying the image</li>
 </ul></p>
 
-<p>To customize the attributes you want to identify, use <a href="#format_identify">-format</a>.</p>
+<p>To customize the attributes you want to identify, use <a href="#format_identify_">-format</a>.</p>
 
 <p>If <a href="#colors">-colors</a> is also specified, the total unique colors
 in the image and color reduction error values are printed. Refer to <a
