@@ -498,7 +498,7 @@ magick image.mpc -crop 100x100+100+0 +repage 2.png
 magick image.mpc -crop 100x100+200+0 +repage 3.png
 </samp></pre>
 
-<p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">online image studio</a>.</p>
+<p>MPC is ideal for web sites.  It reduces the overhead of reading and writing an image.  We use it exclusively at our <a href="https://magickstudio.imagemagick.org/scripts/MagickStudio.cgi">online image studio</a>.</p>
 
 <h2><a class="anchor" id="properties"></a>Image Properties and Profiles</h2>
 
