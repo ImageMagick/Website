@@ -560,7 +560,7 @@ the supported image formats.</p>
     <td><a href="https://en.wikipedia.org/wiki/JPEG_XR">JXR</a></td>
     <td>RW</td>
     <td>JPEG extended range</td>
-    <td>Requires the <a href="https://jxrlib.codeplex.com/">jxrlib</a> delegate library. Put the JxrDecApp and JxrEncApp applications in your execution path. </td>
+    <td>Requires the <a href="https://jxrlib.codeplex.com/">jxrlib</a> delegate library. Put the JxrDecApp and JxrEncApp applications in your execution path. Add the <samp>-define quantum:format=floating-point</samp> to minimize distortion.</td>
   </tr>
 
   <tr>
