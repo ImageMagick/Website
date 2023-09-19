@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-17](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-16...7.1.1-17) - 2023-09-19
+
+### Commits
+
+- beta release [`4b5d266`](https://github.com/ImageMagick/ImageMagick/commit/4b5d2668d6a6d18d1d8f71cb6012b2adb0cff0d4)
+- remove absolute path [`fad55f1`](https://github.com/ImageMagick/ImageMagick/commit/fad55f18c1e4b23e20fb05466b96b8026d58ceef)
+- validate security policy [`269b573`](https://github.com/ImageMagick/ImageMagick/commit/269b5732cb491f854c9c4ad9f7cc8bc3061e6d64)
+- eliminate compiler warning [`5e52c7d`](https://github.com/ImageMagick/ImageMagick/commit/5e52c7d5fc9901dc1fbc6af9ddd34e7a7c480268)
+- eliminate compiler warnings [`ebeaa7d`](https://github.com/ImageMagick/ImageMagick/commit/ebeaa7d611436ada0bd81a605f0296656c17d468)
+- cosmetic [`f5116ea`](https://github.com/ImageMagick/ImageMagick/commit/f5116ea31571ad7c983b01d144105066d3104df8)
+- eliminate compiler warning [`bcd824a`](https://github.com/ImageMagick/ImageMagick/commit/bcd824a06d51757de27c5bb47da31e2d10512092)
+- validate policy before we set it [`354c3e4`](https://github.com/ImageMagick/ImageMagick/commit/354c3e45e9a1f9c787c7e2d4bc09f013efe26270)
+- release [`44a26b1`](https://github.com/ImageMagick/ImageMagick/commit/44a26b16717b8aa93d42419b1637ed6f6af38b5b)
+
 ## [7.1.1-16](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-15...7.1.1-16) - 2023-09-17
 
 ### Merged
