@@ -14,6 +14,7 @@
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#lua">Lua</a> (LuaJIT), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#neko">NMagick</a> (Neko/haXe), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#dot-net">Magick.NET</a> (.NET), 
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#node.js">Node-magickwand</a> (Node.js), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#pascal">PascalMagick</a> (Pascal), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#perl">PerlMagick</a> (Perl), 
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php#php">IMagick</a> (PHP), 
@@ -80,6 +81,10 @@ With a language interface, use ImageMagick to modify or create images dynamicall
   <dt class="col-md-4"><a class="anchor" id="dot-net"></a>&nbsp;</dt>
 
 <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagickapp/">ImageMagickApp</a> is a .NET application written in C# that utilizes the ImageMagick command line to allow conversion of multiple image formats to different formats.</dd>
+
+  <dt class="col-md-4"><a class="anchor" id="node.js"></a>Node.js</dt>
+
+<dd class="col-md-8"><a href="https://www.npmjs.com/package/node-magickwand" target="_blank">Node-magickwand</a> is a full native port of the ImageMagick-7 C++ library to Node.js using SWIG Node-API. Unlike all other ImageMagick npm packages, it does not use the CLI to interact with the utilities, but offers direct access to the full C++ API. It supports both synchronous and multithreaded asynchronous operations, it is fully integrated with TypedArrays and it has full TypeScript support.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="pascal"></a>Pascal</dt>
 
