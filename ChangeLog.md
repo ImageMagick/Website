@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-18](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-17...7.1.1-18) - 2023-09-23
+
+### Commits
+
+- beta release [`1d60af9`](https://github.com/ImageMagick/ImageMagick/commit/1d60af938761e2a6e85c3c13f6201571d752da76)
+- eliminate static analyzer issues [`d26323c`](https://github.com/ImageMagick/ImageMagick/commit/d26323ca2085e8ca5827b483ac81905e4084effe)
+- eliminate static analyzer issue [`3b1c29d`](https://github.com/ImageMagick/ImageMagick/commit/3b1c29dd5c53c4ad12404df19c1861d448aa4fc3)
+- properly extract EXIF GPS fractions [`66ceff0`](https://github.com/ImageMagick/ImageMagick/commit/66ceff0fde288813570dfb8da5c1cfa647e999d5)
+- revert typecast [`2f9247f`](https://github.com/ImageMagick/ImageMagick/commit/2f9247f0af135aab6f5360b461149158c613a8e2)
+- eliminate compiler warnings [`839b763`](https://github.com/ImageMagick/ImageMagick/commit/839b76391f17e464bb57509efaf6cc8fac3390d9)
+- eliminate compiler warning [`cad0080`](https://github.com/ImageMagick/ImageMagick/commit/cad008045938c07c51e6aa85eb12efc636ccda86)
+- eliminiate compiler warnings [`3a04434`](https://github.com/ImageMagick/ImageMagick/commit/3a04434f59dd0711cf614436ea9285a0616975ef)
+- set windows to NULL [`a9ff2e4`](https://github.com/ImageMagick/ImageMagick/commit/a9ff2e491e726b3a03f1511b2b4d5bd6364caf3e)
+- revert [`ea98b2a`](https://github.com/ImageMagick/ImageMagick/commit/ea98b2a00c742f3a2a9a1c4deb5f02eb54cd5a78)
+- Fixed building fourier.c on Windows with Visual Studio (#6667) [`5d732c1`](https://github.com/ImageMagick/ImageMagick/commit/5d732c14f0ea49c3143aabbcaf3e644f184b03b9)
+- cosmetic [`8c6cdf5`](https://github.com/ImageMagick/ImageMagick/commit/8c6cdf58eabd7bbbc8e6efe135692da2e65f1568)
+- release [`44b2ac8`](https://github.com/ImageMagick/ImageMagick/commit/44b2ac8c0326c895a1663071e129d01cc221bc79)
+
 ## [7.1.1-17](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-16...7.1.1-17) - 2023-09-19
 
 ### Commits
