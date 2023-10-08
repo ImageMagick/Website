@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-20](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-19...7.1.1-20) - 2023-10-08
+
+### Commits
+
+- beta release [`59f8951`](https://github.com/ImageMagick/ImageMagick/commit/59f8951c62e6ad32fb71d8fa9027c0fe98f33193)
+- ... [`a21e310`](https://github.com/ImageMagick/ImageMagick/commit/a21e31074803bfce4ff4e0c964f3d49007fb98b3)
+- support Windows 1.0 Icon format (https://github.com/ImageMagick/ImageMagick/discussions/6670) [`bdc2c9f`](https://github.com/ImageMagick/ImageMagick/commit/bdc2c9f313174fd41d9482b45c6fa6c459c7f245)
+- Code cleanup. [`476a094`](https://github.com/ImageMagick/ImageMagick/commit/476a09402f1ee01c13ad0e75b68768a581720c71)
+- support GetMagickTTL() method (https://github.com/ImageMagick/ImageMagick/discussions/4533) [`66c30fc`](https://github.com/ImageMagick/ImageMagick/commit/66c30fc2233a187e1e8eacb94b82b9f8523c3d2b)
+- fix time-to-live deadlock [`c3d651e`](https://github.com/ImageMagick/ImageMagick/commit/c3d651e8eb0b6e72f69d200064e70997158abdd0)
+- improve time-to-live timer [`4727c5e`](https://github.com/ImageMagick/ImageMagick/commit/4727c5e4f6b7178a77699dbf3ccb2de587842fa9)
+- prevent integer overflow [`fa9c969`](https://github.com/ImageMagick/ImageMagick/commit/fa9c9690d42dab2d768a63be3b1242b5fceeca80)
+- wrong argument type [`bfcdb1e`](https://github.com/ImageMagick/ImageMagick/commit/bfcdb1e02bab99cfb711fe9bb2c927e3f1d855ab)
+- respect time to live for Fx option [`b56a48e`](https://github.com/ImageMagick/ImageMagick/commit/b56a48eb78a10063c308120302f2496db6488369)
+- let cache throttle the CPU [`6d9069d`](https://github.com/ImageMagick/ImageMagick/commit/6d9069d69eac01d91744035fe6e10049ada9e332)
+- Fix indentation. [`47af159`](https://github.com/ImageMagick/ImageMagick/commit/47af15992f62f17d1638ad202baac3ef94040038)
+- Added check for MaxPixelChannels. [`8126bac`](https://github.com/ImageMagick/ImageMagick/commit/8126bac76de34b9ac7195623d022904eff544229)
+- Added support for reading meta channels when reading a jpeg2000 image. [`3541957`](https://github.com/ImageMagick/ImageMagick/commit/35419576856550c67a4f790ecfadb1f0c053bc5a)
+- Added jp2:assume-alpha option that will the always enable the alpha channel when the jpeg2000 image has 2 or 4 channels. [`07fd761`](https://github.com/ImageMagick/ImageMagick/commit/07fd7618bd405b1751eb8d248ccdbd1dbaa38213)
+- Corrected check for single channel. [`43f6ada`](https://github.com/ImageMagick/ImageMagick/commit/43f6ada28c0302e44ba1f893ef68a25df1d13909)
+- support xmp:validate define to choose performance over security [`c4f9927`](https://github.com/ImageMagick/ImageMagick/commit/c4f9927616a4243314d9e5a798c780a41c4ff27e)
+- protect against DOS for FX do, while, for loops [`2cfa8d1`](https://github.com/ImageMagick/ImageMagick/commit/2cfa8d113ad8a7858e61f4294aa9fb032a4714ee)
+- Added new deflate library to the pragma lib list. [`ac00eb2`](https://github.com/ImageMagick/ImageMagick/commit/ac00eb297b948a70bc7622062efeb21f1aae5f3f)
+- release [`98bb1d4`](https://github.com/ImageMagick/ImageMagick/commit/98bb1d41472d57fb11819a17f5f35c1de0b62bb4)
+
 ## [7.1.1-19](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-18...7.1.1-19) - 2023-09-30
 
 ### Merged
