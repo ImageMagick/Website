@@ -1582,6 +1582,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>xmp:validate=<var>{true,false}</var></td>
+    <td>By default, ImageMagick validates any XMP profile embedded in an image.</td>
+  </tr>
+
+  <tr>
     <td colspan=2><p></p></td>
   </tr>
 
