@@ -864,7 +864,7 @@ the supported image formats.</p>
     <td><a href="http://www.libpng.org/pub/png/">PNG</a></td>
     <td>RW</td>
     <td>Portable Network Graphics</td>
-    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
+    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).  Set the maximum chunk size with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define png:chunk-malloc-max=<i>value</i></a>.</td>
   </tr>
 
   <tr>

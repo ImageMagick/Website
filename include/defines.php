@@ -498,6 +498,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>png:chunk-malloc-max=<var>value</var></td>
+    <td>Set the maximum chunk size.</td>
+  </tr>
+
+  <tr>
     <td>profile:skip=<var>name1,name2,...</var></td>
     <td>Skip the named profile[s] when reading the image. Use skip="*" to
     skip all named profiles in the image. Many named profiles exist,
