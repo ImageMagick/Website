@@ -5,6 +5,60 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-21](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-20...7.1.1-21) - 2023-10-21
+
+### Merged
+
+- honor pkg-config when searching for bzip2 [`#6785`](https://github.com/ImageMagick/ImageMagick/pull/6785)
+- honor pkg-config when searching for libjpeg [`#6784`](https://github.com/ImageMagick/ImageMagick/pull/6784)
+- Add the up to date "Artifex" name to Ghostscript list [`#6779`](https://github.com/ImageMagick/ImageMagick/pull/6779)
+- Define quantum depth for PerlMagick on windows [`#6770`](https://github.com/ImageMagick/ImageMagick/pull/6770)
+
+### Commits
+
+- beta release [`dc87568`](https://github.com/ImageMagick/ImageMagick/commit/dc87568a6ef9ed3c182d6f69b5f508bb3abdfd9e)
+- time-to-live returned incorrect results when SOURCE_DATE_EPOCH set (https://github.com/ImageMagick/ImageMagick6/issues/278) [`3c72750`](https://github.com/ImageMagick/ImageMagick/commit/3c727503c6ae449160dc92cf6222ebe28ef8fb52)
+- https://github.com/ImageMagick/ImageMagick/issues/6775 [`bd0fae8`](https://github.com/ImageMagick/ImageMagick/commit/bd0fae83078076f8d4c8a4a2427a5ae59f949253)
+- eliminate compiler error [`cc0553c`](https://github.com/ImageMagick/ImageMagick/commit/cc0553cac6045966c7cf7db9908dc0473c95ee8b)
+- eliminate compiler warnings [`72cad57`](https://github.com/ImageMagick/ImageMagick/commit/72cad57188ce00369eec4914bfb41e42414ce67a)
+- Only use the recent names to do the Ghostscript registry lookup and search for the commercial version first. [`be84f21`](https://github.com/ImageMagick/ImageMagick/commit/be84f21bf3bc98ad68f225532a4e69c769e0c404)
+- eliminate rare small memory leak [`199d056`](https://github.com/ImageMagick/ImageMagick/commit/199d056cd2e47d4f2ff3552451fbc4aaccc9d383)
+- support time to live neumonics, e.g. 2 minutes [`cdaebe9`](https://github.com/ImageMagick/ImageMagick/commit/cdaebe9fdc663536996fe62abee315ca6818fb34)
+- remove private method GetMagickTTL() [`3576c62`](https://github.com/ImageMagick/ImageMagick/commit/3576c625c6f3363ca05fa6adc5119ba087f0d36d)
+- moderate the CPU delay [`60bffdb`](https://github.com/ImageMagick/ImageMagick/commit/60bffdba835e7000a0ed710fbb542d53991c571f)
+- cosmetic [`23a0ef4`](https://github.com/ImageMagick/ImageMagick/commit/23a0ef433ff5ab8e60aa53b990cf69f1aeda6cc5)
+- format time to live [`0d72e02`](https://github.com/ImageMagick/ImageMagick/commit/0d72e02b5f9c4088f1e7e984a0662eef55e490ad)
+- cosmetic [`47885ab`](https://github.com/ImageMagick/ImageMagick/commit/47885abe63e80eb48068c125fe8cbd10aeb67265)
+- correct # of seconds in month [`d6aa83c`](https://github.com/ImageMagick/ImageMagick/commit/d6aa83c30cd9bab5182f541f54dd2a5d6c932936)
+- fix formatting time-to-live [`646c6bd`](https://github.com/ImageMagick/ImageMagick/commit/646c6bdf5af16a9675b98d9e5b2a9ac41cb1ca64)
+- clarify time to live [`8845a13`](https://github.com/ImageMagick/ImageMagick/commit/8845a13d77ad9f6784742161e9c4d88491b2ba79)
+- utilize difftime() to subtract time to live [`63d39da`](https://github.com/ImageMagick/ImageMagick/commit/63d39da917a7ad4d47f76b1d5c57f9f716cb8246)
+- utilize difftime() to subtract time to live [`9bf4b05`](https://github.com/ImageMagick/ImageMagick/commit/9bf4b0542be63e47b8209b66e476be535c92c99e)
+- convert source epoch to unsigned long [`623ca54`](https://github.com/ImageMagick/ImageMagick/commit/623ca5491e5035268730055efcd5b76cc07a1c26)
+- time to live default is infinity [`e3e9c86`](https://github.com/ImageMagick/ImageMagick/commit/e3e9c86465362ae51942009b2e8eacded8e1b4bf)
+- latest autoconf/automake [`dae5e42`](https://github.com/ImageMagick/ImageMagick/commit/dae5e42c83aab2cbe86ce4950edee9c6e07d75dc)
+- latest autoconf/automake updates [`207fcee`](https://github.com/ImageMagick/ImageMagick/commit/207fceebae39bb82c0c1897d2708a4c9138f294f)
+- assume time_t is signed [`df62446`](https://github.com/ImageMagick/ImageMagick/commit/df6244652acd3453000ece0336db68a5e367a95b)
+- largest value is MAGICK_SIZE_MAX [`2d6e79f`](https://github.com/ImageMagick/ImageMagick/commit/2d6e79fab8d9e9aa67d31e22a1aab84dda015312)
+- prevent possible integer overlflow [`18fd355`](https://github.com/ImageMagick/ImageMagick/commit/18fd355028e3204cdb993e130e3b10e3d8d37054)
+- SetMagickSecurityPolicy() permits user policies to comingle with system policies (https://github.com/ImageMagick/ImageMagick6/issues/279) [`a9d8a08`](https://github.com/ImageMagick/ImageMagick/commit/a9d8a08d4dd87a79adaa5ac3a987997f865033d5)
+- eliminate compiler warning [`dd60508`](https://github.com/ImageMagick/ImageMagick/commit/dd60508db0e55dbcea8958a050e97cf07bbddc93)
+- eliminate compiler exception [`89c0484`](https://github.com/ImageMagick/ImageMagick/commit/89c04840173945bb336170c35991e7cca650c696)
+- permit all user policies [`30906ff`](https://github.com/ImageMagick/ImageMagick/commit/30906fff50cf1aad7f06834ee0ad2cb6304e3b69)
+- convert -help should return a success status (https://github.com/ImageMagick/ImageMagick/issues/6797) [`3c559c8`](https://github.com/ImageMagick/ImageMagick/commit/3c559c82c910242c08697f8f515b20ab6fcd1e99)
+- -help option now returns a success status [`adbaabf`](https://github.com/ImageMagick/ImageMagick/commit/adbaabfc60f1861402f18c749543dc5a388caefb)
+- allow user to comingle with system policies [`ce7a64e`](https://github.com/ImageMagick/ImageMagick/commit/ce7a64e2aa04e000dd12a0ea89a1a430e2f8917b)
+- find minimum policy value [`7d0858d`](https://github.com/ImageMagick/ImageMagick/commit/7d0858d996a8a2d4fec808dbe027a55d97da359c)
+- find minimum policy value [`f81cd05`](https://github.com/ImageMagick/ImageMagick/commit/f81cd0502b846696e11d9c30522f84911752cfcf)
+- revert [`8d94c78`](https://github.com/ImageMagick/ImageMagick/commit/8d94c782a3be825585995f2036c1555b260a8acc)
+- eliminate compiler warning [`ecc1473`](https://github.com/ImageMagick/ImageMagick/commit/ecc1473c9ba14cae0587260295b281536ef905b7)
+- off by one exception [`8eb046d`](https://github.com/ImageMagick/ImageMagick/commit/8eb046dbf6bad8d2752a7465d17637ce68245712)
+- correct bytes per line calculation [`61f444e`](https://github.com/ImageMagick/ImageMagick/commit/61f444e5457e4e506c73f18460133c80c235ebb6)
+- revert [`ff50d9a`](https://github.com/ImageMagick/ImageMagick/commit/ff50d9adacce58f6c0edf7c059e9e4f65ea0a95b)
+- use PNG default for maximum chunk size [`6408a69`](https://github.com/ImageMagick/ImageMagick/commit/6408a69a2c63953ea2204d19ee89b4a6f5d17f4f)
+- clarify SetMagickSecurityPolicy() [`dcffc2d`](https://github.com/ImageMagick/ImageMagick/commit/dcffc2de39b9d7a614b7cf9eb1d427de08f7b5ff)
+- release [`58d86e4`](https://github.com/ImageMagick/ImageMagick/commit/58d86e4e107603a95f2f35da99540a2eb69b458d)
+
 ## [7.1.1-20](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-19...7.1.1-20) - 2023-10-08
 
 ### Commits
