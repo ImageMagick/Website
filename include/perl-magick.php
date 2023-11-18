@@ -67,6 +67,11 @@ nmake install
 <pre class="bg-light text-dark mx-4"><samp>make test
 </samp></pre>
 
+<p>Use the 'prove' utilize to execute a test from the build folder:</p>
+
+<pre class="bg-light text-dark mx-4"><samp>prove --blib blib -I `pwd` -bv ./t/read.t
+</samp></pre>
+
 <p>Use <samp>nmake test</samp> under Windows. There are a few demonstration scripts available to exercise many of the functions PerlMagick can perform. Type</p>
 
 <pre class="bg-light text-dark mx-4"><samp>cd demo
