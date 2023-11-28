@@ -1927,6 +1927,12 @@ $width = $image-&gt;[3]-&gt;Get('columns');
   </tr>
 
   <tr>
+    <td>title</td>
+    <td><i>string</i></td>
+    <td>set the image title</td>
+  </tr>
+
+  <tr>
     <td>total-ink-density</td>
     <td><i>double</i></td>
     <td>returns the total ink density for a CMYK image</td>
