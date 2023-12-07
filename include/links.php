@@ -82,6 +82,6 @@
   <dd class="col-md-8"><a href="https://urban-warrior.org/">Wizard's Toolkit</a></dd>
   <dd class="col-md-8"><a href="https://github.com/MolotovCherry/Android-ImageMagick7">ImageMagick API on the Android Platform</a></dd>
   <dd class="col-md-8"><a href="https://imagemagick.org/archive/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
-  <dd class="col-md-8"><a href="https://imagemagick.org/the-tao-of-the-spiritual-warrior/the-tao-of-the-spiritual-warrior.docx">The Tao of the Spiritual Warrior</a> (<a href="https://www.amazon.com/dp/B0BTQ59W3W">paperback, audio, Kindle</a>)</dd>
+  <dd class="col-md-8"><a href="https://urban-warrior.org/SpiritualWarrior/">The Tao of the Spiritual Warrior</a></dd>
 </ul>
 </div>
