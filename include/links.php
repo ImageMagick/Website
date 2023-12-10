@@ -79,7 +79,7 @@
 
 <h2><a class="anchor" id="other-projects"></a>Other Projects</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://urban-warrior.org/WizardsTookit">Wizard's Toolkit</a></dd>
+  <dd class="col-md-8"><a href="https://urban-warrior.org/WizardsToolkit">Wizard's Toolkit</a></dd>
   <dd class="col-md-8"><a href="https://github.com/MolotovCherry/Android-ImageMagick7">ImageMagick API on the Android Platform</a></dd>
   <dd class="col-md-8"><a href="https://imagemagick.org/archive/iOS/">ImageMagick API on the iOS / iPhone  Platform</a></dd>
   <dd class="col-md-8"><a href="https://urban-warrior.org/">The Tao of the Spiritual Warrior</a></dd>
