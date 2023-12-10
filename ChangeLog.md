@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-23](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-22...7.1.1-23) - 2023-12-10
+
+### Merged
+
+- Fix zstd not being listed under GetMagickDelegates() [`#6934`](https://github.com/ImageMagick/ImageMagick/pull/6934)
+- configure.ac: Fix bashism [`#6931`](https://github.com/ImageMagick/ImageMagick/pull/6931)
+
+### Commits
+
+- beta release [`e1ff620`](https://github.com/ImageMagick/ImageMagick/commit/e1ff62030d783d4efc24919effaa8b7bf5a84dc3)
+- set time_t maximum (https://github.com/ImageMagick/ImageMagick/issues/6891) [`5fa5898`](https://github.com/ImageMagick/ImageMagick/commit/5fa58982eb65273f08318fc53028e389fa9b2aa7)
+- cosmetic [`dce5f10`](https://github.com/ImageMagick/ImageMagick/commit/dce5f102ca7a2d4cbe0bb6d50125800de4ef7067)
+- support Visio vector files [`51291ec`](https://github.com/ImageMagick/ImageMagick/commit/51291ec84b5c88d3e72578895189acf9771e4ce3)
+- correct display and mogrify commands [`35c97bd`](https://github.com/ImageMagick/ImageMagick/commit/35c97bd51d0155b7ff8bca8876f1cb3cc802e82e)
+- upgrade shadow signatures [`9e4f5fc`](https://github.com/ImageMagick/ImageMagick/commit/9e4f5fcb54cd103f1ae497140533ee5a9f4d714d)
+- detected memory leaks [`f2ce071`](https://github.com/ImageMagick/ImageMagick/commit/f2ce071308224315000624a141058583baf0c58e)
+- detected memory leaks [`364e573`](https://github.com/ImageMagick/ImageMagick/commit/364e57315ea756d28e94991f39283c50fb180de8)
+- xc: code is not always guarenteed to return an image (https://github.com/ImageMagick/ImageMagick/issues/6917) [`e8b7974`](https://github.com/ImageMagick/ImageMagick/commit/e8b7974e8756fb278ec85d896065a1b96ed85af9)
+- Set ttl to time when the image will expire instead of the duration that the image can be used. [`4b744eb`](https://github.com/ImageMagick/ImageMagick/commit/4b744eba5edbca8db76c3df3f95e30c21085517c)
+- lastest documentation update [`8fccfab`](https://github.com/ImageMagick/ImageMagick/commit/8fccfabce117fb9e30eb7d12d5ed008c25e74490)
+- update link [`a726df9`](https://github.com/ImageMagick/ImageMagick/commit/a726df99b2e5f7ceeb4ab31129cd757a7fda89d7)
+- latest autoconf update [`4f42f63`](https://github.com/ImageMagick/ImageMagick/commit/4f42f631bdd43738db92f1fbc72e4a9f34eae462)
+- add link to license [`2c87d7d`](https://github.com/ImageMagick/ImageMagick/commit/2c87d7da1b1db4573a37bd7933dfbf772ac3eecf)
+- normalize pixel sum to reduce numerical instability (https://github.com/ImageMagick/ImageMagick/issues/6924) [`94cc881`](https://github.com/ImageMagick/ImageMagick/commit/94cc8810cb1f78549548c88dd3e87f14a3c5b1a0)
+- update links [`7abd15b`](https://github.com/ImageMagick/ImageMagick/commit/7abd15bb1d25e8ef95bd98a06ff53b91cfa3feb5)
+- inadvertedly scaled the histogram pixel, revert [`dade20d`](https://github.com/ImageMagick/ImageMagick/commit/dade20d5a15cb6918b23ca41cd8ef2b6a3849a40)
+- Patch to avoid trailing whitespace in delegates. [`bd6ff11`](https://github.com/ImageMagick/ImageMagick/commit/bd6ff11f03455128220d91fb892f29154b4bcd5f)
+- Fixed patch for non windows platform. [`c5567ea`](https://github.com/ImageMagick/ImageMagick/commit/c5567ea1c23d6bd7dd41c6b7fb7660c5245bdf19)
+- release [`b135bac`](https://github.com/ImageMagick/ImageMagick/commit/b135bacc69df9f1de0b71cf3638f7e8296bbfb57)
+- beta release [`e6cfc7c`](https://github.com/ImageMagick/ImageMagick/commit/e6cfc7cb4cbd6c2b5c3ffd01774b07712bdef25e)
+- release [`54b13e9`](https://github.com/ImageMagick/ImageMagick/commit/54b13e91d262b1083e27fc8c02532c89d3ff649c)
+
 ## [7.1.1-22](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-21...7.1.1-22) - 2023-12-03
 
 ### Commits
@@ -119,6 +151,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed reading Windows 1.x icon file format (#6670) [`592e1e8`](https://github.com/ImageMagick/ImageMagick/commit/592e1e87b05373e808f7af3abce1c9a7a406c4ad)
 - cosmetic [`b5350ad`](https://github.com/ImageMagick/ImageMagick/commit/b5350adcb65b31e14afe647bcaec1fa93e196fcc)
 - release [`0a4cc80`](https://github.com/ImageMagick/ImageMagick/commit/0a4cc800d0c1308d348ab81c744369443e362212)
+- release [`699352e`](https://github.com/ImageMagick/ImageMagick/commit/699352ebed659da36b9aa9ffa21e906766076abc)
+- release [`f3bacd1`](https://github.com/ImageMagick/ImageMagick/commit/f3bacd19f67c81cdc764bf95ee3e55a526fccbf9)
 
 ## [7.1.1-21](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-20...7.1.1-21) - 2023-10-21
 
