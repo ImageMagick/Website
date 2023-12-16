@@ -6655,8 +6655,8 @@ a global 'artifact' which are automatically assigned (and any <a href="<?php
 echo $_SESSION['RelativePath'] ?>/../script/escape.php" >Format Percent
 Escapes</a> expanded) to images as they are read in.  For example:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick rose: -set comment 'Rose is a rose is a rose is a rose' rose.jpg
-identify -format %c rose.jpg
+<pre class="bg-light text-dark mx-4"><samp>$ magick rose: -set Comment 'Rose is a rose is a rose is a rose' rose.png
+identify -format %c rose.png
 Rose is a rose is a rose is a rose
 </samp></pre>
 
