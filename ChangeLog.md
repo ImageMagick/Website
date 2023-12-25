@@ -5,6 +5,67 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-24](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-23...7.1.1-24) - 2023-12-25
+
+### Merged
+
+- configure: drop backported ac_func_fseeko.m4 for autoconf-2.72 compat… [`#6970`](https://github.com/ImageMagick/ImageMagick/pull/6970)
+- Add Panasonic Raw v2 (RW2) as mime type [`#6967`](https://github.com/ImageMagick/ImageMagick/pull/6967)
+- Add Canon Raw v2 (CR2) as mime type [`#6968`](https://github.com/ImageMagick/ImageMagick/pull/6968)
+
+### Commits
+
+- beta release [`9e5eb3a`](https://github.com/ImageMagick/ImageMagick/commit/9e5eb3a099cab17e895a55a53df2fb01610e299a)
+- ... [`22ca517`](https://github.com/ImageMagick/ImageMagick/commit/22ca5177369707d7eaf56c311643ecce704e6910)
+- cosmetic [`8d015de`](https://github.com/ImageMagick/ImageMagick/commit/8d015de00c3e98f648b74f9a72233daa03319947)
+- Added extra check for rare case when ImageMagick is build without any delegates. [`8d08f85`](https://github.com/ImageMagick/ImageMagick/commit/8d08f856456e57ab2ec72b19860e6dc2364e555d)
+- Corrected order to fix invalid matches. [`935f2c2`](https://github.com/ImageMagick/ImageMagick/commit/935f2c288173117ed2d71e991db641512ded381a)
+- b10 should also be moved. [`cf821b1`](https://github.com/ImageMagick/ImageMagick/commit/cf821b18cc6ac2230b5e7c36c7e0d0e566b3f864)
+- only fill the alpha channel for `alpha` floodfill [`ef87dfd`](https://github.com/ImageMagick/ImageMagick/commit/ef87dfdf18acd1b017e02b5f55e4c8d1b716d1b4)
+- Make sure we use the lt_ methods like we do elsewhere. [`da099f2`](https://github.com/ImageMagick/ImageMagick/commit/da099f2d2f62613644a942a8369bf986d9bfdf09)
+- support dng:max-raw-memory define (https://github.com/ImageMagick/ImageMagick/discussions/6922) [`1b042b2`](https://github.com/ImageMagick/ImageMagick/commit/1b042b26bd0ef575906c93079c5686bc9eb7ef23)
+- cosmetic [`8365814`](https://github.com/ImageMagick/ImageMagick/commit/8365814e48d92a9974d19311652cf2d042e95583)
+- properly export YUV JP2 images (https://github.com/ImageMagick/ImageMagick/issues/6943) [`804e2b7`](https://github.com/ImageMagick/ImageMagick/commit/804e2b73a400d77270a0912f6f63a6f4fecf5dc4)
+- use `:` specifier [`66a3868`](https://github.com/ImageMagick/ImageMagick/commit/66a3868a4da949aff7b65b6f7e480f09a9fd7464)
+- correct display program name [`a0aca55`](https://github.com/ImageMagick/ImageMagick/commit/a0aca550b2d02a901759ba8a048a51985be3b789)
+- check for corrupt DJVU images (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-wv9p-78jx-g7fv) [`f65eba2`](https://github.com/ImageMagick/ImageMagick/commit/f65eba252e3aa387bd99297a750a2ee250664f8c)
+- support UTF-8 comments (https://github.com/ImageMagick/ImageMagick/issues/6949) [`e46e2ef`](https://github.com/ImageMagick/ImageMagick/commit/e46e2eff03cbf5780a0e169ea187348b7799674f)
+- do not prefix iTxt key with 'png:' [`558e255`](https://github.com/ImageMagick/ImageMagick/commit/558e25579012caa4113c559a86a8e8374c9bbc08)
+- latest autoconf update [`640af74`](https://github.com/ImageMagick/ImageMagick/commit/640af74bfc5091496d16f446e659276e949d2867)
+- enhance sampling factor parser (https://github.com/ImageMagick/ImageMagick/issues/6943) [`4011e63`](https://github.com/ImageMagick/ImageMagick/commit/4011e631b0c9c168a875a170b3a5e286ddcbbc2c)
+- Corrected length check. [`6c52fda`](https://github.com/ImageMagick/ImageMagick/commit/6c52fda2bdcc2a4a27640495f5f24e7020e553f7)
+- Bump actions/download-artifact from 3 to 4 [`ed5ac6d`](https://github.com/ImageMagick/ImageMagick/commit/ed5ac6d69c2f54af6b0371e7021aae4c32623548)
+- Bump actions/upload-artifact from 3 to 4 [`be19e35`](https://github.com/ImageMagick/ImageMagick/commit/be19e3573735f66762b577805b59fd04c9feb452)
+- Bump github/codeql-action from 2 to 3 [`b85f143`](https://github.com/ImageMagick/ImageMagick/commit/b85f14385a84e52e045148e4393d951a9c4e3483)
+- Give artifacts a unique name. [`1c229f2`](https://github.com/ImageMagick/ImageMagick/commit/1c229f2ec7338c1ee1633b0ac837a866b91449cd)
+- Use different name for the installers. [`0813103`](https://github.com/ImageMagick/ImageMagick/commit/08131032a7008c31eb41463963caa0b37ae80dd3)
+- Also include type in artifact name. [`7d907ea`](https://github.com/ImageMagick/ImageMagick/commit/7d907ea75a2731ad3479f55ac4f14dbecd77cd2d)
+- Swap order. [`490e9ab`](https://github.com/ImageMagick/ImageMagick/commit/490e9ab40877f716225c2404d1c4d275093e2172)
+- Switch to ubuntu 20.04 in the app-image build. [`7f8aab2`](https://github.com/ImageMagick/ImageMagick/commit/7f8aab2eb90354bd87943652813a5a197ef3d8c0)
+- Revert path filter. [`94d5512`](https://github.com/ImageMagick/ImageMagick/commit/94d5512c66fb4c30c9e67c77ea39b6da7683da01)
+- Corrected packages that need to be install due to ubuntu upgrade. [`12ecacf`](https://github.com/ImageMagick/ImageMagick/commit/12ecacf95ecd4140ddef23b85e4a3162b5838e25)
+- Removed duplicate if statement. [`092b8fa`](https://github.com/ImageMagick/ImageMagick/commit/092b8fa848f0c6c9ba34c0af6dd5e60f722893a5)
+- Bump actions/checkout from 3 to 4 [`854b3a4`](https://github.com/ImageMagick/ImageMagick/commit/854b3a4a449cba3666a752b0dd33e2e6b2ae2368)
+- Silence warning [`d1cd21c`](https://github.com/ImageMagick/ImageMagick/commit/d1cd21ccc0db09020ef2333cc6040fe4b7b6010e)
+- improve accuracy of image statistics (https://github.com/ImageMagick/ImageMagick/issues/6924) [`1f241fd`](https://github.com/ImageMagick/ImageMagick/commit/1f241fd314bd03acdfe58bab13f85e3c757feeb9)
+- fx calculations of skewness and kurtosis (https://github.com/ImageMagick/ImageMagick/issues/6964) [`fffda83`](https://github.com/ImageMagick/ImageMagick/commit/fffda833e847732654d54b823267204b1e24a1d1)
+- Only write comments as itxt when the string contains non ansi chars. [`f21cd54`](https://github.com/ImageMagick/ImageMagick/commit/f21cd542a989a6e6a973752f1a41b40afd1c8297)
+- check if the string contains non-Latin1 characters [`a07eac1`](https://github.com/ImageMagick/ImageMagick/commit/a07eac13c12b2498c37eda7a9c6cbc13c3d716c6)
+- Corrected patch to check for non-Latin1 characters. [`73ad1b7`](https://github.com/ImageMagick/ImageMagick/commit/73ad1b7524219babcc7a811e3a631a3f973f2198)
+- invalid JSON with -ping (https://github.com/ImageMagick/ImageMagick/issues/6966) [`7ccf6e8`](https://github.com/ImageMagick/ImageMagick/commit/7ccf6e87e53dd42b9eeed62a223fd65f72e8b769)
+- throw exception if # of meta channels exceed max (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-hx5j-pxvh-rj7r) [`9c85f8f`](https://github.com/ImageMagick/ImageMagick/commit/9c85f8f8282c10214b3cd7e8504e8ee9c891ab42)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-hx5j-pxvh-rj7r [`8284632`](https://github.com/ImageMagick/ImageMagick/commit/828463261d0b3c4d67fb0f9c2b2c829dde82eb8b)
+- multiplication result converted to larger type [`c3bb6f6`](https://github.com/ImageMagick/ImageMagick/commit/c3bb6f6c4a2d87942c31087e774571fdcffc3a0a)
+- invalid HTTPS certificates are no longer ignored (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-3r24-6m6q-vxmr) [`62e67a2`](https://github.com/ImageMagick/ImageMagick/commit/62e67a265a8ec9f272fe50fdc313ec07c7dad9a3)
+- multiplication result converted to larger type [`0882713`](https://github.com/ImageMagick/ImageMagick/commit/0882713cebb0ace6965a2f56664b5f931f2c607f)
+- eliminate compiler warning [`e88b9aa`](https://github.com/ImageMagick/ImageMagick/commit/e88b9aa79fb8fad0b2677104f6713d51907bb9a5)
+- don't include the index channel in the overall image statistics [`4e1feed`](https://github.com/ImageMagick/ImageMagick/commit/4e1feed86220638b3ec296ef99605587e90da245)
+- multiplication result converted to larger type [`91d8a32`](https://github.com/ImageMagick/ImageMagick/commit/91d8a329a02883d4f7c2e7a180a2d3fedfcea295)
+- release [`1c14ca3`](https://github.com/ImageMagick/ImageMagick/commit/1c14ca384e60cc203c1c72fa0a5721a68c2c5afe)
+- no member named 'rawparams' (https://github.com/ImageMagick/ImageMagick/issues/6969) [`57ff827`](https://github.com/ImageMagick/ImageMagick/commit/57ff82753e8de6eff1b2143dcd24f7613a448a2f)
+- release [`883eaa2`](https://github.com/ImageMagick/ImageMagick/commit/883eaa2b457dab61e1decaf99d13931acf1ddaf5)
+- release [`963f5fa`](https://github.com/ImageMagick/ImageMagick/commit/963f5fa2a3c87b362e2b6b29a31bff447b75925b)
+
 ## [7.1.1-23](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-22...7.1.1-23) - 2023-12-10
 
 ### Merged
