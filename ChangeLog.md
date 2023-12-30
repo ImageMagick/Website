@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-25](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-24...7.1.1-25) - 2023-12-30
+
+### Merged
+
+- When writing BMP to v3 or lower, ignore the ICC profile. [`#6979`](https://github.com/ImageMagick/ImageMagick/pull/6979)
+- configure.ac: fixup LFS check for autoconf-2.72 [`#6978`](https://github.com/ImageMagick/ImageMagick/pull/6978)
+
+### Commits
+
+- beta release [`3e8b0fa`](https://github.com/ImageMagick/ImageMagick/commit/3e8b0fa1cf084ac5073d5249bd7c702b1b7ae5f8)
+- beta release [`0930653`](https://github.com/ImageMagick/ImageMagick/commit/093065376493d981efd758d971026da40fbffc52)
+- Correct flags for jpeg-xl build. [`87f4a62`](https://github.com/ImageMagick/ImageMagick/commit/87f4a6266e1e910050d2c62d057332edb9c083f7)
+- Include deflate in the security/oss-fuzz build. [`26e6cf7`](https://github.com/ImageMagick/ImageMagick/commit/26e6cf7d59b07d3d7920b476665f5637c2e330cd)
+- Include more features in the tiff build. [`0d36830`](https://github.com/ImageMagick/ImageMagick/commit/0d36830878bb55fe7dbd7f7f4150f343b108fab9)
+- check for version 0.20 instead [`f5329ad`](https://github.com/ImageMagick/ImageMagick/commit/f5329add7450ed188e96d957bd0933efa7c81ebe)
+- Also include -ldeflate in the LIBS for the oss-fuzz build. [`a29b58c`](https://github.com/ImageMagick/ImageMagick/commit/a29b58cb7b9870cb1912ba10921871d11b14903b)
+- Corrected oss-fuzz build. [`c02326b`](https://github.com/ImageMagick/ImageMagick/commit/c02326baa4de3736341092e2d17002c0c6475ed0)
+- display hidden image [`1dfcae1`](https://github.com/ImageMagick/ImageMagick/commit/1dfcae1472e77a77dc118ecc90ffe6639dd5aba1)
+- Start of moving the oss-fuzz files. [`b333c1a`](https://github.com/ImageMagick/ImageMagick/commit/b333c1aa4561f058383d386b836fbc4f46e33598)
+- cosmetic [`1cec932`](https://github.com/ImageMagick/ImageMagick/commit/1cec9327e53b3c3ffbc51023cf3540c0b5da676f)
+- latest autoconf/automake [`44ca83b`](https://github.com/ImageMagick/ImageMagick/commit/44ca83b1d91d2a87d9c07e8869de350fed970678)
+- latest autoconf/automake update [`fd412d1`](https://github.com/ImageMagick/ImageMagick/commit/fd412d124db9f9236755b3aed8bb26bce73c01c1)
+- identify image time-to-live [`6aac882`](https://github.com/ImageMagick/ImageMagick/commit/6aac88223316abe5a699a22c9657074809e7bd21)
+- set errno if time-to-live exceeded [`a8a6a61`](https://github.com/ImageMagick/ImageMagick/commit/a8a6a61f9118b76d87b9fce6c6cce12ef1379977)
+- cosmetic [`c59b334`](https://github.com/ImageMagick/ImageMagick/commit/c59b33446da2debdd67f550dfd8513ce98c0d571)
+- conditionally set errno to ESTALE [`43a44ea`](https://github.com/ImageMagick/ImageMagick/commit/43a44ea57e3c89b96139153fc297e74f9397bab4)
+- cosmetic [`371c8da`](https://github.com/ImageMagick/ImageMagick/commit/371c8da8d6a58f5d6a955f6230160f327e4ebf41)
+- Moved oss-fuzz files to a different folder. [`75c72e1`](https://github.com/ImageMagick/ImageMagick/commit/75c72e1a91ccbfd726fff2fcaa0a3965d118b338)
+- Changes due to moving the oss-fuzz files. [`abc23f1`](https://github.com/ImageMagick/ImageMagick/commit/abc23f11bacbc4dc498eaabfbc02e965ced60825)
+- ensure video can be read from stdin (https://github.com/ImageMagick/ImageMagick/issues/6980) [`9a7e87a`](https://github.com/ImageMagick/ImageMagick/commit/9a7e87a89f92ee525c4e2c077a8a128e7796c897)
+- ignore SyncBlob() status in CloseBlob() (https://github.com/ImageMagick/ImageMagick/issues/6984) [`30274e5`](https://github.com/ImageMagick/ImageMagick/commit/30274e544e79ab2a53a95b1a9ad6d52cec314220)
+- repo change [`ca392c7`](https://github.com/ImageMagick/ImageMagick/commit/ca392c79e28778606e2a0e0fb2c2d5bc38e58f8e)
+- update manifest [`d4298ea`](https://github.com/ImageMagick/ImageMagick/commit/d4298eab18d1d39d80a32f983ed99b5443ad5fe5)
+- release [`054b98c`](https://github.com/ImageMagick/ImageMagick/commit/054b98c80fe9b5d09db095f8a4e03586f0ef6e31)
+- release [`98e7513`](https://github.com/ImageMagick/ImageMagick/commit/98e7513a5b28adb5f39855a27108fd9a2a01c202)
+
 ## [7.1.1-24](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-23...7.1.1-24) - 2023-12-25
 
 ### Merged
