@@ -569,6 +569,11 @@ channel data, to create an alpha channel, or to perform other operations on the 
        Composite the image over the background color.
        </dd>
 
+    <dt class="col-md-4">RemoveOpaque</dt>
+    <dd class="col-md-8">
+       remove the alpha channel if and only if its entirely opaque.
+       </dd>
+
     <dt class="col-md-4">Background</dt>
     <dd class="col-md-8">
        Set any fully-transparent pixel to the background color, while leaving
