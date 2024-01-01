@@ -515,44 +515,12 @@ channel data, to create an alpha channel, or to perform other operations on the 
     <dd class="col-md-8">
        associate the alpha channel with the image.</dd>
 
-    <dt class="col-md-4">Deactivate</dt>
+    <dt class="col-md-4">Background</dt>
     <dd class="col-md-8">
-       Disables the image's transparency channel. Does not delete or change the
-       existing data, just turns off the use of that data.</dd>
-
-    <dt class="col-md-4">DeactivateIfOpaque</dt>
-    <dd class="col-md-8">
-       disable the alpha channel if and only if its entirely opaque.
-       </dd>
-
-    <dt class="col-md-4">Disassociate</dt>
-    <dd class="col-md-8">
-       disassociate the alpha channel from the image.</dd>
-
-    <dt class="col-md-4">Set</dt>
-    <dd class="col-md-8">
-       Activates the alpha/matte channel. If it was previously turned off
-       then it also resets the channel to opaque.  If the image already had
-       the alpha channel turned on, it will have no effect.</dd>
-
-    <dt class="col-md-4">Opaque</dt>
-    <dd class="col-md-8">
-       Enables the alpha/matte channel and forces it to be fully opaque.
-       </dd>
-
-    <dt class="col-md-4">Transparent</dt>
-    <dd class="col-md-8">
-       Activates the alpha/matte channel and forces it to be fully
-       transparent. This effectively creates a fully transparent image the
-       same size as the original and with all its original RGB data still
-       intact, but fully transparent. </dd>
-
-    <dt class="col-md-4">Extract</dt>
-    <dd class="col-md-8">
-       Copies the alpha channel values into all the color channels and turns
-       'Off' the image's transparency, so as to generate
-       a grayscale mask of the image's shape. The alpha channel data is left
-       intact just deactivated.  This is the inverse of 'Copy'.
+       Set any fully-transparent pixel to the background color, while leaving
+       it fully-transparent.  This can make some image file formats, such as
+       PNG, smaller as the RGB values of transparent pixels are more uniform,
+       and thus can compress better.
        </dd>
 
     <dt class="col-md-4">Copy</dt>
@@ -562,7 +530,49 @@ channel data, to create an alpha channel, or to perform other operations on the 
        a grayscale mask into a transparent shaped mask ready to be colored
        appropriately. The color channels are not modified.  </dd>
 
-    <dt class="col-md-4">Shape</dt>
+    <dt class="col-md-4">Deactivate</dt>
+    <dd class="col-md-8">
+       Disables the image's transparency channel. Does not delete or change the
+       existing data, just turns off the use of that data.</dd>
+
+    <dt class="col-md-4">Disassociate</dt>
+    <dd class="col-md-8">
+       disassociate the alpha channel from the image.</dd>
+
+    <dt class="col-md-4">Extract</dt>
+    <dd class="col-md-8">
+       Copies the alpha channel values into all the color channels and turns
+       'Off' the image's transparency, so as to generate
+       a grayscale mask of the image's shape. The alpha channel data is left
+       intact just deactivated.  This is the inverse of 'Copy'.
+       </dd>
+
+    <dt class="col-md-4">Off</dt>
+    <dd class="col-md-8">
+       disable the alpha channel.
+       </dd>
+
+    <dt class="col-md-4">OffIfOpaque</dt>
+    <dd class="col-md-8">
+       disable the alpha channel if and only if its entirely opaque.
+       </dd>
+
+    <dt class="col-md-4">On</dt>
+    <dd class="col-md-8">
+       enable the alpha channel.
+       </dd>
+
+    <dt class="col-md-4">Opaque</dt>
+    <dd class="col-md-8">
+       Enables the alpha/matte channel and forces it to be fully opaque.
+       </dd>
+
+    <dt class="col-md-4">Set</dt>
+    <dd class="col-md-8">
+       Activates the alpha/matte channel. If it was previously turned off
+       then it also resets the channel to opaque.  If the image already had
+       the alpha channel turned on, it will have no effect.</dd>
+
     <dd class="col-md-8">
        As per 'Copy' but also colors the resulting shape mask with
        the current background color.  That is the RGB color channels is
@@ -574,13 +584,14 @@ channel data, to create an alpha channel, or to perform other operations on the 
        Composite the image over the background color.
        </dd>
 
-    <dt class="col-md-4">Background</dt>
+    <dt class="col-md-4">Transparent</dt>
     <dd class="col-md-8">
-       Set any fully-transparent pixel to the background color, while leaving
-       it fully-transparent.  This can make some image file formats, such as
-       PNG, smaller as the RGB values of transparent pixels are more uniform,
-       and thus can compress better.
-       </dd>
+       Activates the alpha/matte channel and forces it to be fully
+       transparent. This effectively creates a fully transparent image the
+       same size as the original and with all its original RGB data still
+       intact, but fully transparent. </dd>
+
+    <dt class="col-md-4">Shape</dt>
 </dl>
 </div>
 <br/>
