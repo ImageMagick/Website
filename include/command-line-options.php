@@ -520,6 +520,11 @@ channel data, to create an alpha channel, or to perform other operations on the 
        Disables the image's transparency channel. Does not delete or change the
        existing data, just turns off the use of that data.</dd>
 
+    <dt class="col-md-4">DeactivateIfOpaque</dt>
+    <dd class="col-md-8">
+       disable the alpha channel if and only if its entirely opaque.
+       </dd>
+
     <dt class="col-md-4">Disassociate</dt>
     <dd class="col-md-8">
        disassociate the alpha channel from the image.</dd>
@@ -567,11 +572,6 @@ channel data, to create an alpha channel, or to perform other operations on the 
     <dt class="col-md-4">Remove</dt>
     <dd class="col-md-8">
        Composite the image over the background color.
-       </dd>
-
-    <dt class="col-md-4">RemoveOpaque</dt>
-    <dd class="col-md-8">
-       remove the alpha channel if and only if its entirely opaque.
        </dd>
 
     <dt class="col-md-4">Background</dt>
