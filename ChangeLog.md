@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-26](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-25...7.1.1-26) - 2024-01-07
+
+### Merged
+
+- Make Magick++-config work from non-standard places [`#7008`](https://github.com/ImageMagick/ImageMagick/pull/7008)
+
+### Fixed
+
+- Make Magick++-config work from non-standard places (#7008) [`#7007`](https://github.com/ImageMagick/ImageMagick/issues/7007)
+
+### Commits
+
+- beta release [`15b1a5d`](https://github.com/ImageMagick/ImageMagick/commit/15b1a5d99d742c4a8254ccbe6b2e6d42b73be675)
+- Improved name of installer artifacts [`2d36d1a`](https://github.com/ImageMagick/ImageMagick/commit/2d36d1af07e9bcc5d0a43584d61210781affec8a)
+- Trim version to avoid trailing - [`6c76d71`](https://github.com/ImageMagick/ImageMagick/commit/6c76d71a80d50a389f89905c86bd54e7f6e2d2ee)
+- support -alpha remove-opaque option [`0ce621f`](https://github.com/ImageMagick/ImageMagick/commit/0ce621fe81bbfb2087e4deaef1992b3815e4a221)
+- Reverted incorrect patch. [`3ee902d`](https://github.com/ImageMagick/ImageMagick/commit/3ee902d23a43f2fd91eb92676280e76642675d17)
+- reduce # threads for -alpha option [`8876f13`](https://github.com/ImageMagick/ImageMagick/commit/8876f135a90ba2e1d5621a3239a21fc02e0e0c07)
+- -alpha deactivate-if-opaque disables the alpha channel if and only if its entirely opaque [`66ef758`](https://github.com/ImageMagick/ImageMagick/commit/66ef7585ed386af240f24495507168e6e2d2cd54)
+- -alpha off-if-opaque turns off the alpha channel if its entirely opaque [`e9a68f0`](https://github.com/ImageMagick/ImageMagick/commit/e9a68f03e4955058218da7f2d5df659812270c26)
+- slight optimization [`e6f0530`](https://github.com/ImageMagick/ImageMagick/commit/e6f053085447e82657755b44e53c27059f5eca6c)
+- fix error: 'libraw_data_t' has no member named 'rawparams' [`1294dac`](https://github.com/ImageMagick/ImageMagick/commit/1294dac3875b26c40f4701c9d5d5ffc39c22ecac)
+- thread tuning [`c29cf7f`](https://github.com/ImageMagick/ImageMagick/commit/c29cf7f1135c297bd9c30caf1c9ae446980ae784)
+- Silenced warning. [`b8fd1e7`](https://github.com/ImageMagick/ImageMagick/commit/b8fd1e7af732289c62019fe573c2c1515ce63e28)
+- thread tunuing [`80cb07d`](https://github.com/ImageMagick/ImageMagick/commit/80cb07da4df28677c8069082ab39fb222c98e0b3)
+- optimize HDRI detection [`f8ba278`](https://github.com/ImageMagick/ImageMagick/commit/f8ba2781a6fbe9c7a8b0568f461ee1c5b1e43b1d)
+- factor is a const argument [`3e2879e`](https://github.com/ImageMagick/ImageMagick/commit/3e2879ec690b83698490fff33a8aef00da459dd2)
+- Fixed build on Windows. [`0f0ccfd`](https://github.com/ImageMagick/ImageMagick/commit/0f0ccfd9d44c9f36d174b066b15db563af332eec)
+- Removed duplicate define. [`79e742a`](https://github.com/ImageMagick/ImageMagick/commit/79e742a3369add2e236f0f9a7bb1f64a7bfa3146)
+- The CheckPSDChannels method should not check empty layers. [`e5162e6`](https://github.com/ImageMagick/ImageMagick/commit/e5162e69d945d81405687f4fc773863c49ba9168)
+- Use consistent casing of method names. [`cbf79ad`](https://github.com/ImageMagick/ImageMagick/commit/cbf79ad2000805a25ebe72d91604cd7831905946)
+- Allow invalid webp files that incorrectly include the size of the header in the length. [`99c9ee4`](https://github.com/ImageMagick/ImageMagick/commit/99c9ee4b03571e10348c96b5923e01cdb4f67820)
+- https://github.com/ImageMagick/ImageMagick/issues/7006 [`8e1b405`](https://github.com/ImageMagick/ImageMagick/commit/8e1b405179adee514f178c911a1ca20060a1125f)
+- cosmetic [`9033dea`](https://github.com/ImageMagick/ImageMagick/commit/9033dea0ff8e5694e70d2a6a11f29407a0e4c85d)
+- improve RSVG exception checking (https://github.com/ImageMagick/ImageMagick/issues/7005) [`802ffae`](https://github.com/ImageMagick/ImageMagick/commit/802ffae7781dd635e25edef86e8357c93b17bf5a)
+- fix off-by-one issue for captions/labels (https://github.com/ImageMagick/ImageMagick/issues/7004) [`e80133b`](https://github.com/ImageMagick/ImageMagick/commit/e80133bc76f549156e3437b62c3699850e020a16)
+- fix caption sizing issue (https://github.com/ImageMagick/ImageMagick/issues/7004) [`2d24367`](https://github.com/ImageMagick/ImageMagick/commit/2d24367dc971dcf61afe65dc65aba4519ea1d20f)
+- correct off by one issue [`90ac70a`](https://github.com/ImageMagick/ImageMagick/commit/90ac70a9b725aee99b62851b5927429a66c68d80)
+- correct usage [`a5dbba6`](https://github.com/ImageMagick/ImageMagick/commit/a5dbba6494663c3d067e7eb1f2fdf3a776acfb07)
+- fix off-by-one error [`a12f6d1`](https://github.com/ImageMagick/ImageMagick/commit/a12f6d128f807e5f9704efb15353f8fbc58b72a2)
+- release [`83eefaf`](https://github.com/ImageMagick/ImageMagick/commit/83eefaf2aab871d4e12e7f70901d9785b4f0ea01)
+
 ## [7.1.1-25](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-24...7.1.1-25) - 2023-12-30
 
 ### Merged
