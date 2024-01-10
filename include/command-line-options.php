@@ -1277,7 +1277,7 @@ flag. </p>
 
 <p>For example <a href="#threshold">-threshold</a> will by default grayscale
 the image before thresholding, if no <a href="#channel" >-channel</a> setting
-has been defined. This is not 'Sync flag controlled, yet. </p>
+has been defined. This is not 'Sync' flag controlled, yet. </p>
 
 <p>Also some operators such as <a href="#blur">-blur</a>, <a
 href="#gaussian-blur">-gaussian-blur</a>, will modify their handling of the
