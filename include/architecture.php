@@ -532,7 +532,7 @@ if (profile != (StringInfo *) NULL)
 </samp></pre>
 
 <h2><a class="anchor" id="multispectral"></a>Multispectral Imagery</h2>
-<p>ImageMagick supports <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">multispectral imagery</a> where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and FTXT have full support for multispectral images up to 31 bands, 21 of them meta channels.  Note, if you build ImageMagick with the configure script <samp>--enable-64bit-channel-masks</samp> option, you can process 63 band multispectral images with up to 53 meta channels.</p>
+<p>ImageMagick supports <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">multispectral imagery</a> where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and FTXT have full support for multispectral images up to 31 bands, 21 of them meta channels.  Note, if you build ImageMagick with the configure script <samp>--enable-64bit-channel-masks</samp> option, you can process 62 band multispectral images with up to 52 meta channels.</p>
 <p>If you have a use case that is not currently supported by an image format, post it to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion forum</a>. There is a good chance, we can support your use case in a future release of ImageMagick.</p>
 
 
