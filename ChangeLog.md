@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-27](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-26...7.1.1-27) - 2024-01-21
+
+### Merged
+
+- fix PKG_CONFIG_LIBDIR [`#7013`](https://github.com/ImageMagick/ImageMagick/pull/7013)
+
+### Commits
+
+- beta release [`3042ca2`](https://github.com/ImageMagick/ImageMagick/commit/3042ca2cbe31db8f9b4ac26949aa9dedc7984e3b)
+- Use constImage instead. [`b449e0f`](https://github.com/ImageMagick/ImageMagick/commit/b449e0fec6cc439edfe1aadc2a247a59ec9fb013)
+- export an exception when functions do not include an enclosing parenthesis (https://github.com/ImageMagick/ImageMagick/discussions/4533) [`ea0ea9c`](https://github.com/ImageMagick/ImageMagick/commit/ea0ea9cd9838645b8485d4757cf2944fa9adaa07)
+- check maximum number of meta channels [`c099a19`](https://github.com/ImageMagick/ImageMagick/commit/c099a19f0faed7001051dafe366477cd6de145ea)
+- fix compiler exception [`f76166c`](https://github.com/ImageMagick/ImageMagick/commit/f76166c0b5e19aed12b2ea97dc9a33ccf27da726)
+- deprecate InitializePixelCacheMap() and introduce ResetPixelCacheMap() [`35ba540`](https://github.com/ImageMagick/ImageMagick/commit/35ba5404dc50ccae946d6763f2a946356111b1a6)
+- prevent possible integer overflow [`7ae3b4b`](https://github.com/ImageMagick/ImageMagick/commit/7ae3b4b4940cd7375bdda0a24256819427228660)
+- cosmetic [`1db97cd`](https://github.com/ImageMagick/ImageMagick/commit/1db97cd4b3ac30c0d2a8b52cc8ba4a0fd7c9ea1e)
+- fix compiler exception [`c02ab48`](https://github.com/ImageMagick/ImageMagick/commit/c02ab48cf61dfcc3a3c1af44a55c0730fce9bc4d)
+- eliminate compiler warning [`eaa6f6c`](https://github.com/ImageMagick/ImageMagick/commit/eaa6f6c1670972fac0a43a9b624ef58099092a41)
+- move check for excessive meta channels [`2133d30`](https://github.com/ImageMagick/ImageMagick/commit/2133d3026b34c7ec2dac120343a64e72eb8016d4)
+- Corrected setting the quantum_type for the red channel that caused issues with multi spectral images. [`906758c`](https://github.com/ImageMagick/ImageMagick/commit/906758cb8df3ae53c317d58df393b632ed906200)
+- fix scaling of {display-p3,pro-photo,adobe-98} colorspace (https://github.com/ImageMagick/ImageMagick/issues/7038) [`35e6851`](https://github.com/ImageMagick/ImageMagick/commit/35e685142fcdd18fee4f35314ebaa15c33dc8eb7)
+- adjust copyright year [`bc88c69`](https://github.com/ImageMagick/ImageMagick/commit/bc88c690ddf8447b9b48b0d5baa5a7fe824c5894)
+- Corrected patch to fix reading multi spectral images. [`9c64c66`](https://github.com/ImageMagick/ImageMagick/commit/9c64c662f40793ae2a6fb8d0569cb613957cb918)
+- release [`0225ac4`](https://github.com/ImageMagick/ImageMagick/commit/0225ac41a47ab0aaa7ea1098b036d5546eb61663)
+
 ## [7.1.1-26](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-25...7.1.1-26) - 2024-01-07
 
 ### Merged
