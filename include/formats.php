@@ -982,7 +982,7 @@ the supported image formats.</p>
   <tr>
     <td><a href="https://qoiformat.org/">QOI</a></td>
     <td>RW</td>
-    <td>Quite OK Image Forma</td>
+    <td>Quite OK Image Format</td>
     <td>Fast, lossless image compression.</td>
   </tr>
 
