@@ -5,6 +5,50 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-28](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-27...7.1.1-28) - 2024-02-11
+
+### Merged
+
+- fix misleading comment in dds.c [`#7075`](https://github.com/ImageMagick/ImageMagick/pull/7075)
+
+### Commits
+
+- beta release [`868642e`](https://github.com/ImageMagick/ImageMagick/commit/868642e2b0e69a974e4ad6022c1d2050660c1aa5)
+- Bump azure/azure-code-signing-action from 0.2.22 to 0.2.26 [`1aa50ea`](https://github.com/ImageMagick/ImageMagick/commit/1aa50ea3c7683c40b5ccd6af308d40d7dca04e15)
+- updated link [`f69389a`](https://github.com/ImageMagick/ImageMagick/commit/f69389a3d88902af267e71ef362ea24b2f56e85b)
+- eliminate extraneous EXIF comma [`c4b3e14`](https://github.com/ImageMagick/ImageMagick/commit/c4b3e141a764ff1f638aa5ac19033dc573451978)
+- Do not leak memory when throwing in the constructor [`aa4afc5`](https://github.com/ImageMagick/ImageMagick/commit/aa4afc5f21f1e90c0ad63897ca7afbd7fa43b93e)
+- escape { when writing MIFF images (https://github.com/ImageMagick/ImageMagick/issues/7071) [`97432f1`](https://github.com/ImageMagick/ImageMagick/commit/97432f116c035162c390f72a602d5c7470b8d871)
+- protect '{' in MIFF key/value pairs [`dd171d1`](https://github.com/ImageMagick/ImageMagick/commit/dd171d11795db16461fe4835603c4aecbab1a09d)
+- ... [`52c0001`](https://github.com/ImageMagick/ImageMagick/commit/52c00019117c4e2169d996544eaefbac8b6bf147)
+- set visible image artifac [`2c6c09d`](https://github.com/ImageMagick/ImageMagick/commit/2c6c09d2121c6386728a0f52410026c300e8aab3)
+- include version header [`be0f61a`](https://github.com/ImageMagick/ImageMagick/commit/be0f61a0d4ca4852a29cf08f74e7790803d649ac)
+- Bump azure/azure-code-signing-action from 0.2.26 to 0.3.0 [`438b9ab`](https://github.com/ImageMagick/ImageMagick/commit/438b9ab56b18dd9ddc55dcb80298127d30e8b537)
+- extent buffer by the maximum field size [`ce9b069`](https://github.com/ImageMagick/ImageMagick/commit/ce9b069cc1ad9748e91b9d37be54cfbb6a714ac5)
+- enable error diffusion for -posterize (https://github.com/ImageMagick/ImageMagick/issues/7079) [`b103653`](https://github.com/ImageMagick/ImageMagick/commit/b103653db62f8822ed0d2c9823a706f423d1de97)
+- refactor posterize macro [`122a1f6`](https://github.com/ImageMagick/ImageMagick/commit/122a1f65891eefb4c090cdf076182bcee11eda44)
+- improve posterize algorithm [`92c93c3`](https://github.com/ImageMagick/ImageMagick/commit/92c93c30aded7dbdbc1e5f2ec9b9774da0bf20b9)
+- refactor posterize pixel macro [`114f958`](https://github.com/ImageMagick/ImageMagick/commit/114f95804df810185bb85b1351d2effbc1bbc47e)
+- eliminate compiler warning [`79f137d`](https://github.com/ImageMagick/ImageMagick/commit/79f137d994c26d536f84a6a5e89d8fd07dbf5f48)
+- support setting the image registry [`73e6f63`](https://github.com/ImageMagick/ImageMagick/commit/73e6f632643bba977a2ec7acf68f148f26c9e3d2)
+- modify posterize algorithm (https://github.com/ImageMagick/ImageMagick/issues/7079) [`4b6843d`](https://github.com/ImageMagick/ImageMagick/commit/4b6843d535c89685d7321842b161c3914b38a20e)
+- eliminate compiler warning [`03af658`](https://github.com/ImageMagick/ImageMagick/commit/03af6588de05f797b72677ce79f9f142e1c444ab)
+- eliminate compiler warning [`e73215c`](https://github.com/ImageMagick/ImageMagick/commit/e73215c0466584e9388841b48a11fd1497b23cac)
+- check for class recursion [`5a549df`](https://github.com/ImageMagick/ImageMagick/commit/5a549df7f79c7cb4dbf6c876d520ba3ad275075c)
+- Raise warning instead of error when xmp profile can not be validated. [`832aabf`](https://github.com/ImageMagick/ImageMagick/commit/832aabf16bad64a0e9cb6221012af33192e47f84)
+- Fixed running identify one dds files with a cubemap. [`e9702b4`](https://github.com/ImageMagick/ImageMagick/commit/e9702b43fc502d70de2ba19ccce9282445d31a03)
+- Renamed method that skips the mipmaps. [`c317606`](https://github.com/ImageMagick/ImageMagick/commit/c3176066365ceb3cc7688c7ff76f04104000d99a)
+- Corrected check for width and height when skipping the mipmaps. [`59fa6fd`](https://github.com/ImageMagick/ImageMagick/commit/59fa6fd75bf87ba4b17ca24c86fa71a7edd7726a)
+- Set ttl to time when the image will expire instead of the duration that the image can be used. [`d3735ed`](https://github.com/ImageMagick/ImageMagick/commit/d3735ede7bc83d6d6087425d804642fc38bdc3b2)
+- improve time-to-live formatting [`12b1e53`](https://github.com/ImageMagick/ImageMagick/commit/12b1e53ffcf6d4fddfb7222b981bb8324c9b9a97)
+- Added HEIC_COMPUTE_NUMERIC_VERSION to make the version checks more readable. [`0c0f0a4`](https://github.com/ImageMagick/ImageMagick/commit/0c0f0a4e832271a1a37b872e8b76c100e81945c2)
+- fix incorrect stroke opacity (https://github.com/ImageMagick/ImageMagick/issues/7097) [`fab46a4`](https://github.com/ImageMagick/ImageMagick/commit/fab46a4620a761feae2b4771f7d57257f06e3fb5)
+- correct pixel offset validation method [`3be0fa7`](https://github.com/ImageMagick/ImageMagick/commit/3be0fa779c1f00049ca3582601740e124208322b)
+- if resampling fails, replace with invalid pixel [`b0f6c05`](https://github.com/ImageMagick/ImageMagick/commit/b0f6c05f67435016568ee24ed4a07f72a0e0e677)
+- Also allow invalid length where 8 was added to the header size. [`5c7fbe3`](https://github.com/ImageMagick/ImageMagick/commit/5c7fbe3922c2300521fd3d30faa484f8a8f78fa2)
+- release [`b206758`](https://github.com/ImageMagick/ImageMagick/commit/b20675898a9e4b5972e56c368ca5f04a017a99ef)
+- release [`365d9b6`](https://github.com/ImageMagick/ImageMagick/commit/365d9b6f698234093d7a919f090bd5ce87b2104a)
+
 ## [7.1.1-27](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-26...7.1.1-27) - 2024-01-21
 
 ### Merged
