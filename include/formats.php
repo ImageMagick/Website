@@ -222,7 +222,7 @@ the supported image formats.</p>
   <tr>
     <td>DCR</td>
     <td>R</td>
-    <td>Kodak Digital Camera Raw Image File</td>
+    <td>Digital Camera Raw Image File</td>
     <td>Use DCRAW to leverage the raw photo decoder delegate program, e.g., dcraw:IMG_2600.dng</td>
   </tr>
 
