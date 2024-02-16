@@ -61,7 +61,7 @@
 
 <p>After you write your MagickCore program, compile it like this:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>cc -o core core.c `pkg-config --cflags --libs MagickWand`</samp></pre>
+<pre class="bg-light text-dark mx-4"><samp>cc `MagickCore-config --cflags --cppflags` -O2 -o core core.c `MagickCore-config --ldflags --libs`</samp></pre>
 
 <p>Set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
 
