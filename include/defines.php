@@ -1326,6 +1326,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>tiff:assume-alpha=<var>true|false</var></td>
+    <td>Assume undeclared extra channels are alpha.</td>
+  </tr>
+
+  <tr>
     <td>tiff:endian=<var>msb|lsb</var></td>
     <td> </td>
   </tr>
