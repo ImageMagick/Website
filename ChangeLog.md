@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-29](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-28...7.1.1-29) - 2024-02-25
+
+### Merged
+
+- Enable new libheif chroma subsampling options. [`#7095`](https://github.com/ImageMagick/ImageMagick/pull/7095)
+
+### Commits
+
+- beta release [`35bf3bc`](https://github.com/ImageMagick/ImageMagick/commit/35bf3bcfc69a0ce6b1561f7d7c17ceac932ce522)
+- respect base64 encoding @ https://github.com/ImageMagick/ImageMagick/issues/7102 [`cd9b4bd`](https://github.com/ImageMagick/ImageMagick/commit/cd9b4bdafeb0d4ac7572e2c467a93a9b005c2475)
+- Append signature when possible. [`477fda0`](https://github.com/ImageMagick/ImageMagick/commit/477fda06cc37979cd5c4e65f7960000059ba3944)
+- Code style changes. [`7aa16ea`](https://github.com/ImageMagick/ImageMagick/commit/7aa16ea6411ec8ccd74961c9a0043f86dbbe41ed)
+- leverage darktable delegate if libraw is not available [`3132d78`](https://github.com/ImageMagick/ImageMagick/commit/3132d78847feb10d7056696ed53744e2f0f2fc79)
+- locate darktable [`71bf5d4`](https://github.com/ImageMagick/ImageMagick/commit/71bf5d45ca43198da7421385cd59faf120d4c53d)
+- capture stdout [`9a09f84`](https://github.com/ImageMagick/ImageMagick/commit/9a09f84b27c597f1be3dadb6761be9d811493a1c)
+- free image info struct [`4e37947`](https://github.com/ImageMagick/ImageMagick/commit/4e37947fc65ba2fc380edccecdcca7165c806afd)
+- Call CoalesceImages inside the webp coder when the image dimensions are not the same to improve the patch that was made for #5542. [`bc11c2a`](https://github.com/ImageMagick/ImageMagick/commit/bc11c2a8d582b60dd3c1ae1d96c019c0bd6a3b59)
+- Added extra option (tiff:assume-alpha) that can be used to assume that a single extra sample is an alpha channel. [`b209bb5`](https://github.com/ImageMagick/ImageMagick/commit/b209bb52fb843cb6ceb44afe082cf353fd2957c5)
+- cosmetic [`92d5f8e`](https://github.com/ImageMagick/ImageMagick/commit/92d5f8e36afc5474e9aa2b3dd9c349522ea7e05d)
+- adjust browser spacing between buttons [`4f65015`](https://github.com/ImageMagick/ImageMagick/commit/4f65015618022492c670b2a7cfc8e26307abbb22)
+- uncontrolled format string [`d20d38b`](https://github.com/ImageMagick/ImageMagick/commit/d20d38bf9e90153824486e9b73e80d2195de3875)
+- restore [`2359440`](https://github.com/ImageMagick/ImageMagick/commit/23594407823c5e8108fdcb6794bd62ca1a7f2331)
+- Only write density values higher than zero in a jpeg file (#7120). [`43fccd5`](https://github.com/ImageMagick/ImageMagick/commit/43fccd5be9822fd648eb453cf6f3a680aeaa240e)
+- use radians macro [`255a53c`](https://github.com/ImageMagick/ImageMagick/commit/255a53c59e249a805d832d17dd7dbc0eaad35284)
+- more work on LCH colorspace [`eee1286`](https://github.com/ImageMagick/ImageMagick/commit/eee1286fa508fd042d20c4c1ec464af0dd69dd30)
+- final corrections to LCH colorspace formula [`78c2592`](https://github.com/ImageMagick/ImageMagick/commit/78c25922dcd67c34ea9e812e52ca6fc7689ef082)
+- Silence warnings. [`5f6704b`](https://github.com/ImageMagick/ImageMagick/commit/5f6704b404644027d00f3900052405f1a3c7fafd)
+- Removed NTGetLastError from the private header file because it is not exported. [`908f39a`](https://github.com/ImageMagick/ImageMagick/commit/908f39aab2d445a15f16f8ca9315e9d117ef4a92)
+- Return a different error code when the file could not be found on Windows to have the same behavior as on other platforms. [`7f61c5a`](https://github.com/ImageMagick/ImageMagick/commit/7f61c5a9c3466b7b0a22bde7174d07b05dd5185b)
+- Fix for appending pixels that don't have the sRGBColorspace. [`cfc71f0`](https://github.com/ImageMagick/ImageMagick/commit/cfc71f0aa1bcdd8781b77197114a9e9d80ef483c)
+- release [`0deac72`](https://github.com/ImageMagick/ImageMagick/commit/0deac72ed480ac2ec8e9d766c15ddb3bca055952)
+
 ## [7.1.1-28](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-27...7.1.1-28) - 2024-02-11
 
 ### Merged
