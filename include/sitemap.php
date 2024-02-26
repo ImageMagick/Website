@@ -18,6 +18,7 @@
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/license.php">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/export.php">Export classification</a>: export control status of ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/privacy-policy.php">Privacy policy</a>: we do not collect personal identifier information.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/history.php">History</a>: how ImageMagick was conceived and developed.</li>
 </dl>

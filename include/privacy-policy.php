@@ -1,6 +1,6 @@
 <?php
   $title='ImageMagick Privacy Policy';
   $topic='Privacy';
-  $description='This Privacy Policy is designed to help you understand how we collect, use, disclose, and safeguard your personal information when you interact with our software, website, and services.';
+  $description='As the organization overseeing the open-source ImageMagick software distribution, ImageMagick Studio LLC does not collect any personal identifier information (PII). In addition to the organization, the ImageMagick software distribution does not collect PII either.';
   include('session.php');
 ?>
