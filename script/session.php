@@ -3,8 +3,8 @@
     Make sure variables are defined.
   */
   if (!isset($title)) { $title = ""; }
+  if (!isset($description)) { $description = $title; }
   if (!isset($topic)) { $topic = ""; }
-  if (!isset($description)) { $description = ""; }
   /*
     Start a session and return content from the cache if its exists.
   */
