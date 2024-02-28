@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">WebP Image Format</h1>
 <p class="lead magick-description">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. As an example, suppose you are interested in these options:</p>
 
 <ul>

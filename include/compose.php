@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">CLI Examples</h1>
 <div id="cli-examples"></div>
 
 <p class="lead magick-description">This page descibed the Image composition methods that is used to define how

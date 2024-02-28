@@ -1,4 +1,5 @@
 <div class="magick-header">
+<h1 class="text-center">ImageMagick Defines</h1>
 
 <p class="magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
 
