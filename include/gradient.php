@@ -25,13 +25,13 @@ radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 magick -size 256x256 gradient:white-black linear_gradient.png
 </samp></pre>
 
-<p><img src="/script/../image/gradients/linear_gradient.png" width="256" height="256"></p>
+<p><img src="/script/../image/gradients/linear_gradient.png" alt="linear gradient" width="256" height="256"></p>
 
 <p>If you want a radial gradient, try:</p>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
 magick -size 256x256 radial-gradient:white-black radial_gradient.png </samp></pre>
-<p><img src="/script/../image/gradients/radial_gradient.png" width="256" height="256"></p>
+<p><img src="/script/../image/gradients/radial_gradient.png" alt="radial gradient" width="256" height="256"></p>
 
 <p>If you want non-linear grayscale gradients, then add -colorspace RGB -colorspace gray 
 before saving the output. For example:<p>
@@ -116,7 +116,7 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x128 -define gradient:direction=north gradient:black-white linear_gradient_default.png
 magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradient_default.png </samp></pre>
-<p><img src="/script/../image/gradients/linear_gradient_default.png" width="256" height="128"></p>
+<p><img src="/script/../image/gradients/linear_gradient_default.png" alt="linear gradient" width="256" height="128"></p>
 
 <p>The equivalent of </p>
 
@@ -127,7 +127,7 @@ magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradie
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x128 -define gradient:direction=east gradient:black-white linear_gradient_east.png
 magick -size 256x128 -define gradient:angle=90 gradient:black-white linear_gradient_east.png </samp></pre>
 
-<p><img src="/script/../image/gradients/linear_gradient_east.png" width="256" height="128"></p>
+<p><img src="/script/../image/gradients/linear_gradient_east.png" alt="radial gradient east" width="256" height="128"></p>
 
 
 <p>Examples of radial gradients going from black in the center to white at the boundary for the cases of "maximum/circle/default", "minimum", "diagonal", "ellipse" and 45 degree rotated ellipse, respectively, follow below.</p>
@@ -135,7 +135,7 @@ magick -size 256x128 -define gradient:angle=90 gradient:black-white linear_gradi
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x128 radial-gradient:black-white radial_gradient_maximum.png
 magick -size 256x128 -define gradient:radii=128,128 radial-gradient:black-white radial_gradient_maximum.png </samp></pre>
-<p><img src="/script/../image/gradients/radial_gradient_maximum.png" width="256" height="128"></p>
+<p><img src="/script/../image/gradients/radial_gradient_maximum.png" alt="radial gradient maximum" width="256" height="128"></p>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x128 -define gradient:extent=minimum radial-gradient:black-white radial_gradient_minimum.png
 magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white radial_gradient_minimum.png </samp></pre>
@@ -147,11 +147,11 @@ magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white ra
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x128 -define gradient:extent=ellipse radial-gradient:black-white radial_gradient_ellipse.png
 magick -size 256x128 -define gradient:radii=128,64 radial-gradient:black-white radial_gradient_ellipse.png </samp></pre>
-<p><img src="/script/../image/gradients/radial_gradient_ellipse.png" width="256" height="128"></p>
+<p><img src="/script/../image/gradients/radial_gradient_ellipse.png" alt="radial gradient ellipse" width="256" height="128"></p>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre>
 
-<p><img src="/script/../image/gradients/radial_gradient_ellipse_angle45.png" width="256" height="256"></p>
+<p><img src="/script/../image/gradients/radial_gradient_ellipse_angle45.png" alt="radial gradient ellipse angle 45" width="256" height="256"></p>
 
 </div>
 
