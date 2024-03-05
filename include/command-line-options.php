@@ -2784,7 +2784,7 @@ is unwanted. </p>
 <p>Setting <a href="#verbose" >-verbose</a> setting, will cause <a
 href="#distort" >-distort</a> to attempt to output the internal coefficients,
 and the <a href="#fx" >-fx</a> equivalent to the distortion, for expert study,
-and debugging purposes. This many not be available for all distorts. </p>
+and debugging purposes. This may not be available for all distorts. </p>
 
 <p>You can alternatively specify a special "<samp><a href="#define"
 >-define</a> distort:viewport={geometry_string}</samp>" setting which will
