@@ -76,21 +76,6 @@
   </div>
   </nav>
 
-  <div class="container">
-    <?php if ($_SERVER["SERVER_ADDR"] != "10.144.245.30") echo '<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
-
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-3129977114552745"
-      data-ad-slot="6345125851"
-      data-full-width-responsive="true"
-      data-ad-format="horizontal"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-  </div>
-
   <main class="container">
   <div class="magick-template">
 <?php
@@ -125,6 +110,7 @@
 
   <!-- Javascript assets -->
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" ></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   </body>
 </html>
 <?php
