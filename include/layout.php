@@ -38,6 +38,7 @@
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
+ <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
 </head>
 <?php flush(); ?>
 <body>
