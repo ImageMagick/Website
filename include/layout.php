@@ -37,6 +37,7 @@
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
 </head>
 <?php flush(); ?>
 <body>
@@ -110,7 +111,6 @@
 
   <!-- Javascript assets -->
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" ></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   </body>
 </html>
 <?php
