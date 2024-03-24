@@ -33,7 +33,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 
-<dd class="col-md-8"><a href="https://imagemagick.org/ChMagick">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
+<dd class="col-md-8"><a href="https://imagemagick.org/archive/ch/">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="c__"></a>C++</dt>
 
