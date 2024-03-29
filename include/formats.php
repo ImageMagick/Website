@@ -1169,6 +1169,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://developer.android.com/media/platform/hdr-image-format">UHDR</a></td>
+    <td>RW</td>
+    <td>Ultra HDR</td>
+    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library.</td>
+  </tr>
+
+  <tr>
     <td>UIL</td>
     <td>W</td>
     <td>X-Motif UIL table</td>
