@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">MagickCache: an Efficient Image Cache</h1>
 <p class="lead magick-description">The MagickCache provides secure methods and tools to cache images, image sequences, video, audio or metadata in a local folder. Any content is memory-mapped for efficient retrieval.  Additional efficiencies are possible by retrieving a portion of an image.  Content can persist or you can assign a time-to-live (TTL) to automatically expire content when the TTL is exceeded. MagickCache supports virtually unlimited content upwards of billions of images making it suitable as a web image service.</p>
 <p>The MagickCache works in concert with <a href="https://imagemagick.org">ImageMagick</a>.  Download the <a href="https://github.com/ImageMagick/MagickCache">MagickCache</a> and install.  You will now want to create the cache and populate it with images, video, and associated metadata.</p>
 <h4>Create a MagickCache</h4>

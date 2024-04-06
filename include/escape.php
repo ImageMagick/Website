@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Escapes</h1>
 <p class="lead magick-description">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a> or in montage <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#label" >-label</a>, to print various properties and other settings associated with an image.</p>
 
 <div>

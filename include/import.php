@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Screenshot Utility</h1>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead magick-description">Use the <samp>import</samp> program to capture some or all of an X server screen and save the image to a file. <samp>import</samp> captures the window selected by clicking or program argument. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>import</samp> command or see below for example usages of the command.</p>

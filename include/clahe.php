@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Adaptive Histogram Equalization</h1>
 <p class="lead magick-description">Use contrast limited adaptive histogram equalization (AHE) to improve contrast in images.  Ordinary histogram equalization computes a global equalization whereas an adaptive method computes several histograms, each corresponding to a distinct section of the image, and uses them to redistribute the lightness values of the image.  It is suitable for improving the local contrast and enhancing the definitions of edges in each region of an image.  A variant of adaptive histogram equalization, contrast limited adaptive histogram equalization (CLAHE) limits AHE's tendency to overamplify noise in relatively homogeneous regions of an image.</p>
 <p>CLAHE is supported as of ImageMagick 7.0.8-24 with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#clahe">-clahe</a> option:</p>
 <ul>

@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">ImageMagick News</h1>
 
 
 <h4>Recent News</h4>

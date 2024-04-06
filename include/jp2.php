@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">JPEG-2000 Image Format</h1>
 
 <p class="lead magick-description">ImageMagick's JPEG-2000 image formats, JP2 and JPC, accept a plethora of encoding options as detailed below.  As an example, suppose you are interested in these options:</p>
 

@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Annotated List of Command-line Options</h1>
 <br/>
 <div class="btn-group">
 <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">

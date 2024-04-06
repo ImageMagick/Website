@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Color Reduction</h1>
 <p class="text-center"><a href="#describe">Algorithm Description</a> • <a href="#measure">Measuring Color Reduction Error</a></p>
 
 <p class="lead magick-description">This document describes how ImageMagick performs color reduction on an image. To fully understand what follows, you should have a knowledge of basic imaging techniques and the tree data structure and terminology.</p>

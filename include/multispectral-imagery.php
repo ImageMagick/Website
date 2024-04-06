@@ -1,5 +1,4 @@
 <div class="magick-header">
-<h1 class="text-center">Multispectral Imagery</h1>
 <p class="lead magick-description">Multispectral imagery refers to images that are captured using multiple bands of the electromagnetic spectrum, beyond just the visible light spectrum. This means that they capture data across a wider range of wavelengths, from ultraviolet to infrared.</p>
 <p>By capturing data across multiple spectral bands, multispectral imagery can provide additional information about the objects or scenes being imaged, such as their composition, temperature, and vegetation health. This information can be used for a wide range of applications, including agriculture, environmental monitoring, disaster response, and military surveillance.</p>
 <p>Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images that display the information captured in each spectral band.</p>
