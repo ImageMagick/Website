@@ -4,15 +4,15 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.gif" width="256" height="171" class="image-slices" alt="purse" /></a>
 </ul>
 <p>To identify the objects in this image, use this command:</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick objects.gif -connected-components 4 -auto-level -depth 8 objects.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick objects.gif -connected-components 4 -auto-level -depth 8 objects.png</samp></pre>
 <p>The detected objects are uniquely labeled.  Use auto leveling to visualize the detected objects:</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.png" width="256" height="171" class="image-slices" alt="Objects" /></a>
 </ul>
 <p>Object statistics is useful to review.  To display them, use this command:</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick objects.gif -define connected-components:verbose=true -connected-components 4 objects.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick objects.gif -define connected-components:verbose=true -connected-components 4 objects.png</samp></pre>
 <p>Five objects were detected in the source image with these statistics:</p>
-<pre class="bg-light text-dark mx-4"><samp>Objects (id: bounding-box centroid area mean-color):
+<pre class="p-3 mb-2 bg-light text-dark"><samp>Objects (id: bounding-box centroid area mean-color):
   0: 256x171+0+0 119.2,80.8 33117 srgb(0,0,0)
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)
@@ -22,14 +22,14 @@
 <p>Add <samp>-define connected-components:exclude-header=true</samp> to show the objects without the header-line.  Add <samp>-define connected-components:exclude-ids=true</samp>. Use <samp>-define connected-components:sort=<var>area | width | height | x | y</samp> to sort the verbose connected components objects.  By default, the objects are listed in decreasing area.  Add <samp>-define connected-components:sort-order=<var>increasing | decreasing</var> to specify the sort order.</p>
 <p>Use <samp>-connected-components 8</samp> to visit 8 neighbors rather than 4.  By default, neighbor colors must be exact to be part of a unique object. Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> option to include pixels as part of an object that are <var>close</var> in color.</p>
 <p>You might want to eliminate small objects by merging them with their larger neighbors.  If so, use this command:</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
   -auto-level objects.jpg</samp></pre>
 <p>Here are the expected results.  Notice, how the small objects are now merged with the background.</p>
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/objects.jpg" width="256" height="171" class="image-slices" alt="Objects" /></a>
 </ul>
 <p>Notice how two of the objects were merged leaving three remaining objects:</p>
-<pre class="bg-light text-dark mx-4"><samp>Objects (id: bounding-box centroid area mean-color):
+<pre class="p-3 mb-2 bg-light text-dark"><samp>Objects (id: bounding-box centroid area mean-color):
   0: 256x171+0+0 118.0,80.4 33557 srgb(0,0,0)
   2: 120x135+104+18 159.5,106.5 8690 srgb(255,255,255)
   3: 50x36+129+44 154.2,63.4 1529 srgb(0,0,0)</samp></pre>
@@ -47,11 +47,11 @@
 </ul>
 <p>You may want to remove certain objects.  Use <samp>-define connected-components:remove-ids=<em>list-of-ids</em></samp> (e.g. -define connected-components:remove-ids=2,4-5).  Or use <samp>-define connected-components:keep-ids=<em>list-of-ids</em></samp> to keep these objects and merge all others. For convenience, you can keep the top objects with this option: <samp>-define connected-components:keep-top=<em>number-of-objects</em></samp>. Rather than object ids, you can instead remove or keep objects identified by there color, e.g. <samp>-define connected-components:keep-colors=<em>red;green;blue</em></samp>.</p>
 <p>Objects in your image may look homogeneous but have slightly different color values.  By default, only pixels that match exactly are considered as part of a particular object.  For slight variations of color in an object, use <samp>-fuzz</samp>.  For example,</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick star-map.png -fuzz 5% -define connected-components:verbose=true \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick star-map.png -fuzz 5% -define connected-components:verbose=true \
   -define connected-components:mean-color=true -connected-components 4 stars.gif</samp></pre>
 <h4>Connected Components</h4>
 <p>The algorithm walks through the pixels of a component, in the usual row-column order, looking for a component above or to the left.  For the component at top-left, there are no components above or to the left to merge into.  As a result, there are special cases where you need to rotate, repeat the connected components, then rotate back.  For example</p>
-<pre class="bg-light text-dark mx-4"><samp> magick  \
+<pre class="p-3 mb-2 bg-light text-dark"><samp> magick  \
   objects.gif  \
   -define connected-components:verbose=true \
   -define connected-components:area-threshold=6000 \

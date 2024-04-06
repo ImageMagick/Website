@@ -3,11 +3,11 @@
 
 <p>ImageMagick supports color profiles, however, for images without a profile or a declaration of colorspace, ImageMagick assumes non-linear sRGB.  Most image processing algorithms assume a linear colorspace, therefore it might be prudent to convert to linear color or remove the gamma function before certain image processing algorithms are applied. For example,</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</samp></pre>
 
 <p>To declare that an image is linear RGB rather than sRGB, you can use the set option:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -set colorspace RGB myRGBimage.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -set colorspace RGB myRGBimage.png</samp></pre>
 
 <p>Note that declaring an image as linear is not the same as converting the image to linear. Declaring it is linear only sets the meta data and does not change the pixel data. Whereas converting to linear actually changes the pixel data as described in more detail below.</p>
 
@@ -17,7 +17,7 @@
 <p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a
 > or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#grayscale">-grayscale</a> options:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>
 convert myimage.png -colorspace LinearGray myRGBimage.png
 convert myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
 convert myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
@@ -28,27 +28,27 @@ convert myimage.png -grayscale Rec709luminance myRGBimage.png
 
 <p>The same concept is needed when separating channels.  Normally, the conversion to separate each channel of an sRGB color image produces separate non-linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as linear grayscale. For example, the following produces linear grayscale channels.</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</samp></pre>
 
 <p>When separating and recombining channels, with potential intermediate processing, it is important to identify the colorspace used, especially during the recombination. For example,</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -separate myimage_channels_%d.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -separate myimage_channels_%d.png
 magick myimage_channels_*.png -combine myimage2.png</samp></pre>
 
 <p>In the above example, the separated channels are non-linear and the default for <samp>-combine</samp> is to assume non-linear channels. So the result is the same as the input.</p>
 
 If one desires to separate to linear grayscale channels, recombine them later back to non-linear color, perhaps after some processing, then use the same concept as above for maintaining linear grayscale:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
 magick myimage_channels_*.png -set colorspace RGB -combine -colorspace sRGB myimage2.png
 </samp></pre>
 
 <p>When converting to another colorspace and back, such as between sRGB and HSL, the following two commands handle the first case of non-linear channels and the second case of linear channels:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
 magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png</samp></pre>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
 magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set colorspace sRGB myimage2.png</samp></pre>
 
 <p>A majority of the image formats assume an sRGB colorspace (e.g. JPEG, PNG, etc.). A few support only linear RGB (e.g. EXR, DPX, CIN, HDR) or only linear GRAY. A few formats support CMYK. For example JPG does, but PNG does not. Then there is the occasional format that also supports LAB (that is CieLAB) (e.g. TIFF, PSD, JPG, JP2). For additional information, see the <a href="https://imagemagick.org/script/formats.php#colorspace" >Colorspace</a> and <a href="https://imagemagick.org/script/formats.php#supported" >Supported Formats</a> pages.</p>

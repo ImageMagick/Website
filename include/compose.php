@@ -426,7 +426,7 @@ but not always, the same name as the composite 'method' they use, and replaces
 the normal use of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a>
 setting in the "<samp>composite</samp>" command.  For example... </p>
 
-<pre class="bg-light text-dark mx-4"><samp>composite ... -blend 50x50 ...  </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>composite ... -blend 50x50 ...  </samp></pre>
 
 <p>The "<samp>magick</samp>" command can accept these extra arguments to its <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#composite"
@@ -438,7 +438,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick ... -compose blend  -define compose:args=50,50 -composite ...  </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick ... -compose blend  -define compose:args=50,50 -composite ...  </samp></pre>
 
 <p>The following is a table of these special 'argumented' compose methods,
 with a brief summary of what they do. For more details see the equivalent

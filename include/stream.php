@@ -7,18 +7,18 @@
 
 <p>We list a few examples of the <samp>stream</samp> command here to illustrate its usefulness and ease of use. To get started, lets stream the red, green, blue components of a 640x480 JPEG image to disk as unsigned characters:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick stream -map rgb -storage-type char image.jpg pixels.dat
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick stream -map rgb -storage-type char image.jpg pixels.dat
 magick display -depth 8 -size 640x480 rgb:pixels.dat
 </samp></pre>
 
 <p>Here we extract a 100x100 region from a TIFF image in the grayscale format as doubles:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
 </samp></pre>
 
 <p>You can also associate the region to extract with the image filename:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
 </samp></pre>
 
 <p>Streaming requires that the image coder read the image pixels in row order.  Not all formats adhere to this requirement.  Verify a particular image format first, before you utilize streaming in your workflow.</p>

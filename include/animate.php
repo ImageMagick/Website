@@ -7,11 +7,11 @@
 
 <p>We list a few examples of the <samp>animate</samp> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick animate movie.gif </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick animate movie.gif </samp></pre>
 
 <p>To animate a directory of JPEG images, use:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick animate *.jpg </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick animate *.jpg </samp></pre>
 
 <p>You can find additional examples of using <samp>animate</samp> in <a href="https://imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 

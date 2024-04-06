@@ -31,7 +31,7 @@
 
 <p>Here is an example security policy:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>
 &lt;!ATTLIST policymap xmlns CDATA #FIXED "">
@@ -144,30 +144,30 @@
 
 <p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
 
-<pre class="bg-light text-dark mx-4">$ magick https://imagemagick.org/image/wizard.png wizard.jpg
+<pre class="p-3 mb-2 bg-light text-dark">$ magick https://imagemagick.org/image/wizard.png wizard.jpg
 convert: attempt to perform an operation not allowed by the security policy `HTTPS'
 convert: no images defined `wizard.jpg'</pre>
 
 <p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="delegate" rights="none" pattern="*" />
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="delegate" rights="none" pattern="*" />
 &lt;policy domain="module" rights="none" pattern="*" />
 &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></samp></pre>
 
 <p>The module policy enables or disables a complete module for both read or write.  To just read or write an image format, use the coder policy instead.  For example, we disable reading just a few Postscript related formats, however, you can still write them:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="coder" rights="write" pattern="{PDF,PS,PS2,PS3,XPS}" /></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="coder" rights="write" pattern="{PDF,PS,PS2,PS3,XPS}" /></samp></pre>
 
 <p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero resulting in a minor performance penalty.  You can also jumble the contents of certain memory buffers (requires version 7.1.0-38) and temporary files before they are freed or deleted.  The shred value is the number of times to replace content with random data.  For example,</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="system" name="memory-map" value="anonymous"/>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="system" name="memory-map" value="anonymous"/>
 &lt;policy domain="cache" name="memory-map" value="anonymous"/>
 &lt;policy domain="system" name="shred" value="1"/></samp></pre>
 <p>For performance reasons, the first pass is fast by repeating the random sequence as necessary to overwrite the contents of the buffer or file.  Subsequent passes are an order of magnitude slower, but generate cryptographically strong random bytes for the length of the buffer or file.</p>
 
 <p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </samp></pre>
 
 <p>As of ImageMagick version 7.0.4-23, you can limit the maximum number of images in a sequence.  For example, to limit an image sequence to at most 64 frames, use:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="resource" name="list-length" value="64"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="list-length" value="64"/></samp></pre>
 
 <p>Note, numeric values in policies are floating-point with an optional SI prefix (e.g., 10MiB).</p>
 
@@ -176,17 +176,17 @@ convert: no images defined `wizard.jpg'</pre>
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
 
 <p>As of ImageMagick version 7.0.8-11, you can set a <samp>module</samp> security policy.  For example, to prevent Postscript or PDF interpretation, use:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="module" rights="none" pattern="{ps,pdf,xps}/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="module" rights="none" pattern="{ps,pdf,xps}/></samp></pre>
 
 <p>As of ImageMagick version 7.0-10-52, you can set a <samp>font</samp> policy.  Specify a path to a Unicode font that ImageMagick defaults to whenever the user does not specify a font preference:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="system" name="font" value="/usr/share/fonts/arial-unicode.ttf"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="system" name="font" value="/usr/share/fonts/arial-unicode.ttf"/></samp></pre>
 
 <p>Note, in file path glob patterns, use the backslash character (\) to escape characters that would otherwise be interpreted as special characters. For example:</p>
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="path" rights="none" pattern="c:\\\\*"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="path" rights="none" pattern="c:\\\\*"/></samp></pre>
 
 <p>You can verify your policy changes are in effect with this command:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4">$ magick identify -list policy
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark">$ magick identify -list policy
 Path: ImageMagick-7/policy.xml
   Policy: Cache
     name: memory-map
@@ -251,7 +251,7 @@ Path: [built-in]
 
 <p>When writing image pixels to disk, ImageMagick first preallocates the disk file, which is faster than fully populating the file with zeros. To improve performance even further, the file is memory-mapped on disk. This can result in an increase in performance of up to 5 times, but there is a possibility that the disk file may run out of free space as it is populated, causing the operating system (OS) to throw a SIGBUS signal which prevents ImageMagick from continuing. To prevent a SIGBUS signal from occurring, use this security policy:</p>
 
-<pre class="bg-light text-dark mx-4">
+<pre class="p-3 mb-2 bg-light text-dark">
 &lt;policy domain="cache" name="synchronize" value="True"/>
 </pre>
 
@@ -261,7 +261,7 @@ Path: [built-in]
 
 <p>A zero configuration build of ImageMagick does not permit external configuration files.  To define your security policy, you must instead edit the <samp>MagickCore/policy-private.h</samp> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>static const char
+<pre class="p-3 mb-2 bg-light text-dark"><samp>static const char
   *ZeroConfigurationPolicy = \
 "&lt;policymap> \
   &lt;policy domain=\"coder\" rights=\"none\" pattern=\"MVG\"/> \

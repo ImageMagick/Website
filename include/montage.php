@@ -7,7 +7,7 @@
 
 <p>We list a few examples of the <samp>montage</samp> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -24,7 +24,7 @@
 
 <p>Ok, let's add some decorations:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -44,7 +44,7 @@
 <h4>Ashlar Pseudo-image Format</h4>
 <p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitedly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</samp></pre>
 
 <p>This is designed to quickly view a collection of images. To have more control over the layout of your image tiles, use the <samp>montage</samp> command instead.</p>
 

@@ -19,10 +19,10 @@
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>The latter image was produced with this command:</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick mountains.jpg -clahe 25x25%+128+3 mountains-clahe.jpg</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mountains.jpg -clahe 25x25%+128+3 mountains-clahe.jpg</samp></pre>
 <p>The <samp>25x25%</samp> argument divides the image into 16 tiles to perform local contrast enhancement.  The image dimensions are <samp>1500x1000</samp> so the tiles are exactly <samp>375x250</samp> pixels each.  Rather than a percentage, you can specify the tile dimensions directly with <samp>375x250</samp>.</p>
 <p>For tile sizes that do not divide evenly into the image dimensions, CLAHE utilizes virtual pixels, as such the results can vary slightly based on your chosen virtual pixel method.  For example,</p>
-<pre class="bg-light text-dark mx-4 cli"><samp>magick mountains.jpg -virtual-pixel mirror -clahe 300x300+128+3! mountains-clahe.jpg</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mountains.jpg -virtual-pixel mirror -clahe 300x300+128+3! mountains-clahe.jpg</samp></pre>
 <p>Notice the <samp>!</samp>.  That forces the tile size to exactly 300x300 pixels, whereas without the <samp>!</samp>, the tile size respects the aspect ratio of the image and results in tile dimensions of <samp>300x200</samp>.</p>
  
 </div>

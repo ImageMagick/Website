@@ -68,7 +68,7 @@ insensitive manner. </p>
 free-form string tables directly, allowing you to override the above sequence,
 and avoid accessing an attribute or property of the same name.</p>
 
-<pre class="bg-light text-dark mx-4"><samp>%[artifact:<var>setting</var>]
+<pre class="p-3 mb-2 bg-light text-dark"><samp>%[artifact:<var>setting</var>]
 %[option:<var>setting</var>] </samp></pre>
 
 <p>Escape handling requires access to an image container.  If none are available, a blank image is created to ensure the expression can be processed and a value returned.  For example, <samp>magick -print "%[fx:.8765/3.14]" null: null:</samp>.</p>
@@ -286,7 +286,7 @@ filename, type, width, height. </p>
 <p>Here is a sample command and its output for an image with filename
 <samp>bird.miff</samp> and whose width is 512 and height is 480.</p>
 
-<pre class="bg-light text-dark mx-4"><samp>-> identify -format "%m:%f %wx%h" bird.miff
+<pre class="p-3 mb-2 bg-light text-dark"><samp>-> identify -format "%m:%f %wx%h" bird.miff
 MIFF:bird.miff 512x480 </samp></pre>
 
 <p>Note that all single letter percent escapes can also be used using long
@@ -645,7 +645,7 @@ Artifact. </p>
 now list all free-form string properties, artifacts, and options, (but not
 specific image attributes) using...</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick ... \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \
@@ -664,13 +664,13 @@ example you can do a numerical calculation use <samp>%[fx:...]</samp> to
 evaluate the given <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>%[fx:<var>expression</var>] </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>%[fx:<var>expression</var>] </samp></pre>
 
 <p>Use <samp>pixel:</samp> or <samp>hex:</samp> to evaluate a pixel color as defined by the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>%[pixel:<var>expression</var>] </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>%[pixel:<var>expression</var>] </samp></pre>
 
 <p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define pixel:compliance=css</samp>)</p>.
 
@@ -679,11 +679,11 @@ expression:</p>
 <p>You can also use the following special formatting syntax to print EXIF
 mage meta-data that was included in the image read in:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>%[EXIF:<var>tag</var>] </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>%[EXIF:<var>tag</var>] </samp></pre>
 
 <p>Choose <var>tag</var> from the following:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4"><samp>
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>
 *  (print all EXIF tags, in keyword=data format)
 !  (print all EXIF tags, in tag_number data format)
 #hhhh (print data for EXIF tag #hhhh)
@@ -776,11 +776,11 @@ shell from misinterpreting any spaces and square brackets.</p>
 <p>The following special formatting syntax can be used to print IPTC
 information contained in the file:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>%[IPTC:<var>dataset</var>:<var>record</var>] </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>%[IPTC:<var>dataset</var>:<var>record</var>] </samp></pre>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4 bg-light text-dark:"><samp>
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark bg-light text-dark:"><samp>
   Envelope Record
   1:00  Model Version
   1:05  Destination

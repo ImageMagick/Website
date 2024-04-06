@@ -3,11 +3,11 @@
 
 <p class="lead">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick image.jpg image.png </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick image.jpg image.png </samp></pre>
 
 <p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick label.gif -alpha Set \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick label.gif -alpha Set \
   \( +clone  -shade 110x90 -normalize -negate +clone  -compose Plus -composite \) \
   \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -alpha Off \) \
   -delete 0 +swap  -compose Multiply -composite  button.gif</samp></pre>
@@ -34,7 +34,7 @@
 
 <p>Given the complexity of the rendering, you might be surprised it is accomplished by a single command-line:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
   -draw 'roundrectangle 16, 5, 304, 85 20,40' +tile -fill snow \
   -draw 'roundrectangle 264, 5, 304, 85  20,40' -tile gradient:chartreuse-green \
   -draw 'roundrectangle 16,  5, 180, 85  20,40' -tile gradient:chartreuse1-chartreuse3 \
@@ -47,7 +47,7 @@
   -append -background white -gravity center -extent 320x200 cylinder_shaded.png</samp></pre>
 
 <p>Run this script contributed by <a href="https://github.com/geemack">Geemack</a>.   You'll get a glimpse of the power and versatility of the ImageMagick command-line:</p>
-<pre class="pre-scrollable bg-light text-dark mx-4 cli"><samp>magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark cli"><samp>magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
   xc:gold \( xc:teal -duplicate 2 +append \) -modulate 100,100,"%[fx:rand()*200]" \
   xc:white -scale x1 +append -write mpr:clut +delete radial-gradient: mpr:clut \
   -clut -scale 100x4% -wave "%[fx:rand()*24+24]"x"%[fx:w/ceil(rand()*4+1)]" -extent "%[w]x%[w]" \
@@ -107,7 +107,7 @@
 <p>In Linux shells, certain characters such as the asterisk (<samp>*</samp>) and question mark (<samp>?</samp>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <samp>1.jpg</samp>, <samp>2.jpg</samp>, <samp>3.jpg</samp>, <samp>4.jpg</samp>, and <samp>5.jpg</samp> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick *.jpg images.gif</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick *.jpg images.gif</samp></pre>
 
 <h4>Explicit Image Format</h4>
 <p>Images are stored in a myriad of image formats including
@@ -126,43 +126,43 @@ values.  ImageMagick has no way to automagically determine the image format
 so we explicitly set one:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 640x480 -depth 8 rgb:image image.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 640x480 -depth 8 rgb:image image.png</samp></pre>
 
 <h4>Built-in Images and Patterns</h4>
 
 <p>ImageMagick has a number of built-in <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-images">images</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 640x480 pattern:checkerboard checkerboard.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 640x480 pattern:checkerboard checkerboard.png</samp></pre>
 
 <h4>STDIN, STDOUT, and file descriptors</h4>
 <p>Linux and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <samp>-</samp>.  In this example we pipe the output of
   <?php cmd("magick"); ?> to the <?php cmd("display"); ?> program:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
 
 <p>The second explicit format "<samp>gif:</samp>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <?php cmd("display"); ?>
  command can readily recognize the format as GIF.  The <?php cmd("magick"); ?> program also accepts STDIN as input in this way:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick rose: gif:- | magick - -resize "200%" bigrose.jpg'</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose: gif:- | magick - -resize "200%" bigrose.jpg'</samp></pre>
 
 <p>Other pipes can be accessed via their <var>file descriptors</var> (as of version 6.4.9-3). The file descriptors 0, 1, and 2 are reserved for the standard streams STDIN, STDOUT, and STDERR, respectively, but a pipe associated with a file descriptor number <var>N</var>&gt;2 can be accessed using the pseudonym <samp>fd:</samp><var>N</var>. (The pseudonyms <samp>fd:0</samp> and <samp>fd:1</samp> can be used for STDIN and STDOUT.) The next example shows how to append image data piped from files with  descriptors 3 and 4 and direct the result to the file with descriptor number 5.
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick fd:3 fd:4 -append fd:5</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick fd:3 fd:4 -append fd:5</samp></pre>
 
 <p>When needed, explicit image formats can be given as mentioned earlier, as in the following.
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick gif:fd:3 jpg:fd:4 -append tif:fd:5</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick gif:fd:3 jpg:fd:4 -append tif:fd:5</samp></pre>
 
 <h4>Selecting Frames</h4>
 <p>Some images formats contain more than one image frame.  Perhaps you only want the first image, or the last, or some number of images in-between.  You can specify which image frames to read by appending the image filename with the frame range enclosed in brackets.  Here our image (an animated GIF) contains more than one frame but we only want the first:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick 'images.gif[0]' image.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick 'images.gif[0]' image.png</samp></pre>
 
 <p class="text-info">Linux shells generally interpret brackets so we enclosed the filename in quotes above.
 In a Windows command shell the brackets are not interpreted but using quotes doesn't hurt. However, in most cases the roles of single-quotes and double-quotes are reversed with respect to Linux and Windows, so Windows users should usually try double-quotes where we display single-quotes, and vice versa.
@@ -171,14 +171,14 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 <p>You can read more than one image from a sequence with a frame range.  For example, you can extract the first four frames of an image sequence:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick 'images.gif[0-3]' images.mng</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick 'images.gif[0-3]' images.mng</samp></pre>
 
 <p>The default is to step one frame at a time so frames 0, 1, 2, and 3 are returned.  Set the step to 2 with <samp>-define frames:step=2</samp> and we instead get frames 0 and 2.</p>
 
 <p>Finally, you can read more than one image from a sequence, out-of-order. The next command gets the fourth image in the sequence, followed by the third, and then the fifth:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick 'images.gif[3,2,4]' images.mng</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick 'images.gif[3,2,4]' images.mng</samp></pre>
 
 <p>Notice that in the last two commands, a single image is written. The output in this case, where the image type is MNG, is a multi-frame file because the MNG format supports multiple frames. Had the output format been JPG, which only supports single frames, the output would have consisted of separate frames. More about that below, in the section about the <a href="#output">Output Filename</a>.
 </p>
@@ -187,37 +187,37 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 <p>Raw images are a sequence of color intensities without additional meta information such as width, height, or image signature.  With raw image formats, you must specify the image width and height but you can also specify a region of the image to read.  In our example, the image is in the raw 8-bit RGB format and is 6000 pixels wide and 4000 pixels high.  However, we only want a region of 600 by 400 near the center of the image:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 6000x4000 -depth 8 'rgb:image[600x400+1900+2900]' image.jpg</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 6000x4000 -depth 8 'rgb:image[600x400+1900+2900]' image.jpg</samp></pre>
 
 <p>
   You can get the same results with the <?php option("extract"); ?> option:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -size 6000x4000 -depth 8 -extract 600x400+1900+2900 rgb:image image.jpg</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 6000x4000 -depth 8 -extract 600x400+1900+2900 rgb:image image.jpg</samp></pre>
 
 <h4>Inline Image Resize</h4>
 <p>It is sometimes convenient to resize an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick '*.jpg' -resize 120x120 thumbnail%03d.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick '*.jpg' -resize 120x120 thumbnail%03d.png</samp></pre>
 
 <p>Here <var>all</var> the images are read and subsequently
 resized.  It is faster and less resource intensive to resize each image as it
 is read:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick '*.jpg[120x120]' thumbnail%03d.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick '*.jpg[120x120]' thumbnail%03d.png</samp></pre>
 
 <h4>Inline Image Crop</h4>
 <p>It is sometimes convenient to crop an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick '*.jpg' -crop 120x120+10+5 thumbnail%03d.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick '*.jpg' -crop 120x120+10+5 thumbnail%03d.png</samp></pre>
 
 <p>Here <var>all</var> the images are read and subsequently cropped.  It is faster and less resource-intensive to crop each image as it is read:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick '*.jpg[120x120+10+5]' thumbnail%03d.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick '*.jpg[120x120+10+5]' thumbnail%03d.png</samp></pre>
 
 
 <h4>Filename References</h4>
@@ -226,17 +226,17 @@ is read:
 The first is with '<samp>@</samp>' which reads image filenames separated by white space from the specified file.  Assume the file <samp>myimages.txt</samp> consists of a list of filenames, like so:
 </p>
 
-<pre class="bg-light text-dark mx-4">frame001.jpg
+<pre class="p-3 mb-2 bg-light text-dark">frame001.jpg
 frame002.jpg
 frame003.jpg</pre>
 
 <p>We then expect this command:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick @myimages.txt mymovie.gif</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick @myimages.txt mymovie.gif</samp></pre>
 
 <p>to read the images <samp>frame001.jpg</samp>, <samp>frame002.jpg</samp>, and <samp>frame003.jpg</samp> and convert them to a GIF image sequence.  </p>
 <p>If the image path includes one or more spaces, enclose the path in quotes:</p>
-<pre class="bg-light text-dark mx-4">'my title.jpg'</pre>
+<pre class="p-3 mb-2 bg-light text-dark">'my title.jpg'</pre>
 
 
     <p>Some ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> may exceed the capabilities of
@@ -250,12 +250,12 @@ the <samp>@</samp> (e.g. <samp>@mypoly.txt</samp>).</p>
 embedding a formatting character in the filename with a scene range.  Consider
 the filename <samp>image-%d.jpg[1-5]</samp>. The command</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick image-%d.jpg[1-5]</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick image-%d.jpg[1-5]</samp></pre>
 
 <p>causes ImageMagick to attempt to read images with these filenames:
 </p>
 
-<pre class="bg-light text-dark mx-4">image-1.jpg
+<pre class="p-3 mb-2 bg-light text-dark">image-1.jpg
 image-2.jpg
 image-3.jpg
 image-4.jpg
@@ -264,7 +264,7 @@ image-5.jpg</pre>
 <h4>Stream Buffering</h4>
 <p>By default, the input stream is buffered.  To ensure information on the source file or terminal is read as soon as its available, set the buffer size to 0:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: gif:- | magick display -define stream:buffer-size=0 gif:-</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: gif:- | magick display -define stream:buffer-size=0 gif:-</samp></pre>
 
 <h2><a class="anchor" id="option"></a>Command-line Options</h2>
 
@@ -294,7 +294,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 <p>In this example, <var>-channel</var> applies to each of the images, since, as we mentioned, settings persist:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -channel RGB wand.png wizard.png images.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -channel RGB wand.png wizard.png images.png</samp></pre>
 
 <h4><a class="anchor" id="operator"></a>Image Operator</h4>
 
@@ -313,7 +313,7 @@ an operator is applied to the current image set and forgotten.  The image operat
 
 <p>In this example, <var>-negate</var> negates the wand image but not the wizard:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick wand.png -negate wizard.png images.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wand.png -negate wizard.png images.png</samp></pre>
 
 <p>Note that an image operator will be applied to each images in an image
 sequence. For example, if you use <?php option("resize")?> option to resize a
@@ -341,7 +341,7 @@ these image sequence operators:</p>
 </ul>
 <p>In this example, <var>-append</var> appends three images into one:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick mikayla.png picnic.png beach.png -append vacation.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mikayla.png picnic.png beach.png -append vacation.png</samp></pre>
 
 <h4><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
@@ -445,7 +445,7 @@ setting for more specifics.</p>
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -resize '200%' bigWiz.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: -resize '200%' bigWiz.png
 magick logo: -resize '200x50%' longShortWiz.png
 magick logo: -resize '100x200' notThinWiz.png
 magick logo: -resize '100x200^' biggerNotThinWiz.png
@@ -465,7 +465,7 @@ magick logo: -resize '100x200!' dochThinWiz.png</samp></pre>
 Here are a few more examples:
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -resize '100' wiz1.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: -resize '100' wiz1.png
 magick logo: -resize 'x200' wiz2.png
 magick logo: -resize '100x200&gt;' wiz3.png
 magick logo: -resize '100x200&lt;' wiz4.png</samp></pre>
@@ -477,7 +477,7 @@ magick logo: -resize '100x200&lt;' wiz4.png</samp></pre>
 
 <p>Finally, use <samp>@</samp> to specify the maximum area in pixels of an image, again while attempting to preserve aspect ratio. (Pixels take only integer values, so some approximation is always at work.) In the following example, an area of 10000 pixels is requested. The resulting file has dimensions 115x86, which has 9890 pixels. </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -resize '10000@' wiz10000.png</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: -resize '10000@' wiz10000.png</samp></pre>
 
 <p class="text-info">In all the examples above and below, we have enclosed the <var>geometry</var> arguments  within quotation marks. Doing so is optional in many cases, but not always. We <var>must</var> enclose the geometry specifications in quotation marks when using <samp>&lt;</samp> or <samp>&gt;</samp> to prevent these characters from being interpreted by the shell as <var>file redirection</var>. On Windows systems, the carat <samp>^</samp>  needs to be within quotes, else it is ignored. To be safe, one should probably maintain a habit of enclosing all <var>geometry</var> arguments in quotes, as we have here.
 </p>
@@ -488,7 +488,7 @@ Here are some examples to illustrate the use of <var>offsets</var> in <var>geome
 <?php option("region")?> option. This option allows many other options to modify the pixels within a specified rectangular subregion of an image. As such, it needs to be given the width and height of that region, and also an <var>offset</var> into the image, which is a pair of coordinates that indicate the location of the region within the larger image. Below, in the first example, we specify a region of size <samp>100x200</samp> to be located at the <var>xy</var>–coordinates <var>x</var>=10, <var>y</var>=20. Let's use the usual algebraic notation (<var>x</var>,<var>y</var>)=(10,20), for convenience.
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: -region '100x200+10+20' -negate wizNeg1.png
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: -region '100x200+10+20' -negate wizNeg1.png
 magick logo: -region '100x200-10+20' -negate wizNeg2.png
 magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</samp></pre>
 
@@ -504,7 +504,7 @@ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</samp><
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif</samp></pre>
 
 
 <p class="text-info">Notice again that the  parentheses are <var>escaped</var> by preceding them with
@@ -541,14 +541,14 @@ above.</p>
   <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <samp>image.jpg</samp> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <samp>image</samp> in the raw red, green, and blue intensity format:
   </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick image.jpg rgb:image</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick image.jpg rgb:image</samp></pre>
 
 
 <h4>Standard Out</h4>
   <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
   </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
 
 <p>Here the explicit format is optional.  The GIF image format has a signature that uniquely identifies it so ImageMagick can readily recognize the format as GIF.</p>
 
@@ -556,23 +556,23 @@ above.</p>
 <p>Optionally, use an embedded formatting character to write a sequential image list.  Suppose our output filename is <samp>image-%d.jpg</samp> and our image list includes 3 images.  You can expect these images files to be written:
 </p>
 
-<pre class="bg-light text-dark mx-4">image-0.jpg
+<pre class="p-3 mb-2 bg-light text-dark">image-0.jpg
 image-1.jpg
 image-2.jpg</pre>
 
 <p>Or retrieve image properties to modify the image filename.  For example, the command
 </p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'</samp></pre>
 
 <p>writes an image with this filename:
 </p>
 
-<pre class="bg-light text-dark mx-4">rose-70x46.png</pre>
+<pre class="p-3 mb-2 bg-light text-dark">rose-70x46.png</pre>
 
 <p>Finally to convert multiple JPEG images to individual PDF pages, use:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick *.jpg +adjoin page-%d.pdf</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick *.jpg +adjoin page-%d.pdf</samp></pre>
 
 <p>Use <samp>-define filename:literal=true</samp> to bypass interpreting embedded formatting characters and instead use the filename literally.</p>
 
@@ -580,5 +580,5 @@ image-2.jpg</pre>
 
 <p>By default, the output stream is buffered.  To ensure information appears on the destination file or terminal as soon as written, set the buffer size to 0:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick -define stream:buffer-size=0 logo: gif:- | magick display gif:-</samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -define stream:buffer-size=0 logo: gif:- | magick display gif:-</samp></pre>
 </div>

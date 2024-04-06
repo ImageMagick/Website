@@ -64,17 +64,17 @@ file or data stream.
   <dd class="col-md-8">Configure ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="resource" name="area" value="100MP"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="area" value="100MP"/></samp></pre>
 
 Any image larger than this area limit is cached to disk rather than memory.
 
 Use <samp>width</samp> to limit the maximum width of an image in pixels.  Exceed this limit and an exception is thrown and processing stops.
 
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="resource" name="width" value="8KP"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="width" value="8KP"/></samp></pre>
 
 To limit the elapsed time of any ImageMagick command to 5 minutes, use this policy:
 
-<pre class="bg-light text-dark mx-4"><samp>&lt;policy domain="resource" name="time" value="300"/></samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="time" value="300"/></samp></pre>
 For convenience, define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <samp>-limit 2GB</samp> option exceeds policy maximum so memory limit is 1GB). </dd>
 
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
@@ -99,7 +99,7 @@ For convenience, define arguments for the memory, map, and disk resources with S
 
 <p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_CONFIGURE_PATH
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $XDG_CACHE_HOME/ImageMagick
@@ -110,7 +110,7 @@ $HOME/.config/ImageMagick
 
 <p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_CONFIGURE_PATH
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
 $PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
@@ -121,7 +121,7 @@ $HOME/.config/ImageMagick/
 
 <p>Under Windows, ImageMagick searches for these configuration files in the following order, and loads them if found:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_CONFIGURE_PATH
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_CONFIGURE_PATH
 &lt;<var>windows registry</var>&gt;
 $PREFIX/config
 $USERPROFILE/.config/ImageMagick
@@ -131,7 +131,7 @@ $USERPROFILE/.config/ImageMagick
 
 <p>For an uninstalled Windows installation, the configuration load order is:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_CONFIGURE_PATH
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME
 $USERPROFILE/.config/ImageMagick
 <var>client path</var>
@@ -144,7 +144,7 @@ $USERPROFILE/.config/ImageMagick
 <h4>Coders</h4>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
@@ -154,7 +154,7 @@ $HOME/.config/ImageMagick
 
 <h4>Filters</h4>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 &lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
@@ -166,7 +166,7 @@ $HOME/.config/ImageMagick
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$MAGICK_CONFIGURE_PATH
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$MAGICK_CONFIGURE_PATH
 $MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
 
 $MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>

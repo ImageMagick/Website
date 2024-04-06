@@ -5,7 +5,7 @@
 
 <p>To get a complete listing of which image formats are supported on your system, type</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick identify -list format </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick identify -list format </samp></pre>
 
 <p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Linux compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
 
@@ -17,14 +17,14 @@ Then there is the occasional format that also supports LAB (that is CieLAB)
 (e.g. TIFF, PSD, JPG, JP2).  To determine the colorspace of your image, use
 this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick identify -verbose image.jpg
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick identify -verbose image.jpg
 Image: image.jpg
 Format: JPEG (Joint Photographic Experts Group JFIF format)
 ...
 Colorspace: sRGB </samp></pre>
 
 OR use the appropriate percent escape
-<pre class="bg-light text-dark mx-4"><samp>$ magick image.jpg -print "%[colorspace]\n" null:
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick image.jpg -print "%[colorspace]\n" null:
 sRGB </samp></pre>
 
 
@@ -34,7 +34,7 @@ satisfactory results processing in the sRGB colorspace, you may get improved
 results in linear RGB (essentially sRGB with the gamma function removed).  For
 example,</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg </samp></pre>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
 Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
@@ -42,7 +42,7 @@ Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick lab.tif -resize 50% resize.jpg </samp></pre> </ul>
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick lab.tif -resize 50% resize.jpg </samp></pre> </ul>
 
 <p>Again, it may not make sense for some image processing operators to work
 directly in LAB space, but ImageMagick permits it and generally returns
@@ -54,7 +54,7 @@ reasonable results.</p>
 including sub-formats). The following table provides a summary of
 the supported image formats.</p>
 
-<div class="pre-scrollable bg-light text-dark mx-4">
+<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tbody>
   <tr>
@@ -651,7 +651,7 @@ the supported image formats.</p>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
     <td>This format permits you to write to and read images from memory.  The filename is the registry key.  The image persists until you explicity delete it or the program exits.  For example, let's use the MPR to create a checkerboard:
-<pre class="bg-light text-dark mx-4 cli"><samp>magick \( -size 15x15 canvas:black canvas:white -append \) \
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick \( -size 15x15 canvas:black canvas:white -append \) \
   \( +clone -flip \) +append -write mpr:checkers +delete \
   -size 240x240 tile:mpr:checkers -delete registry:checkers board.png </samp></pre>
   </td>
@@ -1321,7 +1321,7 @@ the supported image formats.</p>
 
 <p>ImageMagick supports a number of image format specifications which refer to images prepared via an algorithm, or input/output targets. The following table lists these pseudo-image formats:</p>
 
-<div class="pre-scrollable bg-light text-dark mx-4">
+<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <th>Tag</th>
@@ -1565,7 +1565,7 @@ the supported image formats.</p>
 
 <p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <samp>magick:</samp> format tag may be used via the syntax <samp>magick:</samp><var>name</var> to request an embedded image (e.g. <samp>magick:logo</samp>). For backwards compatibility, the image specifications <samp>GRANITE:</samp>, <samp>LOGO:</samp>, <samp>NETSCAPE:</samp>, and <samp>ROSE:</samp> may also be used to request images with those names.</p>
 
-<div class="pre-scrollable bg-light text-dark mx-4">
+<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <th>Tag</th>
@@ -1616,7 +1616,7 @@ the supported image formats.</p>
 
 <p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <samp>pattern:</samp> format tag may be used via the syntax <samp>pattern:</samp><var>name</var> to request an embedded pattern (e.g. <samp>pattern:checkerboard</samp>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
 
-<div class="pre-scrollable bg-light text-dark mx-4">
+<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <th>Tag</th>
@@ -2009,7 +2009,7 @@ the supported image formats.</p>
 
 <p>ImageMagick provides a number of format identifiers which are used to add, remove, and save embedded profiles for images which can support embedded profiles. Image types which may contain embedded profiles are TIFF, JPEG, and PDF.</p>
 
-<div class="pre-scrollable bg-light text-dark mx-4">
+<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tbody>
   <tr>

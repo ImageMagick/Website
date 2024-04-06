@@ -7,7 +7,7 @@
 
 <p>We list a few examples of the <samp>compare</samp> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one thats been sharpened:</p>
 
-<pre class="bg-light text-dark mx-4 cli"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
+<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
 magick compare rose.jpg reconstruct.jpg difference.png
 magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre>
 
@@ -22,7 +22,7 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre
 
 <p>In addition to the visual interpretation of the difference in an image and its reconstruction, we report a mathematical measure of the difference:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
  Channel distortion: MAE
   red: 2282.91 (0.034835)
@@ -31,17 +31,17 @@ Image: rose.jpg
   all: 1536.39 (0.0234439) </samp></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
 19.63 </samp></pre>
 
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
 28.31 </samp></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.png
+<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.png
 0.99870222 @ 353,157 </samp></pre>
 
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>

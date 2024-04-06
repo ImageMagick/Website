@@ -47,18 +47,18 @@ following command compiles and links the source file <samp>demo.cpp</samp>
 to produce the executable <samp>demo</samp> (notice that quotes are
 backward quotes): 
 </p>
-<pre class="bg-light text-dark mx-4"><samp>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
+<pre class="p-3 mb-2 bg-light text-dark"><samp>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
   `Magick++-config --ldflags --libs` </samp></pre>
 
 <p>Set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="bg-light text-dark mx-4"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
+<pre class="p-3 mb-2 bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
 
 <p>Windows users may get started by manually editing a project file
 for one of the Magick++ demo programs. 
 </p>
 <p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the InitializeMagick() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
-<pre class="bg-light text-dark mx-4"><samp>int main( int argc, char ** argv) {
+<pre class="p-3 mb-2 bg-light text-dark"><samp>int main( int argc, char ** argv) {
   InitializeMagick(*argv);
   ...  </samp></pre>
 <p>This initialization step is not required under Linux, Linux,
@@ -66,7 +66,7 @@ Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>
 <p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4"><code>
+<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><code>
 #include &lt;Magick++.h> 
 #include &lt;iostream> 
 
