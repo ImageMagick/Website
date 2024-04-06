@@ -1,6 +1,6 @@
-<div class="magick-header">
+<div>
 
-<p class="lead magick-description">ImageMagick's JPEG-2000 image formats, JP2 and JPC, accept a plethora of encoding options as detailed below.  As an example, suppose you are interested in these options:</p>
+<p class="lead">ImageMagick's JPEG-2000 image formats, JP2 and JPC, accept a plethora of encoding options as detailed below.  As an example, suppose you are interested in these options:</p>
 
 <ul>
 <li>code blocks are 64 samples in width and 32 samples in height</li>

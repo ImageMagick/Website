@@ -1,3 +1,3 @@
-<div class="magick-header">
+<div>
 <div class="gcse-searchresults-only"></div>
 </div>

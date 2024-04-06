@@ -1,6 +1,6 @@
-<div class="magick-header">
+<div>
 
-<p class="lead magick-description">The Voluntary Product Accessibility Template (VPAT) is a document that describes how an information technology (IT) product, such as software, hardware, or web-based applications, meets the accessibility standards defined by Section 508 of the Rehabilitation Act. This VPAT describes the accessibility features of the ImageMagick open-source project.</p>
+<p class="lead">The Voluntary Product Accessibility Template (VPAT) is a document that describes how an information technology (IT) product, such as software, hardware, or web-based applications, meets the accessibility standards defined by Section 508 of the Rehabilitation Act. This VPAT describes the accessibility features of the ImageMagick open-source project.</p>
 <ul>
 <li>Product Name: ImageMagick</li>
 <li>Version: 7.1.0</li>

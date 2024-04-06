@@ -1,4 +1,4 @@
-<div class="magick-header">
+<div>
 
 
 <h4>Recent News</h4>

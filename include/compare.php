@@ -1,7 +1,7 @@
-<div class="magick-header">
+<div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <samp>compare</samp> program to mathematically and visually annotate the difference between an image and its reconstruction.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>compare</samp> command or see below for example usages of the command.</p>
+<p class="lead">Use the <samp>compare</samp> program to mathematically and visually annotate the difference between an image and its reconstruction.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>compare</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 

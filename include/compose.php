@@ -1,7 +1,7 @@
-<div class="magick-header">
+<div>
 <div id="cli-examples"></div>
 
-<p class="lead magick-description">This page descibed the Image composition methods that is used to define how
+<p class="lead">This page descibed the Image composition methods that is used to define how
 two images should be merged together in various image operations.  For the
 Command Line API it is typically set using the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> setting option. </p>

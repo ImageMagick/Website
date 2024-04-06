@@ -1,5 +1,5 @@
-<div class="magick-header">
-<p class="lead magick-description">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
+<div>
+<p class="lead">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
 
 <h2>Requirements</h2>
 <ul>

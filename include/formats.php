@@ -1,7 +1,7 @@
-﻿<div class="magick-header">
+﻿<div>
 <p class="text-center"><a href="#colorspace">A Word about Colorspaces</a> • <a href="#supported">Supported Formats</a> • <a href="#pseudo">Pseudo Formats</a> • <a href="#builtin-images">Built-in Images</a>  • <a href="#builtin-patterns">Built-in Patterns</a> • <a href="#embedded">Embedded Profiles</a></p>
 
-<p class="lead magick-description">ImageMagick uses an ASCII string known as <var>magick</var> (e.g. <samp>GIF</samp>) to identify file formats, algorithms acting as formats, built-in patterns, and embedded profile types.  Support for some of the formats are delegated to libraries or external programs. The Installation Guide describes where to find these distributions and any special configuration options required.</p>
+<p class="lead">ImageMagick uses an ASCII string known as <var>magick</var> (e.g. <samp>GIF</samp>) to identify file formats, algorithms acting as formats, built-in patterns, and embedded profile types.  Support for some of the formats are delegated to libraries or external programs. The Installation Guide describes where to find these distributions and any special configuration options required.</p>
 
 <p>To get a complete listing of which image formats are supported on your system, type</p>
 

@@ -1,7 +1,7 @@
-<div class="magick-header">
+<div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead magick-description">Use the <samp>magick mogrify</samp> program to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   This tool is similar to <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick</a> except that the original image file is <em>overwritten</em> (unless you change the file suffix with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format">-format</a> option) with any changes you request.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>mogrify</samp> command or see below for sample usages of the command.</p>
+<p class="lead">Use the <samp>magick mogrify</samp> program to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   This tool is similar to <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick</a> except that the original image file is <em>overwritten</em> (unless you change the file suffix with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format">-format</a> option) with any changes you request.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>mogrify</samp> command or see below for sample usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 

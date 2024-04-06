@@ -1,10 +1,10 @@
-<div class="magick-header">
+<div>
 <p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 
 
 <a class="anchor" id="sponsor"></a>
 
-<p class="lead magick-description">We want to thank the following sponsors of the ImageMagick project, including:</p>
+<p class="lead">We want to thank the following sponsors of the ImageMagick project, including:</p>
 
 <dl>
 <!-- source repos, social coding -->

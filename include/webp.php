@@ -1,5 +1,5 @@
-<div class="magick-header">
-<p class="lead magick-description">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. As an example, suppose you are interested in these options:</p>
+<div>
+<p class="lead">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. As an example, suppose you are interested in these options:</p>
 
 <ul>
 <li>quality of 50</li>

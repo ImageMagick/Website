@@ -1,7 +1,7 @@
-<div class="magick-header">
+<div>
 <p class="text-center"><a href="magick-vector-graphics.php#overview">MVG Overview</a> • <a href="magick-vector-graphics.php#primitives">Drawing Primitives</a></p>
 
-<p class="lead magick-description">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
+<p class="lead">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="develop.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
 <pre class="bg-light text-dark mx-4 cli"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
