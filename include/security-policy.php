@@ -31,7 +31,7 @@
 
 <p>Here is an example security policy:</p>
 
-<pre class="pre-scrollable bg-light text-dark mx-4 text-dark mx-4"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre class="pre-scrollable bg-light text-dark mx-4"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>
 &lt;!ATTLIST policymap xmlns CDATA #FIXED "">

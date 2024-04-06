@@ -136,7 +136,7 @@ device-cmyk(0.11, 0.48, 0.83, 0.00)</samp></pre>
 
 <p>The table below provides a list of named colors recognized by ImageMagick:</p>
 
-<div class="pre-scrollable">
+<div class="pre-scrollable bg-light text-dark mx-4">
 <table class="table table-sm table-hover table-striped table-responsive">
 <tbody>
   <tr>

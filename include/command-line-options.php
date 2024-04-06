@@ -4,7 +4,7 @@
 <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
   Select CLI Option
 </button>
-<ul class="dropdown-menu pre-scrollable" aria-labelledby="defaultDropdown">
+<ul class="dropdown-menu pre-scrollable bg-light text-dark mx-4" aria-labelledby="defaultDropdown">
   <li><a class="dropdown-divider" href="#"><b>A</b></a></li>
   <li><a class="dropdown-item" href="#adaptive-blur">adaptive-blur</a></li>
   <li><a class="dropdown-item" href="#adaptive-resize">adaptive-resize</a></li>

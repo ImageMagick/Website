@@ -780,7 +780,7 @@ information contained in the file:</p>
 
 <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
 
-<pre class="pre-scrollable bg-light text-dark:"><samp>
+<pre class="pre-scrollable bg-light text-dark mx-4 bg-light text-dark:"><samp>
   Envelope Record
   1:00  Model Version
   1:05  Destination

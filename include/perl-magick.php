@@ -304,7 +304,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
 <p>And here is a list of other image manipulation methods you can call:</p>
 
-<div class="pre-scrollable">
+<div class="pre-scrollable bg-light text-dark mx-4">
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Image Manipulation Methods</caption>
 <thead>
@@ -1299,7 +1299,7 @@ can use the integers 1 and 0.</p>
 
 <p>And here is a list of all the image attributes you can set:</p>
 
-<div class="pre-scrollable">
+<div class="pre-scrollable bg-light text-dark mx-4">
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Image Attributes</caption>
 <thead>
@@ -1721,7 +1721,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
 <p>In addition to all the attributes listed in <a href="#set-attribute">Set an Image Attribute</a> , you can get these additional attributes:</p>
 
-<div class="pre-scrollable">
+<div class="pre-scrollable bg-light text-dark mx-4">
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Image Attributes</caption>
 <thead>
@@ -2053,7 +2053,7 @@ $difference->Display();
 
 <p>And here is a list of Montage() parameters you can set:</p>
 
-<div class="pre-scrollable">
+<div class="pre-scrollable bg-light text-dark mx-4">
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Montage Parameters</caption>
 <thead>
