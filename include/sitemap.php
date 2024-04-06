@@ -5,7 +5,7 @@
 
 <h2><a class="anchor" id="overview"></a>Overview</h2>
 
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
   <li><a href="https://imagemagick.org/Usage/">Anthony Thyssen's examples of ImageMagick usage</a>:  a comprehensive tutorial of using ImageMagick from the command line.</li>
@@ -24,7 +24,7 @@
 
 <h2><a class="anchor" id="download"></a>Download ImageMagick</h2>
 
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li><a href="https://imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
   <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
@@ -36,14 +36,14 @@
 <h2><a class="anchor" id="install"></a>Install ImageMagick</h2>
 
   <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Linux or Windows executable.</p>
-<dl class="magick-list-unstyled">
+<dl >
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
 </dl>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tools</h2>
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.
-  <ul class="magick-list-unstyled">
+  <ul >
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">magick animate</a>: animates an image sequence on any X server.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
@@ -65,9 +65,9 @@
 
 <h2><a class="anchor" id="program-interfaces"></a>Program Interfaces</h2>
 
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.
-  <ul class="magick-list-unstyled">
+  <ul >
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
     <li><a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>: Use Magick.NET to convert, compose, and edit images from Windows .NET.</li>
     <li><a href="https://imagemagick.org/Magick++">Magick++</a>: provides an object-oriented C++ interface to ImageMagick.</li>
@@ -85,7 +85,7 @@
 </dl>
 
 <h2><a class="anchor" id="format"></a>Image Formats</h2>
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">Supported image formats</a>: annotated list of all image formats that ImageMagick can read and/or write.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
@@ -95,7 +95,7 @@
 
 <h2><a class="anchor" id="help"></a>Getting Help</h2>
 
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1590595904/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">Definitive Guide to ImageMagick</a>: this book explains ImageMagick in a practical, learn-by-example fashion.</li>
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1904811868/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">ImageMagick Tricks</a>: this book is packed with examples of photo manipulations, logo creation, animations, and complete web projects.</li>
   <li><a href="https://github.com/ImageMagick/ImageMagick/discussions">Discussions</a> forums: to get help from fellow ImageMagick users and developers, post to these forums.</li>
@@ -104,7 +104,7 @@
 
 <h2><a class="anchor" id="support"></a>Support ImageMagick</h2>
 
-<dl class="magick-list-unstyled">
+<dl >
   <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.  The bug discussions service requires that you register.  If you do not want to register, you can <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact the ImageMagick developers</a> with a convenient web form.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
 </dl>
