@@ -42,7 +42,7 @@
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
 </head>
 <?php flush(); ?>
-<body class="text-body-secondary">
+<body>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -138,13 +138,13 @@
   </div>
   </nav>
 
-<div class="col-lg-8 mx-auto p-4 py-md-5">
+<div class="col-lg-8 mx-auto p-4 py-md-5 text-body-secondary">
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <a href="/" class="d-flex align-items-center text-decoration-none">
       <h1 class="fs-4"><?php echo $title; ?></h1>
     </a>
   </header>
-  <main>
+  <main class="container">
 <?php
   }
 
@@ -153,7 +153,7 @@
 ?>
   </div>
   </main><!-- /.container -->
-  <footer class="pt-5 my-5 border-top text-center">
+  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
     <div class="container-fluid">
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/news.php">News</a>
