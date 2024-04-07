@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#log">Log Format</a> • <a href="#properties">DPX Properties</a> • <a href="#settings">DPX Settings</a></p>
 
 <p class="lead">DPX (SMPTE 268M-2003) - This format is used in Motion Picture and Effects industry that makes particular use of the extensive header information and the format's flexibility in being able to handle high dynamic range and logarithmic color values at a variety of bit depths using RGB or YCbCr pixel descriptions.  It is based on, but largely supersedes, Kodak's Cineon format that has a more film specific header.</p>

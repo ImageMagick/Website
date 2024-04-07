@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#fx">The FX Special Effects Image Operator</a> • <a href="#anatomy">The Anatomy of an FX Expression</a></p>
 
 <a class="anchor" id="fx"></a>

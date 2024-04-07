@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="lead">Learn how to cite ImageMagick in your work.  Choose from these citation formats:</p>
 
 <h4>Citation in APA style</h4>

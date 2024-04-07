@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 
 
 <h4>Recent News</h4>

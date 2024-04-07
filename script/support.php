@@ -1,4 +1,4 @@
 <?php
-  $title='Support ImageMagick Development';
+  $title='Sponsor ImageMagick Development';
   include('session.php');
 ?>

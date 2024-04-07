@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead">Use the <samp>composite</samp> program to overlap one image over another.  See <a href="/script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>composite</samp> command or see below for example usages of the command.</p>

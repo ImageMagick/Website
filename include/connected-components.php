@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="lead">Connected-component labeling (alternatively connected-component analysis, blob extraction, region labeling, blob discovery, or region extraction) uniquely labels connected components in an image.  The labeling process scans the image, pixel-by-pixel from top-left to bottom-right, in order to identify connected pixel regions, i.e. regions of adjacent pixels which share the same set of intensity values.  For example, let's find the objects in this image:</p>
 <ul>
   <a href="/image/objects.gif"><img src="/image/objects.gif" width="256" height="171" class="image-slices" alt="purse" /></a>

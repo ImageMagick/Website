@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#configure">Configuration Files</a> • <a href="#modules">Modules</a> • <a href="#fonts">Fonts</a> • <a href="#environment">Environment Variables</a></p>
 
 <p class="lead">ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.</p>
@@ -180,7 +180,7 @@ $MAGICK_FONT_PATH</samp></pre>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
-<div class="row">
+<div>
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>HOME</td>

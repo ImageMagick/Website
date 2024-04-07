@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 
 <p class="magick-description">The <a href="/script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
 
@@ -31,7 +31,7 @@ use:</p>
 <p>Here is a list of recognized defines:</p>
 
 
-<div class="row">
+<div>
 
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>

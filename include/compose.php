@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <div id="cli-examples"></div>
 
 <p class="lead">This page descibed the Image composition methods that is used to define how

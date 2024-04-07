@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
 <p class="lead">Use the <samp>display</samp> program to display an image or image sequence on any X server.  See <a href="/script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>display</samp> command or see below for example usages of the command.</p>

@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#download">Download &amp; Unpack</a> • <a href="#configure">Configure</a>  • <a href="#build">Build</a> • <a href="#install">Install</a> • <a href="#linux">Linux-specific Build Instructions</a> • <a href="#macosx">Mac OS X-specific Build Instructions</a> • <a href="#mingw">MinGW-specific Build Instructions</a> • <a href="#problems">Dealing with Unexpected Problems</a></p>
 
 <p  class="lead">It's possible you don't want to concern yourself with advanced installation under Linux or Linux systems.  If so, you also have the option of installing a pre-compiled <a href="/script/download.php#linux">binary release</a>  or if you still want to install from source without all the fuss see the simple <a href="/script/install-source.php#linux">Install From Source</a> instructions.  However, if you want to customize the configuration and installation of ImageMagick under Linux or Linux systems, lets begin.</p>
@@ -128,7 +128,7 @@ Options used to compile and link:
 
 <p>Here are the optional features you can configure:</p>
 
-<div class="row">
+<div>
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>--enable-shared</td>
@@ -182,7 +182,7 @@ Options used to compile and link:
 
 <p>Here are the optional packages you can configure:</p>
 
-<div class="row">
+<div>
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>--with-quantum-depth</td>

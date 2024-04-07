@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <div id="cli-examples"></div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#models">Color Model Specification</a> • <a href="#color_names">List of Color Names</a></p>
 

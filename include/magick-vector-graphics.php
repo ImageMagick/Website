@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="magick-vector-graphics.php#overview">MVG Overview</a> • <a href="magick-vector-graphics.php#primitives">Drawing Primitives</a></p>
 
 <p class="lead">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
@@ -287,7 +287,7 @@ clip-path url(#myClipPath)
 
 <p>Here is a complete description of the MVG drawing primitives:</p>
 
-<div class="row">
+<div>
 <table class="table table-sm table-hover table-striped table-responsive">
 <thead>
   <tr>

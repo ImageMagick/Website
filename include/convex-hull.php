@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#about">Convex Hull</a> • <a href="#box">Minimum Bounding Box</a> • <a href="#unrotate">Unrotate an Image</a></p>
 
 <p>The convex hull is the is the smallest area convex polygon containing the set of points inside it. The convex hull may be visualized as the shape enclosed by a rubber band stretched around the set of points.</p>

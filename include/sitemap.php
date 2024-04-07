@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#overview">Overview</a> • <a href="#download">Download ImageMagick</a> • <a href="#install">Install ImageMagick</a> • <a href="#command-line">Command-line Tools</a> • <a href="#program-interfaces">Program Interfaces</a> • <a href="#formats">Image Formats</a> • <a href="#help">Getting Help</a> • <a href="#support">Support ImageMagick</a> • <a href="#miscellaneous">Miscellaneous Topics</a></p>
 
 <p class="lead">Use this ImageMagick sitemap to quickly jump to one of the areas of interest listed below.  If you can't find what you want on this page, try our <a href="/script/search.php?q=ImageMagick&sa=">site search</a>.</p>

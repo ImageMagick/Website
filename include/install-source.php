@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#linux">Install from Linux Source</a> • <a href="#windows">Install from Windows Source</a></p>
 
 <p class="lead">Chances are, ImageMagick is already installed on your computer if you are using some flavor of Linux, and its likely not installed if you are using some form of Windows.  In either case, you can type the following to find out:</p>

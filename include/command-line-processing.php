@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#option">Command-line Options</a> • <a href="#output">Output Filename</a></p>
 
 <p class="lead">The ImageMagick command-line <a href="/script/command-line-tools.php">tools</a> can be as simple as this:</p>
@@ -366,7 +366,7 @@ setting for more specifics.</p>
 <p>The <var>geometry</var> argument might take any of the forms listed in the table below. These will described in more detail in the subsections following the table. The usual form is <var>size</var>[<var>offset</var>], meaning <var>size</var> is required and <var>offset</var> is optional. Occasionally, [<var>size</var>]<var>offset</var> is possible. In no cases are spaces permitted within the <var>geometry</var> argument.</p>
 
 
-<div class="row">
+<div>
 <table class="table table-sm table-hover table-striped table-responsive">
   <col width="20%"/> <col width="80%"/>
   <thead>

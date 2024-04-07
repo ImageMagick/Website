@@ -1,4 +1,4 @@
-<div class="row">
+<div>
 <p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 
 
@@ -32,7 +32,7 @@
 <li>Donate a quality SWOP or Eurostandard ICC profile to use as a default CMYK to RGB conversion profile.</li>
 <li>Donate a workstation with a modern processor and plenty of memory and disk.  We would use it for our primary development environment.</li>
 <li>Donate a Windows laptop so we can build and test ImageMagick under Windows 11.</li>
-<li>Make a monetary contribution:</li></ul>
+<li>Make a monetary contribution.</li></ul>
 
 <p>Donations can be anonymous, or public.</p>
 <fieldset>
