@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 
 <p class="lead">ImageMagick's JPEG-2000 image formats, JP2 and JPC, accept a plethora of encoding options as detailed below.  As an example, suppose you are interested in these options:</p>
 
@@ -39,7 +39,7 @@
 
 <p>Here is a complete list of JPEG-2000 decoding options:</p>
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>jp2:quality-layers=<var>x</var></td>
@@ -53,7 +53,7 @@
 
 <p>Here is a complete list of JPEG-2000 encoding options:</p>
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>jp2:number-resolutions=<var>x</var></td>

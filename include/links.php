@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#command-line">Command-line Tutorials</a> • <a href="#program-interfaces">Program Interface Tutorials</a> • <a href="#techniques">ImageMagick Techniques</a> • <a href="#install">Installation Tutorials</a> • <a href="#topics">ImageMagick Topics</a> • <a href="#book-review">ImageMagick Book Review</a> • <a href="#mirrors">Web Site Mirrors</a> • <a href="#bank">Image Bank</a> • <a href="#related-projects">Related Projects</a></p>
 
 <p class="lead">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse most of these sites, but we feel they are a helpfull adjunct to the ImageMagick project.</p>
@@ -43,7 +43,7 @@
 <h2><a class="anchor" id="techniques"></a>ImageMagick Techniques</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></dd>
+  <dd class="col-md-8"><a href="/docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></dd>
   <dd class="col-md-8"><a href="http://www.fmwconcepts.com/imagemagick/digital_image_filtering.pdf">Digital Image Filtering</a></dd>
 </ul>
 
@@ -54,7 +54,7 @@
   <dd class="col-md-8"><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/">Hyperscale Image Resizing</a> </dd>
   <dd class="col-md-8"><a href="http://pkgsrc.se/graphics/ImageMagick/">NetBSD</a></dd>
   <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagick/">SourceForge</a></dd>
-  <dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../script/vpat.php">Voluntary Product Accessibility Template</a></dd>
+  <dd class="col-md-8"><a href="/script/vpat.php">Voluntary Product Accessibility Template</a></dd>
   <dd class="col-md-8"><a href="http://en.wikipedia.org/wiki/ImageMagick">WikiPedia</a></dd>
 </ul>
 

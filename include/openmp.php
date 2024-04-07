@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="lead">Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips and <a href="http://www.openmp.org">OpenMP</a>. OpenMP, is an API specification for parallel programming. If your compiler supports OpenMP (e.g. gcc, Visual Studio 2005) directives, ImageMagick automatically includes support. To verify, look for the OpenMP feature of ImageMagick with this command:</p>
 <pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick identify -version
 Version: ImageMagick 7.0.10-50 2021-01-04 Q16 https://imagemagick.org

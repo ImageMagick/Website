@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <?php
   require_once($_SESSION['AbsolutePath'] . '/../function/exception.php');
 
@@ -76,7 +76,7 @@
       break;
   }
 ?>
-  <div>
+  <div class="row">
   <h1 class="text-center">Contact the Wizards</h1>
   <p class="lead">Post here for any of the issues listed below.  You can expect a response from our team if your issue is a sponsorship, <a href="https://imagemagick.org/script/license.php">license</a>, security, or paid support issue.  If you require a response for any other issue, post to the ImageMagick public <a href="https://github.com/ImageMagick/ImageMagick/discussions">forums</a>.  You can also post bug and security issues to the <a href="https://github.com/ImageMagick/ImageMagick/issues">issues</a> forum.  Note, we do <u>not</u> offer sponsored links <u>nor do we respond to solicitations</u>.</p>
   <fieldset>
@@ -87,8 +87,8 @@
 ?>
 </samp>, in the Authenticate field and fill in the remaining fields.  Press Send to forward your message to the ImageMagick wizards:</p>
   <br/>
-  <form method="post" name="post" id="post" action="<?php echo $_SESSION['RelativePath']?>/../script/contact.php" enctype="application/x-www-form-urlencoded">
-  <div>
+  <form method="post" name="post" id="post" action="/script/contact.php" enctype="application/x-www-form-urlencoded">
+  <div class="row">
   <table class="table table-sm table-hover table-striped table-responsive">
     <tr>
       <td><label id="authenticate" title="Your authentication code">Authenticate</label></td>

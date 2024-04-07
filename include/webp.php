@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="lead">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. As an example, suppose you are interested in these options:</p>
 
 <ul>
@@ -12,7 +12,7 @@
 
 <p>Here is a complete list of WebP encoding options:</p>
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <thead>
   <tr>

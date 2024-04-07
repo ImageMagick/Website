@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#miff-header">MIFF Header</a> • <a href="#binary">MIFF Binary Data</a></p>
 
 <p class="lead">The Magick Image File Format (MIFF) is ImageMagick's own platform-independent format for storing bitmap images.  It has an advantage over other image formats in that it stores all metadata known to ImageMagick (e.g. image color profiles, comments, author, copyright, etc.), whereas, other formats may only support a small portion of available metadata or none at all.  A MIFF image file consist of two sections.  The first section is a header composed of keys describing the image in text form.  The next section is the binary image data.  We discuss these sections in detail below.</p>
@@ -10,7 +10,7 @@
 
 <p>The following is a partial list of <var> key = value</var> combinations that are typically be found in a MIFF file:</p>
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>background-color = <var>color</var></td>
@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>matte-color = <var>color</var></td>
-    <td>these optional keys reflect the image background, border, and matte colors respectively.  A <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color</a> can be a name (e.g. white) or a hex value (e.g. #ccc).</td>
+    <td>these optional keys reflect the image background, border, and matte colors respectively.  A <a href="/script/color.php">color</a> can be a name (e.g. white) or a hex value (e.g. #ccc).</td>
   </tr>
   <tr>
     <td>class = { DirectClass, PseudoClass }</td>

@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#encipher">Encipher an Image</a> • <a href="#decipher">Decipher an Image</a> • <a href="#caveats">Encipher and Decipher Caveats</a></p>
 
 <p class="lead">Most images, by design, are made to be viewed often and by many people.  Web images, for example, may be viewed hundreds of times a day by a multitude of visitors.  However, in some cases, you may want to keep a particular image private so that only you or perhaps a select group of your friends or web visitors can view it.  ImageMagick permits you to scramble your images such that unless someone knows your passphrase, they will be unable to view the original content.</p>
@@ -7,7 +7,7 @@
 
 <h2><a class="anchor" id="encipher"></a>Encipher an Image</h2>
 
-<p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
+<p>Use the <a href="/script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose.jpg -encipher passphrase.txt rose.png </samp></pre>
 
@@ -17,7 +17,7 @@
 
 <h2><a class="anchor" id="decipher"></a>Decipher an Image</h2>
 
-<p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
+<p>Use the <a href="/script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose.png -decipher passphrase.txt rose.jpg </samp></pre>
 

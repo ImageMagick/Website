@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="lead">An image gradient creates a gradual blend between two colors formed into a shape that is linear, circular, or ellipical.</p>
 
 <p>For a linear gradient, the operator is either:</p>

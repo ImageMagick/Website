@@ -1,17 +1,17 @@
-<div>
+<div class="row">
 <p class="lead">The <a href="https://imagemagick.org/api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="https://imagemagick.org/api/MagickCore/index.html">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
 
 <ul>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-wand.php">Magick Wand Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-property.php">Set or Get Magick Wand Properties</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-image.php">Magick Wand Image Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/pixel-iterator.php">Pixel Iterator Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/pixel-wand.php">Pixel Wand Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/drawing-wand.php">Image Vector Drawing</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/mogrify.php">Command-line Interface</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/wand-view.php">Wand View Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-deprecate.php">Deprecated Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">Error and Warning Codes</a></li>
+  <li><a href="/api/magick-wand.php">Magick Wand Methods</a></li>
+  <li><a href="/api/magick-property.php">Set or Get Magick Wand Properties</a></li>
+  <li><a href="/api/magick-image.php">Magick Wand Image Methods</a></li>
+  <li><a href="/api/pixel-iterator.php">Pixel Iterator Methods</a></li>
+  <li><a href="/api/pixel-wand.php">Pixel Wand Methods</a></li>
+  <li><a href="/api/drawing-wand.php">Image Vector Drawing</a></li>
+  <li><a href="/api/mogrify.php">Command-line Interface</a></li>
+  <li><a href="/api/wand-view.php">Wand View Methods</a></li>
+  <li><a href="/api/magick-deprecate.php">Deprecated Methods</a></li>
+  <li><a href="/script/exception.php">Error and Warning Codes</a></li>
 </ul>
 
 <p>After you write your MagickWand program, compile it like this:</p>
@@ -22,7 +22,7 @@
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</samp></pre>
 
-<p>Here is a example program that utilizes the MagickWand API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>
+<p>Here is a example program that utilizes the MagickWand API to get you started, <a href="/source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>
@@ -81,7 +81,7 @@ int main(int argc,char **argv)
 }
 </samp></pre>
 
-<p>Here is another program that shows one way to get and set image pixels with the MagickWand API, <a href="<?php echo $_SESSION['RelativePath']?>/../source/contrast.c">contrast.c</a>. It reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk.</p>
+<p>Here is another program that shows one way to get and set image pixels with the MagickWand API, <a href="/source/contrast.c">contrast.c</a>. It reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk.</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>
@@ -189,7 +189,7 @@ int main(int argc,char **argv)
   return(0);
 }
 </samp></pre>
-<p><a class="anchor" id="wand-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/wand/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
+<p><a class="anchor" id="wand-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="/source/wand/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdio.h>

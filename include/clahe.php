@@ -1,6 +1,6 @@
-<div>
+<div class="row">
 <p class="lead">Use contrast limited adaptive histogram equalization (AHE) to improve contrast in images.  Ordinary histogram equalization computes a global equalization whereas an adaptive method computes several histograms, each corresponding to a distinct section of the image, and uses them to redistribute the lightness values of the image.  It is suitable for improving the local contrast and enhancing the definitions of edges in each region of an image.  A variant of adaptive histogram equalization, contrast limited adaptive histogram equalization (CLAHE) limits AHE's tendency to overamplify noise in relatively homogeneous regions of an image.</p>
-<p>CLAHE is supported as of ImageMagick 7.0.8-24 with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#clahe">-clahe</a> option:</p>
+<p>CLAHE is supported as of ImageMagick 7.0.8-24 with the <a href="/script/command-line-options.php#clahe">-clahe</a> option:</p>
 <ul>
 <h5><a class="anchor" id="clahe"></a>-clahe <var>width</var>x<var>height</var>{%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</h5>
 </ul>
@@ -8,15 +8,15 @@
 <p>To visualize the benefits of CLAHE, we have a low contrast image of mountains:</p>
 <p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>We can improve the image with global histogram equalization:</p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-equalize.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains-equalize.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>We can further improve the image with the contrast limited adaptive histogram equalization image processing technique:</p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>The latter image was produced with this command:</p>
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mountains.jpg -clahe 25x25%+128+3 mountains-clahe.jpg</samp></pre>

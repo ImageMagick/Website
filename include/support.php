@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 
 
@@ -52,11 +52,11 @@
 <h2>Bitcoin</h2>
 <p>Our Bitcoin Address is: <a href="bitcoin:bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k?label=ImageMagick%20Donation">bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k</a>.  Or you can reference the below QR code:</p>
 <ul>
-<dt class="col-md-4"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>
+<dt class="col-md-4"><img src="/image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>
 </ul>
 </fieldset>
 <br/>
-<p>If you have any questions about supporting ImageMagick, please <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a>.
+<p>If you have any questions about supporting ImageMagick, please <a href="/script/contact.php">contact us</a>.
 </p>
 
 

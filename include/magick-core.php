@@ -1,61 +1,61 @@
-<div>
+<div class="row">
 <p  class="lead">The <a href="https://imagemagick.org/api/MagickCore/index.html">MagickCore API</a> is a low-level interface between the C programming language and the ImageMagick image processing libraries and is recommended for wizard-level programmers only.  Unlike the <a href="https://imagemagick.org/api/MagickWand/index.html">MagickWand</a> C API which uses only a few opaque types and accessors, with MagickCore you almost exclusively access the structure members directly.  A description of the MagickCore public methods are found here:</p>
 
 <ul>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick.php">Initialize or Destroy the ImageMagick Environment</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/constitute.php">Constitute an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/composite.php">Composite an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/image.php">Image Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/channel.php">Image Channel Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/color.php">Count the Colors in an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/colormap.php">Colormap Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/colorspace.php">Colorspace Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/distort.php">Image Distortions</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/layer.php">Dealing with Image Layers</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/profile.php">Dealing with Image Profiles</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/quantize.php">Reduce the Number of Unique Colors in an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/histogram.php">Image Histograms</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/segment.php">Segment an Image with Thresholding Fuzzy c-Means</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/resize.php">Resize an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/transform.php">Transform an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/shear.php">Shear or Rotate an Image by an Arbitrary Angle</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/enhance.php">Enhance an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/effect.php">Add an Effect</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/morphology.php">Morphological Erosions, Dilations, Openings, and Closings</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/fx.php">Add a Special Effect</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/decorate.php">Decorate an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/attribute.php">Get/Set an Image Attribute</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/property.php">Get/Set Image Properties</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/statistic.php">Get Image Statistics</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/feature.php">Get Image Features</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/annotate.php">Annotate an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/paint.php">Paint on an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/draw.php">Draw on an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/montage.php">Create an Image Thumbnail</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/fourier.php">Compute the discrete Fourier transform (DFT)</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/compare.php">Compare an Image to a Reconstructed Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/vision.php">Computer Vision</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/display.php">Interactively Display and Edit an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/animate.php">Interactively Animate an Image Sequence</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cipher.php">Convert to and from Cipher Pixels</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/list.php">Working with Image Lists</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/image-view.php">Image View Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/image-cache.php">Image Cache Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php">Get or Set Image Pixels</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cache-view.php">Working with Cache Views</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/stream.php">The Pixel FIFO</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/blob.php">Read or Write Binary Large OBjects</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php">Loadable Modules</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/signature.php">Compute a Message Digest for an Image</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/registry.php">The Image Registry</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/exception.php">Dealing with Exceptions</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/memory.php">Memory Allocation</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php">Monitor or Limit Resource Consumption</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/monitor.php">Monitor the Progress of an Image Operation</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/version.php">Get the Version and Copyrights</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/mime.php">Mime Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/deprecate.php">Deprecated Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">Error and Warning Codes</a></li>
+  <li><a href="/api/magick.php">Initialize or Destroy the ImageMagick Environment</a></li>
+  <li><a href="/api/constitute.php">Constitute an Image</a></li>
+  <li><a href="/api/composite.php">Composite an Image</a></li>
+  <li><a href="/api/image.php">Image Methods</a></li>
+  <li><a href="/api/channel.php">Image Channel Methods</a></li>
+  <li><a href="/api/color.php">Count the Colors in an Image</a></li>
+  <li><a href="/api/colormap.php">Colormap Methods</a></li>
+  <li><a href="/api/colorspace.php">Colorspace Methods</a></li>
+  <li><a href="/api/distort.php">Image Distortions</a></li>
+  <li><a href="/api/layer.php">Dealing with Image Layers</a></li>
+  <li><a href="/api/profile.php">Dealing with Image Profiles</a></li>
+  <li><a href="/api/quantize.php">Reduce the Number of Unique Colors in an Image</a></li>
+  <li><a href="/api/histogram.php">Image Histograms</a></li>
+  <li><a href="/api/segment.php">Segment an Image with Thresholding Fuzzy c-Means</a></li>
+  <li><a href="/api/resize.php">Resize an Image</a></li>
+  <li><a href="/api/transform.php">Transform an Image</a></li>
+  <li><a href="/api/shear.php">Shear or Rotate an Image by an Arbitrary Angle</a></li>
+  <li><a href="/api/enhance.php">Enhance an Image</a></li>
+  <li><a href="/api/effect.php">Add an Effect</a></li>
+  <li><a href="/api/morphology.php">Morphological Erosions, Dilations, Openings, and Closings</a></li>
+  <li><a href="/api/fx.php">Add a Special Effect</a></li>
+  <li><a href="/api/decorate.php">Decorate an Image</a></li>
+  <li><a href="/api/attribute.php">Get/Set an Image Attribute</a></li>
+  <li><a href="/api/property.php">Get/Set Image Properties</a></li>
+  <li><a href="/api/statistic.php">Get Image Statistics</a></li>
+  <li><a href="/api/feature.php">Get Image Features</a></li>
+  <li><a href="/api/annotate.php">Annotate an Image</a></li>
+  <li><a href="/api/paint.php">Paint on an Image</a></li>
+  <li><a href="/api/draw.php">Draw on an Image</a></li>
+  <li><a href="/api/montage.php">Create an Image Thumbnail</a></li>
+  <li><a href="/api/fourier.php">Compute the discrete Fourier transform (DFT)</a></li>
+  <li><a href="/api/compare.php">Compare an Image to a Reconstructed Image</a></li>
+  <li><a href="/api/vision.php">Computer Vision</a></li>
+  <li><a href="/api/display.php">Interactively Display and Edit an Image</a></li>
+  <li><a href="/api/animate.php">Interactively Animate an Image Sequence</a></li>
+  <li><a href="/api/cipher.php">Convert to and from Cipher Pixels</a></li>
+  <li><a href="/api/list.php">Working with Image Lists</a></li>
+  <li><a href="/api/image-view.php">Image View Methods</a></li>
+  <li><a href="/api/image-cache.php">Image Cache Methods</a></li>
+  <li><a href="/api/cache.php">Get or Set Image Pixels</a></li>
+  <li><a href="/api/cache-view.php">Working with Cache Views</a></li>
+  <li><a href="/api/stream.php">The Pixel FIFO</a></li>
+  <li><a href="/api/blob.php">Read or Write Binary Large OBjects</a></li>
+  <li><a href="/api/module.php">Loadable Modules</a></li>
+  <li><a href="/api/signature.php">Compute a Message Digest for an Image</a></li>
+  <li><a href="/api/registry.php">The Image Registry</a></li>
+  <li><a href="/api/exception.php">Dealing with Exceptions</a></li>
+  <li><a href="/api/memory.php">Memory Allocation</a></li>
+  <li><a href="/api/resource.php">Monitor or Limit Resource Consumption</a></li>
+  <li><a href="/api/monitor.php">Monitor the Progress of an Image Operation</a></li>
+  <li><a href="/api/version.php">Get the Version and Copyrights</a></li>
+  <li><a href="/api/mime.php">Mime Methods</a></li>
+  <li><a href="/api/deprecate.php">Deprecated Methods</a></li>
+  <li><a href="/script/exception.php">Error and Warning Codes</a></li>
 </ul>
 
 <p>After you write your MagickCore program, compile it like this:</p>
@@ -66,7 +66,7 @@
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
 
-<p>Here is a example program that utilizes the MagickCore API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>
+<p>Here is a example program that utilizes the MagickCore API to get you started, <a href="/source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>
@@ -131,7 +131,7 @@ int main(int argc,char **argv)
   MagickCoreTerminus();
   return(0);
 }</samp></pre>
-<p><a class="anchor" id="image-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="<?php echo $_SESSION['RelativePath']?>/../source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
+<p><a class="anchor" id="image-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="/source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>#include &lt;stdio.h>
 #include &lt;stdlib.h>

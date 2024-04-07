@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#configure">Configuration Files</a> • <a href="#modules">Modules</a> • <a href="#fonts">Fonts</a> • <a href="#environment">Environment Variables</a></p>
 
 <p class="lead">ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.</p>
@@ -8,48 +8,48 @@
 <p>ImageMagick depends on a number of external configuration files detailed here:</p>
 
 <dl class="row">
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/coder.xml">coder.xml</a></dt>
+<dt class="col-md-4"><a href="/source/coder.xml">coder.xml</a></dt>
   <dd class="col-md-8">Associate an image format with the specified coder module.
 
   ImageMagick has a number of coder modules to support the reading and/or writing of an image format (e.g. JPEG).  Some coder modules support more than one associated image format and the mapping between an associated format and its respective coder module is defined in this configuration file.  For example, the PNG coder module not only supports the PNG image format, but the JNG and MNG formats as well.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/colors.xml">colors.xml</a></dt>
+<dt class="col-md-4"><a href="/source/colors.xml">colors.xml</a></dt>
   <dd class="col-md-8">Associate a color name with its red, green, blue, and alpha intensities.
 
-  A number of command line options require a <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
+  A number of command line options require a <a href="/script/color.php">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
   </dd>
 
-<dt class="col-md-4"><a class="anchor" id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
+<dt class="col-md-4"><a class="anchor" id="configure.xml"/><a href="/source/configure.xml">configure.xml</a></dt>
   <dd class="col-md-8">Set ImageMagick build parameters and system-wide environment variables (e.g. MAGICK_TEMPORARY_PATH).
   As ImageMagick is built, a number of build parameters are saved to this configuration file.  They include the version, release date, dependent delegate libraries, and quantum depth among others.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/delegates.xml">delegates.xml</a></dt>
+<dt class="col-md-4"><a href="/source/delegates.xml">delegates.xml</a></dt>
   <dd class="col-md-8">Associate delegate programs with certain image formats.
 
   ImageMagick relies on a number of delegate programs to support certain image formats such as <a href="https://www.darktable.org/">darktable</a> to read raw camera formats or <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> to read Postscript images.  Use this configuration file to map an input or output format to an external delegate program.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/english.xml">english.xml</a></dt>
+<dt class="col-md-4"><a href="/source/english.xml">english.xml</a></dt>
   <dd class="col-md-8">Associate message tags with English translations.</dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/francais.xml">francais.xml</a></dt>
+<dt class="col-md-4"><a href="/source/francais.xml">francais.xml</a></dt>
   <dd class="col-md-8">Associate message tags with French translations.  </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/locale.xml">locale.xml</a></dt>
+<dt class="col-md-4"><a href="/source/locale.xml">locale.xml</a></dt>
   <dd class="col-md-8">Associate message tags with a  translation for your locale.
 
   ImageMagick has a number of informational, warning, and error messages that are represented as tags.  Tags are short descriptions of a message such as
   <var>FileNotFound</var> or <var>MemoryAllocationFailed</var>.  This configuration file lists locales that have a translation for each tag recognized by ImageMagick.  Currently only English and French translations are available in the <samp>english.xml</samp> and <samp>francais.xml</samp> configuration files.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/log.xml">log.xml</a></dt>
+<dt class="col-md-4"><a href="/source/log.xml">log.xml</a></dt>
   <dd class="col-md-8">Configure logging parameters.
   ImageMagick is capable of spewing copious amounts of informational or debugging statements.  Use this file to configure how the information will appear in a log message and where you want the logging messages posted.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/mime.xml">mime.xml</a></dt>
+<dt class="col-md-4"><a href="/source/mime.xml">mime.xml</a></dt>
   <dd class="col-md-8">Associate an internet media type with a unique identifier.
   Many files and data streams have identifiers that uniquely identify a
 particular internet media type. For example, files in the "Corel Draw
@@ -60,8 +60,8 @@ when available, to attempt to quickly determine the internet media type of a
 file or data stream.
 </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a></dt>
-  <dd class="col-md-8">Configure ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>.
+<dt class="col-md-4"><a href="/source/policy-open.xml">policy.xml</a></dt>
+  <dd class="col-md-8">Configure ImageMagick <a href="/script/security-policy.php">security policies</a>.
   By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="area" value="100MP"/></samp></pre>
@@ -77,23 +77,23 @@ To limit the elapsed time of any ImageMagick command to 5 minutes, use this poli
 <pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;policy domain="resource" name="time" value="300"/></samp></pre>
 For convenience, define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <samp>-limit 2GB</samp> option exceeds policy maximum so memory limit is 1GB). </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/quantization-table.xml">quantization-table.xml</a></dt>
+<dt class="col-md-4"><a href="/source/quantization-table.xml">quantization-table.xml</a></dt>
   <dd class="col-md-8">Custom JPEG quantization tables. Activate with <samp>-define:q-table=quantization-table.xml</samp>.</dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/thresholds.xml">thresholds.xml</a></dt>
+<dt class="col-md-4"><a href="/source/thresholds.xml">thresholds.xml</a></dt>
   <dd class="col-md-8">Set threshold maps for ordered posterized dither.</dd>
 
-<dt class="col-md-4"><a class="anchor" id="type.xml"></a><a href="<?php echo $_SESSION['RelativePath']?>/../source/type.xml">type.xml</a></dt>
+<dt class="col-md-4"><a class="anchor" id="type.xml"></a><a href="/source/type.xml">type.xml</a></dt>
   <dd class="col-md-8">Configure fonts.
   Define the font name, family, foundry, style, format, metrics, and glyphs for any font you want to use within ImageMagick.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-ghostscript.xml">type-ghostscript.xml</a></dt>
+<dt class="col-md-4"><a href="/source/type-ghostscript.xml">type-ghostscript.xml</a></dt>
   <dd class="col-md-8">Configure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> fonts.
   The Ghostscript package includes a number of <a href="https://sourceforge.net/projects/gs-fonts/">fonts</a> that can be accessed with ImageMagick.
   </dd>
 
-<dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/type-windows.xml">type-windows.xml</a></dt>
+<dt class="col-md-4"><a href="/source/type-windows.xml">type-windows.xml</a></dt>
   <dd class="col-md-8">Associate names with Windows font glyphs.</dd>
 </dl>
 
@@ -180,7 +180,7 @@ $MAGICK_FONT_PATH</samp></pre>
 
 <p>Environment variables recognized by ImageMagick include:</p>
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td>HOME</td>
@@ -196,7 +196,7 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
   <tr>
     <td>MAGICK_CODER_FILTER_PATH</td>
-    <td>Set search path to use when searching for filter process modules (invoked via  <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
+    <td>Set search path to use when searching for filter process modules (invoked via  <a href="/script/command-line-options.php#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
   </tr>
   <tr>
     <td>MAGICK_CODER_MODULE_PATH</td>
@@ -212,7 +212,7 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
   <tr>
     <td>MAGICK_DEBUG</td>
-    <td>Set debug options.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug</a> for a description of debugging options.</td>
+    <td>Set debug options.  See <a href="/script/command-line-options.php#debug">-debug</a> for a description of debugging options.</td>
   </tr>
   <tr>
     <td><a class="anchor" id="disk-limit"></a>MAGICK_DISK_LIMIT</td>
@@ -292,6 +292,6 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
 </table></div>
 
-<p>Define arguments for the <samp>MAGICK_MEMORY_LIMIT</samp>, <samp>MAGICK_DISK_LIMIT</samp>, and <samp>MAGICK_MEMORY_LIMIT</samp> environment variables with SI prefixes (.e.g <samp>100MB</samp>). <samp>MAGICK_WIDTH_LIMIT</samp>, <samp>MAGICK_HEIGHT_LIMIT</samp> and <samp>MAGICK_AREA_LIMIT</samp> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="<?php echo $_SESSION['RelativePath']?>/../script/policy-open.xml">security policies</a>, but you cannot relax them.</p>
+<p>Define arguments for the <samp>MAGICK_MEMORY_LIMIT</samp>, <samp>MAGICK_DISK_LIMIT</samp>, and <samp>MAGICK_MEMORY_LIMIT</samp> environment variables with SI prefixes (.e.g <samp>100MB</samp>). <samp>MAGICK_WIDTH_LIMIT</samp>, <samp>MAGICK_HEIGHT_LIMIT</samp> and <samp>MAGICK_AREA_LIMIT</samp> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="/script/policy-open.xml">security policies</a>, but you cannot relax them.</p>
 
 </div>

@@ -1,4 +1,4 @@
-<div>
+<div class="row">
 <p class="lead">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
 
 <h2>Requirements</h2>

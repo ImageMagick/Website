@@ -1,7 +1,7 @@
-<div>
+<div class="row">
 <p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#option">Command-line Options</a> • <a href="#output">Output Filename</a></p>
 
-<p class="lead">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
+<p class="lead">The ImageMagick command-line <a href="/script/command-line-tools.php">tools</a> can be as simple as this:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick image.jpg image.png </samp></pre>
 
@@ -19,17 +19,17 @@
 <p>Without knowing much about the ImageMagick command-line, you can probably surmise that the first command above converts an image in the JPEG format to one in the PNG format.  However, very few may realize the second, more complex command, gives a flat two-dimensional label a three-dimensional look with rich textures and simulated depth:</p>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/label.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/label.gif" width="78" height="53" alt="label" /></a>
-<img style="margin-top:16px; margin-bottom:17px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/button.gif">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/button.gif" width="78" height="53" alt="button" /></a>
+  <a href="/image/label.gif"><img src="/image/label.gif" width="78" height="53" alt="label" /></a>
+<img style="margin-top:16px; margin-bottom:17px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/button.gif">
+  <img src="/image/button.gif" width="78" height="53" alt="button" /></a>
 </ul>
 
 
 <p>Here we show percent completion of a task as a shaded cylinder:</p>
 
 <ul>
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/cylinder_shaded.png" width="320" height="200" alt="Shaded Cylinder" />
+  <img src="/image/cylinder_shaded.png" width="320" height="200" alt="Shaded Cylinder" />
 </ul>
 
 <p>Given the complexity of the rendering, you might be surprised it is accomplished by a single command-line:</p>
@@ -58,7 +58,7 @@
   \( +clone -flop \) +repage -insert "%[fx:round(rand())]" -background black \
   -flatten -brightness-contrast 20,20 -normalize dragonFire.png</samp></pre>
 <p>To ensure the script can run under Windows, change any backslash-parens (\() to just parens, the backslash (\) to <samp>^</samp>, and double-up the percent (%) signs.</p>
-<p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
+<p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="/script/develop.php">program interfaces</a>.</p>
 
 <p>See <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 
@@ -130,7 +130,7 @@ so we explicitly set one:
 
 <h4>Built-in Images and Patterns</h4>
 
-<p>ImageMagick has a number of built-in <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-images">images</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
+<p>ImageMagick has a number of built-in <a href="/script/formats.php#builtin-images">images</a> and <a href="/script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
 </p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 640x480 pattern:checkerboard checkerboard.png</samp></pre>
@@ -239,7 +239,7 @@ frame003.jpg</pre>
 <pre class="p-3 mb-2 bg-light text-dark">'my title.jpg'</pre>
 
 
-    <p>Some ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> may exceed the capabilities of
+    <p>Some ImageMagick command-line <a href="/script/command-line-options.php">options</a> may exceed the capabilities of
 your command-line processor.  Windows, for example, limits command-lines
 to 8192 characters.  If, for example, you have a draw option with polygon
 points that exceed the command-line length limit, put the draw option instead
@@ -268,7 +268,7 @@ image-5.jpg</pre>
 
 <h2><a class="anchor" id="option"></a>Command-line Options</h2>
 
-<p>You can direct the behavior of ImageMagick utilities with these command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a>.  The behavior of an option falls into one of these categories:</p>
+<p>You can direct the behavior of ImageMagick utilities with these command-line <a href="/script/command-line-options.php">options</a>.  The behavior of an option falls into one of these categories:</p>
 
 <ul>
 <li><a href="#setting">Image Setting</a></li>
@@ -300,7 +300,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
-any command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">option</a> not listed as a
+any command-line <a href="/script/command-line-options.php">option</a> not listed as a
 <a href="#setting">image setting</a> or
 <a href="#sequence">image sequence operator</a>.  Unlike an
 image setting, which persists until the command-line terminates,
@@ -345,7 +345,7 @@ these image sequence operators:</p>
 
 <h4><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
-<p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
+<p>Many command-line <a href="/script/command-line-options.php">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
 dimensional quantities. Because users want so many variations on the resulting
 dimensions, sizes, and positions of images (and because ImageMagick wants to
@@ -366,7 +366,7 @@ setting for more specifics.</p>
 <p>The <var>geometry</var> argument might take any of the forms listed in the table below. These will described in more detail in the subsections following the table. The usual form is <var>size</var>[<var>offset</var>], meaning <var>size</var> is required and <var>offset</var> is optional. Occasionally, [<var>size</var>]<var>offset</var> is possible. In no cases are spaces permitted within the <var>geometry</var> argument.</p>
 
 
-<div>
+<div class="row">
 <table class="table table-sm table-hover table-striped table-responsive">
   <col width="20%"/> <col width="80%"/>
   <thead>
@@ -441,7 +441,7 @@ setting for more specifics.</p>
 
 <h4>Basic adjustments to width and height; the operators <samp>%</samp>, <samp>^</samp>, and <samp>!</samp> </h4>
 <p>Here, just below, are a few simple examples of <var>geometry</var>, showing how it might be used as an argument to the <?php option("resize")?> option. We'll use the internal image <samp>logo:</samp> for our input image.
-<a href="<?php echo $_SESSION['RelativePath']?>/../image/logo.png">
+<a href="/image/logo.png">
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
 </p>
 
@@ -535,7 +535,7 @@ above.</p>
 
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
-<p>Instead of an output filename, you use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#exit">-exit</a> to completely prevent any image write.</p>
+<p>Instead of an output filename, you use <a href="/script/command-line-options.php#exit">-exit</a> to completely prevent any image write.</p>
 
 <h4>Explicit Image Format</h4>
   <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <samp>image.jpg</samp> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <samp>image</samp> in the raw red, green, and blue intensity format:
@@ -545,7 +545,7 @@ above.</p>
 
 
 <h4>Standard Out</h4>
-  <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
+  <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="/script/magick.php">magick</a> to the <a href="/script/display.php">display</a> program:
   </p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
