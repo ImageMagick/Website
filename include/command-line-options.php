@@ -1602,7 +1602,7 @@ YPbPr        YUV          Undefined
 
 <p>For a more accurate color conversion to or from the linear RGB, CMYK, or grayscale colorspaces, use the <a href="#profile">-profile</a> option.  Note, ImageMagick assumes the sRGB colorspace if the image format does not indicate otherwise.  For colorspace conversion, the gamma function is first removed to produce linear RGB.</p>
 
-<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
+<div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
         <caption>Conversion of RGB to Other Color Spaces</caption>
         <tr><th valign="middle">CMY</th></tr>

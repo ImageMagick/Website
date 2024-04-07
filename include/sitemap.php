@@ -110,7 +110,7 @@
 </dl>
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>
-<div class="pre-scrollable p-3 mb-2 bg-light text-dark">
+<div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
