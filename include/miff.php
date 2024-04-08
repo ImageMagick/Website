@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>matte-color = <var>color</var></td>
-    <td>these optional keys reflect the image background, border, and matte colors respectively.  A <a href="/script/color.php">color</a> can be a name (e.g. white) or a hex value (e.g. #ccc).</td>
+    <td>these optional keys reflect the image background, border, and matte colors respectively.  A <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color</a> can be a name (e.g. white) or a hex value (e.g. #ccc).</td>
   </tr>
   <tr>
     <td>class = { DirectClass, PseudoClass }</td>

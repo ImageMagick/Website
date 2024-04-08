@@ -22,7 +22,7 @@ options, and more global use of 'image properties' (more commonly known as
 <p>Now that ImageMagick version 7 is released, we continue to support version 6 for a minimum of 10 years.  Support for version 6 is limited primarily to bug fixes and security patches with few enhancements.</p>
 
 <h2><a class="anchor" id="hdri"></a>High Dynamic Range Imaging</h2>
-<p>ImageMagick version 7 enables <a href="/script/high-dynamic-range.php">high dynamic range imaging</a> (HDRI) by default.  HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  In addition, image processing results are more accurate.  The disadvantage is it requires more memory and may result in slower processing times.  If you see differences in the results of your version 6 command-line with version 7, it is likely due to HDRI.  You may need to add <samp>-clamp</samp> to your command-line to constrain pixels to the 0 .. QuantumRange range, or disable HDRI when you build ImageMagick version 7.  To disable HDRI (recommended for smart phone builds such as iOS or production sites where performance is a premium), simply add <samp>--disable-hdri</samp> to the configure script command line when building ImageMagick.</p>
+<p>ImageMagick version 7 enables <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic range imaging</a> (HDRI) by default.  HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  In addition, image processing results are more accurate.  The disadvantage is it requires more memory and may result in slower processing times.  If you see differences in the results of your version 6 command-line with version 7, it is likely due to HDRI.  You may need to add <samp>-clamp</samp> to your command-line to constrain pixels to the 0 .. QuantumRange range, or disable HDRI when you build ImageMagick version 7.  To disable HDRI (recommended for smart phone builds such as iOS or production sites where performance is a premium), simply add <samp>--disable-hdri</samp> to the configure script command line when building ImageMagick.</p>
 
 <h2><a class="anchor" id="channels"></a>Pixel Channels</h2>
 <p>A pixel is comprised of one or more color values, or <var>channels</var> (e.g. red pixel channel).</p>
@@ -528,7 +528,7 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 </dl>
 <h2><a class="anchor" id="performance"></a>Performance Improvements</h2>
 <p>Operating on grayscale images is significantly improved as only one channel is required.  Previously, grayscale required three channels.</p>
-<p>The performance of <a href="/script/fx.php">-fx</a> option has increased by one to two orders of magnitude.</p>
+<p>The performance of <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">-fx</a> option has increased by one to two orders of magnitude.</p>
 
 <h2><a class="anchor" id="summary"></a>Version 7 Change Summary</h2>
 <p>Changes from ImageMagick version 6 to version 7 are summarized here:</p>

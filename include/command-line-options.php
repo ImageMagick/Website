@@ -335,7 +335,7 @@
   </ul>
 </div>
 <p>&nbsp;</p>
-<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="/script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
+<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adaptive-blur"></a>-adaptive-blur <var>radius</var>[x<var>sigma</var>]</h2>
@@ -444,7 +444,7 @@ coordinates (<var>x'</var>, <var>y'</var>) of a pixel at
 position (<var>x</var>, <var>y</var>) in the original
 image are calculated using the following matrix equation.</p>
 
-<p class="text-center"><img class="img-thumbnail" alt="affine transformation"  src="/image/affine.png"/> </p>
+<p class="text-center"><img class="img-thumbnail" alt="affine transformation"  src="<?php echo $_SESSION['RelativePath']?>/../image/affine.png"/> </p>
 
 <p> The size of the resulting image is that of the smallest rectangle that
 contains the transformed source image.  The parameters
@@ -944,7 +944,7 @@ the background image is weighted by the exact opposite amount. That is a
 <p>Convolve the image with a Gaussian or normal distribution using the given
 <var >Sigma</var> value.  The formula is:</p>
 
-<p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/></p>
+<p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/></p>
 
 <p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
@@ -1113,7 +1113,7 @@ option has been given.  To modify a caption of images already in memory use
 "<samp><a href="#set">-set</a> caption</samp>". </p>
 
 <p>The caption can contain special format characters listed in the <a
-href="/script/escape.php">Format and
+href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php">Format and
 Print Image Properties</a>. These attributes are expanded when the caption
 is finally assigned to the individual images. </p>
 
@@ -1553,7 +1553,7 @@ duplicate or unused colors removed.  The ordering of an existing color
 palette may be altered. When converting an image from color to grayscale,
 it is more efficient to convert the image to the gray colorspace before
 reducing the number of colors. Refer to
-the <a href="/script/quantize.php">
+the <a href="<?php echo $_SESSION['RelativePath']?>/../script/quantize.php">
 color reduction algorithm</a> for more details.</p>
 
 <div style="margin: auto;">
@@ -1746,7 +1746,7 @@ option has been given.  To modify a comment of images already in memory use
 "<samp><a href="#set">-set</a> comment</samp>". </p>
 
 <p>The comment can contain special format characters listed in the <a
-href="/script/escape.php">Format and
+href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php">Format and
 Print Image Properties</a>. These attributes are expanded when the comment
 is finally assigned to the individual images. </p>
 
@@ -1899,7 +1899,7 @@ the chroma channels.</p>
   <h2><a class="anchor" id="connected-components"></a>-connected-components <var>connectivity</var></h2>
 </div>
 
-<p class="magick-description"><a href="/script/connected-components.php">connected-components</a> labeling detects connected regions in an image, choose from 4 or 8 way connectivity.</p>
+<p class="magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">connected-components</a> labeling detects connected regions in an image, choose from 4 or 8 way connectivity.</p>
 
 <p>Use <samp><a href="#define" >-define</a> connected-components:verbose=true</samp> to output statistics associated with each unique label.</p>
 
@@ -1978,7 +1978,7 @@ detection. Without an output bias, the negative values is clipped at zero.
 option("bias"); ?> is not needed, as ImageMagick is able to store/handle any
 negative results without clipping to the color value range (0..QuantumRange).
 See the discussion on HDRI implementations of ImageMagick on the page <a
-href="/script/high-dynamic-range.php">High
+href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High
 Dynamic-Range Images</a>. For more about HDRI go the ImageMagick <a
 href="https://imagemagick.org/Usage/basics/#hdri">Usage</a> pages or this
 <a href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
@@ -2154,7 +2154,7 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<p>See <a href="/script/defines.php">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
+<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
 </samp></pre>
@@ -4114,7 +4114,7 @@ appending <samp>%</samp> as a percentage of the maximum possible intensity (255,
 the expression is read from a file titled by the remaining characters in the
 string.</p>
 
-<p>See <a href="/script/fx.php">FX,
+<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX,
 The Special Effects Image Operator</a> for a detailed discussion of this
 option.</p>
 
@@ -4161,7 +4161,7 @@ chunk, use</p>
 <p>Convolve the image with a Gaussian or normal distribution using the given
 <var >Sigma</var> value.  The formula is:</p>
 
-<p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/> </p>
+<p class="text-center"><img class="img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/> </p>
 
 <p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
@@ -4403,7 +4403,7 @@ handle negative offsets.</p>
 
 <p>If <a href="#colors">-colors</a> is also specified, the total unique colors
 in the image and color reduction error values are printed. Refer to <a
-href="/script/quantize.php">color
+href="<?php echo $_SESSION['RelativePath']?>/../script/quantize.php">color
 reduction algorithm</a> for a description of these values.</p>
 
 <p>If <a href="#verbose">-verbose</a> precedes this option, copious
@@ -5204,7 +5204,7 @@ environment variables <samp>MAGICK_AREA_LIMIT</samp>,
 image area, disk space, open files, heap memory, memory map, number of threads
 of execution, and maximum elapsed time in seconds respectively.</p>
 
-<p>Note, you can restrict limits relative to any <a href="/source/policy-open.xml">security policies</a>, but you cannot relax them.</p>
+<p>Note, you can restrict limits relative to any <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">security policies</a>, but you cannot relax them.</p>
 
 <p> Inquisitive users can try adding <a href="#debug">-debug cache</a> to
 their commands and then scouring the generated output for references to the

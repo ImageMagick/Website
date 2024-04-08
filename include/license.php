@@ -44,7 +44,7 @@
   <li>you may include ImageMagick on any digital media as long as you comply with the terms of the license;</li>
   <li>you can give modified code away for free or sell it under the terms of the ImageMagick license or distribute the result under a different license, but you need to acknowledge the use of the ImageMagick software;</li>
   <li>the license is compatible with the GPL V3.</li>
-  <li>when exporting the ImageMagick software, review its <a href="/script/export.php">export classification</a>.</li>
+  <li>when exporting the ImageMagick software, review its <a href="<?php echo $_SESSION['RelativePath']?>/../script/export.php">export classification</a>.</li>
 </ul>
 
 <a class="anchor" id="terms"></a>

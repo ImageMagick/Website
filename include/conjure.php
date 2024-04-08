@@ -1,7 +1,7 @@
 <div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a> • <a href="#msl">Magick Scripting Language (MSL)</a> </p>
 
-<p class="lead">The <samp>conjure</samp> program gives you the ability to perform custom image processing tasks from a script written in the Magick Scripting Language (MSL).  MSL is XML-based and consists of action statements with attributes.  Actions include reading an image, processing an image, getting attributes from an image, writing an image, and more.  An attribute is a key/value pair that modifies the behavior of an action.  See <a href="/script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>conjure</samp> command or see below for example usages of the command.</p>
+<p class="lead">The <samp>conjure</samp> program gives you the ability to perform custom image processing tasks from a script written in the Magick Scripting Language (MSL).  MSL is XML-based and consists of action statements with attributes.  Actions include reading an image, processing an image, getting attributes from an image, writing an image, and more.  An attribute is a key/value pair that modifies the behavior of an action.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command Line Processing</a> for advice on how to structure your <samp>conjure</samp> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
@@ -10,7 +10,7 @@
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
 </samp></pre>
 
-<p>The MSL script <a href="/source/incantation.msl">incantation.msl</a> used above is here:</p>
+<p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;
@@ -70,7 +70,7 @@ msl:font-metrics.origin.x
 msl:font-metrics.origin.y
 </samp></pre>
 
-<p>MSL supports most methods and attributes discussed in the <a href="/script/perl-magick.php">Perl API for ImageMagick</a>.
+<p>MSL supports most methods and attributes discussed in the <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">Perl API for ImageMagick</a>.
 </p>
 
 <p>In addition, MSL supports the <samp>swap</samp> element with a single <samp>indexes</samp> element.</p>
@@ -89,47 +89,47 @@ msl:font-metrics.origin.y
 
 <tbody>
   <tr>
-    <td><a href="/script/command-line-options.php#debug">-debug <var>events</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug <var>events</var></a></td>
     <td>display copious debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#help">-help</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#help">-help</a></td>
     <td>print program options</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#log">-log <var>format</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#log">-log <var>format</var></a></td>
     <td>format of debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#monitor">-monitor</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#monitor">-monitor</a></td>
     <td>monitor progress</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#quiet">-quiet</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quiet">-quiet</a></td>
     <td>suppress all warning messages</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
     <td>pay attention to warning messages.</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#seed">-seed <var>value</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#seed">-seed <var>value</var></a></td>
     <td>seed a new sequence of pseudo-random numbers</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#verbose">-verbose</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a></td>
     <td>print detailed information about the image</td>
   </tr>
 
   <tr>
-    <td><a href="/script/command-line-options.php#version">-version</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#version">-version</a></td>
     <td>print version information</td>
   </tr>
 

@@ -1,15 +1,15 @@
 <div>
 <p class="text-center"><a href="#linux">Linux Binary Release</a> • <a href="#macosx">Mac OS X Binary Release</a> • <a href="#iOS">iOS Binary Release</a> • <a href="#windows">Windows Binary Release</a></p>
 
-<p class="lead">You can install ImageMagick from <a href="/script/install-source.php">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.</p>
+<p class="lead">You can install ImageMagick from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.</p>
 
-<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="/script/mirror.php">mirrors</a> around the world.</p>
+<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> around the world.</p>
 
-<p>It is strongly recommended to establish a <a href="/script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
+<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
 <h2><a class="anchor" id="linux"></a>Linux Binary Release</h2>
 
-<p>These are the Linux variations that we support.  If your system is not on the list, try installing from <a href="/script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
+<p>These are the Linux variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">
@@ -24,7 +24,7 @@
 
   <tr>
     <td><a href= "https://imagemagick.org/archive/binaries/magick">magick</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/script/security-policy.php">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
   </tr>
 
   <tr>
@@ -101,7 +101,7 @@ export LD_LIBRARY_PATH</samp></pre>
 identify logo.gif
 display logo.gif</samp></pre>
 
-<p>Congratulations, you have a working ImageMagick distribution under Linux or Linux and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Linux or Linux and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2><a class="anchor" id="macosx"></a>Mac OS X Binary Release</h2>
 
@@ -161,11 +161,11 @@ display logo.gif</samp></pre>
 identify logo.gif
 display logo.gif</samp></pre>
 
-<p><b>Note</b>, the <a href="/script/display.php">display</a> program requires the X11 server available on your Mac OS X installation DVD. Once that is installed, you will also need to set <samp>export DISPLAY=:0</samp>.</p>
+<p><b>Note</b>, the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program requires the X11 server available on your Mac OS X installation DVD. Once that is installed, you will also need to set <samp>export DISPLAY=:0</samp>.</p>
 
 <p>The best way to deal with all the exports is to put them at the end of your .profile file</p>
 
-<p>Congratulations, you have a working ImageMagick distribution under Mac OS X and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Mac OS X and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2><a class="anchor" id="iOS"></a>iOS Binary Release</h2>
 
@@ -289,7 +289,7 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win64 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -324,14 +324,14 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-arm64-dll.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-arm64-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>ARM64 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>ARM64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -366,14 +366,14 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-dll.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win32 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -422,21 +422,21 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x64.zip";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable Win64 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-arm64.zip";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable ARM64 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable ARM64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x86.zip";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable Win32 static at 16 bits-per-pixel component with <a href="/script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tbody>
@@ -459,8 +459,8 @@ magick logo.gif win:</samp></pre>
 <pre class="p-3 mb-2 bg-light text-dark"><samp>Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</samp></pre>
 
-<p>It is strongly recommended to establish a <a href="/script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
+<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 </div>

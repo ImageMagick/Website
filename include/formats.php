@@ -117,14 +117,14 @@ the supported image formats.</p>
     <td>BAYER</td>
     <td>RW</td>
     <td>Raw mosaiced samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
   </tr>
 
   <tr>
     <td><a href="http://bellard.org/bpg/">BPG</a></td>
     <td>RW</td>
     <td>Better Portable Graphics</td>
-    <td>Use <a href="/script/command-line-options.php#quality">-quality</a> to specify the image compression quality.  To meet the requirements of BPG, the quality argument divided by 2 (e.g. -quality 92 assigns 46 as the BPG compression.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> to specify the image compression quality.  To meet the requirements of BPG, the quality argument divided by 2 (e.g. -quality 92 assigns 46 as the BPG compression.</td>
   </tr>
 
   <tr>
@@ -152,7 +152,7 @@ the supported image formats.</p>
     <td><a href="http://www.cineon.com/ff_draft.php">CIN</a></td>
     <td>RW</td>
     <td>Kodak Cineon Image Format</td>
-    <td>Use <a href="/script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).  Properties include cin:file.create_date, cin:file.create_time, cin:file.filename, cin:file.version, cin:film.count, cin:film.format, cin:film.frame_id, cin:film.frame_position, cin:film.frame_rate, cin:film.id, cin:film.offset, cin:film.prefix, cin:film.slate_info, cin:film.type, cin:image.label, cin:origination.create_date, cin:origination.create_time, cin:origination.device, cin:origination.filename, cin:origination.model, cin:origination.serial, cin:origination.x_offset, cin:origination.x_pitch, cin:origination.y_offset, cin:origination.y_pitch, cin:user.data.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).  Properties include cin:file.create_date, cin:file.create_time, cin:file.filename, cin:file.version, cin:film.count, cin:film.format, cin:film.frame_id, cin:film.frame_position, cin:film.frame_rate, cin:film.id, cin:film.offset, cin:film.prefix, cin:film.slate_info, cin:film.type, cin:image.label, cin:origination.create_date, cin:origination.create_time, cin:origination.device, cin:origination.filename, cin:origination.model, cin:origination.serial, cin:origination.x_offset, cin:origination.x_pitch, cin:origination.y_offset, cin:origination.y_pitch, cin:user.data.</td>
   </tr>
 
   <tr>
@@ -166,14 +166,14 @@ the supported image formats.</p>
     <td>CMYK</td>
     <td>RW</td>
     <td>Raw cyan, magenta, yellow, and black samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
     <td>CMYKA</td>
     <td>RW</td>
     <td>Raw cyan, magenta, yellow, black, and alpha samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -215,7 +215,7 @@ the supported image formats.</p>
     <td>DCM</td>
     <td>R</td>
     <td>Digital Imaging and Communications in Medicine (DICOM) image</td>
-    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="/script/command-line-options.php#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values. Use <a href="/script/command-line-options.php#define">-define dcm:rescale=true</a> to enable interpretation of the rescale slope and intercept settings in the file. Use <a href="/script/command-line-options.php#define">-define dcm:window=centerXwidth</a> to override the center and width settings in the file with your own values.</td>
+    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:rescale=true</a> to enable interpretation of the rescale slope and intercept settings in the file. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:window=centerXwidth</a> to override the center and width settings in the file with your own values.</td>
   </tr>
 
   <tr>
@@ -236,7 +236,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/DirectDraw_Surface">DDS</a></td>
     <td>RW</td>
     <td>Microsoft Direct Draw Surface</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define</a> to specify the compression (e.g. <samp>-define dds:compression={dxt1, dxt5, none}</samp>). Other defines include <samp>dds:cluster-fit={true,false}</samp>, <samp>dds:weight-by-alpha={true,false}</samp>, <samp>dds:fast-mipmaps={true,false}</samp>, and use <samp>dds:mipmaps</samp> to set the number of mipmaps (use <samp>fromlist</samp> to use the image list).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the compression (e.g. <samp>-define dds:compression={dxt1, dxt5, none}</samp>). Other defines include <samp>dds:cluster-fit={true,false}</samp>, <samp>dds:weight-by-alpha={true,false}</samp>, <samp>dds:fast-mipmaps={true,false}</samp>, and use <samp>dds:mipmaps</samp> to set the number of mipmaps (use <samp>fromlist</samp> to use the image list).</td>
 
   </tr>
 
@@ -279,21 +279,21 @@ the supported image formats.</p>
     <td><a href="http://www.graphviz.org">DOT</a></td>
     <td>R</td>
     <td>Graph Visualization</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define</a> to specify the layout engine (e.g. <samp>-define dot:layout-engine=twopi</samp>).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the layout engine (e.g. <samp>-define dot:layout-engine=twopi</samp>).</td>
   </tr>
 
   <tr>
-    <td><a href="/script/motion-picture.php">DPX</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a></td>
     <td>RW</td>
     <td>SMPTE Digital Moving Picture Exchange 2.0 (SMPTE 268M-2003)</td>
-    <td>Use <a href="/script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).</td>
   </tr>
 
   <tr>
     <td>EMF</td>
     <td>R</td>
     <td>Microsoft Enhanced Metafile (32-bit)</td>
-    <td>Only available under Microsoft Windows.  Use <a href="/script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height.</td>
+    <td>Only available under Microsoft Windows.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height.</td>
   </tr>
 
   <tr>
@@ -356,7 +356,7 @@ the supported image formats.</p>
     <td><a href="http://www.openexr.org">EXR</a></td>
     <td>RW</td>
     <td>High dynamic-range (HDR) file format developed by Industrial Light &amp; Magic</td>
-    <td>See <a href="/script/high-dynamic-range.php">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="/script/command-line-options.php#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
+    <td>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
   </tr>
 
   <tr>
@@ -398,7 +398,7 @@ the supported image formats.</p>
     <td>FPX</td>
     <td>RW</td>
     <td>FlashPix Format</td>
-    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://imagemagick.org/archive/delegates">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="/script/command-line-options.php#define">-define fpx:view</a>.</td>
+    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://imagemagick.org/archive/delegates">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define fpx:view</a>.</td>
   </tr>
 
   <tr>
@@ -412,7 +412,7 @@ the supported image formats.</p>
     <td><a href="http://www.fileformat.info/format/gif/egff.htm">GIF</a></td>
     <td>RW</td>
     <td>CompuServe Graphics Interchange Format</td>
-    <td>8-bit RGB PseudoColor with up to 256 palette entries. Specify the format <samp>GIF87</samp> to write the older version 87a of the format.  Use <a href="/script/command-line-options.php#transparent-color">-transparent-color</a> to specify the GIF transparent color (e.g. <samp>-transparent-color wheat</samp>).</td>
+    <td>8-bit RGB PseudoColor with up to 256 palette entries. Specify the format <samp>GIF87</samp> to write the older version 87a of the format.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#transparent-color">-transparent-color</a> to specify the GIF transparent color (e.g. <samp>-transparent-color wheat</samp>).</td>
   </tr>
 
   <tr>
@@ -426,14 +426,14 @@ the supported image formats.</p>
     <td>GRAY</td>
     <td>RW</td>
     <td>Raw gray samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <samp>magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</samp>.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <samp>magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</samp>.</td>
   </tr>
 
   <tr>
     <td>GRAYA</td>
     <td>RW</td>
     <td>Raw gray and alpha samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -524,35 +524,35 @@ the supported image formats.</p>
     <td><a href="http://www.openjpeg.org/">JP2</a></td>
     <td>RW</td>
     <td>JPEG-2000 JP2 File Format Syntax</td>
-    <td>Specify the encoding options with the <a href="/script/command-line-options.php#define">-define</a> option. See <a href="/script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">JPT</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/script/command-line-options.php#define">-define</a> option  See <a href="/script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2C</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/script/command-line-options.php#define">-define</a> option  See <a href="/script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2K</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/script/command-line-options.php#define">-define</a> option  See <a href="/script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.jpeg.org/">JPEG</a></td>
     <td>RW</td>
     <td>Joint Photographic Experts Group JFIF format</td>
-    <td>Note, JPEG is a lossy compression.  In addition, you cannot create black and white images with JPEG nor can you save transparency.<br /><br /> Requires <a href="http://www.ijg.org/files/">jpegsrc.v8c.tar.gz</a>.  You can set quality scaling for luminance and chrominance separately (e.g. <a href="/script/command-line-options.php#quality">-quality</a> 90,70). You can optionally define the DCT method, for example to specify the float method, use <a href="/script/command-line-options.php#define">-define jpeg:dct-method=float</a>. By default we compute optimal Huffman coding tables.  Specify <a href="/script/command-line-options.php#define">-define jpeg:optimize-coding=false</a> to use the default Huffman tables. Specify <a href="/script/command-line-options.php#define">-define jpeg:arithmetic-coding=true</a> to enable Huffman optimization. Two other options include <a href="/script/command-line-options.php#define">-define jpeg:block-smoothing</a> and <a href="/script/command-line-options.php#define">-define jpeg:fancy-upsampling</a>. Set the sampling factor with <a href="/script/command-line-options.php#define">-define jpeg:sampling-factor</a>. You can size the image with <samp>jpeg:size</samp>, for example <a href="/script/command-line-options.php#define">-define jpeg:size=128x128</a>. To restrict the maximum file size, use <samp>jpeg:extent</samp>, for example <a href="/script/command-line-options.php#define">-define jpeg:extent=400KB</a>.  To define one or more custom quantization tables, use <a href="/script/command-line-options.php#define">-define jpeg:q-table=<i>filename</i></a>. These values are multiplied by <a href="/script/command-line-options.php#quality">-quality</a> argument divided by 100.0. To avoid reading a particular associated image profile, use <a href="/script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
+    <td>Note, JPEG is a lossy compression.  In addition, you cannot create black and white images with JPEG nor can you save transparency.<br /><br /> Requires <a href="http://www.ijg.org/files/">jpegsrc.v8c.tar.gz</a>.  You can set quality scaling for luminance and chrominance separately (e.g. <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> 90,70). You can optionally define the DCT method, for example to specify the float method, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:dct-method=float</a>. By default we compute optimal Huffman coding tables.  Specify <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:optimize-coding=false</a> to use the default Huffman tables. Specify <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:arithmetic-coding=true</a> to enable Huffman optimization. Two other options include <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:block-smoothing</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:fancy-upsampling</a>. Set the sampling factor with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:sampling-factor</a>. You can size the image with <samp>jpeg:size</samp>, for example <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:size=128x128</a>. To restrict the maximum file size, use <samp>jpeg:extent</samp>, for example <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:extent=400KB</a>.  To define one or more custom quantization tables, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:q-table=<i>filename</i></a>. These values are multiplied by <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> argument divided by 100.0. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
   </tr>
 
   <tr>
@@ -566,7 +566,7 @@ the supported image formats.</p>
     <td><a href="http://www.json.org">JSON</a></td>
     <td>W</td>
     <td>JavaScript Object Notation, a lightweight data-interchange format</td>
-    <td>Include additional attributes about the image with these defines: <a href="/script/command-line-options.php#define">-define json:locate</a>, <a href="/script/command-line-options.php#define">-define json:limit</a>, <a href="/script/command-line-options.php#define">-define json:moments</a>, or <a href="/script/command-line-options.php#define">-define json:features</a>.  Specify the JSON model schema version with <a href="/script/command-line-options.php#define">-define json:version</a>.  The current version is 1.0.  Any version less than 1.0, returns the original JSON output which included misspelled labels.</td>
+    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:version</a>.  The current version is 1.0.  Any version less than 1.0, returns the original JSON output which included misspelled labels.</td>
   </tr>
 
   <tr>
@@ -598,7 +598,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="/script/miff.php">MIFF</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/miff.php">MIFF</a></td>
     <td>RW</td>
     <td>Magick multispectral image file format</td>
     <td>This format persists all image attributes known to ImageMagick.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
@@ -668,7 +668,7 @@ the supported image formats.</p>
     <td>MSL</td>
     <td>RW</td>
     <td>Magick Scripting Language</td>
-    <td>MSL is the XML-based scripting language supported by the <a href="/script/conjure.php">conjure</a> utility. MSL requires the <a href="http://xmlsoft.org/">libxml2</a> delegate library.</td>
+    <td>MSL is the XML-based scripting language supported by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">conjure</a> utility. MSL requires the <a href="http://xmlsoft.org/">libxml2</a> delegate library.</td>
   </tr>
 
   <tr>
@@ -679,10 +679,10 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="/script/magick-vector-graphics.php">MVG</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">MVG</a></td>
     <td>RW</td>
     <td>Magick Vector Graphics.</td>
-    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="/script/magick.php">magick</a>'s <a href="/script/command-line-options.php#draw">-draw</a> option.</td>
+    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#draw">-draw</a> option.</td>
   </tr>
 
   <tr>
@@ -751,7 +751,7 @@ the supported image formats.</p>
     <td>PCD</td>
     <td>RW</td>
     <td>Photo CD</td>
-    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported). Use <a href="/script/command-line-options.php#bordercolor">-bordercolor</a> to specify the border color (e.g. <samp>-bordercolor black</samp>).</td>
+    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bordercolor">-bordercolor</a> to specify the border color (e.g. <samp>-bordercolor black</samp>).</td>
   </tr>
 
   <tr>
@@ -765,7 +765,7 @@ the supported image formats.</p>
     <td>PCL</td>
     <td>W</td>
     <td>HP Page Control Language</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define</a> to specify fit to page option (e.g. <samp>-define pcl:fit-to-page=true</samp>).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify fit to page option (e.g. <samp>-define pcl:fit-to-page=true</samp>).</td>
   </tr>
 
   <tr>
@@ -786,7 +786,7 @@ the supported image formats.</p>
     <td>PDF</td>
     <td>RW</td>
     <td>Portable Document Format</td>
-    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="/script/command-line-options.php#define">-define</a> (e.g. <samp>-define pdf:use-cropbox=true</samp> or <samp>-define pdf:use-trimbox=true</samp>).  Use <a href="/script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  To specify direct conversion from  Postscript to PDF, use <samp>-define delegate:bimodel=true</samp>. Use <samp>-define pdf:fit-page=true</samp> to scale to the page size. To immediately stop processing upon an error, set <samp>-define pdf:stop-on-error</samp> to <samp>true</samp>. To set the page direction preferences to right-to-left, try  <samp>-define pdf:page-direction=right-to-left</samp>. By default, the PDF is printed using "screen" for annotations and images.  Use <samp>-define pdf:printed=true</samp> to instead utilize the printer options. Use <a href="/script/command-line-options.php#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  Generate thumbnails with <samp>-define pdf:thumbnail=true</samp>. To enable interpolation when rendering, use <samp>-define pdf:interpolate=true</samp>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <samp>-define pdf:use-cropbox=true</samp> or <samp>-define pdf:use-trimbox=true</samp>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  To specify direct conversion from  Postscript to PDF, use <samp>-define delegate:bimodel=true</samp>. Use <samp>-define pdf:fit-page=true</samp> to scale to the page size. To immediately stop processing upon an error, set <samp>-define pdf:stop-on-error</samp> to <samp>true</samp>. To set the page direction preferences to right-to-left, try  <samp>-define pdf:page-direction=right-to-left</samp>. By default, the PDF is printed using "screen" for annotations and images.  Use <samp>-define pdf:printed=true</samp> to instead utilize the printer options. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  Generate thumbnails with <samp>-define pdf:thumbnail=true</samp>. To enable interpolation when rendering, use <samp>-define pdf:interpolate=true</samp>.</td>
   </tr>
 
   <tr>
@@ -863,7 +863,7 @@ the supported image formats.</p>
     <td><a href="http://www.libpng.org/pub/png/">PNG</a></td>
     <td>RW</td>
     <td>Portable Network Graphics</td>
-    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="/script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).  Set the maximum chunk size with <a href="/script/command-line-options.php#define">-define png:chunk-malloc-max=<i>value</i></a>.</td>
+    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).  Set the maximum chunk size with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define png:chunk-malloc-max=<i>value</i></a>.</td>
   </tr>
 
   <tr>
@@ -912,7 +912,7 @@ the supported image formats.</p>
     <td><a href="http://netpbm.sourceforge.net/doc/pnm.html">PNM</a></td>
     <td>RW</td>
     <td>Portable anymap</td>
-    <td>PNM is a family of formats supporting portable bitmaps (PBM) , graymaps (PGM), and pixmaps (PPM). There is no file format associated with pnm itself. If PNM is used as the output format specifier, then ImageMagick automagically selects the most appropriate format to represent the image.  The default is to write the binary version of the formats. Use <a href="/script/command-line-options.php#compress">-compress none</a> to write the ASCII version of the formats.</td>
+    <td>PNM is a family of formats supporting portable bitmaps (PBM) , graymaps (PGM), and pixmaps (PPM). There is no file format associated with pnm itself. If PNM is used as the output format specifier, then ImageMagick automagically selects the most appropriate format to represent the image.  The default is to write the binary version of the formats. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compress">-compress none</a> to write the ASCII version of the formats.</td>
   </tr>
 
   <tr>
@@ -933,7 +933,7 @@ the supported image formats.</p>
     <td>PS</td>
     <td>RW</td>
     <td>Adobe PostScript file</td>
-    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="/script/command-line-options.php#define">-define</a> (e.g. <samp>-define eps:use-cropbox=true</samp>). Use <a href="/script/command-line-options.php#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="/script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <samp>-define delegate:bimodel=true</samp>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <samp>-define eps:use-cropbox=true</samp>). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <samp>-define delegate:bimodel=true</samp>.</td>
   </tr>
 
   <tr>
@@ -961,7 +961,7 @@ the supported image formats.</p>
     <td><a href="http://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">PSD</a></td>
     <td>RW</td>
     <td>Adobe Photoshop multispectral bitmap file</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image. Use <a href="/script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="/script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
   </tr>
 
   <tr>
@@ -1003,28 +1003,28 @@ the supported image formats.</p>
     <td>RAW</td>
     <td>RW</td>
     <td>Raw gray samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
   </tr>
 
   <tr>
     <td>RGB</td>
     <td>RW</td>
     <td>Raw red, green, and blue samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
     <td>RGB565</td>
     <td>R</td>
     <td>Raw red, green, blue pixels in the 5-6-5 format</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> to specify the image width and height.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the image width and height.</td>
   </tr>
 
   <tr>
     <td>RGBA</td>
     <td>RW</td>
     <td>Raw red, green, blue, and alpha samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -1073,7 +1073,7 @@ the supported image formats.</p>
     <td>SHTML</td>
     <td>W</td>
     <td>Hypertext Markup Language client-side image map</td>
-    <td>Used to write HTML clickable image maps based on a the output of <a href="/script/montage.php">montage</a> or a format which supports tiled images such as <a href="#MIFF">MIFF</a>.</td>
+    <td>Used to write HTML clickable image maps based on a the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a> or a format which supports tiled images such as <a href="#MIFF">MIFF</a>.</td>
   </tr>
 
   <tr>
@@ -1087,7 +1087,7 @@ the supported image formats.</p>
     <td>SPARSE-COLOR</td>
     <td>W</td>
     <td>Raw text file</td>
-    <td>Format compatible with the <a href="/script/command-line-options.php#sparse-color">-sparse-color</a> option. Lists only non-fully-transparent pixels.</td>
+    <td>Format compatible with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sparse-color">-sparse-color</a> option. Lists only non-fully-transparent pixels.</td>
   </tr>
 
   <tr>
@@ -1108,7 +1108,7 @@ the supported image formats.</p>
     <td><a href="http://www.w3.org/Graphics/SVG">SVG</a></td>
     <td>RW</td>
     <td>Scalable Vector Graphics</td>
-    <td>ImageMagick utilizes <a href="http://www.inkscape.org/">inkscape</a> if its in your execution path otherwise <a href="http://developer.gnome.org/rsvg/">RSVG</a>. If neither are available, ImageMagick reverts to its internal SVG renderer. The default resolution is 96 DPI. Use <a href="/script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height. If you want to substitute entities and you trust the SVG source, enable this option: <samp>-define svg:substitute-entities=true</samp>. If you want to render a very large SVG and you trust the source, enable this option: <samp>-define svg:parse-huge=true</samp>.</td>
+    <td>ImageMagick utilizes <a href="http://www.inkscape.org/">inkscape</a> if its in your execution path otherwise <a href="http://developer.gnome.org/rsvg/">RSVG</a>. If neither are available, ImageMagick reverts to its internal SVG renderer. The default resolution is 96 DPI. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height. If you want to substitute entities and you trust the SVG source, enable this option: <samp>-define svg:substitute-entities=true</samp>. If you want to render a very large SVG and you trust the source, enable this option: <samp>-define svg:parse-huge=true</samp>.</td>
   </tr>
 
   <tr>
@@ -1129,7 +1129,7 @@ the supported image formats.</p>
     <td><a href="http://www.libtiff.org/">TIFF</a></td>
     <td>RW</td>
     <td>Tagged image file multispectral format</td>
-    <td>Also known as <samp>TIF</samp>. Requires <a href="http://www.libtiff.org/">tiff-v3.6.1.tar.gz</a> or later.  Use <a href="/script/command-line-options.php#define">-define</a> to specify the rows per strip (e.g. <samp>-define tiff:rows-per-strip=8</samp>).  To define the tile geometry, use for example, <samp>-define tiff:tile-geometry=128x128</samp>. To specify a <var>signed</var> format, use  <samp>-define quantum:format=signed</samp>. To specify a single-precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 64 for a double-precision floating-point format.  Use <samp>-define quantum:polarity=min-is-black</samp> or <samp>-define quantum:polarity=min-is-white</samp> toggle the photometric interpretation for a bilevel image.  Specify the extra samples as associated or unassociated alpha with, for example, <samp>-define tiff:alpha=unassociated</samp>.  Set the fill order with <samp>-define tiff:fill-order=msb|lsb</samp>. Set the TIFF endianness with <samp>-define tiff:endian=msb|lsb</samp>. Use <samp>-define tiff:exif-properties=false</samp> to skip reading the EXIF properties.  Use <samp>-define tiff:gps-properties=false</samp> to skip reading the GPS properties. You can set a number of TIFF software attributes including document name, host computer, artist, timestamp, make, model, software, and copyright.  For example, <a href="/script/command-line-options.php#set">-set tiff:software "My Company"</a>. If you want to ignore certain TIFF tags, use this option: <samp>-define tiff:ignore-tags=comma-separated-list-of-tag-IDs</samp>. Since version 6.9.1-4 there is support for reading photoshop layers in TIFF files, this can be disabled with <samp>-define tiff:ignore-layers=true</samp>. To preserve compression of the source image, use: <samp>-define tiff:preserve-compression=true</samp>.</td>
+    <td>Also known as <samp>TIF</samp>. Requires <a href="http://www.libtiff.org/">tiff-v3.6.1.tar.gz</a> or later.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the rows per strip (e.g. <samp>-define tiff:rows-per-strip=8</samp>).  To define the tile geometry, use for example, <samp>-define tiff:tile-geometry=128x128</samp>. To specify a <var>signed</var> format, use  <samp>-define quantum:format=signed</samp>. To specify a single-precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 64 for a double-precision floating-point format.  Use <samp>-define quantum:polarity=min-is-black</samp> or <samp>-define quantum:polarity=min-is-white</samp> toggle the photometric interpretation for a bilevel image.  Specify the extra samples as associated or unassociated alpha with, for example, <samp>-define tiff:alpha=unassociated</samp>.  Set the fill order with <samp>-define tiff:fill-order=msb|lsb</samp>. Set the TIFF endianness with <samp>-define tiff:endian=msb|lsb</samp>. Use <samp>-define tiff:exif-properties=false</samp> to skip reading the EXIF properties.  Use <samp>-define tiff:gps-properties=false</samp> to skip reading the GPS properties. You can set a number of TIFF software attributes including document name, host computer, artist, timestamp, make, model, software, and copyright.  For example, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set tiff:software "My Company"</a>. If you want to ignore certain TIFF tags, use this option: <samp>-define tiff:ignore-tags=comma-separated-list-of-tag-IDs</samp>. Since version 6.9.1-4 there is support for reading photoshop layers in TIFF files, this can be disabled with <samp>-define tiff:ignore-layers=true</samp>. To preserve compression of the source image, use: <samp>-define tiff:preserve-compression=true</samp>.</td>
   </tr>
 
   <tr>
@@ -1143,14 +1143,14 @@ the supported image formats.</p>
     <td><a href="http://www.freetype.org/">TTF</a></td>
     <td>R</td>
     <td>TrueType font file</td>
-    <td>Requires <a href="http://www.freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="/script/command-line-options.php#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <samp>-set type:hinting off</samp>).</td>
+    <td>Requires <a href="http://www.freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <samp>-set type:hinting off</samp>).</td>
   </tr>
 
   <tr>
     <td>TXT</td>
     <td>RW</td>
     <td>Multispectral raw text file</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define txt:compliance=css</samp>).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define txt:compliance=css</samp>).</td>
   </tr>
 
    <tr>
@@ -1185,7 +1185,7 @@ the supported image formats.</p>
     <td>UYVY</td>
     <td>RW</td>
     <td>Interleaved YUV raw image</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> command line options to specify width and height.  Use <a href="/script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> command line options to specify width and height.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
   </tr>
 
   <tr>
@@ -1198,7 +1198,7 @@ the supported image formats.</p>
   <tr>
     <td>VIDEO</td>
     <td>RW</td>
-    <td>Various video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="/script/defines.php">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
+    <td>Various video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
     <td> </td>
   </tr>
 
@@ -1227,7 +1227,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/WebP">WEBP</a></td>
     <td>RW</td>
     <td>Weppy image format</td>
-    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  The muxing delegate library is required to read animated Webp image containers. Specify the encoding options with the <a href="/script/command-line-options.php#define">-define</a> option  See <a href="/script/webp.php">WebP Encoding Options</a> for more details.</td>
+    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  The muxing delegate library is required to read animated Webp image containers. Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">WebP Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
@@ -1248,7 +1248,7 @@ the supported image formats.</p>
     <td>X</td>
     <td>RW</td>
     <td>display or import an image to or from an X11 server</td>
-    <td>Use <a href="/script/command-line-options.php#define">-define</a> to obtain the image from the root window (e.g. <samp>-define x:screen=true</samp>).  Set <samp>x:silent=true</samp> to turn off the beep when importing an image.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to obtain the image from the root window (e.g. <samp>-define x:screen=true</samp>).  Set <samp>x:silent=true</samp> to turn off the beep when importing an image.</td>
   </tr>
 
   <tr>
@@ -1290,28 +1290,28 @@ the supported image formats.</p>
     <td><a href="https://yaml.org/">YAML</a></td>
     <td>W</td>
     <td>human-readable data-serialization language</td>
-    <td>Include additional attributes about the image with these defines: <a href="/script/command-line-options.php#define">-define yaml:locate</a>, <a href="/script/command-line-options.php#define">-define yaml:limit</a>, <a href="/script/command-line-options.php#define">-define yaml:moments</a>, or <a href="/script/command-line-options.php#define">-define yaml:features</a>.  Specify the JSON model schema version with <a href="/script/command-line-options.php#define">-define yaml:version</a>.  The current version is 1.0.</td>
+    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:version</a>.  The current version is 1.0.</td>
   </tr>
 
   <tr>
     <td>YCbCr</td>
     <td>RW</td>
     <td>Raw Y, Cb, and Cr samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
   </tr>
 
   <tr>
     <td>YCbCrA</td>
     <td>RW</td>
     <td>Raw Y, Cb, Cr, and alpha samples</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
   </tr>
 
   <tr>
     <td>YUV</td>
     <td>RW</td>
     <td>CCIR 601 4:1:1</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> and <a href="/script/command-line-options.php#depth">-depth</a> command line options to specify width, height, and depth.   Use <a href="/script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> command line options to specify width, height, and depth.   Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
   </tr>
   </tbody>
 </table>
@@ -1388,7 +1388,7 @@ the supported image formats.</p>
     <td>GRADIENT</td>
     <td>R</td>
     <td>Gradual passing from one shade to another</td>
-    <td>Returns a rendered linear or radial top-to-bottom <a href="/script/gradient.php">gradient image</a> using the specified image size.</td>
+    <td>Returns a rendered linear or radial top-to-bottom <a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">gradient image</a> using the specified image size.</td>
 
   </tr>
 
@@ -1424,7 +1424,7 @@ the supported image formats.</p>
     <td>MAP</td>
     <td>RW</td>
     <td>Colormap intensities and indices</td>
-    <td>Set <a href="/script/command-line-options.php#depth">-depth</a> to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
+    <td>Set <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
   </tr>
 
   <tr>
@@ -1445,7 +1445,7 @@ the supported image formats.</p>
     <td>NULL</td>
     <td>RW</td>
     <td>NULL image</td>
-    <td>Useful for creating blank tiles with <a href="/script/montage.php">montage</a> (use <samp>NULL:</samp>). Also useful as an output format when evaluating image read performance.</td>
+    <td>Useful for creating blank tiles with <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a> (use <samp>NULL:</samp>). Also useful as an output format when evaluating image read performance.</td>
   </tr>
 
   <tr>
@@ -1488,7 +1488,7 @@ the supported image formats.</p>
     <td>RADIAL_GRADIENT</td>
     <td>R</td>
     <td>Gradual radial passing from one shade to another</td>
-    <td>Returns a rendered radial top-to-bottom <a href="/script/gradient.php">gradient image</a> using the specified image size.</td>
+    <td>Returns a rendered radial top-to-bottom <a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">gradient image</a> using the specified image size.</td>
   </tr>
 
   <tr>
@@ -1509,14 +1509,14 @@ the supported image formats.</p>
     <td>STEGANO</td>
     <td>R</td>
     <td>Steganographic image</td>
-    <td>Use <a href="/script/command-line-options.php#size">-size</a> command line option to specify width, height, and offset of the steganographic image</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify width, height, and offset of the steganographic image</td>
   </tr>
 
   <tr>
     <td>TILE</td>
     <td>R</td>
     <td>Tiled image</td>
-    <td>Create a tiled version of an image at by tiling a image. Use <a href="/script/command-line-options.php#size">-size</a> to specify the tiled image size. Tiles are composited on an image background and therefore is responsive to the <a href="/script/command-line-options.php#compose">-compose</a> option.  The image is specified similar to
+    <td>Create a tiled version of an image at by tiling a image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the tiled image size. Tiles are composited on an image background and therefore is responsive to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose">-compose</a> option.  The image is specified similar to
     <samp>TILE:image.miff</samp>.</td>
   </tr>
 
@@ -1531,7 +1531,7 @@ the supported image formats.</p>
     <td>VID</td>
     <td>RW</td>
     <td>Visual Image Directory</td>
-    <td>Used to create a thumbnailed directory (tiled thumbnails) of a set of images which may be used to select images to view via the <a href="/script/display.php">display</a> program, or saved to a <a href="#MIFF">MIFF</a> or <a href="#SHTML">SHTML</a> file.</td>
+    <td>Used to create a thumbnailed directory (tiled thumbnails) of a set of images which may be used to select images to view via the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program, or saved to a <a href="#MIFF">MIFF</a> or <a href="#SHTML">SHTML</a> file.</td>
   </tr>
 
   <tr>
@@ -1545,7 +1545,7 @@ the supported image formats.</p>
     <td>X</td>
     <td>RW</td>
     <td>Select image from or display image to your X server screen</td>
-    <td>Also see the <a href="/script/import.php">import</a> and <a href="/script/display.php">display</a>
+    <td>Also see the <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a>
     programs.</td>
   </tr>
 
@@ -1578,35 +1578,35 @@ the supported image formats.</p>
     <td>GRANITE</td>
     <td>R</td>
     <td>128x128 granite texture pattern</td>
-    <td><img src="/image/granite.png" width="64" height="64" alt="GRANITE"/></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/granite.png" width="64" height="64" alt="GRANITE"/></td>
   </tr>
 
   <tr>
-    <td><a href="/image/logo.png">LOGO</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../image/logo.png">LOGO</a></td>
     <td>R</td>
     <td>ImageMagick Logo, 640x480</td>
-    <td><img src="/image/logo.jpg" width="123" height="118" alt="Logo"/></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo.jpg" width="123" height="118" alt="Logo"/></td>
   </tr>
 
   <tr>
     <td> NETSCAPE</td>
     <td>R</td>
     <td>image using colors in Netscape 216 (6x6x6 ) color cube, 216x144</td>
-    <td>Most commonly used with the <a href="/script/magick.php">magick</a> and <a href="/script/mogrify.php">magick mogrify</a> programs with the <a href="/script/command-line-options.php#map">-map</a> option to create <var>web safe</var> images.</td>
+    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#map">-map</a> option to create <var>web safe</var> images.</td>
   </tr>
 
   <tr>
     <td>ROSE</td>
     <td>R</td>
     <td>Picture of a rose, 70x46</td>
-    <td><img src="/image/rose.png" width="70" height="46" alt="ROSE"/></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.png" width="70" height="46" alt="ROSE"/></td>
   </tr>
 
   <tr>
-    <td><a href="/image/wizard.png">WIZARD</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png">WIZARD</a></td>
     <td>R</td>
     <td>ImageMagick Wizard, 480x640</td>
-    <td><img src="/image/wizard.jpg" width="125" height="167" alt="Logo"/></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.jpg" width="125" height="167" alt="Logo"/></td>
   </tr>
 
 </table></div>
@@ -1614,7 +1614,7 @@ the supported image formats.</p>
 <br/>
 <h2><a class="anchor" id="builtin-patterns"></a>Built-in Patterns</h2>
 
-<p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <samp>pattern:</samp> format tag may be used via the syntax <samp>pattern:</samp><var>name</var> to request an embedded pattern (e.g. <samp>pattern:checkerboard</samp>). The pattern size is controlled with the <a href="/script/command-line-options.php#size">-size</a> command line option.</p>
+<p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <samp>pattern:</samp> format tag may be used via the syntax <samp>pattern:</samp><var>name</var> to request an embedded pattern (e.g. <samp>pattern:checkerboard</samp>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
 
 <div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
@@ -1629,378 +1629,378 @@ the supported image formats.</p>
     <td>BRICKS</td>
     <td>R</td>
     <td>brick pattern, 16x16</td>
-    <td><img src="/image/patterns/bricks.png" width="100" height="26" alt="BRICKS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/bricks.png" width="100" height="26" alt="BRICKS" /></td>
   </tr>
 
   <tr>
     <td>CHECKERBOARD</td>
     <td>R</td>
     <td>checkerboard pattern, 30x30</td>
-    <td><img src="/image/patterns/checkerboard.png" width="100" height="26" alt="CHECKERBOARD" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/checkerboard.png" width="100" height="26" alt="CHECKERBOARD" /></td>
   </tr>
 
   <tr>
     <td>CIRCLES</td>
     <td>R</td>
     <td>circles pattern, 16x16</td>
-    <td><img src="/image/patterns/circles.png" width="100" height="26" alt="CIRCLES"/></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/circles.png" width="100" height="26" alt="CIRCLES"/></td>
   </tr>
 
   <tr>
     <td>CROSSHATCH</td>
     <td>R</td>
     <td>crosshatch pattern, 8x4</td>
-    <td><img src="/image/patterns/crosshatch.png" width="100" height="26" alt="CROSSHATCH" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/crosshatch.png" width="100" height="26" alt="CROSSHATCH" /></td>
   </tr>
 
   <tr>
     <td>CROSSHATCH30</td>
     <td>R</td>
     <td>crosshatch pattern with lines at 30 degrees, 8x4</td>
-    <td><img src="/image/patterns/crosshatch30.png" width="100" height="26" alt="CROSSHATCH30" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/crosshatch30.png" width="100" height="26" alt="CROSSHATCH30" /></td>
   </tr>
 
   <tr>
     <td>CROSSHATCH45</td>
     <td>R</td>
     <td>crosshatch pattern with lines at 45 degrees, 8x4</td>
-    <td><img src="/image/patterns/crosshatch45.png" width="100" height="26" alt="CROSSHATCH45" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/crosshatch45.png" width="100" height="26" alt="CROSSHATCH45" /></td>
   </tr>
 
   <tr>
     <td>FISHSCALES</td>
     <td>R</td>
     <td>fish scales pattern, 16x8</td>
-    <td><img src="/image/patterns/fishscales.png" width="100" height="26" alt="FISHSCALES" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/fishscales.png" width="100" height="26" alt="FISHSCALES" /></td>
   </tr>
 
   <tr>
     <td>GRAY0</td>
     <td>R</td>
     <td>0% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray0.png" width="100" height="32" alt="GRAY0" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray0.png" width="100" height="32" alt="GRAY0" /></td>
   </tr>
 
   <tr>
     <td>GRAY5</td>
     <td>R</td>
     <td>5% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray5.png" width="100" height="32" alt="GRAY5" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray5.png" width="100" height="32" alt="GRAY5" /></td>
   </tr>
 
   <tr>
     <td>GRAY10</td>
     <td>R</td>
     <td>10% intensity gray, 32x32</td>
-    <td> <img src="/image/patterns/gray10.png" width="100" height="32" alt="GRAY10" /></td>
+    <td> <img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray10.png" width="100" height="32" alt="GRAY10" /></td>
   </tr>
 
   <tr>
     <td>GRAY15</td>
     <td>R</td>
     <td>15% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray15.png" width="100" height="32" alt="GRAY15" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray15.png" width="100" height="32" alt="GRAY15" /></td>
   </tr>
 
   <tr>
     <td>GRAY20</td>
     <td>R</td>
     <td>20% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray20.png" width="100" height="32" alt="GRAY20" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray20.png" width="100" height="32" alt="GRAY20" /></td>
   </tr>
 
   <tr>
     <td>GRAY25</td>
     <td>R</td>
     <td>25% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray25.png" width="100" height="32" alt="GRAY25" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray25.png" width="100" height="32" alt="GRAY25" /></td>
   </tr>
 
   <tr>
     <td>GRAY30</td>
     <td>R</td>
     <td>30% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray30.png" width="100" height="32" alt="GRAY30" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray30.png" width="100" height="32" alt="GRAY30" /></td>
   </tr>
 
   <tr>
     <td>GRAY35</td>
     <td>R</td>
     <td>35% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray35.png" width="100" height="32" alt="GRAY35" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray35.png" width="100" height="32" alt="GRAY35" /></td>
   </tr>
 
   <tr>
     <td>GRAY40</td>
     <td>R</td>
     <td>40% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray40.png" width="100" height="32" alt="GRAY40" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray40.png" width="100" height="32" alt="GRAY40" /></td>
   </tr>
 
   <tr>
     <td>GRAY45</td>
     <td>R</td>
     <td>45% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray45.png" width="100" height="32" alt="GRAY45" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray45.png" width="100" height="32" alt="GRAY45" /></td>
   </tr>
 
   <tr>
     <td>GRAY50</td>
     <td>R</td>
     <td>50% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray50.png" width="100" height="32" alt="GRAY50" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray50.png" width="100" height="32" alt="GRAY50" /></td>
   </tr>
 
   <tr>
     <td>GRAY55</td>
     <td>R</td>
     <td>55% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray55.png" width="100" height="32" alt="GRAY55" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray55.png" width="100" height="32" alt="GRAY55" /></td>
   </tr>
 
   <tr>
     <td>GRAY60</td>
     <td>R</td>
     <td>60% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray60.png" width="100" height="32" alt="GRAY60" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray60.png" width="100" height="32" alt="GRAY60" /></td>
   </tr>
 
   <tr>
     <td>GRAY65</td>
     <td>R</td>
     <td>65% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray65.png" width="100" height="32" alt="GRAY65" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray65.png" width="100" height="32" alt="GRAY65" /></td>
   </tr>
 
   <tr>
     <td>GRAY70</td>
     <td>R</td>
     <td>70% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray70.png" width="100" height="32" alt="GRAY70" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray70.png" width="100" height="32" alt="GRAY70" /></td>
   </tr>
 
   <tr>
     <td>GRAY75</td>
     <td>R</td>
     <td>75% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray75.png" width="100" height="32" alt="GRAY75" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray75.png" width="100" height="32" alt="GRAY75" /></td>
   </tr>
 
   <tr>
     <td>GRAY80</td>
     <td>R</td>
     <td>80% intensity gray, 32x32</td>
-    <td> <img src="/image/patterns/gray80.png" width="100" height="32" alt="GRAY80" /></td>
+    <td> <img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray80.png" width="100" height="32" alt="GRAY80" /></td>
   </tr>
 
   <tr>
     <td>GRAY85</td>
     <td>R</td>
     <td>85% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray85.png" width="100" height="32" alt="GRAY85" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray85.png" width="100" height="32" alt="GRAY85" /></td>
   </tr>
 
   <tr>
     <td>GRAY90</td>
     <td>R</td>
     <td>90% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray90.png" width="100" height="32" alt="GRAY90" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray90.png" width="100" height="32" alt="GRAY90" /></td>
   </tr>
 
   <tr>
     <td>GRAY95</td>
     <td>R</td>
     <td>95% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray95.png" width="100" height="32" alt="GRAY95" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray95.png" width="100" height="32" alt="GRAY95" /></td>
   </tr>
 
   <tr>
     <td>GRAY100</td>
     <td>R</td>
     <td>100% intensity gray, 32x32</td>
-    <td><img src="/image/patterns/gray100.png" width="100" height="32" alt="GRAY100" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/gray100.png" width="100" height="32" alt="GRAY100" /></td>
   </tr>
 
   <tr>
     <td>HEXAGONS</td>
     <td>R</td>
     <td>hexagon pattern, 30x18</td>
-    <td><img src="/image/patterns/hexagons.png" width="100" height="26" alt="HEXAGONS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hexagons.png" width="100" height="26" alt="HEXAGONS" /></td>
   </tr>
 
   <tr>
     <td>HORIZONTAL</td>
     <td>R</td>
     <td>horizontal line pattern, 8x4</td>
-    <td><img src="/image/patterns/horizontal.png" width="100" height="26" alt="HORIZONTAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/horizontal.png" width="100" height="26" alt="HORIZONTAL" /></td>
   </tr>
 
   <tr>
     <td>HORIZONTAL2</td>
     <td>R</td>
     <td>horizontal line pattern, 8x8</td>
-    <td><img src="/image/patterns/horizontal2.png" width="100" height="26" alt="HORIZONTAL2" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/horizontal2.png" width="100" height="26" alt="HORIZONTAL2" /></td>
   </tr>
 
   <tr>
     <td>HORIZONTAL3</td>
     <td>R</td>
     <td>horizontal line pattern, 9x9</td>
-    <td><img src="/image/patterns/horizontal3.png" width="100" height="26" alt="HORIZONTAL3" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/horizontal3.png" width="100" height="26" alt="HORIZONTAL3" /></td>
   </tr>
 
   <tr>
     <td>HORIZONTALSAW</td>
     <td>R</td>
     <td>horizontal saw-tooth pattern, 16x8</td>
-    <td><img src="/image/patterns/horizontalsaw.png" width="100" height="26" alt="HORIZONTALSAW" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/horizontalsaw.png" width="100" height="26" alt="HORIZONTALSAW" /></td>
   </tr>
 
   <tr>
     <td>HS_BDIAGONAL</td>
     <td>R</td>
     <td>backward diagonal line pattern (45 degrees slope), 8x8</td>
-    <td><img src="/image/patterns/hs_bdiagonal.png" width="100" height="26" alt="HS_BDIAGONAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_bdiagonal.png" width="100" height="26" alt="HS_BDIAGONAL" /></td>
   </tr>
 
   <tr>
     <td>HS_CROSS</td>
     <td>R</td>
     <td>cross line pattern, 8x8</td>
-    <td><img src="/image/patterns/hs_cross.png" width="100" height="26" alt="HS_CROSS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_cross.png" width="100" height="26" alt="HS_CROSS" /></td>
   </tr>
 
   <tr>
     <td>HS_DIAGCROSS</td>
     <td>R</td>
     <td>diagonal line cross pattern (45 degrees slope), 8x8</td>
-    <td><img src="/image/patterns/hs_diagcross.png" width="100" height="26" alt="HS_DIAGCROSS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_diagcross.png" width="100" height="26" alt="HS_DIAGCROSS" /></td>
   </tr>
 
   <tr>
     <td>HS_FDIAGONAL</td>
     <td>R</td>
     <td>forward diagonal line pattern (45 degrees slope), 8x8</td>
-    <td><img src="/image/patterns/hs_fdiagonal.png" width="100" height="26" alt="HS_FDIAGONAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_fdiagonal.png" width="100" height="26" alt="HS_FDIAGONAL" /></td>
   </tr>
 
   <tr>
     <td>HS_HORIZONTAL</td>
     <td>R</td>
     <td>horizontal line pattern, 8x8</td>
-    <td><img src="/image/patterns/hs_horizontal.png" width="100" height="26" alt="HS_HORIZONTAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_horizontal.png" width="100" height="26" alt="HS_HORIZONTAL" /></td>
   </tr>
 
   <tr>
     <td>HS_VERTICAL</td>
     <td>R</td>
     <td>vertical line pattern, 8x8</td>
-    <td><img src="/image/patterns/hs_vertical.png" width="100" height="26" alt="HS_VERTICAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/hs_vertical.png" width="100" height="26" alt="HS_VERTICAL" /></td>
   </tr>
 
   <tr>
     <td>LEFT30</td>
     <td>R</td>
     <td>forward diagonal pattern (30 degrees slope), 8x4</td>
-    <td><img src="/image/patterns/left30.png" width="100" height="26" alt="LEFT0" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/left30.png" width="100" height="26" alt="LEFT0" /></td>
   </tr>
 
   <tr>
     <td>LEFT45</td>
     <td>R</td>
     <td>forward diagonal line pattern (45 degrees slope), 8x8</td>
-    <td><img src="/image/patterns/left45.png" width="100" height="26" alt="LEFT45" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/left45.png" width="100" height="26" alt="LEFT45" /></td>
   </tr>
 
   <tr>
     <td>LEFTSHINGLE</td>
     <td>R</td>
     <td>left shingle pattern, 24x24</td>
-    <td><img src="/image/patterns/leftshingle.png" width="100" height="26" alt="LEFTSHINGLE" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/leftshingle.png" width="100" height="26" alt="LEFTSHINGLE" /></td>
   </tr>
 
   <tr>
     <td>OCTAGONS</td>
     <td>R</td>
     <td>octagons pattern, 16x16</td>
-    <td><img src="/image/patterns/octagons.png" width="100" height="26" alt="OCTAGONS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/octagons.png" width="100" height="26" alt="OCTAGONS" /></td>
   </tr>
 
   <tr>
     <td>RIGHT30</td>
     <td>R</td>
     <td>backward diagonal line pattern (30 degrees) 8x4</td>
-    <td><img src="/image/patterns/right30.png" width="100" height="26" alt="RIGHT30" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/right30.png" width="100" height="26" alt="RIGHT30" /></td>
   </tr>
 
   <tr>
     <td>RIGHT45</td>
     <td>R</td>
     <td>backward diagonal line pattern (30 degrees), 8x8</td>
-    <td><img src="/image/patterns/right45.png" width="100" height="26" alt="RIGHT45" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/right45.png" width="100" height="26" alt="RIGHT45" /></td>
   </tr>
 
   <tr>
     <td>RIGHTSHINGLE</td>
     <td>R</td>
     <td>right shingle pattern, 24x24</td>
-    <td><img src="/image/patterns/rightshingle.png" width="100" height="26" alt="RIGHTSHINGLE" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/rightshingle.png" width="100" height="26" alt="RIGHTSHINGLE" /></td>
   </tr>
 
   <tr>
     <td>SMALLFISHSCALES</td>
     <td>R</td>
     <td>small fish scales pattern, 8x8</td>
-    <td><img src="/image/patterns/smallfishscales.png" width="100" height="26" alt="SMALLFISHSCALES" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/smallfishscales.png" width="100" height="26" alt="SMALLFISHSCALES" /></td>
   </tr>
 
   <tr>
     <td>VERTICAL</td>
     <td>R</td>
     <td>vertical line pattern, 8x8</td>
-    <td><img src="/image/patterns/vertical.png" width="100" height="26" alt="VERTICAL" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/vertical.png" width="100" height="26" alt="VERTICAL" /></td>
   </tr>
 
   <tr>
     <td>VERTICAL2</td>
     <td>R</td>
     <td>vertical line pattern, 8x8</td>
-    <td><img src="/image/patterns/vertical2.png" width="100" height="26" alt="VERTICAL2" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/vertical2.png" width="100" height="26" alt="VERTICAL2" /></td>
   </tr>
 
   <tr>
     <td>VERTICAL3</td>
     <td>R</td>
     <td>vertical line pattern, 9x9</td>
-    <td><img src="/image/patterns/vertical3.png" width="100" height="26" alt="VERTICAL3" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/vertical3.png" width="100" height="26" alt="VERTICAL3" /></td>
   </tr>
 
   <tr>
     <td>VERTICALBRICKS</td>
     <td>R</td>
     <td>vertical brick pattern, 16x16</td>
-    <td><img src="/image/patterns/verticalbricks.png" width="100" height="26" alt="VERTICALBRICKS" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/verticalbricks.png" width="100" height="26" alt="VERTICALBRICKS" /></td>
   </tr>
 
   <tr>
     <td>VERTICALLEFTSHINGLE</td>
     <td>R</td>
     <td>vertical left shingle pattern, 24x24</td>
-    <td><img src="/image/patterns/verticalleftshingle.png" width="100" height="26" alt="VERTICALLEFTSHINGLE" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/verticalleftshingle.png" width="100" height="26" alt="VERTICALLEFTSHINGLE" /></td>
   </tr>
 
   <tr>
     <td>VERTICALRIGHTSHINGLE</td>
     <td>R</td>
     <td>vertical right shingle pattern, 24x24</td>
-    <td><img src="/image/patterns/verticalrightshingle.png" width="100" height="26" alt="VERTICALRIGHTSHINGLE" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/verticalrightshingle.png" width="100" height="26" alt="VERTICALRIGHTSHINGLE" /></td>
   </tr>
 
   <tr>
     <td>VERTICALSAW</td>
     <td>R</td>
     <td>vertical saw-tooth pattern, 8x16</td>
-    <td><img src="/image/patterns/verticalsaw.png" width="100" height="26" alt="VERTICALSAW" /></td>
+    <td><img src="<?php echo $_SESSION['RelativePath']?>/../image/patterns/verticalsaw.png" width="100" height="26" alt="VERTICALSAW" /></td>
   </tr>
 </table></div>
 
@@ -2051,15 +2051,15 @@ the supported image formats.</p>
     <td>ICC</td>
     <td>RW</td>
     <td>International Color Consortium color profile</td>
-    <td>Also known as <samp>ICM</samp>. To read, use <a href="/script/command-line-options.php#profile">-profile</a> with
-      <a href="/script/magick.php">magick</a>.</td>
+    <td>Also known as <samp>ICM</samp>. To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with
+      <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>.</td>
   </tr>
 
   <tr>
     <td>IPTC</td>
     <td>RW</td>
     <td>IPTC Newsphoto (binary)</td>
-    <td>To read, use <a href="/script/command-line-options.php#profile">-profile</a> with <a href="/script/magick.php">magick</a></td>
+    <td>To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></td>
   </tr>
 
   <tr>

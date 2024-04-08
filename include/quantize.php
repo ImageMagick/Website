@@ -100,7 +100,7 @@ while number of nodes with (n2 &gt; 0) &gt; required maximum number of colors
 
 <p>The normalized error measurement can be used to compare images.  In general, the closer the mean error is to zero the more the quantized image resembles the source image. Ideally, the error should be perceptually-based, since the human eye is the final judge of quantization quality.</p>
 
-<p>These errors are measured and printed when the <a href="/script/command-line-options.php#colors">-colors</a> and <a href="/script/command-line-options.php#verbose">-verbose</a> options are specified on the <a href="/script/magick.php">magick</a> command line:</p>
+<p>These errors are measured and printed when the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-colors</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> options are specified on the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> command line:</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">

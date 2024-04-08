@@ -1,18 +1,18 @@
 <div>
 
-<p class="magick-description">The <a href="/script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
+<p class="magick-description">The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>
 
 <p>This option creates one or more definitions for coders and decoders to use
 while reading and writing image data.  Definitions are generally used to
 control image file format coder modules, and image processing operations,
-beyond what is provided by normal means.  Defined settings are listed in <a href="/script/command-line-options.php#verbose">-verbose</a> information ("<samp>info:</samp>" output format) as "Artifacts". </p>
+beyond what is provided by normal means.  Defined settings are listed in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a> information ("<samp>info:</samp>" output format) as "Artifacts". </p>
 
 <p>If <var>value</var> is missing for a definition, an empty-valued
 definition of a flag is created with that name. This used to control on/off
-options.  Use <a href="/script/command-line-options.php#define">-define keys</a> to remove definitions
-previously created.  Use <a href="/script/command-line-options.php#define">+define "*"</a> to remove all existing definitions.</p>
+options.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define keys</a> to remove definitions
+previously created.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">+define "*"</a> to remove all existing definitions.</p>
 
-<p>The same 'artifact' settings can also be defined using the <a href="/script/command-line-options.php#set">-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="/script/escape.php" >Format and Print Image Properties</a> in the defined value. </p>
+<p>The same 'artifact' settings can also be defined using the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image Properties</a> in the defined value. </p>
 
 <p>The <var>option</var> and <var>key</var> are case-independent (they are
 converted to lowercase for use within the decoders) while the <var>value</var>
@@ -92,7 +92,7 @@ use:</p>
 
  <tr>
     <td>complex:snr=<var>value</var></td>
-    <td>Set the divide SNR constant <a href="/script/command-line-options.php#complex">-complex</a>.</td>
+    <td>Set the divide SNR constant <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#complex">-complex</a>.</td>
   </tr>
 
   <tr>
@@ -104,7 +104,7 @@ use:</p>
 
   <tr>
     <td>compose:clip-to-self=<var>true|false</var></td>
-    <td>Some <a href="/script/command-line-options.php#compose" >-compose</a> methods can modify the
+    <td>Some <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> methods can modify the
     'destination' image outside the overlay area.  It is disabled by default.</td>
   </tr>
 
@@ -249,13 +249,13 @@ use:</p>
 
   <tr>
     <td>distort:scale=<var>value</var></td>
-    <td>Set the output scaling factor for use with <a href="/script/command-line-options.php#distort"
+    <td>Set the output scaling factor for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort"
    >-distort</a>.</td>
   </tr>
 
   <tr>
     <td>distort:viewport=<var>WxH+X+Y</var></td>
-    <td>Set the viewport for use with <a href="/script/command-line-options.php#distort">-distort</a>.</td>
+    <td>Set the viewport for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort">-distort</a>.</td>
   </tr>
 
   <tr>
@@ -270,12 +270,12 @@ use:</p>
 
   <tr>
     <td>filename:literal=<var>true</var></td>
-    <td>By default, an output filename can contain <a href="/script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpretting embedded formatting characters and instead use the filename literally.</td>
+    <td>By default, an output filename can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpretting embedded formatting characters and instead use the filename literally.</td>
   </tr>
 
   <tr>
     <td>filter:option=<var>value</var></td>
-     <td>Set a filter option for use with <a href="/script/command-line-options.php#resize">-resize</a>.
+     <td>Set a filter option for use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#resize">-resize</a>.
     See below for specific options.</td>
   </tr>
 
@@ -397,13 +397,13 @@ use:</p>
   <tr>
     <td>fourier:normalize=<var>inverse</var></td>
     <td>Set the location for the FFT/IFT normalization as use by
-    <a href="/script/command-line-options.php#fft">+-fft</a> and <a href="/script/command-line-options.php#ift">+-ift</a>. The default is
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fft">+-fft</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#ift">+-ift</a>. The default is
     <var>forward</var>.</td>
   </tr>
 
   <tr>
     <td>frames:step</td>
-    <td>When selecting image <a href="/script/command-line-processing.php">frames</a>, the default is to step one frame at a time through a list, e.g. [0-3], returns frames 0, 1, 2, and 3.  Set the step to 2 in this example and we instead get frames 0 and 2.</td>
+    <td>When selecting image <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">frames</a>, the default is to step one frame at a time through a list, e.g. [0-3], returns frames 0, 1, 2, and 3.  Set the step to 2 in this example and we instead get frames 0 and 2.</td>
   </tr>
 
   <tr>
@@ -457,7 +457,7 @@ use:</p>
 
   <tr>
     <td>modulate:colorspace=<var>colorspace</var></td>
-    <td>Define the colorspace to use with <a href="/script/command-line-options.php#modulate">-modulate</a>.
+    <td>Define the colorspace to use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#modulate">-modulate</a>.
     Any hue-based colorspace may be use. The default is HSL.</td>
   </tr>
 
@@ -489,7 +489,7 @@ use:</p>
 
   <tr>
     <td>pixel:compliance=<var>{none|undefined|svg|mvg|x11|xpm}</var></td>
-    <td>In combination with <a href="/script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
+    <td>In combination with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>, this define allows color values to be presented in one or combination of: percent, names, 8-bit components, or hex values. 16-bit depth values are generally shown as percents and 8-bit depth values generally are shown as a combination of color names and 8-bit component values.</td>
   </tr>
 
   <tr>
@@ -531,9 +531,9 @@ use:</p>
     <td>quantum:format=<var>type</var></td>
     <td>Set the type to <samp>floating-point</samp> to specify a floating-point
     format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
-    to preserve negative values. If <a href="/script/command-line-options.php#depth">-depth</a> 16 is
+    to preserve negative values. If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 16 is
     included, the result is a single precision floating point format.
-    If <a href="/script/command-line-options.php#depth">-depth</a> 32 is included, the result is
+    If <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> 32 is included, the result is
     double precision floating point format. For signed pixel data, use <samp>-define quantum:format=signed</samp></td>
   </tr>
 
@@ -590,7 +590,7 @@ use:</p>
   <tr>
     <td>sample:offset=<var>geometry</var></td>
     <td>Location of the sampling point within the sub-region being sampled,
-    expressed as percentages (see <a href="/script/command-line-options.php#sample" >-sample</a>).</td>
+    expressed as percentages (see <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sample" >-sample</a>).</td>
   </tr>
 
   <tr>
@@ -1074,8 +1074,8 @@ use:</p>
     can use these "defines" to cause it to be written as an 8-bit grayscale,
     indexed, or even a 64-bit RGBA.  But if you have a 16-million color image,
     you cannot force it to be written as a grayscale or indexed PNG.  If you
-    wish to do this, you must use the appropriate <a href="/script/command-line-options.php#depth">-depth</a>,
-    <a href="/script/command-line-options.php#colors">-colors</a>, or <a href="/script/command-line-options.php#type">-type</a> directives to
+    wish to do this, you must use the appropriate <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a>,
+    <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colors">-colors</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#type">-type</a> directives to
     reduce the image quality prior to using the PNG encoder. Note that in
     indexed PNG files, "bit-depth" refers to the number of bits per index,
     which can be 1, 2, 4, or 8.  In such files, the color samples always have
@@ -1175,7 +1175,7 @@ use:</p>
     <samp>tRNS</samp> chunk isn't written anyhow, and there is no effect
     on the PNG colortype of the output image.</p>
 
-    <p>The <a href="/script/command-line-options.php#strip">-strip</a>
+    <p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#strip">-strip</a>
     option does the equivalent of the following for PNG output:</p>
 
     <pre class="p-3 mb-2 bg-light text-dark"><samp>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</samp></pre>
@@ -1593,7 +1593,7 @@ use:</p>
 
   <tr>
     <td>webp:<var>tag</var>=<var>value</var></td>
-    <td>WebP has a plethora of defines detailed on this <a href="/script/webp.php">page</a>.</td>
+    <td>WebP has a plethora of defines detailed on this <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">page</a>.</td>
   </tr>
 
   <tr>

@@ -2,11 +2,11 @@
 <p class="text-center"><a href="#installation">Installation</a> • <a href="#overview">Overview</a> • <a href="#example">Example Script</a> • <a href="#read">Read or Write an Image</a> • <a href="#manipulate">Manipulate an Image</a> • <a href="#set-attribute">Set an Image Attribute</a> • <a href="#get-attribute">Get an Image Attribute</a> • <a href="#compare">Compare an Image to its Reconstruction</a> • <a href="#montage">Create an Image Montage</a> • <a href="#blobs">Working with Blobs</a> • <a href="#direct-access">Direct-access to Image Pixels</a> • <a href="#miscellaneous">Miscellaneous Methods</a> • <a href="#exceptions">Handling Exceptions</a>• <a href="#constants">Constant</a> </p>
 
 <a class="anchor" id="introduction"></a>
-<p class="lead"><a href="/script/download.php">PerlMagick</a> is an objected-oriented <a href="http://www.perl.com/perl/">Perl</a> interface to ImageMagick. Use the module to read, manipulate, or write an image or image sequence from within a Perl script. This makes it very suitable for Web CGI scripts. You must have ImageMagick 6.5.5 or above and Perl version 5.005_02 or greater installed on your system for PerlMagick to build properly.</p>
+<p class="lead"><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">PerlMagick</a> is an objected-oriented <a href="http://www.perl.com/perl/">Perl</a> interface to ImageMagick. Use the module to read, manipulate, or write an image or image sequence from within a Perl script. This makes it very suitable for Web CGI scripts. You must have ImageMagick 6.5.5 or above and Perl version 5.005_02 or greater installed on your system for PerlMagick to build properly.</p>
 
 <p>There are a number of useful scripts available to show you the value of PerlMagick. You can do Web based image manipulation and conversion with <a href="https://imagemagick.org/archive/perl">MagickStudio</a>, or use <a href="https://github.com/ImageMagick/ImageMagick/tree/main/PerlMagick/demo/tree.pl">L-systems</a> to create images of plants using mathematical constructs, and finally navigate through collections of thumbnail images and select the image to view with the <a href="http://webmagick.sourceforge.net/">WebMagick Image Navigator</a>.</p>
 
-<p>You can try PerlMagick from your Web browser at the <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="/script/examples.php">examples</a> of select PerlMagick functions.</p>
+<p>You can try PerlMagick from your Web browser at the <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick functions.</p>
 
 <h2><a class="anchor" id="installation"></a>Installation</h2>
 
@@ -48,7 +48,7 @@
 
 <p><b>Windows XP / Windows 2000</b></p>
 
-<p>ImageMagick must already be installed on your system. Also, the ImageMagick source distribution for <a href="/script/download.php">Windows 2000</a> is required. You must also have the <samp>nmake</samp> from the Visual C++ or J++ development environment. Copy <samp>\bin\IMagick.dll</samp> and <samp>\bin\X11.dll</samp> to a directory in your dynamic load path such as <samp>c:\perl\site\5.00502</samp>.</p>
+<p>ImageMagick must already be installed on your system. Also, the ImageMagick source distribution for <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Windows 2000</a> is required. You must also have the <samp>nmake</samp> from the Visual C++ or J++ development environment. Copy <samp>\bin\IMagick.dll</samp> and <samp>\bin\X11.dll</samp> to a directory in your dynamic load path such as <samp>c:\perl\site\5.00502</samp>.</p>
 
 <p>Next, type</p>
 
@@ -296,7 +296,7 @@ close(IMAGE);
 
 <h2><a class="anchor" id="manipulate"></a>Manipulate an Image</h2>
 
-<p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="/script/examples.php">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
+<p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>$image-&gt;Crop(geometry=&gt;'100x100+10+20');
 $image-&gt;[$x]-&gt;Frame("100x200");
@@ -348,7 +348,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AffineTransform</td>
-    <td>affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt; <i>float, float</i>, rotate=&gt;<i>float</i>, skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate={Average, Bicubic, Bilinear, Filter, Integer, Mesh, NearestNeighbor}, background=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt; <i>float, float</i>, rotate=&gt;<i>float</i>, skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate={Average, Bicubic, Bilinear, Filter, Integer, Mesh, NearestNeighbor}, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>affine transform image</td>
   </tr>
 
@@ -360,7 +360,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Annotate</td>
-    <td>text=&gt;<i>string</i>, font=&gt;<i>string</i>, family=&gt;<i>string</i>, style=&gt;{Normal, Italic, Oblique, Any}, stretch=&gt;{Normal, UltraCondensed, ExtraCondensed, Condensed, SemiCondensed, SemiExpanded, Expanded, ExtraExpanded, UltraExpanded}, weight=&gt;<i>integer</i>, pointsize=&gt;<i>integer</i>, density=&gt;<i>geometry</i>, stroke=&gt;<i><a href="/script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="/script/color.php">color name</a></i>, undercolor=&gt;<i><a href="/script/color.php">color name</a></i>, kerning=&gt;<i>float</i>, geometry=&gt;<i>geometry</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, antialias=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>. skewX=&gt;<i>float</i>, skewY=&gt; <i>float</i>, align=&gt;{Left, Center, Right}, encoding=&gt;{UTF-8}, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, decorate=&gt;{none, underline, overline, line-through}, word-break=&gt;{normal, break-word}</td>
+    <td>text=&gt;<i>string</i>, font=&gt;<i>string</i>, family=&gt;<i>string</i>, style=&gt;{Normal, Italic, Oblique, Any}, stretch=&gt;{Normal, UltraCondensed, ExtraCondensed, Condensed, SemiCondensed, SemiExpanded, Expanded, ExtraExpanded, UltraExpanded}, weight=&gt;<i>integer</i>, pointsize=&gt;<i>integer</i>, density=&gt;<i>geometry</i>, stroke=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, undercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, kerning=&gt;<i>float</i>, geometry=&gt;<i>geometry</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, antialias=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>. skewX=&gt;<i>float</i>, skewY=&gt; <i>float</i>, align=&gt;{Left, Center, Right}, encoding=&gt;{UTF-8}, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, decorate=&gt;{none, underline, overline, line-through}, word-break=&gt;{normal, break-word}</td>
     <td>annotate an image with text. See <a href="#misc">QueryFontMetrics</a> to get font metrics without rendering any text.</td>
   </tr>
 
@@ -414,7 +414,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Border</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="/script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with a border of color</td>
   </tr>
 
@@ -468,7 +468,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Color</td>
-    <td>color=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>set the entire image to this color.</td>
   </tr>
 
@@ -480,7 +480,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Colorize</td>
-    <td>fill=&gt;<i><a href="/script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
+    <td>fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
     <td>colorize the image with the fill color</td>
   </tr>
 
@@ -516,7 +516,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Composite</td>
-    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="/script/color.php">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}, clip-to-self=&gt;{True, False}</td>
+    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}, clip-to-self=&gt;{True, False}</td>
     <td>composite one image onto another.  Use the rotate parameter in concert with the tile parameter.</td>
   </tr>
 
@@ -600,7 +600,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Draw</td>
-    <td>primitive=&gt;{point, line, rectangle, arc, ellipse, circle, path, polyline, polygon, bezier, color, matte, text, @<i>filename</i>}, points=&gt;<i>string</i> , method=&gt;<i>{Point, Replace, Floodfill, FillToBorder, Reset}</i>, stroke=&gt;<i><a href="/script/color.php">color name</a></i>, fill=&gt;<i><a href="/script/color.php">color name</a></i>, font=&gt;<i>string</i>, pointsize=&gt;<i>integer</i>, strokewidth=&gt;<i>float</i>, antialias=&gt;{true, false}, bordercolor=&gt;<i><a href="/script/color.php">color name</a></i>, x=&gt;<i>float</i>, y=&gt;<i>float</i>, dash-offset=&gt;<i>float</i>, dash-pattern=&gt;<i>array of float values</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>,  skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, mesh, nearest-neighbor, spline}, kerning=&gt;<i>float</i>, text=&gt;<i>string</i>, vector-graphics=&gt;<i>string</i>, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, word-break=&gt;{normal, break-word}</td>
+    <td>primitive=&gt;{point, line, rectangle, arc, ellipse, circle, path, polyline, polygon, bezier, color, matte, text, @<i>filename</i>}, points=&gt;<i>string</i> , method=&gt;<i>{Point, Replace, Floodfill, FillToBorder, Reset}</i>, stroke=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, font=&gt;<i>string</i>, pointsize=&gt;<i>integer</i>, strokewidth=&gt;<i>float</i>, antialias=&gt;{true, false}, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, x=&gt;<i>float</i>, y=&gt;<i>float</i>, dash-offset=&gt;<i>float</i>, dash-pattern=&gt;<i>array of float values</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>,  skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, mesh, nearest-neighbor, spline}, kerning=&gt;<i>float</i>, text=&gt;<i>string</i>, vector-graphics=&gt;<i>string</i>, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, word-break=&gt;{normal, break-word}</td>
     <td>annotate an image with one or more graphic primitives.</td>
   </tr>
 
@@ -636,7 +636,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Extent</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="/script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
     <td>set the image size</td>
   </tr>
 
@@ -666,7 +666,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>FloodfillPaint</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="/script/color.php">color name</a></i>, bordercolor=&gt;<i><a href="/script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
     <td>changes the color value of any pixel that matches the color of the target pixel and is a neighbor. If you specify a border color, the color value is changed for any neighbor pixel that is not that color.</td>
   </tr>
 
@@ -678,7 +678,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Frame</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="/script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with an ornamental border</td>
   </tr>
 
@@ -816,7 +816,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>MatteFloodfill</td>
-    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , matte=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="/script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
+    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , matte=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
     <td>changes the matte value of any pixel that matches the color of the target pixel and is a neighbor. If you specify a border color, the matte value is changed for any neighbor pixel that is not that color.</td>
   </tr>
 
@@ -882,8 +882,8 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Opaque</td>
-    <td>color=&gt;<i><a href="/script/color.php">color name</a></i>,
-fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
+    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,
+fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
     <td>change this color to the fill color within the image</td>
   </tr>
 
@@ -901,7 +901,7 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Polaroid</td>
-    <td>caption=&gt;<i>string</i>, angle=&gt;<i>double</i>, pointsize=&gt;<i>double</i>, font=&gt;<i>string</i>, stroke=&gt; <i><a href="/script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="/script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast},  background=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>caption=&gt;<i>string</i>, angle=&gt;<i>double</i>, pointsize=&gt;<i>double</i>, font=&gt;<i>string</i>, stroke=&gt; <i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast},  background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>simulate a Polaroid picture.</td>
   </tr>
 
@@ -967,7 +967,7 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Rotate</td>
-    <td>degrees=&gt;<i>double</i>, background=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>degrees=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>rotate an image</td>
   </tr>
 
@@ -1044,7 +1044,7 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Shear</td>
-    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>double</i>, y=&gt;<i>double</i> fill=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>double</i>, y=&gt;<i>double</i> fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>shear the image along the X or Y axis by a positive or negative shear angle</td>
   </tr>
 
@@ -1086,7 +1086,7 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Splice</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="/script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
     <td>splice an image</td>
   </tr>
 
@@ -1145,13 +1145,13 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Tint</td>
-    <td>fill=&gt;<i><a href="/script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
+    <td>fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
     <td>tint the image with the fill color.</td>
   </tr>
 
   <tr>
     <td>Transparent</td>
-    <td>color=&gt;<i><a href="/script/color.php">color name</a></i>, invert=&gt;{True, False}</td>
+    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, invert=&gt;{True, False}</td>
     <td>make this color transparent within the image</td>
   </tr>
 
@@ -1181,7 +1181,7 @@ fill=&gt;<i><a href="/script/color.php">color name</a></i>, channel=&gt;{All, De
 
   <tr>
     <td>Vignette</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, background=&gt;<i><a href="/script/color.php">color name</a></i></td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>offset the edges of the image in vignette style</td>
   </tr>
 
@@ -1281,7 +1281,7 @@ rectangle 60, 60 300, 300
 
 <p>You can optionally add <i>Image</i> to any method name. For example, TrimImage() is an alias for method Trim().</p>
 
-<p>Most of the attributes listed above have an analog in <a href="/script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
+<p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="set-attribute"></a>Set an Image Attribute</h2>
 
@@ -1348,7 +1348,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>background</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>image background color</td>
   </tr>
 
@@ -1360,7 +1360,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>bordercolor</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>set the image border color</td>
   </tr>
 
@@ -1372,7 +1372,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>colormap[<i>i</i>]</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>color name (e.g. red) or hex value (e.g. #ccc) at position
 <i>i</i></td>
   </tr>
@@ -1553,7 +1553,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>mattecolor</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>set the image matte color</td>
   </tr>
 
@@ -1709,7 +1709,7 @@ can use the integers 1 and 0.</p>
 <p>SetAttribute() is an alias for method Set().</p>
 
 <p>Most of the attributes listed above have an analog in
-<a href="/script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="get-attribute"></a>Get an Image Attribute</h2>
 
@@ -1939,7 +1939,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
   <tr>
     <td>transparent-color</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>set the image transparent color</td>
   </tr>
 
@@ -1985,7 +1985,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 <p>GetAttribute() is an alias for method Get().</p>
 
 <p>Most of the attributes listed above have an analog in
-<a href="/script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
+<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="compare"></a>Compare an Image to its Reconstruction</h2>
 
@@ -2067,7 +2067,7 @@ $difference->Display();
 <tbody>
   <tr>
     <td>background</td>
-    <td><i><a href="/script/color.php">color name</a></i></td>
+    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
     <td>background color name</td>
   </tr>
 
@@ -2085,7 +2085,7 @@ $difference->Display();
 
   <tr>
     <td>fill</td>
-    <td><a href="/script/color.php">color name</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></td>
     <td>fill color for annotations</td>
   </tr>
 
@@ -2141,7 +2141,7 @@ South, SouthEast</td>
 
   <tr>
     <td>stroke</td>
-    <td><a href="/script/color.php">color name</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></td>
     <td>stroke color for annotations</td>
   </tr>
 
@@ -2176,13 +2176,13 @@ South, SouthEast</td>
 
 <p>MontageImage() is an alias for method Montage().</p>
 
-<p>Most of the attributes listed above have an analog in <a href="/script/montage.php">montage</a>. See the documentation for a more detailed description of these attributes.</p>
+<p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="blobs"></a>Working with Blobs</h2>
 
 <p>A blob contains data that directly represent a particular image
 format in memory instead of on disk. PerlMagick supports
-blobs in any of these image <a href="/script/formats.php">formats</a> and provides methods to convert a blob to or from a particular image format.</p>
+blobs in any of these image <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> and provides methods to convert a blob to or from a particular image format.</p>
 
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Blob Methods</caption>
@@ -2336,7 +2336,7 @@ $p-&gt;Write('fx.miff');
 
 <p>replaces the red channel with the average of the green and blue channels.</p>
 
-<p>See <a href="/script/fx.php">FX, The Special Effects Image Operator</a> for a detailed discussion of this method.</p>
+<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX, The Special Effects Image Operator</a> for a detailed discussion of this method.</p>
 
 <p>Histogram() returns the unique colors in the image and a count for each one. The returned values are an array of red, green, blue, opacity, and count values.</p>
 
@@ -2440,7 +2440,7 @@ $weight = ($image-&gt;QueryFont('Helvetica'))[5];
 <pre class="p-3 mb-2 bg-light text-dark"><samp>$mime = $image-&gt;MagickToMime('tif');
 </samp></pre>
 
-<p>Use RemoteCommand() to send a command to an already running <a href="/script/display.php">display</a> or <a href="/script/animate.php">animate</a> application. The only parameter is the name of the image file to display or animate.</p>
+<p>Use RemoteCommand() to send a command to an already running <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">animate</a> application. The only parameter is the name of the image file to display or animate.</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>$image-&gt;RemoteCommand('image.jpg');
 </samp></pre>
@@ -2498,7 +2498,7 @@ print $1;               # print the error number
 <pre class="p-3 mb-2 bg-light text-dark"><samp>Error 400: Memory allocation failed
 </samp></pre>
 
-<p>Review the complete list of <a href="/script/exception.php">error and warning codes</a>.</p>
+<p>Review the complete list of <a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">error and warning codes</a>.</p>
 
 <p>The following illustrates how you can use a numeric status code:</p>
 

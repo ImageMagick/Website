@@ -7,7 +7,7 @@
 
 <h2><a class="anchor" id="encipher"></a>Encipher an Image</h2>
 
-<p>Use the <a href="/script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
+<p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#encipher">-encipher</a> option to scramble your image so that it is unrecognizable.  The option requires a filename that contains your passphrase.  In this example we scramble an image and save it in the PNG format:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose.jpg -encipher passphrase.txt rose.png </samp></pre>
 
@@ -17,7 +17,7 @@
 
 <h2><a class="anchor" id="decipher"></a>Decipher an Image</h2>
 
-<p>Use the <a href="/script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
+<p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#decipher">-decipher</a> option to unscramble your image so that it is recognizable once again.  The option requires a filename that contains your passphrase.  In this example we unscramble an image and save it in the JPEG format:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick rose.png -decipher passphrase.txt rose.jpg </samp></pre>
 

@@ -1,5 +1,5 @@
 <div>
-<p class="lead">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="/script/command-line-options.php#format_identify_">-format</a> or in montage <a href="/script/command-line-options.php#label" >-label</a>, to print various properties and other settings associated with an image.</p>
+<p class="lead">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a> or in montage <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#label" >-label</a>, to print various properties and other settings associated with an image.</p>
 
 <div>
 <table class="table table-hover table-striped">
@@ -354,11 +354,11 @@ when enclosed in braces (long form):</p>
     <td>image compression type</td>
   </tr>
   <tr>
-    <td><a href="/script/convex-hull.php">%[convex-hull]</a></td>
-    <td>points that form a convex hull around the foreground object.  Use <samp><a href="/script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="/script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull]</a></td>
+    <td>points that form a convex hull around the foreground object.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
   </tr>
   <tr>
-    <td><a href="/script/convex-hull.php">%[convex-hull:extreme-points]</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull:extreme-points]</a></td>
     <td>return the top, right, bottom, and left extreme points of the convex hull.</td>
   </tr>
   <tr>
@@ -379,11 +379,11 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[distortion]</td>
-    <td>how well an image resembles a reference image (<a href="/script/command-line-options.php#compare" >-compare</a>)</td>
+    <td>how well an image resembles a reference image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compare" >-compare</a>)</td>
   </tr>
   <tr>
     <td>%[dominant-color]</td>
-    <td>return the dominate image color in hex.  Preceed usage with <a href="/script/command-line-options.php#kmeans" >-kmeans</a>.</td>
+    <td>return the dominate image color in hex.  Preceed usage with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#kmeans" >-kmeans</a>.</td>
   </tr>
   <tr>
     <td>%[entropy]</td>
@@ -454,8 +454,8 @@ when enclosed in braces (long form):</p>
     <td>CALCULATED: minimum value statistic of image</td>
   </tr>
   <tr>
-    <td><a href="/script/convex-hull.php">%[minimum-bounding-box]</a></td>
-    <td>Use <samp><a href="/script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="/script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <samp>minimum-bounding-box:area</samp>, <samp>minimum-bounding-box:width</samp>, <samp>minimum-bounding-box:height</samp>, <samp>minimum-bounding-box:angle</samp>, and <samp>minimum-bounding-box:unrotate</samp>.</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[minimum-bounding-box]</a></td>
+    <td>Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <samp>minimum-bounding-box:area</samp>, <samp>minimum-bounding-box:width</samp>, <samp>minimum-bounding-box:height</samp>, <samp>minimum-bounding-box:angle</samp>, and <samp>minimum-bounding-box:unrotate</samp>.</td>
   </tr>
   <tr>
     <td>%[opaque]</td>
@@ -667,12 +667,12 @@ $_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
 <pre class="p-3 mb-2 bg-light text-dark"><samp>%[fx:<var>expression</var>] </samp></pre>
 
 <p>Use <samp>pixel:</samp> or <samp>hex:</samp> to evaluate a pixel color as defined by the <a
-href="/script/fx.php">FX</a>
+href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
 expression:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>%[pixel:<var>expression</var>] </samp></pre>
 
-<p>Use <a href="/script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define pixel:compliance=css</samp>)</p>.
+<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define pixel:compliance=css</samp>)</p>.
 
 <h2>Specific Profile Percent Escape Prefixes</h2>
 

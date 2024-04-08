@@ -4,7 +4,7 @@
 <p class="lead">This page descibed the Image composition methods that is used to define how
 two images should be merged together in various image operations.  For the
 Command Line API it is typically set using the <a
-href="/script/command-line-options.php#compose" >-compose</a> setting option. </p>
+href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> setting option. </p>
 
 
 <p>The description of composition uses abstract terminology in order to allow
@@ -259,10 +259,10 @@ any values are weighted by the alpha channel of the input and output images.
 This 'Over' alpha blending is also applied to the lighting composition methods
 below. </p>
 
-<p> The math composition is applied on an individual channel basis as defined by the <a href="/script/command-line-options.php#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
+<p> The math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
 composition effects, becoming involved. </p>
 
-<p>Use <samp>-define compose:sync=false</samp> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="/script/command-line-options.php#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
+<p>Use <samp>-define compose:sync=false</samp> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
 
 <p>This define is not applied to the lighting composition methods (see below) even though they are closely related to mathematical composition methods.</p>
 
@@ -405,7 +405,7 @@ composition effects, becoming involved. </p>
     <td>change-mask</td>
     <td>Replace any destination pixel that is the similar to the
     source images pixel (as defined by the current <a
-    href="/script/command-line-options.php#fuzz">-fuzz</a> factor), with transparency.
+    href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> factor), with transparency.
     </td>
   </tr>
 
@@ -423,7 +423,7 @@ arguments, which are tabled below. </p>
 <p>In the "<samp>composite</samp>" command these composition methods are
 selected using special options with the arguments needed. They are usually,
 but not always, the same name as the composite 'method' they use, and replaces
-the normal use of the <a href="/script/command-line-options.php#compose" >-compose</a>
+the normal use of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a>
 setting in the "<samp>composite</samp>" command.  For example... </p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>composite ... -blend 50x50 ...  </samp></pre>
@@ -455,7 +455,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>dissolve</td>
     <td>Arguments:
         <var>src_percent</var>[x<var>dst_percent</var>]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="/script/command-line-options.php#dissolve">-dissolve</a>.
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dissolve">-dissolve</a>.
     Dissolve the 'source' image by the percentage given before overlaying
         'over' the 'destination' image. If <var>src_percent</var> is
         greater than 100, it starts dissolving the main image so it will
@@ -470,7 +470,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>Arguments:
         <var>src_percent</var>[x<var>dst_percent</var>]
     <br/>Equivalent to "<samp>composite</samp>" <a
-        href="/script/command-line-options.php#blend">-blend</a>.
+        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#blend">-blend</a>.
     Average the images together ('plus') according to the percentages
         given and each pixels transparency.  If only a single percentage value
         is given it sets the weight of the composite or 'source' image, while
@@ -489,7 +489,7 @@ with a brief summary of what they do. For more details see the equivalent
     <ul><samp>A*Sc*Dc + B*Sc + C*Dc + D</samp></ul>
     Can be used to generate a custom composition method that would
         otherwise need to be implemented using the slow <a
-        href="/script/command-line-options.php#fx">-fx</a> DIY image operator.
+        href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> DIY image operator.
     </td>
   </tr>
 
@@ -497,7 +497,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>modulate</td>
     <td>Arguments:
         <var>brightness</var>[x<var>saturation</var>]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="/script/command-line-options.php#watermark">-watermark</a>.
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#watermark">-watermark</a>.
     Take a grayscale image (with alpha mask) and modify the destination
         image's brightness according to watermark image's grayscale value and
         the <var>brightness</var> percentage.  The destinations
@@ -511,7 +511,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>displace</td>
     <td>Arguments:
         <var>X-scale</var>[x<var>Y-scale</var>][!][%]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="/script/command-line-options.php#displace">-displace</a>.
+    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#displace">-displace</a>.
     With this option, the 'overlay' image, and optionally the 'mask'
         image, is used as a relative displacement map, which is used to
         displace the lookup of what part of the destination image is seen at
@@ -597,5 +597,5 @@ with a brief summary of what they do. For more details see the equivalent
 </table>
 
 <p>To print a complete list of all the available compose operators, use <a
-href="/script/command-line-options.php#list">-list compose</a>.</p>
+href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#list">-list compose</a>.</p>
 </div>

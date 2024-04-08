@@ -24,9 +24,9 @@
 <p>Here, we convert a black to a navy blue image:</p>
 
 <ul>
-  <a href="/image/black.png"><img src="/image/black.png" width="64" height="64" alt="black" /></a>
-  <img style="margin-top:22px; margin-bottom:22px;" src="/image/right.gif" width="20" height="20" alt="==>" />
-  <a href="/image/navy.png"><img src="/image/navy.png" width="64" height="64" alt="navy" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/black.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/black.png" width="64" height="64" alt="black" /></a>
+  <img style="margin-top:22px; margin-bottom:22px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/navy.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/navy.png" width="64" height="64" alt="navy" /></a>
 </ul>
 
 <p>Or the expression can be complex:</p>
@@ -39,9 +39,9 @@
 <p>This expression results in a high contrast version of the source image:</p>
 
 <ul>
-  <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="/image/right.gif" width="20" height="20" alt="==>" />
-  <a href="/image/rose-sigmoidal.png"><img src="/image/rose-sigmoidal.png" width="70" height="46" alt="rose-sigmoidal" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
+  <img style="margin-top:13px; margin-bottom:13px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose-sigmoidal.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose-sigmoidal.png" width="70" height="46" alt="rose-sigmoidal" /></a>
 </ul>
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
@@ -54,7 +54,7 @@
 <p>The command above returns this image:</p>
 
 <ul>
-  <a href="/image/radial-gradient.png"><img src="/image/radial-gradient.png" width="70" height="70" alt="radial-gradient" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/radial-gradient.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/radial-gradient.png" width="70" height="70" alt="radial-gradient" /></a>
 </ul>
 
 <p>This FX expression adds random noise to an image:</p>
@@ -82,7 +82,7 @@
   -clut -rotate -90 julia-set.png</samp></pre>
 
 <ul>
-  <a href="/image/julia-set.png"><img src="/image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
@@ -227,7 +227,7 @@
 <dt class="col-md-4"> <samp>e</samp></dt><dd class="col-md-8"> constant (2.71828...)</dd>
 <dt class="col-md-4"> <samp>QuantumRange</samp></dt><dd class="col-md-8"> constant maximum pixel value (255 for Q8, 65535 for Q16)</dd>
 <dt class="col-md-4"> <samp>QuantumScale</samp></dt><dd class="col-md-8"> constant 1.0/<samp>QuantumRange</samp></dd>
-<dt class="col-md-4"> <samp>intensity</samp></dt><dd class="col-md-8"> pixel intensity whose value respects the <a href="/script/command-line-options.php#intensity">-intensity</a> option.</dd>
+<dt class="col-md-4"> <samp>intensity</samp></dt><dd class="col-md-8"> pixel intensity whose value respects the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#intensity">-intensity</a> option.</dd>
 <dt class="col-md-4"> <samp>hue</samp></dt><dd class="col-md-8"> pixel hue</dd>
 <dt class="col-md-4"> <samp>saturation</samp></dt><dd class="col-md-8"> pixel saturation</dd>
 <dt class="col-md-4"> <samp>lightness</samp></dt><dd class="col-md-8"> pixel lightness; equivalent to 0.5*max(red,green,blue) + 0.5*min(red,green,blue)</dd>
@@ -316,16 +316,16 @@
 
 <p>By default, the image to which <samp>p</samp>, <samp>r</samp>, <samp>g</samp>, <samp>b</samp>, <samp>a</samp>, etc., are applied is the current image <samp>s</samp> in the image list. This is equivalent to <samp>u</samp> except when used in an escape sequence <samp>%[fx:...]</samp>. </p>
 
-<p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="/script/command-line-options.php#channel">-channel red</a> instructs <a href="/script/command-line-options.php#fx">-fx</a> to modify only the green channel; nothing in the red or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
+<p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel red</a> instructs <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> to modify only the green channel; nothing in the red or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
 </samp></pre>
 
 <ul>
-  <a href="/image/logo-sm-flop.png"><img src="/image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
-  <a href="/image/logo-sm.png"><img src="/image/logo-sm.png" width="128" height="96" alt="logo-sm.png" /></a>
-<img style="margin-top:38px; margin-bottom:38px;" src="/image/right.gif" width="20" height="20" alt="==>" />
-  <a href="/image/logo-sm-fx.png"><img src="/image/logo-sm-fx.png" width="128" height="96" alt="logo-sm-fx.png" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm.png" width="128" height="96" alt="logo-sm.png" /></a>
+<img style="margin-top:38px; margin-bottom:38px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-fx.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-fx.png" width="128" height="96" alt="logo-sm-fx.png" /></a>
 </ul>
 
 <br/>
@@ -345,15 +345,15 @@ p[-1,-1].r   red value of the pixel diagonally left and up from current pixel
 p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 </samp></pre>
 
-<p>Integer values of the position retrieve the color of the pixel referenced, while non-integer position values return a blended color according to the current <a href="/script/command-line-options.php#interpolate">-interpolate</a> setting.</p>
+<p>Integer values of the position retrieve the color of the pixel referenced, while non-integer position values return a blended color according to the current <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#interpolate">-interpolate</a> setting.</p>
 
-<p>A position outside the boundary of the image retrieves a value dictated by the <a href="/script/command-line-options.php#virtual-pixel">-virtual-pixel</a> option setting.</p>
+<p>A position outside the boundary of the image retrieves a value dictated by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#virtual-pixel">-virtual-pixel</a> option setting.</p>
 
 <p>Specify <samp>u.r</samp> to specify the red channel of the current image. If you don't specify a channel qualifier, you get the current channel. Use <samp>mean.this</samp> to set the output channel to the mean of just the input channel.  Use <samp>mean.all</samp> to set the overall mean of the input channels.</p>
 
 <h4>Apply an Expression to Select Image Channels</h4>
 
-<p>Use the <a href="/script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <samp>alpha.png</samp> with the average of the green channels from the images <samp>alpha.png</samp> and <samp>beta.png</samp>, use:</p>
+<p>Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <samp>alpha.png</samp> with the average of the green channels from the images <samp>alpha.png</samp> and <samp>beta.png</samp>, use:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
 </samp></pre>
@@ -361,12 +361,12 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <h4>Results</h4>
 
-<p>The <a href="/script/command-line-options.php#fx">-fx</a> operator evaluates the given expression for each channel (set by <a href="/script/command-line-options.php#channel">-channel</a>) of each pixel in the first image (<samp>u</samp>) in the sequence. The computed values are temporarily stored in a copy (clone) of that first image until all the pixels have been processed, after which this single new image replaces the list of images in the current image sequence.  As such, in the previous example the updated version of <samp>alpha.png</samp> replaces both of the original images, <samp>alpha.png</samp> and <samp>beta.png</samp>, before being saved as <samp>gamma.png</samp>.</p>
+<p>The <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fx">-fx</a> operator evaluates the given expression for each channel (set by <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a>) of each pixel in the first image (<samp>u</samp>) in the sequence. The computed values are temporarily stored in a copy (clone) of that first image until all the pixels have been processed, after which this single new image replaces the list of images in the current image sequence.  As such, in the previous example the updated version of <samp>alpha.png</samp> replaces both of the original images, <samp>alpha.png</samp> and <samp>beta.png</samp>, before being saved as <samp>gamma.png</samp>.</p>
 
 <p>The current image <samp>s</samp> is set to the first image in the sequence (<samp>u</samp>), and <samp>t</samp> to its index, 0.  The symbols <samp>i</samp> and <samp>j</samp> reference the current pixel being processed.</p>
 
 
-<p>For use with <a href="/script/command-line-options.php#format_identify_">-format</a>, the value-escape <samp>%[fx:]</samp> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <samp>s</samp> and <samp>t</samp> successively refer to the current image and its index, while <samp>i</samp> and <samp>j</samp> are set to zero, and the current channel set to red (<a href="/script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
+<p>For use with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#format_identify_">-format</a>, the value-escape <samp>%[fx:]</samp> is evaluated just once for each image in the current image sequence. As each image in the sequence is being evaluated, <samp>s</samp> and <samp>t</samp> successively refer to the current image and its index, while <samp>i</samp> and <samp>j</samp> are set to zero, and the current channel set to red (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored). An example:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace gray  \
   -format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]\n' info:
@@ -384,6 +384,6 @@ Red channel of NW corner of image #1 is 0.184582
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre>
 
-<p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="/script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
+<p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
 
 </div>

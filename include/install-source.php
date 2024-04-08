@@ -6,7 +6,7 @@
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick identify -version
 </samp></pre>
 
-<p>If the <a href="/script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="/script/download.php">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md" target="_blank">changes</a> to the ImageMagick distribution.</p>
+<p>If the <a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md" target="_blank">changes</a> to the ImageMagick distribution.</p>
 
 <p>The authoritative source code repository is <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>. </p>
 
@@ -16,7 +16,7 @@
 
 <?php crt("git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
-<p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="/script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
@@ -48,27 +48,27 @@
 
 <p>Ghostscript and Freetype are prerequisites, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will likely fail. These unit tests require the open security policy to pass.</p>
 
-<p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <samp>/../usr/local</samp> folder?  You will find the answer to these questions, and more, in <a href="/script/advanced-linux-installation.php">Advanced Linux Source Installation</a>.</p>
+<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <samp>/../usr/local</samp> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-linux-installation.php">Advanced Linux Source Installation</a>.</p>
 
 <h2><a class="anchor" id="windows"></a>Install from Windows Source</h2>
 <p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your magick/convert commands go to the old version.<p>
-<p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="/script/download.php">binary release</a>.</p>
+<p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
 
 <p>Clone the Github repo:<p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</samp></pre>
 
 
-<p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://imagemagick.org/archive/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/archive/windows">imagemagick.org</a> or a <a href="/script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://imagemagick.org/archive/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/archive/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>unzip ImageMagick-windows.zip</samp></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
 <p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="/image/configure.jpg" alt="[configure]" /></ul>
+<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/configure.jpg" alt="[configure]" /></ul>
 
 <p>Press <kbd>Next</kbd> and click on the multi-threaded static build.  Now press, on <kbd>Next</kbd> twice and finally <kbd>Finish</kbd>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <kbd>Open->Project</kbd> and select the VisualStaticMT workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/</kbd>  folder.  Finally, choose <kbd>Build->Build Solution</kbd> to compile and build the ImageMagick distribution.</p>
 
@@ -83,8 +83,8 @@ to compile the program and on completion run the program.</p>
 <pre class="p-3 mb-2 bg-light text-dark"><samp>validate
 </samp></pre>
 
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you want to install ImageMagick in a place other than the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/bin</kbd> folder?  You will find the answer to these questions, and more, in <a href="/script/advanced-windows-installation.php">Advanced Windows Source Installation</a>.</p>
+<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you want to install ImageMagick in a place other than the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/bin</kbd> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-windows-installation.php">Advanced Windows Source Installation</a>.</p>
 
 </div>

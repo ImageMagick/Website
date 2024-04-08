@@ -18,8 +18,8 @@
 <p>The color values for each pixel are often stored logarithmically (particularly if the sequence is destined to be transferred back on to film) which more naturally reflects the density of how color information is stored in the emulsion on the original film. When viewed without alteration logarithmic files appear to have very low contrast (leftmost image), and so require a 'look up table' to translate the logarithmic image to something that resembles what you might see if the image was transferred back to film and projected in a cinema (rightmost image). Apart from making the image linear (like most typical computer images) and adjusting the gamma level this table sets where the black and white point lies.</p>
 
 <ul>
-  <a href="/image/bluebells_log.jpg"><img src="/image/bluebells_log.jpg" width="384" height="288" class="image-slices" alt="bluebells-log" /></a>
-  <a href="/image/bluebells_lin.jpg"><img src="/image/bluebells_lin.jpg" width="384" height="288" class="image-slices" alt="bluebells-linear" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_log.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_log.jpg" width="384" height="288" class="image-slices" alt="bluebells-log" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_lin.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_lin.jpg" width="384" height="288" class="image-slices" alt="bluebells-linear" /></a>
 </ul>
 
 <p>For a 10 bit logarithmic image where each color component value ranges from 0 to 1023 the black and white points are normally set at 95 for black and 685 for white. What this means is that the logarithmic file stores color values that are lighter than what the linear version will display as pure white and darker than what it will display as pure black. This extra information therefore remains available for an effects artists who might wish to alter the brightness of the image after it has been stored as a DPX file.</p>
@@ -27,8 +27,8 @@
 <p>As an example, had this information been lost, reducing the brightness of a linear image uniformly would result in highlights becoming darker (leftmost image), whereas with this extra information the highlights instead reduce in size and start showing details that were previously too bright to be seen (rightmost image). The latter is far closer to what happens in the real world.</p>
 
 <ul>
-  <a href="/image/bluebells_clipped.jpg"><img src="/image/bluebells_clipped.jpg" width="384" height="288" class="image-slices" alt="bluebells-clipped" /></a>
-  <a href="/image/bluebells_darker.jpg"><img src="/image/bluebells_darker.jpg" width="384" height="288" class="image-slices" alt="bluebells-darker" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_clipped.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_clipped.jpg" width="384" height="288" class="image-slices" alt="bluebells-clipped" /></a>
+  <a href="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_darker.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bluebells_darker.jpg" width="384" height="288" class="image-slices" alt="bluebells-darker" /></a>
 </ul>
 
 <h2><a class="anchor" id="properties"></a>DPX Properties</h2>
@@ -102,7 +102,7 @@ dpx:user.data
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>
 
-<p>Use <a href="/script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
+<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
 </p>
 
 <pre class="p-3 mb-2 bg-light text-dark"><samp>-set gamma 1.7

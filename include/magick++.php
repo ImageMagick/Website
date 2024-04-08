@@ -24,7 +24,7 @@ performed on multiple images stored in STL containers.
 </p>
 <h2>Documentation</h2>
 <a class="anchor" id="documentation"></a>
-<p>Detailed <a href="/Magick++/index.html">documentation</a> is
+<p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/index.html">documentation</a> is
 provided for all Magick++ classes, class methods, and template
 functions which comprise the API.  See a <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2>Obtaining Magick++</h2>
@@ -36,7 +36,7 @@ or <a href="https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B">G
 <h2>Installation</h2>
 <a class="anchor" id="install"></a>
 <p>Once you have the Magick++ sources available, follow these detailed
-<a href="/Magick++/Install.html">installation instructions</a> for UNIX and
+<a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/Install.html">installation instructions</a> for UNIX and
 Windows. 
 </p>
 <h2>Usage</h2>
@@ -64,7 +64,7 @@ for one of the Magick++ demo programs.
 <p>This initialization step is not required under Linux, Linux,
 Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>
-<p>Here is a example program that utilizes the Magick++ API to get you started, <a href="/source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
+<p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
 
 <pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><code>
 #include &lt;Magick++.h> 

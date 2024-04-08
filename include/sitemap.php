@@ -1,31 +1,31 @@
 <div>
 <p class="text-center"><a href="#overview">Overview</a> • <a href="#download">Download ImageMagick</a> • <a href="#install">Install ImageMagick</a> • <a href="#command-line">Command-line Tools</a> • <a href="#program-interfaces">Program Interfaces</a> • <a href="#formats">Image Formats</a> • <a href="#help">Getting Help</a> • <a href="#support">Support ImageMagick</a> • <a href="#miscellaneous">Miscellaneous Topics</a></p>
 
-<p class="lead">Use this ImageMagick sitemap to quickly jump to one of the areas of interest listed below.  If you can't find what you want on this page, try our <a href="/script/search.php?q=ImageMagick&sa=">site search</a>.</p>
+<p class="lead">Use this ImageMagick sitemap to quickly jump to one of the areas of interest listed below.  If you can't find what you want on this page, try our <a href="<?php echo $_SESSION['RelativePath']?>/../script/search.php?q=ImageMagick&sa=">site search</a>.</p>
 
 <h2><a class="anchor" id="overview"></a>Overview</h2>
 
 <dl >
-  <li><a href="/script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>
-  <li><a href="/script/examples.php">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
   <li><a href="https://imagemagick.org/Usage/">Anthony Thyssen's examples of ImageMagick usage</a>:  a comprehensive tutorial of using ImageMagick from the command line.</li>
-  <li><a href="/script/color.php">Color names</a>: how to specify a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA color.</li>
-  <li><a href="/script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
-  <li><a href="/script/resources.php">Resources</a>: ImageMagick depends on external resources including configuration files, loadable modules, fonts, and environment variables.</li>
-  <li><a href="/script/openmp.php">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
-  <li><a href="/script/security-policy.php">Security policy</a>: best practices strongly encourage you to configure a security policy that suits your local environment.</li>
-  <li><a href="/script/architecture.php">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
-  <li><a href="/script/license.php">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
-  <li><a href="/script/export.php">Export classification</a>: export control status of ImageMagick.</li>
-  <li><a href="/script/privacy-policy.php">Privacy policy</a>: we do not collect personal identifier information.</li>
-  <li><a href="/script/porting.php">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
-  <li><a href="/script/history.php">History</a>: how ImageMagick was conceived and developed.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">Color names</a>: how to specify a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA color.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>: ImageMagick depends on external resources including configuration files, loadable modules, fonts, and environment variables.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security policy</a>: best practices strongly encourage you to configure a security policy that suits your local environment.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/license.php">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/export.php">Export classification</a>: export control status of ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/privacy-policy.php">Privacy policy</a>: we do not collect personal identifier information.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/history.php">History</a>: how ImageMagick was conceived and developed.</li>
 </dl>
 
 <h2><a class="anchor" id="download"></a>Download ImageMagick</h2>
 
 <dl >
-  <li><a href="/script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li><a href="https://imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
   <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
   <li><a href="https://imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
@@ -37,47 +37,47 @@
 
   <p>You can install ImageMagick from source. However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run Linux or Windows executable.</p>
 <dl >
-    <li><a href="/script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">Install from source</a>: ImageMagick builds under Windows, Mac OS X, and Linux.</li>
 </dl>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tools</h2>
 <dl >
-  <li><a href="/script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.
   <ul >
-    <li><a href="/script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
-    <li><a href="/script/animate.php">magick animate</a>: animates an image sequence on any X server.</li>
-    <li><a href="/script/compare.php">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
-    <li><a href="/script/composite.php">magick composite</a>: overlaps one image over another.</li>
-    <li><a href="/script/conjure.php">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
-    <li><a href="/script/convert.php">magick convert</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
-    <li><a href="/script/display.php">magick display</a>: displays an image or image sequence on any X server.</li>
-    <li><a href="/script/identify.php">identify</a>: describes the format and characteristics of one or more image files.</li>
-    <li><a href="/script/import.php">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
-    <li><a href="/script/mogrify.php">magick mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
-    <li><a href="/script/montage.php">magick montage</a>: create a composite image by combining several separate images.</li>
-    <li><a href="/script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">magick animate</a>: animates an image sequence on any X server.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">magick composite</a>: overlaps one image over another.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick convert</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">magick display</a>: displays an image or image sequence on any X server.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a>: describes the format and characteristics of one or more image files.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">magick montage</a>: create a composite image by combining several separate images.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
   </ul></li>
-  <li><a href="/script/command-line-processing.php">Command line processing</a>: the anatomy of the command line.</li>
-  <li><a href="/script/command-line-options.php">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
-  <li><a href="/script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command line processing</a>: the anatomy of the command line.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations.</li>
 </dl>
 
 <h2><a class="anchor" id="program-interfaces"></a>Program Interfaces</h2>
 
 <dl >
-  <li><a href="/script/develop.php">Program interfaces</a>: application programming interfaces.
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.
   <ul >
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
     <li><a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>: Use Magick.NET to convert, compose, and edit images from Windows .NET.</li>
     <li><a href="https://imagemagick.org/Magick++">Magick++</a>: provides an object-oriented C++ interface to ImageMagick.</li>
     <li><a href="http://pecl.php.net/package/imagick">IMagick</a>: is a native PHP extension to create and modify images using the ImageMagick API.</li>
     <li><a href="https://github.com/techblue/jmagick">JMagick</a>: provides an object-oriented Java interface to ImageMagick.</li>
-    <li><a href="/script/magick-core.php">MagickCore</a>: C API, recommended for wizard-level developers.</li>
-    <li><a href="/script/magick-wand.php">MagickWand</a>: convert, compose, and edit images from the C language.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a>: C API, recommended for wizard-level developers.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a>: convert, compose, and edit images from the C language.</li>
     <li><a href="http://code.google.com/p/nmagick">nMagick</a>: is a port of the ImageMagick library to the haXe and Neko platforms.</li>
     <li><a href="http://wiki.freepascal.org/PascalMagick">PascalMagick</a>: a Pascal binding for the MagickWand API and also the low-level MagickCore library.</li>
-    <li><a href="/script/perl-magick.php">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
     <li><a href="https://imagemagick.org/archive/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
     <li><a href="http://rmagick.rubyforge.org/">RMagick</a>: is an interface between the Ruby programming language and ImageMagick.</li>
     <li><a href="https://imagemagick.org/archive/tcl">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
@@ -86,11 +86,11 @@
 
 <h2><a class="anchor" id="format"></a>Image Formats</h2>
 <dl >
-  <li><a href="/script/formats.php">Supported image formats</a>: annotated list of all image formats that ImageMagick can read and/or write.</li>
-  <li><a href="/script/motion-picture.php">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
-  <li><a href="/script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
-  <li><a href="/script/magick-vector-graphics.php">Magick Vector Graphics</a>: a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.</li>
-  <li><a href="/script/miff.php">Magick Image File Format</a>: MIFF is ImageMagick's own platform-independent format for storing bitmap images.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">Supported image formats</a>: annotated list of all image formats that ImageMagick can read and/or write.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">Magick Vector Graphics</a>: a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/miff.php">Magick Image File Format</a>: MIFF is ImageMagick's own platform-independent format for storing bitmap images.</li>
 </dl>
 
 <h2><a class="anchor" id="help"></a>Getting Help</h2>
@@ -99,14 +99,14 @@
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1590595904/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">Definitive Guide to ImageMagick</a>: this book explains ImageMagick in a practical, learn-by-example fashion.</li>
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1904811868/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">ImageMagick Tricks</a>: this book is packed with examples of photo manipulations, logo creation, animations, and complete web projects.</li>
   <li><a href="https://github.com/ImageMagick/ImageMagick/discussions">Discussions</a> forums: to get help from fellow ImageMagick users and developers, post to these forums.</li>
-  <li><a href="/script/contact.php">Contact the Wizards</a>: for bug reports (only if you do not want to sign up to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a>) service, a source or documentation patch, a security or license issue, or if you want to be a sponsor of the ImageMagick project.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact the Wizards</a>: for bug reports (only if you do not want to sign up to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a>) service, a source or documentation patch, a security or license issue, or if you want to be a sponsor of the ImageMagick project.</li>
 </dl>
 
 <h2><a class="anchor" id="support"></a>Support ImageMagick</h2>
 
 <dl >
-  <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.  The bug discussions service requires that you register.  If you do not want to register, you can <a href="/script/contact.php">contact the ImageMagick developers</a> with a convenient web form.</li>
-  <li><a href="/script/support.php">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.  The bug discussions service requires that you register.  If you do not want to register, you can <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact the ImageMagick developers</a> with a convenient web form.</li>
+  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
 </dl>
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>
@@ -117,19 +117,19 @@
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
-    <td><a href="/script/command-line-options.php#bilateral-blur">Bilateral blur</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-blur">Bilateral blur</a></td>
     <td>non-linear, edge-preserving, and noise-reducing smoothing filter.</td>
   </tr>
   <tr>
-    <td><a href="/script/color-management.php">Color management</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a></td>
     <td>accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</td>
   </tr>
   <tr>
-    <td><a href="/script/color-thresholding.php">Color thresholding</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-thresholding.php">Color thresholding</a></td>
     <td>force all pixels in the color range to white otherwise black.</td>
   </tr>
   <tr>
-    <td><a href="/script/command-line-processing.php">Command-line processing</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a></td>
     <td>utilize ImageMagick from the command-line.</td>
   </tr>
   <tr>
@@ -137,15 +137,15 @@
     <td>bidirectional text support and shaping.</td>
   </tr>
   <tr>
-    <td><a href="/script/composite.php">Composite</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a></td>
     <td>overlap one image over another.</td>
   </tr>
   <tr>
-    <td><a href="/script/connected-components.php">Connected component labeling</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected component labeling</a></td>
     <td>uniquely label connected regions in an image.</td>
   </tr>
   <tr>
-    <td><a href="/script/convex-hull.php">Convex hull</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">Convex hull</a></td>
     <td>smallest area convex polygon containing the image foreground objects.  In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
@@ -154,14 +154,14 @@
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
-    <td><a href="http://imagemagick.org/Usage/transform/#canny">Canny edge detection</a>, <a href="/script/command-line-options.php#hough-line">Hough lines</a>.</td>
+    <td><a href="http://imagemagick.org/Usage/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
     <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
-    <td><a href="/script/distribute-pixel-cache.php">Distributed pixel cache</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/distribute-pixel-cache.php">Distributed pixel cache</a></td>
     <td>offload intermediate pixel storage to one or more remote servers.</td>
   </tr>
   <tr>
@@ -169,55 +169,55 @@
     <td>add shapes or text to an image.</td>
   </tr>
   <tr>
-    <td><a href="/script/cipher.php">Encipher or decipher an image</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/cipher.php">Encipher or decipher an image</a></td>
     <td>convert ordinary images into unintelligible gibberish and back again.</td>
   </tr>
   <tr>
-    <td><a href="/script/convert.php">Format conversion</a></td>
-    <td>convert an image from one <a href="/script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">Format conversion</a></td>
+    <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
     <td>correct for, or induce image distortions including perspective.</td>
   </tr>
   <tr>
-    <td><a href="/script/architecture.php#distributed">Heterogeneous distributed processing</a></td>
-    <td>certain algorithms are <a href="/script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a></td>
+    <td>certain algorithms are <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
   </tr>
   <tr>
-    <td><a href="/script/high-dynamic-range.php">High dynamic-range images</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a></td>
     <td>accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</td>
   </tr>
   <tr>
-    <td><a href="/script/clahe.php">Histogram equalization</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram equalization</a></td>
     <td>use adaptive histogram equalization to improve contrast in images.</td>
   </tr>
   <tr>
-    <td><a href="/script/magick-cache.php">Image cache</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-cache.php">Image cache</a></td>
     <td>secure methods and tools to cache images, image sequences, video, audio or metadata in a local folder..</td>
   </tr>
   <tr>
-    <td><a href="/script/fx.php">Image calculator</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
     <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
   <tr>
-    <td><a href="/script/gradient.php">Image gradients</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a></td>
     <td>create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</td>
   </tr>
   <tr>
-    <td><a href="/script/identify.php">Image identification</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a></td>
     <td>describe the format and attributes of an image.</td>
   </tr>
   <tr>
-    <td><a href="/script/download.php#iOS">ImageMagick on the iPhone</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
     <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>
-    <td><a href="/script/architecture.php#tera-pixel">Large image support</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a></td>
     <td>read, process, or write mega-, giga-, or tera-pixel image sizes.</td>
   </tr>
   <tr>
-    <td><a href="/script/montage.php">Montage</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">Montage</a></td>
     <td>juxtapose image thumbnails on an image canvas.</td>
   </tr>
   <tr>
@@ -225,11 +225,11 @@
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
-    <td><a href="/script/motion-picture.php">Motion picture support</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a></td>
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="/script/architecture.php#multispectral">Multispectral imagery</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#multispectral">Multispectral imagery</a></td>
     <td>support multispectral imagery up to 32 bands, 22 of them meta channels.</td>
   </tr>
   <tr>
@@ -249,8 +249,8 @@
     <td>insert descriptive or artistic text in an image.</td>
   </tr>
   <tr>
-    <td><a href="/script/architecture.php#threads">Threads of execution support</a></td>
-    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="/script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#threads">Threads of execution support</a></td>
+    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
     <td><a href="https://imagemagick.org/Usage/resize/">Transform</a></td>
@@ -261,7 +261,7 @@
     <td>render portions of an image invisible.</td>
   </tr>
   <tr>
-    <td><a href="/script/architecture.php#virtual-pixels">Virtual pixel support</a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a></td>
     <td>convenient access to pixels outside the image boundaries.</td>
   </tr>
 </table>
