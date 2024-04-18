@@ -447,8 +447,7 @@ display logo.gif</samp></pre>
 <p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
 <pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: logo.gif
-magick identify logo.gif
-magick logo.gif win:</samp></pre>
+magick identify logo.gif</samp></pre>
 
 <p>If you have any problems, you likely need <samp>vcomp140.dll</samp>.  To install it, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable Package</a>.</p>
 
