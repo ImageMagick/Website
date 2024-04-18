@@ -111,17 +111,6 @@ XP, Win2K, WinME, NT, Win98, Win95 Install:
   and execute it (or "open" it from your browser) to start the installation
   program.
 
-  Once ImageMagick is installed, Select Start->Programs->Command Prompt.  In
-  the Command Prompt window type
-
-      convert logo: logo.gif
-      imdisplay logo.gif
-
-  If you have an X11 server, from the Command Prompt window type
-
-      set DISPLAY=:0
-      display
-
 VMS Install:
 
   Type
