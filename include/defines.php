@@ -1020,6 +1020,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>pdf:no-identifier=<var>true</var></td>
+    <td>Do not generate the ID entry</td>
+  </tr>
+
+  <tr>
     <td>pdf:page-direction=<var>right-to-left</var></td>
     <td> </td>
   </tr>
