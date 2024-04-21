@@ -4,7 +4,7 @@
 <p class="lead">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="develop.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 100x60 canvas:skyblue -fill white -stroke black \
   -draw "path 'M 30,40  A 30,20  20  0,0 70,20 A 30,20  20  1,0 30,40 Z '" \
   arc.png
 </samp></pre>
@@ -17,7 +17,7 @@ command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG 
 
 <p>When the drawing gets sufficiently complex, we recommend you assemble the graphic primitives into a MVG file. For our example, we use <a href="../source/piechart.mvg">piechart.mvg</a>:</p>
 
-<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>push graphic-context
+<pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push graphic-context
   viewbox 0 0 624 369
   affine 0.283636 0 0 0.283846 -0 -0
   push graphic-context
@@ -171,7 +171,7 @@ pop graphic-context
 
 <p>to render a pie chart with this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mvg:piechart.mvg piechart.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick mvg:piechart.mvg piechart.png
 </samp></pre>
 
 <p>which produces this rendering:</p>
@@ -182,7 +182,7 @@ pop graphic-context
 
 <p>However, in general, MVG is sufficiently difficult to work with that you probably want to use a program to generate your graphics in the SVG format.  ImageMagick automagically converts SVG to MVG and renders your image, for example, we render <a href="../source/piechart.svg">piechart.svg</a> with this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick mvg:piechart.svg piechart.jpg
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick mvg:piechart.svg piechart.jpg
 </samp></pre>
 
 
@@ -190,7 +190,7 @@ pop graphic-context
 
 <p>Drawing is available from many of the ImageMagick <a href="develop.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.php">MagickWand</a> language: </p>
 
-<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>(void) PushDrawingWand(draw_wand);
+<pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>(void) PushDrawingWand(draw_wand);
 {
   const PointInfo points[6] =
   {
@@ -223,7 +223,7 @@ pop graphic-context
 
 <p>Metafile wrapper syntax (to support stand-alone MVG files):</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>push graphic-context
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push graphic-context
   viewbox 0 0 width height
   [ any other MVG commands ]
 pop graphic-context
@@ -231,7 +231,7 @@ pop graphic-context
 
 <p>Pattern syntax (saving and restoring context):</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>push pattern id x,y width,height
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push pattern id x,y width,height
  push graphic-context
   [ drawing commands ]
  pop graphic-context
@@ -240,7 +240,7 @@ pop pattern
 
 <p>an example is (%s is a identifier string):</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>push defs
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push defs
  push pattern %s 10,10 20,20
   push graphic-context
    fill red
@@ -256,24 +256,24 @@ pop defs
 
 <p>For image tiling use:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>push pattern id x,y width,height
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push pattern id x,y width,height
  image Copy ...
 pop pattern
 </samp></pre>
 
 <p>Note you can use the pattern for either the fill or stroke like:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>stroke url(#%s)
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>stroke url(#%s)
 </samp></pre>
 
 <p>or</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>fill url(#%s)
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>fill url(#%s)
 </samp></pre>
 
 <p>The clip path defines a clipping area, where only the contained area to be drawn upon.  Areas outside of the clipping areare masked.</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>push defs
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>push defs
  push clip-path "myClipPath"
   push graphic-context
    rectangle 10,10 20,20
@@ -323,20 +323,20 @@ clip-path url(#myClipPath)
   <tr>
     <td><a class="anchor" id="clip-rule"></a>clip-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>evenodd
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>evenodd
 nonzero</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="clip-units"></a>clip-units <var>units</var></td>
     <td>Choose from these unit types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>userSpace
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>userSpace
 userSpaceOnUse
 objectBoundingBox</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="color"></a>color <var>x</var>,<var>y</var> <var>method</var></td>
     <td>Choose from these method types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>point
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>point
 replace
 floodfill
 filltoborder
@@ -349,7 +349,7 @@ reset</samp></pre></td>
   <tr>
     <td><a class="anchor" id="decorate"></a>decorate <var>type</var></td>
     <td>Choose from these types of decorations:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>none
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>none
 line-through
 overline
 underline</samp></pre></td>
@@ -369,7 +369,7 @@ underline</samp></pre></td>
   <tr>
     <td><a class="anchor" id="fill-rule"></a>fill-rule <var>rule</var></td>
     <td>Choose from these rule types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>evenodd
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>evenodd
 nonzero</samp></pre></td>
   </tr>
   <tr>
@@ -387,7 +387,7 @@ nonzero</samp></pre></td>
   <tr>
     <td><a class="anchor" id="font-stretch"></a>font-stretch <var>type</var></td>
     <td>Choose from these stretch types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>all
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>all
 normal
 ultra-condensed
 extra-condensed
@@ -401,7 +401,7 @@ ultra-expanded</samp></pre></td>
   <tr>
     <td><a class="anchor" id="font-style"></a>font-style <var>style</var></td>
     <td>Choose from these styles:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>all
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>all
 normal
 italic
 oblique</samp></pre></td>
@@ -409,7 +409,7 @@ oblique</samp></pre></td>
   <tr>
     <td><a class="anchor" id="font-weight"></a>font-weight <var>weight</var></td>
     <td>Choose from these weights:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>all
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>all
 normal
 bold
 100
@@ -425,14 +425,14 @@ bold
   <tr>
     <td><a class="anchor" id="gradient-units"></a>gradient-units <var>units</var></td>
     <td>Choose from these units:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>userSpace
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>userSpace
 userSpaceOnUse
 objectBoundingBox</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="gravity"></a>gravity <var>type</var></td>
     <td>Choose from these gravity types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>NorthWest
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>NorthWest
 North
 NorthEast
 West
@@ -635,7 +635,7 @@ SouthEast</samp></pre></td>
   <tr>
     <td><a class="anchor" id="matte"></a>matte <var>x,y method</var></td>
     <td>Choose from these methods:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>point
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>point
 replace
 floodfill
 filltoborder
@@ -756,14 +756,14 @@ reset</samp></pre></td>
   <tr>
     <td><a class="anchor" id="stroke-linecap"></a>stroke-linecap <var>type</var></td>
     <td>Choose from these cap types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>butt
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>butt
 round
 square</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="stroke-linejoin"></a>stroke-linejoin <var>type</var></td>
     <td>Choose from these join types:
-<pre class="p-3 mb-2 bg-light text-dark"><samp>bevel
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>bevel
 miter
 round</samp></pre></td>
   </tr>

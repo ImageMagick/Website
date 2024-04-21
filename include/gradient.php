@@ -3,7 +3,7 @@
 
 <p>For a linear gradient, the operator is either:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>gradient:
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>gradient:
 gradient:<em>fromColor</em>
 gradient:<em>fromColor</em>-<em>toColor</em></samp></pre>
 
@@ -11,7 +11,7 @@ gradient:<em>fromColor</em>-<em>toColor</em></samp></pre>
 
 <p> The for a radial gradient, the operator is either:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>radial-gradient:
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>radial-gradient:
 radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 
 <p>The default for a linear gradient has <em>fromColor</em> at the top of the image and <em>toColor</em> at the bottom of the image. Similarly, the default for a radial gradient has <em>fromColor</em> at the center of the image and <em>toColor</em> at the boundary of the image.</p>
@@ -20,7 +20,7 @@ radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 
 <p>Here is an example linear (as opposed to radial) gradient:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x256 gradient: linear_gradient.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 gradient: linear_gradient.png
 magick -size 256x256 gradient:white-black linear_gradient.png
 </samp></pre>
 
@@ -28,17 +28,17 @@ magick -size 256x256 gradient:white-black linear_gradient.png
 
 <p>If you want a radial gradient, try:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
 magick -size 256x256 radial-gradient:white-black radial_gradient.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient.png" alt="radial gradient" width="256" height="256"></p>
 
 <p>If you want non-linear grayscale gradients, then add -colorspace RGB -colorspace gray 
 before saving the output. For example:<p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x256 gradient: linear_gradient.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 gradient: linear_gradient.png
 magick -size 256x256 gradient:white-black -colorspace RGB -colorspace gray linear_linear_gradient.png </samp></pre>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 radial-gradient: radial_gradient.png
 magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gray linea_radial_gradient.png </samp></pre>
 
 <p>Gradients are affected by these defines:</p>
@@ -113,17 +113,17 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 
 <p>The default linear gradient may also be generated in any of the following ways (or by reversing the direction and swapping <em>fromColor</em> and <em>toColor</em>):</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 -define gradient:direction=north gradient:black-white linear_gradient_default.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 -define gradient:direction=north gradient:black-white linear_gradient_default.png
 magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradient_default.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/linear_gradient_default.png" alt="linear gradient" width="256" height="128"></p>
 
 <p>The equivalent of </p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 128x256 gradient: -rotate 90 linear_gradient_east.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 128x256 gradient: -rotate 90 linear_gradient_east.png </samp></pre>
 
 <p>can be generate by either of the following (or by reversing the direction and swapping <em>fromColor</em> and <em>toColor</em>):</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 -define gradient:direction=east gradient:black-white linear_gradient_east.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 -define gradient:direction=east gradient:black-white linear_gradient_east.png
 magick -size 256x128 -define gradient:angle=90 gradient:black-white linear_gradient_east.png </samp></pre>
 
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/linear_gradient_east.png" alt="radial gradient east" width="256" height="128"></p>
@@ -132,23 +132,23 @@ magick -size 256x128 -define gradient:angle=90 gradient:black-white linear_gradi
 <p>Examples of radial gradients going from black in the center to white at the boundary for the cases of "maximum/circle/default", "minimum", "diagonal", "ellipse" and 45 degree rotated ellipse, respectively, follow below.</p>
 
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 radial-gradient:black-white radial_gradient_maximum.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 radial-gradient:black-white radial_gradient_maximum.png
 magick -size 256x128 -define gradient:radii=128,128 radial-gradient:black-white radial_gradient_maximum.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient_maximum.png" alt="radial gradient maximum" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 -define gradient:extent=minimum radial-gradient:black-white radial_gradient_minimum.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 -define gradient:extent=minimum radial-gradient:black-white radial_gradient_minimum.png
 magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white radial_gradient_minimum.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient_minimum.png" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 -define gradient:extent=diagonal radial-gradient:black-white radial_gradient_diagonal.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 -define gradient:extent=diagonal radial-gradient:black-white radial_gradient_diagonal.png </samp></pre>
 
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient_diagonal.png" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x128 -define gradient:extent=ellipse radial-gradient:black-white radial_gradient_ellipse.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x128 -define gradient:extent=ellipse radial-gradient:black-white radial_gradient_ellipse.png
 magick -size 256x128 -define gradient:radii=128,64 radial-gradient:black-white radial_gradient_ellipse.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient_ellipse.png" alt="radial gradient ellipse" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre>
 
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient_ellipse_angle45.png" alt="radial gradient ellipse angle 45" width="256" height="256"></p>
 

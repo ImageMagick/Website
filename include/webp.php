@@ -8,7 +8,7 @@
 
 <p>Use this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.png -quality 50 -define webp:lossless=true wizard.webp</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.png -quality 50 -define webp:lossless=true wizard.webp</samp></pre>
 
 <p>Here is a complete list of WebP encoding options:</p>
 

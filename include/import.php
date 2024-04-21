@@ -7,11 +7,11 @@
 
 <p>We list a few examples of the <samp>import</samp> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick import rose.jpg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import rose.jpg </samp></pre>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick import -window root screen.ps </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import -window root screen.ps </samp></pre>
 
 <p>You can find additional examples of using <samp>import</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

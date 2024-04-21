@@ -11,31 +11,31 @@
 
 <p>Use this command to convert a JPEG-2000 image to the PNG image format:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.jp2 wizard.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.jp2 wizard.png </samp></pre>
 
 <p>Let's convert a JPEG image to a lossless JPEG-2000 image:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.jpg -quality 0 wizard.jp2 </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.jpg -quality 0 wizard.jp2 </samp></pre>
 
 <p>Here we extract an area from the image:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick 'wizard.jp2[640x480+0+0]' wizard.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick 'wizard.jp2[640x480+0+0]' wizard.png </samp></pre>
 
 <p>Extract a particular tile from the image:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick 'wizard.jp2[2]' wizard.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick 'wizard.jp2[2]' wizard.png </samp></pre>
 
 <p>Specify a subsampling factor:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.png -colorspace YUV -sampling-factor 2:2 wizard.jp2 </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.png -colorspace YUV -sampling-factor 2:2 wizard.jp2 </samp></pre>
 
 <p>Save a tiled JPEG-2000 image:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.png 'wizard.png[512x512]' </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.png 'wizard.png[512x512]' </samp></pre>
 
 <p>Write a digital Cinema 4K profile compliant codestream:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick wizard.png -resize 4096x2160! -depth 12 wizard.jp2 </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.png -resize 4096x2160! -depth 12 wizard.jp2 </samp></pre>
 
 <p>Here is a complete list of JPEG-2000 decoding options:</p>
 

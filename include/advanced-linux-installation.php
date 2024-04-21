@@ -9,7 +9,7 @@
 
 <p>Unpack the distribution it with this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>tar xvzf ImageMagick.tar.gz</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick.tar.gz</samp></pre>
 
 <p>Now that you have the ImageMagick Linux/Linux source distribution unpacked, let's configure it.</p>
 
@@ -23,7 +23,7 @@
 <p>Watch the configure script output to verify that it finds everything that
  you think it should.  Pay particular attention to the last lines of the script output.  For example, here is a recent report from our system:</p>
 
-<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>ImageMagick is configured as follows. Please verify that this configuration
+<pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>ImageMagick is configured as follows. Please verify that this configuration
 matches your expectations.
 
 Host system type: x86_64-unknown-linux-gnu
@@ -116,7 +116,7 @@ Options used to compile and link:
 
 <p>Here is an example of setting configure variables from the command line:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>configure CC=c99 CFLAGS=-O2 LDFLAGS='-L/usr/local/lib -R/usr/local/lib' LIBS=-lposix</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>configure CC=c99 CFLAGS=-O2 LDFLAGS='-L/usr/local/lib -R/usr/local/lib' LIBS=-lposix</samp></pre>
 
 <p>Any variable (e.g. CPPFLAGS or LDFLAGS) which requires a directory path must specify an absolute path rather than a relative path.</p>
 
@@ -192,7 +192,7 @@ Options used to compile and link:
   <br /><br />
   The number of bits in a quantum determines how many values it may contain. Each quantum level supports 256 times as many values as the previous level. The following table shows the range available for various quantum sizes.
   <br /><br />
-<pre class="p-3 mb-2 bg-light text-dark"><samp>Quantum Depth     Valid Range (Decimal)   Valid Range (Hex)
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Quantum Depth     Valid Range (Decimal)   Valid Range (Hex)
     8             0-255                   00-FF
    16             0-65535                 0000-FFFF
    32             0-4294967295            00000000-FFFFFFFF</samp></pre>
@@ -201,7 +201,7 @@ Options used to compile and link:
   <br /><br />
   The amount of virtual memory consumed by an image can be computed by the equation <var>(5 * Quantum Depth * Rows * Columns) / 8</var>. This an important consideration when resources are limited, particularly since processing an image may require several images to be in memory at one time. The following table shows memory consumption values for a 1024x768 image:
   <br /><br />
-<pre class="p-3 mb-2 bg-light text-dark"><samp>Quantum Depth   Virtual Memory
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Quantum Depth   Virtual Memory
      8               3MB
     16               8MB
     32              15MB</samp></pre>
@@ -383,7 +383,7 @@ Options used to compile and link:
 
 <p>In most cases you will simply want to compile ImageMagick with this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>make </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>make </samp></pre>
 
 <p>Once built, you can optionally install ImageMagick on your system as discussed below.</p>
 
@@ -391,7 +391,7 @@ Options used to compile and link:
 
 <p>Now that ImageMagick is configured and built, type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>make install </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>make install </samp></pre>
 
 <p>to install it.</p>
 
@@ -399,22 +399,22 @@ Options used to compile and link:
 
 <p>To confirm your installation of the ImageMagick distribution was successful, ensure that the installation directory is in your executable search path and type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: logo.gif
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
 identify logo.gif</samp></pre>
 
 <p>The ImageMagick logo is displayed on your X11 display.</p>
 
 <p>To verify the ImageMagick build configuration, type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick identify -list configure</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick identify -list configure</samp></pre>
 
 <p>To list which image formats are supported , type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick identify -list format </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick identify -list format </samp></pre>
 
 <p>For a more comprehensive test, you run the ImageMagick test suite by typing:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>make check</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>make check</samp></pre>
 
 <p>Ghostscript is a prerequisite, otherwise the EPS, PS, and PDF tests will fail.  Note that due to differences between the developer's environment and your own it is possible that a few tests may fail even though the results are ok. Differences between the developer's environment and your own may include the compiler, the CPU type, and the library versions used. The ImageMagick developers use the current release of all dependent libraries.</p>
 
@@ -424,7 +424,7 @@ identify logo.gif</samp></pre>
 
 <p>Build ImageMagick with this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>rpmbuild --rebuild ImageMagick.src.rpm</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpmbuild --rebuild ImageMagick.src.rpm</samp></pre>
 
 <p>After the build you, locate the RPMS folder and install the ImageMagick binary RPM distribution:</p>
 
@@ -436,7 +436,7 @@ identify logo.gif</samp></pre>
 
   <p>Install <a href="http://www.macports.org">MacPorts</a>.  Download and install MacPorts and type the following commands:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>sudo port -v install freetype +bytecode
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>sudo port -v install freetype +bytecode
 sudo port -v install librsvg
 sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 
@@ -446,7 +446,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 	  <p>Install the latest <a href="http://developer.apple.com/tools/download/">Xcode</a> from Apple.</p>
 	  <p>Use the <tt>port</tt> command to install any delegate libraries you require, for example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>sudo port install jpeg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>sudo port install jpeg </samp></pre>
 
 <p>Now lets build ImageMagick:</p>
 
@@ -457,22 +457,22 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 				"cd ImageMagick-" . MagickLibVersionText . MagickLibSubversion
 		 ); ?>
 	  <p>Configure ImageMagick:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>./configure --prefix=/opt --with-quantum-depth=16 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./configure --prefix=/opt --with-quantum-depth=16 \
   --disable-dependency-tracking --with-x=yes \
   --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib/ \
   --without-perl" </samp></pre>
 	  <p>Build ImageMagick:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>make </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>make </samp></pre>
 	  <p>Install ImageMagick:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>sudo make install </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>sudo make install </samp></pre>
   <p>To verify your install, type</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>/opt/local/bin/identify -list font </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>/opt/local/bin/identify -list font </samp></pre>
 
   <p>to list all the fonts ImageMagick knows about.</p>
 	  <p>To test the ImageMagick GUI, in a new shell, type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>display -display :0 </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>display -display :0 </samp></pre>
 
 <h2><a class="anchor" id="mingw"></a>MinGW-specific Build instructions</h2>
 
@@ -497,28 +497,28 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 
 <p>Some systems may fail to link at build time due to unresolved symbols. Try adding the LDFLAGS to the <samp>configure</samp> command line:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>configure LDFLAGS='-L/usr/local/lib -R/usr/local/lib' </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>configure LDFLAGS='-L/usr/local/lib -R/usr/local/lib' </samp></pre>
 
 <h4>Dynamic Linker Run-time Bindings</h4>
 <p>On some systems, ImageMagick may not find its shared library, <var>libMagick.so</var>.  Try running the <samp>ldconfig</samp> with the library path:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>/sbin/ldconfig /usr/local/lib </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>/sbin/ldconfig /usr/local/lib </samp></pre>
 
 <p>Solaris and Linux systems have the <samp>ldd</samp> command which is useful to track which libraries ImageMagick depends on:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>ldd `which convert` </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>ldd `which convert` </samp></pre>
 
 <h4>Delegate Libraries</h4>
 <p>On occasion you may receive these warnings:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>no decode delegate for this image format
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>no decode delegate for this image format
 no encode delegate for this image format </samp></pre>
 <p>This exception indicates that an external delegate library or its headers were not available when ImageMagick was built.  To add support for the image format, download and install the requisite delegate library and its header files and reconfigure, rebuild, and reinstall ImageMagick.  As an example, lets add support for the JPEG image format.  First we install the JPEG RPMS:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>yum install libjpeg libjpeg-devel </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>yum install libjpeg libjpeg-devel </samp></pre>
 
 <p>Now reconfigure, rebuild, and reinstall ImageMagick.  To verify JPEG is now properly supported within ImageMagick, use this command:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick identify -list format </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick identify -list format </samp></pre>
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>
 

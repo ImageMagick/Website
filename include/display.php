@@ -7,19 +7,19 @@
 
 <p>We list a few examples of the <samp>display</samp> command here to illustrate its usefulness and ease of use.  To get started, lets display an image in the JPEG format:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick display rose.jpg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick display rose.jpg </samp></pre>
 
 <p>To tile a slate texture onto the root window, use:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick display -size 1280x1024 -window root slate.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick display -size 1280x1024 -window root slate.png </samp></pre>
 
 <p>To display a visual image directory of all your JPEG images, use:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick display 'vid:*.jpg' </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick display 'vid:*.jpg' </samp></pre>
 
 <p>The display program defaults to the X screen resolution.  To display vector formats at their intended size, override the default resolution:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick display -density 72 drawing.svg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick display -density 72 drawing.svg </samp></pre>
 
 <p>You can find additional examples of using <samp>display</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 

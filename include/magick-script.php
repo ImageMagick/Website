@@ -3,12 +3,12 @@
 
 <p>Here is an example script:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>#!/bin/env magick-script
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>#!/bin/env magick-script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </samp></pre>
 
 <p>Or use the <samp>magick</samp> utility with the scripting option like this:</p>
-<pre class="p-3 mb-2 bg-light text-dark"></samp>#!/bin/magick -script
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"></samp>#!/bin/magick -script
 -size 100x100 xc:red ( rose: -rotate -90 ) +append  -write show:
 </samp></pre>
 

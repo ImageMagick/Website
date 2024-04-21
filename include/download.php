@@ -75,11 +75,11 @@
 
 <p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>cd $HOME</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd $HOME</samp></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>tar xvzf ImageMagick.tar.gz</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick.tar.gz</samp></pre>
 
 <p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
@@ -87,17 +87,17 @@
 
 <p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>export PATH="$MAGICK_HOME/bin:$PATH</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PATH="$MAGICK_HOME/bin:$PATH</samp></pre>
 
 
 <p>On Linux and Solaris machines add <samp>$MAGICK_HOME/lib</samp> to the <samp>LD_LIBRARY_PATH</samp> environment variable:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib
 export LD_LIBRARY_PATH</samp></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: logo.gif
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
 identify logo.gif
 display logo.gif</samp></pre>
 
@@ -107,11 +107,11 @@ display logo.gif</samp></pre>
 
 <p>We recommend <a href="https://brew.sh">Homebrew</a> which provides pre-built binaries for Mac (some users prefer <a href="https://macports.org">MacPorts</a>).  Download HomeBrew and type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>brew install imagemagick</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install imagemagick</samp></pre>
 
 <p>ImageMagick depends on Ghostscript fonts.  To install them, type:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>brew install ghostscript</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install ghostscript</samp></pre>
 
 <p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you can download the ImageMagick Mac OS X distribution we provide:</p>
 
@@ -136,11 +136,11 @@ display logo.gif</samp></pre>
 
 <p>Create (or choose) a directory to install the package into and change to that directory, for example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>cd $HOME</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd $HOME</samp></pre>
 
 <p>Next, extract the contents of the package.  For example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>tar xvzf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</samp></pre>
 
 <p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
@@ -148,16 +148,16 @@ display logo.gif</samp></pre>
 
 <p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>export PATH="$MAGICK_HOME/bin:$PATH"</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PATH="$MAGICK_HOME/bin:$PATH"</samp></pre>
 
 
 <p>Set the <samp>DYLD_LIBRARY_PATH</samp> environment variable:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"</samp></pre>
 
 <p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: logo.gif
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
 identify logo.gif
 display logo.gif</samp></pre>
 
@@ -187,7 +187,7 @@ display logo.gif</samp></pre>
 <h4>ImageMagick compiling script for iOS OS and iOS Simulator</h4>
 
 <p>To run the script:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>./imagemagick_compile.sh <var>VERSION</var></samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./imagemagick_compile.sh <var>VERSION</var></samp></pre>
 <p>where <var>VERSION</var> is the version of ImageMagick you want to compile (i.e.: <?php echo MagickLibVersionText . MagickLibSubversion; ?>, svn, ...)</p>
 
 <p>This script compiles ImageMagick as a static library to be included in iOS projects and adds support for</p>
@@ -446,16 +446,16 @@ display logo.gif</samp></pre>
 
 <p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick logo: logo.gif
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
 magick identify logo.gif</samp></pre>
 
 <p>If you have any problems, you likely need <samp>vcomp140.dll</samp>.  To install it, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable Package</a>.</p>
 
 <p>Note, use a double quote (<samp>"</samp>) rather than a single quote (<samp>'</samp>) for the ImageMagick command line under Windows:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark cli"><samp>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
 <p>Use two double quotes for VBScript scripts:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>Set objShell = wscript.createobject("wscript.shell")
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</samp></pre>
 
 <p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>

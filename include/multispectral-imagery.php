@@ -8,11 +8,11 @@
 <p>We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels.  We label them as "meta", "meta1", "meta2", etc..  Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc.</p>
 <h5>Create a Multispectral Image</h5>
 <p>Begin with a multispectral image, typically in the TIFF or PSD format.  If you don't have one, you can create your own.  In our example, we create a single CMYK pixel with two meta channels.  Stuff this in a file titled <code>multiMeta.txt</code>:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>0,0: 10,20,30,40,50,60</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>0,0: 10,20,30,40,50,60</samp></pre>
 <p>Let's convert that to the TIFF image format:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
 <p>Let confirm that worked as expected:<p>
-<pre class="pre-scrollable p-3 mb-2 bg-light text-dark"><samp>$ identify -verbose multiMeta.tif
+<pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ identify -verbose multiMeta.tif
 Image:
   Filename: multiMeta.tif
   Permissions: rw-------
@@ -140,11 +140,11 @@ Image:
 <p>Notice the channel depth and statistics associated with the two meta channels.<p>
 <h5>Working with Multispectral Images</h5>
 <p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre>
 <p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <p>And in this example, we create two meta channels:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre>
 <h5>Writing Multispectral Images</h5>
 <p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="p-3 mb-2 bg-light text-dark"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
 </div>

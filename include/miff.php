@@ -136,7 +136,7 @@
 
 <p>Other key value pairs are permitted.  If a value contains whitespace it must be enclosed with braces as illustrated here:</p>
 
-<pre class="p-3 mb-2 bg-light text-dark"><samp>id=ImageMagick
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>id=ImageMagick
 class=PseudoClass  colors=256  matte=False
 columns=1280  rows=1024  depth=8
 compression=RLE
