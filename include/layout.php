@@ -16,7 +16,7 @@
     $meta->application_name="ImageMagick";
     $meta->description=$description;
     $meta->application_url="https://imagemagick.org";
-    $meta->keywords2="ImageMagick, image processing, command-line tool, format conversion, photo editing";
+    $meta->keywords2="image processing, image manipulation, image conversion, graphic design tool, image editing";
     $meta->sitename="ImageMagick";
     $meta->slogan="Mastering digital image alchemy.";
     $meta->email="webmaster@imagemagick.org";
