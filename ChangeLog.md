@@ -5,6 +5,73 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-32](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-31...7.1.1-32) - 2024-05-05
+
+### Merged
+
+- uhdr.c: add support for rgb inputs [`#7273`](https://github.com/ImageMagick/ImageMagick/pull/7273)
+- Fix GIF ICC profile reading. (https://github.com/ImageMagick/ImageMagick/issues/7281) [`#7282`](https://github.com/ImageMagick/ImageMagick/pull/7282)
+
+### Commits
+
+- beta release [`b71d98e`](https://github.com/ImageMagick/ImageMagick/commit/b71d98e188896982c47ea294d0a52a7fbb2c5873)
+- Fixed implementation of setting the max-profile-size. [`af81e16`](https://github.com/ImageMagick/ImageMagick/commit/af81e160ce5780fed0f9cee6229cda48c47b9818)
+- Update winget manifest after creating the release. [`391e6db`](https://github.com/ImageMagick/ImageMagick/commit/391e6db82aaf237e184569eaa1aba7cbe3c48811)
+- Use &gt;= instead to work around precision limitations of a double. [`148a485`](https://github.com/ImageMagick/ImageMagick/commit/148a485b6bfdb557e3e40e2d04ebad9f89d01a86)
+- Make it more clear we ignore the return value. [`9d3def5`](https://github.com/ImageMagick/ImageMagick/commit/9d3def5d53532c79681184b10c96f768dcb2f771)
+- There is no need to throw an exception when the profile could not be added. [`9b8d9fc`](https://github.com/ImageMagick/ImageMagick/commit/9b8d9fc09a44bce8847e880b8ae5f84d10d645c3)
+- Ignore the fact that the profile could not be added to the image. [`8739df5`](https://github.com/ImageMagick/ImageMagick/commit/8739df52c886e5c2c3974fd1e87852e95379c515)
+- cosmetic [`116f48c`](https://github.com/ImageMagick/ImageMagick/commit/116f48cd6d67aea4d2c7d9f2232d3768e7691bb3)
+- protect backslash write writing properties to MIFF (https://github.com/ImageMagick/ImageMagick/issues/7270) [`6adffe2`](https://github.com/ImageMagick/ImageMagick/commit/6adffe23652002cf0c4c6feebc018b77a3ff61bb)
+- Removed beta url for Advanced Installer. [`f34d293`](https://github.com/ImageMagick/ImageMagick/commit/f34d293102cd21ca29f4cc557ce0ff756bfb6803)
+- Install libtool on macos agent. [`ba03497`](https://github.com/ImageMagick/ImageMagick/commit/ba03497a583d8ecbe9f23f9a659810de0a02756b)
+- Use macos-13 for the MacOS build. [`ffc2a68`](https://github.com/ImageMagick/ImageMagick/commit/ffc2a688a75f00e53484f5717d9c875a783af50a)
+- Updated CFLAGS to fix the macos-13 build. [`fd0227e`](https://github.com/ImageMagick/ImageMagick/commit/fd0227e4a5d5144d1e23ff5602312d5f8517973e)
+- Added version checks for itxt_length in the png coder (#7275) [`77b3f47`](https://github.com/ImageMagick/ImageMagick/commit/77b3f47a5892cada0c81f65628677746adffec6d)
+- Also check the limits for the width and height of the reference grid. [`61a4517`](https://github.com/ImageMagick/ImageMagick/commit/61a4517bf38bcbeade949430e1d2dbedbb075d8d)
+- respect gradient bounding box [`a9926f1`](https://github.com/ImageMagick/ImageMagick/commit/a9926f1d21a8b0b64cb2dd4a98f0c603c4d788d2)
+- Removed unused or unnecessary defines for the Windows build. [`4588780`](https://github.com/ImageMagick/ImageMagick/commit/4588780a777328a661b26c4b1082230317234d37)
+- Removed unnecessary check. [`d68e9d2`](https://github.com/ImageMagick/ImageMagick/commit/d68e9d242c463e758a504551bb24a4a661f623c2)
+- Moved defines that are only used by our windows build to the private header file. [`625f7be`](https://github.com/ImageMagick/ImageMagick/commit/625f7beeeab8f2fd512fc14f9ec16f0a6f7465ab)
+- Removed __BORLANDC__ checks [`be5b6cc`](https://github.com/ImageMagick/ImageMagick/commit/be5b6cc8f0321df39eda0adeb89cbd355037d154)
+- Added missing include. [`760db30`](https://github.com/ImageMagick/ImageMagick/commit/760db30bc5b97460ffaf9567742e952a31788ddf)
+- Use workarounds to silence warnings in the MSYS2 build. [`eb39a44`](https://github.com/ImageMagick/ImageMagick/commit/eb39a4405700044d02998719268c7e465512db58)
+- Silence MSYS2 warning. [`8a0be27`](https://github.com/ImageMagick/ImageMagick/commit/8a0be279323da6d5dfae125f01271d9250722663)
+- Corrected fix. [`865dd6b`](https://github.com/ImageMagick/ImageMagick/commit/865dd6b0948ca1507ac1661f198670ba95ce1c26)
+- Moved locale specific defines for the Windows build to locale.c [`42ab959`](https://github.com/ImageMagick/ImageMagick/commit/42ab959417062c306a9a8f95964e3180a59fb2ae)
+- Moved mime specific define for the Windows build to mime.c [`d98a6dc`](https://github.com/ImageMagick/ImageMagick/commit/d98a6dc1a4bbf0a2872255944588344a293613d1)
+- Moved blob specific defines for the Windows build to blob.c [`a4c84b6`](https://github.com/ImageMagick/ImageMagick/commit/a4c84b6484c3107d385cf0cf924724b65d8e2350)
+- eliminate compiler warnings [`b9d4839`](https://github.com/ImageMagick/ImageMagick/commit/b9d4839103be547f696f8bf0c68e113eda9b50f7)
+- Use the new OpenEXRCore api that allows meta channel support when reading exr files (only when OpenEXR is version 3.1.0 or higher) [`662ee5a`](https://github.com/ImageMagick/ImageMagick/commit/662ee5a445a160575fb67e5b333ea6b760169f19)
+- Disable -Werror for the macos-13 build. [`80b7ad5`](https://github.com/ImageMagick/ImageMagick/commit/80b7ad564764ee0a24994c4c2feabf145a3eeb89)
+- Added hack for bugged OPENEXR_VERSION_HEX. [`3570e33`](https://github.com/ImageMagick/ImageMagick/commit/3570e33f1f56c6d67c05c9997915e757792fe362)
+- Use our own version of half to float to avoid using the half.h headerfile [`c50fb81`](https://github.com/ImageMagick/ImageMagick/commit/c50fb81ceb350aebb66447a010d723a74465af7d)
+- Fix to enable the alpha channel with the OpenEXRCore api. [`87e13b5`](https://github.com/ImageMagick/ImageMagick/commit/87e13b597729b81085e90395b47e73e8e8e2232c)
+- Added check for the number of layers to the jp2 coder. [`9cf8cc5`](https://github.com/ImageMagick/ImageMagick/commit/9cf8cc5b583b12d6ab9d3eea9f5e39cded360284)
+- Fixed possible memory leak. [`56c6052`](https://github.com/ImageMagick/ImageMagick/commit/56c6052605ff19c5616ad90c1ce84e1eb1dc34f8)
+- restore ImageMagick RPM builds [`3404101`](https://github.com/ImageMagick/ImageMagick/commit/3404101ec00456879e736943ac6825fb90d1eeb3)
+- revert [`4ec73e1`](https://github.com/ImageMagick/ImageMagick/commit/4ec73e1693687b8e51e677ad9ed5b78aa6c92e3a)
+- restore PerlMagick build [`f48af39`](https://github.com/ImageMagick/ImageMagick/commit/f48af39436775e913bba4bd4b4a1fbedf0b38f21)
+- cosmetic [`345cd90`](https://github.com/ImageMagick/ImageMagick/commit/345cd9022e008d692b5140254d3ff8bdc9c88d91)
+- No longer allow unlimited sizes for certain fuzzing targets. [`7b47774`](https://github.com/ImageMagick/ImageMagick/commit/7b47774cbd4a7061a150f87063f0ffc693f35585)
+- Improve readability of the code. [`2924538`](https://github.com/ImageMagick/ImageMagick/commit/292453847a6575d052f2a0de2a552152203e9312)
+- Use to_string instead of our custom implementation. [`af2139c`](https://github.com/ImageMagick/ImageMagick/commit/af2139ce1c38bee8827770889cc8f136e7fe3b68)
+- Added missing calls to opj_destroy_cstr_info. [`86dba81`](https://github.com/ImageMagick/ImageMagick/commit/86dba813fe00787f42806e07cb037e3e41ff7e21)
+- Allow a larger buffer to make it possible to overflow our MagickPathExtent buffers in oss-fuzz. [`dde3fb3`](https://github.com/ImageMagick/ImageMagick/commit/dde3fb325d18097cff3a8f3af40e935278d1bc98)
+- Simplify length checks. [`3e010ee`](https://github.com/ImageMagick/ImageMagick/commit/3e010ee937315fe7bb108cb66d07be9566131293)
+- Reduce size of label to avoid timeouts. [`1fe8d52`](https://github.com/ImageMagick/ImageMagick/commit/1fe8d529324fdd1a40baff52848a6f59e4704c48)
+- Added early exits when a too large image size is specified. [`dca3b9a`](https://github.com/ImageMagick/ImageMagick/commit/dca3b9a25b4c41411a2c631ceb68f507cc3475cb)
+- Removed call to DestroyStringInfo that should not be done when using SetImageProfilePrivate. [`7b5cf98`](https://github.com/ImageMagick/ImageMagick/commit/7b5cf98a62896386ba7a473f18ca0e0c94902236)
+- There is no need to do the for loop in a reverse order. [`ce02c1d`](https://github.com/ImageMagick/ImageMagick/commit/ce02c1d1914a488a4c014e0931dcf565b8a6c387)
+- Create bogus Ghostscript command to fix incorrect Command injection oss-fuzz issues. [`066ead9`](https://github.com/ImageMagick/ImageMagick/commit/066ead938b553e6ee2bd5d6a9c19a8875da867db)
+- Require index channel when PSD mode is IndexMode. [`3a1925f`](https://github.com/ImageMagick/ImageMagick/commit/3a1925fe03ef2d93e9387264e387106df80ec673)
+- Made it easier to get an image when debugging some of our fuzzers. [`610020e`](https://github.com/ImageMagick/ImageMagick/commit/610020e50fc6bb409303136bef0ef0102c1f07f9)
+- Use if defined instead. [`416faeb`](https://github.com/ImageMagick/ImageMagick/commit/416faeb3cff074a2aad2fa008fedb75252ea84e9)
+- Use if defined for all the other checks also. [`bacef9e`](https://github.com/ImageMagick/ImageMagick/commit/bacef9eb7565b34b1c4c9a8fa5ceccbc4fc5b6b2)
+- Corrected patch that was added for #6538 to make sure we only free the memory when the blob was never used. [`6e39633`](https://github.com/ImageMagick/ImageMagick/commit/6e39633bb7784f49eacbe7fa72dc57298ba5b6ee)
+- Cosmetic. [`e1de8c5`](https://github.com/ImageMagick/ImageMagick/commit/e1de8c5eb9cdd29e943ce494cb25272f0a74d0c8)
+- release [`178bb32`](https://github.com/ImageMagick/ImageMagick/commit/178bb329c7b80314711b036bd1c37107df76a6bc)
+
 ## [7.1.1-31](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-30...7.1.1-31) - 2024-04-21
 
 ### Merged
