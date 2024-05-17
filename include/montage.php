@@ -42,7 +42,7 @@
 <p>You can find additional examples of using <samp>montage</samp> at <a href="https://imagemagick.org/Usage/montage/">Examples of ImageMagick Usage</a> and <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
 
 <h4>Ashlar Pseudo-image Format</h4>
-<p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitedly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
+<p>Use the Ashlar pseudo-image format to lay out an image sequence in continuous irregular courses. By default, a reasonable canvas size and border width is determined relative to the image collection you provide. You can explicitly set the canvas size and border width by appending to the filename, e.g. ashlar:canvas.png[1024x768+4+4]. By default, alignment is along the left edge. Use -define ashlar:best-fit=true to align on both the left and right edges. You can label the image tiles with, for example, -label %f. Here is an example command:
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick '*.png' -resize 320x320 -label %f ashlar:ashlar.png</samp></pre>
 

@@ -1,7 +1,7 @@
 <div>
 <div id="cli-examples"></div>
 
-<p class="lead">This page descibed the Image composition methods that is used to define how
+<p class="lead">This page described the Image composition methods that is used to define how
 two images should be merged together in various image operations.  For the
 Command Line API it is typically set using the <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose" >-compose</a> setting option. </p>
@@ -127,7 +127,7 @@ For example the default compose method can be specified as just 'Over'.</p>
 
 <p>Many of these compose methods will clear the destination image which was
 not overlaid by the source image.  This is to be expected as part of that
-specific composition methods defintion. You can disable this by setting the
+specific composition methods definition. You can disable this by setting the
 special <a href="<?php echo
 $_SESSION['RelativePath']?>/../script/command-line-options.php#define"
 >-define</a> 'compose:outside-overlay' to a value of 'false' will turn off
@@ -361,7 +361,7 @@ composition effects, becoming involved. </p>
 
   <tr>
     <td>vivid-light</td>
-    <td>A modified 'Linear-Light' designed to preserve very stong
+    <td>A modified 'Linear-Light' designed to preserve very strong
         primary and secondary colors in the image.  </td>
   </tr>
 

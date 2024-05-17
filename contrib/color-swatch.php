@@ -20,7 +20,7 @@ if ( $colortest == 0 && $bgcolortest == 0 )
 	if ( $bgcolor == "checker" )
 		{
 		# Generate the checker background and overlay color
-		# due to change of channels to linear from non-linar, one needs to 
+		# due to change of channels to linear from non-linear, one needs to 
 		# convert cmyk colors to sRGB
 		$cmd = "$path2convert -size 150x150 pattern:checkerboard -normalize xc:\"$color\" -colorspace sRGB -compose over -composite -depth 8 PNG:-";
 		}

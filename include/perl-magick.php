@@ -1051,7 +1051,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
   <tr>
     <td>SigmoidalContrast</td>
     <td>geometry=&gt;<i>string</i>, 'contrast'=&gt;<i>double</i>, 'mid-point'=&gt;<i>double</i> channel=&gt;{Red, RGB, All, etc.}, sharpen=&gt;{True, False}</td>
-    <td>sigmoidal non-lineraity contrast control.  Increase the contrast of the image using a sigmoidal transfer function without saturating highlights or shadows. <var>Contrast</var> indicates how much to increase the contrast (0 is none; 3 is typical; 20 is a lot);  <var>mid-point</var> indicates where midtones fall in the resultant image (0 is white; 50% is middle-gray; 100% is black). To decrease contrast, set sharpen to False.</td>
+    <td>sigmoidal non-linearity contrast control.  Increase the contrast of the image using a sigmoidal transfer function without saturating highlights or shadows. <var>Contrast</var> indicates how much to increase the contrast (0 is none; 3 is typical; 20 is a lot);  <var>mid-point</var> indicates where midtones fall in the resultant image (0 is white; 50% is middle-gray; 100% is black). To decrease contrast, set sharpen to False.</td>
   </tr>
 
   <tr>
@@ -2315,7 +2315,7 @@ with the next image in the sequence.. For example,</p>
 
 <p>averages all the images associated with object <samp>$image</samp>.</p>
 
-<p>The Features() method returns features for each channel in the image in each of four directions (horizontal, vertical, left and right diagonals) for the specified distance.  The features include the angular second momentum, contrast, correlation, sum of squares: variance, inverse difference moment, sum average, sum varience, sum entropy, entropy, difference variance, difference entropy, information measures of correlation 1, information measures of correlation 2, and maximum correlation coefficient.  Values in RGB, CMYK, RGBA, or CMYKA order (depending on the image type).</p>
+<p>The Features() method returns features for each channel in the image in each of four directions (horizontal, vertical, left and right diagonals) for the specified distance.  The features include the angular second momentum, contrast, correlation, sum of squares: variance, inverse difference moment, sum average, sum variance, sum entropy, entropy, difference variance, difference entropy, information measures of correlation 1, information measures of correlation 2, and maximum correlation coefficient.  Values in RGB, CMYK, RGBA, or CMYKA order (depending on the image type).</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>@features = $image-&gt;Features(1);
 </samp></pre>

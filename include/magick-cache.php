@@ -35,7 +35,7 @@
 <h4>Delete content from the MagickCache</h4>
 <p>We can explicitly delete content:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick-cache -passkey passkey.txt delete /opt/magick-cache movies/image/mission-impossible/cast/rebecca-ferguson</samp></pre>
-<p>or we can delete all cast images that have expired (exceeded their respective time to live), try this comand:</p>
+<p>or we can delete all cast images that have expired (exceeded their respective time to live), try this command:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick-cache -passkey passkey.txt expire /opt/magick-cache movies/image/mission-impossible/cast</samp></pre>
 <h4>Identify the MagickCache content</h4>
 <p>Perhaps you want to identify all the content you own:</p>
@@ -46,7 +46,7 @@ identified 1 resources</samp></pre>
 <p>Others can store content in the cache along side your content.  However, their content is unavailable to you.  You cannot get, identify, expire or delete content that you do not own as determined by your secret passkey.</p>
 <p>The MagickCache owner can get, identify, expire, or delete all the content, including content you own, with this command, for example:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick-cache -passkey passkey.txt identify /opt/magick-cache /</samp></pre>
-<p>Note, expired reesources are annotated with an asterisks.</p>
+<p>Note, expired resources are annotated with an asterisks.</p>
 <h4>MagickCache is not just for Images</h4>
 <p>In addition to a type of <samp>image</samp>, you can store the image content in its original form, video, or audio as content type of <samp>blob</samp> or metadata with a content type of <samp>meta</samp>:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick-cache -passkey passkey.txt put /opt/magick-cache movies/blob/mission-impossible/cast/rebecca-ferguson 20210508-rebecca-ferguson.mp4</samp></pre>

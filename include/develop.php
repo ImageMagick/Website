@@ -47,7 +47,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
 <dt class="col-md-4"><a class="anchor" id="javascript"></a>Javascript/TypeScript</dt>
 
-<dd class="col-md-8"><a href="https://github.com/KnicKnic/WASM-ImageMagick">WASM-ImageMagick</a> Webassembly compiliation of ImageMagick that allows serverless clientside bindings for Typescript and Javascript. Works in Progressive Web Apps.</dd>
+<dd class="col-md-8"><a href="https://github.com/KnicKnic/WASM-ImageMagick">WASM-ImageMagick</a> Webassembly compilation of ImageMagick that allows serverless clientside bindings for Typescript and Javascript. Works in Progressive Web Apps.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="julia"></a>Julia</dt>
 

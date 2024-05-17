@@ -101,7 +101,7 @@
 
 <p>These extensions are explained in the next few paragraphs.</p>
 
-<p>Note, by default, if a command-line option is also a filename (e.g., <samp>-quality</samp>), it is intrepetted as a filename.  Use <samp>-define registry:option:pedantic=true</samp> to instead interpret it as an option. </p>
+<p>Note, by default, if a command-line option is also a filename (e.g., <samp>-quality</samp>), it is interpreted as a filename.  Use <samp>-define registry:option:pedantic=true</samp> to instead interpret it as an option. </p>
 
 <h4>Filename Globbing</h4>
 <p>In Linux shells, certain characters such as the asterisk (<samp>*</samp>) and question mark (<samp>?</samp>) automagically cause lists of filenames to be generated based on pattern matches. This feature is known as globbing.  ImageMagick supports filename globbing for systems, such as Windows, that does not natively support it.  For example, suppose you want to convert <samp>1.jpg</samp>, <samp>2.jpg</samp>, <samp>3.jpg</samp>, <samp>4.jpg</samp>, and <samp>5.jpg</samp> in your current directory to a GIF animation.  You can conveniently  refer to all of the JPEG files with this command:
@@ -196,7 +196,7 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 6000x4000 -depth 8 -extract 600x400+1900+2900 rgb:image image.jpg</samp></pre>
 
 <h4>Inline Image Resize</h4>
-<p>It is sometimes convenient to resize an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
+<p>It is sometimes convenient to resize an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbnails:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick '*.jpg' -resize 120x120 thumbnail%03d.png</samp></pre>
@@ -209,7 +209,7 @@ is read:
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick '*.jpg[120x120]' thumbnail%03d.png</samp></pre>
 
 <h4>Inline Image Crop</h4>
-<p>It is sometimes convenient to crop an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbails:
+<p>It is sometimes convenient to crop an image as they are read.  Suppose you have hundreds of large JPEG images you want to convert to a sequence of PNG thumbnails:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick '*.jpg' -crop 120x120+10+5 thumbnail%03d.png</samp></pre>

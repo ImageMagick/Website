@@ -43,7 +43,7 @@ function addCliTranslations() {
   function translateLinuxToWindows(node) {
     const imagemagick_linux_to_windows_replacements = new Map([
       [/\\\s*\n/gm, "^\n"], //replace newlines with ^\n
-      [/\s?\\(\(|\))\s?/gm, " $1 "], // unesecape parens, add space on either side to ensure compatibility "word\)" is valid in linux in windows "word)" is not.
+      [/\s?\\(\(|\))\s?/gm, " $1 "], // unescape parens, add space on either side to ensure compatibility "word\)" is valid in linux in windows "word)" is not.
       [/\\!/gm,"!"], // unescape exclamation point.
       [/'/gm, "\""], //single quote to double quote, breaks on nested quotes.
       [/\&|\||\<|\>/gm, "\\$&"], //Escape &,|,<,> - note: appears unused.

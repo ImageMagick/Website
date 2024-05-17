@@ -894,7 +894,7 @@ fill="color name", channel="All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, 
     <td><strike>sigmoidalcontrast</strike></td>
     <td>geometry="string", 'contrast'="double", 'mid-point'="double" channel="Red, RGB, All, etc.", sharpen="True, False"</td>
 
-    <td>sigmoidal non-lineraity contrast control.  Increase the contrast of the image using a sigmoidal transfer function without saturating highlights or shadows. Contrast" indicates how much to increase the contrast (0 is none; 3 is typical; 20 is a lot);  mid-point" indicates where midtones fall in the resultant image (0 is white; 50% is middle-gray; 100% is black). To decrease contrast, set sharpen to False.</td>
+    <td>sigmoidal non-linearity contrast control.  Increase the contrast of the image using a sigmoidal transfer function without saturating highlights or shadows. Contrast" indicates how much to increase the contrast (0 is none; 3 is typical; 20 is a lot);  mid-point" indicates where midtones fall in the resultant image (0 is white; 50% is middle-gray; 100% is black). To decrease contrast, set sharpen to False.</td>
   </tr>
 
   <tr>

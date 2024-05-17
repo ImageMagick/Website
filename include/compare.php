@@ -5,7 +5,7 @@
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <samp>compare</samp> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one thats been sharpened:</p>
+<p>We list a few examples of the <samp>compare</samp> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one that's been sharpened:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
 magick compare rose.jpg reconstruct.jpg difference.png

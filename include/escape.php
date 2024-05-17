@@ -335,7 +335,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[channels]</td>
-    <td>colorspace neumonic followed by total number of channels and meta channets, e.g., <code>cmyka 8.3</code> indicates a CMYK image with alpha channel for a total of 8 channels and 3 meta channels.</td>
+    <td>colorspace neumonic followed by total number of channels and meta channels, e.g., <code>cmyka 8.3</code> indicates a CMYK image with alpha channel for a total of 8 channels and 3 meta channels.</td>
   </tr>
   <tr>
     <td>%[colors]</td>
@@ -383,7 +383,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[dominant-color]</td>
-    <td>return the dominate image color in hex.  Preceed usage with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#kmeans" >-kmeans</a>.</td>
+    <td>return the dominate image color in hex.  Precede usage with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#kmeans" >-kmeans</a>.</td>
   </tr>
   <tr>
     <td>%[entropy]</td>
@@ -570,7 +570,7 @@ $_SESSION['RelativePath']?>/../script/command-line-options.php#comment"
 $_SESSION['RelativePath']?>/../script/command-line-options.php#caption"
 >-caption</a>). </p>
 
-<p>These convenience options are globally saved (as 'global options' so thay can
+<p>These convenience options are globally saved (as 'global options' so they can
 be set before images are read), and later are transferred to the property of
 individual images, only when they are read in. At that time any internal
 percent escape present is then handled. </p>

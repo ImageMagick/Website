@@ -810,7 +810,7 @@
   <mime type="application/dicom" acronym="DICOM" description="Digital Imaging and Communications in Medicine" priority="100" pattern="*.dcm" />
   <mime type="application/docbook+xml" description="DocBook document" data-type="string" offset="0" magic="&lt;?xml" priority="90" />
   <mime type="application/docbook+xml" description="DocBook document" priority="100" pattern="*.docbook" />
-  <mime type="image/x-dib" description="Device Independant Bitmap" data-type="string" offset="0" magic="\x28\00\00\00" priority="50" />
+  <mime type="image/x-dib" description="Device Independent Bitmap" data-type="string" offset="0" magic="\x28\00\00\00" priority="50" />
   <mime type="image/vnd.djvu" description="DjVu image" data-type="string" offset="4" magic="FORM" priority="50" />
   <mime type="image/vnd.djvu" description="DjVu image" priority="100" pattern="*.djvu" />
   <mime type="image/vnd.djvu" description="DjVu image" priority="100" pattern="*.djv" />

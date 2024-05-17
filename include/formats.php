@@ -650,7 +650,7 @@ the supported image formats.</p>
     <td>MPR</td>
     <td>RW</td>
     <td>Magick Persistent Registry</td>
-    <td>This format permits you to write to and read images from memory.  The filename is the registry key.  The image persists until you explicity delete it or the program exits.  For example, let's use the MPR to create a checkerboard:
+    <td>This format permits you to write to and read images from memory.  The filename is the registry key.  The image persists until you explicitly delete it or the program exits.  For example, let's use the MPR to create a checkerboard:
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick \( -size 15x15 canvas:black canvas:white -append \) \
   \( +clone -flip \) +append -write mpr:checkers +delete \
   -size 240x240 tile:mpr:checkers -delete registry:checkers board.png </samp></pre>
@@ -961,7 +961,7 @@ the supported image formats.</p>
     <td><a href="http://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">PSD</a></td>
     <td>RW</td>
     <td>Adobe Photoshop multispectral bitmap file</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blenning in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blending in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
   </tr>
 
   <tr>
@@ -1334,7 +1334,7 @@ the supported image formats.</p>
     <td>ASHLAR</td>
     <td>W</td>
     <td>Image sequence laid out in continuous irregular courses</td>
-    <td>By default, a reasonable canvas size and border width is determined relative to the image collection you provide.  You can explicitedly set the canvas size and border width by appending to the filename, e.g. <samp>ashlar:canvas.png[1024x768+4+4]</samp>. By default, alignment is along the left edge.  Use <samp>-define ashlar:best-fit=true</samp> to align on both the left  and right edges.  You can label the image tiles with, for example, <samp>-label %f</samp>. By default, all image tiles are rendered on a single canvas.  Use <samp>-define ashlar:tiles=50</samp>, for example, to render at most 50 tiles per canvas.</td>
+    <td>By default, a reasonable canvas size and border width is determined relative to the image collection you provide.  You can explicitly set the canvas size and border width by appending to the filename, e.g. <samp>ashlar:canvas.png[1024x768+4+4]</samp>. By default, alignment is along the left edge.  Use <samp>-define ashlar:best-fit=true</samp> to align on both the left  and right edges.  You can label the image tiles with, for example, <samp>-label %f</samp>. By default, all image tiles are rendered on a single canvas.  Use <samp>-define ashlar:tiles=50</samp>, for example, to render at most 50 tiles per canvas.</td>
   </tr>
 
   <tr>

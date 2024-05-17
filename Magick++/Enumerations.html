@@ -515,7 +515,7 @@ Specify <i>CompositeOperator</i> to select a different algorithm.
 		</td>
 		<td>
 			<p>The result of <i>composite image </i>- <i>image</i>, with
-			overflow cropped to zero. The matte chanel is ignored (set to 255,
+			overflow cropped to zero. The matte channel is ignored (set to 255,
 			full coverage).</p>
 		</td>
 	</tr>
@@ -535,7 +535,7 @@ Specify <i>CompositeOperator</i> to select a different algorithm.
 		<td>
 			<p>The result of <i>composite image </i>- <i>image</i>, with
 			underflow wrapping around (mod 256). The add and subtract
-			operators can be used to perform reverible transformations.</p>
+			operators can be used to perform reversible transformations.</p>
 		</td>
 	</tr>
 	<tr>
@@ -675,8 +675,8 @@ Specify <i>CompositeOperator</i> to select a different algorithm.
 <p style="margin-bottom: 0in"><i>CompressionType</i> is used to
 express the desired compression type when encoding an image. Be aware
 that most image types only support a sub-set of the available
-compression types. If the compression type specified is incompatable
-with the image, ImageMagick selects a compression type compatable
+compression types. If the compression type specified is incompatible
+with the image, ImageMagick selects a compression type compatible
 with the image type. 
 </p>
 <p style="text-align:center;margin-bottom: 0in"><b>CompressionType</b></p>
@@ -940,7 +940,7 @@ property for usage details.
 <p style="margin-bottom: 0in"><i>FilterTypes</i> is used to adjust
 the filter algorithm used when resizing images. Different filters
 experience varying degrees of success with various images and can
-take sipngicantly different amounts of processing time.
+take significantly different amounts of processing time.
 ImageMagick uses the <i>LanczosFilter</i> by default since this
 filter has been shown to provide the best results for most images in
 a reasonable amount of time. Other filter types (e.g. <i>TriangleFilter</i>)
@@ -1134,7 +1134,7 @@ object. A common default for gravity is <i>NorthWestGravity</i>.
 			<p>NorthGravity</p>
 		</td>
 		<td>
-			<p>Postiion object at top-center of region</p>
+			<p>Position object at top-center of region</p>
 		</td>
 	</tr>
 	<tr>
@@ -1357,7 +1357,7 @@ image.
 			<p>PartitionInterlace</p>
 		</td>
 		<td>
-			<p>Similar to plane interlaing except that the different planes
+			<p>Similar to plane interlacing except that the different planes
 			are saved to individual files (e.g. image.R, image.G, and image.B)</p>
 		</td>
 	</tr>

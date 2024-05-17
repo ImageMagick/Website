@@ -25,8 +25,8 @@ template argument types are: </p>
 <blockquote>A container having the properties of a <a
  href="http://www.sgi.com/tech/stl/BackInsertionSequence.html"> Back
 Insertion Sequence</a> . Sequences support forward iterators and Back
-Insertion Sequences support the additional abilty to append an element
-via push_back(). Common compatable container types are the STL &lt;<a
+Insertion Sequences support the additional ability to append an element
+via push_back(). Common compatible container types are the STL &lt;<a
  href="http://www.sgi.com/tech/stl/Vector.html"> vector</a> &gt; and &lt;<a
  href="http://www.sgi.com/tech/stl/List.html">list</a> &gt; template
 containers. This template argument is usually used to represent an
@@ -45,7 +45,7 @@ range of elements  with f<i>irst_</i> representing the first element to
 be processed and <i> last_</i> representing the element to stop at. When
 processing the entire contents of a container, it is handy to know that
 STL containers usually provide the begin() and end() methods to return
-input interators which correspond  with the first and last elements,
+input iterators which correspond  with the first and last elements,
 respectively.</blockquote>
 <p>The following is an example of how frames from a GIF animation <font
  color="#000000"> "test_image_anim.gif" may be appended horizontally
@@ -173,7 +173,7 @@ use of a pop-up menu, image frames may be selected in succession. This
 feature is  fully supported under X11 but may have only limited support
 in other environments.</font> <br />
       <font size="-1"><b><font color="#ff0000">Caution: </font></b> if
-an image format is not compatable with the display visual (e.g. JPEG
+an image format is not compatible with the display visual (e.g. JPEG
 on a colormapped display) then the original image will be altered. Use a
 copy of the original if this is a problem.</font></td>
     </tr>
@@ -256,7 +256,7 @@ as options by <i>montageImages().</i></font></td>
  href="http://www.sgi.com/tech/stl/InputIterator.html"> InputIterator</a>
 first_, <a href="http://www.sgi.com/tech/stl/InputIterator.html">InputIterator</a>
 last_, size_t frames_</font></td>
-      <td><font size="-1">Morph a seqence of image frames. This
+      <td><font size="-1">Morph a sequence of image frames. This
 algorithm&#160; expands the number of image frames (output to the
 container <i>morphedImages_)</i> by adding the number of intervening
 frames specified by <i>frames_</i> such that the original frames morph
@@ -362,7 +362,7 @@ with a typical implementation looking similar to:
 _sharpen );</font></tt> <br />
   <tt><font color="#000099">&#160; }</font></tt></pre>
 where <i>contrast</i> is an Image method and <i>_sharpen </i>is an
-argument stored within the function object by its contructor. Since
+argument stored within the function object by its constructor. Since
 constructors may be polymorphic, a given function object may have
 several constructors and selects the appropriate Image method based on
 the arguments supplied.
@@ -370,8 +370,8 @@ the arguments supplied.
 provide the means to construct an object which caches arguments for
 later use by an algorithm designed for use with unary function objects.
 There is a unary function object corresponding each algorithm provided
-by the <a href="Image++.html"> Image</a> class and there is a contructor
-available compatable with each synonymous  method in the Image class. </p>
+by the <a href="Image++.html"> Image</a> class and there is a constructor
+available compatible with each synonymous  method in the Image class. </p>
 <p>The unary function objects that Magick++ provides to support
 manipulating images are shown in the following table: <br />
 &#160;
@@ -394,7 +394,7 @@ height, unsigned offset = 0</font><br />
       <td valign="top"><font size="-1">Apply adaptive thresholding to
 the image. Adaptive thresholding is useful if the ideal threshold level
 is not known in advance, or if the illumination gradient is not constant
-across the image. Adaptive thresholding works by evaulating the mean
+across the image. Adaptive thresholding works by evaluating the mean
 (average) of a pixel region (size specified by <i>width</i> and <i>height</i>)
 and using the mean as the thresholding value. In order to remove
 residual noise from the background, the threshold may be adjusted by
@@ -954,7 +954,7 @@ noise peak  elimination filter.</font></td>
       </td>
       <td><font size="-1">int columns_, ssize_t rows_</font></td>
       <td><font size="-1">Roll image (rolls image vertically and
-horizontally) by specified number of columnms and rows)</font></td>
+horizontally) by specified number of columns and rows)</font></td>
     </tr>
     <tr>
       <td>
@@ -1346,7 +1346,7 @@ composition is implicitly used (such as for image flattening).</font></td>
       <td><font size="-1"><a href="Enumerations.html#CompressionType">CompressionType</a> </font></td>
       <td><font size="-1"><a href="Enumerations.html#CompressionType">CompressionType</a>
 compressType_</font></td>
-      <td><font size="-1">Image compresion type. The default is the
+      <td><font size="-1">Image compression type. The default is the
 compression type of the specified image file.</font></td>
     </tr>
     <tr>

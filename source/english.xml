@@ -1087,7 +1087,7 @@
             unable to allocate dash pattern
           </message>
           <message name="UnableToAllocateDerivatives">
-            unable to allocate derivates
+            unable to allocate derivatives
           </message>
           <message name="UnableToAllocateGammaMap">
             unable to allocate gamma map

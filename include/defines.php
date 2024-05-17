@@ -270,7 +270,7 @@ use:</p>
 
   <tr>
     <td>filename:literal=<var>true</var></td>
-    <td>By default, an output filename can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpretting embedded formatting characters and instead use the filename literally.</td>
+    <td>By default, an output filename can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpreting embedded formatting characters and instead use the filename literally.</td>
   </tr>
 
   <tr>
@@ -961,7 +961,7 @@ use:</p>
 
   <tr>
     <td>jxl:effort=<var>value</var></td>
-    <td>Set the jpeg-xl encoding effort. Valid values are in the range of 3 (falcon) to 9 (tortois).</td>
+    <td>Set the jpeg-xl encoding effort. Valid values are in the range of 3 (falcon) to 9 (tortoise).</td>
   </tr>
 
   <tr>

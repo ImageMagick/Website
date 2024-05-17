@@ -95,7 +95,7 @@
 
 <p>The <samp>-fx</samp> option replaces any image sequence with a clone of the first image updated with the results of the expression.  If you prefer to apply the expression to each image in the sequence, use <samp>+fx</samp> instead.</p>
 
-<p>The FX expression is interpretted in a single-thread, however, it is executed in multiple threads unless the expression includes the <code>debug()</code> function.</p>
+<p>The FX expression is interpreted in a single-thread, however, it is executed in multiple threads unless the expression includes the <code>debug()</code> function.</p>
 
 <p>The next section discusses the FX expression language.</p>
 
