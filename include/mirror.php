@@ -13,8 +13,8 @@
     <dd><a href="https://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/" target="_blank">https://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/</a></dd>
     <dd><a href="rsync://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/">rsync://ftp.icm.edu.pl/pub/unix/graphics/ImageMagick/</a></dd>
   <dt>Sweden</dt>
-    <dd><a href="https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/" target="_blank">https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
-    <dd><a href="rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/">rsync://ftp.acc.umu.se/mirror/imagemagick.org/ftp/</a></dd>
+    <dd><a href="https://mirror.accum.se/mirror/imagemagick.org/ftp/" target="_blank">https://mirror.accum.se/mirror/imagemagick.org/ftp/</a></dd>
+    <dd><a href="rsync://mirror.accum.se/mirror/imagemagick.org/ftp/">rsync://mirror.accum.se/mirror/imagemagick.org/ftp/</a></dd>
   <dt>Russia</dt>
     <dd><a href="https://mirror.su/imagemagick/ " target="_blank">https://mirror.su/imagemagick/ </a></dd>
   <dt>Switzerland</dt>
