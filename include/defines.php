@@ -117,6 +117,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>compose:colorspace=<var>colorspace</var></td>
+    <td>Set the colorspace for the colorize composite operator.  The default is HCL.</td>
+  </tr>
+
+  <tr>
     <td>compose:compose=<var>on|off</var></td>
     <td>This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</td>
   </tr>
