@@ -65,7 +65,7 @@
 <h2><a class="anchor" id="anatomy"></a>The Anatomy of the Command-line</h2>
 <p>The ImageMagick command-line consists of</p>
 
-<ol>
+<ul>
 <li>one or more required input filenames.</li>
 <li>zero, one, or more image settings.</li>
 <li>zero, one, or more image operators.</li>
@@ -80,7 +80,7 @@
 <?php cmd("import"); ?>,
 <?php cmd("conjure"); ?>).
 </li>
-</ol>
+</ul>
 
 <p>You can find a detailed explanation of each of the constituent parts of the command-line in the sections that follow.</p>
 
@@ -114,7 +114,7 @@
 the better known JPEG, PNG, TIFF and others.  ImageMagick must know the format
 of the image before it can be read and processed.  Most formats have a
 signature within the image that uniquely identifies the format.  Failing
-that, ImageMagick leverages the filename extension to determine the format. 
+that, ImageMagick leverages the filename extension to determine the format.
 For example, <samp>image.jpg</samp> or <samp>image.JPG</samp> tells ImageMagick
 it is reading an image in the JPEG format. </p>
 
