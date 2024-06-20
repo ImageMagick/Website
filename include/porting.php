@@ -331,12 +331,11 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <p>Here are a list of changes to the ImageMagick commands:</p>
 <dl class="row">
 <dt class="col-md-4">magick</dt>
-<dd class="col-md-8">The "<samp>magick</samp>" command is the new primary command of the Shell
-    API, replacing the old "<samp>convert</samp>" command. This allows you to
+<dd class="col-md-8"><b>IMPORTANT: The "<samp>magick</samp>" command is the new primary command of the Shell
+    API, replacing the old "<samp>convert</samp>" command</b>. This allows you to
     create a 'magick script' of the form  "<samp>#!/path/to/command/magick
     -script</samp>", or pipe options into a command "<samp>magick -script
-    -</samp>, as a background process. </dd>
-
+    -</samp>, as a background process.</dd>
 <dt class="col-md-4">magick-script</dt>
 <dd class="col-md-8">This the same as "<samp>magick</samp>", (only command name is different)
     but which has an implicit "<samp>-script</samp>" option.  This allows you to
@@ -346,8 +345,14 @@ be applied to expand the one channel into separate RGB (or other) channels.
     on the users command "<samp>PATH</samp>".  This is required to get around
     a "one argument she-bang bug" that is common on most UNIX systems
     (including Linux, but not MacOSX).</dd>
-<dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream</dt>
-<dd class="col-md-8">To reduce the footprint of the command-line utilities, these utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke them from the <samp>magick</samp> utility, for example, use <samp>magick logo: logo.png</samp> to invoke the <samp>magick</samp> utility.
+<dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify, 
+	import, mogrify, montage, stream</dt>
+<dd class="col-md-8">To reduce the footprint of the command-line utilities, these 
+	utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke 
+	them from the <samp>magick</samp> utility, for example, use <samp>magick logo: logo.png</samp> 
+	to invoke the <samp>magick</samp> utility. <b>(In otherwords, call these utilities by 
+	prefacing them with magick, such as magick compare, magick identify, magick mogrify, 
+	magick montage, etc. Do not use magick convert. That is is simply magick)</b>
 </dd></dl>
 
 <h2>Behavioral Changes</h2>
