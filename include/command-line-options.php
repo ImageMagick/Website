@@ -5850,14 +5850,20 @@ after being created. </p>
 
 <p>Note, this is a setting.  This merely sets the orientation metadata, and does not change the image.</p>
 
-<p>Choose from these orientations:</p>
+<p>Here are the allowed orientations and the EXIF codes and descriptions how to re-orient the image:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>bottom-left    right-top
-bottom-right   top-left
-left-bottom    top-right
-left-top       undefined
-right-bottom
-</samp></pre>
+<div class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary">
+<dl class="row">
+<dt class="col-md-4">top-left</dt><dd class="col-md-8">     1: Do nothing</dd>
+<dt class="col-md-4">top-right</dt><dd class="col-md-8">    2: Flip horizontally</dd>
+<dt class="col-md-4">bottom-right</dt><dd class="col-md-8"> 3: Rotate 180 degrees</dd>
+<dt class="col-md-4">bottom-left</dt><dd class="col-md-8">  4: Flip vertically</dd>
+<dt class="col-md-4">left-top</dt><dd class="col-md-8">     5: Rotate 90 degrees and flip horizontally (transpose)</dd>
+<dt class="col-md-4">right-top</dt><dd class="col-md-8">    6: Rotate 90 degrees</dd>
+<dt class="col-md-4">right-bottom</dt><dd class="col-md-8"> 7: Rotate 90 degrees and flip vertically (transverse)</dd>
+<dt class="col-md-4">left-bottom</dt><dd class="col-md-8">  8: Rotate 270 degrees</dd>
+</dl>
+</div>
 
 <p>To print a complete list of orientations, use the <a href="#list" >-list
 orientation</a> option.</p>
