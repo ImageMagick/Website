@@ -5,6 +5,52 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-34](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-33...7.1.1-34) - 2024-06-23
+
+### Merged
+
+- Updated FontConfig query to include font index, fixing (#7374) [`#7409`](https://github.com/ImageMagick/ImageMagick/pull/7409)
+- Bump azure/trusted-signing-action from 0.3.19 to 0.3.20 [`#7388`](https://github.com/ImageMagick/ImageMagick/pull/7388)
+- Fix a typo in `convert` deprecation warning [`#7383`](https://github.com/ImageMagick/ImageMagick/pull/7383)
+- Bump azure/trusted-signing-action from 0.3.18 to 0.3.19 [`#7348`](https://github.com/ImageMagick/ImageMagick/pull/7348)
+
+### Commits
+
+- beta release [`0ae65ef`](https://github.com/ImageMagick/ImageMagick/commit/0ae65ef83b6452495a05f9452bcf7f0ad7822a51)
+- create inline pixel colorspace conversion methods [`50b0bcb`](https://github.com/ImageMagick/ImageMagick/commit/50b0bcb450469d5f25dd42c3c1b3125d6b3a5522)
+- generic colorspace conversion is too complex to inline, make them private instead [`4341e45`](https://github.com/ImageMagick/ImageMagick/commit/4341e45bca85315dc208a0c7f4e446b58968aea3)
+- support compose:colorspace define for -compose colorize operation [`2e7c091`](https://github.com/ImageMagick/ImageMagick/commit/2e7c091a583ec0dda6f05edd46dd8a6435dde4d5)
+- eliminate compiler exception [`3140c78`](https://github.com/ImageMagick/ImageMagick/commit/3140c78018fd03b0aad571a84bafb881cb4eae6c)
+- Fixed build. [`e8a7193`](https://github.com/ImageMagick/ImageMagick/commit/e8a7193381a43e6bf596c4bb5b5a81186f024fac)
+- Use an environment for the federated credential of Azure because there is no support for wildcards of tags in Azure. [`71a955a`](https://github.com/ImageMagick/ImageMagick/commit/71a955a5fb273c02ec00d69043b5f23861e19703)
+- Removed define declaration. [`f228650`](https://github.com/ImageMagick/ImageMagick/commit/f2286509e8f61bd9e3210b07f776dbfee6d16235)
+- Simply checks for readability. [`486c5d7`](https://github.com/ImageMagick/ImageMagick/commit/486c5d72e5b5de5d6e2a5f79016df655a346c8f5)
+- correct comment [`1160213`](https://github.com/ImageMagick/ImageMagick/commit/1160213dc6a3a80aafbb346562dfd615b33b6c35)
+- update image signature (https://github.com/ImageMagick/ImageMagick/issues/7344) [`ea1ecf5`](https://github.com/ImageMagick/ImageMagick/commit/ea1ecf5d8b9b457164d94c964dbf33e1ac78c00e)
+- No longer use the error_code of the picture when WebPEncode was not called. [`a199044`](https://github.com/ImageMagick/ImageMagick/commit/a199044245a62633fead3fec9b79ae8641078add)
+- Only set the progress_hook in the webp coder when the progress_monitor of the image is set. [`04122fa`](https://github.com/ImageMagick/ImageMagick/commit/04122faaf5a5a0ea6dec0b32745479c99b325471)
+- Some more tweaks to improve error reporting in the webp coder. [`ccb1984`](https://github.com/ImageMagick/ImageMagick/commit/ccb198483227bd479efb3b1cd61679f2af1d6f8d)
+- Also check for mmap with AC_CHECK_FUNCS to fix detecting it when cross compiling MacOS arm64. [`bfe87ed`](https://github.com/ImageMagick/ImageMagick/commit/bfe87ed968c43de584b34fe66c903ffec3705881)
+- Correct rounding error when setting the frame delay in the webp decoder (#7371) [`b39c9bc`](https://github.com/ImageMagick/ImageMagick/commit/b39c9bcd38962d65299cc83686f2ebc2fda8853f)
+- Improved magick convert deprecation warning. [`ec17fd0`](https://github.com/ImageMagick/ImageMagick/commit/ec17fd0d45ed510d2d846676944487bb76d6256b)
+- The solution name of Windows now contains the name of the platform. [`8ced53c`](https://github.com/ImageMagick/ImageMagick/commit/8ced53c4e6416192e1a0302a2f6f51008bce6a9f)
+- Fixed issue where the color profile was not copied to all the images that would cause issues when converting from PSD to PSD and changing the colorspace with a profile. [`efb2442`](https://github.com/ImageMagick/ImageMagick/commit/efb2442c1ddb22cf17e7106b9edae7fdd09f7257)
+- Correct overwriting read_info-&gt;filename to make sure we don't leave temporary files behind (#7389). [`6f5ae64`](https://github.com/ImageMagick/ImageMagick/commit/6f5ae6476e211b049ed347f70c5e6ac002a73525)
+- latest autoconf update [`33119d9`](https://github.com/ImageMagick/ImageMagick/commit/33119d988baaa0e4d4df00c041cb6b9b8a411f94)
+- No longer pass the commit when cloning the repositories in the Windows build. [`6aa212b`](https://github.com/ImageMagick/ImageMagick/commit/6aa212bdc7d1dd72e2e4fba1686aae6179a5d76f)
+- No longer install libraqm in the macos-13 build. [`0da13f2`](https://github.com/ImageMagick/ImageMagick/commit/0da13f25ff85762d0d507b73bd12a50c2c23a918)
+- There is no need to format the weight in a separate buffer. [`9fec829`](https://github.com/ImageMagick/ImageMagick/commit/9fec82991a3fdc88f51057bfa1e6c1305d4c329e)
+- Corrected setting the offset for the seek operation to fix issue when reading xbm files with information between the width/height define and data (#7406) [`5fcf6ae`](https://github.com/ImageMagick/ImageMagick/commit/5fcf6ae2a93af8771b6a407eb8e14a27ced54bc2)
+- fix boundary condition when resampling pixel color (https://github.com/ImageMagick/ImageMagick/issues/7415) [`3eb67c6`](https://github.com/ImageMagick/ImageMagick/commit/3eb67c6227ff7d5dee46ba111183fc0b2808eb2a)
+- initialize average interpolation sum (https://github.com/ImageMagick/ImageMagick/discussions/7401) [`06c6e9f`](https://github.com/ImageMagick/ImageMagick/commit/06c6e9f354a322c0495de7e8e9dc4b067deda44e)
+- only enable the alpha channel when the compression is BI_BITFIELDS or BI_ALPHABITFIELDS [`bdc6c09`](https://github.com/ImageMagick/ImageMagick/commit/bdc6c09cec64fd8e1570ee3edf5647acde336272)
+- cosmetic [`d986b01`](https://github.com/ImageMagick/ImageMagick/commit/d986b0115ba076cec1b81f96e553395c8e23c71d)
+- fix signature for BMP unit tests [`498877a`](https://github.com/ImageMagick/ImageMagick/commit/498877a3d1012d3af87ccc6f697d7bc9c9b49f32)
+- Report error when the input file does not contain enough data instead of failing silently. (#7422) [`188378f`](https://github.com/ImageMagick/ImageMagick/commit/188378f2dd91765e3164209ab14b532c6eb53cac)
+- re-enable sparse pixels (https://github.com/ImageMagick/ImageMagick/issues/7422) [`2873224`](https://github.com/ImageMagick/ImageMagick/commit/287322445a0fd1b535b328d1bb8884db803db06a)
+- re-enable sparse pixels [`39a4f1c`](https://github.com/ImageMagick/ImageMagick/commit/39a4f1cb246c09c54b5acf86b83f1d5b647313ec)
+- release [`b0b7b17`](https://github.com/ImageMagick/ImageMagick/commit/b0b7b1730ab858513ae99294f167a6eb0cbb745e)
+
 ## [7.1.1-33](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-32...7.1.1-33) - 2024-05-25
 
 ### Merged
