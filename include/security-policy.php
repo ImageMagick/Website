@@ -135,7 +135,6 @@
        allocation requests. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
 &lt;/policymap></code></pre>
-</div>
 
 <p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, processing will stop and an exception will be thrown.</p>
 
