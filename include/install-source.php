@@ -12,9 +12,11 @@
 
 <h2><a class="anchor" id="linux"></a>Install from Linux Source</h2>
 
-<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Linux systems have one.  Clone the source repository:</p>
+<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Linux systems have one.</p>
 
-<?php crt("git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
+<p>Clone the latest release from the source repository:</p>
+
+<?php crt("git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
 
 <p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
