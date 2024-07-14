@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-35](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-34...7.1.1-35) - 2024-07-14
+
+### Commits
+
+- beta release [`b6647e5`](https://github.com/ImageMagick/ImageMagick/commit/b6647e5ffc664a65b4dca826ed3f5cc49677933b)
+- Also set dpi-x and dpi-y when running rsvg-convert. [`eac001f`](https://github.com/ImageMagick/ImageMagick/commit/eac001fbba9ce5497010f575987489a577f4109c)
+- `convert` sub-command is deprecated [`d67039e`](https://github.com/ImageMagick/ImageMagick/commit/d67039ed4ba75286208afd263b751c631a8e26a3)
+- only operators should disable "identify ping" (https://github.com/ImageMagick/ImageMagick/issues/7441) [`a262192`](https://github.com/ImageMagick/ImageMagick/commit/a262192e38e5f4af52f93accd3dc96e65c0c9300)
+- cosmetic [`e3558d2`](https://github.com/ImageMagick/ImageMagick/commit/e3558d23e797ecf082f15c8432629f7942a91464)
+- fix compiler error [`ecc21c7`](https://github.com/ImageMagick/ImageMagick/commit/ecc21c7db48c63cc9d93c131ae4d453f55f0c573)
+- -outdir deprecated [`9980efa`](https://github.com/ImageMagick/ImageMagick/commit/9980efa871fd0661fa06e458e9d3bac8a1490c8d)
+- Get the correct width and height when heic:preserve-orientation is set to true. [`ed3a0dd`](https://github.com/ImageMagick/ImageMagick/commit/ed3a0dd1d3a5459cf435d8ce979feda247bb27b9)
+- Set heic image orientation using transform information. [`ba470aa`](https://github.com/ImageMagick/ImageMagick/commit/ba470aad4e47dacfee152ca7296e590d75aea86b)
+- Exit earlier when the symlink could not be created when invoking the svg:decode delegate. [`8a48edd`](https://github.com/ImageMagick/ImageMagick/commit/8a48eddf90d5c885c14125ecca95edab098eceac)
+- Fixed MSYS2 build error. [`3b22378`](https://github.com/ImageMagick/ImageMagick/commit/3b22378a23d59d7517c43b65b1822f023df357a0)
+- Also set the DNG properties when pinging the image. [`fc1c61b`](https://github.com/ImageMagick/ImageMagick/commit/fc1c61baf0b08951b08ee24150a2e3964f655e05)
+- Silence warning when lqr delegate is disabled. [`ae0d69a`](https://github.com/ImageMagick/ImageMagick/commit/ae0d69a53f0c172b683410c219e53066ce57be6b)
+- Added version check for the heif_properties.h include. [`656b4d2`](https://github.com/ImageMagick/ImageMagick/commit/656b4d231cc6e135de6b5199b446a7353f82a4a8)
+- Make sure we always use the i64 version of the "file methods" on Windows. [`b3e8a78`](https://github.com/ImageMagick/ImageMagick/commit/b3e8a7800de47af50bdd344ecd059b5481c054f7)
+- Changed defines to use method instead of a define. [`75b66c4`](https://github.com/ImageMagick/ImageMagick/commit/75b66c456a19527e322741326615d664de60789c)
+- Changes due to upgrade of libheif. [`841f033`](https://github.com/ImageMagick/ImageMagick/commit/841f033f09ee8c04d7b06c6b6157f152a05897f7)
+- smooth the rendering of an ellipse (https://github.com/ImageMagick/ImageMagick/issues/7465) [`1bfce2a`](https://github.com/ImageMagick/ImageMagick/commit/1bfce2a62739ca8506ff696171acdfd6d15345af)
+- release [`d775d2a`](https://github.com/ImageMagick/ImageMagick/commit/d775d2ac6fc0ca1790ec9a248b34b8c3bd391566)
+
 ## [7.1.1-34](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-33...7.1.1-34) - 2024-06-23
 
 ### Merged
