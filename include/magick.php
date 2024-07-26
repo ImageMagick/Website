@@ -41,7 +41,7 @@
 convert rose.jpg rose.png
 magick rose.jpg rose.png </samp></pre>
 
-<p>You can find additional examples of using <samp>magick</samp> in <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>magick</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 

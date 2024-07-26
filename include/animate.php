@@ -13,7 +13,7 @@
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick animate *.jpg </samp></pre>
 
-<p>You can find additional examples of using <samp>animate</samp> in <a href="https://imagemagick.org/Usage/basics/#animate">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>animate</samp> in <a href="https://usage.imagemagick.org/basics/#animate">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>

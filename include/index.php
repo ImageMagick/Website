@@ -21,7 +21,7 @@
 <div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
-    <td><a href="https://imagemagick.org/Usage/anim_basics/">Animation</a></td>
+    <td><a href="https://usage.imagemagick.org/anim_basics/">Animation</a></td>
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
@@ -57,15 +57,15 @@
     <td>smallest area convex polygon containing the image foreground objects.  In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/crop/">Decorate</a></td>
+    <td><a href="https://usage.imagemagick.org/crop/">Decorate</a></td>
     <td>add a border or frame to an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/transform/#vision">Delineate image features</a></td>
-    <td><a href="http://imagemagick.org/Usage/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
+    <td><a href="https://usage.imagemagick.org/transform/#vision">Delineate image features</a></td>
+    <td><a href="http://usage.imagemagick.org/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/fourier/">Discrete Fourier transform</a></td>
+    <td><a href="https://usage.imagemagick.org/fourier/">Discrete Fourier transform</a></td>
     <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
@@ -73,7 +73,7 @@
     <td>offload intermediate pixel storage to one or more remote servers.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/draw/">Draw</a></td>
+    <td><a href="https://usage.imagemagick.org/draw/">Draw</a></td>
     <td>add shapes or text to an image.</td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@
     <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/distorts/">Generalized pixel distortion</a></td>
+    <td><a href="https://usage.imagemagick.org/distorts/">Generalized pixel distortion</a></td>
     <td>correct for, or induce image distortions including perspective.</td>
   </tr>
   <tr>
@@ -129,7 +129,7 @@
     <td>juxtapose image thumbnails on an image canvas.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/morphology/">Morphology of shapes</a></td>
+    <td><a href="https://usage.imagemagick.org/morphology/">Morphology of shapes</a></td>
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@
     <td>support multispectral imagery up to 32 bands, 22 of them meta channels.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/transform/#vision">Noise and color reduction</a></td>
+    <td><a href="https://usage.imagemagick.org/transform/#vision">Noise and color reduction</a></td>
     <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=25504">mean-shift</a>.</td>
   </tr>
   <tr>
@@ -149,11 +149,11 @@
     <td>map visually identical images to the same or similar hash-- useful in image retrieval, authentication, indexing, or copy detection as well as digital watermarking.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/blur/">Special effects</a></td>
+    <td><a href="https://usage.imagemagick.org/blur/">Special effects</a></td>
     <td>blur, sharpen, threshold, or tint an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/text/">Text &amp; comments</a></td>
+    <td><a href="https://usage.imagemagick.org/text/">Text &amp; comments</a></td>
     <td>insert descriptive or artistic text in an image.</td>
   </tr>
   <tr>
@@ -161,11 +161,11 @@
     <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/resize/">Transform</a></td>
+    <td><a href="https://usage.imagemagick.org/resize/">Transform</a></td>
     <td>resize, rotate, deskew, crop, flip or trim an image.</td>
   </tr>
   <tr>
-    <td><a href="https://imagemagick.org/Usage/masking/">Transparency</a></td>
+    <td><a href="https://usage.imagemagick.org/masking/">Transparency</a></td>
     <td>render portions of an image invisible.</td>
   </tr>
   <tr>
@@ -175,7 +175,7 @@
 </table>
 </div>
 <p>&nbsp;</p>
-<p><a href="https://imagemagick.org/Usage/" target="_blank">Examples of ImageMagick Usage</a> demonstrates how to use the software from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command line</a> to achieve various effects. There are also several scripts available on the website called <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>, which can be used to apply geometric transforms, blur and sharpen images, remove noise, and perform other operations. Additionally, there is a tool called <a href="https://github.com/dlemstra/Magick.NET" target="_blank">Magick.NET</a> that allows users to access the functionality of ImageMagick without having to install the software on their own systems. Finally, the website also includes a <a href="http://im.snibgo.com/" target="_blank">Cookbook</a> with tips and examples for using ImageMagick on Windows systems.</p>
+<p><a href="https://usage.imagemagick.org" target="_blank">Examples of ImageMagick Usage</a> demonstrates how to use the software from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command line</a> to achieve various effects. There are also several scripts available on the website called <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>, which can be used to apply geometric transforms, blur and sharpen images, remove noise, and perform other operations. Additionally, there is a tool called <a href="https://github.com/dlemstra/Magick.NET" target="_blank">Magick.NET</a> that allows users to access the functionality of ImageMagick without having to install the software on their own systems. Finally, the website also includes a <a href="http://im.snibgo.com/" target="_blank">Cookbook</a> with tips and examples for using ImageMagick on Windows systems.</p>
 
 <h4><a class="anchor" id="community"></a>Community</h4>
 <p>Join the ImageMagick community by participating in the <a href="https://github.com/ImageMagick/ImageMagick/discussions" target="_blank">discussion</a> service. Here, you can find answers to questions asked by other ImageMagick users or ask your own questions. If you have a technical question, a suggestion for an improvement, or a fix for a bug, you can also open an <a href="https://github.com/ImageMagick/ImageMagick/issues" target="_blank">issue</a> to get help from the community.</p>

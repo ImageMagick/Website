@@ -60,7 +60,7 @@
 <p>To ensure the script can run under Windows, change any backslash-parens (\() to just parens, the backslash (\) to <samp>^</samp>, and double-up the percent (%) signs.</p>
 <p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
 
-<p>See <a href="https://imagemagick.org/Usage/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
+<p>See <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 
 <h2><a class="anchor" id="anatomy"></a>The Anatomy of the Command-line</h2>
 <p>The ImageMagick command-line consists of</p>

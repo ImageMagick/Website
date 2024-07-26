@@ -91,7 +91,7 @@
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
       if (composite &lt;= 0, debug(prime), ); prime++)" null:</samp></pre>
 
-<p>See <a href="https://imagemagick.org/Usage/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
+<p>See <a href="https://usage.imagemagick.org/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
 <p>The <samp>-fx</samp> option replaces any image sequence with a clone of the first image updated with the results of the expression.  If you prefer to apply the expression to each image in the sequence, use <samp>+fx</samp> instead.</p>
 

@@ -44,7 +44,7 @@
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>perl -MImage::Magick -le 'print Image::Magick->QuantumDepth'
 </samp></pre>
 
-<p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="https://imagemagick.org/Usage/">convert, compose, or edit</a> your images.</p>
+<p>Congratulations, you have a working ImageMagick distribution and you are ready to use PerlMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images.</p>
 
 <p><b>Windows XP / Windows 2000</b></p>
 
