@@ -5,6 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-36](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-35...7.1.1-36) - 2024-07-27
+
+### Merged
+
+- Silence warning when freetype delegate is disabled. [`#7515`](https://github.com/ImageMagick/ImageMagick/pull/7515)
+- Fixed typo in documentation of MagickAdaptiveBlurImage [`#7500`](https://github.com/ImageMagick/ImageMagick/pull/7500)
+- uhdr.c: default initialize range field for hdr/sdr intent inputs to enc [`#7482`](https://github.com/ImageMagick/ImageMagick/pull/7482)
+
+### Commits
+
+- beta release [`8c7c516`](https://github.com/ImageMagick/ImageMagick/commit/8c7c516574691aec1500ffac0fdfbac87e292aea)
+- Code style changes. [`ed85e19`](https://github.com/ImageMagick/ImageMagick/commit/ed85e19963029d6c80849ff12376c2ede791c954)
+- Code style changes. [`22e268e`](https://github.com/ImageMagick/ImageMagick/commit/22e268e52b4bdb20f2079cff402dd5341ee6dd33)
+- Code style changes. [`2892b76`](https://github.com/ImageMagick/ImageMagick/commit/2892b76495ad3de301d4dcf2ae0fb2a745c02bad)
+- Code style changes. [`2ef6fca`](https://github.com/ImageMagick/ImageMagick/commit/2ef6fcac18ba3a859c412f900d50e3aa30b5fa8c)
+- Code style changes. [`e496826`](https://github.com/ImageMagick/ImageMagick/commit/e49682682974f16581e6262dfc44b6df5c810398)
+- point to the correct ImageMagick-7.?.? path [`4f6a116`](https://github.com/ImageMagick/ImageMagick/commit/4f6a1160936ecfa4b89388977d24a63dca073a97)
+- configure AppRun to reflect the correct configure and library paths [`efc2676`](https://github.com/ImageMagick/ImageMagick/commit/efc26763e989c1facdcc6ae115de4488a1ff677f)
+- do not append empty paths [`72c5594`](https://github.com/ImageMagick/ImageMagick/commit/72c559456b60900ba4b77f32d6ac44f58e1e581e)
+- Only request a unique file name when system:shred is not set. [`bc3df5d`](https://github.com/ImageMagick/ImageMagick/commit/bc3df5d42dbb7952b427d5d77a44bbca942a56ac)
+- Improved error message (#7491) [`67cadcb`](https://github.com/ImageMagick/ImageMagick/commit/67cadcbb1c5caf0cc28f842cc3c8ce70c29e5cf9)
+- ensure no empty paths in the environment [`6526a2b`](https://github.com/ImageMagick/ImageMagick/commit/6526a2b28510ead6a3e14de711bb991ad9abff38)
+- Removed check for ancient Visual Studio version. [`9291449`](https://github.com/ImageMagick/ImageMagick/commit/9291449dd1afc3bdcb719fdf66853f45479f1293)
+- correct link [`1066464`](https://github.com/ImageMagick/ImageMagick/commit/106646455b486eed479a5b26bdab55a0f9c7a3be)
+- The -format option is hybrid operator and info operator [`fbc6695`](https://github.com/ImageMagick/ImageMagick/commit/fbc6695d8edfa7362cbdd7312b1c82e74b4bd601)
+- cosmetic [`41db2bf`](https://github.com/ImageMagick/ImageMagick/commit/41db2bfaa65ec61a542ce18efd7454539741ac23)
+- bounds check [`9a743b9`](https://github.com/ImageMagick/ImageMagick/commit/9a743b9290998355439cd33944aa1a46dc23e940)
+- set image orientation on write [`32591b8`](https://github.com/ImageMagick/ImageMagick/commit/32591b858b7e9d73c00fd69a7d6ea9bf299b7d31)
+- support 12 & 16 bit JPEG images [`da58a80`](https://github.com/ImageMagick/ImageMagick/commit/da58a8015dbae423ebf7ecc66c8aa613627f9bef)
+- don't scale 8-bit pixels [`da451cc`](https://github.com/ImageMagick/ImageMagick/commit/da451cc15500afc70cfd332c68c81c990ea6379f)
+- don't ping for -format option [`7caf7a2`](https://github.com/ImageMagick/ImageMagick/commit/7caf7a27ed4ed6436cb96d8efb1bbb9e98306f0a)
+- fix grayscale images [`7aae5ff`](https://github.com/ImageMagick/ImageMagick/commit/7aae5ff96590e0f1624810e67cf8a4bd2c0bab08)
+- Fixed build on Windows. [`00ac8d0`](https://github.com/ImageMagick/ImageMagick/commit/00ac8d0cbc3dc4c4ff7f145b7f44f2309fb1f57f)
+- Another fix for grayscale images. [`42c30be`](https://github.com/ImageMagick/ImageMagick/commit/42c30be7ef6a5d272d2a21dedce23f5023cb5723)
+- restore JPEG grayscale colormap [`c0b1d44`](https://github.com/ImageMagick/ImageMagick/commit/c0b1d4491339de1be231d169029d8e44bfd91d40)
+- default to channels other than 1 & 4 [`2245dd6`](https://github.com/ImageMagick/ImageMagick/commit/2245dd61e0393170fde8272e6871b6710a5a66e1)
+- interpret EMF documents under Linux [`f288420`](https://github.com/ImageMagick/ImageMagick/commit/f28842046f0f78d06e85baafe1d3f648c8befc36)
+- support WMF delegate [`8f26c46`](https://github.com/ImageMagick/ImageMagick/commit/8f26c4633b660fcdeb6f280b5a9baca2c73b7f07)
+- release [`852a4e9`](https://github.com/ImageMagick/ImageMagick/commit/852a4e91b1cdb0c055a27dae956f130941e66ac0)
+
 ## [7.1.1-35](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-34...7.1.1-35) - 2024-07-14
 
 ### Commits
