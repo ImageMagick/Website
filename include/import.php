@@ -9,7 +9,7 @@
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import rose.jpg </samp></pre>
 
-<p>To select the area you want to capture, move the cursor to the desired window and click the left mouse button. To cancel the capture, click the right mouse button.</p>
+<p>To select the area you want to capture, move the cursor to the desired window and click (or click and drag) the left mouse button. To cancel the capture, click the right mouse button.</p>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
