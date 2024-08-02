@@ -13,6 +13,10 @@
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import -window root screen.ps </samp></pre>
 
+<p>This command enables you to select a specific area on your screen and copy the selection to your clipboard. You can use this feature to conveniently post images on applications that support image uploading:</p>
+
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import png:- | xclip -selection clipboard -t image/png</samp></pre>
+
 <p>You can find additional examples of using <samp>import</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 
