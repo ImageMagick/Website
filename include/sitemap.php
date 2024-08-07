@@ -49,7 +49,6 @@
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">magick composite</a>: overlaps one image over another.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">magick convert</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">magick display</a>: displays an image or image sequence on any X server.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a>: describes the format and characteristics of one or more image files.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
