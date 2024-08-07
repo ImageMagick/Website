@@ -365,7 +365,7 @@ the supported image formats.</p>
     <td>Farbfeld lossless image format</td>
     <td>sRGB 16-bit RGBA lossless image format</td>
   </tr>
-   
+
   <tr>
     <td>FAX</td>
     <td>RW</td>
@@ -386,14 +386,14 @@ the supported image formats.</p>
     <td>FilmLight floating point image format</td>
     <td></td>
   </tr>
-   
+
   <tr>
     <td><a href="https://flif.info/">FLIF</a></td>
     <td>RW</td>
     <td>Free Lossless Image Format</td>
     <td></td>
   </tr>
-   
+
   <tr>
     <td>FPX</td>
     <td>RW</td>
@@ -1001,9 +1001,9 @@ the supported image formats.</p>
 
   <tr>
     <td>RAW</td>
-    <td>RW</td>
-    <td>Raw gray samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
+    <td>R</td>
+    <td>Raw</td>
+    <td></td>
   </tr>
 
   <tr>
