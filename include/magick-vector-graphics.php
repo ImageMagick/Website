@@ -445,7 +445,7 @@ SouthEast</samp></pre></td>
   <tr>
     <td><a class="anchor" id="compose"></a>image <var>compose x,y width,height 'filename'</var></td>
     <td>Choose from these compose operations:
-    <table id="table" cellpadding="2" cellspacing="0" style="width: 93%">
+    <table class="table table-sm table-hover table-striped table-responsive">
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
