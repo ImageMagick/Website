@@ -2242,7 +2242,7 @@ same physical dimensions (in inches or centimeters), use the
 
 <p class="magick-description">Depth of the image.</p>
 
-<p>Color depth is the number of bits per channel for each pixel. For example, for a depth of 16 using RGB, each channel of Red, Green, and Blue can range from 0 to 2^16-1 (65535). Use this option to specify the depth of raw images formats whose depth is unknown such as GRAY, RGB, or CMYK, or to change the depth of any image after it has been read.</p>
+<p>Color depth is the number of bits per channel for each pixel. For example, for a depth of 16 using RGB, each channel of Red, Green, and Blue can range from 0 to 2^16-1 (65535). Use this option to specify the depth of raw images formats whose depth is unknown such as GRAY, RGB, or CMYK, or to change the depth of any image after it has been read.  By default, higher order bits are lopped.  Use <a href="#dither">-dither FloydSteinberg</a> to instead distribute the quantization error.</p>
 
 <p>Use <a href="#depth">+depth</a> to return depth to its default value.</p>
 
