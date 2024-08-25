@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-37](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-36...7.1.1-37) - 2024-08-24
+
+### Merged
+
+- Bump azure/trusted-signing-action from 0.3.20 to 0.4.0 [`#7518`](https://github.com/ImageMagick/ImageMagick/pull/7518)
+- Silence warning and fix HEIC_COMPUTE_NUMERIC_VERSION definition when heic delegate is disabled. [`#7516`](https://github.com/ImageMagick/ImageMagick/pull/7516)
+
+### Commits
+
+- beta release [`b1a6038`](https://github.com/ImageMagick/ImageMagick/commit/b1a6038e2eae42e2967aeafd21fd8acc9ac98517)
+- protect macro arguments with parens [`86cb2b1`](https://github.com/ImageMagick/ImageMagick/commit/86cb2b12ef2108e92b48c140f4c21dbf41fc0bea)
+- eliminate compiler warnings [`d90d8b4`](https://github.com/ImageMagick/ImageMagick/commit/d90d8b44665bb434b5236e4840591b7d036e79cf)
+- correct copyright year [`115271e`](https://github.com/ImageMagick/ImageMagick/commit/115271eced88159cf0c6ab31ad999305ac1e4e57)
+- Ignore multiple exif and xmp profiles for the same jxl frame and fix reading those profiles per frame. [`c301208`](https://github.com/ImageMagick/ImageMagick/commit/c301208f29210aa4d646f3dbbc21a17b5118cb90)
+- read/write in chunks [`fff3058`](https://github.com/ImageMagick/ImageMagick/commit/fff3058547f4ad3674d673bf96b91a9bfdbedad2)
+- optimize fwrite() arguments [`ada6785`](https://github.com/ImageMagick/ImageMagick/commit/ada67858257663af0648d9ed7dfb469bdc01ef14)
+- Renamed Output folder to Artifacts. [`2a69677`](https://github.com/ImageMagick/ImageMagick/commit/2a69677d2e41292f23938073c3a2b78380f7d5ed)
+- cancel interactive window selection with right button press [`ea2a2db`](https://github.com/ImageMagick/ImageMagick/commit/ea2a2db8a224a77ee5e4aeb84c966b8be78bdfbe)
+- cosmetic [`712bde4`](https://github.com/ImageMagick/ImageMagick/commit/712bde4a48bd4f0dc080ba6720f931e25948c28d)
+- eliminate compiler warning [`9a9a25c`](https://github.com/ImageMagick/ImageMagick/commit/9a9a25cc9c34f1bfccf921ef730405a18a4b3a53)
+- eliminate compiler warning [`0bd1687`](https://github.com/ImageMagick/ImageMagick/commit/0bd1687047475bddcf5e68aaa695e4f49882a876)
+- Make images mandatory in the issue template. [`c01fd37`](https://github.com/ImageMagick/ImageMagick/commit/c01fd3718bb27d13dd578327d0b89a9e7a117181)
+- Added extra header detection for avif files. [`9fc0590`](https://github.com/ImageMagick/ImageMagick/commit/9fc059069d5b3aadf126db7cc49e3cdbf2a7815e)
+- allow SeekBlob() to set an offset beyond the end of the blob [`27c3f99`](https://github.com/ImageMagick/ImageMagick/commit/27c3f995f83f7918b69d792dd464919429f10863)
+- be less forgiving for invalid image indexes [`25db2e5`](https://github.com/ImageMagick/ImageMagick/commit/25db2e59fba69266cba67fbc6a0dba49e142dced)
+- Fixed problem with empty macros (#7562) [`9fda5f2`](https://github.com/ImageMagick/ImageMagick/commit/9fda5f253386979f9152cf33b608d4fb852af33f)
+- Added missing null checks for RequestOpenCLDevice. [`f85448e`](https://github.com/ImageMagick/ImageMagick/commit/f85448e85aebba30f81e232495987cdd61fd4900)
+- Added missing null check for AcquireOpenCLCommandQueue. [`295e9c8`](https://github.com/ImageMagick/ImageMagick/commit/295e9c8623007373a03aeac2aeb139d2f36c615f)
+- persist app1 jpeg profile (https://github.com/ImageMagick/ImageMagick/issues/4713) [`f0357c7`](https://github.com/ImageMagick/ImageMagick/commit/f0357c700654bff9fc96b066f5e592a2ce6658e7)
+- Fixed build error. [`b3dd431`](https://github.com/ImageMagick/ImageMagick/commit/b3dd43137a15d61e5b387b93828b7b090ae73682)
+- Remove some of the dependencies for the macos-13 build. [`d0bce95`](https://github.com/ImageMagick/ImageMagick/commit/d0bce95d91bfb2150c0690e1a4d73ad710ced418)
+- parentheses is the plural of parenthesis [`1fac80a`](https://github.com/ImageMagick/ImageMagick/commit/1fac80a83b28cbe8b791dd644c77ae298d70b04d)
+- distribute quantization error for `-dither FloydSteinberg -depth` [`5b2825b`](https://github.com/ImageMagick/ImageMagick/commit/5b2825b292d3380b4f507293b14e3f98625ac4fc)
+- release [`8a0da9f`](https://github.com/ImageMagick/ImageMagick/commit/8a0da9feebbeb704f0173ed0dbe67c79b9ef3eb6)
+- properly set image byte order [`40f6599`](https://github.com/ImageMagick/ImageMagick/commit/40f659984d8c54d892d7ad605340ca8ccb22963c)
+- set max colormap size for remap [`1ffe565`](https://github.com/ImageMagick/ImageMagick/commit/1ffe565c2075d243156749d0514a44e90055eb6d)
+
 ## [7.1.1-36](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-35...7.1.1-36) - 2024-07-27
 
 ### Merged
