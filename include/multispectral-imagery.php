@@ -144,6 +144,9 @@ Image:
 <p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <p>And in this example, we create two meta channels:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre>
+<p>In this example, we blend two meta channels into a single alpha channel:</p>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre>
+<br/>
 <h5>Writing Multispectral Images</h5>
 <p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
