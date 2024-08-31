@@ -1373,8 +1373,8 @@ the supported image formats.</p>
   <tr>
     <td>CLIPBOARD</td>
     <td>RW</td>
-    <td>Windows Clipboard</td>
-    <td>Only available under Microsoft Windows.</td>
+    <td>Clipboard</td>
+    <td></td>
   </tr>
 
   <tr>
