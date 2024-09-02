@@ -220,7 +220,7 @@ display logo.gif</samp></pre>
 
 <h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
 
-<p>ImageMagick runs on Windows 7 (x86 , x64 &amp; arm64) or newer or Windows Server 2012 or newer.</p>
+<p>ImageMagick runs on Windows 10 (x86 , x64 &amp; arm64) or newer or Windows Server 2012 or newer.</p>
 
 <p>The amount of memory can be an important factor, especially if you intend to work on large images.  A minimum of 512 MB of RAM is recommended, but the more RAM the better.  Although ImageMagick runs well on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 

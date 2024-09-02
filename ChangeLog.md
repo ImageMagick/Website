@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-38](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-37...7.1.1-38) - 2024-09-01
+
+### Commits
+
+- properly set image byte order [`40f6599`](https://github.com/ImageMagick/ImageMagick/commit/40f659984d8c54d892d7ad605340ca8ccb22963c)
+- set max colormap size for remap [`1ffe565`](https://github.com/ImageMagick/ImageMagick/commit/1ffe565c2075d243156749d0514a44e90055eb6d)
+- beta release [`250b748`](https://github.com/ImageMagick/ImageMagick/commit/250b7485cd281172f397f6524aab631912f58064)
+- deprecate the -respect-paranthesis option [`4e7d789`](https://github.com/ImageMagick/ImageMagick/commit/4e7d789ca8d9d29902cec4f03b4cbc2f7c1f5148)
+- Build fixes. [`b80c509`](https://github.com/ImageMagick/ImageMagick/commit/b80c509e42430e7fac8ceb9c7b66905bf72fb1ea)
+- save IPTC + ICC profiles are profiles, not properties [`25d5335`](https://github.com/ImageMagick/ImageMagick/commit/25d53356b059c298cacb453b31c8dd937f7908b7)
+- update copyright year [`4caf7d1`](https://github.com/ImageMagick/ImageMagick/commit/4caf7d13ba83b1040c0a9d9c3f0d539c3c76605e)
+- Patch to fix reading of the ICC profile. [`18377f9`](https://github.com/ImageMagick/ImageMagick/commit/18377f96ec8fdacd454b5f46ba488c9ac54c5c4c)
+- prepping framework to interact with X11 clipboard [`b20dda3`](https://github.com/ImageMagick/ImageMagick/commit/b20dda3c002feada40cc4b9747cb99a62fc1f55f)
+- Build fix. [`20a5af3`](https://github.com/ImageMagick/ImageMagick/commit/20a5af3ae040b8f2cd8c30b63b6e705582d5268c)
+- More build fixes. [`c36fdf0`](https://github.com/ImageMagick/ImageMagick/commit/c36fdf0ab54d1ebbbbf528c8ba6fdaf2ebdfdec0)
+- Another attempt to silence the warnings. [`600708c`](https://github.com/ImageMagick/ImageMagick/commit/600708ca1e9122cfe61ec8afc35b5fc179be87d9)
+- Use SetImageProfilePrivate to avoid duplicate allocations. [`f246eab`](https://github.com/ImageMagick/ImageMagick/commit/f246eab0d8c04224b652ce33f1904ad3e482687b)
+- support clipboard delegate [`39a135a`](https://github.com/ImageMagick/ImageMagick/commit/39a135a0d0fefe5c00b1da8fdde9924dcc1f2ede)
+- restore clipboard.c [`1070b17`](https://github.com/ImageMagick/ImageMagick/commit/1070b178240a023bac7810fc054edb21a21e14e7)
+- improved rounding [`27a0a9c`](https://github.com/ImageMagick/ImageMagick/commit/27a0a9c37f18af9c8d823a3ea076f600843b553c)
+- don't allow negative scenes [`8fda05a`](https://github.com/ImageMagick/ImageMagick/commit/8fda05a5c96965e2821e927ebe6cbeb3a8549521)
+- eliminate compiler warnings [`878daf9`](https://github.com/ImageMagick/ImageMagick/commit/878daf986d651dfad788137df18142468ec454f5)
+- release [`b0ab922`](https://github.com/ImageMagick/ImageMagick/commit/b0ab92265bab638e6ecd2f18b45977c38771c671)
+
 ## [7.1.1-37](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-36...7.1.1-37) - 2024-08-24
 
 ### Merged
@@ -39,8 +63,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - parentheses is the plural of parenthesis [`1fac80a`](https://github.com/ImageMagick/ImageMagick/commit/1fac80a83b28cbe8b791dd644c77ae298d70b04d)
 - distribute quantization error for `-dither FloydSteinberg -depth` [`5b2825b`](https://github.com/ImageMagick/ImageMagick/commit/5b2825b292d3380b4f507293b14e3f98625ac4fc)
 - release [`8a0da9f`](https://github.com/ImageMagick/ImageMagick/commit/8a0da9feebbeb704f0173ed0dbe67c79b9ef3eb6)
-- properly set image byte order [`40f6599`](https://github.com/ImageMagick/ImageMagick/commit/40f659984d8c54d892d7ad605340ca8ccb22963c)
-- set max colormap size for remap [`1ffe565`](https://github.com/ImageMagick/ImageMagick/commit/1ffe565c2075d243156749d0514a44e90055eb6d)
 
 ## [7.1.1-36](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-35...7.1.1-36) - 2024-07-27
 
