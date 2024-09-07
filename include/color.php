@@ -22,15 +22,18 @@ magick -bordercolor 'rgb(0,100%,0)' -border 10 image.jpg image.png</samp></pre>
 
 <p>The sRGB, CMYK, HSL and HSB color models are used in numerical color specifications. These examples all specify the same red sRGB color:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>#f00                      #rgb
-#ff0000                   #rrggbb
-#ff0000ff                 #rrggbbaa
-#ffff00000000             #rrrrggggbbbb
-#ffff00000000ffff         #rrrrggggbbbbaaaa
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>#f00                       4-bit  #rgb
+#ff0000                    8-bit  #rrggbb
+#ff0000ff                  8-bit  #rrggbbaa
+#fff000000                12-bit  #rrrgggbbb
+#ffff00000000             16-bit  #rrrrggggbbbb
+#ffff00000000ffff         16-bit  #rrrrggggbbbbaaaa
+#ffffffff0000000000000000ffffffff
+                          32-bit  #rrrrrrrrggggggggbbbbbbbbaaaaaaaa
 rgb(255, 0, 0)            an integer in the range 0—255 for each component
 rgb(100.0%, 0.0%, 0.0%)   a float in the range 0—100% for each component</samp></pre>
 
-<p>The format of an sRGB value in hexadecimal notation is a '#' immediately followed by either three, six, or twelve hexadecimal characters. The three-digit sRGB notation (#rgb) is converted into six-digit form (#rrggbb) by replicating digits, not by adding zeros. For example,  #fb0 expands to #ffbb00. This ensures that white (#ffffff) can be specified with the short notation (#fff) and removes any dependencies on the color depth of the image. Use the hexadecimal notation whenever performance is an issue.  ImageMagick does not need to load the expansive color table to interpret a hexadecimal color, e.g., <samp>#000000</samp>, but it does if <samp>black</samp> is used instead.</p>
+<p>The format of an sRGB value in hexadecimal notation is a '#' immediately followed by 3-32 hexadecimal characters. The three-digit sRGB notation (#rgb) is converted into six-digit form (#rrggbb) by replicating digits, not by adding zeros. For example,  #fb0 expands to #ffbb00. This ensures that white (#ffffff) can be specified with the short notation (#fff) and removes any dependencies on the color depth of the image. Use the hexadecimal notation whenever performance is an issue.  ImageMagick does not need to load the expansive color table to interpret a hexadecimal color, e.g., <samp>#000000</samp>, but it does if <samp>black</samp> is used instead.</p>
 
 <p>The format of an sRGB value in the functional notation is 'rgb(<var>r</var>,<var>g</var>,<var>b</var>)',  where  <var>r</var>, <var>g</var>, and <var>b</var> are either three integer or float values in the range 0—255 or three integer or float percentage values in the range 0—100%. The value 255 corresponds to 100%, and to #F or #FF in the hexadecimal notation: rgb(255, 255, 255) = rgb(100%, 100%, 100%) = #FFF = #FFFFFF. Note, as of ImageMagick 7.0.10-53, the commas are no longer necessary and the slash can proceed the alpha value, e.g. <samp>rgb(255 128 0 / 50%)</samp>.</p>
 
