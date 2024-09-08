@@ -289,7 +289,7 @@ transparent, extract, background, or shape the alpha channel</td>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#ping">-ping</a></td>
-    <td>by default, efficiently determine certain image characteristics by only reading the requisite image metadata.  To identify all the image metadata and pixel characteristics, use <samp>+ping</samp>. </td>
+    <td>by default, efficiently determine certain image characteristics by only reading the requisite image metadata.  To accurately identify all the image metadata and pixel characteristics, use <samp>+ping</samp>. </td>
   </tr>
 
   <tr>
