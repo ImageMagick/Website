@@ -75,7 +75,7 @@ the supported image formats.</p>
     <td><a href="https://en.wikipedia.org/wiki/APNG">APNG</a></td>
     <td>RW</td>
     <td>Animated Portable Network Graphics</td>
-    <td>Note, you must use an explicit image format specifier to read an APNG (<samp>apng:myImage.apng</samp>) image sequence, otherwise it assumes a PNG image and only reads the first frame.</td>
+    <td>Note, you must use an explicit image format specifier to read an APNG (<samp>apng:myImage.apng</samp>) image sequence, otherwise it assumes a PNG image and only reads the first frame.  You must have <samp>ffmpeg</samp> in your execution path to process APNG images. </td>
   </tr>
 
   <tr>
