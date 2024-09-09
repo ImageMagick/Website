@@ -50,7 +50,7 @@
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">magick composite</a>: overlaps one image over another.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">magick display</a>: displays an image or image sequence on any X server.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a>: describes the format and characteristics of one or more image files.</li>
+    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">magick identify</a>: describes the format and characteristics of one or more image files.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">magick montage</a>: create a composite image by combining several separate images.</li>
