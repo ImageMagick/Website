@@ -348,7 +348,8 @@ be applied to expand the one channel into separate RGB (or other) channels.
 <dt class="col-md-4">animate, compare, composite, conjure, convert, display, identify,
 	import, mogrify, montage, stream</dt>
 <dd class="col-md-8">To reduce the footprint of the command-line utilities, these
-	utilities are symbolic links to the <samp>magick</samp> utility.  You can also invoke
+	utilities are symbolic links to the <samp>magick</samp> utility.  On Windows these utiliies are
+  installed as separate executables and the legacy convert executable is no longer included.  You can also invoke
 	them from the <samp>magick</samp> utility, for example, use <samp>magick logo: logo.png</samp>
 	to invoke the <samp>magick</samp> utility. <b>(In otherwords, call these utilities by
 	prefacing them with magick, such as magick compare, magick identify, magick mogrify,
