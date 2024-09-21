@@ -1404,6 +1404,40 @@ use:</p>
   </tr>
 
   <tr>
+    <td>uhdr:hdr-color-gamut=<var>value</var></td>
+    <td>Required Specify hdr intent color gamut. Choose from {bt709, display_p3, bt2100}.</td>
+  </tr>
+  
+  <tr>
+    <td>uhdr:hdr-color-transfer=<var>value</var></td>
+    <td>Required Specify hdr intent color transfer. Choose from {hlg, pq, linear}.</td>
+  </tr>
+  
+  <tr>
+    <td>uhdr:sdr-color-gamut=<var>value</var></td>
+    <td>Required Specify sdr intent color gamut. Choose from {bt709, display_p3, bt2100}.</td>
+  </tr>
+  
+  <tr>
+    <td>uhdr:gainmap-quality=<var>value</var></td>
+    <td>Optional, defaults to 95 Specify gainmap image encoding quality. Choose between [0-100].</td>
+  </tr>
+  <tr>
+    <td>uhdr:gainmap-gamma=<var>value</var></td>
+    <td>Optional, defaults to 1.0 Specify gainmap image encoding gamma. Any positive real number.</td>
+  </tr>
+  
+  <tr>
+    <td>uhdr:gainmap-min-content-boost=<var>value</var></td>
+    <td>Value to control how much darker an image can get, when shown on an HDR display, relative to the SDR rendition. Value MUST be in linear scale. *Optional, If not configured, computed internally. Specify min content boost. Any positive real number.</td>
+  </tr>
+  
+  <tr>
+    <td>uhdr:gainmap-max-content-boost=<var>value</var></td>
+    <td>Value to control how much brighter an image can get, when shown on an HDR display, relative to the SDR rendition. Value MUST be in linear scale. *Optional, If not configured, computed internally. Specify max content boost. Any positive real number.</td>
+  </tr>
+  
+  <tr>
     <td>video:intermediate-format=<var>{pam,webp}</var></td>
     <td>Set the video intermediate format option of <samp>ffmpeg</samp>.</td>
   </tr>
