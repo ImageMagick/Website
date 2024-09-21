@@ -1198,7 +1198,8 @@ the supported image formats.</p>
   <tr>
     <td>VIDEO</td>
     <td>RW</td>
-    <td>Various video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
+    <td>Various video formats</td>
+    <td>Video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
     <td> </td>
   </tr>
 
