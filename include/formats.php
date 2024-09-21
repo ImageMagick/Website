@@ -1171,7 +1171,7 @@ the supported image formats.</p>
     <td><a href="https://developer.android.com/media/platform/hdr-image-format">UHDR</a></td>
     <td>RW</td>
     <td>Ultra HDR</td>
-    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library. Recognized <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a> include <samp>uhdr:hdr-color-gamut=value</samp>, <samp>uhdr:hdr-color-transfer=value</samp>, <samp>uhdr:sdr-color-gamut=value</samp>, <samp>uhdr:gainmap-quality=value</samp>, <samp>uhdr:gainmap-gamma=value</samp>, <samp>uhdr:gainmap-min-content-boost=value</samp>, and <samp>uhdr:gainmap-max-content-boost=value</samp>.</td>
+    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library. Recognized <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a> include <samp>uhdr:hdr-color-gamut</samp>, <samp>uhdr:hdr-color-transfer</samp>, <samp>uhdr:sdr-color-gamut</samp>, <samp>uhdr:gainmap-quality</samp>, <samp>uhdr:gainmap-gamma</samp>, <samp>uhdr:gainmap-min-content-boost</samp>, and <samp>uhdr:gainmap-max-content-boost</samp>.</td>
   </tr>
 
   <tr>
