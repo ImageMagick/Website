@@ -1495,7 +1495,7 @@ of a 3D color cube. </p>
   <h2><a class="anchor" id="coalesce"></a>-coalesce</h2>
 </div>
 
-<p class="magick-description">Fully define the look of each frame of an GIF animation sequence, to form a 'film strip' animation.</p>
+<p class="magick-description">Fully define the look of each frame of a GIF animation sequence, to form a 'film strip' animation.</p>
 
 <p>Overlay each image in an image sequence according to
 its <a href="#dispose">-dispose</a> meta-data, to reproduce the look of
@@ -5654,7 +5654,7 @@ argument determine how many images to interpolate between each image. </p>
   <h2><a class="anchor" id="mosaic"></a>-mosaic</h2>
 </div>
 
-<p class="magick-description">An simple alias for the <a href="#layers" >-layers</a> method "mosaic"</p>
+<p class="magick-description">A simple alias for the <a href="#layers" >-layers</a> method "mosaic"</p>
 
 
 <div style="margin: auto;">
