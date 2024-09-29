@@ -29,7 +29,7 @@
 Features: HDRI
 </samp></pre>
 
-<p>With HDRI enabled, you can now create images with a much wider dynamic range, allowing for more vivid colors and better contrast. It ensures that HDR content can be displayed accurately on compatible devices while maintaining backward compatibility with SDR displays.  In this example, you can store the difference between a standard dynamic range (SDR) image and its high dynamic range (HDR) counterpart. Essentially, a gainmap captures the additional brightness and color information that HDR provides over SDR:</p>
+<p>With HDRI enabled, you can now create images with a much wider dynamic range, allowing for more vivid colors and better contrast. It ensures that HDR content can be displayed accurately on compatible devices while maintaining backward compatibility with SDR displays.  In this example, you can store the difference between a standard dynamic range (SDR) image and its high dynamic range (<a href="https://gregbenzphotography.com/hdr/">HDR</a>) counterpart. Essentially, a <a href="https://helpx.adobe.com/camera-raw/using/gain-map.html">gain map</a> captures the additional brightness and color information that HDR provides over SDR:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -define uhdr:hdr-color-gamut=bt709 -define uhdr:hdr-color-transfer=hlg \
   \( img_sdr.tif -depth 8 \)  \( img_hdr.tif -depth 16 \) uhdr:ultrahdr.jpg
