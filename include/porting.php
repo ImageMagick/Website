@@ -232,7 +232,7 @@ Rec709Luminance</samp></pre>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">
-convert -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
+magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
 </pre>
 
 <h2><a class="anchor" id="core"></a>MagickCore API</h2>
@@ -349,11 +349,11 @@ be applied to expand the one channel into separate RGB (or other) channels.
 	import, mogrify, montage, stream</dt>
 <dd class="col-md-8">To reduce the footprint of the command-line utilities, these
 	utilities are symbolic links to the <samp>magick</samp> utility.  On Windows these utiliies are
-  installed as separate executables and the legacy convert executable is no longer included.  You can also invoke
+  installed as separate executables and the legacy <samp>convert</samp> executable is no longer included.  You can also invoke
 	them from the <samp>magick</samp> utility, for example, use <samp>magick logo: logo.png</samp>
 	to invoke the <samp>magick</samp> utility. <b>(In otherwords, call these utilities by
 	prefacing them with magick, such as magick compare, magick identify, magick mogrify,
-	magick montage, etc. Do not use magick convert. That is simply magick)</b>
+	magick montage, etc. Do not use <samp>magick convert</samp>. That is simply magick)</b>
 </dd></dl>
 
 <h2>Behavioral Changes</h2>
