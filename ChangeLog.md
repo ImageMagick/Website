@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-39](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-38...7.1.1-39) - 2024-10-05
+
+### Merged
+
+- uhdr: fix language choice in autoconf [`#7663`](https://github.com/ImageMagick/ImageMagick/pull/7663)
+- uhdr.c: update uhdr coder for gainmap metadata configuration [`#7635`](https://github.com/ImageMagick/ImageMagick/pull/7635)
+- Add missing Threshold command to command array of Region of Interest mode [`#7606`](https://github.com/ImageMagick/ImageMagick/pull/7606)
+
+### Commits
+
+- beta release [`1cb5d3e`](https://github.com/ImageMagick/ImageMagick/commit/1cb5d3e74caaf00b68c4dc3b718723050696507e)
+- Added null checks because AcquireProfileStringInfo can return null. [`e0e6ad8`](https://github.com/ImageMagick/ImageMagick/commit/e0e6ad83667e0f4a2c88555f1ab21649e7b8e2d3)
+- cosmetic [`1de7476`](https://github.com/ImageMagick/ImageMagick/commit/1de7476bb4b7491fca16d0f3f932384a2140d283)
+- revert INSTALL_BASE PerlMagick patch [`7cf217f`](https://github.com/ImageMagick/ImageMagick/commit/7cf217f1fb89cda1f0b2285e458a5740424323c3)
+- Also treat the group and element being zero as the end of data in a dicom file (#7610). [`1e2b313`](https://github.com/ImageMagick/ImageMagick/commit/1e2b31323e2679a79f9e48857b5df6993011199d)
+- Also build the Q8 and Q16 msix installer during a release. [`51348da`](https://github.com/ImageMagick/ImageMagick/commit/51348da2ba69042b595627ea3415910dc7c98683)
+- Also add the new msixbundles to the release. [`6299383`](https://github.com/ImageMagick/ImageMagick/commit/629938332428de81ac82851dd604c2ece4883f60)
+- LIBRARY_PATH is reserved, use LIBRARY_ABSOLUTE_PATH instead [`ba49d0c`](https://github.com/ImageMagick/ImageMagick/commit/ba49d0cd543f6d0dd966be03bb09e185984e9635)
+- to do: write pixel data in YCBCR subsampled format [`4e48d3c`](https://github.com/ImageMagick/ImageMagick/commit/4e48d3c7e0e84e615ec9d6146279fd1afeb4a254)
+- update to latest web pages [`4250d75`](https://github.com/ImageMagick/ImageMagick/commit/4250d752f060226d726905aabd63a0ed082c839a)
+- improve URW font search [`14bccf9`](https://github.com/ImageMagick/ImageMagick/commit/14bccf9d59bb1e51b7149de8d94b71e095e5ddcf)
+- checAddk Ubuntu URW font path [`ca932f5`](https://github.com/ImageMagick/ImageMagick/commit/ca932f5171a96dfa7038fc785b8f08904f46ace7)
+- Update path to Dejavu fonts [`67491b0`](https://github.com/ImageMagick/ImageMagick/commit/67491b02f34d71d4a84dab46aa2df128344c5858)
+- we prefer URW OTF fonts [`de884e5`](https://github.com/ImageMagick/ImageMagick/commit/de884e5cf43d3580f33a4a5214c983474ba4a25c)
+- Correct the return value for when AcquireProfileStringInfo returns null. [`8169dc7`](https://github.com/ImageMagick/ImageMagick/commit/8169dc792116dce90c96e447c946912c260eb12e)
+- latest autoconf update [`a87bb52`](https://github.com/ImageMagick/ImageMagick/commit/a87bb525efd4eb3a723b043ff1fa28dbf1d33964)
+- regenerate [`45c7b59`](https://github.com/ImageMagick/ImageMagick/commit/45c7b59b9e78edad8a53f70ede7cca9f68a5fcb9)
+- Added missing checks for the return value of AcquireProfileStringInfo. [`c429de8`](https://github.com/ImageMagick/ImageMagick/commit/c429de8343ec5ed7efc0252a1b73901531bcdb56)
+- Applied patches from Snibgo (#7622). [`61f8f32`](https://github.com/ImageMagick/ImageMagick/commit/61f8f3210ec57c545bf2b39ee48230890e61c981)
+- Activate the alpha channel in SetImageBackgroundColor instead of setting it to opaque alpha because the alpha channel will be set in the method. [`0299c16`](https://github.com/ImageMagick/ImageMagick/commit/0299c168cace8257e87329e62096e4792502f90d)
+- Make sure we read the last xmp profile inside the pdf file. [`a14cf06`](https://github.com/ImageMagick/ImageMagick/commit/a14cf06a83ccfff069ca52e19e8a18b8d6387155)
+- check for columns overflow [`b227a02`](https://github.com/ImageMagick/ImageMagick/commit/b227a02711f0a1e4339a5c7fbbeda41ee6223727)
+- Call SetImageProfilePrivate after call GetStringInfoDatum because it is possible that SetImageProfilePrivate destroys the profile (#7376). [`f70d813`](https://github.com/ImageMagick/ImageMagick/commit/f70d81363e390968b47660d12799382f4f0bf5ab)
+- The image should only be destroyed in case of an error. [`dcd543e`](https://github.com/ImageMagick/ImageMagick/commit/dcd543edaa9312917739dcbc6236dec852776f75)
+- Several changes to fix reading a thumbnail from an exif profile (#7662). [`b719ad8`](https://github.com/ImageMagick/ImageMagick/commit/b719ad8d8e580ab98c9b8d63a2da69b5f9f61857)
+- latest autoconf script update [`e339a05`](https://github.com/ImageMagick/ImageMagick/commit/e339a05edf76fc1d50bde016e20f4b5d52c0eb2d)
+- release [`18ae555`](https://github.com/ImageMagick/ImageMagick/commit/18ae55523a3b901081fa21cce7ca559ee81b7276)
+
 ## [7.1.1-38](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-37...7.1.1-38) - 2024-09-01
 
 ### Commits
