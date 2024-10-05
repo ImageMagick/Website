@@ -40,7 +40,7 @@
 
 <p>Finally, verify the ImageMagick install worked properly, type</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>/usr/local/bin/convert logo: logo.gif
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>/usr/local/bin/magick logo: logo.gif
 </samp></pre>
 
 <p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript and Freetype are prerequisites, otherwise expect the EPS, PS, PDF and text annotations tests to fail.</p>
@@ -55,7 +55,7 @@
 <p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <samp>/../usr/local</samp> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-linux-installation.php">Advanced Linux Source Installation</a>.</p>
 
 <h2><a class="anchor" id="windows"></a>Install from Windows Source</h2>
-<p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your magick/convert commands go to the old version.<p>
+<p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your <samp>magick</samp> commands go to the old version.<p>
 <p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
 
 <p>Clone the Github repo:<p>
@@ -78,8 +78,8 @@ to compile the program and on completion run the program.</p>
 
 <p>To verify ImageMagick is working properly, launch a MS-DOS Command Prompt window and type</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "convert logo: image.jpg"); ?>
-<p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call Magick/convert from any directory.<p>
+<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "magick logo: image.jpg"); ?>
+<p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call <samp>magick<samp> from any directory.<p>
 <p>For a more comprehensive test, run the ImageMagick validation suite:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>validate
