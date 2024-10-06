@@ -79,7 +79,7 @@
 <h2><a class="anchor" id="related-projects"></a>Related Projects</h2>
 <ul>
   <dd class="col-md-8"><a href="https://github.com/ImageMagick/MagickCache" target="_blank">MagickCache</a></dd>
-  <dd class="col-md-8"><a href="http://urban-warrior.org" target="_blank">Wizard's Toolkit</a></dd>
+  <dd class="col-md-8"><a href="http://magick./imagemagick.org" target="_blank">Wizard's Toolkit</a></dd>
   <dd class="col-md-8"><a href="https://spiritual-warrior.org/" target="_blank">The Tao of the Spiritual Warrior</a></dd>
 </ul>
 </div>
