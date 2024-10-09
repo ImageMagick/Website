@@ -450,6 +450,12 @@ display logo.gif</samp></pre>
 
 <p>Verify its <a href="https://imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
 
+<p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>, <a href="https://scoop.sh/">scoop</a>, or <a href="https://community.chocolatey.org/">chocolatey</a>.</p>
+
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.ImageMagick</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>scoop install main/imagemagick</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>choco install imagemagick</samp></pre>
+
 <p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
