@@ -7,7 +7,7 @@
 
 <p>We list a few examples of the <samp>montage</samp> command here to illustrate its usefulness and ease of use.  To get started, let's montage two images into a single composite:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -background '#336699' -geometry +4+4 rose.jpg red-ball.png montage.jpg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -background '#336699' -geometry 70x70+4+4 rose.jpg red-ball.png montage.jpg </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
@@ -24,7 +24,7 @@
 
 <p>Ok, let's add some decorations:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry +4+4 rose.jpg red-ball.png frame.jpg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry 70x70+4+4 rose.jpg red-ball.png frame.jpg </samp></pre>
 
 <ul>
   <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
