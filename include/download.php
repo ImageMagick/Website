@@ -220,12 +220,6 @@ display logo.gif</samp></pre>
 
 <h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
 
-<p>You can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>, <a href="https://scoop.sh/">scoop</a>, or <a href="https://community.chocolatey.org/">chocolatey</a>.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.ImageMagick</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>scoop install main/imagemagick</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>choco install imagemagick</samp></pre>
-
 <p>ImageMagick runs on Windows 10 (x86 , x64 &amp; arm64) or newer or Windows Server 2012 or newer.</p>
 
 <p>The amount of memory can be an important factor, especially if you intend to work on large images.  A minimum of 512 MB of RAM is recommended, but the more RAM the better.  Although ImageMagick runs well on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
