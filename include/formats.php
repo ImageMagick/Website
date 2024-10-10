@@ -556,13 +556,6 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://en.wikipedia.org/wiki/JPEG_XR">JXR</a></td>
-    <td>RW</td>
-    <td>JPEG extended range</td>
-    <td>Requires the <a href="https://jxrlib.codeplex.com/">jxrlib</a> delegate library. Put the JxrDecApp and JxrEncApp applications in your execution path.</p>
-  </tr>
-
-  <tr>
     <td><a href="http://www.json.org">JSON</a></td>
     <td>W</td>
     <td>JavaScript Object Notation, a lightweight data-interchange format</td>
@@ -574,6 +567,13 @@ the supported image formats.</p>
     <td>RW</td>
     <td>JPEG XL image coding system</td>
     <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl.git">JPEG XL</a> delegate library. Use <samp>-define jxl:effort=<i>integer</i></samp> to set the effort and <samp>-define jxl:decoding-speed=<i>integer</i></samp> to set the decoding speed. To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats and 16 for half-precision.</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://en.wikipedia.org/wiki/JPEG_XR">JXR</a></td>
+    <td>RW</td>
+    <td>JPEG extended range</td>
+    <td>Requires the <a href="https://jxrlib.codeplex.com/">jxrlib</a> delegate library. Put the JxrDecApp and JxrEncApp applications in your execution path.</p>
   </tr>
 
   <tr>
