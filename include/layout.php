@@ -14,9 +14,9 @@
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
     $meta->application_name="ImageMagick";
-    $meta->description=$description;
+    $meta->description="ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.";
     $meta->application_url="https://imagemagick.org";
-    $meta->keywords2="image processing, image manipulation, image conversion, graphic design tool, image editing";
+    $meta->keywords2="Image Processing, Digital Image Editing, Image Conversion, Open-Source Software, Image Manipulation, Command-Line Image Tools";
     $meta->sitename="ImageMagick";
     $meta->slogan="Mastering digital image alchemy.";
     $meta->email="webmaster@imagemagick.org";
