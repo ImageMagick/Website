@@ -19,11 +19,7 @@
       $description=$this->description;
       if (!empty($title))
         $description="$title – $this->description";
-      $keywords=strtolower($title);
-      $keywords=str_replace('  ',' ',$keywords);
-      $keywords=str_replace(',','',$keywords);
-      $keywords=str_replace('and ','',$keywords);
-      $meta_words=str_replace(' ',', ',$keywords);
+      $meta_words=ucfirst($title);
       $meta="<meta charset=\"utf-8\">\n";
       $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
       if (empty($title))
