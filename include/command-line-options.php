@@ -6566,6 +6566,11 @@ light conditions. </p>
 
 <p>This option sets the scene number of an image or the first image in an image sequence.</p>
 
+
+<div style="margin: auto;">
+  <h2><a class="anchor" id="screen"></a>-screen</h2>
+</div>
+
 <p class="magick-description">Specify the screen to capture.</p>
 
 <p>This option indicates that the GetImage request used to obtain the image
