@@ -22,7 +22,7 @@
     $meta->email="webmaster@imagemagick.org";
 ?>
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="dark">
 <head>
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/color-modes.js" ></script>
   <?php echo $meta->metadata($title); ?>

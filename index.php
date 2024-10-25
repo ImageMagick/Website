@@ -1,4 +1,4 @@
 <?php
-  $title='Convert, Edit, or Compose Digital Images';
+  $title='Mastering Digital Image Alchemy';
   include('session.php');
 ?>
