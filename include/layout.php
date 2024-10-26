@@ -24,7 +24,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/color-modes.js" ></script>
   <?php echo $meta->metadata($title); ?>
   <meta itemprop='url' content='https://imagemagick.org/' />
   <meta itemprop='title' content='ImageMagick' />
@@ -41,6 +40,7 @@
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
+  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/color-modes.js" ></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
 </head>
