@@ -9,7 +9,7 @@
 
 <p>The following are some typical examples of use:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding.jpg" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding.jpg" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Start by choosing one sRGB color (somewhere on the image -- in this case the yellow of the flowers) and offset it low and high to form two sRGB colors. The lower values form the start color and the higher values form the stop color. Begin with <samp>sRGB(183,132,20)</samp>. Offset its values by +-20 to identify the start color (-) and the stop color (+); namely, R=183+-20, G=132+-20, and B=40+-20:</p>
 
@@ -17,13 +17,13 @@
 
 <p>this returns the outline of the yellow flower petals:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Now, pick two RGB colors: <samp>sRGB(159,150,0)</samp> and <samp>sRGB(205,100,45):</samp></p>
 
 <pre class="code">magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</samp></ul>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, select one sRGB color and convert it to HSV and offset its values low and high to generate the start and stop HSV colors. Use -colorspace HSV to convert the image to HSV. For our HSV example, we pick <samp>sRGB(183,132,20)</samp> and convert to HSV:</p>
 
@@ -37,7 +37,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 
 <pre class="code">magick monet.jpg -colorspace HSV -color-threshold 'hsv(21,79%,62%)-hsv(61,99%,85%)' monet.gif</pre>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, pick two RGB colors. Use <samp>-colorspace HSV</samp> to convert the image to HSV, and apply the RGB start and stop colors.  Choose <samp>sRGB(158,77,33)</samp> and <samp>sRGB(213,217,2)</samp>:</p>
 
@@ -45,7 +45,7 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 
 <p>Here is the expected results:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-hsv-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, choose two sRGB colors and convert them to gray. Now convert the image to gray and use the gray thresholding colors.</p>
 
@@ -65,5 +65,5 @@ magick xc:"sRGB(205,100,45)" -colorspace gray txt:
 
 <p>Here is the results of the color thresholding operation:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-gray.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/color-thresholding-gray.gif" alt="[Color Thresholding]" width="265" height="333" name="Color Thresholding" /></ul>
 </div>

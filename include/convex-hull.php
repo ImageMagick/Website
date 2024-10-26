@@ -15,7 +15,7 @@ magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -form
 
 <p>For example, consider the following white rectangle on a black background:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" name="convert-hull" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" name="convert-hull" /></ul>
 
 <p>The convex hull set of points may be computed as:</p>
 
@@ -29,20 +29,20 @@ magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -form
 
 <p>Here is an example using a non-convex shaped image on a black background:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" name="convert-hull-blocks" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" name="convert-hull-blocks" /></ul>
 
 <pre class="code">magick blocks_black.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</pre>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" name="convert-hull" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" name="convert-hull" /></ul>
 
 <p>Finally, here is an example with a non-constant, non-black background using -fuzz to determine the background color:</p>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
 
 <p>Now let's highlight the convex hull of the image foreground object:</p>
 <pre class="code">magick barn_rot20.png -fuzz 10% -set hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</pre>
 
-<ul><img class="img-fluid border rounded-3 shadow-lg mb-4" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
 
 <h2><a class="anchor" id="box"></a>Minimum Bounding Box</h2>
 <p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <samp>%[minimum-bounding-box]</samp> to return the points that make up the bounding box.  In addition, these properties are set: <samp>minimum-bounding-box:area</samp>, <samp>minimum-bounding-box:width</samp>, <samp>minimum-bounding-box:height</samp>, and <samp>minimum-bounding-box:angle</samp>. 
