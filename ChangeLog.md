@@ -5,6 +5,62 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-40](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-39...7.1.1-40) - 2024-11-09
+
+### Merged
+
+- .cut (Dr Halo) reading when run count in header [`#7734`](https://github.com/ImageMagick/ImageMagick/pull/7734)
+- Bump azure/trusted-signing-action from 0.4.0 to 0.5.0 [`#7725`](https://github.com/ImageMagick/ImageMagick/pull/7725)
+- Implement Magic Kernel Sharp 2013 and 2021 [`#7701`](https://github.com/ImageMagick/ImageMagick/pull/7701)
+
+### Commits
+
+- beta release [`ddbed3d`](https://github.com/ImageMagick/ImageMagick/commit/ddbed3d88a2575ef8ca3d032ce6ce026d57d1f90)
+- update web site [`0ca37b0`](https://github.com/ImageMagick/ImageMagick/commit/0ca37b0de25df22bdd4722a97368a089fef1eeb8)
+- don't process TIFF image if there is an exception [`e96022d`](https://github.com/ImageMagick/ImageMagick/commit/e96022d5f377f2a4c0780be9f60ed44535dc5488)
+- correct download links [`87f16e6`](https://github.com/ImageMagick/ImageMagick/commit/87f16e61ec6071a1b94885ff32fd276948a2e2ca)
+- Closing blob before destroying it to fix access violation. [`5d634e7`](https://github.com/ImageMagick/ImageMagick/commit/5d634e7bd0d5290724fdc0cfbb249f71dfe83628)
+- Also update the Q8 and Q16 version on winget after each release. [`dbbc963`](https://github.com/ImageMagick/ImageMagick/commit/dbbc963301adc5548e6174a7c4cb6b835d075d9f)
+- support ICON size of 512 (https://github.com/ImageMagick/ImageMagick/issues/7684) [`a404e92`](https://github.com/ImageMagick/ImageMagick/commit/a404e926c355ad4151df252e081a67f188635769)
+- Refactor code to prepare for reading tiled images with the new openexr api. [`a972fc2`](https://github.com/ImageMagick/ImageMagick/commit/a972fc24005c618999429a380861f996402dc366)
+- Whitespace. [`7a34b24`](https://github.com/ImageMagick/ImageMagick/commit/7a34b24639c445e4b382969926f79bd84136af00)
+- More whitespace. [`b31d8df`](https://github.com/ImageMagick/ImageMagick/commit/b31d8df7c625590208d4c7a2ffb1f8ea72549543)
+- Code style changes. [`8608c8b`](https://github.com/ImageMagick/ImageMagick/commit/8608c8bf0d03d78b9aa1decdb5bb63b2e30b9ac9)
+- Restored support for reading tiled images with the new openexr api. [`cbe12a5`](https://github.com/ImageMagick/ImageMagick/commit/cbe12a59a10287331866f1a0684bfca00cc22517)
+- do not "ping" image for identify:locate define (https://github.com/ImageMagick/ImageMagick/issues/7693) [`664c955`](https://github.com/ImageMagick/ImageMagick/commit/664c95588b2dd91deb68fe7282263daa74387b86)
+- don't truncate "clipboard" delegate [`39df846`](https://github.com/ImageMagick/ImageMagick/commit/39df846d2d12ab133b216f72208afeeed7d72e28)
+- Corrected check for indexed channels in PSD files. [`7de80e7`](https://github.com/ImageMagick/ImageMagick/commit/7de80e7e147fa44297ba0ceee1e8df20d360b0fd)
+- increase the default undo cache limit [`b325b0c`](https://github.com/ImageMagick/ImageMagick/commit/b325b0c20f525dde8efcc4c23bb7d01c2889a5b7)
+- export exception when undo resource limit exceeded [`9e0a3aa`](https://github.com/ImageMagick/ImageMagick/commit/9e0a3aa1a74f9fa15031eeb7fadd008895133e6f)
+- bump semantic versioning [`7994540`](https://github.com/ImageMagick/ImageMagick/commit/799454079e502187fd20941d21b5e69b7f9a49e6)
+- corrected semantic versioning [`cd2cfea`](https://github.com/ImageMagick/ImageMagick/commit/cd2cfea37f8ae6e60e95c00df93e0e425c252cdb)
+- Simplify checks. [`c108ef0`](https://github.com/ImageMagick/ImageMagick/commit/c108ef0f1632a3cb970067f7b72261670a49d840)
+- respect alpha Update trait (#https://github.com/ImageMagick/ImageMagick/issues/7709) [`2221bab`](https://github.com/ImageMagick/ImageMagick/commit/2221bab9a9c662368bf89b7a463d8e93a8bfb8e2)
+- Lab translation not required for HDRI support (https://github.com/ImageMagick/ImageMagick/issues/7724) [`a22cb78`](https://github.com/ImageMagick/ImageMagick/commit/a22cb787917ff5e9c63bf710dc3a4f7747de6cb1)
+- Simplify setting the data_precision when writing a lossless jpeg image. [`5fb1f0f`](https://github.com/ImageMagick/ImageMagick/commit/5fb1f0f0fca16dabf604fdd07c9c935213b0074d)
+- lastest autoconf/automake update [`c641095`](https://github.com/ImageMagick/ImageMagick/commit/c6410959676151a94bb1efc32667571dadadd5df)
+- if default font not found, identify a suitable font (https://github.com/ImageMagick/ImageMagick/issues/7728) [`c10d6f8`](https://github.com/ImageMagick/ImageMagick/commit/c10d6f81c0c653bd0302a0edd4e08388d3b2b424)
+- eliminate g++ 14 exceptions [`ffc0b62`](https://github.com/ImageMagick/ImageMagick/commit/ffc0b62cacee07f4a7c1beea47ceb0003d355a8e)
+- Fixed build error. [`f02dbd2`](https://github.com/ImageMagick/ImageMagick/commit/f02dbd252fac9eea6b9d035a66b05ab8b09bfb08)
+- Removed statement to fix macos build error. [`a621033`](https://github.com/ImageMagick/ImageMagick/commit/a62103338859b600f4b53c7415a019b22b004659)
+- reset memory to avoid possible uninitialized pixel [`7d51cfd`](https://github.com/ImageMagick/ImageMagick/commit/7d51cfd39039c02b28b064b2fb9c3ff49e9dd65e)
+- search for default font (https://github.com/ImageMagick/ImageMagick/issues/7728) [`a758e39`](https://github.com/ImageMagick/ImageMagick/commit/a758e39137f88752a503a85d66e2ab5461756c04)
+- remove std namespace [`b3c11cd`](https://github.com/ImageMagick/ImageMagick/commit/b3c11cd19a4c3bdcf3f73e5a0a2de4220db8938e)
+- clone website documentation [`a4d0fe1`](https://github.com/ImageMagick/ImageMagick/commit/a4d0fe12fab33ea2b82935374cf735c3db2b8aeb)
+- conditionally compile new operator [`01a5f46`](https://github.com/ImageMagick/ImageMagick/commit/01a5f460bc5672ece333a9a9d705a67130b2e3c6)
+- configure urw type1 fonts [`9a8db41`](https://github.com/ImageMagick/ImageMagick/commit/9a8db41cb9df97dbb21ab62a302757a4b48de197)
+- list font metrics [`9efe144`](https://github.com/ImageMagick/ImageMagick/commit/9efe144eced6aa2bf32ed5d8d37d55a4701a6327)
+- check type1 folder for type1 fonts [`f56b105`](https://github.com/ImageMagick/ImageMagick/commit/f56b1057463c825e3559f790c260a76f1a2c2e5f)
+- search type1 folder for type1 fonts [`6818700`](https://github.com/ImageMagick/ImageMagick/commit/6818700e62c36f3bb2638f04bb39235313d488f2)
+- eliminate compiler warning [`6034f9d`](https://github.com/ImageMagick/ImageMagick/commit/6034f9dcc31bed5edc7c4ac715c5c4ff418785e5)
+- Patch that ignores the layer and/or view of an exr channel name when all channels start with that prefix (#7751). [`0b452bb`](https://github.com/ImageMagick/ImageMagick/commit/0b452bba8082b1c4bb4b263885e27f77fdb70132)
+- Don't write the null terminator in pdf values to fix the bug reported in #7756. [`79bc772`](https://github.com/ImageMagick/ImageMagick/commit/79bc77244d7d7379fab7feb23453878b5c010800)
+- exit on error exception [`8492479`](https://github.com/ImageMagick/ImageMagick/commit/8492479e1ddf093c6b1509b81f1aad931e99480b)
+- Removed font searches that were added for testing. [`f9bc211`](https://github.com/ImageMagick/ImageMagick/commit/f9bc21178a4a8c0ef230c4c24532a6e648ce9b67)
+- Removed __BORLANDC__ check. [`5d3d7a7`](https://github.com/ImageMagick/ImageMagick/commit/5d3d7a78b2369ee5976805a6cdadcca7107c39a9)
+- eliminate redundant declarations [`08de3ab`](https://github.com/ImageMagick/ImageMagick/commit/08de3ab435c3685266da4b27df70867aad1d9d47)
+- release [`ed93f7f`](https://github.com/ImageMagick/ImageMagick/commit/ed93f7fe0313ae51b10517f6f980127dccd907d5)
+
 ## [7.1.1-39](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-38...7.1.1-39) - 2024-10-05
 
 ### Merged
