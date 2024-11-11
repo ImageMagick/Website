@@ -1462,6 +1462,16 @@ use:</p>
   </tr>
   
   <tr>
+    <td>uhdr:target-display-peak-brightness=<var>203.0-10000.0</var></td>
+    <td>Set the target display peak brightness in nits. This is used for
+        configuring hdr capacity max of gainmap metadata. This value determines
+        the weight by which the gain map coefficients are scaled during decode.
+        If this is not configured, then default peak luminance of HDR
+        intent's color transfer under test is used. For hlg, this corresponds
+        to 1000 nits and for linear and pq, this corresponds to 10000 nits.</td>
+  </tr>
+
+  <tr>
     <td>video:intermediate-format=<var>{pam,webp}</var></td>
     <td>Set the video intermediate format option of <samp>ffmpeg</samp>.</td>
   </tr>
