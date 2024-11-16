@@ -57,9 +57,9 @@ backward quotes):
 <p>Windows users may get started by manually editing a project file
 for one of the Magick++ demo programs. 
 </p>
-<p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the InitializeMagick() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
+<p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the MagickPlusPlusGenesis() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>int main( int argc, char ** argv) {
-  InitializeMagick(*argv);
+  MagickPlusPlusGenesis genesis(*argv);
   ...  </samp></pre>
 <p>This initialization step is not required under Linux, Linux,
 Cygwin, or any other operating environment that supports the notion
@@ -75,7 +75,7 @@ using namespace Magick;
 
 int main(int argc,char **argv) 
 { 
-  InitializeMagick(*argv);
+  MagickPlusPlusGenesis genesis(*argv);
 
   // Construct the image object. Separating image construction from the 
   // the read operation ensures that a failure to read the image file 
