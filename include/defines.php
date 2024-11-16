@@ -1404,18 +1404,9 @@ use:</p>
   </tr>
 
   <tr>
-    <td>uhdr:hdr-color-gamut=<var>{bt709|display_p3|bt2100}</var></td>
-    <td>Set input HDR intent color gamut. Used during encoding. Required.</td>
-  </tr>
-
-  <tr>
-    <td>uhdr:hdr-color-transfer=<var>{hlg|pq|linear}</var></td>
-    <td>Set input HDR intent color transfer. Used during encoding. Required.</td>
-  </tr>
-
-  <tr>
-    <td>uhdr:sdr-color-gamut=<var>{bt709|display_p3|bt2100}</var></td>
-    <td>Set input SDR intent color gamut. Used during encoding. Required.</td>
+    <td>uhdr:gainmap-gamma=<var>value</var></td>
+    <td>Set gainmap image encoding gamma. Must be greater than 0.0. Used during
+        encoding. Optional. Default value is 1.0.</td>
   </tr>
 
   <tr>
@@ -1424,22 +1415,6 @@ use:</p>
         with 1 indicating lowest image quality or highest compression and 100
         indicating best quality or least effective compression. Used during
         encoding. Optional. Default value is 95.</td>
-  </tr>
-
-  <tr>
-    <td>uhdr:gainmap-gamma=<var>value</var></td>
-    <td>Set gainmap image encoding gamma. Must be greater than 0.0. Used during
-        encoding. Optional. Default value is 1.0.</td>
-  </tr>
-
-  <tr>
-    <td>uhdr:gainmap-min-content-boost=<var>value</var></td>
-    <td>Specify the minimum allowed ratio of the linear luminance for the target
-        HDR rendition relative to (divided by) that of the SDR image, at a given
-        pixel. In other words, this specifies how much darker a pixel can get,
-        when shown on an HDR display, relative to the SDR rendition. Must be
-        greater than 0.0. Used during encoding. Optional. If not configured,
-        this is computed dynamically based on the input.</td>
   </tr>
 
   <tr>
@@ -1453,6 +1428,26 @@ use:</p>
   </tr>
 
   <tr>
+    <td>uhdr:gainmap-min-content-boost=<var>value</var></td>
+    <td>Specify the minimum allowed ratio of the linear luminance for the target
+        HDR rendition relative to (divided by) that of the SDR image, at a given
+        pixel. In other words, this specifies how much darker a pixel can get,
+        when shown on an HDR display, relative to the SDR rendition. Must be
+        greater than 0.0. Used during encoding. Optional. If not configured,
+        this is computed dynamically based on the input.</td>
+  </tr>
+
+  <tr>
+    <td>uhdr:hdr-color-gamut=<var>{bt709|display_p3|bt2100}</var></td>
+    <td>Set input HDR intent color gamut. Used during encoding. Required.</td>
+  </tr>
+
+  <tr>
+    <td>uhdr:hdr-color-transfer=<var>{hlg|pq|linear}</var></td>
+    <td>Set input HDR intent color transfer. Used during encoding. Required.</td>
+  </tr>
+
+  <tr>
     <td>uhdr:output-color-transfer=<var>{hlg|pq|linear|srgb}</var></td>
     <td>Set the target display transfer characteristics on which the
         ultrahdr image is rendered. Used during decoding. Required.
@@ -1461,6 +1456,16 @@ use:</p>
         hdr image and sent as output.</td>
   </tr>
   
+  <tr>
+    <td>uhdr:sdr-color-gamut=<var>{bt709|display_p3|bt2100}</var></td>
+    <td>Set input SDR intent color gamut. Used during encoding. Required.</td>
+  </tr>
+
+  <tr>
+    <td>uhdr:uhdr:target-display-peak-brightness=<var>value</var></td>
+    <td>Peak brightness refers to the maximum brightness level that a display can achieve.  This is important for accurately representing bright highlights in HDR content.</td>
+  </tr>
+
   <tr>
     <td>video:intermediate-format=<var>{pam,webp}</var></td>
     <td>Set the video intermediate format option of <samp>ffmpeg</samp>.</td>
