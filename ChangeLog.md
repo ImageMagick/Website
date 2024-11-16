@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-40...7.1.1-41) - 2024-11-16
+
+### Merged
+
+- revert map changes breaking ABI [`#7768`](https://github.com/ImageMagick/ImageMagick/pull/7768)
+- Fix compiler identification with Clang on Darwin [`#7773`](https://github.com/ImageMagick/ImageMagick/pull/7773)
+
+### Commits
+
+- beta release [`b8c3266`](https://github.com/ImageMagick/ImageMagick/commit/b8c3266045142303ab4196d4f643a2141cbdb6bc)
+- reference cstdlib [`e62d04d`](https://github.com/ImageMagick/ImageMagick/commit/e62d04d4e1bbbb7d086df44f6344a2430be9b9de)
+- remove new operator [`bf5650f`](https://github.com/ImageMagick/ImageMagick/commit/bf5650f0dd41b500102a129d6867cb568f4edee4)
+- There is no need to set the green and blue channel when the numcomps is not 1 in the jp2 coder. [`2e40ca1`](https://github.com/ImageMagick/ImageMagick/commit/2e40ca126b9074b8a2f3637b258a9c496d4c9996)
+- Improved decoding speed of the jp2 decoder by storing some values that won't change per image or row. [`59b6dc4`](https://github.com/ImageMagick/ImageMagick/commit/59b6dc4fa3fdb198e3e090852f13cfab182421e6)
+- to ensure code clarity and correctness [`9b44a0f`](https://github.com/ImageMagick/ImageMagick/commit/9b44a0f902cfe552b3fb51dfe05220a47ace4fc3)
+- Output test-suite.log when unit tests fail. [`abc1cf2`](https://github.com/ImageMagick/ImageMagick/commit/abc1cf2cc56fa1be19f0f693de0110938dc1c917)
+- Correct install for macos. [`0559150`](https://github.com/ImageMagick/ImageMagick/commit/0559150c803bfc905259cafe50f21e0fcc040666)
+- Added typecast to more places where GetPixelChannels is used. [`2df67a8`](https://github.com/ImageMagick/ImageMagick/commit/2df67a8f54e14585877cdd2fb87dab5c9758f6e1)
+- Added typecast to more places where GetPixelChannels is used. [`b6856ae`](https://github.com/ImageMagick/ImageMagick/commit/b6856ae6a905d5ddf70f7295a834af9dedd662e0)
+- Corrected refactor mistakes. [`92e7605`](https://github.com/ImageMagick/ImageMagick/commit/92e7605b5e2be0ba0433740790a9f0530ea09639)
+- No longer get the extra_samples twice and refactored setting of the alpha and attributes. [`f5c6fcb`](https://github.com/ImageMagick/ImageMagick/commit/f5c6fcb546376b825b33e1222076ed24bfe086fc)
+- using ptrdiff_t is recommended for pointer arithmetic in C [`c3aa2b6`](https://github.com/ImageMagick/ImageMagick/commit/c3aa2b60460296ac4c8abe9303f59dd563b0614c)
+- use ptrdiff_t where appropriate [`1a68655`](https://github.com/ImageMagick/ImageMagick/commit/1a6865566136c573d3baf191e7df57e4f2828ee6)
+- cosmetic [`bc674fc`](https://github.com/ImageMagick/ImageMagick/commit/bc674fc8774a8bfbb8a578683c923440751042b6)
+- use ptrdiff_t [`87859fb`](https://github.com/ImageMagick/ImageMagick/commit/87859fb823665bba092d7ed0d67a3466902280c8)
+- use ptrdiff_t for pointer offsets [`acda25d`](https://github.com/ImageMagick/ImageMagick/commit/acda25d4c8bb02939ab4d024b146729177f40045)
+- use ptrdiff_t for pointer offsets [`4fcb705`](https://github.com/ImageMagick/ImageMagick/commit/4fcb705ee56cb6ac2de2edc6e95e3468f5e2fe9f)
+- Fixed calculation of the padding in the tiff decoder. [`b20a90c`](https://github.com/ImageMagick/ImageMagick/commit/b20a90cc3362b853c903e6448500e3b7650fd17e)
+- Restored setting the grue and blue channel when the number of components is two. [`0f6e58c`](https://github.com/ImageMagick/ImageMagick/commit/0f6e58cff497b8ab4204f7d7485833f72b8727e9)
+- RPM spec files are finicky [`72fb534`](https://github.com/ImageMagick/ImageMagick/commit/72fb5349c1489c145a56f49e7f23277fd82af72d)
+- Increased buffer size for heif_has_compatible_brand. [`bbf3c19`](https://github.com/ImageMagick/ImageMagick/commit/bbf3c19e53ac68a25ae1c3f2ce4d8b6171e92812)
+- Only calculate the padding when there are no meta channels. [`d9f74c5`](https://github.com/ImageMagick/ImageMagick/commit/d9f74c58c71b05782dd5e86d07d6724cc2460e3a)
+- The extra_samples should not be subtracted from the samples_per_pixel when calculating the padding in the tiff coder. [`d7d4902`](https://github.com/ImageMagick/ImageMagick/commit/d7d49022396c7d32d7d00ca308adc9f2bd03b0db)
+- release [`0ba42ae`](https://github.com/ImageMagick/ImageMagick/commit/0ba42aed8cdf581736327bdfae4ac8c22745074e)
+- release [`bbdcbf7`](https://github.com/ImageMagick/ImageMagick/commit/bbdcbf78a67b0d4e2cf26e2a37c6d806b9ad3a13)
+
 ## [7.1.1-40](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-39...7.1.1-40) - 2024-11-09
 
 ### Merged
