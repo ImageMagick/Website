@@ -952,6 +952,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>jpeg:restart-interval=<var>value</var></td>
+    <td>Set the restart interval to `interval` MCU blocks.</td>
+  </tr>
+
+  <tr>
     <td>jpeg:sampling-factor=<var>sampling-factor-string</var></td>
     <td> </td>
   </tr>
