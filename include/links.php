@@ -80,6 +80,6 @@
 <ul>
   <dd class="col-md-8"><a href="https://github.com/ImageMagick/MagickCache" target="_blank">MagickCache</a></dd>
   <dd class="col-md-8"><a href="https://github.com/ImageMagick/WizardsToolkit" target="_blank">Wizard's Toolkit</a></dd>
-  <dd class="col-md-8"><a href="https://spiritual-warrior.org/" target="_blank">The Tao of the Spiritual Warrior</a></dd>
+  <dd class="col-md-8"><a href="https://spiritual-warrior.org/" target="_blank">The Tao of the Spiritual Warrior</a> (<a href="https://youtu.be/2MiXdIs2DM0" target="_blank">audiobook</a>)</dd>
 </ul>
 </div>
