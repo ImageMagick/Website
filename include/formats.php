@@ -437,6 +437,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td>GROUP4</td>
+    <td>RW</td>
+    <td>Raw CCITT Group 4 samples</td>
+    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the image width  and height</td>
+  </tr>
+
+  <tr>
     <td><a href="http://en.wikipedia.org/wiki/RGBE_image_format">HDR</a></td>
     <td>RW</td>
     <td>Radiance RGBE image format</td>
