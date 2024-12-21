@@ -9,7 +9,7 @@
 
 <p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.</p>
 
-<h2><a class="anchor" id="features"></a>Features and Capabilities</h2>
+<h3><a class="anchor" id="features"></a>Features and Capabilities</h3>
 
 <p>One of the key features of ImageMagick is its support for scripting and automation. This allows users to create complex image manipulation pipelines that can be run automatically, without the need for manual intervention. This can be especially useful for tasks that require the processing of large numbers of images, or for tasks that need to be performed on a regular basis.</p>
 
@@ -177,7 +177,7 @@
 <p>&nbsp;</p>
 <p><a href="https://usage.imagemagick.org" target="_blank">Examples of ImageMagick Usage</a> demonstrates how to use the software from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command line</a> to achieve various effects. There are also several scripts available on the website called <a href="http://www.fmwconcepts.com/imagemagick/" target="_blank">Fred's ImageMagick Scripts</a>, which can be used to apply geometric transforms, blur and sharpen images, remove noise, and perform other operations. Additionally, there is a tool called <a href="https://github.com/dlemstra/Magick.NET" target="_blank">Magick.NET</a> that allows users to access the functionality of ImageMagick without having to install the software on their own systems. Finally, the website also includes a <a href="http://im.snibgo.com/" target="_blank">Cookbook</a> with tips and examples for using ImageMagick on Windows systems.</p>
 
-<h2><a class="anchor" id="community"></a>Community</h2>
+<h3><a class="anchor" id="community"></a>Community</h3>
 <p>Join the ImageMagick community by participating in the <a href="https://github.com/ImageMagick/ImageMagick/discussions" target="_blank">discussion</a> service. Here, you can find answers to questions asked by other ImageMagick users or ask your own questions. If you have a technical question, a suggestion for an improvement, or a fix for a bug, you can also open an <a href="https://github.com/ImageMagick/ImageMagick/issues" target="_blank">issue</a> to get help from the community.</p>
 
 </div>
