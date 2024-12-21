@@ -72,6 +72,13 @@ the supported image formats.</p>
   </tr>
 
   <tr>
+    <td><a href="https://www.adobe.com/creativecloud/file-types/image/vector/ai-file.html">AI</a></td>
+    <td>RW</td>
+    <td>Adobe Illustrator CS2</td>
+    <td> </td>
+  </tr>
+
+  <tr>
     <td><a href="https://en.wikipedia.org/wiki/APNG">APNG</a></td>
     <td>RW</td>
     <td>Animated Portable Network Graphics</td>
