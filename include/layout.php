@@ -39,7 +39,6 @@
   <link type="image/png" sizes="64x64" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link type="image/icon" sizes="16x16" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
