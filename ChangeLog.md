@@ -5,6 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-42](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-41...7.1.1-42) - 2024-12-21
+
+### Merged
+
+- Fix reading/writing PICTs with PixMap rowBytes=[201..250] [`#7840`](https://github.com/ImageMagick/ImageMagick/pull/7840)
+- Libxml2 fixes [`#7784`](https://github.com/ImageMagick/ImageMagick/pull/7784)
+- update plugin with latest library changes [`#7780`](https://github.com/ImageMagick/ImageMagick/pull/7780)
+
+### Commits
+
+- beta release [`b4507e8`](https://github.com/ImageMagick/ImageMagick/commit/b4507e8d0fdeb98a7d97515e58eff4b046c5ac62)
+- latest automake/autoconf updates [`3e395d7`](https://github.com/ImageMagick/ImageMagick/commit/3e395d79e853f4b1814644a09d92bd91a6701ea3)
+- use ANSI-style comments [`6d69da5`](https://github.com/ImageMagick/ImageMagick/commit/6d69da5efb3a9c22067b312f806abbb5967dfce6)
+- support Magick++ environment constructor [`5f7ccfe`](https://github.com/ImageMagick/ImageMagick/commit/5f7ccfebe221ea07e1f5c4c771a9044442017251)
+- Fixed build errors. [`979ebc3`](https://github.com/ImageMagick/ImageMagick/commit/979ebc3ccae4c0eedb53d131b09494f9246091ad)
+- check to ensure subimage is smaller than the reference image [`88df801`](https://github.com/ImageMagick/ImageMagick/commit/88df801d7b3a3448c37363bc13de82b3811e4468)
+- don't throw exception in SetImageInfo() [`8208750`](https://github.com/ImageMagick/ImageMagick/commit/82087508076d53ff22629bf1955dd64df8c97513)
+- Corrected typecast. [`b594954`](https://github.com/ImageMagick/ImageMagick/commit/b5949544aa10dc1e7a94a81afc846d90244b027e)
+- Silence warning (#7813) [`542f6a2`](https://github.com/ImageMagick/ImageMagick/commit/542f6a2130b161118190d747eb7bd24ca19c6eee)
+- Added support for reading AVCI images (#7792) [`27cb70f`](https://github.com/ImageMagick/ImageMagick/commit/27cb70f49501d9ce13ca525a5928e331e2d0cb2a)
+- Make sure we can write jpeg files with an exif profile that has a length of 65533. [`0cbce1d`](https://github.com/ImageMagick/ImageMagick/commit/0cbce1dbbc2ceddd032012c6f4e6d70fe3bce7a2)
+- Minor refactor. [`44e150b`](https://github.com/ImageMagick/ImageMagick/commit/44e150be14eefdaf61f7bf33762d792f684682a5)
+- prevent cursor going out of bounds [`5a7f822`](https://github.com/ImageMagick/ImageMagick/commit/5a7f82219d38d78eb51a9b0095ca63f43af3ec9c)
+- support jpeg:restart-interval define [`69a740c`](https://github.com/ImageMagick/ImageMagick/commit/69a740c8f8a747b7f07f8ad9fc4a437332c4575e)
+- set defaults before setting restart interval [`f04cab8`](https://github.com/ImageMagick/ImageMagick/commit/f04cab85d149f1b722a34ef883f2ec59a82b621c)
+- Corrected name of profile. [`fdb0c05`](https://github.com/ImageMagick/ImageMagick/commit/fdb0c05a2358f8fe5401e78a340cce010442b711)
+- Don't return but set a status to avoid multiple memory leaks (#7825) [`c7ed0fc`](https://github.com/ImageMagick/ImageMagick/commit/c7ed0fc78b167e422e9f5de47c716327a4d0f72f)
+- Use [[fallthrough]] when building with Visual Studio (this use C++17 for all versions). [`342a3f9`](https://github.com/ImageMagick/ImageMagick/commit/342a3f99323148872d8815df0e703b8248c09788)
+- Removed duplicate include. [`34cbfeb`](https://github.com/ImageMagick/ImageMagick/commit/34cbfeb7898c22b33812be5594b70472a18aa351)
+- Move jpeg specific exif detection of profiles with the name app1 to a more generic spot. [`c10193c`](https://github.com/ImageMagick/ImageMagick/commit/c10193c266f46abd5ae9117f2bed80f9ef9d1d7e)
+- Fix more possible memory leaks reported in #7825. [`6138251`](https://github.com/ImageMagick/ImageMagick/commit/613825111d639ee48334cfea4b1817f9f5c4f55d)
+- check for invalid BMP image [`76f9940`](https://github.com/ImageMagick/ImageMagick/commit/76f994018d76a565b597463c54f2103174b3fbfe)
+- revert invalid BMP patch [`443b59e`](https://github.com/ImageMagick/ImageMagick/commit/443b59e1715bd1fa5f3f5c04bc0fcfd16ed85a92)
+- detech invalid BMP image [`60d1e17`](https://github.com/ImageMagick/ImageMagick/commit/60d1e1751bce2cbc600a48583bf221e0fbf6f0fa)
+- Simplify the if statement [`61b0852`](https://github.com/ImageMagick/ImageMagick/commit/61b0852f77208cd8912648f46f79a825fa356ad5)
+- cosmetic [`d894eb2`](https://github.com/ImageMagick/ImageMagick/commit/d894eb21b568e0cdd7b7e35e7fba53be6a8255f2)
+- magick -help prints the command-line usage [`b30a675`](https://github.com/ImageMagick/ImageMagick/commit/b30a675d12fa75abe63cb183c791583977a0621c)
+- restore GROUP4 raw to working order [`fb651fd`](https://github.com/ImageMagick/ImageMagick/commit/fb651fd171032c9d3c94dbc20fdf24b59738c9ac)
+- corrected the range for Magic Kernel 2013 [`7dcaea7`](https://github.com/ImageMagick/ImageMagick/commit/7dcaea7a22e14a0a919311fe1d4636775dde4537)
+- corrected the Magic Kernel 2021 implementation [`b77eb77`](https://github.com/ImageMagick/ImageMagick/commit/b77eb776838b6039834948bb63f8106a7980554b)
+- revert Magick Kernel patch [`b5f748c`](https://github.com/ImageMagick/ImageMagick/commit/b5f748c38ad5bb6b58f46411b1bcb78392b5f575)
+- bogus image destroy [`1028efa`](https://github.com/ImageMagick/ImageMagick/commit/1028efa8d768a4a24328ef30fe128845a0e0ad55)
+- Get the extra samples and sample info at another spot because something is changing the values in sample_info (#7848). [`30f7a3d`](https://github.com/ImageMagick/ImageMagick/commit/30f7a3ded0637682879f275097c12a44681401ae)
+- release [`a78671e`](https://github.com/ImageMagick/ImageMagick/commit/a78671e9c0139dd925bbbd482b816032b4654f78)
+
 ## [7.1.1-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-40...7.1.1-41) - 2024-11-16
 
 ### Merged
