@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.1.1-42](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-41...7.1.1-42) - 2024-12-21
+## [7.1.1-43](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-41...7.1.1-43) - 2024-12-22
 
 ### Merged
 
@@ -49,6 +49,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - bogus image destroy [`1028efa`](https://github.com/ImageMagick/ImageMagick/commit/1028efa8d768a4a24328ef30fe128845a0e0ad55)
 - Get the extra samples and sample info at another spot because something is changing the values in sample_info (#7848). [`30f7a3d`](https://github.com/ImageMagick/ImageMagick/commit/30f7a3ded0637682879f275097c12a44681401ae)
 - release [`a78671e`](https://github.com/ImageMagick/ImageMagick/commit/a78671e9c0139dd925bbbd482b816032b4654f78)
+- beta release [`bc94f1a`](https://github.com/ImageMagick/ImageMagick/commit/bc94f1a9637fd68bbe2c561cfb020ba828c2af82)
+- distiguish between single and double quote for delegates [`ac73bd3`](https://github.com/ImageMagick/ImageMagick/commit/ac73bd3fcf7aaaf6beab8f69e91a8080f35134de)
+- Corrected pad calculation for indexed alpha tiff image. [`b7e15c4`](https://github.com/ImageMagick/ImageMagick/commit/b7e15c4cee1f00b17daca87b59da31f3ba9459c8)
+- Added missing call to SetMagickThreadValue inside ReadGROUP4Image. [`8741f0d`](https://github.com/ImageMagick/ImageMagick/commit/8741f0df1dfcdbba3d0974c5afacc65e9b5ac948)
+- Use " on Windows when executing commands an ' on Linux. [`c8355d6`](https://github.com/ImageMagick/ImageMagick/commit/c8355d606426893043f4e3ae5e9e768abe12c55a)
+- Corrected patch. [`e34d7d4`](https://github.com/ImageMagick/ImageMagick/commit/e34d7d48557dc4545ad562ae2bf6ebe1775900a4)
+- cosmetic [`e9c9fdc`](https://github.com/ImageMagick/ImageMagick/commit/e9c9fdcbbeb56a5c6dff33c9153dc80580f1b748)
+- update PICT unit test [`afd817c`](https://github.com/ImageMagick/ImageMagick/commit/afd817ca6474740c5fd6af1cfb9c94ce2158baf1)
+- release [`a2d96f4`](https://github.com/ImageMagick/ImageMagick/commit/a2d96f40e707ba54b57e7d98c3277d3ea6611ace)
 
 ## [7.1.1-41](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-40...7.1.1-41) - 2024-11-16
 
