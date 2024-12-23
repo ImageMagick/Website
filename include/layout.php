@@ -142,7 +142,7 @@
 <div class="col-lg-8 mx-auto p-4 py-md-5 text-body-secondary">
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <a href="<?php echo $_SESSION['RelativePath']?>/../" class="d-flex align-items-center text-decoration-none">
-      <h1 class="mt-5 fs-3"><?php echo $title; ?></h1>
+      <h1 class="mt-5 fs-4"><?php echo $title; ?></h1>
     </a>
   </header>
 
