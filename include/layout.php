@@ -26,6 +26,7 @@
 <head>
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/color-modes.js" ></script>
   <?php echo $meta->metadata($title); ?>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   <meta itemprop='url' content='https://imagemagick.org/' />
   <meta itemprop='title' content='ImageMagick' />
   <meta itemprop='description' content="ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations." />
@@ -40,7 +41,6 @@
   <link type="image/icon" sizes="16x16" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
 </head>
 <?php flush(); ?>
