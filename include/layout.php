@@ -39,7 +39,7 @@
   <link type="image/png" sizes="64x64" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.png" rel="icon">
   <link type="image/icon" sizes="16x16" href="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico" rel="shortcut icon">
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
-  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/magick-css.php" rel="stylesheet">
+  <link href="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.css" rel="stylesheet">
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
 </head>
 <?php flush(); ?>
@@ -141,8 +141,9 @@
 
 <div class="col-lg-8 mx-auto p-4 py-md-5 text-body-secondary">
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <br/> <br/> <br/> <br/>
     <a href="<?php echo $_SESSION['RelativePath']?>/../" class="d-flex align-items-center text-decoration-none">
-      <h1 class="fs-4"><?php echo $title; ?></h1>
+      <h1 class="fs-3"><?php echo $title; ?></h1>
     </a>
   </header>
 
@@ -179,7 +180,7 @@
 </div>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/magick-js.php" ></script>
+  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.bundle.min.js" ></script>
   </body>
 </html>
 <?php
