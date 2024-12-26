@@ -37,9 +37,9 @@
 
 <p>Utilize other command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> from the <samp>magick</samp> tool.  To invoke this functionality, simply create a symbolic link to the <samp>magick</samp> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>ln -s magick
-convert rose.jpg rose.png
-magick rose.jpg rose.png </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>ln -s magick identify
+identify rose.jpg rose.png
+magick identify rose.jpg rose.png </samp></pre>
 
 <p>You can find additional examples of using <samp>magick</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
