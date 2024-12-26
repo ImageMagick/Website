@@ -2,28 +2,28 @@
 
 function crtprompt()
 {
-  echo('<span class="crtprompt"><br/>$ </span>');
+  echo('<kbd>$ </kbd>');
 }
 
 function crtin($s)
 {
   crtprompt();
-  echo("<span class='crtin'>");
+  echo("<code>");
   echo($s);
-  echo("</span>");
+  echo("</code>");
 }
 
 function crtout($s)
 {
-  echo("<span class='crtout'>");
+  echo("<samp>");
   echo($s);
-  echo("</span>");
+  echo("</samp>");
 }
 
 function crt()
 {
   $p=0;
-  echo("<ul><pre class=\"bg-light text-dark\"><code>");
+  echo("<pre class=\"p-3 mb-2 text-body-secondary bg-body-tertiary\"");
   $arg_list = func_get_args();
   for ($i = 0; $i < func_num_args(); $i++) {
     if ($p == 0) {
@@ -33,7 +33,7 @@ function crt()
     }
     $p = 1-$p;
   }
-  echo("</code></pre></ul>");
+  echo("</pre>");
  }
 ?>
 
