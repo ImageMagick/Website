@@ -1315,13 +1315,18 @@ use:</p>
   </tr>
 
   <tr>
-    <td>svg:substitute-entities=<var>true</var></td>
-    <td>Enable entity substitution if you trust the source.</td>
+    <td>svg:embedding=<var>true</var></td>
+    <td>Enable embedding of a another SVG for which you trust the source.  This is disabled by default as it can be a source of infinite recusion.</td>
   </tr>
 
   <tr>
     <td>svg:parse-huge=<var>true</var></td>
     <td>Enable rendering of a very large SVG for which you trust the source.</td>
+  </tr>
+
+  <tr>
+    <td>svg:substitute-entities=<var>true</var></td>
+    <td>Enable entity substitution if you trust the source.</td>
   </tr>
 
   <tr>
