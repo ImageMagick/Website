@@ -3,7 +3,7 @@
 
 <a class="anchor" id="fx"></a>
 
-<p class="lead">The <a href="http://im.snibgo.com/fxnew.htm" target="_blank">FX special effects image operator</a> applies a mathematical expression to each pixel channel of an image. The FX expression language provides a powerful and flexible way to manipulate images, allowing you to perform a wide range of operations and transformations on your images. Use FX to:</p>
+<p class="lead">The <a href="http://im.snibgo.com/fxnew.htm" rel="noopener" target="_blank">FX special effects image operator</a> applies a mathematical expression to each pixel channel of an image. The FX expression language provides a powerful and flexible way to manipulate images, allowing you to perform a wide range of operations and transformations on your images. Use FX to:</p>
 
 <ul>
   <li>create canvases, gradients, mathematical colormaps</li>

@@ -16,7 +16,7 @@ radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 
 <p>The default for a linear gradient has <em>fromColor</em> at the top of the image and <em>toColor</em> at the bottom of the image. Similarly, the default for a radial gradient has <em>fromColor</em> at the center of the image and <em>toColor</em> at the boundary of the image.</p>
 
-<p>Gradient colors may be any valid color defined per <a href="https://imagemagick.org/script/color.php" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Linux systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
+<p>Gradient colors may be any valid color defined per <a href="https://imagemagick.org/script/color.php" rel="noopener" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Linux systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
 
 <p>Here is an example linear (as opposed to radial) gradient:</p>
 
