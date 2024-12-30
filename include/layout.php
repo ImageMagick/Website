@@ -155,7 +155,7 @@
 ?>
   </div>
   </main><!-- /.container -->
-  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+  <footer class="text-center pt-5 my-5 text-body-secondary border-top">
     <div class="container-fluid">
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/news.php">News</a>
