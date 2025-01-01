@@ -44,7 +44,7 @@ Image: rose.jpg
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.png
 0.99870222 @ 353,157 </samp></pre>
 
-<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is NCC or MSE, you can expect an order of magnitude speed increase in processing time.</p>
+<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { NCC, MSE, RMSE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
 
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
