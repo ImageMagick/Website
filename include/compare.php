@@ -42,7 +42,9 @@ Image: rose.jpg
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.png
-0.99870222 @ 353,157 </samp></pre>
+0.99870222 @ 353,157 [0.309472]</samp></pre>
+
+<p>The value in the brackets is the normalized simularity metric.</p>
 
 <p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { NCC, MSE, RMSE, PHASE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
 
