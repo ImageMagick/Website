@@ -46,7 +46,7 @@ Image: rose.jpg
 
 <p>The value in the brackets is the normalized simularity metric.</p>
 
-<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { NCC, MSE, RMSE, PHASE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
+<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { DPC, MSE, NCC, RMSE, PHASE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
 
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
