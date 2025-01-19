@@ -5,7 +5,7 @@
       "DISABLE_CACHE": "true"
     }
   },
-  "onCreateCommand": "sudo apache2ctl start",
+  "onCreateCommand": "sudo a2enmod rewrite && sudo apache2ctl start",
   "forwardPorts": [ 7070 ],
   "customizations": {
     "vscode": {

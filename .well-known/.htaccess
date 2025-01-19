@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^funding-manifest-urls$ funding-manifest-urls.php [L]

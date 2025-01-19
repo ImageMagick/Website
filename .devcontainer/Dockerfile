@@ -8,4 +8,7 @@ RUN sudo set -eux; \
     sed -i 's/\/var\/www\/html/\/workspaces\/Website/' /etc/apache2/sites-available/000-default.conf; \
     sed -i 's/\/var\/www\//\/workspaces\/Website/' /etc/apache2/apache2.conf; \
     echo "SetEnv MAGICK_DEVCONTAINER true" >> /etc/apache2/apache2.conf; \
-    echo "SetEnv MAGICK_DISABLE_CACHE ${DISABLE_CACHE}" >> /etc/apache2/apache2.conf
+    echo "SetEnv MAGICK_DISABLE_CACHE ${DISABLE_CACHE}" >> /etc/apache2/apache2.conf; \
+    echo "<Directory /workspaces/Website/.well-known>" >> /etc/apache2/apache2.conf; \
+    echo "    AllowOverride All" >> /etc/apache2/apache2.conf; \
+    echo "</Directory>" >> /etc/apache2/apache2.conf;
