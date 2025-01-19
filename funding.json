@@ -5,7 +5,7 @@
         "role": "maintainer",
         "name": "ImageMagick",
         "email": "funding@imagemagick.org",
-        "description": "ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file formats, including JPEG, PNG, GIF, TIFF, and Ultra HDR.",
+        "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
         "webpageUrl": {
             "url": "https://imagemagick.org"
         }
@@ -14,7 +14,7 @@
         {
             "guid": "imagemagick",
             "name": "ImageMagick",
-            "description": "ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file formats, including JPEG, PNG, GIF, TIFF, and Ultra HDR.",
+            "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
             "webpageUrl": {
                 "url": "https://imagemagick.org"
             },
@@ -51,7 +51,7 @@
                 "guid": "developer-time",
                 "status": "active",
                 "name": "Developer compensation",
-                "description": "This compensate the developers working part-time on the project.",
+                "description": "This compensates the developers working part-time on the project.",
                 "amount": 0,
                 "currency": "USD",
                 "frequency": "monthly",
