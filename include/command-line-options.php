@@ -6127,7 +6127,7 @@ asymmetric since they involve 3−&gt;4 and 4−&gt;3 channel mapping.
   <h2><a class="anchor" id="quality"></a>-quality <var>value</var></h2>
 </div>
 
-<p class="magick-description">JPEG/MIFF/PNG compression level.</p>
+<p class="magick-description">control the compression quality of JPEG, PNG, HEIC, and WebP image files when you are creating or saving them. This option is important for managing the trade-off between image quality and file size.</p>
 
 <p>For the JPEG and MPEG image formats, quality is 1 (lowest image quality and
 highest compression) to 100 (best quality but least effective compression).
