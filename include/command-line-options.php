@@ -7534,6 +7534,8 @@ tolerated in an edge specified as a percent.  0% means no background is tolerate
 <p>Use <samp><a href="#background">-background</a> <em>background-color</em></samp> to
 identify background color surrounding the region of interest.</p>
 
+<p>Fully transparent pixels are typically treated as if they lack color or that their color is irrelevant. When comparing two pixels that are both fully transparent, they are often considered equal. This means that any attributes related to their color are disregarded in the evaluation process.</p>
+
 <div style="margin: auto;">
   <h2><a class="anchor" id="type"></a>-type <var>type</var></h2>
 </div>
