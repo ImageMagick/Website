@@ -1,62 +1,62 @@
 {
-    "version": "v1.0.0",
-    "entity": {
-        "type": "organisation",
-        "role": "maintainer",
-        "name": "ImageMagick",
-        "email": "funding@imagemagick.org",
-        "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
-        "webpageUrl": {
-            "url": "https://imagemagick.org"
-        }
-    },
-    "projects": [
-        {
-            "guid": "imagemagick",
-            "name": "ImageMagick",
-            "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
-            "webpageUrl": {
-                "url": "https://imagemagick.org"
-            },
-            "repositoryUrl": {
-                "url": "https://github.com/ImageMagick/ImageMagick",
-                "wellKnown": "https://github.com/ImageMagick/ImageMagick/blob/main/.github/.well-known/funding-manifest-urls"
-            },
-            "licenses": [
-                "Apache-2.0"
-            ],
-            "tags": [
-                "imagemagick",
-                "image-processing",
-                "image-manipulation",
-                "image-conversion",
-                "open-source-software",
-                "mastering-digital-image-alchemy",
-                "digital-image-editing",
-                "command-line-image-tool"
-            ]
-        }
-    ],
-    "funding": {
-        "channels": [
-            {
-                "guid": "github-sponsors",
-                "type": "payment-provider",
-                "address": "https://github.com/sponsors/ImageMagick",
-                "description": "Payments up to $12,000 USD per month can be made via Github Sponsors."
-            }
-        ],
-        "plans": [
-            {
-                "guid": "developer-time",
-                "status": "active",
-                "name": "Developer compensation",
-                "description": "This compensates the developers working part-time on the project.",
-                "amount": 0,
-                "currency": "USD",
-                "frequency": "monthly",
-                "channels": ["github-sponsors"]
-            }
-        ]
+  "version": "v1.0.0",
+  "entity": {
+    "type": "organisation",
+    "role": "maintainer",
+    "name": "ImageMagick",
+    "email": "funding@imagemagick.org",
+    "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
+    "webpageUrl": {
+      "url": "https://imagemagick.org"
     }
+  },
+  "projects": [
+    {
+      "guid": "imagemagick",
+      "name": "ImageMagick",
+      "description": "ImageMagick is a powerful, open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for web developers, graphic designers, and researchers, it offers versatile tools for image processing, including batch processing, format conversion, and complex image transformations.",
+      "webpageUrl": {
+        "url": "https://imagemagick.org"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/ImageMagick/ImageMagick",
+        "wellKnown": "https://github.com/ImageMagick/ImageMagick/blob/main/.github/.well-known/funding-manifest-urls"
+      },
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "tags": [
+        "imagemagick",
+        "image-processing",
+        "image-manipulation",
+        "image-conversion",
+        "open-source-software",
+        "mastering-digital-image-alchemy",
+        "digital-image-editing",
+        "command-line-image-tool"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "github-sponsors",
+        "type": "payment-provider",
+        "address": "https://github.com/sponsors/ImageMagick",
+        "description": "Payments up to $12,000 USD per month can be made via Github Sponsors."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "developer-time",
+        "status": "active",
+        "name": "Developer compensation",
+        "description": "This compensates the developers working part-time on the project.",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": [ "github-sponsors" ]
+      }
+    ]
+  }
 }
