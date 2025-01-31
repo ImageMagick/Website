@@ -3,7 +3,7 @@
 
 <h4>Recent News</h4>
 
-<p>The <samp>magick convert</samp> command is deprecated, use <samp>magick</sampe> instead.  The deprecated command still works, however, it now posts a warning it is deprecated.</p>
+<p>The <samp>magick convert</samp> command is deprecated, use <samp>magick</samp> instead.  The deprecated command still works, however, it now posts a warning it is deprecated.</p>
 
 <p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.  As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policies</a>: Open, Limited, Secure, and Websafe.<p>
 
