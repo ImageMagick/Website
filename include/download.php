@@ -444,7 +444,7 @@ display logo.gif</samp></pre>
 
 <p>Verify its <a href="https://imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
 
-<p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>.</p>
+<p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>. ImageMagick uses Advanced Installer to <a href="https://www.advancedinstaller.com/imagemagick-latest-release-automatically-published-to-winget.html">publish the latest release to the winget repository</a>.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.Q16-HDRI</samp></pre>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.Q16</samp></pre>
