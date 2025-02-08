@@ -1587,16 +1587,74 @@ CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
 
 <p>Choices are:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>CMY          CMYK         Gray         HCL
-HCLp         HSB          HSI          HSL
-HSV          HWB          Jzazbz       Lab
-LCHab        LCHuv        LMS          Log
-Luv          OHTA         OkLab        OkLCH
-Rec601YCbCr  Rec709YCbCr  RGB          scRGB
-sRGB         Transparent  xyY          XYZ
-YCbCr        YCC          YDbDr        YIQ
-YPbPr        YUV          Undefined
-</samp></pre>
+<table class="table table-sm table-hover table-striped table-responsive">
+  <tr>
+    <td>Adobe98</td>
+    <td>CIELab</td>
+    <td>DisplayP3</td>
+    <td>HSL</td>
+  </tr>
+  <tr>
+    <td>CAT02LMS</td>
+    <td>CMY</td>
+    <td>CMYK</td>
+    <td>Gray</td>
+  </tr>
+  <tr>
+    <td>HCL</td>
+    <td>HCLp</td>
+    <td>HSB</td>
+    <td>HSI</td>
+  </tr>
+  <tr>
+    <td>HSV</td>
+    <td>HWB</td>
+    <td>Jzazbz</td>
+    <td>Lab</td>
+  </tr>
+  <tr>
+    <td>LCH</td>
+    <td>LCHab</td>
+    <td>LCHuv</td>
+    <td>LinearGray</td>
+  </tr>
+  <tr>
+    <td>LMS</td>
+    <td>Log</td>
+    <td>Luv</td>
+    <td>OHTA</td>
+  </tr>
+  <tr>
+    <td>Oklab</td>
+    <td>Oklch</td>
+    <td>ProPhoto</td>
+    <td>Rec601YCbCr</td>
+  </tr>
+  <tr>
+    <td>Rec709YCbCr</td>
+    <td>RGB</td>
+    <td>scRGB</td>
+    <td>sRGB</td>
+  </tr>
+  <tr>
+    <td>Transparent</td>
+    <td>xyY</td>
+    <td>XYZ</td>
+    <td>YCbCr</td>
+  </tr>
+  <tr>
+    <td>YDbDr</td>
+    <td>YCC</td>
+    <td>YIQ</td>
+    <td>YPbPr</td>
+  </tr>
+  <tr>
+    <td>YUV</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 <p>To print a complete list of colorspaces, use <a href="#list">-list colorspace</a>.</p>
 
