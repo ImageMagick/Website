@@ -71,6 +71,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>compare:spatial=<var>boolean</var></td>
+    <td>Certain similarity metrics such as DPC, MSE, NCC, PSNR, Phase, and RMSE operate in the frequency domain when FFTW and HDRI are enabled. To utilize their spatial equivalents, you can use the command <samp>-define compare:spatial=false</samp>. However, note that DPC and Phase metrics do not have spatial equivalents, so this command will be ignored for them.</td>
+  </tr>
+
+  <tr>
     <td>compare:ssim-radius=<var>value</var></td>
     <td>Set the structural similarity index radius.</td>
   </tr>
