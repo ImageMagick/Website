@@ -72,7 +72,7 @@ use:</p>
 
   <tr>
     <td>compare:frequency-domain=<var>boolean</var></td>
-    <td>Certain similarity metrics such as DPC, MSE, NCC, PSNR, Phase, and RMSE operate in the frequency domain when FFTW and HDRI are enabled. To utilize their spatial equivalents, you can use the command <samp>-define compare:frequency-domain=false</samp>. However, note that DPC and Phase metrics do not have spatial equivalents, so this command will be ignored for them.</td>
+    <td>Certain similarity metrics such as DPC, MSE, NCC, PSNR, Phase, and RMSE operate in the frequency domain when FFTW and HDRI are enabled. To utilize their spatial equivalents, you can use the command <samp>-define compare:frequency-domain=false</samp>. However, note that DPC and PHASE metrics do not have spatial equivalents, so this command will be ignored for them.</td>
   </tr>
 
   <tr>
