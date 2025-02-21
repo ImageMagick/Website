@@ -869,6 +869,23 @@ use:</p>
   </tr>
 
   <tr>
+    <td>identify:convex-hull=<var>true</var></td>
+    <td>Display convex hull & minimum bounding box.</td>
+  </tr>
+
+  <tr>
+    <td>identify:locate=<var>value</var></td>
+    <td>Display minimum or maximum pixel locations.</td>
+  </tr>
+
+  <tr>
+    <td>identify:limit=<var>value</var></td>
+    <td>The maximum number of pixel locations to display when using identify:locate.
+    Valid values are <samp>minimum</samp>,<samp>maximum</samp>. The default is maximum.
+    </td>
+  </tr>
+
+  <tr>
     <td>jp2:layer-number=<var>value</var></td>
     <td>Set the maximum number of quality layers to decode. Same for JPT, JC2,
     and J2K.</td>
@@ -977,6 +994,13 @@ use:</p>
   <tr>
     <td>jxl:effort=<var>value</var></td>
     <td>Set the jpeg-xl encoding effort. Valid values are in the range of 3 (falcon) to 9 (tortoise).</td>
+  </tr>
+
+  <tr>
+    <td>minimum-bounding-box:orientation=<var>value</var></td>
+    <td>Find smallest perpendicular distance from edge to origin. Valid values are <samp>horizontal</samp>
+    and <samp>vertical</samp>.
+    </td>
   </tr>
 
   <tr>
@@ -1470,7 +1494,7 @@ use:</p>
         otherwise, sdr intent and gainmap are decoded, combined into
         hdr image and sent as output.</td>
   </tr>
-  
+
   <tr>
     <td>uhdr:sdr-color-gamut=<var>{bt709|display_p3|bt2100}</var></td>
     <td>Set input SDR intent color gamut. Used during encoding. Required.</td>
