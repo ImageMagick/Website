@@ -35,7 +35,7 @@
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png'); </samp></pre>
 
-<p>Utilize other command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> from the <samp>magick</samp> tool.  To invoke this functionality, simply create a symbolic link to the <samp>magick</samp> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
+<p>Utilize other command-line <a href="{{ site.baseurl }}/command-line-tools/">tools</a> from the <samp>magick</samp> tool.  To invoke this functionality, simply create a symbolic link to the <samp>magick</samp> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>ln -s magick identify
 identify rose.jpg rose.png

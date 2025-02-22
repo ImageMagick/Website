@@ -1,2 +1,12 @@
+defaults:
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "default"
+
+include:
+  - .well-known
+
 exclude_from_processing:
   - ChangeLog.md

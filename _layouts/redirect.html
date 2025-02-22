@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to {{ page.target }}</title>
+  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}{{ page.target }}/" />
+  <link href="{{ site.baseurl }}{{ page.target }}/" rel="canonical" />
+</head>
+
+<body>
+  <p>If you are not redirected automatically, follow this <a href="{{ site.baseurl }}{{ page.target }}/">link</a>.</p>
+</body>
+
+</html>
