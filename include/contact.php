@@ -59,7 +59,7 @@
         break;
       $mail=new Mail;
       $mail->authenticate=$authenticate;
-      $mail->to=DevelopmentTeam;
+      $mail->to=MagickDevelopmentTeam;
       $mail->from=$address;
       $mail->name=$name;
       $mail->subject=$issue;
