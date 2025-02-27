@@ -16,18 +16,21 @@
 
 <p>Clone the latest release from the source repository:</p>
 
-<?php crt("git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-" . MagickLibVersionText); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-<?php echo MagickLibVersionText ?></samp></pre>
 
 <p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "./configure", "", "make"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd ImageMagick-<?php echo MagickLibVersionText ?>
+
+./configure
+make</samp></pre>
 
 <p>If build fails, try <samp>gmake</samp> instead.</p>
 
 <p>For advanced users, we recommend a modules build:</p>
-<?php crt("./configure --with-modules"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./configure --with-modules</samp></pre>
 <p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>sudo make install
@@ -66,7 +69,7 @@
 <p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://imagemagick.org/archive/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/archive/windows">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>unzip ImageMagick-windows.zip</samp></pre>
-<p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p> 
+<p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p>
 <p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
 to compile the program and on completion run the program.</p>
 
@@ -78,7 +81,10 @@ to compile the program and on completion run the program.</p>
 
 <p>To verify ImageMagick is working properly, launch a MS-DOS Command Prompt window and type</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText, "", "magick logo: image.jpg"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd ImageMagick-<?php echo MagickLibVersionText ?>
+
+magick logo: image.jpg</samp></pre>
+
 <p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call <samp>magick<samp> from any directory.<p>
 <p>For a more comprehensive test, run the ImageMagick validation suite:</p>
 

@@ -66,10 +66,10 @@
 <p>Verify its <a href="https://imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
 
 <p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -Uvh ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>.x86_64.rpm</samp></pre>
 
-<?php crt("rpm -Uvh ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
 <p>You'll need the libraries as well:</p>
-<?php crt("rpm -Uvh ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -Uvh ImageMagick-libs-<?php echo MagickLibVersionText . MagickLibSubversion ?>.x86_64.rpm</samp></pre>
 
 <p>Note, if there are missing dependencies, install them from the <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repo.</p>
 
@@ -83,7 +83,7 @@
 
 <p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
-<?php crt('export MAGICK_HOME="$HOME/ImageMagick-' . MagickLibVersionText . '"'); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export MAGICK_HOME="$HOME/ImageMagick-<?php echo MagickLibVersionText ?>"</samp></pre>
 
 <p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
 
@@ -144,7 +144,7 @@ display logo.gif</samp></pre>
 
 <p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
 
-<?php crt('export MAGICK_HOME="$HOME/ImageMagick-' . MagickLibVersionText . '"'); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export MAGICK_HOME="$HOME/ImageMagick-<?php echo MagickLibVersionText ?>"</samp></pre>
 
 <p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
 

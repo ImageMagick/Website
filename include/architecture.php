@@ -1,4 +1,4 @@
-<div> 
+<div>
 <p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#multispectral">Multispectral Imagery</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#stream">Streaming Pixels</a> • <a href="#threads">Threads of Execution</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
 
 <p class="lead">The citizens of Oz were quite content with their benefactor, the all-powerful Wizard.  They accepted his wisdom and benevolence without ever questioning the who, why, and where of his power.  Like the citizens of Oz, if you feel comfortable that ImageMagick can help you convert, edit, or compose your images without knowing what goes on behind the curtain, feel free to skip this section.  However, if you want to know more about the software and algorithms behind ImageMagick, read on.  To fully benefit from this discussion, you should be comfortable with image nomenclature and be familiar with computer programming.</p>
@@ -78,7 +78,8 @@ if (image == (Image *) NULL)
 
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <?php option("version"); ?> option: </p>
 
-<?php crt("identify -version", "<br/>Version: ImageMagick " .MagickLibVersionText . MagickLibSubversion . " " . MagickReleaseDate . " Q16 https://imagemagick.org"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ identify -version
+Version: ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion ?> <?php echo MagickReleaseDate ?> Q16-HDRI https://imagemagick.org</samp></pre>
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
 
@@ -404,7 +405,7 @@ Resource limits:
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -debug cache logo: -sharpen 3x2 null:
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
-  destroy 
+  destroy
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
   open LOGO[0] (Heap Memory, 640x480x4 4.688MiB)
 2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
@@ -1302,7 +1303,7 @@ display logo.mgk
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  analyzeImage() computes the brightness and saturation mean,  standard
-%  deviation, kurtosis and skewness and stores these values as attributes 
+%  deviation, kurtosis and skewness and stores these values as attributes
 %  of the image.
 %
 %  The format of the analyzeImage method is:

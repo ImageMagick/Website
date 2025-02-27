@@ -1,4 +1,4 @@
-<div> 
+<div>
 <p class="text-center"><a href="#installation">Installation</a> • <a href="#overview">Overview</a> • <a href="#example">Example Script</a> • <a href="#read">Read or Write an Image</a> • <a href="#manipulate">Manipulate an Image</a> • <a href="#set-attribute">Set an Image Attribute</a> • <a href="#get-attribute">Get an Image Attribute</a> • <a href="#compare">Compare an Image to its Reconstruction</a> • <a href="#montage">Create an Image Montage</a> • <a href="#blobs">Working with Blobs</a> • <a href="#direct-access">Direct-access to Image Pixels</a> • <a href="#miscellaneous">Miscellaneous Methods</a> • <a href="#exceptions">Handling Exceptions</a>• <a href="#constants">Constant</a> </p>
 
 <a class="anchor" id="introduction"></a>
@@ -26,7 +26,10 @@
 
 <p>Next configure and compile ImageMagick:</p>
 
-<?php crt("cd ImageMagick-" . MagickLibVersionText . "<br/>" .  "$ ./configure -with-perl" . "<br/>" .  "$ make"); ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd ImageMagick-<?php echo MagickLibVersionText ?>
+
+./configure -with-perl
+make</samp></pre>
 
 <p>If ImageMagick / PerlMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
 
@@ -1315,7 +1318,7 @@ can use the integers 1 and 0.</p>
     <td>adjoin</td>
     <td>{True, False}</td>
     <td>join images into a single multi-image file</td>
-  </tr> 
+  </tr>
   <tr>
     <td>alpha</td>
     <td>{On, Off, Opaque, Transparent, Copy, Extract, Set}</td>
