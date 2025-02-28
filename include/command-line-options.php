@@ -3259,7 +3259,7 @@ calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
   <col width="75%" />
   <thead>
   <tr>
-  <th><var>operator</var></th>
+  <th>Operator</th>
   <th>Summary (see further below for details)</th>
   </tr>
   </thead>
@@ -3273,15 +3273,20 @@ calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
     <tr><td>Divide  </td>         <td>Divide pixels by <var>value</var>.</td></tr>
     <tr><td>Exp  </td>            <td>base-e exponential function</td></tr>
     <tr><td>Exponential  </td>            <td>base-e exponential function</td></tr>
+   <tr><td>Gaussian-noise</td><td> </td></tr>
+   <tr><td>Impulse-noise</td><td> </td></tr>
     <tr><td>InverseLog  </td>            <td>Apply inverse scaled logarithm to normalized pixels.</td></tr>
+   <tr><td>Laplacian-noise</td><td> </td></tr>
     <tr><td>LeftShift </td>       <td>Shift the pixel values left by <var>value</var> bits (i.e., multiply pixels by 2<sup><var>value</var></sup>).</td></tr>
     <tr><td>Log  </td>            <td>Apply scaled logarithm to normalized pixels.</td></tr>
     <tr><td>Max  </td>            <td>Set pixels to maximum of <var>value</var> and current pixel <var>value</var> (i.e. set any pixels currently less than <var>value</var> to <var>value</var>).</td></tr>
     <tr><td>Mean  </td>            <td>Add the <var>value</var> and divide by 2.</td></tr>
     <tr><td>Median  </td>          <td>Choose the median value from an image sequence.</td></tr>
     <tr><td>Min  </td>            <td>Set pixels to minimum of <var>value</var> and current pixel <var>value</var> (i.e. set any pixels currently greater than <var>value</var> to <var>value</var>).</td></tr>
+   <tr><td>Multiplicative-noise</td>      <td>(These are equivalent to the corresponding <a href="#noise" >-noise</a> operators.)</td></tr>
     <tr><td>Multiply </td>        <td>Multiply pixels by <var>value</var>.</td></tr>
     <tr><td>Or  </td>             <td>Binary OR of pixels with <var>value</var>.</td></tr>
+   <tr><td>Poisson-noise</td><td> </td></tr>
     <tr><td>Pow </td>             <td>Raise normalized pixels to the power <var>value</var>.</td></tr>
     <tr><td>RightShift </td>      <td>Shift the pixel values right by <var>value</var> bits (i.e., divide pixels by 2<sup><var>value</var></sup>).</td></tr>
     <tr><td>RMS</td>            <td>Square the pixel and add the <var>value</var>.</td></tr>
@@ -3289,22 +3294,14 @@ calculations, to the full range by multiplying by <var>QuantumRange</var>.)</p>
     <tr><td>Set </td>             <td>Set pixel equal to <var>value</var>.</td></tr>
     <tr><td>Sin, Sine </td>             <td>Apply sine to pixels with frequency <var>value</var> with 50% bias added.</td></tr>
     <tr><td>Subtract </td>        <td>Subtract <var>value</var> from pixels.</td></tr>
-    <tr><td>Xor </td>             <td>Binary XOR of pixels with <var>value.</var></td></tr>
-
-    <tr><td> </td><td> </td></tr>
-
-   <tr><td>Gaussian-noise</td><td> </td></tr>
-   <tr><td>Impulse-noise</td><td> </td></tr>
-   <tr><td>Laplacian-noise</td><td> </td></tr>
-   <tr><td>Multiplicative-noise</td>      <td>(These are equivalent to the corresponding <a href="#noise" >-noise</a> operators.)</td></tr>
-   <tr><td>PoissonNoise</td><td> </td></tr>
-   <tr><td>Uniform-noise</td><td> </td></tr>
-
-    <tr><td> </td><td> </td></tr>
+    <tr><td>Sum </td>        <td></td></tr>
 
    <tr><td>Threshold </td>       <td>Threshold pixels larger than <var>value</var>.</td></tr>
    <tr><td>ThresholdBlack </td>  <td>Threshold pixels to zero values equal to or below <var>value</var>.</td></tr>
    <tr><td>ThresholdWhite </td>  <td>Threshold pixels to maximum values above <var>value</var>.  </td></tr>
+   <tr><td>Uniform-noise</td><td> </td></tr>
+    <tr><td>Xor </td>             <td>Binary XOR of pixels with <var>value.</var></td></tr>
+
  </tbody>
  </table>
 </div>
