@@ -335,7 +335,7 @@
   </ul>
 </div>
 <p>&nbsp;</p>
-<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <?php cmd("convert"); ?> and <?php cmd("mogrify"); ?>.</p>
+<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adaptive-blur"></a>-adaptive-blur <var>radius</var>[x<var>sigma</var>]</h2>
@@ -4301,7 +4301,7 @@ $_SESSION['RelativePath']?>/../script/composite.php">composite</a>, <a
 href="#gravity">-gravity</a> gives the direction that the image gravitates
 within the composite.</p>
 
-<p>When used as an option to <?php cmd("montage"); ?>, <a
+<p>When used as an option to <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>, <a
 href="#gravity">-gravity</a> gives the direction that an image gravitates
 within a tile. The default gravity is <samp>Center</samp> for this purpose.</p>
 
@@ -6952,7 +6952,7 @@ effects) of a true threshold, but with tapered gray-levels around the threshold
 </div>
 
 <p class="magick-description">Operate silently. This option is only used
-by the <?php cmd("import"); ?> tool.</p>
+by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a> tool.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="similarity-threshold"></a>-similarity-threshold <var>value</var></h2>

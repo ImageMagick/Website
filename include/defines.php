@@ -692,7 +692,7 @@ use:</p>
     <td>Valid values are <var>bmp2</var>, <var>bmp3</var>,
     and <var>bmp4</var>.  This option can be useful when the
     method of prepending "BMP2:" to the output filename is inconvenient or
-    is not available, such as when using the <?php cmd("mogrify"); ?>
+    is not available, such as when using the <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>
     utility.</td>
   </tr>
 
@@ -1158,7 +1158,7 @@ use:</p>
     This property is useful for specifying
     the specific PNG format to be used, when the usual method of prepending the
     format name to the output filename is inconvenient, such as when writing
-    a PNG-encoded ICO file or when using <?php cmd("mogrify"); ?>.
+    a PNG-encoded ICO file or when using <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>.
     Value = <var>png8</var> reduces the number of colors to 256,
     only one of which may be fully transparent, if necessary.  The other
     values do not force any reduction of quality; it is an error to request
