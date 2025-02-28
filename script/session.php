@@ -84,7 +84,6 @@
   }
   require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
   require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
-  require_once($_SESSION['AbsolutePath'] . '/../function/fetchURL.php');
   require_once($_SESSION['AbsolutePath'] . '/../function/geometry.php');
   require_once($_SESSION['AbsolutePath'] . '/../function/option.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
