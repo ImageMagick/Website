@@ -120,7 +120,7 @@
   <dt class="col-md-4"> array: </dt>
     <dd class="col-md-8">an image offers array storage (e.g. p[-1,-1].r) bounded by its width and height.  An image sequence represents multiple arrays (e.g. u.p[0,0].r, v.p[0,0].r).  Storage is limited to Quantum values, e.g. [0..65535] for Q16 builds and floating point for HDRI-enabled builds.</dd>
   <dt class="col-md-4"> math functions: </dt>
-     <dd class="col-md-8"> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
+     <dd class="col-md-8"> abs(), acos(), acosh(), airy(), alt(), asin(), asinh(), atan(), atanh(), atan2(), ceil(), clamp(), cos(), cosh(), debug(), drc(), epoch(), erf(), exp(), floor(), gauss(), gcd(), hypot(), int(), isnan(), j0(), j1(), jinc(), ln(), log(), logtwo(), magicktime(), max(), min(), mod(), not(), pow(), rand(), round(), sign(), sin(), sinc(), sinh(), sqrt(), squish(), tan(), tanh(), trunc()</dd>
   <dt class="col-md-4"> channel functions: </dt>
     <dd class="col-md-8"> define up to 5 pixel channels</dd>
   <dt class="col-md-4"> color names:</dt>
@@ -254,6 +254,7 @@
 <dt class="col-md-4"> <samp>debug(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> print <var>x</var> (useful for debugging your expression)</dd>
 <dt class="col-md-4"> <samp>do(</samp><var>statements</var>, <var>condition</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <samp>drc(</samp><var>x</var>,<var>y</var><samp>)</samp></dt><dd class="col-md-8"> dynamic range compression (knee curve); drc(<var>x</var>,<var>y</var>)=(<var>x</var>)/(<var>y</var>*(<var>x</var>-1)+1); -1&lt;<var>y</var>&lt;1 </dd>
+<dt class="col-md-4"> <samp>epoch(</samp><var>date-property</var><samp>)</samp></dt><dd class="col-md-8"> convert date-property to the number of seconds since the epoch, 00:00:00 UTC</dd>
 <dt class="col-md-4"> <samp>erf(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <samp>exp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
 <dt class="col-md-4"> <samp>floor(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> largest integral value not greater than argument</dd>
@@ -271,6 +272,7 @@
 <dt class="col-md-4"> <samp>log(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> logarithm base 10</dd>
 <dt class="col-md-4"> <samp>logtwo(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> logarithm base 2</dd>
 <dt class="col-md-4"> <samp>ln(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> natural logarithm</dd>
+<dt class="col-md-4"> <samp>magicktime()</samp></dt><dd class="col-md-8"> the current time in seconds since the epoch, 00:00:00 UTC</dd>
 <dt class="col-md-4"> <samp>max(</samp><var>x</var>, <var>y</var><samp>)</samp></dt><dd class="col-md-8"> maximum of <var>x</var> and <var>y</var></dd>
 <dt class="col-md-4"> <samp>min(</samp><var>x</var>, <var>y</var><samp>)</samp></dt><dd class="col-md-8"> minimum of <var>x</var> and <var>y</var></dd>
 <dt class="col-md-4"> <samp>mod(</samp><var>x</var>, <var>y</var><samp>)</samp></dt><dd class="col-md-8"> floating-point remainder function</dd>
