@@ -254,7 +254,7 @@
 <dt class="col-md-4"> <samp>debug(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> print <var>x</var> (useful for debugging your expression)</dd>
 <dt class="col-md-4"> <samp>do(</samp><var>statements</var>, <var>condition</var><samp>)</samp></dt><dd class="col-md-8"> iterate while the condition is not equal to 0</dd>
 <dt class="col-md-4"> <samp>drc(</samp><var>x</var>,<var>y</var><samp>)</samp></dt><dd class="col-md-8"> dynamic range compression (knee curve); drc(<var>x</var>,<var>y</var>)=(<var>x</var>)/(<var>y</var>*(<var>x</var>-1)+1); -1&lt;<var>y</var>&lt;1 </dd>
-<dt class="col-md-4"> <samp>epoch(</samp><var>date-property</var><samp>)</samp></dt><dd class="col-md-8"> convert date-property to the number of seconds since the epoch, 00:00:00 UTC</dd>
+<dt class="col-md-4"> <samp>epoch(</samp><var>date-time</var><samp>)</samp></dt><dd class="col-md-8"> convert date-time property to the number of seconds since the epoch, 00:00:00 UTC</dd>
 <dt class="col-md-4"> <samp>erf(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> error function</dd>
 <dt class="col-md-4"> <samp>exp(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> natural exponential function (<var>e<sup>x</sup></var>)</dd>
 <dt class="col-md-4"> <samp>floor(</samp><var>x</var><samp>)</samp></dt><dd class="col-md-8"> largest integral value not greater than argument</dd>
