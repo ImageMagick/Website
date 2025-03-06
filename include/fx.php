@@ -388,4 +388,7 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>The color-escape <samp>%[pixel:]</samp> or <samp>%[hex:]</samp> is evaluated once per image and per color channel in that image (<a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <samp>i</samp> and <samp>j</samp> are set to zero, and <samp>s</samp> and <samp>t</samp> refer to each successively current image and index.</p>
 
+<p>The <samp>epoch()</samp> method takes an date-time property, for example:</p>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick rose.png -precision 16 -format '%[fx:epoch(%%[date:modify])]' info:</samp></pre>
+
 </div>
