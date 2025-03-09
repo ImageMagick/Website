@@ -5,6 +5,52 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-45](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-44...7.1.1-45) - 2025-03-09
+
+### Merged
+
+- Fix statistic.c GetImageRange initializer [`#8010`](https://github.com/ImageMagick/ImageMagick/pull/8010)
+
+### Fixed
+
+- Fix statistic.c GetImageRange initializer (#8010) [`#1679`](https://github.com/rmagick/rmagick/issues/1679)
+
+### Commits
+
+- beta release [`6c98cd0`](https://github.com/ImageMagick/ImageMagick/commit/6c98cd071298daf5af4c5fac0ed687ca278b7533)
+- slightly optimize JzAzBz tuples, thanks to @nrobidoux [`2766158`](https://github.com/ImageMagick/ImageMagick/commit/27661583f6854a89112cf3d716c19336a88c2b49)
+- ... [`9122023`](https://github.com/ImageMagick/ImageMagick/commit/9122023dcffb069678ea003b56c0b15f7970b4f4)
+- Jzazbz colorspace optimizations by @nrobidoux [`cb4bb36`](https://github.com/ImageMagick/ImageMagick/commit/cb4bb36ef61f64149f1a0f5ed4a3693f42f3b382)
+- follow thumbnail specification for -thumbnail option [`f92bd5b`](https://github.com/ImageMagick/ImageMagick/commit/f92bd5b84842f19156ebdc3958d5dee8c4c80ced)
+- cosmetic [`90acf73`](https://github.com/ImageMagick/ImageMagick/commit/90acf73ad577ecf95313cfc6b01cfd2c6c521442)
+- cosmetic [`cb9c7de`](https://github.com/ImageMagick/ImageMagick/commit/cb9c7de9aed1067c86ef7b46dec4893a37f5df46)
+- reference image instead of thumbnail [`93f7b8e`](https://github.com/ImageMagick/ImageMagick/commit/93f7b8e90ff6f4d2df06625ce0be2d95d8c778a3)
+- squash abort [`7b41547`](https://github.com/ImageMagick/ImageMagick/commit/7b415479eff09d4fb7f2be0c239b44d4d72b4ce9)
+- search for null, not 0 [`4d249e1`](https://github.com/ImageMagick/ImageMagick/commit/4d249e1391f77d9fd6473b70fa9e9c1f76f5d4ff)
+- Also print the requested sizes in the error message when width or height exceeds the limits. [`14dfb98`](https://github.com/ImageMagick/ImageMagick/commit/14dfb989462e64ab82f7ffbcdb1279d5223e9440)
+- file URI is we have an absolute path [`9656f70`](https://github.com/ImageMagick/ImageMagick/commit/9656f70c483b6dbcc9c533696634ec9d51954b2d)
+- Corrected CMAKE flags for the oss-fuzz zlib build. [`6882c62`](https://github.com/ImageMagick/ImageMagick/commit/6882c62def5c6146f52d94fc73410ee9c0f2edff)
+- Corrected oss-fuzz issues link. [`8c885b1`](https://github.com/ImageMagick/ImageMagick/commit/8c885b129a25571ef5adc287e1a82e06d52d6978)
+- We don't need to set png:IHDR.bit-depth-orig and png:IHDR.color-type-orig because we already set the magick to PNG32. [`9871f79`](https://github.com/ImageMagick/ImageMagick/commit/9871f791807228793837a957ff5a5bc929b5e736)
+- mime:type is not automatically injected, you must request it [`14511d8`](https://github.com/ImageMagick/ImageMagick/commit/14511d8b3643ff76ac8d08a54a12d9f55f867814)
+- optimized Oklab colorspace transformation [`41e87e5`](https://github.com/ImageMagick/ImageMagick/commit/41e87e51249975fa64247948e5e5aa46c1573295)
+- include PNG tRNS chunk [`7021e98`](https://github.com/ImageMagick/ImageMagick/commit/7021e987722314f3f635dd5b6a7119a766a2ab92)
+- latest documentation [`48ef8ec`](https://github.com/ImageMagick/ImageMagick/commit/48ef8ec78a5d7fa347bcaadf5198e2a719132d2d)
+- ... [`57ca4c7`](https://github.com/ImageMagick/ImageMagick/commit/57ca4c7667176c99094f50402e14837185e54572)
+- support parallel DNG image conversion [`0a92243`](https://github.com/ImageMagick/ImageMagick/commit/0a92243f86f3baea701cfd2eff40e8c2c6dd0539)
+- support epoch() and magicktime() FX functions contributed by @snibgo [`f70d8d3`](https://github.com/ImageMagick/ImageMagick/commit/f70d8d3759347ff305ec70d0a39656850242f418)
+- Added our own implementation of parsing an iso860 date and time to fix the Windows build. [`be01f28`](https://github.com/ImageMagick/ImageMagick/commit/be01f28ae2d376fca76a730003843d584e2d960a)
+- Corrected memset. [`e8b195d`](https://github.com/ImageMagick/ImageMagick/commit/e8b195dd10f83db9dd8fae5c3d5a6956ab634e3c)
+- negate MAE metric [`f02769c`](https://github.com/ImageMagick/ImageMagick/commit/f02769cfcd1e1c65d20623851b75ea8bc8e70fce)
+- negate PHASH similarity image [`dd44681`](https://github.com/ImageMagick/ImageMagick/commit/dd446812187505f219a51cc4b79fbd9dc6176379)
+- Added options to allow specifying the security limits of libheif. [`0dcd7ad`](https://github.com/ImageMagick/ImageMagick/commit/0dcd7ad4d373db99ae3f4bdf9303a3d88116e33a)
+- detect invalid compression BMP [`5810cf9`](https://github.com/ImageMagick/ImageMagick/commit/5810cf98cec6168ebd92c06c9a57a0eb28747c25)
+- default to true-color alpha [`fe3b58f`](https://github.com/ImageMagick/ImageMagick/commit/fe3b58fa3d102bbd2f69ddce8fbf1d43d6ece3dd)
+- cosmetic [`8f8cb86`](https://github.com/ImageMagick/ImageMagick/commit/8f8cb86b76d2f837021d65cf5ff661328ae29de2)
+- correct conditional compile [`321bed7`](https://github.com/ImageMagick/ImageMagick/commit/321bed785978178926a0ee0282bc9999bda69655)
+- negate SSIM similarity metric [`3cbce56`](https://github.com/ImageMagick/ImageMagick/commit/3cbce569617a61e207f9caccebd8ffc5a8e554e5)
+- releasse [`37b3453`](https://github.com/ImageMagick/ImageMagick/commit/37b3453c6222ae6b9f96418dbc70df225929db7e)
+
 ## [7.1.1-44](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-43...7.1.1-44) - 2025-02-22
 
 ### Merged

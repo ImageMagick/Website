@@ -875,14 +875,12 @@ use:</p>
 
   <tr>
     <td>identify:locate=<var>value</var></td>
-    <td>Display minimum or maximum pixel locations.</td>
+    <td>Display minimum or maximum pixel locations. Valid values are <samp>minimum</samp> or <samp>maximum</samp>. The default is <samp>maximum</samp>.</td>
   </tr>
 
   <tr>
     <td>identify:limit=<var>value</var></td>
-    <td>The maximum number of pixel locations to display when using identify:locate.
-    Valid values are <samp>minimum</samp>,<samp>maximum</samp>. The default is maximum.
-    </td>
+    <td>The maximum number of pixel locations to display when using <samp>identify:locate</samp>.</td>
   </tr>
 
   <tr>
