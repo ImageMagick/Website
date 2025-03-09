@@ -46,7 +46,7 @@ Image: rose.jpg
 
 <p>The value in the brackets is the normalized simularity metric.</p>
 
-<p>Note, similarity search respects the virtual page offset.  To ensure expected results, make sure your image page offset is 0,0.</p>
+<p>Note, similarity search respects the virtual page offset.  To ensure expected results, make sure your image page offset is +0+0.</p>
 
 <p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { DPC, MSE, NCC, RMSE, PHASE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
 
