@@ -858,7 +858,7 @@ use:</p>
 
   <tr>
     <td>heic:max-bayer-pattern-pixels=<var>value</var></td>
-    <td>Sets the maximum bayer pattern size of a HEIC image.</td>
+    <td>Sets the maximum bayer pattern size in pixels of a HEIC image.</td>
   </tr>
 
   <tr>
@@ -878,7 +878,7 @@ use:</p>
 
   <tr>
     <td>heic:max-components=<var>value</var></td>
-    <td>Sets the maximum components of a HEIC image.</td>
+    <td>Sets the maximum number of components of a HEIC image.</td>
   </tr>
 
   <tr>
