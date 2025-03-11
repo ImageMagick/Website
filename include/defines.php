@@ -838,14 +838,62 @@ use:</p>
 
   <tr>
     <td>heic:chroma=<var>value</var></td>
-    <td>set the HEIC chroma parameter. Possible values are: "420", "422", "444". Default is "420".</td>
-    </td>
+    <td>Set the HEIC chroma parameter. Possible values are: "420", "422", "444". Default is "420".</td>
   </tr>
 
   <tr>
     <td>heic:depth-image=<var>true</var></td>
-    <td>extract the depth image if the container has one.</td>
-    </td>
+    <td>Extract the depth image if the container has one.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-image-size-pixels=<var>value</var></td>
+    <td>Sets the maximum image size in pixels of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-number-of-tiles=<var>value</var></td>
+    <td>Sets the maximum number of tiles of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-bayer-pattern-pixels=<var>value</var></td>
+    <td>Sets the maximum bayer pattern size of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-items=<var>value</var></td>
+    <td>Sets the maximum number of items in a box of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-color-profile-size=<var>value</var></td>
+    <td>Sets the maximum color profile size of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-memory-block-size=<var>value</var></td>
+    <td>Sets the maximum size that can be allocated when reading a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-components=<var>value</var></td>
+    <td>Sets the maximum components of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-iloc-extents-per-item=<var>value</var></td>
+    <td>Sets the maximum number of extents in iloc box of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:max-size-entity-group=<var>value</var></td>
+    <td>Sets the maximum size of an entity group of a HEIC image.</td>
+  </tr>
+
+  <tr>
+    <td>heic:mmax-children-per-box=<var>value</var></td>
+    <td>Sets the maximum number of children per box of a HEIC image.</td>
   </tr>
 
   <tr>
@@ -858,8 +906,7 @@ use:</p>
 
   <tr>
     <td>heic:speed=<var>value</var></td>
-    <td>set the HEIC speed parameter. Integer value from 0-9. Default is 5.</td>
-    </td>
+    <td>Set the HEIC speed parameter. Integer value from 0-9. Default is 5.</td>
   </tr>
 
   <tr>
