@@ -847,11 +847,6 @@ use:</p>
   </tr>
 
   <tr>
-    <td>heic:max-image-size-pixels=<var>value</var></td>
-    <td>Sets the maximum image size in pixels of a HEIC image.</td>
-  </tr>
-
-  <tr>
     <td>heic:max-number-of-tiles=<var>value</var></td>
     <td>Sets the maximum number of tiles of a HEIC image.</td>
   </tr>
