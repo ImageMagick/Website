@@ -280,7 +280,7 @@ use:</p>
 
   <tr>
     <td>filename:literal=<var>true</var></td>
-    <td>By default, filenames can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpreting embedded formatting characters and instead use the filename literally.</td>
+    <td>By default, output filenames can contain <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#output">embedded formatting characters</a>.  Use this option to bypass interpreting embedded formatting characters and instead use the filename literally.</td>
   </tr>
 
   <tr>
