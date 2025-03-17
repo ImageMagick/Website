@@ -862,11 +862,6 @@ use:</p>
   </tr>
 
   <tr>
-    <td>heic:max-color-profile-size=<var>value</var></td>
-    <td>Sets the maximum color profile size of a HEIC image.</td>
-  </tr>
-
-  <tr>
     <td>heic:max-memory-block-size=<var>value</var></td>
     <td>Sets the maximum size that can be allocated when reading a HEIC image.</td>
   </tr>
