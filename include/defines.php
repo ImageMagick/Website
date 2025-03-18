@@ -1027,6 +1027,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>jxl:decoding-speed=<var>value</var></td>
+    <td>Set the jpeg-xl decoding speed. Valid values are in the range of 0 (slowest) to 4 (fastest, at the cost of some quality/density).</td>
+  </tr>
+
+  <tr>
     <td>jxl:effort=<var>value</var></td>
     <td>Set the jpeg-xl encoding effort. Valid values are in the range of 3 (falcon) to 9 (tortoise).</td>
   </tr>
