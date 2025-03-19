@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-46](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-45...7.1.1-46) - 2025-03-18
+
+### Merged
+
+- try pngalpha if png16malpha not available [`#8034`](https://github.com/ImageMagick/ImageMagick/pull/8034)
+
+### Commits
+
+- beta release [`fe966f5`](https://github.com/ImageMagick/ImageMagick/commit/fe966f585fb5d68b61357a4a300ad486ff39c257)
+- negate SSIM similarity image [`225b65d`](https://github.com/ImageMagick/ImageMagick/commit/225b65d7fbe890fd43252f305f10400a69a59673)
+- cosmetic [`66985e8`](https://github.com/ImageMagick/ImageMagick/commit/66985e847f09e7f2446e6544062ec641621db95a)
+- TIFFGetFieldDefaulted doesn't work for TIFFTAG_PHOTOMETRIC so we need to use TIFFGetField instead. [`b64d7a9`](https://github.com/ImageMagick/ImageMagick/commit/b64d7a99d1efdd2d97df1e58748aed0e3260a5e5)
+- Remove heic:max-image-size-pixels option and use our limits instead. [`c4afe0b`](https://github.com/ImageMagick/ImageMagick/commit/c4afe0b7ea9934417b0b5218678d791aa40bfea3)
+- fix issue with similarity search of two images of same dimensions [`62cb29b`](https://github.com/ImageMagick/ImageMagick/commit/62cb29b80a6c5fb18378e77aeea75a92bea38632)
+- for NCC metric, identical is `1` not `0` [`4130489`](https://github.com/ImageMagick/ImageMagick/commit/41304894af0f29517b795d4a7a14dd6cf0f2965e)
+- Only divide the value once when scaling quantum to an unsigned char. This is probably already optimized by the compiler but this change makes our intent more clear. [`fb883b5`](https://github.com/ImageMagick/ImageMagick/commit/fb883b589c037504717caf632044521d80865149)
+- restore output of PSNR metric [`fae1740`](https://github.com/ImageMagick/ImageMagick/commit/fae1740b6c35669d8d1ff07e3e86641747025be8)
+- special similarity one-off if image and reconstruction have same dimensions [`221e702`](https://github.com/ImageMagick/ImageMagick/commit/221e702e84df9f8b75734ecaf0ba8df30105d572)
+- don't encode URI '/' [`8f23ea7`](https://github.com/ImageMagick/ImageMagick/commit/8f23ea73e0ff184ca3dde5a3fe84a21cd38c4011)
+- scale PSNR output by 100 [`6c69f79`](https://github.com/ImageMagick/ImageMagick/commit/6c69f79bd68fa79c4ab3f0fffc85a13669722c78)
+- scale PSNR by 48.1647 [`4071458`](https://github.com/ImageMagick/ImageMagick/commit/4071458b68b761f6685607ad9be4db5c3481ee9d)
+- revert special case where target and reconstruction is the same dimensions [`9224c0d`](https://github.com/ImageMagick/ImageMagick/commit/9224c0dc46e427b5701c5f51b081c1cbd281a118)
+- special case where target and reconstruction are same size [`f060e09`](https://github.com/ImageMagick/ImageMagick/commit/f060e09087a529ea9cc6a3f20d162285f26651a5)
+- improve detection of RLE decoding [`e4df167`](https://github.com/ImageMagick/ImageMagick/commit/e4df1673f1817c5d753c9013e17acb2bd28f5099)
+- strip thumbnail URI of decorators [`934d3f9`](https://github.com/ImageMagick/ImageMagick/commit/934d3f949d9eaa526debc43c7192aa32890867cf)
+- respect filename:literal define for both input and output filenames [`1b0f75e`](https://github.com/ImageMagick/ImageMagick/commit/1b0f75ec9f77f66afa69ae46c2a72a9543bcfbf5)
+- revert [`e6be257`](https://github.com/ImageMagick/ImageMagick/commit/e6be2579b493502062f5749265caf5b493bc741f)
+- PSNR metric returned incorrect results for spatial, FFT worked fine [`4678062`](https://github.com/ImageMagick/ImageMagick/commit/4678062d9bbf9f4194be50b88d9cecf2899a9de8)
+- remove debug statement [`1872f0a`](https://github.com/ImageMagick/ImageMagick/commit/1872f0a25741f269395c4ca698a57b9ac9498129)
+- Set the max_color_profile_size using GetMaxProfileSize instead. [`27d8f79`](https://github.com/ImageMagick/ImageMagick/commit/27d8f79d96d74ae2a80a37855667d604b477b6ba)
+- Added missing typecast. [`7ee7ea3`](https://github.com/ImageMagick/ImageMagick/commit/7ee7ea3c909386fb342de5ae9e8045546d4d9474)
+- release [`8209e84`](https://github.com/ImageMagick/ImageMagick/commit/8209e844cf02b5365918da83b2fc811442813080)
+
 ## [7.1.1-45](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-44...7.1.1-45) - 2025-03-09
 
 ### Merged
