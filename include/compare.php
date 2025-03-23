@@ -48,7 +48,7 @@ Image: rose.jpg
 
 <p>Note, similarity search respects the virtual page offset.  To ensure expected results, make sure your image page offset is +0+0.</p>
 
-<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is { DPC, MSE, NCC, RMSE, PHASE, PSNR }, you can expect an order of magnitude speed increase in processing time.</p>
+<p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is DPC, MSE, NCC, RMSE, PHASE, or PSNR, you can expect an order of magnitude speed increase in processing time. For discussion, refer to <a href="https://github.com/ImageMagick/ImageMagick/discussions/3950" target="_blank">Accelerated Subimage-search Compare</a>.</p>
 
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
