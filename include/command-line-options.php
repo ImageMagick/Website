@@ -7261,23 +7261,15 @@ href="#stretch">-stretch</a>, and <a href="#weight">-weight</a>. </p>
 
 <p class="magick-description">Search for subimage.</p>
 
-<p>This option is required to have compare search for the best match location
-of a small image within a larger image. This search will produce two images
-(or two frames). The first is the "difference" image and the second will
-be the "match score" image.</p>
-
-<p>The "match-score" image is smaller containing a pixel for ever possible
-position of the top-left corner of the given sub-image. that is its size will
-be the size of the larger_image - sub_image + 1.  The brightest location in
-this image is the location s the locate on the best match that is also
-reported. Note that this may or may not be a perfect match, and the actual
-brightness will reflect this. Other bright 'peaks' can be used to locate other
-possible matching locations. </p>
-
-<p>Note that the search will try to compare the sub-image at every possible
-location in the larger image, as such it can be very slow.  The smaller the
-sub-image the faster this search is. </p>
-
+<p>This option enables the <code>compare</code> function to search for the best match location of a small image within a larger image. The search process generates either one or two output images (or frames), depending on whether the metric is accelerated.</p>
+<ul>
+    <li>The first output is the <strong>difference</strong> image.</li>
+    <li>The second output, if present, is the <strong>similarity score</strong> image.</li>
+</ul>
+<p>When utilizing the HDRI-enabled compile of ImageMagick and the FFTW delegate is installed, specific metrics—<strong>NCC</strong>, <strong>MSE</strong>, <strong>RMSE</strong>, <strong>PSNR</strong>, <strong>PHASE</strong>, and <strong>DPC</strong>—are automatically accelerated using FFT (Fast Fourier Transform) processing. This is the default behavior. However, by using the flag <code>-define compare:frequency-domain=false</code>, you can disable FFT acceleration and instead opt for the slower spatial domain processing, if desired.</p>
+<p>The <strong>similarity score</strong> image matches the dimensions of the larger image. Each pixel in this output represents a potential position for the top-left corner of the small image within the larger one. The brightest spot in the similarity image corresponds to the best match location. For FFT-accelerated metrics, the similarity score at this position is also displayed in square brackets alongside the match coordinates.</p>
+<p>It is important to note that the best match in the similarity image does not necessarily imply a perfect match. The actual brightness of the peak reflects the quality of the match. Additionally, other bright peaks in the similarity image may indicate alternate potential matching locations.</p>
+<p>Metrics differ in their definition of a <i>perfect match</i>. For metrics like <strong>MSE</strong>, <strong>RMSE</strong>, <strong>PSNR</strong> (<strong>MAE</strong>, <strong>FUZZ</strong>, <strong>DSIM</strong>, and <strong>PHASH</strong>), a perfect match has a value of 0. Conversely, metrics such as <strong>NCC</strong>, <strong>PHASE</strong>, <strong>DPC</strong> (<strong>AE</strong>, <strong>PAE</strong>, <strong>MEPP</strong>, and <strong>SSIM</strong>) define a perfect match as 1. To maintain consistency, for metrics where the perfect match is 0, the similarity image is inverted, ensuring that the best match location appears as the brightest point, just as it does for metrics with a perfect match at 1. </p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="swap"></a>-swap <var>index,index</var></h2>
