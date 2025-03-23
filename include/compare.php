@@ -68,6 +68,11 @@ Image: rose.jpg
   </tr>
 
   <tr>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#adjoin">-adjoin</a></td>
+    <td>join images into a single multi-image file</td>
+  </tr>
+
+  <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha</a></td>
     <td>on, activate, off, deactivate, set, opaque, copy",
 transparent, extract, background, or shape the alpha channel</td>
