@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-47](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-46...7.1.1-47) - 2025-03-29
+
+### Commits
+
+- beta release [`674861a`](https://github.com/ImageMagick/ImageMagick/commit/674861ae68bf9aacdf279a6842bb0cb65c0f3322)
+- ... [`9d4fdca`](https://github.com/ImageMagick/ImageMagick/commit/9d4fdca82c920395b9c87f44c248f19495dddfc1)
+- set PSNR for identical images to 48.1647db [`6687c75`](https://github.com/ImageMagick/ImageMagick/commit/6687c754da6996280dec6ffe8d7486fdc148168e)
+- incorrect tag [`5c6183b`](https://github.com/ImageMagick/ImageMagick/commit/5c6183bd88ac57b1d1f0d55dbd00202aef643c8e)
+- reverse PSNR edge cases [`45c90d2`](https://github.com/ImageMagick/ImageMagick/commit/45c90d2c1a10e4ea6a9ff7c4ec7a4b36a6f14c76)
+- negate AE/PAE/MEPP correlation image [`d1208c1`](https://github.com/ImageMagick/ImageMagick/commit/d1208c1cc34b36d730461c7b8164e6fdc8d20e0b)
+- support -adjoin setting [`bf3c9a2`](https://github.com/ImageMagick/ImageMagick/commit/bf3c9a2f19140bc4e43a9901b7ad0218f774e3e6)
+- initialize channel minimum [`432c63e`](https://github.com/ImageMagick/ImageMagick/commit/432c63e7739df441b5d325df3d06059f21e82138)
+- revert [`e94404b`](https://github.com/ImageMagick/ImageMagick/commit/e94404b9629ae5d7713b138b405662900beac5cd)
+- correct PSNR distortion [`ddf1f55`](https://github.com/ImageMagick/ImageMagick/commit/ddf1f5576b2e3e5028bcc3aad5a600a541aa0c14)
+- invert similarity for SSIM metric [`32103ff`](https://github.com/ImageMagick/ImageMagick/commit/32103ff9a0e15d72586f1d3306ab003bb94e67a9)
+- list pcl6 delegate [`0343554`](https://github.com/ImageMagick/ImageMagick/commit/03435541700ee28eacf18022778ed41e14cacd61)
+- change pcl default color device [`c8e0236`](https://github.com/ImageMagick/ImageMagick/commit/c8e023629834d5b8387b3904d70315a02a923632)
+- correct PSNR metric [`981ae2d`](https://github.com/ImageMagick/ImageMagick/commit/981ae2db2a10558c3bd7efcb12b2115ee8477a60)
+- render closed sub-path poly lines [`c8f4e8c`](https://github.com/ImageMagick/ImageMagick/commit/c8f4e8cb75b1446b632536479d1184c9c2c0b2d0)
+- release [`82572af`](https://github.com/ImageMagick/ImageMagick/commit/82572afc879b439cbf8c9c6f3a9ac7626adf98fb)
+
 ## [7.1.1-46](https://github.com/ImageMagick/ImageMagick/compare/7.1.1-45...7.1.1-46) - 2025-03-18
 
 ### Merged
