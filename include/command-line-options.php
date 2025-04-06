@@ -781,7 +781,7 @@ href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 </dl>
 </div>
 
-<p>The computed threshold is returned as the <kbd>auto-threshold:verbose</kbd> image property. To instead print to your device, use <kbd>-define auto-threshold:verbose=true</kbd>.</p>
+<p>The computed threshold is returned as the <samp>auto-threshold:verbose</samp> image property. To instead print to your device, use <samp>-define auto-threshold:verbose=true</samp>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="average"></a>-average</h2>
@@ -7845,7 +7845,7 @@ href="#stretch">-stretch</a>, and <a href="#style">-style</a>. </p>
   <h2><a class="anchor" id="white-balance"></a>-white-balance</h2>
 </div>
 <p>Applies white balancing to an image according to a grayworld assumption in the LAB colorspace.</p>
-<p>Use <kbd>-define white-balance:vibrance=<em>value{%}</em></kdb> to change the color vibrance of the a &amp; b channels.</p>
+<p>Use <samp>-define white-balance:vibrance=<em>value{%}</em></kdb> to change the color vibrance of the a &amp; b channels.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="white-point"></a>-white-point <var>x,y</var></h2>

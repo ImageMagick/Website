@@ -70,12 +70,12 @@ make</samp></pre>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>unzip ImageMagick-windows.zip</samp></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p>
-<p>Next, launch your Visual Studio IDE and choose <kbd>Open->Project</kbd>.  Select the configure workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</kbd> folder and open configure.sln.  Choose <kbd>Build->Build Solution</kbd>
+<p>Next, launch your Visual Studio IDE and choose <samp>Open->Project</samp>.  Select the configure workspace from the <samp>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</samp> folder and open configure.sln.  Choose <samp>Build->Build Solution</samp>
 to compile the program and on completion run the program.</p>
 
 <ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/configure.jpg" alt="[configure]" /></ul>
 
-<p>Press <kbd>Next</kbd> and click on the multi-threaded static build.  Now press, on <kbd>Next</kbd> twice and finally <kbd>Finish</kbd>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <kbd>Open->Project</kbd> and select the VisualStaticMT workspace from the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/</kbd>  folder.  Finally, choose <kbd>Build->Build Solution</kbd> to compile and build the ImageMagick distribution.</p>
+<p>Press <samp>Next</samp> and click on the multi-threaded static build.  Now press, on <samp>Next</samp> twice and finally <samp>Finish</samp>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <samp>Open->Project</samp> and select the VisualStaticMT workspace from the <samp>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/</samp>  folder.  Finally, choose <samp>Build->Build Solution</samp> to compile and build the ImageMagick distribution.</p>
 
 <p>The configure.exe utility can also be run on the command line instead of through the GUI wizard. You can see an example in <a href="https://github.com/ImageMagick/ImageMagick/blob/18e15da2dc6ceae05e95077f85e9d67dac31c5d8/.github/workflows/release.yml#L212">our GitHub actions build</a>.</p>
 
@@ -93,6 +93,6 @@ magick logo: image.jpg</samp></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you want to install ImageMagick in a place other than the <kbd>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/bin</kbd> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-windows-installation.php">Advanced Windows Source Installation</a>.</p>
+<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you want to install ImageMagick in a place other than the <samp>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/bin</samp> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-windows-installation.php">Advanced Windows Source Installation</a>.</p>
 
 </div>

@@ -210,7 +210,7 @@ GetCacheViewAuthenticMetacontent()
 GetCacheViewVirtualMetacontent()</samp></pre>
 
 <h2><a class="anchor" id="alpha"></a>Alpha</h2>
-<p>We support alpha now, previously opacity.  With alpha, a value of <kbd>0</kbd> means that the pixel does not have any coverage information and is transparent; i.e. there was no color contribution from any geometry because the geometry did not overlap this pixel. A value of <samp>QuantumRange</samp> means that the pixel is opaque because the geometry completely overlapped the pixel. As a consequence, in version 7, the PixelInfo structure member alpha has replaced the previous opacity member.  Another consequence is the alpha part of an sRGB value in hexadecimal notation is now reversed (e.g. #0000 is fully transparent).</p>
+<p>We support alpha now, previously opacity.  With alpha, a value of <samp>0</samp> means that the pixel does not have any coverage information and is transparent; i.e. there was no color contribution from any geometry because the geometry did not overlap this pixel. A value of <samp>QuantumRange</samp> means that the pixel is opaque because the geometry completely overlapped the pixel. As a consequence, in version 7, the PixelInfo structure member alpha has replaced the previous opacity member.  Another consequence is the alpha part of an sRGB value in hexadecimal notation is now reversed (e.g. #0000 is fully transparent).</p>
 <h2><a class="anchor" id="colorspace"></a>Colorspace</h2>
 <p>The <samp>Rec601Luma</samp> and <samp>Rec709Luma</samp> colorspaces are no longer supported.  Instead, specify the <samp>gray</samp> colorspace and choose from these intensity options:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Rec601Luma
