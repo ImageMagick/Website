@@ -2,7 +2,6 @@
 <p class="lead">ImageMagick has built-in support for some <a href="http://en.wikipedia.org/wiki/OpenCL">OpenCL</a> accelerated operations. However, there are some conditions for its operation. These requirements are listed below.</p>
 
 <ol>
-    <li><strong>GPU platform:</strong> AMD or Intel GPUs are supported. NVIDIA support is not enabled at the moment.</li>
     <li><strong>OS and drivers:</strong>
         <ul>
             <li><strong>Mac OS X:</strong> has built-in support for OpenCL. No other actions required.</li>
