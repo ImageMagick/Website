@@ -50,6 +50,8 @@ Image: rose.jpg
 
 <p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is DPC, MSE, NCC, RMSE, PHASE, or PSNR, you can expect an order of magnitude speed increase in processing time. For discussion, refer to <a href="https://github.com/ImageMagick/ImageMagick/discussions/3950" target="_blank">Accelerated Subimage-search Compare</a>.</p>
 
+<p>If the <samp>-subimage-search</samp> option is not enabled, ImageMagick performs a direct pixel-by-pixel comparison between the two images, starting from their top-left corners. In cases where the images differ in size, the smaller image is aligned with the larger one, while the extra areas in the smaller image are treated as virtual pixels. These virtual pixels can be processed according to the chosen virtual pixel method, which influences how unmatched regions are handled in the comparison. Consequently, the comparison metrics may be affected by these additional areas, potentially impacting the overall similarity assessment.</p>
+
 <p>You can find additional examples of using <samp>compare</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 <p>Two images are considered similar if their difference according to the specified metric and fuzz value is 0, with the exception of the normalized cross correlation metric (NCC), where two images are considered similar when their normalized cross correlation is 1. The default metric is NCC.</p>
