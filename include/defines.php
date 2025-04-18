@@ -862,11 +862,6 @@ use:</p>
   </tr>
 
   <tr>
-    <td>heic:max-memory-block-size=<var>value</var></td>
-    <td>Sets the maximum size that can be allocated when reading a HEIC image.</td>
-  </tr>
-
-  <tr>
     <td>heic:max-components=<var>value</var></td>
     <td>Sets the maximum number of components of a HEIC image.</td>
   </tr>
