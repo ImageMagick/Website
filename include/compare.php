@@ -43,7 +43,7 @@ Image: rose.jpg
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.pfm
 0 (0) @ 417,44 [0.999967]
-$ magicvk identify -define identify:locate=maximum -define identify:limit=1 similarity.pfm
+$ magick identify -define identify:locate=maximum -define identify:limit=1 similarity.pfm
 Channel maximum locations:
   Gray: 65532.9 (0.999967) 417,44
 </samp></pre>
