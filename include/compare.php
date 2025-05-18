@@ -22,13 +22,14 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre
 
 <p>In addition to the visual interpretation of the difference in an image and its reconstruction, we report a mathematical measure of the difference:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -verbose -metric mae rose.jpg reconstruct.jpg difference.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -verbose -metric rmse rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
- Channel distortion: MAE
-  red: 2282.91 (0.034835)
-  green: 1853.99 (0.0282901)
-  blue: 2008.67 (0.0306503)
-  all: 1536.39 (0.0234439) </samp></pre>
+ Channel distortion: RMSE
+   red: 191.08 (0.00291569)
+   green: 140.91 (0.00215015)
+   blue: 188.105 (0.00287029)
+   all: 174.882 (0.00266852)
+</samp></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
@@ -37,12 +38,12 @@ Image: rose.jpg
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
-28.31 </samp></pre>
+51.4746 (0.428955) </samp></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.pfm
-0 (0) @ 417,44 [0.999967]
+0 (0) @ 417,44 [0]
 $ magick identify -define identify:locate=maximum -define identify:limit=1 similarity.pfm
 Channel maximum locations:
   Gray: 65532.9 (0.999967) 417,44
@@ -221,7 +222,7 @@ transparent, extract, background, or shape the alpha channel</td>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#metric">-metric <var>type</var></a></td>
-    <td>measure differences between images with this metric</td>
+    <td>measure differences between images with this metric.  The default metric is RMSE.</td>
   </tr>
 
   <tr>
