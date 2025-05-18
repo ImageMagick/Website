@@ -26,19 +26,19 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre
 Image: rose.jpg
  Channel distortion: RMSE
    red: 2833.91 (0.0432427)
-    green: 2401.45 (0.0366438)
-    blue: 2560.43 (0.0390696)
-    all: 2604.73 (0.0397456)
+   green: 2401.45 (0.0366438)
+   blue: 2560.43 (0.0390696)
+   all: 2604.73 (0.0397456)
 </samp></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
-19.63 </samp></pre>
+27.2817 (0.227348) </samp></pre>
 
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
-51.4746 (0.428955) </samp></pre>
+28.0142 (0.233452) </samp></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
