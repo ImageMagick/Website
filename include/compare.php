@@ -25,10 +25,10 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -verbose -metric rmse rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
  Channel distortion: RMSE
-   red: 191.08 (0.00291569)
-   green: 140.91 (0.00215015)
-   blue: 188.105 (0.00287029)
-   all: 174.882 (0.00266852)
+   red: 2833.91 (0.0432427)
+    green: 2401.45 (0.0366438)
+    blue: 2560.43 (0.0390696)
+    all: 2604.73 (0.0397456)
 </samp></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
