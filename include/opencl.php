@@ -11,7 +11,7 @@
     </li>
     <li><strong>Compile-time flag:</strong> ImageMagick's OpenCL must be explicitly enabled when compiling. This is done by running <samp>configure</samp> with <samp>--enable-opencl</samp> flag set.</li>
     <li><strong>Check runtime support:</strong> to verify if OpenCL support is enabled, run <samp>magick --version</samp>. The command output should read <samp>Features: ... <strong>OpenCL</strong> ...</samp></li>
-    <li><strong>Runtime flag:</strong> OpenCL is disabled by default in runtime. To enable it use the environment variable <samp>MAGICK_OCL_DEVICE=true</samp>, e.g. <samp>MAGICK_OCL_DEVICE=true magick &lt;options&gt;</samp>.</li>
+    <li><strong>Runtime flag:</strong> OpenCL is disabled by default in runtime. To enable it use the environment variable <samp>MAGICK_OCL_DEVICE=true</samp>, e.g. <samp>MAGICK_OCL_DEVICE=true magick &lt;options&gt;</samp>. And to only enable a specific device use <samp>MAGICK_OCL_DEVICE=GPU</samp> or <samp>MAGICK_OCL_DEVICE=CPU</samp>.</li>
     <li><strong>Command line utility:</strong> for proper OpenCL support it's recommended to use <samp>magick</samp> utility over <samp>convert</samp>, <samp>mogrify</samp> and others.</li>
     <li><strong>Image type:</strong> OpenCL acceleration only works on images without a color map. Use true color images instead.</li>
     <li><strong>Operators:</strong> the following is a list of image operators that have been OpenCL accelerated.
