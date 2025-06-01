@@ -47,7 +47,7 @@
 
   When output is to a file, specify the filename.  Embed %g in the filename to
   support log generations.  Generations is the number of log files to retain.
-  Limit is the number of logging events before generating a new log generation.
+  Limit is the size in megabytes before generating a new log generation.
 
   The format of the log is defined by embedding special format characters:
 
