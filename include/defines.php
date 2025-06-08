@@ -20,7 +20,8 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
+magick arrow.tga -set colorspace:auto-grayscale=off myArrow.tga </samp></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
 <samp>registry:</samp>.  For example, to set a temporary path to put work files,
