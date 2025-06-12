@@ -64,7 +64,7 @@ for infile in list
       image.rotate(90);
       image.write("outfile");
     }
-    catch ( MagickExeption &amp; error)
+    catch ( Magick::Exception &amp; error)
     {
        // Handle problem while rotating or writing outfile.
        cerr &lt;&lt; "Caught Magick++ exception: " &lt;&lt; error.what() &lt;&lt; endl;
