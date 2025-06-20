@@ -96,6 +96,11 @@ use:</p>
     <td>Set the structural similarity index k2 argument.</td>
   </tr>
 
+  <tr>
+    <td>compare:virtual-pixels=<var>boolean</var></td>
+    <td>ImageMagick compares images pixel by pixel, aligning from the top-left corner. If sizes differ, unmatched areas in the smaller image are treated as virtual pixels, possibly affecting comparison results. To limit comparison to authentic pixels only, use <samp>-define compare:virtual-pixels=false</samp>.</td>
+  </tr>
+
  <tr>
     <td>complex:snr=<var>value</var></td>
     <td>Set the divide SNR constant <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#complex">-complex</a>.</td>
