@@ -45,7 +45,7 @@ transparent, extract, background, or shape the alpha channel</td>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#backdrop">-backdrop</a></td>
-    <td>background color</td>
+    <td>display the image centered on a backdrop</td>
   </tr>
 
   <tr>
