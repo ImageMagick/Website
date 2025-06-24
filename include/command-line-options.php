@@ -5561,6 +5561,7 @@ name. </p>
 <div class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary">
 <dl class="row">
 <dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz affected)</dd>
+<dt class="col-md-4">DPC</dt><dd class="col-md-8">  discrete phase correlation</dd>
 <dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
 <dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
 <dt class="col-md-4">MAE</dt><dd class="col-md-8">   mean absolute error (normalized), average channel error distance</dd>
@@ -5568,6 +5569,7 @@ name. </p>
 <dt class="col-md-4">MSE</dt><dd class="col-md-8">   mean error squared, average of the channel error squared</dd>
 <dt class="col-md-4">NCC</dt><dd class="col-md-8">   normalized cross correlation</dd>
 <dt class="col-md-4">PAE</dt><dd class="col-md-8">   peak absolute (normalized peak absolute)</dd>
+<dt class="col-md-4">PHASE</dt><dd class="col-md-8">  phase correlation</dd>
 <dt class="col-md-4">PHASH</dt><dd class="col-md-8"> perceptual hash for the sRGB and HCLp colorspaces.  Specify an alternative colorspace with <samp>-define phash:colorspaces=<var>colorspace,colorspace,...</var></samp></dd>
 <dt class="col-md-4">PSNR</dt><dd class="col-md-8">  peak signal to noise ratio</dd>
 <dt class="col-md-4">RMSE</dt><dd class="col-md-8">  root mean squared (normalized root mean squared)</dd>
