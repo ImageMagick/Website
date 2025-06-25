@@ -356,7 +356,7 @@ transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-read-mask <var>filename</var></a></td>
+    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-write-mask <var>filename</var></a></td>
     <td>associate a write mask with the image</td>
   </tr>
 
