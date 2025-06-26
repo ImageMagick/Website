@@ -4,7 +4,7 @@ of ImageMagick ftp sites.  Those who want to build ImageMagick from source
 code should refer to the file README.txt in the ImageMagick source package
 or http://www.imagemagick.org/script/install-source.php on the web.
 
-Unix/Linux/Darwin/Mac OS X/Cygwin/MinGW Install:
+Unix/Linux/Darwin/macOS/Cygwin/MinGW Install:
 
   Download the appropriate binary from
 
@@ -34,7 +34,7 @@ Unix/Linux/Darwin/Mac OS X/Cygwin/MinGW Install:
 
      export LD_LIBRARY_PATH="$HOME/ImageMagick-6.5.5/lib"
 
-  On Mac OS X (Darwin) machines set the DYLD_LIBRARY_PATH environment variable:
+  On macOS (Darwin) machines set the DYLD_LIBRARY_PATH environment variable:
 
      export DYLD_LIBRARY_PATH="$HOME/ImageMagick-6.5.5/lib"
 

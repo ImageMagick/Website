@@ -4,7 +4,7 @@
 <ol>
     <li><strong>OS and drivers:</strong>
         <ul>
-            <li><strong>Mac OS X:</strong> has built-in support for OpenCL. No other actions required.</li>
+            <li><strong>macOS:</strong> has built-in support for OpenCL. No other actions required.</li>
             <li><strong>Linux/Windows:</strong> on supported platforms, install required drivers to enable OpenCL.</li>
             <li><strong>Mobile:</strong> ImageMagick's OpenCL support is not available on mobile OSes (IOS/Android).</li>
         </ul>

@@ -12,7 +12,7 @@
 
 <h2><a class="anchor" id="linux"></a>Install from Linux Source</h2>
 
-<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, Mac OS X, and others.  A compiler is required and fortunately almost all modern Linux systems have one.</p>
+<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.</p>
 
 <p>Clone the latest release from the source repository:</p>
 
