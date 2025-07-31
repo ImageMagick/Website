@@ -74,7 +74,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="magick-navbars">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
         </li>
@@ -90,10 +90,18 @@
         <li class="nav-item">
           <a class="nav-link" rel="noopener" target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">Community</a>
         </li>
-        <li class="nav-item ms-3">
+        <li class="nav-item ms-4">
           <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
         </li>
-        <li class="nav-item ms-3 dropdown">
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <form class="d-flex form-inline" action="/script/search.php">
+            <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" name="sa">Search</button>
+          </form>
+        </li>
+        <li class="nav-item dropdown ms-2">
           <a class="nav-link dropdown-toggle" href="#" id="themeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span id="currentThemeIcon">🌓</span>
           </a>
@@ -104,10 +112,6 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex form-inline" action="/script/search.php">
-        <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit" name="sa">Search</button>
-      </form>
     </div>
   </div>
   </nav>
