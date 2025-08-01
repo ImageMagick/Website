@@ -44,28 +44,6 @@
 </head>
 <?php flush(); ?>
 <body>
-  <script>
-    function setTheme(theme) {
-      localStorage.setItem('theme', theme);
-      updateThemeIcon(theme);
-      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? getSystemTheme() : theme);
-    }
-    function getSystemTheme() {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    function updateThemeIcon(theme) {
-      const iconMap = {
-        light: '☀️',
-        dark: '🌙',
-        auto: '🌓'
-      };
-      document.getElementById('currentThemeIcon').textContent = iconMap[theme] || '🌓';
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme') || 'auto';
-      setTheme(savedTheme);
-    });
-  </script>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="/index.html" title="ImageMagick">
@@ -159,7 +137,34 @@
 
   <!-- Javascript assets -->
   <script src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.bundle.min.js" ></script>
-  </body>
+  <script>
+    // 🌗 Theme Handling
+    function setTheme(theme) {
+      localStorage.setItem('theme', theme);
+      updateThemeIcon(theme);
+      document.documentElement.setAttribute(
+        'data-bs-theme',
+        theme === 'auto' ? getSystemTheme() : theme
+      );
+    }
+    
+    function getSystemTheme() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    function updateThemeIcon(theme) {
+      const iconMap = {
+        light: '☀️',
+        dark: '🌙',
+        auto: '🌓'
+      };
+      const iconElement = document.getElementById('currentThemeIcon');
+      if (iconElement) {
+        iconElement.textContent = iconMap[theme] || '🌓';
+      }
+    }
+  </script>
+</body>
 </html>
 <?php
   }
