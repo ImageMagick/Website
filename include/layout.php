@@ -24,7 +24,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/color-modes.js" ></script>
   <?php echo $meta->metadata($title); ?>
   <meta itemprop='url' content='https://imagemagick.org/' />
   <meta itemprop='title' content='ImageMagick' />
