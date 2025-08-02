@@ -67,7 +67,7 @@
   </script>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="/index.html" title="ImageMagick">
+    <a class="navbar-brand fw-bold" href="/" title="ImageMagick">
       ImageMagick
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#magick-navbars" aria-controls="magick-navbars" aria-expanded="false" aria-label="Toggle navigation">
