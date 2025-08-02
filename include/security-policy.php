@@ -101,6 +101,8 @@
   &lt;!-- Periodically yield the CPU for at least the time specified in
        milliseconds. -->
   &lt;policy domain="resource" name="throttle" value="2"/>
+  &lt;!-- Dynamically yield the CPU relative to the system load average. -->
+  &lt;policy domain="resource" name="dynamic-throttle" value="false"/>
   &lt;!-- Do not create temporary files in the default shared directories, instead
        specify a private area to store only ImageMagick temporary files. -->
   &lt;!-- <policy domain="resource" name="temporary-path" value="/magick/tmp"/> -->
