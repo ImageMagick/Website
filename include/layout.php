@@ -40,6 +40,11 @@
   <link href="https://imagemagick.org<?php echo $_SERVER['SCRIPT_NAME']?>" rel="canonical">
   <link href="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.min.css" rel="stylesheet">
   <script async src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"> </script>
+  <style>
+    html {
+      scroll-padding-top: 70px
+    }
+  </style>
 </head>
 <?php flush(); ?>
 <body>
