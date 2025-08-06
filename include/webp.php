@@ -90,7 +90,7 @@
     <td>maximum number of passes to target compression size or PSNR.</td>
   </tr>
   <tr>
-    <td>segment=<var>value</var></td>
+    <td>segments=<var>value</var></td>
     <td>Choose from 1 to 4, the maximum number of segments to use.</td>
   </tr>
   <tr>
