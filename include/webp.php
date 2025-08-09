@@ -1,14 +1,65 @@
 <div>
-<p class="lead">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. As an example, suppose you are interested in these options:</p>
+<p class="lead">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. The default encoding options are:<p>
 
-<ul>
-<li>quality of 50</li>
-<li>lossless compression</li>
+<ul class="small">
+  <li class="list-group-item"><samp>quality = 75</samp></li>
+  <li class="list-group-item"><samp>alpha-filtering = 1</samp></li>
+  <li class="list-group-item"><samp>alpha-quality = 100</samp></li>
+  <li class="list-group-item"><samp>autofilter = 0</samp></li>
+  <li class="list-group-item"><samp>filter-sharpness = 0</samp></li>
+  <li class="list-group-item"><samp>filter-strength = 60</samp></li>
+  <li class="list-group-item"><samp>lossless = 0</samp></li>
+  <li class="list-group-item"><samp>method = 4</samp></li>
+  <li class="list-group-item"><samp>pass = 1</samp></li>
+  <li class="list-group-item"><samp>preprocessing = 0</samp></li>
+  <li class="list-group-item"><samp>segments = 4</samp></li>
+  <li class="list-group-item"><samp>sns-strength = 50</samp></li>
+  <li class="list-group-item"><samp>target-psnr = 0</samp></li>
+  <li class="list-group-item"><samp>target-size = 0</samp></li>
 </ul>
+<p>For digital pictures, like portrait, inner shot, consider these defines:</p>
+<div class="mb-1">
+  <pre class="p-3"><samp>-define webp:sns-strength=80
+-define webp:filter-sharpness=4
+-define webp:filter-strength=35
+-define webp:preprocessing=0</samp></pre>
+</div>
 
-<p>Use this command:</p>
+<p>For outdoor photographs, with natural lighting, consider these defines:</p>
+<div class="mb-1">
+  <pre class="p-3"><samp>-define webp:sns-strength=80
+-define webp:filter-sharpness=3
+-define webp:filter-strength=30
+-define webp:preprocessing=2</samp></pre>
+</div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick wizard.png -quality 50 -define webp:lossless=true wizard.webp</samp></pre>
+<p>For hand or line drawing, with high-contrast details, consider these defines:</p>
+<div class="mb-1">
+  <pre class="p-3"><samp>-define webp:sns-strength=25
+-define webp:filter-sharpness=6
+-define webp:filter-strength=10</samp></pre>
+</div>
+
+<p>For small-sized colorful images, consider these defines:</p>
+<div class="mb-1">
+  <pre class="p-3"><samp>-define webp:sns-strength=0
+-define webp:filter-strength=0
+-define webp:preprocessing=0</samp></pre>
+</div>
+
+<p>For text images, consider these defines:</p>
+<div class="mb-1">
+  <pre class="p-3"><samp>-define webp:sns-strength=0
+-define webp:filter-strength=0
+-define webp:preprocessing=0
+-define webp:segments=2</samp></pre>
+</div>
+
+<p>ImageMagick sets <samp>pass=6</samp> if <samp>target-psnr</samp> or <samp>target-size</samp> are specified. However, it does not set <samp>target-psnr=40</samp> if <samp>pass</samp> is specified without <samp>target-psnr</samp> or <samp>target-size</samp>.
+    </p>
+
+<p> If <samp>quality</samp> is specified, ImageMagick sets <samp>near_lossless</samp> to the same value.  <samp>near_lossless</samp> cannot be set directly.  If <samp>quality</samp> is set to <samp>100</samp> or greater, ImageMagick sets <samp>lossless=1</samp>> You can override this with: <samp>-quality 100 -define webp:lossless=false</samp>
+    </p>
 
 <p>Here is a complete list of WebP encoding options:</p>
 
@@ -23,7 +74,7 @@
   <tbody>
   <tr>
     <td>alpha-compression=<var>value</var></td>
-    <td>encode the alpha plane: 0 = none, 1 = compressed.</td>
+    <td>ensamp the alpha plane: 0 = none, 1 = compressed.</td>
   </tr>
   <tr>
     <td>alpha-filtering=<var>value</var></td>
@@ -63,7 +114,7 @@
   </tr>
   <tr>
     <td>lossless=<var>true, false</var></td>
-    <td>encode the image without any loss.</td>
+    <td>ensamp the image without any loss.</td>
   </tr>
   <tr>
     <td>low-memory=<var>true, false</var></td>
@@ -71,7 +122,7 @@
   </tr>
   <tr>
     <td>method=<var>value</var></td>
-    <td>the compression method to use. It controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are utilized, the encoder spends more time inspecting additional encoding possibilities and decide on the quality gain. Lower value might result in faster processing time at the expense of larger file size and lower compression quality.</td>
+    <td>the compression method to use. It controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are utilized, the ensampr spends more time inspecting additional encoding possibilities and decide on the quality gain. Lower value might result in faster processing time at the expense of larger file size and lower compression quality.</td>
   </tr>
   <tr>
     <td>preprocessing=<var>value</var></td>
