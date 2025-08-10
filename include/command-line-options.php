@@ -1432,8 +1432,7 @@ operation. </p>
 
 <p>Inside parenthesis (where the operator is normally used) it will make a
 clone of the images from the last 'pushed' image sequence, and adds them to
-the end of the current image sequence. Outside parenthesis
-(not recommended) it clones the images from the current image sequence. </p>
+the end of the current image sequence. If used outside parentheses, an error is raised. </p>
 
 <p>Specify the image by its index in the sequence.  The first image is index
 0.  Negative indexes are relative to the end of the sequence; for
