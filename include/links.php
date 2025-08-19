@@ -6,8 +6,8 @@
 
 <h2><a class="anchor" id="web"></a>Use ImageMagick Online</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org/" rel="noopener" target="_blank">JqMagick</a></dd>
-  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/" rel="noopener" target="_blank">Magick Online Studio</a></dd>
+  <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org/" rel="noopener noreferrer" target="_blank">JqMagick</a></dd>
+  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/" rel="noopener noreferrer" target="_blank">Magick Online Studio</a></dd>
 </ul>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
@@ -78,8 +78,8 @@
 
 <h2><a class="anchor" id="related-projects"></a>Related Projects</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://github.com/ImageMagick/MagickCache" rel="noopener" target="_blank">MagickCache</a></dd>
-  <dd class="col-md-8"><a href="https://github.com/ImageMagick/WizardsToolkit" rel="noopener" target="_blank">Wizard's Toolkit</a></dd>
-  <dd class="col-md-8"><a href="https://spiritual-warrior.org/" rel="noopener" target="_blank">The Tao of the Spiritual Warrior</a></dd>
+  <dd class="col-md-8"><a href="https://github.com/ImageMagick/MagickCache" rel="noopener noreferrer" target="_blank">MagickCache</a></dd>
+  <dd class="col-md-8"><a href="https://github.com/ImageMagick/WizardsToolkit" rel="noopener noreferrer" target="_blank">Wizard's Toolkit</a></dd>
+  <dd class="col-md-8"><a href="https://spiritual-warrior.org/" rel="noopener noreferrer" target="_blank">The Tao of the Spiritual Warrior</a></dd>
 </ul>
 </div>

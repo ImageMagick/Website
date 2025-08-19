@@ -83,7 +83,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="node.js"></a>Node.js</dt>
 
-<dd class="col-md-8"><a href="https://www.npmjs.com/package/node-magickwand" rel="noopener" target="_blank">Node-magickwand</a> is a full native port of the ImageMagick-7 C++ library to Node.js using SWIG Node-API. Unlike all other ImageMagick npm packages, it does not use the CLI to interact with the utilities, but offers direct access to the full C++ API. It supports both synchronous and multithreaded asynchronous operations, it is fully integrated with TypedArrays and it has full TypeScript support.</dd>
+<dd class="col-md-8"><a href="https://www.npmjs.com/package/node-magickwand" rel="noopener noreferrer" target="_blank">Node-magickwand</a> is a full native port of the ImageMagick-7 C++ library to Node.js using SWIG Node-API. Unlike all other ImageMagick npm packages, it does not use the CLI to interact with the utilities, but offers direct access to the full C++ API. It supports both synchronous and multithreaded asynchronous operations, it is fully integrated with TypedArrays and it has full TypeScript support.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="pascal"></a>Pascal</dt>
 
