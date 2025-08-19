@@ -126,7 +126,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main role="main" class="container">
 <?php
   }
 
