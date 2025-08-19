@@ -158,7 +158,7 @@
 </div>
 
   <!-- Javascript assets -->
-  <script src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.bundle.min.js" ></script>
+  <script async src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.bundle.min.js" ></script>
   </body>
 </html>
 <?php
