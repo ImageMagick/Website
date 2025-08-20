@@ -53,7 +53,7 @@
       $meta.="  <!-- Accessibility Enhancement -->\n";
       $meta.="  <style>\n";
       $meta.="    .navbar-brand {\n";
-      $meta.="      color: #dE8CD5;\n";
+      $meta.="      color: #6E8CD5;\n";
       $meta.="    }\n";
       $meta.="    .navbar-brand:hover {\n";
       $meta.="      color: #EEC4E9;\n";
