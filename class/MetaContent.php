@@ -53,10 +53,10 @@
       $meta.="  <!-- Accessibility Enhancement -->\n";
       $meta.="  <style>\n";
       $meta.="    .navbar-brand {\n";
-      $meta.="      color: #007bff;\n";
+      $meta.="      color: #99BAD7;\n";
       $meta.="    }\n";
       $meta.="    .navbar-brand:hover {\n";
-      $meta.="      color: #1988ff;\n";
+      $meta.="      color: #A3C0DB;\n";
       $meta.="    }\n";
       $meta.="    html {\n";
       $meta.="      scroll-padding-top: 70px;\n";
