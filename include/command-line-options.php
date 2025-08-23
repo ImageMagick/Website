@@ -1469,12 +1469,9 @@ specific color gradient from the CLUT image. </p>
 
 <p>Only the channel values defined by the <a href="#channel">-channel</a>
 setting will have their values replaced. In particular, since the default <a
-href="#channel">-channel</a> setting is <samp>RGB</samp>, this means that
-transparency (alpha/matte channel) is not affected, unless the <a
-href="#channel">-channel</a> setting is modified. When the alpha channel is
-set, it is treated by the <a href="#clut" >-clut</a> operator in the same way
-as the other channels, implying that alpha/matte values are replaced using the
-alpha/matte values of the original image. </p>
+href="#channel">-channel</a> setting is <samp>RGBA</samp>, this means that
+transparency (alpha/matte channel) is affected, unless the <a
+href="#channel">-channel</a> setting is modified, e.g., <samp>RGB</samp>. When the alpha channel is not set, it is ignored by the <a href="#clut" >-clut</a> operator.</p>
 
 <p>If either the image being modified, or the lookup image, contains no
 transparency (i.e. <a href="#alpha" >-alpha</a> is turned 'off') but the <a
