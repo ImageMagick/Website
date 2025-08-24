@@ -52,7 +52,7 @@
   </tr>
 
   <tr>
-    <td><a href="https://imagemagick.org/archive/binaries/ImageMagick-i686-pc-cygwin.tar.gz">ImageMagick-i686-pc-cygwin.tar.gz</a></td>
+    <td><a href="https://imagemagick.org/archive/binaries/ImageMagick-x86_64-pc-cygwin.tar.gz">ImageMagick-x86_64-pc-cygwin.tar.gz</a></td>
     <td>Cygwin</td>
   </tr>
 
