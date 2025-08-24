@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-2](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-1...7.1.2-2) - 2025-08-24
+
+### Merged
+
+- cache.c: Fix unused function warning [`#8309`](https://github.com/ImageMagick/ImageMagick/pull/8309)
+- Bump actions/checkout from 4 to 5 [`#8304`](https://github.com/ImageMagick/ImageMagick/pull/8304)
+- Fix infinite loop when decoding JXL with `-limit height/width` [`#8303`](https://github.com/ImageMagick/ImageMagick/pull/8303)
+
+### Commits
+
+- beta release [`0ba1b58`](https://github.com/ImageMagick/ImageMagick/commit/0ba1b587be17543b664f7ad538e9e51e0da59d17)
+- Updated configure. [`50991bb`](https://github.com/ImageMagick/ImageMagick/commit/50991bb300fb1ee54c72d039e5d6f60ed2dd4943)
+- Added checks for invalid with or height to ThumbnailImage (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-fh55-q5pj-pxgw) [`43d92bf`](https://github.com/ImageMagick/ImageMagick/commit/43d92bf855155e8e716ecbb50ed94c2ed41ff9f6)
+- Added support for reading 8 bit alpha only dds images (#8178) [`485edb0`](https://github.com/ImageMagick/ImageMagick/commit/485edb0144044e0219408a3d110d4d41bbc18118)
+- https://github.com/ImageMagick/ImageMagick/issues/8301 [`ceed8c7`](https://github.com/ImageMagick/ImageMagick/commit/ceed8c7ffe5d70f52732b82a9f104b78ef72936d)
+- Code style changes. [`1d93c1f`](https://github.com/ImageMagick/ImageMagick/commit/1d93c1f32b71fb18f95f5c5be2ccfae4fe78f6b6)
+- Corrected getting the screenshot on Windows when the screen is scaled larger than 100% (#8278). [`54edf56`](https://github.com/ImageMagick/ImageMagick/commit/54edf56c828b6ff4a84febdf7a80d4e3016b81cc)
+- latest documentation update [`ec03e19`](https://github.com/ImageMagick/ImageMagick/commit/ec03e1933bab4c78f249dce15debe6e903f5d422)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-9ccg-6pjw-x645 [`1f93323`](https://github.com/ImageMagick/ImageMagick/commit/1f93323df9d8c011c31bc4c6880390071f7fb895)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-fh55-q5pj-pxgw [`5f0bcf9`](https://github.com/ImageMagick/ImageMagick/commit/5f0bcf986b8b5e90567750d31a37af502b73f2af)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-9ccg-6pjw-x645 [`439b362`](https://github.com/ImageMagick/ImageMagick/commit/439b362b93c074eea6c3f834d84982b43ef057d5)
+- https://github.com/ImageMagick/ImageMagick/issues/8306 [`d32cc81`](https://github.com/ImageMagick/ImageMagick/commit/d32cc818426d4b9eaa8cb0a06af8296e33e2baaf)
+- Change the colorspace to GrayScale when an exr image only has a single Y channel (#8305) [`013e870`](https://github.com/ImageMagick/ImageMagick/commit/013e870519996fd792ed849cf14eee91c8284131)
+- Use APP_MARKER for consistency. [`fa329ce`](https://github.com/ImageMagick/ImageMagick/commit/fa329cefcec7dec5fbe7818338cbd9517ea6c11f)
+- The profile should be destroyed after setting the image profile to make sure we read all app1 profiles correctly. [`d0db804`](https://github.com/ImageMagick/ImageMagick/commit/d0db80477e14ee04cc73a006a78ab6892b07a369)
+- Updated the Windows dependencies. [`f31204c`](https://github.com/ImageMagick/ImageMagick/commit/f31204ce6022899d3d9628461ef45f2360adb41e)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-mxvv-97wh-cfmm [`2c55221`](https://github.com/ImageMagick/ImageMagick/commit/2c55221f4d38193adcb51056c14cf238fbcc35d7)
+- cosmetic [`5bf7e62`](https://github.com/ImageMagick/ImageMagick/commit/5bf7e62d417ad16be8c27722a88bccdbef319b31)
+- https://gist.github.com/mescuwa/9197f4317a69559cdf87d0bfab6fa473 [`8f0a198`](https://github.com/ImageMagick/ImageMagick/commit/8f0a198216a701779b7b8784512b0f90613a801f)
+- https://gist.github.com/mescuwa/9197f4317a69559cdf87d0bfab6fa473 [`7f24ea7`](https://github.com/ImageMagick/ImageMagick/commit/7f24ea77d2708a56b5330e716209b071cf23ec66)
+- release [`8289a33`](https://github.com/ImageMagick/ImageMagick/commit/8289a3388a085ad5ae81aa6812f21554bdfd54f2)
+
 ## [7.1.2-1](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-0...7.1.2-1) - 2025-08-11
 
 ### Merged
