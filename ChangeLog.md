@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-3](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-2...7.1.2-3) - 2025-08-30
+
+### Commits
+
+- beta release [`610fc36`](https://github.com/ImageMagick/ImageMagick/commit/610fc366341ea580a2ac26ed11621a2f2e864c2e)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-23hg-53q6-hqfg [`077a417`](https://github.com/ImageMagick/ImageMagick/commit/077a417a19a5ea8c85559b602754a5b928eef23e)
+- leverage SetBlobExtent() [`331efb4`](https://github.com/ImageMagick/ImageMagick/commit/331efb40968a58fed8106b1e3ea27ab99dc33030)
+- include loadavg.h header [`2df29d4`](https://github.com/ImageMagick/ImageMagick/commit/2df29d4377b5882c0b3d63776964c74992bcff69)
+- Close the blob so we can re-open it again (#8327). [`ea3338c`](https://github.com/ImageMagick/ImageMagick/commit/ea3338c6ab5b19c1a1e82b98b114400effe5a660)
+- Use a different repository for the build binaries. [`10ba245`](https://github.com/ImageMagick/ImageMagick/commit/10ba245ba471a79b2c5d84e466ec9267ad8fde2b)
+- Updated the Windows dependencies. [`c476635`](https://github.com/ImageMagick/ImageMagick/commit/c476635ea50210bab944871f408d11adeacaae92)
+- release [`147bc9c`](https://github.com/ImageMagick/ImageMagick/commit/147bc9c12ce8fbc1e94af5b5f6f0643ca410103a)
+
 ## [7.1.2-2](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-1...7.1.2-2) - 2025-08-24
 
 ### Merged
