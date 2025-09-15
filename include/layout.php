@@ -98,7 +98,7 @@
         <li class="nav-item dropdown">
           <form class="d-flex form-inline" action="/script/search.php">
             <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit" name="sa">Search</button>
+            <button class="btn btn-outline-light" type="submit" name="sa">Search</button>
           </form>
         </li>
         <li class="nav-item dropdown ms-2">
