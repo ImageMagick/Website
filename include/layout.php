@@ -19,7 +19,7 @@
     $meta->sameAs="https://github.com/ImageMagick, https://x.com/imagemagick";
     $meta->keywords2="image processing software, image conversion tool, batch image editing, open-source image editor, ImageMagick command-line, resize images ImageMagick, crop and rotate images, ImageMagick tutorial, ImageMagick automation, ImageMagick for developers, ImageMagick CLI, ImageMagick filters and effects, ImageMagick scripting, ImageMagick API integration";
     $meta->sitename="ImageMagick";
-    $meta->stylesheet="/assets/bootstrap.min.css";
+    $meta->stylesheet="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
     $meta->version=MagickLibVersionText . MagickLibSubversion;
     $meta->slogan="Mastering digital image alchemy.";
     $meta->email="webmaster@imagemagick.org";
@@ -95,13 +95,13 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
+        <li class="nav-item ms-3">
           <form class="d-flex form-inline" action="/script/search.php">
-            <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit" name="sa">Search</button>
+            <input class="form-control me-2" type="text" name="q" placeholder="Search site..." aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit" name="sa">Search</button>
           </form>
         </li>
-        <li class="nav-item dropdown ms-2">
+        <li class="nav-item dropdown ms-3">
           <a class="nav-link dropdown-toggle" href="#" id="themeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span id="currentThemeIcon">🌓</span>
           </a>
@@ -133,6 +133,7 @@
   function SiteFooter()
   {
 ?>
+    <a aria-label="About ImageMagick" class="btn btn-outline-warning mt-3" href="/">About ImageMagick</a>
   </main><!-- /.container -->
   <footer class="text-center pt-5 my-5 text-body-secondary border-top">
     <div class="container-fluid">
@@ -158,7 +159,8 @@
 </div>
 
   <!-- Javascript assets -->
-  <script defer src="<?php echo $_SESSION['RelativePath']?>/../assets/bootstrap.bundle.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+~                                                         
   </body>
 </html>
 <?php
