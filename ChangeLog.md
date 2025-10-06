@@ -5,6 +5,71 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-4...7.1.2-5) - 2025-10-06
+
+### Commits
+
+- https://github.com/ImageMagick/ImageMagick/issues/8375 [`5e3b82d`](https://github.com/ImageMagick/ImageMagick/commit/5e3b82d8a8db5c2776515b7d65be25c1b0c168b5)
+- https://github.com/ImageMagick/ImageMagick/issues/8375 [`bb90380`](https://github.com/ImageMagick/ImageMagick/commit/bb9038036831107cafb83c71f26dab1ed2a6cb31)
+- https://github.com/ImageMagick/ImageMagick/issues/8375#issuecomment-3369175313 [`d989021`](https://github.com/ImageMagick/ImageMagick/commit/d9890211607c7a9eee8fd0a4dbc533ceab10ea46)
+- Restored condition. [`96a10dd`](https://github.com/ImageMagick/ImageMagick/commit/96a10dd8b5142fd3caea7ac0f91962d112178b29)
+- https://github.com/ImageMagick/ImageMagick/issues/8384 [`67a7dbf`](https://github.com/ImageMagick/ImageMagick/commit/67a7dbfce8bd8a0a7dcb279dcdd286417ec0a2ac)
+- bump beta release [`7d94ecf`](https://github.com/ImageMagick/ImageMagick/commit/7d94ecf418feb4a19f50fd938a0203897edd065d)
+- ... [`4a620c2`](https://github.com/ImageMagick/ImageMagick/commit/4a620c2a89a7481e83cb4a0ff32db0ccbb3afcd2)
+
+## [7.1.2-4](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-3...7.1.2-4) - 2025-10-05
+
+### Merged
+
+- Bump actions/setup-python from 5 to 6 [`#8349`](https://github.com/ImageMagick/ImageMagick/pull/8349)
+
+### Commits
+
+- beta release [`6ed8309`](https://github.com/ImageMagick/ImageMagick/commit/6ed830980bceeed5766c699d70a00c89b14f75fb)
+- Whitespace [`4b0ce67`](https://github.com/ImageMagick/ImageMagick/commit/4b0ce67c9a20fe6d72ed59b7dc327b1042f57c4f)
+- Updated configure. [`900a797`](https://github.com/ImageMagick/ImageMagick/commit/900a797a727479edf58b5032a883835913262c05)
+- Link the runtime in the static portable windows build (#8345). [`08f1d26`](https://github.com/ImageMagick/ImageMagick/commit/08f1d262586e500951fedf0d6ede2ff949a5ada1)
+- Download the correct version of the dependencies for the portable Windows build. [`5649ff1`](https://github.com/ImageMagick/ImageMagick/commit/5649ff1ed73a6badc90823618efe9711c5f38c68)
+- Fix issue where the size of a line is extended to 70 characters when writing a PBM image (#8346). [`cf3ff3b`](https://github.com/ImageMagick/ImageMagick/commit/cf3ff3b60f38d4765623639a4250bfb803480102)
+- Don't allocate twice the size of the array but terminate it properly instead. [`774faeb`](https://github.com/ImageMagick/ImageMagick/commit/774faebab627b2c0c3e03d7bf8f8f536beeb6f48)
+- respect "pointsize" setting [`3e67a4b`](https://github.com/ImageMagick/ImageMagick/commit/3e67a4b041ec78322bf8e566a96e480b2adc2c5d)
+- Corrected initialization of the dash_pattern in the C++ Options class. [`0a1fd9d`](https://github.com/ImageMagick/ImageMagick/commit/0a1fd9d1ba89191587b385907519be1fa650182b)
+- Make sure the quantum_type is not changed when reading tiff images with separate planes of data. [`ffd40c9`](https://github.com/ImageMagick/ImageMagick/commit/ffd40c95dc61c6cfb0f6ab0650c192a75ee66cb8)
+- Cosmetic. [`a20bf14`](https://github.com/ImageMagick/ImageMagick/commit/a20bf14a73982eeecdd7a42c96a5415b3f017950)
+- Moved writing of channels to a separate method in the tiff encoder. [`bf8fd3a`](https://github.com/ImageMagick/ImageMagick/commit/bf8fd3aa381d71e65457a8786859eb86f2f31eb3)
+- Fixed build. [`e1bb414`](https://github.com/ImageMagick/ImageMagick/commit/e1bb41401b55486a87ba2a118a654419b928cfb0)
+- Raise exception when importing or exporting pixels alpha pixels and the image has no alpha channel. [`1c45270`](https://github.com/ImageMagick/ImageMagick/commit/1c452703a43a331e324c2f54667cb4905fe73144)
+- Added ExportPixelChannel that can be used to export a specific channel and use that for single channel exports. [`002f1d3`](https://github.com/ImageMagick/ImageMagick/commit/002f1d3f697e28f6ff6ebcfe45e70bf0ddd893fa)
+- Added ImportPixelChannel that can be used to export a specific channel and use that for single channel imports. [`1414cbd`](https://github.com/ImageMagick/ImageMagick/commit/1414cbdf14963da7e8e7091ebfb798292529a93d)
+- Also throw an exception in ImpoortOpacityQuantum and ExportOpacityQuantum when the image has no alpha channel. [`1f53bd2`](https://github.com/ImageMagick/ImageMagick/commit/1f53bd22ec25c6a2460fb62e7eb623a823c0a275)
+- Extra images will be added as meta channels when combining images. [`2ec2c75`](https://github.com/ImageMagick/ImageMagick/commit/2ec2c75db313d3d8e83d99e5a82462230f713497)
+- Corrected languages for CodeQl analysis. [`989b0c9`](https://github.com/ImageMagick/ImageMagick/commit/989b0c9b1bf3ea3a5653fa7980e960999045772c)
+- Limit the permissions of our workflows. [`1b3777c`](https://github.com/ImageMagick/ImageMagick/commit/1b3777c8507ef62b64f881a24ac50aa4def26fbb)
+- Also run CodeQL on our actions. [`4f2fb31`](https://github.com/ImageMagick/ImageMagick/commit/4f2fb31cd7e197fde90291bcc0c300f68c4b2d0f)
+- Removed duplicate permission definition. [`20147db`](https://github.com/ImageMagick/ImageMagick/commit/20147db6a339763441bdb634460291bf37931ab6)
+- Fixed copy paste mistake. [`5741f3d`](https://github.com/ImageMagick/ImageMagick/commit/5741f3d49d382dae47b0741f7b7e5d1233cb3e1c)
+- Fixed step size calculation when importing or exporting a single channel. [`591f316`](https://github.com/ImageMagick/ImageMagick/commit/591f3160e1937dd0af6a4a4805ad63621bb8f3af)
+- Corrected check for the alpha channel. [`8dab4dc`](https://github.com/ImageMagick/ImageMagick/commit/8dab4dcf99b97df79a0d6cbba0846c72ce1bfef8)
+- Added option to specify which meta channel should be imported or exported to the QuantumInfo. [`2f5c379`](https://github.com/ImageMagick/ImageMagick/commit/2f5c379ab5a8fc604caaa5d3f691cd7b9992b1da)
+- Added support for reading and writing meta channels in a TIFF images with separate planes of data. [`0fb2096`](https://github.com/ImageMagick/ImageMagick/commit/0fb2096d59b4c47b0136508b34a56af14e28f011)
+- promote photometric tag to required [`4317590`](https://github.com/ImageMagick/ImageMagick/commit/4317590cd9b07f4acbb620753785c59ae958a14f)
+- check raw profile length [`170b330`](https://github.com/ImageMagick/ImageMagick/commit/170b330ba1017f738d985da1749121f45047d076)
+- Revert incorrect and add double typecast to silence a build error (#8359). [`b7baa4e`](https://github.com/ImageMagick/ImageMagick/commit/b7baa4e419c2316de4a7d01e4cf794992f74598f)
+- Some more tweaks to the workflows. [`8611dd5`](https://github.com/ImageMagick/ImageMagick/commit/8611dd58f834c3f31f3c41b85b1aa4338ef1b728)
+- The SECURITY.md has moved to https://github.com/ImageMagick/.github. [`834a756`](https://github.com/ImageMagick/ImageMagick/commit/834a756c704438016f19f9a7b6a4a295c0859771)
+- Removed non-existent option (#8371). [`9e55508`](https://github.com/ImageMagick/ImageMagick/commit/9e555087b5cd77d84274d1534d8913663a23857a)
+- Use -fps_mode instead of -vsync because the latter is deprecated (#8371) [`3bf1076`](https://github.com/ImageMagick/ImageMagick/commit/3bf1076d748a5ec40073685ce71ca9222cf0b00c)
+- Updated configure and the dependencies of the Windows build. [`db0c4fa`](https://github.com/ImageMagick/ImageMagick/commit/db0c4fa55c1f286d09159888510ef340467ee1fb)
+- Corrected initialization of the magic_list (#8377). [`f529946`](https://github.com/ImageMagick/ImageMagick/commit/f52994640e4b267e1b13d83d6e7e27dcdcba7828)
+- Corrected name of filter library because they now also include DB and RL in the name on Windows (#8376). [`893545b`](https://github.com/ImageMagick/ImageMagick/commit/893545b1402fe100f7f5c01bdd9f924f1eae4088)
+- Removed unused marker from the arguments. [`0bb3b2b`](https://github.com/ImageMagick/ImageMagick/commit/0bb3b2bbae577295d05bfb27e0a94799d04b5372)
+- Improved output of filter list on Windows. [`29a73cd`](https://github.com/ImageMagick/ImageMagick/commit/29a73cd880fbc8d54639b81bcac7572a5e4f9c2f)
+- Added extra checks to make sure we only set the orientation when possible. [`0647987`](https://github.com/ImageMagick/ImageMagick/commit/064798798c13e1582f40407ca4fd206f4ec87fcf)
+- Fix for msys build. [`badaa5c`](https://github.com/ImageMagick/ImageMagick/commit/badaa5c3582a340484941903fa26419b5807d0df)
+- latest documentation [`993b5d2`](https://github.com/ImageMagick/ImageMagick/commit/993b5d2725b3f84575d13649b4c92c2bff1029da)
+- latest autoconf/automake update [`24a927c`](https://github.com/ImageMagick/ImageMagick/commit/24a927c39855dabb6818c15f62d91af6a083fa7f)
+- Moved windows-release to the release pipeline and also attach them to the created release. [`d20215e`](https://github.com/ImageMagick/ImageMagick/commit/d20215eb0e840e49b1da24bba0ca24b5299f66f2)
+
 ## [7.1.2-3](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-2...7.1.2-3) - 2025-08-30
 
 ### Commits
