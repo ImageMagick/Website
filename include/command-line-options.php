@@ -6018,7 +6018,7 @@ neighborhood whose width is specified with <var>radius</var>.</p>
   <h2><a class="anchor" id="pointsize"></a>-pointsize <var>value</var></h2>
 </div>
 
-<p class="magick-description">Pointsize of the PostScript, OPTION1, or TrueType font.</p>
+<p class="magick-description">Pointsize of the PostScript, X11, or TrueType font.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="polaroid"></a>-polaroid <var>angle</var></h2>
@@ -7314,8 +7314,8 @@ is not enough disk space for the image pixel cache.</p>
 formatted text. The default is 14 point <var>Courier</var>.</p>
 
 <p>You can tag a font to specify whether it is a PostScript, TrueType, or
-OPTION1 font. For example, <samp>Courier.ttf</samp> is a TrueType font and
-<samp>x:fixed</samp> is OPTION1.</p>
+X11 font. For example, <samp>Courier.ttf</samp> is a TrueType font and
+<samp>x:fixed</samp> is X11.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="texture"></a>-texture <var>filename</var></h2>
