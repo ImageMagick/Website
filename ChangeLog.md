@@ -5,19 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.1.2-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-4...7.1.2-5) - 2025-10-06
+## [7.1.2-6](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-5...7.1.2-6) - 2025-10-11
 
 ### Commits
 
-- https://github.com/ImageMagick/ImageMagick/issues/8375 [`5e3b82d`](https://github.com/ImageMagick/ImageMagick/commit/5e3b82d8a8db5c2776515b7d65be25c1b0c168b5)
-- https://github.com/ImageMagick/ImageMagick/issues/8375 [`bb90380`](https://github.com/ImageMagick/ImageMagick/commit/bb9038036831107cafb83c71f26dab1ed2a6cb31)
-- https://github.com/ImageMagick/ImageMagick/issues/8375#issuecomment-3369175313 [`d989021`](https://github.com/ImageMagick/ImageMagick/commit/d9890211607c7a9eee8fd0a4dbc533ceab10ea46)
-- Restored condition. [`96a10dd`](https://github.com/ImageMagick/ImageMagick/commit/96a10dd8b5142fd3caea7ac0f91962d112178b29)
-- https://github.com/ImageMagick/ImageMagick/issues/8384 [`67a7dbf`](https://github.com/ImageMagick/ImageMagick/commit/67a7dbfce8bd8a0a7dcb279dcdd286417ec0a2ac)
-- bump beta release [`7d94ecf`](https://github.com/ImageMagick/ImageMagick/commit/7d94ecf418feb4a19f50fd938a0203897edd065d)
-- ... [`4a620c2`](https://github.com/ImageMagick/ImageMagick/commit/4a620c2a89a7481e83cb4a0ff32db0ccbb3afcd2)
+- beta release [`ea5af7e`](https://github.com/ImageMagick/ImageMagick/commit/ea5af7e25b4cab9ddd38f6e8e9075feaf7d09f26)
+- Only use the page number when it is valid (#8373). [`c7a3cd9`](https://github.com/ImageMagick/ImageMagick/commit/c7a3cd90a0738a37ba4ffc25a2894debcff7a6de)
+- Updated the Windows dependencies. [`a4a6259`](https://github.com/ImageMagick/ImageMagick/commit/a4a62596bc93d6f168b7a5cd3d0e752ccfe1f475)
+- Added missing check for the return value of ResizeImage. [`98686c7`](https://github.com/ImageMagick/ImageMagick/commit/98686c7f6b2b99631c557b38607c48eb52e77167)
+- Updated the Windows dependencies and configure. [`9980b11`](https://github.com/ImageMagick/ImageMagick/commit/9980b118eee2e26acc68ac2015ee1c5aad61e9f6)
+- Whitespace. [`a088c39`](https://github.com/ImageMagick/ImageMagick/commit/a088c395d734015a70ba72f3cf6ac030324a5d85)
 
-## [7.1.2-4](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-3...7.1.2-4) - 2025-10-05
+## [7.1.2-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-3...7.1.2-5) - 2025-10-06
 
 ### Merged
 
@@ -69,6 +68,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - latest documentation [`993b5d2`](https://github.com/ImageMagick/ImageMagick/commit/993b5d2725b3f84575d13649b4c92c2bff1029da)
 - latest autoconf/automake update [`24a927c`](https://github.com/ImageMagick/ImageMagick/commit/24a927c39855dabb6818c15f62d91af6a083fa7f)
 - Moved windows-release to the release pipeline and also attach them to the created release. [`d20215e`](https://github.com/ImageMagick/ImageMagick/commit/d20215eb0e840e49b1da24bba0ca24b5299f66f2)
+- https://github.com/ImageMagick/ImageMagick/issues/8375 [`5e3b82d`](https://github.com/ImageMagick/ImageMagick/commit/5e3b82d8a8db5c2776515b7d65be25c1b0c168b5)
+- https://github.com/ImageMagick/ImageMagick/issues/8375 [`bb90380`](https://github.com/ImageMagick/ImageMagick/commit/bb9038036831107cafb83c71f26dab1ed2a6cb31)
+- https://github.com/ImageMagick/ImageMagick/issues/8375#issuecomment-3369175313 [`d989021`](https://github.com/ImageMagick/ImageMagick/commit/d9890211607c7a9eee8fd0a4dbc533ceab10ea46)
+- Restored condition. [`96a10dd`](https://github.com/ImageMagick/ImageMagick/commit/96a10dd8b5142fd3caea7ac0f91962d112178b29)
+- https://github.com/ImageMagick/ImageMagick/issues/8384 [`67a7dbf`](https://github.com/ImageMagick/ImageMagick/commit/67a7dbfce8bd8a0a7dcb279dcdd286417ec0a2ac)
+- bump beta release [`7d94ecf`](https://github.com/ImageMagick/ImageMagick/commit/7d94ecf418feb4a19f50fd938a0203897edd065d)
+- ... [`4a620c2`](https://github.com/ImageMagick/ImageMagick/commit/4a620c2a89a7481e83cb4a0ff32db0ccbb3afcd2)
 
 ## [7.1.2-3](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-2...7.1.2-3) - 2025-08-30
 
