@@ -5,7 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.1.2-6](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-5...7.1.2-6) - 2025-10-11
+## [7.1.2-7](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-6...7.1.2-7) - 2025-10-14
+
+### Merged
+
+- Bump github/codeql-action from 3 to 4 [`#8397`](https://github.com/ImageMagick/ImageMagick/pull/8397)
+
+### Commits
+
+- release [`47ef758`](https://github.com/ImageMagick/ImageMagick/commit/47ef758200e7d898cdce6fb25a0bdc1ed7b0cc65)
+
+## [7.1.2-6](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-5...7.1.2-6) - 2025-10-12
 
 ### Commits
 
@@ -15,6 +25,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added missing check for the return value of ResizeImage. [`98686c7`](https://github.com/ImageMagick/ImageMagick/commit/98686c7f6b2b99631c557b38607c48eb52e77167)
 - Updated the Windows dependencies and configure. [`9980b11`](https://github.com/ImageMagick/ImageMagick/commit/9980b118eee2e26acc68ac2015ee1c5aad61e9f6)
 - Whitespace. [`a088c39`](https://github.com/ImageMagick/ImageMagick/commit/a088c395d734015a70ba72f3cf6ac030324a5d85)
+- Revert MSYS patches to resolve issue report in #8382. [`4cedb50`](https://github.com/ImageMagick/ImageMagick/commit/4cedb506d140496d49c9e150768f840631f9d902)
+- Corrected type of mode_t for the MSYS2 build. [`3ec53af`](https://github.com/ImageMagick/ImageMagick/commit/3ec53af711f9240b4a78b9994343ba11b1e8621c)
+- Disabled cache in the msys2 build. [`7497aa9`](https://github.com/ImageMagick/ImageMagick/commit/7497aa97bd0b7809fafdc8a4d445c924876ea387)
+- Patches to fix compilation errors in our MSYS2 build. [`677d7b7`](https://github.com/ImageMagick/ImageMagick/commit/677d7b743fcbd7132ac11dade52a19493f58f647)
+- Added extra check to resolve issue on 32-bit systems (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-9pp9-cfwx-54rm) [`cea1693`](https://github.com/ImageMagick/ImageMagick/commit/cea1693e2ded51b4cc91c70c54096cbed1691c00)
 
 ## [7.1.2-5](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-3...7.1.2-5) - 2025-10-06
 
