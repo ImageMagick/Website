@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-8](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-7...7.1.2-8) - 2025-10-26
+
+### Commits
+
+- beta release [`d56b6af`](https://github.com/ImageMagick/ImageMagick/commit/d56b6afca237907a351681bf8cd7929e24ec91aa)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-wpp4-vqfq-v4hp [`7b47fe3`](https://github.com/ImageMagick/ImageMagick/commit/7b47fe369eda90483402fcd3d78fa4167d3bb129)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-g5vw-p55v-8742 [`8547a24`](https://github.com/ImageMagick/ImageMagick/commit/8547a24f1b3bf4802592c77b97b969e2ee54f634)
+- Also install squashfs-tools for the AppImage build. [`336f2b8`](https://github.com/ImageMagick/ImageMagick/commit/336f2b8dbeda00b269cd40b61abfd207eac229f3)
+- Updated the Windows dependencies. [`30bafbf`](https://github.com/ImageMagick/ImageMagick/commit/30bafbfae05a9c0a5fe4b9251210f947c3c876f2)
+- https://github.com/ImageMagick/ImageMagick6/pull/343#issuecomment-3438433150 [`2300ae5`](https://github.com/ImageMagick/ImageMagick/commit/2300ae543abb9ee0783fe783438f4a7a9e696fd5)
+- release [`a3b13d1`](https://github.com/ImageMagick/ImageMagick/commit/a3b13d143fd7dea44cd71d31aa02f411b597688f)
+
 ## [7.1.2-7](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-6...7.1.2-7) - 2025-10-14
 
 ### Merged
