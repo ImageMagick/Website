@@ -39,6 +39,7 @@
   <?php echo $meta->metadata($title); ?>
   <!-- Google Custom Search -->
   <script defer src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
 </head>
 <?php flush(); ?>
 <body>
