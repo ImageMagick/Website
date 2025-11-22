@@ -124,6 +124,18 @@
         <h1 class="fs-2 mb-1"><?php echo $myTitle; ?></h1>
       </a>
       <h2 class="fs-5 text-muted"><?php echo $subtitle; ?></h2>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
+           crossorigin="anonymous"></script>
+      <!-- Banner Ad -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3129977114552745"
+           data-ad-slot="1083537442"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </header>
 
