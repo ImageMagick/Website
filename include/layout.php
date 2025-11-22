@@ -121,9 +121,9 @@
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <div class="mt-3 ms-3">
       <a href="<?php echo $_SESSION['RelativePath']?>/../" class="text-decoration-none">
-        <h1 class="fs-2 mb-1"><?php echo $myTitle; ?></h1>
+        <h1 class="fs-2 mb-1 display-5"><?php echo $myTitle; ?></h1>
       </a>
-      <h2 class="fs-5 text-muted"><?php echo $subtitle; ?></h2>
+      <h2 class="fs-5 text-muted h4"><?php echo $subtitle; ?></h2>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
            crossorigin="anonymous"></script>
       <!-- Banner Ad -->
