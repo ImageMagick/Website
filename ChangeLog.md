@@ -5,6 +5,53 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-9](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-8...7.1.2-9) - 2025-11-30
+
+### Merged
+
+- JPEG: Support 2-to-16-bit lossless JPEG images with libjpeg-turbo 3.1+; Support additional IDCT scaling factors with libjpeg-turbo and libjpeg v7+ [`#8445`](https://github.com/ImageMagick/ImageMagick/pull/8445)
+- Add ALImageMagick (Delphi) to the list of ImageMagick language bindings [`#8444`](https://github.com/ImageMagick/ImageMagick/pull/8444)
+- Update Doc [`#8442`](https://github.com/ImageMagick/ImageMagick/pull/8442)
+
+### Commits
+
+- beta release [`a5ad8fb`](https://github.com/ImageMagick/ImageMagick/commit/a5ad8fb4ca03acd1db7ec7e96bbe482e3e6265ba)
+- https://github.com/ImageMagick/ImageMagick/issues/8410 [`5735e8c`](https://github.com/ImageMagick/ImageMagick/commit/5735e8c1c5bf663b7bccd3ae9ad2444ea7ffdd96)
+- Bumped versions of download and upload artifacts actions. [`ab36309`](https://github.com/ImageMagick/ImageMagick/commit/ab36309d95aa254f411eeef2f00d84d4a7738158)
+- https://github.com/ImageMagick/ImageMagick/issues/8416 [`e8c31c9`](https://github.com/ImageMagick/ImageMagick/commit/e8c31c9fe24099b4b1b9788cccdf4e6a365022ee)
+- Move writing of the IDAT chunk to the end to silence a warning in exiftool (#8400) [`fe6925d`](https://github.com/ImageMagick/ImageMagick/commit/fe6925d0d3d4f2bfe1efd1c1d0c0c55e96665c2e)
+- https://github.com/ImageMagick/ImageMagick/issues/8422 [`d0b07ac`](https://github.com/ImageMagick/ImageMagick/commit/d0b07ac82bc9acd659ff3674146a7016f9766d01)
+- Minor refactor. [`47a94a3`](https://github.com/ImageMagick/ImageMagick/commit/47a94a361360a316ce144ec901b4b3cefd10c5a5)
+- Only use output values from environment variables. [`aa13999`](https://github.com/ImageMagick/ImageMagick/commit/aa139993952241728fb27643ad09cac8f6bd5bf6)
+- Changed indentation. [`dcd54a5`](https://github.com/ImageMagick/ImageMagick/commit/dcd54a52c38445643061bf1e1722ce149c52f983)
+- Pin actions. [`6cf8cfc`](https://github.com/ImageMagick/ImageMagick/commit/6cf8cfcfc8aef022984e8c8f8027932d1f0c48b6)
+- Changed indentation. [`1beebc9`](https://github.com/ImageMagick/ImageMagick/commit/1beebc9f8849af730231a13d5b7f5ff9a287ad3d)
+- No longer persist credentials on checkout. [`44525f4`](https://github.com/ImageMagick/ImageMagick/commit/44525f4763d7db33857ee25b5257cf3594fda08a)
+- Added cooldown to dependabot.yml [`9d6611b`](https://github.com/ImageMagick/ImageMagick/commit/9d6611bdbd3bd26c8ff779296482e9a3a859c1bc)
+- No longer persist credentials on checkout. [`62357f9`](https://github.com/ImageMagick/ImageMagick/commit/62357f9770c1587c2c89e852b712fa97eaeb4547)
+- Also pin the version of the msys2 action. [`6d4f89d`](https://github.com/ImageMagick/ImageMagick/commit/6d4f89dd9fc6cbae9a10d7c1d23b00f8e5957c37)
+- Removed duplicate eof check. [`d356c51`](https://github.com/ImageMagick/ImageMagick/commit/d356c513ac770804a1930c50dc7e1f3944d943e6)
+- Added custom end of file check to the pnm encoder to allow a missing final newline (#8425) [`7404bd0`](https://github.com/ImageMagick/ImageMagick/commit/7404bd00879aa0a515d7760d6fdd889e39542f41)
+- Updated the Windows dependencies. [`72c1050`](https://github.com/ImageMagick/ImageMagick/commit/72c10504a15c0e4f4aa74529828f14a11f6df5db)
+- Close temporary file to make sure it can be opened again (#8420) [`be66a21`](https://github.com/ImageMagick/ImageMagick/commit/be66a21dad201f927907c926a8bbdc84a35c3456)
+- latest autoconf/automake updates [`81eb8eb`](https://github.com/ImageMagick/ImageMagick/commit/81eb8ebd91343a87ccad736e85725c323b91f949)
+- Use the colorspace when writing images that have a color map in the pnm coder (#8429). [`2a9f7c6`](https://github.com/ImageMagick/ImageMagick/commit/2a9f7c63c073af04850642de562e4acf3925a0ca)
+- Use if statements instead. [`389238f`](https://github.com/ImageMagick/ImageMagick/commit/389238fd4d44bbcdade078f620673487400ddc47)
+- Allow reading old Quickdraw PICT files that directly start with the size of the image (#8381). [`9002a93`](https://github.com/ImageMagick/ImageMagick/commit/9002a93a94ff151795624499da3535a0c9408d1a)
+- Clone the correct repositories for the release. [`77a2c99`](https://github.com/ImageMagick/ImageMagick/commit/77a2c99d4c3b55f54f86ebb1eb5c524d39ef34c7)
+- Improved the jpeg coder by calculating the range only once instead of every pixel channel. [`602c436`](https://github.com/ImageMagick/ImageMagick/commit/602c43695a0bb7e60a58b62f6257959407681492)
+- Updated the Windows dependencies. [`9c0546a`](https://github.com/ImageMagick/ImageMagick/commit/9c0546a6e2c3512ebfdcc94f6bedfd45977bc9b3)
+- Correct incorrect free (GHSA-q3hc-j9x5-mp9m) [`6f81eb1`](https://github.com/ImageMagick/ImageMagick/commit/6f81eb15f822ad86e8255be75efad6f9762c32f8)
+- Removed incorrect format specifier. [`a5ac3c1`](https://github.com/ImageMagick/ImageMagick/commit/a5ac3c15e6bfc85eaae036223e01166335db5421)
+- Switch to cmake with the oss-fuzz build of libde265. [`cf149f5`](https://github.com/ImageMagick/ImageMagick/commit/cf149f56140f10181c6f269eab38bb6607821f04)
+- Correct parsing of the density (#8460) [`f46647c`](https://github.com/ImageMagick/ImageMagick/commit/f46647c0303824b005575ce8edebd018178fbfd9)
+- Added Visual Studio 2026. [`67f7f33`](https://github.com/ImageMagick/ImageMagick/commit/67f7f33ff88ebe66ee90739775e41abdd7f1c283)
+- enable coder policy "write" rights for MVG coder [`85c04c1`](https://github.com/ImageMagick/ImageMagick/commit/85c04c1627d91ffc14657ebba2884167af71aeee)
+- Silence macos warning. [`a70f4b8`](https://github.com/ImageMagick/ImageMagick/commit/a70f4b833318bdbcacc3b70eed32e2999f09137b)
+- Disabling a module will now also disable all the coders in that module. [`061b7b2`](https://github.com/ImageMagick/ImageMagick/commit/061b7b28d807d9295ddf2bf12b2eaa63f53a015c)
+- Updated the Windows dependencies. [`5cff2fc`](https://github.com/ImageMagick/ImageMagick/commit/5cff2fc4fbbbe4d2fa12728d2f29eed36ef3e183)
+- release [`a90c050`](https://github.com/ImageMagick/ImageMagick/commit/a90c0505dcb65c8caff3c545be10afea6028ec8f)
+
 ## [7.1.2-8](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-7...7.1.2-8) - 2025-10-26
 
 ### Commits
