@@ -128,24 +128,32 @@
   </header>
 
   <main role="main" class="container">
+    <div class="row g-5">
+      <div class="col-md-9">
 <?php
   }
 
   function SiteFooter()
   {
 ?>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
-         crossorigin="anonymous"></script>
-    <!-- Banner Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3129977114552745"
-         data-ad-slot="1083537442"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+      </div>
+      <div class="col-md-3">
+        <div class="container text-center my-3">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
+               crossorigin="anonymous"></script>
+          <!-- Banner Ad -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-3129977114552745"
+               data-ad-slot="1083537442"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+    </div>
     <a aria-label="About ImageMagick" class="btn btn-outline-warning mt-3" href="/">About ImageMagick</a>
   </main><!-- /.container -->
   <footer class="text-center pt-5 my-5 text-body-secondary border-top">
