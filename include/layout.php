@@ -91,9 +91,6 @@
         <li class="nav-item">
           <a class="nav-link" rel="noopener noreferrer" target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">Community</a>
         </li>
-        <li class="nav-item ms-4">
-          <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
-        </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item ms-3">
@@ -138,6 +135,9 @@
 ?>
       </div>
       <div class="col-md-3">
+        <div class="container text-center my-3">
+          <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
+        </div>
         <div class="container text-center my-3">
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
                crossorigin="anonymous"></script>
