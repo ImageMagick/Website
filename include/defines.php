@@ -1005,6 +1005,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>jpeg:high-bit-depth=<var>on|off</var></td>
+     <td>By default, ImageMagick generates JPEG images at 8‑bit depth. When high bit‑depth is enabled, it will produce 12‑bit or 16‑bit images if the source image depth exceeds 8 bits.</td>
+  </tr>
+
+  <tr>
     <td>jpeg:optimize-coding=<var>on|off</var></td>
     <td> </td>
   </tr>
