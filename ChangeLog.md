@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-10](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-9...7.1.2-10) - 2025-12-07
+
+### Commits
+
+- beta release [`cfbeef4`](https://github.com/ImageMagick/ImageMagick/commit/cfbeef49f293108f469f82d6f50e17ab84be1083)
+- Added extra check to make sure don't read after an empty string. [`f83765c`](https://github.com/ImageMagick/ImageMagick/commit/f83765c6e4f1ebfb38fa3b4c4c062a166f270cbc)
+- Added extra check to avoid an overflow on 32-bit machines (GHSA-6hjr-v6g4-3fm8) [`bdae068`](https://github.com/ImageMagick/ImageMagick/commit/bdae0681ad1e572defe62df85834218f01e6d670)
+- Use HeapOverflowSanityCheckGetSize to make it more clear what is happening. [`351bbc8`](https://github.com/ImageMagick/ImageMagick/commit/351bbc8330269b56e0024772f814b61c66675590)
+- Added define to make sure we don't always write a jpeg in a high bit depth (#8445) [`245b84f`](https://github.com/ImageMagick/ImageMagick/commit/245b84f88b802eb362b1c4dfef791b4308edd9dd)
+- Use intermediate variable to silence 32-bit build error on Windows. [`ba1fcf9`](https://github.com/ImageMagick/ImageMagick/commit/ba1fcf9d66f2c9f51f404c87f91a3420cac211c3)
+- Code cleanup. [`567321b`](https://github.com/ImageMagick/ImageMagick/commit/567321b2974d6010a6b2f32e1bd09f037ec4b885)
+- Updated the Windows dependencies and configure. [`53b1fb9`](https://github.com/ImageMagick/ImageMagick/commit/53b1fb93be3dbf54bb36c79653085421adb896a0)
+- Disable creation of msix in pull requests. [`537db6b`](https://github.com/ImageMagick/ImageMagick/commit/537db6bcc877044ebad55e84c626cd5d9bd9630a)
+- Updated the checkout actions. [`e956d72`](https://github.com/ImageMagick/ImageMagick/commit/e956d72d4461252868c9041722575d9bf07dd640)
+- Check for quality instead of compression to avoid Unsupported JPEG data precision error message (#8445). [`1269cf5`](https://github.com/ImageMagick/ImageMagick/commit/1269cf551360bcb29cb3e1899c129c41fa7a9838)
+- The quality of the image_info should be used instead. [`69f7ced`](https://github.com/ImageMagick/ImageMagick/commit/69f7ced59ba75fb635e99e35af152a7509bc2fa8)
+- release [`f4ce623`](https://github.com/ImageMagick/ImageMagick/commit/f4ce623e9d6d230f80d664543892347bd46c1e98)
+
 ## [7.1.2-9](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-8...7.1.2-9) - 2025-11-30
 
 ### Merged
