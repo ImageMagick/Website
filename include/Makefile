@@ -3,3 +3,4 @@ all:
 
 clean:
 	/bin/rm -f ../cache/*.php
+	/bin/rm -f ../cache/api/*.php
