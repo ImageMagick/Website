@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="text-center"><a href="#cache">The Pixel Cache</a> • <a href="#properties">Image Properties and Profiles</a> • <a href="#multispectral">Multispectral Imagery</a> • <a href="#tera-pixel">Large Image Support</a> • <a href="#stream">Streaming Pixels</a> • <a href="#threads">Threads of Execution</a> • <a href="#dynamic-throttle">Enable Dynamic Throttling for Optimized Performance</a> • <a href="#distributed">Heterogeneous Distributed Processing</a> • <a href="#coders">Custom Image Coders</a> • <a href="#filters">Custom Image Filters</a></p>
 

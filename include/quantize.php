@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="text-center"><a href="#describe">Algorithm Description</a> • <a href="#measure">Measuring Color Reduction Error</a></p>
 

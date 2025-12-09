@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="lead">ImageMagick has built-in support for some <a href="http://en.wikipedia.org/wiki/OpenCL">OpenCL</a> accelerated operations. However, there are some conditions for its operation. These requirements are listed below.</p>
 

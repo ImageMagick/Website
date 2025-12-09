@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <div id="cli-examples"></div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#models">Color Model Specification</a> • <a href="#color_names">List of Color Names</a></p>

@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="text-center"><a href="#command-line">Command-line Tutorials</a> • <a href="#program-interfaces">Program Interface Tutorials</a> • <a href="#techniques">ImageMagick Techniques</a> • <a href="#install">Installation Tutorials</a> • <a href="#topics">ImageMagick Topics</a> • <a href="#book-review">ImageMagick Book Review</a> • <a href="#mirrors">Web Site Mirrors</a> • <a href="#bank">Image Bank</a> • <a href="#related-projects">Related Projects</a></p>
 

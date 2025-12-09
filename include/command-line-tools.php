@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="lead">ImageMagick is a collection of command-line tools that can be used to modify and manipulate images. While many people are used to using graphical user interfaces (GUIs) like Gimp or Photoshop to edit images individually, these tools may not always be practical. For instance, if you need to process an image dynamically from a web script or apply the same operations to multiple images, or if you need to repeat a specific operation on the same or different images at different times, using a command-line utility like ImageMagick may be more efficient.</p>
 

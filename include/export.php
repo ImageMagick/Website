@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p  class="lead">ImageMagick Studio LLC is a limited liability corporation based in the United States of America. All of our products are developed via online collaboration in public forums and distributed from a central server within the U.S. Therefore, U.S. export laws and regulations apply to our distributions and remain in force as products and technology are re-exported to different parties and places around the world. Information on export control classifications and associated restrictions may be required for exporting, re-exporting, record keeping, bundling/embedding of ImageMagick products, encryption reporting, and shipping documentation. More information on U.S. Export Regulations can be found at the <a href="http://www.bis.doc.gov/">U. S. Bureau of Industry and Security</a>.</p>
 

@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION) || !is_array($_SESSION)) {
+  header("Location: ../script/index.php");
+  exit();
+}
+?>
 <div>
 <p class="lead">ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors around the world listed below.  ImageMagick stable and development source releases are also available from <a href="https://github.com/ImageMagick">Git</a>.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.  The authoritative source code repository is <a href="https://github.com/ImageMagick/ImageMagick" rel="noopener noreferrer" target="_blank">https://github.com/ImageMagick</a>.</p>
 <p>The latest release of ImageMagick is version <?php echo(MagickLibVersionText.MagickLibSubversion); ?>.</p>
