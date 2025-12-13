@@ -10,7 +10,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p class="lead">A number of ImageMagick options and methods take a color as an argument. The color can then be given as a color name (there is a limited but large set of these; see below) or it can be given as a set of numbers (in decimal or hexadecimal), each corresponding to a channel in an RGB or RGBA color model.  HSL, HSLA, HSB, HSBA, CMYK, or CMYKA color models may also be specified. These topics are briefly described in the sections below.</p>
 
-<p>Use the <a href="https://magickstudio.imagemagick.org/scripts/color-converter.php">Color Converter</a> to supply any valid ImageMagick color specification as described below to see a color swatch of that color and to convert to all the other color models.</p>
+<p>Use the <a href="https://imagemagick.org/contrib/color-converter.php">Color Converter</a> to supply any valid ImageMagick color specification as described below to see a color swatch of that color and to convert to all the other color models.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
