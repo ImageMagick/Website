@@ -239,7 +239,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/transform/#vision">Noise and color reduction</a></td>
-    <td><a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=26480">Kuwahara Filter</a>, <a href="https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=25504">mean-shift</a>.</td>
+    <td>Kuwahara Filter, mean-shift.</td>
   </tr>
   <tr>
     <td><a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html">Perceptual hash</a></td>
@@ -274,6 +274,6 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <br/>
 
 <h2><a class="anchor" id="legacy"></a>ImageMagick Legacy</h2>
-<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.  We maintain an archive of <a href="https://legacy.imagemagick.org/discourse-server/">legacy ImageMagick discussions</a>.</p>
+<p>We continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.</p>
 </div>
 

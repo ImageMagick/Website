@@ -67,7 +67,6 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2><a class="anchor" id="book-review"></a>ImageMagick Legacy Discussion</h2>
 <ul>
   <dd class="col-md-8"><a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a></dd>
-  <dd class="col-md-8"><a href="http://legacy.imagemagick.org/discourse-server">Legacy ImageMagick Discourse Server</a></dd>
 </ul>
 
 <h2><a class="anchor" id="mirrors"></a>ImageMagick Web Site Mirrors</h2>
