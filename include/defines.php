@@ -115,7 +115,7 @@ use:</p>
   <tr>
     <td>compose:args=<var>arguments</var></td>
      <td>Set certain compose argument values when using convert ... -compose ...
-    -composite. See <a href="https://imagemagick.org/script/compose.php"
+    -composite. See <a href="/script/compose.php"
     >Image Composition</a>.</td>
   </tr>
 

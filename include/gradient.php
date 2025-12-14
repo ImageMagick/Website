@@ -22,7 +22,7 @@ radial-gradient:<em>fromColor</em>-<em>toColor</em> </samp></pre>
 
 <p>The default for a linear gradient has <em>fromColor</em> at the top of the image and <em>toColor</em> at the bottom of the image. Similarly, the default for a radial gradient has <em>fromColor</em> at the center of the image and <em>toColor</em> at the boundary of the image.</p>
 
-<p>Gradient colors may be any valid color defined per <a href="https://imagemagick.org/script/color.php" rel="noopener noreferrer" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Linux systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
+<p>Gradient colors may be any valid color defined per <a href="/script/color.php" rel="noopener noreferrer" target="_blank">https://imagemagick.org/script/color.php</a>. The named colors of black/white/grayXX and gray(XX[%]) are non-linear gray. For Linux systems, enclose rgb(a) and hex colors in quotes. Use double quotes, if using variables for the values.</p>
 
 <p>Here is an example linear (as opposed to radial) gradient:</p>
 
@@ -38,7 +38,7 @@ magick -size 256x256 gradient:white-black linear_gradient.png
 magick -size 256x256 radial-gradient:white-black radial_gradient.png </samp></pre>
 <p><img src="<?php echo $_SESSION['RelativePath']?>/../script/../image/gradients/radial_gradient.png" alt="radial gradient" width="256" height="256"></p>
 
-<p>If you want non-linear grayscale gradients, then add -colorspace RGB -colorspace gray 
+<p>If you want non-linear grayscale gradients, then add -colorspace RGB -colorspace gray
 before saving the output. For example:<p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 256x256 gradient: linear_gradient.png
@@ -52,39 +52,39 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td><samp>-define gradient:vector=<var>x1</var>,<var>y1</var>, <var>x2</var>,<var>y2</var></samp></td>
-    <td>Specifies the direction of the linear gradient going from vector1 
-    (x1,y1) to vector2 (x2,y2). <em>fromColor</em> is located at vector 
-    position x1,y1 and <em>toColor</em> is located at vector position 
+    <td>Specifies the direction of the linear gradient going from vector1
+    (x1,y1) to vector2 (x2,y2). <em>fromColor</em> is located at vector
+    position x1,y1 and <em>toColor</em> is located at vector position
     x2,y2.</td>
   </tr>
 
   <tr>
     <td><samp>-define gradient:center=<var>x</var>,<var>y</var></samp></td>
-    <td>Specifies the coordinates of the center point for the radial gradient. 
+    <td>Specifies the coordinates of the center point for the radial gradient.
     The default is the center of the image.</td>
   </tr>
 
   <tr>
     <td><samp>-define gradient:radii=<var>x</var>,<var>y</var></samp></td>
-    <td>Specifies the x and y radii of the gradient. If the x radius and the y 
-    radius are equal, the shape of the radial gradient will be a circle. If 
-    they differ, then the shape will be an ellipse. The default values are the 
+    <td>Specifies the x and y radii of the gradient. If the x radius and the y
+    radius are equal, the shape of the radial gradient will be a circle. If
+    they differ, then the shape will be an ellipse. The default values are the
     maximum of the half width and half height of the image.</td>
   </tr>
 
   <tr>
     <td><samp>-define gradient:angle=<var>angle in degrees</var></samp></td>
-    <td>For a linear gradient, this specifies the direction of the gradient 
+    <td>For a linear gradient, this specifies the direction of the gradient
     going from <em>fromColor</em> to <em>toColor</em> in a clockwise positive
     manner relative to north (up). For a radial gradient, this specifies the
-    rotation of the gradient in a clockwise positive manner from its normal X-Y 
+    rotation of the gradient in a clockwise positive manner from its normal X-Y
     orientation.</td>
   </tr>
 
   <tr>
     <td><samp>-define gradient:bounding-box=<var>width</var>x<var>height</var>+<var>x</var>+<var>y</var></samp></td>
-    <td>Limits the gradient to a larger or smaller region than the image 
-    dimensions. If the region defined by the bounding box is smaller than the 
+    <td>Limits the gradient to a larger or smaller region than the image
+    dimensions. If the region defined by the bounding box is smaller than the
     image, <em>fromColor</em> is the color of the background.</td>
   </tr>
 </table>
@@ -95,21 +95,21 @@ magick -size 256x256 radial-gradient:white-black -colorspace RGB -colorspace gra
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>
     <td><samp>-define gradient:direction=<em>{NorthWest, North, Northeast, West, East, SouthWest, South, SouthEast}</em></samp></td>
-    <td>Specifies the direction of the linear gradient towards the 
+    <td>Specifies the direction of the linear gradient towards the
     top/bottom/left/right or diagonal corners.</td>
   </tr>
 
   <tr>
     <td><samp>-define gradient:extent=<em>{Circle, Diagonal, Ellipse, Maximum, Minimum}</em></samp></td>
-    <td>Specifies the shape of an image centered radial gradient. Circle and 
-    Maximum draw a circular radial gradient even for rectangular shaped images 
-    of radius equal to the larger of the half-width and half-height of the 
-    image. The Circle and Maximum options are both equivalent to the default 
-    radial gradient. The Minimum option draws a circular radial gradient 
-    even for rectangular shaped images of radius equal to the smaller of the 
-    half-width and half-height of the image. The Diagonal option draws a 
-    circular radial gradient even for rectangular shaped images of radius equal 
-    to the half-diagonal of the image. The Ellipse options draws an elliptical 
+    <td>Specifies the shape of an image centered radial gradient. Circle and
+    Maximum draw a circular radial gradient even for rectangular shaped images
+    of radius equal to the larger of the half-width and half-height of the
+    image. The Circle and Maximum options are both equivalent to the default
+    radial gradient. The Minimum option draws a circular radial gradient
+    even for rectangular shaped images of radius equal to the smaller of the
+    half-width and half-height of the image. The Diagonal option draws a
+    circular radial gradient even for rectangular shaped images of radius equal
+    to the half-diagonal of the image. The Ellipse options draws an elliptical
     radial gradient for rectangular shaped images of radii equal to half the
     width and half the height of the image.</td>
   </tr>

@@ -5,7 +5,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 }
 ?>
 <div>
-<p class="lead">The <a href="https://imagemagick.org/api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="https://imagemagick.org/api/MagickCore/index.html">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
+<p class="lead">The <a href="/api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="/api/MagickCore/index.html">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
 
 <ul>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-wand.php">Magick Wand Methods</a></li>
@@ -302,5 +302,5 @@ int main(int argc,char **argv)
 <p>ImageMagick might internally use threads via OpenMP (a method for parallel programming). As a result, it's important to ensure that any function calls into ImageMagick have completed before calling <samp>MagickWandTerminus()</samp>. This prevents issues with OpenMP worker threads accessing resources that are destroyed by this termination function.</p>
 
 <p>If OpenMP is being used (starting from version 5.0), the OpenMP implementation itself handles starting and stopping worker threads and allocating and freeing resources using its own methods. This means that after calling <samp>MagickWandTerminus()</samp>, some OpenMP resources and worker threads might still remain allocated. To address this, the function <samp>omp_pause_resource_all(omp_pause_hard)</samp> can be invoked. This function, introduced in OpenMP version 5.0, ensures that any resources allocated by OpenMP (such as threads and thread-specific memory) are freed. It's recommended to call this function after <samp>MagickWandTerminus()</samp> has completed its execution.</p>
-<p><a href="https://imagemagick.org/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
+<p><a href="/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
 </div>

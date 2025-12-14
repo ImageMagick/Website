@@ -27,7 +27,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./configure --disable-hdri
 </samp></pre>
 
-<p>Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="https://imagemagick.org/script/install-source.php">Install from Windows Source</a>.</p>
+<p>Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="/script/install-source.php">Install from Windows Source</a>.</p>
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 

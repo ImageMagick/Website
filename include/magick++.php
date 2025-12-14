@@ -4,19 +4,19 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   exit();
 }
 ?>
-<div> 
+<div>
 <p class="text-center"><a href="#documentation">Documentation</a> • <a href="#get">Obtaining Magick++</a> • <a href="#install">Installation</a> • <a href="#bugs">Reporting Bugs</a></p>
 
 <a class="anchor" id="intro"></a>
-<p class="lead"><a href="https://imagemagick.org/api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
-<p>Magick++ supports an object model which is inspired by <a href="https://imagemagick.org/script/perl-magick.php">PerlMagick</a>.
+<p class="lead"><a href="/api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
+<p>Magick++ supports an object model which is inspired by <a href="/script/perl-magick.php">PerlMagick</a>.
 Images support implicit reference counting so that copy constructors
 and assignment incur almost no cost. The cost of actually copying an
 image (if necessary) is done just before modification and this copy
 is managed automagically by Magick++. De-referenced copies are
 automagically deleted. The image objects support value (rather than
 pointer) semantics so it is trivial to support multiple generations
-of an image in memory at one time. 
+of an image in memory at one time.
 </p>
 <p>Magick++ provides integrated support for the <a href="http://www.sgi.com/tech/stl/">Standard
 Template Library</a> (STL) so that the powerful containers available
@@ -26,24 +26,24 @@ and <a href="http://www.sgi.com/tech/stl/Map.html">map</a>)  can
 be used to write programs similar to those possible with PERL &amp;
 PerlMagick. STL-compatible template versions of ImageMagick's
 list-style operations are provided so that operations may be
-performed on multiple images stored in STL containers. 
+performed on multiple images stored in STL containers.
 </p>
 <h2>Documentation</h2>
 <a class="anchor" id="documentation"></a>
 <p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/index.html">documentation</a> is
 provided for all Magick++ classes, class methods, and template
-functions which comprise the API.  See a <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="https://imagemagick.org/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
+functions which comprise the API.  See a <a href="/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2>Obtaining Magick++</h2>
 <a class="anchor" id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
-source releases and may be retrieved via <a href="https://imagemagick.org/script/download.php">HTTP</a>
+source releases and may be retrieved via <a href="/script/download.php">HTTP</a>
 or <a href="https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B">GitHub</a>.
 </p>
 <h2>Installation</h2>
 <a class="anchor" id="install"></a>
 <p>Once you have the Magick++ sources available, follow these detailed
 <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/Install.html">installation instructions</a> for UNIX and
-Windows. 
+Windows.
 </p>
 <h2>Usage</h2>
 <p>A helper script named <samp>Magick++-config</samp> is installed
@@ -51,7 +51,7 @@ under Linux which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
 following command compiles and links the source file <samp>demo.cpp</samp>
 to produce the executable <samp>demo</samp> (notice that quotes are
-backward quotes): 
+backward quotes):
 </p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
   `Magick++-config --ldflags --libs` </samp></pre>
@@ -61,7 +61,7 @@ backward quotes):
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
 
 <p>Windows users may get started by manually editing a project file
-for one of the Magick++ demo programs. 
+for one of the Magick++ demo programs.
 </p>
 <p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the MagickPlusPlusGenesis() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>int main( int argc, char ** argv) {
@@ -73,36 +73,36 @@ of <var>installing</var> ImageMagick in a known location.  </p>
 <p>Here is a example program that utilizes the Magick++ API to get you started, <a href="<?php echo $_SESSION['RelativePath']?>/../source/magick++.cpp">magick++.cpp</a>. It reads an image, crops it, and writes it to disk in the PNG image format.</p>
 
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><code>
-#include &lt;Magick++.h> 
-#include &lt;iostream> 
+#include &lt;Magick++.h>
+#include &lt;iostream>
 
-using namespace std; 
-using namespace Magick; 
+using namespace std;
+using namespace Magick;
 
-int main(int argc,char **argv) 
-{ 
+int main(int argc,char **argv)
+{
   MagickPlusPlusGenesis genesis(*argv);
 
-  // Construct the image object. Separating image construction from the 
-  // the read operation ensures that a failure to read the image file 
-  // doesn't render the image object useless. 
+  // Construct the image object. Separating image construction from the
+  // the read operation ensures that a failure to read the image file
+  // doesn't render the image object useless.
   Image image;
-  try { 
-    // Read a file into image object 
+  try {
+    // Read a file into image object
     image.read( "logo:" );
 
     // Crop the image to specified size (width, height, xOffset, yOffset)
     image.crop( Geometry(100,100, 100, 100) );
 
-    // Write the image to a file 
-    image.write( "logo.png" ); 
-  } 
-  catch( Exception &amp;error_ ) 
-    { 
-      cout &lt;&lt; "Caught exception: " &lt;&lt; error_.what() &lt;&lt; endl; 
-      return 1; 
-    } 
-  return 0; 
+    // Write the image to a file
+    image.write( "logo.png" );
+  }
+  catch( Exception &amp;error_ )
+    {
+      cout &lt;&lt; "Caught exception: " &lt;&lt; error_.what() &lt;&lt; endl;
+      return 1;
+    }
+  return 0;
 } </code></pre>
 <h2>Reporting Bugs</h2>
 <a class="anchor" id="bugs"></a>
