@@ -1,4 +1,3 @@
-Sitemap: https://imagemagick.org/sitemap.xml
-
-User-agent: *
-Disallow:
+user-agent: *
+allow: /
+crawl-delay: 2
