@@ -111,7 +111,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <dl >
   <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.  The bug discussions service requires that you register.  If you do not want to register, you can <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact the ImageMagick developers</a> with a convenient web form.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
+  <li><a href="/support/">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
 </dl>
 
 <h2><a class="anchor" id="miscellaneous"></a>Miscellaneous Topics</h2>

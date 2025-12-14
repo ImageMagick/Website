@@ -1,4 +1,4 @@
 <?php
-  $title='Sponsor ImageMagick Development';
-  include('session.php');
+  header("Location: /support/", true, 301);
+  exit();
 ?>

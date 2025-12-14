@@ -5,6 +5,7 @@
   if (!isset($title)) { $title = ""; }
   if (!isset($description)) { $description = $title; }
   if (!isset($topic)) { $topic = ""; }
+  if (!isset($filename)) { $filename = $_SERVER['SCRIPT_FILENAME']; }
   /*
     Start a session and return content from the cache if its exists.
   */
@@ -25,9 +26,9 @@
   elseif (!ob_start("ob_gzhandler")) {
     ob_start();
   }
-  $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
+  $path=pathinfo($filename);
   $path=$path['dirname'];
-  $script=basename($_SERVER['SCRIPT_FILENAME']);
+  $script=basename($filename);
   $cacheName=$path . '/../cache/' . $script;
   $useCache=!isset($dynamic_content);
   if (isset($_SERVER['MAGICK_DISABLE_CACHE']) && $_SERVER['MAGICK_DISABLE_CACHE'] == "true")
@@ -57,7 +58,7 @@
   ini_set("url_rewriter.tags", "a=href,area=href,input=src,fieldset=");
   ini_set("arg_separator.output","&amp;");
   session_start();
-  $path=pathinfo($_SERVER['SCRIPT_FILENAME']);
+  $path=pathinfo($filename);
   $_SESSION['AbsolutePath']=$path['dirname'];
   $path=pathinfo($_SERVER['SCRIPT_NAME']);
   $_SESSION['RelativePath']=$path['dirname'];

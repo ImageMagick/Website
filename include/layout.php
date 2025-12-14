@@ -172,7 +172,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
    <br>
-     <a href="<?php echo $_SESSION['RelativePath']?>/../script/support.php">Sponsor</a> •
+     <a href="/support/">Sponsor</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/cite.php">Cite</a> •
      <a href="http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x89AB63D48277377A">Public Key</a> •
      <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact Us</a>
@@ -187,7 +187,6 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
   <!-- Javascript assets -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-~                                                         
   </body>
 </html>
 <?php
