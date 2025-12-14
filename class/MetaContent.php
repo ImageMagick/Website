@@ -8,7 +8,7 @@
     public $generator;
     public $keywords2;
     public $image;
-    public $licence;
+    public $license;
     public $name;
     public $sameAs;
     public $sitename;
