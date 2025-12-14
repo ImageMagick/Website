@@ -54,7 +54,6 @@
   /*
     Generate dynamic content.
   */
-  ini_set("session.use_trans_sid",1);
   ini_set("url_rewriter.tags", "a=href,area=href,input=src,fieldset=");
   ini_set("arg_separator.output","&amp;");
   session_start();
