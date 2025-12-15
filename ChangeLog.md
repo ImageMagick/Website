@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-11](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-10...7.1.2-11) - 2025-12-14
+
+### Commits
+
+- beta release [`e97f8c1`](https://github.com/ImageMagick/ImageMagick/commit/e97f8c1cb069071022467354997098b9eb155d1e)
+- Only allow setting the data_precision to values other then 16 and 12 when quality is lossless (&gt;= 100). [`4d7581a`](https://github.com/ImageMagick/ImageMagick/commit/4d7581a3e7052749763ebb8331fbc5702d0dddd1)
+- Switch to macos-15-intel for the x64 MacOS build. [`3f47b60`](https://github.com/ImageMagick/ImageMagick/commit/3f47b60c001551589e0e18add8347ed5b7d5c2c8)
+- Removed old debug statements. [`281adfc`](https://github.com/ImageMagick/ImageMagick/commit/281adfc0e3fd9ac8d2fd55b935db7a68715ff613)
+- Added extra checks to prevent overflows on 32-bit systems and do an earlier exit. [`1dc1fc9`](https://github.com/ImageMagick/ImageMagick/commit/1dc1fc93135a5ad8c7a8fe9c258d367ab4fbc185)
+- release [`578d60d`](https://github.com/ImageMagick/ImageMagick/commit/578d60d1bf77be54b16ef2673d507932885570dd)
+
 ## [7.1.2-10](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-9...7.1.2-10) - 2025-12-07
 
 ### Commits
