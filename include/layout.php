@@ -44,7 +44,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <head>
   <?php echo $meta->metadata($title); ?>
   <!-- Google Custom Search -->
-  <script defer src="https://cse.google.com/cse.js?cx=006134137889097767902:turn9fku95u"></script>
+  <script async src="https://cse.google.com/cse.js?cx=8720b81722164487b"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745" crossorigin="anonymous"></script>
 </head>
 <?php flush(); ?>
@@ -100,7 +100,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item ms-3">
-          <form class="d-flex form-inline" action="/script/search.php">
+          <form class="d-flex form-inline" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <input class="form-control me-2" type="text" name="q" placeholder="Search site..." aria-label="Search">
             <button class="btn btn-outline-warning" type="submit" name="sa">Search</button>
           </form>
@@ -183,6 +183,9 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <small>Copyright © 1999 ImageMagick Studio LLC</small>
     </div>
   </footer>
+  <div style="visibility: hidden;">
+    <div class="gcse-search"></div>
+  </div>
 </div>
 
   <!-- Javascript assets -->
