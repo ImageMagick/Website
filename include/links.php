@@ -10,10 +10,10 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p class="lead">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse most of these sites, but we feel they are a helpful adjunct to the ImageMagick project.</p>
 
 
-<h2><a class="anchor" id="web"></a>Use ImageMagick Online</h2>
+<h2><a class="anchor" id="web"></a>ImageMagick Services</h2>
 <ul>
-  <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org/" rel="noopener noreferrer" target="_blank">JqMagick</a></dd>
-  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/" rel="noopener noreferrer" target="_blank">Magick Online Studio</a></dd>
+  <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org/discourse-server/index.php" rel="noopener noreferrer" target="_blank">Legacy ImageMagick Discussions</a></dd>
+  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org/scripts/MagickStudio.cgi" rel="noopener noreferrer" target="_blank">Magick Online Studio</a></dd>
 </ul>
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
