@@ -142,7 +142,10 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
       </div>
       <div class="col-md-3">
         <div class="container text-center my-3">
-          <iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe>
+          <a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" rel="noopener noreferrer" target="_blank">
+            <img alt="The Tao of the Spiritual Warrior" class="img-fluid img-thumbnail" height="1468" loading="lazy" src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" width="1104">
+          </a>
+          <p class="mt-2"><iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe></p>
         </div>
         <div class="container text-center my-3">
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129977114552745"
