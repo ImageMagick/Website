@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-12](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-11...7.1.2-12) - 2025-12-28
+
+### Merged
+
+- Bump actions/download-artifact from 6 to 7 [`#8497`](https://github.com/ImageMagick/ImageMagick/pull/8497)
+- Bump actions/upload-artifact from 5 to 6 [`#8498`](https://github.com/ImageMagick/ImageMagick/pull/8498)
+- Fix warnings about operations on volatiles that are deprecated in C++20. [`#8502`](https://github.com/ImageMagick/ImageMagick/pull/8502)
+- Bump msys2/setup-msys2 from 2.29.0 to 2.30.0 [`#8499`](https://github.com/ImageMagick/ImageMagick/pull/8499)
+- Fix autoconf syntax errors (configure.ac) [`#8488`](https://github.com/ImageMagick/ImageMagick/pull/8488)
+
+### Commits
+
+- beta release [`22ed20a`](https://github.com/ImageMagick/ImageMagick/commit/22ed20ab80777e3aa754b5a0b7d44a0da5fb94fb)
+- latest autoconf update [`7b8b8e9`](https://github.com/ImageMagick/ImageMagick/commit/7b8b8e9252267f2c2bb5146d5d239056a38d8727)
+- https://github.com/ImageMagick/ImageMagick/issues/8487 [`16d029a`](https://github.com/ImageMagick/ImageMagick/commit/16d029ac7d85fd4ac26d157666bd59f603009231)
+- Removed const keyword. [`eec063c`](https://github.com/ImageMagick/ImageMagick/commit/eec063cc54f0a6b49efa299ab00d08c671b4d67b)
+- Also remove const from the header file. [`a9223bb`](https://github.com/ImageMagick/ImageMagick/commit/a9223bb41105aa195cc9dce3c568df6600dad438)
+- Removed undefined private function declaration. [`8b7b850`](https://github.com/ImageMagick/ImageMagick/commit/8b7b8506afb58222b9c0aaa797349386f50161c3)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-p27m-hp98-6637 [`6f431d4`](https://github.com/ImageMagick/ImageMagick/commit/6f431d445f3ddd609c004a1dde617b0a73e60beb)
+- Removed name. [`ecd4edc`](https://github.com/ImageMagick/ImageMagick/commit/ecd4edc9070233fd0ad5bae025e153ea7de07c28)
+- Fixed memory leak that happens when we hit a list limit. [`ad65a4c`](https://github.com/ImageMagick/ImageMagick/commit/ad65a4ceed8d394371775fde2408509c5ffcaa78)
+- Removed specific methods for Windows with memory allocation. [`7b0bce0`](https://github.com/ImageMagick/ImageMagick/commit/7b0bce05621c29e32726b547c6273150ea8c501e)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-7rvh-xqp3-pr8j [`204718c`](https://github.com/ImageMagick/ImageMagick/commit/204718c2211903949dcfc0df8e65ed066b008dec)
+- Revert patches to solve #8484 and #8506. [`d6a53ce`](https://github.com/ImageMagick/ImageMagick/commit/d6a53ceb904bdc752e005fb52db8e16fc0b8e808)
+- Updated the Windows dependencies. [`92dce45`](https://github.com/ImageMagick/ImageMagick/commit/92dce45ec090de05f7ee295e7264e5e910b37f8a)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-hrh7-j8q2-4qcw [`2c08c23`](https://github.com/ImageMagick/ImageMagick/commit/2c08c2311693759153c9aa99a6b2dcb5f985681e)
+- release [`bdd4fa5`](https://github.com/ImageMagick/ImageMagick/commit/bdd4fa561d7bf4c6afd40ee9c89e9f9e82b6e88b)
+
 ## [7.1.2-11](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-10...7.1.2-11) - 2025-12-14
 
 ### Commits
