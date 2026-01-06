@@ -15,13 +15,13 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     }
   }
 
-  function SiteHeader($title,$topic,$description)
+  function SiteHeader($title,$topic,$folder)
   {
     $meta=new MetaContent;
     $meta->company_name="ImageMagick Studio LLC";
     $meta->name="ImageMagick";
     $meta->description="ImageMagick is a powerful open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for developers, designers, and researchers.";
-    $meta->url="https://imagemagick.org" .  $_SERVER['SCRIPT_NAME'];
+    $meta->url="https://imagemagick.org" . (isset($folder) ? '/' . $folder . '/' : $_SERVER['SCRIPT_NAME']);
     $meta->sameAs="https://github.com/ImageMagick, https://x.com/imagemagick";
     $meta->keywords2="image processing software, image conversion tool, batch image editing, open-source image editor, ImageMagick command-line, resize images ImageMagick, crop and rotate images, ImageMagick tutorial, ImageMagick automation, ImageMagick for developers, ImageMagick CLI, ImageMagick filters and effects, ImageMagick scripting, ImageMagick API integration";
     $meta->sitename="ImageMagick";

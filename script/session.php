@@ -3,9 +3,11 @@
     Make sure variables are defined.
   */
   if (!isset($title)) { $title = ""; }
-  if (!isset($description)) { $description = $title; }
   if (!isset($topic)) { $topic = ""; }
-  if (!isset($filename)) { $filename = $_SERVER['SCRIPT_FILENAME']; }
+  $filename = $_SERVER['SCRIPT_FILENAME'];
+  if (isset($folder)) {
+    $filename=$folder . '.php';
+  }
   /*
     Start a session and return content from the cache if its exists.
   */
@@ -88,7 +90,7 @@
   require_once($_SESSION['AbsolutePath'] . '/../function/option.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
   require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
-  SiteHeader($title,$topic,$description);
+  SiteHeader($title,$topic,$folder);
   require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
   SiteFooter();
   if ($useCache) {

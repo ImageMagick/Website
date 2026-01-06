@@ -1,5 +1,5 @@
 <?php
   $title='Sponsor ImageMagick Development';
-  $filename='support.php';
+  $folder='support';
   include('../script/session.php');
 ?>
