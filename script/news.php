@@ -1,4 +1,4 @@
 <?php
-  $title='News';
-  include('session.php');
+  header("Location: /news/", true, 301);
+  exit();
 ?>
