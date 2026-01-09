@@ -104,13 +104,12 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1590595904/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">Definitive Guide to ImageMagick</a>: this book explains ImageMagick in a practical, learn-by-example fashion.</li>
   <li><a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=imagemagick-20&amp;creative=9325&amp;path=tg/detail/-/1904811868/qid=1123551819/sr=8-1/ref=pd_bbs_sbs_1?v=glance%26s=books%26n=507846">ImageMagick Tricks</a>: this book is packed with examples of photo manipulations, logo creation, animations, and complete web projects.</li>
   <li><a href="https://github.com/ImageMagick/ImageMagick/discussions">Discussions</a> forums: to get help from fellow ImageMagick users and developers, post to these forums.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">Contact the Wizards</a>: for bug reports (only if you do not want to sign up to the <a href="https://github.com/ImageMagick/ImageMagick/discussions">discussion</a>) service, a source or documentation patch, a security or license issue, or if you want to be a sponsor of the ImageMagick project.</li>
 </dl>
 
 <h2><a class="anchor" id="support"></a>Support ImageMagick</h2>
 
 <dl >
-  <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.  The bug discussions service requires that you register.  If you do not want to register, you can <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact the ImageMagick developers</a> with a convenient web form.</li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/issues">Report bugs and vulnerabilities</a>: our highest priority is to fix security defects and bug reports, usually within 48 hours of your report.</li>
   <li><a href="/support/">Sponsor ImageMagick</a>: contribute bug fixes, enhancements, hardware, funds, etc. to ensure the ImageMagick project thrives.</li>
 </dl>
 

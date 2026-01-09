@@ -34,5 +34,5 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <dd><a href="rsync://mirror.imagemagick.org/magick_html">rsync://mirror.imagemagick.org/magick_html/</a> (Web site mirror)</dd>
     <dd><a href="rsync://mirror.imagemagick.org/magick_ftp">rsync://mirror.imagemagick.org/magick_ftp/</a> (FTP mirror)</dd>
 </dl>
-<p>If you want to add a new mirror, please <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a>.</p>
+<p>If you want to add a new mirror, please <a href="https://github.com/ImageMagick/ImageMagick/discussions">contact us</a>.</p>
 </div>

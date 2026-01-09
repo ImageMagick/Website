@@ -62,7 +62,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 </ul>
 </fieldset>
 <br/>
-<p>If you have any questions about supporting ImageMagick, please <a href="<?php echo $_SESSION['RelativePath']?>/../script/contact.php">contact us</a>.
+<p>If you have any questions about supporting ImageMagick, please <a href="https://github.com/ImageMagick/ImageMagick/discussions">contact us</a>.
 </p>
 
 
