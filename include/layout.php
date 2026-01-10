@@ -30,7 +30,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     $meta->slogan="Mastering digital image alchemy.";
     $meta->email="webmaster@imagemagick.org";
     $meta->image="https://imagemagick.org/image/logo.png";
-    $meta->license="https://imagemagick.org/script/license.php";
+    $meta->license="https://imagemagick.org/license/";
     $meta->creator="ImageMagick Studio LLC";
     $myTitle=$title;
     $subtitle=$meta->sitename;

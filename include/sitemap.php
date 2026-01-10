@@ -21,7 +21,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security policy</a>: best practices strongly encourage you to configure a security policy that suits your local environment.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/license.php">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
+  <li><a href="/license/">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/export.php">Export classification</a>: export control status of ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/privacy-policy.php">Privacy policy</a>: we do not collect personal identifier information.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
