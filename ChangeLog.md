@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-13](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-12...7.1.2-13) - 2026-01-19
+
+### Commits
+
+- beta release [`0db229e`](https://github.com/ImageMagick/ImageMagick/commit/0db229e520dc4827f8f70304c1c89f40279a9cb3)
+- cosmetic [`0aed4e1`](https://github.com/ImageMagick/ImageMagick/commit/0aed4e16d1a5ed71ad77964e5cc8fd450eb21e65)
+- Check if the aspect ratio is a known ratio when density_unit is set to zero and otherwise read it as an undefined density in the jpeg coder (#8496) [`ab2232d`](https://github.com/ImageMagick/ImageMagick/commit/ab2232d0fe25085168db5b1f1e8017a8de624e91)
+- Consistent code style. [`4012a8c`](https://github.com/ImageMagick/ImageMagick/commit/4012a8c7f3160406d242d6fbae7b1ce40d0016ab)
+- Added  -DENABLE_DECODER=off to the oss-fuzz build of libde265 to work around linking issue. [`7bbb1e5`](https://github.com/ImageMagick/ImageMagick/commit/7bbb1e5cf801a95907130a3eaf9a9b745a712a4a)
+- Use true/false for all CMAKE defines. [`c59b417`](https://github.com/ImageMagick/ImageMagick/commit/c59b417dd13b9c5eaf2724ecd0388da8d30fb4c3)
+- Switch to cmake with the freetype2 oss-fuzz build. [`93100cc`](https://github.com/ImageMagick/ImageMagick/commit/93100cca186dfbab92863a440e5efaf0d7fe61a9)
+- Code cleanup. [`408a183`](https://github.com/ImageMagick/ImageMagick/commit/408a18373ce59ab3a06c55b91d9dfc5397b7e1ca)
+- tune secuirty policies [`9b94be4`](https://github.com/ImageMagick/ImageMagick/commit/9b94be4627c63bf810bb94503473d3b68353c35a)
+- Correct memset initialization and add an overflow check (GHSA-39h3-g67r-7g3c) [`3e03307`](https://github.com/ImageMagick/ImageMagick/commit/3e0330721020e0c5bb52e4b77c347527dd71658e)
+- Corrected check to determine if the alpha channel is enabled. [`21485df`](https://github.com/ImageMagick/ImageMagick/commit/21485dfd60f5d4b35d8f74180fa6388a08319405)
+- Disabled trim_trailing_whitespace in .c because this breaks the marker between methods. [`b1a07dd`](https://github.com/ImageMagick/ImageMagick/commit/b1a07dd022d2ce3964d08734aebd390c863c4f23)
+- Trim trailing whitespace. [`db21d54`](https://github.com/ImageMagick/ImageMagick/commit/db21d54ca5e9f64d82b0e4107446cbf53d97aa9b)
+- Updated configure. [`cf2ff1f`](https://github.com/ImageMagick/ImageMagick/commit/cf2ff1f325861ba698acafa67419c5a2f19157d3)
+- Use the new license url. [`2abe65b`](https://github.com/ImageMagick/ImageMagick/commit/2abe65b01873940b53b713ccc33130ff521090da)
+- Improved overflow checks and added missing memset. [`d02ef69`](https://github.com/ImageMagick/ImageMagick/commit/d02ef691d97317328a1013c4a6599c9aff0f5f05)
+- Moved permissions block in the workflows. [`a52c1b4`](https://github.com/ImageMagick/ImageMagick/commit/a52c1b402be08ef8ae193f28ac5b2e120f2fa26f)
+- Fixed memory leak that happens when someone creates a corrupt ImagemagickOpenCLDeviceProfile.xml file (GHSA-qp59-x883-77qv) [`951f6b0`](https://github.com/ImageMagick/ImageMagick/commit/951f6b0940224afc469f6a72503d6e011c688d02)
+- Changed version check because a new version of libraw has been released (#8524). [`cbc802d`](https://github.com/ImageMagick/ImageMagick/commit/cbc802d38b2d37a4ae101c6ef80a465678cc6a49)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-5vx3-wx4q-6cj8 [`1eefab4`](https://github.com/ImageMagick/ImageMagick/commit/1eefab41bc0ab1c6c2c1fd3e4a49e3ee1849751d)
+- MSL: Stack overflow via infinite recursion in ProcessMSLScript [`2a09644`](https://github.com/ImageMagick/ImageMagick/commit/2a09644b10a5b146e0a7c63b778bd74a112ebec3)
+- https://github.com/ImageMagick/ImageMagick/issues/8523 [`d67e65c`](https://github.com/ImageMagick/ImageMagick/commit/d67e65c886df2e2ed17052ceb5cce7dadea9101a)
+- signed/unsigned mismatch [`f2dc5ef`](https://github.com/ImageMagick/ImageMagick/commit/f2dc5ef6543da8af2e425c7b790d6a67364e1329)
+- Updated the Windows dependencies. [`31347f8`](https://github.com/ImageMagick/ImageMagick/commit/31347f8c62b52980b4d00ed9b8c8137d26e8c437)
+- Added overflow checks. [`96eb9a3`](https://github.com/ImageMagick/ImageMagick/commit/96eb9a30f9deb549ec60983f506d69c1da5e261b)
+- Temporary install the TrustedSigningClientTools that is required by Advanced Installer. [`888091f`](https://github.com/ImageMagick/ImageMagick/commit/888091f18273340be7d2ec4bccfa5183e8c13ea3)
+- Switch to windows-2025 because it has winget installed. [`0ef3288`](https://github.com/ImageMagick/ImageMagick/commit/0ef328888be3484d423dcdd787a5d96b4de2b219)
+- Added option to winget installation. [`1217b59`](https://github.com/ImageMagick/ImageMagick/commit/1217b59f7dc055ea26d78c05fb6797258d40efc5)
+- Use a different method to install TrustedSigningClientTools. [`33cde41`](https://github.com/ImageMagick/ImageMagick/commit/33cde410bf9990e9ab89a1d56d17dc091060e66c)
+- https://github.com/ImageMagick/ImageMagick/issues/8528 [`dce1f70`](https://github.com/ImageMagick/ImageMagick/commit/dce1f70aeba95b2be6619ac69d80f9de0b3c76ec)
+- Added overflow checks to prevent an out of bounds write (https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-r49w-jqq3-3gx8) [`2fae241`](https://github.com/ImageMagick/ImageMagick/commit/2fae24192b78fdfdd27d766fd21d90aeac6ea8b8)
+- release [`dd991e2`](https://github.com/ImageMagick/ImageMagick/commit/dd991e286b96918917a3392d6dc3ffc0e6907a4e)
+
 ## [7.1.2-12](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-11...7.1.2-12) - 2025-12-28
 
 ### Merged
