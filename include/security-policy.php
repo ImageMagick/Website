@@ -126,8 +126,10 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   &lt;!-- Don't read/write from/to stdin/stdout. -->
   &lt;policy domain="path" rights="none" pattern="-"/>
   &lt;policy domain="path" rights="none" pattern="fd:*"/>
-  &lt;!-- don't read sensitive paths. -->
+  &lt;!-- Don't read sensitive paths. -->
   &lt;policy domain="path" rights="none" pattern="/etc/*"/>
+  &lt;!-- Don't read relative paths. -->
+  &lt;policy domain="path" rights="none" pattern="*../*"/>
   &lt;!-- Indirect reads are not permitted. -->
   &lt;policy domain="path" rights="none" pattern="@*"/>
   &lt;!-- Deny all image modules and specifically exempt reading or writing
