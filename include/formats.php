@@ -373,7 +373,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td>FARBFELD</td>
+    <td><a href="https://tools.suckless.org/farbfeld/">FARBFELD</a></td>
     <td>RW</td>
     <td>Farbfeld lossless image format</td>
     <td>sRGB 16-bit RGBA lossless image format</td>
