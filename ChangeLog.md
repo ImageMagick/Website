@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-17](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-16...7.1.2-17) - 2026-03-15
+
+### Merged
+
+- Bump github/codeql-action from 4.32.2 to 4.32.6 [`#8613`](https://github.com/ImageMagick/ImageMagick/pull/8613)
+
+### Commits
+
+- beta release [`f76661e`](https://github.com/ImageMagick/ImageMagick/commit/f76661e45fda26581300f3b69438727fab38e62c)
+- Add cast to unsigned char helper method to check for out of band data [`df6fb58`](https://github.com/ImageMagick/ImageMagick/commit/df6fb5838e243f68fee39be99e59b3553f999af8)
+- eliminate compiler warning [`d38cf29`](https://github.com/ImageMagick/ImageMagick/commit/d38cf2966ff1ebea7f89e1764910e83c22f1ddad)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-rwgm-46rq-f86h [`2352dcb`](https://github.com/ImageMagick/ImageMagick/commit/2352dcbaadab79c83f263d61e2058058c40d850d)
+- https://github.com/ImageMagick/ImageMagick/issues/8609 [`7f42468`](https://github.com/ImageMagick/ImageMagick/commit/7f4246806f342159131465d2d5cf54e7c20c2127)
+- eliminate compiler warning [`f712069`](https://github.com/ImageMagick/ImageMagick/commit/f712069449c48b7c52bee7945471965fbf5d454e)
+- Corrected copy paste mistake. [`87e1969`](https://github.com/ImageMagick/ImageMagick/commit/87e19691b4619dd2238834f2213ddd21c739aa52)
+- Updated the Windows dependencies. [`fa13d1c`](https://github.com/ImageMagick/ImageMagick/commit/fa13d1cf1fccbf762754cda5fa3061490656c1c6)
+- https://github.com/ImageMagick/ImageMagick/discussions/8608 [`ad75915`](https://github.com/ImageMagick/ImageMagick/commit/ad75915d0bb0aa4f0c49c238dd6d1048811173ec)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-354p-2qx7-jg9g [`248c1d2`](https://github.com/ImageMagick/ImageMagick/commit/248c1d2e5423c6ff1a9e50651f080c328c214636)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-354p-2qx7-jg9g [`9bb57cc`](https://github.com/ImageMagick/ImageMagick/commit/9bb57cc2dc8f5f8dc75a41fe576b8a1659ec1ee0)
+- Consistent spacing. [`8125151`](https://github.com/ImageMagick/ImageMagick/commit/81251516bc2e4f5877175ce635e289954af2a762)
+- Revert changes so we can put it in a separate advisory. [`d5433b2`](https://github.com/ImageMagick/ImageMagick/commit/d5433b26fc0d1ebbc2bd4e84b0f29fe59f9dbbe7)
+- Corrected out of bounds write of a single zero byte (GHSA-gc62-2v5p-qpmp) [`361b42c`](https://github.com/ImageMagick/ImageMagick/commit/361b42c91d173cfb4bd8f39898c599feef6a1e55)
+- Restored patch because the CVSS score would be low. [`e5eeaaa`](https://github.com/ImageMagick/ImageMagick/commit/e5eeaaa197795b0ed201b16b45cc16763b74bfd3)
+- Corrected check for overflow of resource requests. [`a3c1b86`](https://github.com/ImageMagick/ImageMagick/commit/a3c1b8645a35a10a760da236338cb85f9c848c65)
+- cosmetic [`fba010f`](https://github.com/ImageMagick/ImageMagick/commit/fba010f14831f29df6c99ed685e0cfc7a45ce978)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-354p-2qx7-jg9g [`b84e013`](https://github.com/ImageMagick/ImageMagick/commit/b84e01381eb3ab183de3b32515e9c5e885f265fb)
+- Cosmetic. [`e989b89`](https://github.com/ImageMagick/ImageMagick/commit/e989b89319e9c2079972b866c21b28158cc6a946)
+- https://github.com/ImageMagick/ImageMagick/discussions/8603 [`99bda88`](https://github.com/ImageMagick/ImageMagick/commit/99bda8849835b9606db9553d3b400b3c26e3f59a)
+- https://github.com/ImageMagick/ImageMagick/discussions/5807 [`0fbd821`](https://github.com/ImageMagick/ImageMagick/commit/0fbd8215fe5890e8b8396dad4df61074ebd0f227)
+- sanitize clip path name [`452c4e9`](https://github.com/ImageMagick/ImageMagick/commit/452c4e9176b68156dc9bd58c027f9a28114fca63)
+- Cosmetic [`5ecbdcc`](https://github.com/ImageMagick/ImageMagick/commit/5ecbdcce60dba537786a90358bfa2d832c21b835)
+- Make sure the correct quotes are used with mingw and msys (#8574) [`ec2498d`](https://github.com/ImageMagick/ImageMagick/commit/ec2498df2813aefe5cc5d2b9fd0467b4aa4a9a0e)
+- latest autoconf/automake updates [`cf62401`](https://github.com/ImageMagick/ImageMagick/commit/cf6240117830b066e9948666ddaf0b1131779eb2)
+- use descriptive quote, CMD_QUOTE [`55c4e0e`](https://github.com/ImageMagick/ImageMagick/commit/55c4e0eed4d343f74215fa63824b4ab5a7536eec)
+- correct kernel width casting [`9b1840d`](https://github.com/ImageMagick/ImageMagick/commit/9b1840d2688603bb559eaa4b29f657504c8a6b62)
+- Removed unused CMD_QUOTE. [`db5aae4`](https://github.com/ImageMagick/ImageMagick/commit/db5aae4869d5bd73f8413f7bf9e530e1d7f26529)
+- Reverted incorrect patch. [`6e5a854`](https://github.com/ImageMagick/ImageMagick/commit/6e5a854a806b2c902c5dcb00f87fea1ab3b0ad76)
+- Apply correct patch for GHSA-cqw9-w2m7-r2m2. [`3ed1049`](https://github.com/ImageMagick/ImageMagick/commit/3ed104956fed43da2ed472d330d542de2f73d450)
+- Corrected initialization. [`98982e4`](https://github.com/ImageMagick/ImageMagick/commit/98982e4c12d692a6cca89c8157fc819ec16c68fd)
+- release [`3f2f629`](https://github.com/ImageMagick/ImageMagick/commit/3f2f629405c62106d3569547c03634bc46fcd07d)
+
 ## [7.1.2-16](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-15...7.1.2-16) - 2026-03-08
 
 ### Merged
