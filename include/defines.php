@@ -894,7 +894,7 @@ use:</p>
   </tr>
 
   <tr>
-    <td>heic:mmax-children-per-box=<var>value</var></td>
+    <td>heic:max-children-per-box=<var>value</var></td>
     <td>Sets the maximum number of children per box of a HEIC image.</td>
   </tr>
 
