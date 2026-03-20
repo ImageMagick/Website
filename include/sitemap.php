@@ -48,7 +48,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <h2><a class="anchor" id="command-line"></a>Command-line Tools</h2>
 <dl >
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Command-line tools</a>: overview of the ImageMagick commands.
+  <li><a href="/command-line-tools/">Command-line tools</a>: overview of the ImageMagick commands.
   <ul >
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="/animate/">magick animate</a>: animates an image sequence on any X server.</li>

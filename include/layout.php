@@ -86,7 +86,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
           <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php IsActive($topic,'Tools'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">Tools</a>
+          <a class="nav-link <?php IsActive($topic,'Tools'); ?>" href="/command-line-tools/">Tools</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?php IsActive($topic,'CLI'); ?>" href="/command-line-processing/">CLI</a>

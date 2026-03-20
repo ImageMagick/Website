@@ -7,7 +7,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <div>
 <p class="text-center"><a href="#anatomy">The Anatomy of the Command-line</a> • <a href="#input">Input Filename</a> • <a href="#option">Command-line Options</a> • <a href="#output">Output Filename</a></p>
 
-<p class="lead">The ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-tools.php">tools</a> can be as simple as this:</p>
+<p class="lead">The ImageMagick command-line <a href="/command-line-tools/">tools</a> can be as simple as this:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick image.jpg image.png </samp></pre>
 
