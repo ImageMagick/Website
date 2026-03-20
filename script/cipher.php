@@ -1,4 +1,4 @@
 <?php
-  $title='Encipher or Decipher an Image';
-  include('session.php');
+  header("Location: /cipher/", true, 301);
+  exit();
 ?>

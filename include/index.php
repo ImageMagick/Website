@@ -82,7 +82,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>add shapes or text to an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/cipher.php">Encipher or decipher an image</a></td>
+    <td><a href="/cipher/">Encipher or decipher an image</a></td>
     <td>convert ordinary images into unintelligible gibberish and back again.</td>
   </tr>
   <tr>
