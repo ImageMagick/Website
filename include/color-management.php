@@ -59,6 +59,6 @@ magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set 
 
 <p>A majority of the image formats assume an sRGB colorspace (e.g. JPEG, PNG, etc.). A few support only linear RGB (e.g. EXR, DPX, CIN, HDR) or only linear GRAY. A few formats support CMYK. For example JPG does, but PNG does not. Then there is the occasional format that also supports LAB (that is CieLAB) (e.g. TIFF, PSD, JPG, JP2). For additional information, see the <a href="/script/formats.php#colorspace" >Colorspace</a> and <a href="/script/formats.php#supported" >Supported Formats</a> pages.</p>
 
-<p>When specifying individual colors as <samp>rgb(...)</samp> or hex, these colors will still be interpreted as non-linear, that is, as sRGB colors. However if one wants to create linear colors, use <samp>icc-color(rgb,r,g,b)"</samp>, where <samp>r</samp>, <samp>g</samp>, and <samp>b</samp> are in the range 0 to 1. See the <a href="/script/color.php" >Color</a> page.</p>
+<p>When specifying individual colors as <samp>rgb(...)</samp> or hex, these colors will still be interpreted as non-linear, that is, as sRGB colors. However if one wants to create linear colors, use <samp>icc-color(rgb,r,g,b)"</samp>, where <samp>r</samp>, <samp>g</samp>, and <samp>b</samp> are in the range 0 to 1. See the <a href="/color/" >Color</a> page.</p>
 
 </div>

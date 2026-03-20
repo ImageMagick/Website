@@ -23,7 +23,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../source/colors.xml">colors.xml</a></dt>
   <dd class="col-md-8">Associate a color name with its red, green, blue, and alpha intensities.
 
-  A number of command line options require a <a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
+  A number of command line options require a <a href="/color/">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
   </dd>
 
 <dt class="col-md-4"><a class="anchor" id="configure.xml"/><a href="<?php echo $_SESSION['RelativePath']?>/../source/configure.xml">configure.xml</a></dt>
@@ -106,8 +106,8 @@ For convenience, define arguments for the memory, map, and disk resources with S
 <p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_CONFIGURE_PATH
-$PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
-$PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
+$PREFIX/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
+$PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
 &lt;<var>client path</var>&gt;/etc/ImageMagick</samp></pre>
@@ -117,9 +117,9 @@ $HOME/.config/ImageMagick
 <p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
-$PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?> 
+$MAGICK_HOME/etc/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
+$PREFIX/share/ImageMagick-<?php echo(MagickMajorReleaseText); ?>
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick/
 &lt;<var>client path</var>&gt;/etc/ImageMagick

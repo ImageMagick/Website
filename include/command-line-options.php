@@ -3605,8 +3605,7 @@ href="http://www.fmwconcepts.com/imagemagick/fourier_transforms/fourier.html"
 <p class="magick-description">Color to use when filling a graphic primitive.</p>
 
 <p>This option accepts a color name, a hex color, or a numerical RGB, RGBA,
-HSL, HSLA, CMYK, or CMYKA specification.  See <a href="<?php echo
-$_SESSION['RelativePath'] ?>/../script/color.php" >Color Names</a> for
+HSL, HSLA, CMYK, or CMYKA specification.  See <a href="/color/" >Color Names</a> for
 a description of how to properly specify the color argument.</p>
 
 <p>Enclose the color specification in quotation marks to prevent the "#" or

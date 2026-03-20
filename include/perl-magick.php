@@ -357,7 +357,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>AffineTransform</td>
-    <td>affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt; <i>float, float</i>, rotate=&gt;<i>float</i>, skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate={Average, Bicubic, Bilinear, Filter, Integer, Mesh, NearestNeighbor}, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt; <i>float, float</i>, rotate=&gt;<i>float</i>, skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate={Average, Bicubic, Bilinear, Filter, Integer, Mesh, NearestNeighbor}, background=&gt;<i><a href="/color/">color name</a></i></td>
     <td>affine transform image</td>
   </tr>
 
@@ -369,7 +369,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Annotate</td>
-    <td>text=&gt;<i>string</i>, font=&gt;<i>string</i>, family=&gt;<i>string</i>, style=&gt;{Normal, Italic, Oblique, Any}, stretch=&gt;{Normal, UltraCondensed, ExtraCondensed, Condensed, SemiCondensed, SemiExpanded, Expanded, ExtraExpanded, UltraExpanded}, weight=&gt;<i>integer</i>, pointsize=&gt;<i>integer</i>, density=&gt;<i>geometry</i>, stroke=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, undercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, kerning=&gt;<i>float</i>, geometry=&gt;<i>geometry</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, antialias=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>. skewX=&gt;<i>float</i>, skewY=&gt; <i>float</i>, align=&gt;{Left, Center, Right}, encoding=&gt;{UTF-8}, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, decorate=&gt;{none, underline, overline, line-through}, word-break=&gt;{normal, break-word}</td>
+    <td>text=&gt;<i>string</i>, font=&gt;<i>string</i>, family=&gt;<i>string</i>, style=&gt;{Normal, Italic, Oblique, Any}, stretch=&gt;{Normal, UltraCondensed, ExtraCondensed, Condensed, SemiCondensed, SemiExpanded, Expanded, ExtraExpanded, UltraExpanded}, weight=&gt;<i>integer</i>, pointsize=&gt;<i>integer</i>, density=&gt;<i>geometry</i>, stroke=&gt;<i><a href="/color/">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="/color/">color name</a></i>, undercolor=&gt;<i><a href="/color/">color name</a></i>, kerning=&gt;<i>float</i>, geometry=&gt;<i>geometry</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, antialias=&gt;{true, false}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>. skewX=&gt;<i>float</i>, skewY=&gt; <i>float</i>, align=&gt;{Left, Center, Right}, encoding=&gt;{UTF-8}, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, decorate=&gt;{none, underline, overline, line-through}, word-break=&gt;{normal, break-word}</td>
     <td>annotate an image with text. See <a href="#miscellaneous">QueryFontMetrics</a> to get font metrics without rendering any text.</td>
   </tr>
 
@@ -423,7 +423,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Border</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="/color/">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with a border of color</td>
   </tr>
 
@@ -477,7 +477,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Color</td>
-    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>color=&gt;<i><a href="/color/">color name</a></i></td>
     <td>set the entire image to this color.</td>
   </tr>
 
@@ -489,7 +489,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Colorize</td>
-    <td>fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
+    <td>fill=&gt;<i><a href="/color/">color name</a></i>, blend=&gt;<i>string</i></td>
     <td>colorize the image with the fill color</td>
   </tr>
 
@@ -525,7 +525,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Composite</td>
-    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}, clip-to-self=&gt;{True, False}</td>
+    <td>image=&gt;<i>image-handle</i>, compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor }, mask=&gt;<i>image-handle</i>, geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}, opacity=&gt;<i>integer</i>, tile=&gt;{True, False}, rotate=&gt;<i>double</i>, color=&gt;<i><a href="/color/">color name</a></i>, blend=&gt;<i>geometry</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, filter, integer, mesh, nearest-neighbor, spline}, clip-to-self=&gt;{True, False}</td>
     <td>composite one image onto another.  Use the rotate parameter in concert with the tile parameter.</td>
   </tr>
 
@@ -609,7 +609,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Draw</td>
-    <td>primitive=&gt;{point, line, rectangle, arc, ellipse, circle, path, polyline, polygon, bezier, color, matte, text, @<i>filename</i>}, points=&gt;<i>string</i> , method=&gt;<i>{Point, Replace, Floodfill, FillToBorder, Reset}</i>, stroke=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, font=&gt;<i>string</i>, pointsize=&gt;<i>integer</i>, strokewidth=&gt;<i>float</i>, antialias=&gt;{true, false}, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, x=&gt;<i>float</i>, y=&gt;<i>float</i>, dash-offset=&gt;<i>float</i>, dash-pattern=&gt;<i>array of float values</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>,  skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, mesh, nearest-neighbor, spline}, kerning=&gt;<i>float</i>, text=&gt;<i>string</i>, vector-graphics=&gt;<i>string</i>, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, word-break=&gt;{normal, break-word}</td>
+    <td>primitive=&gt;{point, line, rectangle, arc, ellipse, circle, path, polyline, polygon, bezier, color, matte, text, @<i>filename</i>}, points=&gt;<i>string</i> , method=&gt;<i>{Point, Replace, Floodfill, FillToBorder, Reset}</i>, stroke=&gt;<i><a href="/color/">color name</a></i>, fill=&gt;<i><a href="/color/">color name</a></i>, font=&gt;<i>string</i>, pointsize=&gt;<i>integer</i>, strokewidth=&gt;<i>float</i>, antialias=&gt;{true, false}, bordercolor=&gt;<i><a href="/color/">color name</a></i>, x=&gt;<i>float</i>, y=&gt;<i>float</i>, dash-offset=&gt;<i>float</i>, dash-pattern=&gt;<i>array of float values</i>, affine=&gt;<i>array of float values</i>, translate=&gt;<i>float, float</i>, scale=&gt;<i>float, float</i>, rotate=&gt;<i>float</i>,  skewX=&gt;<i>float</i>, skewY=&gt;<i>float</i>, interpolate=&gt;{undefined, average, bicubic, bilinear, mesh, nearest-neighbor, spline}, kerning=&gt;<i>float</i>, text=&gt;<i>string</i>, vector-graphics=&gt;<i>string</i>, interline-spacing=&gt;<i>double</i>, interword-spacing=&gt;<i>double</i>, direction=&gt;{right-to-left, left-to-right}, word-break=&gt;{normal, break-word}</td>
     <td>annotate an image with one or more graphic primitives.</td>
   </tr>
 
@@ -645,7 +645,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Extent</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="/color/">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
     <td>set the image size</td>
   </tr>
 
@@ -675,7 +675,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>FloodfillPaint</td>
-    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
+    <td>geometry=&gt;<i>geometry</i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , fill=&gt;<i><a href="/color/">color name</a></i>, bordercolor=&gt;<i><a href="/color/">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
     <td>changes the color value of any pixel that matches the color of the target pixel and is a neighbor. If you specify a border color, the color value is changed for any neighbor pixel that is not that color.</td>
   </tr>
 
@@ -687,7 +687,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Frame</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, inner=&gt;<i>integer</i>, outer=&gt;<i>integer</i>, fill=&gt;<i><a href="/color/">color name</a></i>,  compose=&gt;{Undefined, Add, Atop, Blend, Bumpmap, Clear, ColorBurn, ColorDodge, Colorize, CopyBlack, CopyBlue, CopyCMYK, Cyan, CopyGreen, Copy, CopyMagenta, CopyAlpha, CopyRed, RGB, CopyYellow, Darken, Dst, Difference, Displace, Dissolve, DstAtop, DstIn, DstOut, DstOver, Dst, Exclusion, HardLight, Hue, In, Lighten, Luminize, Minus, Modulate, Multiply, None, Out, Overlay, Over, Plus, ReplaceCompositeOp, Saturate, Screen, SoftLight, Src, SrcAtop, SrcIn, SrcOut, SrcOver, Src, Subtract, Threshold, Xor },</td>
     <td>surround the image with an ornamental border</td>
   </tr>
 
@@ -825,7 +825,7 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>MatteFloodfill</td>
-    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , matte=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
+    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i> , matte=&gt;<i>integer</i>, bordercolor=&gt;<i><a href="/color/">color name</a></i>, fuzz=&gt;<i>double</i>, invert=&gt;{True, False}</td>
     <td>changes the matte value of any pixel that matches the color of the target pixel and is a neighbor. If you specify a border color, the matte value is changed for any neighbor pixel that is not that color.</td>
   </tr>
 
@@ -891,8 +891,8 @@ $image-&gt;[$x]-&gt;Frame("100x200");
 
   <tr>
     <td>Opaque</td>
-    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>,
-fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
+    <td>color=&gt;<i><a href="/color/">color name</a></i>,
+fill=&gt;<i><a href="/color/">color name</a></i>, channel=&gt;{All, Default, Alpha, Black, Blue, CMYK, Cyan, Gray, Green, Index, Magenta, Alpha, Red, RGB, Yellow}, invert=&gt;{True, False}</td>
     <td>change this color to the fill color within the image</td>
   </tr>
 
@@ -910,7 +910,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Polaroid</td>
-    <td>caption=&gt;<i>string</i>, angle=&gt;<i>double</i>, pointsize=&gt;<i>double</i>, font=&gt;<i>string</i>, stroke=&gt; <i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast},  background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>caption=&gt;<i>string</i>, angle=&gt;<i>double</i>, pointsize=&gt;<i>double</i>, font=&gt;<i>string</i>, stroke=&gt; <i><a href="/color/">color name</a></i>, strokewidth=&gt;<i>integer</i>, fill=&gt;<i><a href="/color/">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast},  background=&gt;<i><a href="/color/">color name</a></i></td>
     <td>simulate a Polaroid picture.</td>
   </tr>
 
@@ -976,7 +976,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Rotate</td>
-    <td>degrees=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>degrees=&gt;<i>double</i>, background=&gt;<i><a href="/color/">color name</a></i></td>
     <td>rotate an image</td>
   </tr>
 
@@ -1053,7 +1053,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Shear</td>
-    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>double</i>, y=&gt;<i>double</i> fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>geometry=&gt;<i>geometry</i>, x=&gt;<i>double</i>, y=&gt;<i>double</i> fill=&gt;<i><a href="/color/">color name</a></i></td>
     <td>shear the image along the X or Y axis by a positive or negative shear angle</td>
   </tr>
 
@@ -1095,7 +1095,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Splice</td>
-    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
+    <td>geometry=&gt;<i>geometry</i>, width=&gt;<i>integer</i>, height=&gt;<i>integer</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, fuzz=&gt;<i>double</i>, background=&gt;<i><a href="/color/">color name</a></i>, gravity=&gt;{NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast}</td>
     <td>splice an image</td>
   </tr>
 
@@ -1154,13 +1154,13 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Tint</td>
-    <td>fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, blend=&gt;<i>string</i></td>
+    <td>fill=&gt;<i><a href="/color/">color name</a></i>, blend=&gt;<i>string</i></td>
     <td>tint the image with the fill color.</td>
   </tr>
 
   <tr>
     <td>Transparent</td>
-    <td>color=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i>, invert=&gt;{True, False}</td>
+    <td>color=&gt;<i><a href="/color/">color name</a></i>, invert=&gt;{True, False}</td>
     <td>make this color transparent within the image</td>
   </tr>
 
@@ -1190,7 +1190,7 @@ fill=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php"
 
   <tr>
     <td>Vignette</td>
-    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, background=&gt;<i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td>geometry=&gt;<i>geometry</i>, radius=&gt;<i>double</i>, sigma=&gt;<i>double</i>, x=&gt;<i>integer</i>, y=&gt;<i>integer</i>, background=&gt;<i><a href="/color/">color name</a></i></td>
     <td>offset the edges of the image in vignette style</td>
   </tr>
 
@@ -1357,7 +1357,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>background</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>image background color</td>
   </tr>
 
@@ -1369,7 +1369,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>bordercolor</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>set the image border color</td>
   </tr>
 
@@ -1381,7 +1381,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>colormap[<i>i</i>]</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>color name (e.g. red) or hex value (e.g. #ccc) at position
 <i>i</i></td>
   </tr>
@@ -1562,7 +1562,7 @@ can use the integers 1 and 0.</p>
 
   <tr>
     <td>mattecolor</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>set the image matte color</td>
   </tr>
 
@@ -1948,7 +1948,7 @@ $width = $image-&gt;[3]-&gt;Get('columns');
 
   <tr>
     <td>transparent-color</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>set the image transparent color</td>
   </tr>
 
@@ -2076,7 +2076,7 @@ $difference->Display();
 <tbody>
   <tr>
     <td>background</td>
-    <td><i><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></i></td>
+    <td><i><a href="/color/">color name</a></i></td>
     <td>background color name</td>
   </tr>
 
@@ -2094,7 +2094,7 @@ $difference->Display();
 
   <tr>
     <td>fill</td>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></td>
+    <td><a href="/color/">color name</a></td>
     <td>fill color for annotations</td>
   </tr>
 
@@ -2150,7 +2150,7 @@ South, SouthEast</td>
 
   <tr>
     <td>stroke</td>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color.php">color name</a></td>
+    <td><a href="/color/">color name</a></td>
     <td>stroke color for annotations</td>
   </tr>
 
