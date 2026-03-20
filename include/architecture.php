@@ -82,7 +82,7 @@ if (image == (Image *) NULL)
 
 <p>In our discussion of the pixel cache, we use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore API</a> to illustrate our points, however, the principles are the same for other program interfaces to ImageMagick.</p>
 
-<p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <?php option("version"); ?> option: </p>
+<p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <a href="/command-line-options/#version">-version</a> option: </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ identify -version
 Version: ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion ?> <?php echo MagickReleaseDate ?> Q16-HDRI https://imagemagick.org</samp></pre>
@@ -165,7 +165,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <h2><a class="anchor" id="virtual-pixels"></a>Virtual Pixels</h2>
 
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
- <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <?php option("virtual-pixel"); ?> option from the command line.  The methods include:</p>
+ <p>Access to the virtual pixels are controlled by the <a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <a href="/command-line-options/#virtual-pixel">-virtual-pixel</a> option from the command line.  The methods include:</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">

@@ -848,7 +848,7 @@ a total elapsed time of 2.300 seconds.</p>
 
 <p class="magick-description">Add bias when convolving an image.</p>
 
-<p>This option shifts the output of <?php option("convolve"); ?>  so that
+<p>This option shifts the output of <a href="#convolve">-convolve</a> so that
 positive and negative results are relative to the specified bias value. </p>
 
 <p>This is important for non-HDRI compilations of ImageMagick when dealing
@@ -857,7 +857,7 @@ especially the case with convolutions involving high pass filters or edge
 detection. Without an output bias, the negative values are clipped at
 zero.</p>
 
-<p>When using an ImageMagick with the HDRI compile-time setting, <?php option("bias"); ?> is not needed, as ImageMagick is able to store/handle any
+<p>When using an ImageMagick with the HDRI compile-time setting, <a href="#bias">-bias</a>is not needed, as ImageMagick is able to store/handle any
 negative results without clipping to the color value range
 (0..QuantumRange).</p>
 
@@ -909,7 +909,7 @@ spatial-sigma.</p>
 
 <p> The threshold value can be given as a percentage or as an absolute integer
 value within [0, <var>QuantumRange</var>] corresponding to the
-desired <?php option("channel"); ?> value. See <?php option("threshold"); ?>
+desired <a href="#channel">channel</a> value. See <a href="#threshold">-threshold</a>
  for more details on thresholds and resulting values.  </p>
 
 
@@ -2025,8 +2025,8 @@ starting with the top row. Presently, only odd-dimensioned kernels are
 supported, and therefore the number of entries in the specified <var>kernel</var> must be 3<sup>2</sup>=9, 5<sup>2</sup>=25,
 7<sup>2</sup>=49, etc. </p>
 
-<p>Note that the <?php option("convolve"); ?> operator supports the <?php
-option("bias"); ?> setting. This option shifts the convolution so that
+<p>Note that the <a href="#convolve">-convolve</a> operator supports the
+<a href="/command-line-options/#bias">-bias</a> setting. This option shifts the convolution so that
 positive and negative results are relative to a user-specified bias value.
 This is important for non-HDRI compilations of ImageMagick when dealing with
 convolutions that contain negative as well as positive values. This is
@@ -2034,8 +2034,8 @@ especially the case with convolutions involving high pass filters or edge
 detection. Without an output bias, the negative values is clipped at zero.
 </p>
 
-<p>When using an ImageMagick with the HDRI compile-time setting, <?php
-option("bias"); ?> is not needed, as ImageMagick is able to store/handle any
+<p>When using an ImageMagick with the HDRI compile-time setting, <a href="#bias">-bias</a>
+is not needed, as ImageMagick is able to store/handle any
 negative results without clipping to the color value range (0..QuantumRange).
 See the discussion on HDRI implementations of ImageMagick on the page <a
 href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High
@@ -5204,7 +5204,7 @@ Resource limits:
 
 <p>Requests for pixel storage to keep intermediate images are satisfied by one
 of three resource categories: in-memory pool, memory-mapped files pool, and
-disk pool (in that order) depending on the <?php option("limit");?> settings
+disk pool (in that order) depending on the <a href="#limit">-limit</a> settings
 and whether the system honors a resource request. If the total size of
 allocated pixel storage in the given pool reaches the corresponding limit, the
 request is passed to the next pool. Additionally, requests that exceed the
@@ -7337,8 +7337,8 @@ and any partially transparent pixel becomes fully transparent.</p>
 
 <p class="magick-description">Apply simultaneous black/white threshold to the image.</p>
 
-<p>Any pixel values (more specifically, those channels set using <?php
-option("channel"); ?>) that exceed the specified threshold are reassigned the
+<p>Any pixel values (more specifically, those channels set using <a href="#channel">-channel</a>
+ that exceed the specified threshold are reassigned the
 maximum channel value, while all other values are assigned the minimum.</p>
 
 <p> The threshold value can be given as a percentage or as an absolute integer
@@ -7367,7 +7367,7 @@ input image.</p>
 convert in.png -channel RGB -threshold -1 white.png
 </samp></pre>
 
-<p> See also <?php option("black-threshold"); ?> and <?php option("white-threshold"); ?>.
+<p> See also <a href="#black-threshold">-black-threshold</a> and <a href="#white-threshold">-white-threshold</a>.
 </p>
 
 <div style="margin: auto;">
@@ -7860,7 +7860,7 @@ href="#stretch">-stretch</a>, and <a href="#style">-style</a>. </p>
 
 <p> The threshold value can be given as a percentage or as an absolute integer
 value within [0, <var>QuantumRange</var>] corresponding to the
-desired <?php option("channel"); ?> value. See <?php option("threshold"); ?>
+desired <a href="#channel">-channel</a> value. See <a href="#threshold">-threshold</a>
 for more details on thresholds and resulting values.  </p>
 
 <div style="margin: auto;">
