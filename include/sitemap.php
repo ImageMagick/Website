@@ -60,7 +60,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <li><a href="/import/">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
     <li><a href="/mogrify/">magick mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="/montage/">magick montage</a>: create a composite image by combining several separate images.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
+    <li><a href="/stream/">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
   </ul></li>
   <li><a href="/command-line-processing/">Command line processing</a>: the anatomy of the command line.</li>
   <li><a href="/command-line-options/">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
