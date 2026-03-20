@@ -71,7 +71,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2><a class="anchor" id="program-interfaces"></a>Program Interfaces</h2>
 
 <dl >
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Program interfaces</a>: application programming interfaces.
+  <li><a href="/develop/">Program interfaces</a>: application programming interfaces.
   <ul >
     <li><a href="http://common-lisp.net/project/cl-magick/">CL-Magick</a>: provides a Common Lisp interface to the ImageMagick library.</li>
     <li><a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a>: Use Magick.NET to convert, compose, and edit images from Windows .NET.</li>

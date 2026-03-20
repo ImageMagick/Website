@@ -1,5 +1,4 @@
 <?php
-  $title='Develop';
-  $topic='Develop';
-  include('session.php');
+  header("Location: /develop/", true, 301);
+  exit();
 ?>

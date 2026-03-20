@@ -92,7 +92,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
           <a class="nav-link <?php IsActive($topic,'CLI'); ?>" href="/command-line-processing/">CLI</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php IsActive($topic,'Develop'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Develop</a>
+          <a class="nav-link <?php IsActive($topic,'Develop'); ?>" href="/develop/">Develop</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" rel="noopener noreferrer" target="_blank" href="https://github.com/ImageMagick/ImageMagick/discussions">Community</a>

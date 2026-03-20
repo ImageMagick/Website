@@ -64,7 +64,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   \( +clone -flop \) +repage -insert "%[fx:round(rand())]" -background black \
   -flatten -brightness-contrast 20,20 -normalize dragonFire.png</samp></pre>
 <p>To ensure the script can run under Windows, change any backslash-parens (\() to just parens, the backslash (\) to <samp>^</samp>, and double-up the percent (%) signs.</p>
-<p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">program interfaces</a>.</p>
+<p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="/develop/">program interfaces</a>.</p>
 
 <p>See <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a> for additional help when using ImageMagick from the command-line.</p>
 

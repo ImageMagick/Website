@@ -107,7 +107,7 @@ export LD_LIBRARY_PATH</samp></pre>
 identify logo.gif
 display logo.gif</samp></pre>
 
-<p>Congratulations, you have a working ImageMagick distribution under Linux or Linux and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Linux or Linux and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2><a class="anchor" id="macos"></a>macOS Binary Release</h2>
 
@@ -171,7 +171,7 @@ display logo.gif</samp></pre>
 
 <p>The best way to deal with all the exports is to put them at the end of your .profile file</p>
 
-<p>Congratulations, you have a working ImageMagick distribution under macOS and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under macOS and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2><a class="anchor" id="iOS"></a>iOS Binary Release</h2>
 
@@ -478,6 +478,6 @@ objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</sam
 
 <p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 </div>
