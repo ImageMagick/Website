@@ -9,7 +9,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p class="lead">You can install ImageMagick from <a href="/install-source/">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.</p>
 
-<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> around the world.</p>
+<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="/mirror/">mirrors</a> around the world.</p>
 
 <p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
