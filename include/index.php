@@ -34,7 +34,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>non-linear, edge-preserving, and noise-reducing smoothing filter.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-management.php">Color management</a></td>
+    <td><a href="/color-management/">Color management</a></td>
     <td>accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</td>
   </tr>
   <tr>

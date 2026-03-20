@@ -1,4 +1,4 @@
 <?php
-  $title='Color Management';
-  include('session.php');
+  header("Location: /color-management/", true, 301);
+  exit();
 ?>
