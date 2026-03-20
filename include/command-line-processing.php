@@ -80,7 +80,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <li>zero or one output image filenames (required by
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>,
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">convert</a>,
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">composite</a>,
+<a href="/composite/">composite</a>,
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>,
 <a href="/compare/">compare</a>,
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a>,

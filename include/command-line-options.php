@@ -4290,8 +4290,7 @@ coordinate (60,70). (<?php seeGeometry();?>)</p>
   -negate output.png
 </samp></pre>
 
-<p>When used as an option to <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/composite.php">composite</a>, <a
+<p>When used as an option to <a href="/composite/">composite</a>, <a
 href="#gravity">-gravity</a> gives the direction that the image gravitates
 within the composite.</p>
 

@@ -50,7 +50,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>bidirectional text support and shaping.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">Composite</a></td>
+    <td><a href="/composite/">Composite</a></td>
     <td>overlap one image over another.</td>
   </tr>
   <tr>
