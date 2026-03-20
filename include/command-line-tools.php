@@ -17,7 +17,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 </dl>
 <p>We also support sub-commands for compatibility with ImageMagick <a href="http://legacy.imagemagick.org">version 6</a>:</p>
 <dl class="row">
-  <dt class="col-md-4"><a href="<?php echo $_SESSION['RelativePath']?>/../script/animate.php">magick animate</a></dt><dd class="col-md-8">animate an image sequence on any X server.</dd>
+  <dt class="col-md-4"><a href="/animate/">magick animate</a></dt><dd class="col-md-8">animate an image sequence on any X server.</dd>
   <dt class="col-md-4"><a class="anchor" id="compare"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">magick compare</a></dt><dd class="col-md-8">mathematically and visually annotate the difference between an image and its reconstruction.</dd>
   <dt class="col-md-4"><a class="anchor" id="composite"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">magick composite</a></dt><dd class="col-md-8">overlap one image over another.</dd>
   <dt class="col-md-4"><a class="anchor" id="conjure"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">magick conjure</a></dt><dd class="col-md-8">interpret and execute scripts written in the Magick Scripting Language (MSL).</dd>

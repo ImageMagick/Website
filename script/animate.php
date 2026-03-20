@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Animate';
-  include('session.php');
+  header("Location: /animate/", true, 301);
+  exit();
 ?>
