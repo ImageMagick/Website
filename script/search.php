@@ -1,5 +1,4 @@
 <?php
-  $title='Search';
-  $dynamic_content=true;
-  include('session.php');
+  header("Location: /search/", true, 301);
+  exit();
 ?>
