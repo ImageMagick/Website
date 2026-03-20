@@ -1,4 +1,4 @@
 <?php
-  $title='Advanced Linux Source Installation';
-  include('session.php');
+  header("Location: /advanced-linux-installation/", true, 301);
+  exit();
 ?>

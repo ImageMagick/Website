@@ -61,7 +61,7 @@ make</samp></pre>
 
 <p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="<?php echo $_SESSION['RelativePath']?>/../script/develop.php">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <samp>/../usr/local</samp> folder?  You will find the answer to these questions, and more, in <a href="<?php echo $_SESSION['RelativePath']?>/../script/advanced-linux-installation.php">Advanced Linux Source Installation</a>.</p>
+<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <samp>/../usr/local</samp> folder?  You will find the answer to these questions, and more, in <a href="/advanced-linux-installation/">Advanced Linux Source Installation</a>.</p>
 
 <h2><a class="anchor" id="windows"></a>Install from Windows Source</h2>
 <p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your <samp>magick</samp> commands go to the old version.<p>
