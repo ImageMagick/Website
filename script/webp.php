@@ -1,4 +1,4 @@
 <?php
-  $title='WebP Encoding Options';
-  include('session.php');
+  header("Location: /webp/", true, 301);
+  exit();
 ?>

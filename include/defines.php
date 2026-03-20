@@ -1757,7 +1757,7 @@ use:</p>
 
   <tr>
     <td>webp:<var>tag</var>=<var>value</var></td>
-    <td>WebP has a plethora of defines detailed on this <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">page</a>.</td>
+    <td>WebP has a plethora of defines detailed on this <a href="/webp/">page</a>.</td>
   </tr>
 
   <tr>
