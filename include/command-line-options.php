@@ -6936,7 +6936,7 @@ effects) of a true threshold, but with tapered gray-levels around the threshold
 </div>
 
 <p class="magick-description">Operate silently. This option is only used
-by the <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a> tool.</p>
+by the <a href="/import/">import</a> tool.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="similarity-threshold"></a>-similarity-threshold <var>value</var></h2>

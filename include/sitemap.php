@@ -57,7 +57,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <li><a href="/conjure/">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
     <li><a href="/display/">magick display</a>: displays an image or image sequence on any X server.</li>
     <li><a href="/identify/">magick identify</a>: describes the format and characteristics of one or more image files.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
+    <li><a href="/import/">magick import</a>: saves any visible window on an X server and outputs it as an image file.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a>: resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">magick montage</a>: create a composite image by combining several separate images.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>

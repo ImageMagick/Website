@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Import';
-  include('session.php');
+  header("Location: /import/", true, 301);
+  exit();
 ?>
