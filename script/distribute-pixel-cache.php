@@ -1,4 +1,4 @@
 <?php
-  $title='Distributed Pixel Cache';
-  include('session.php');
+  header("Location: /distribute-pixel-cache/", true, 301);
+  exit();
 ?>

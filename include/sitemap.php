@@ -165,7 +165,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>implements the forward and inverse <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/distribute-pixel-cache.php">Distributed pixel cache</a></td>
+    <td><a href="/distribute-pixel-cache/">Distributed pixel cache</a></td>
     <td>offload intermediate pixel storage to one or more remote servers.</td>
   </tr>
   <tr>
