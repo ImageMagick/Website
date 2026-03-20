@@ -186,7 +186,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="/architecture/#distributed">Heterogeneous distributed processing</a></td>
-    <td>certain algorithms are <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
+    <td>certain algorithms are <a href="/opencl/">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
   </tr>
   <tr>
     <td><a href="/high-dynamic-range/">High dynamic-range images</a></td>

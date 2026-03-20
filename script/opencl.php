@@ -1,4 +1,4 @@
 <?php
-  $title='Parallel Execution with OpenCL';
-  include('session.php');
+  header("Location: /opencl/", true, 301);
+  exit();
 ?>
