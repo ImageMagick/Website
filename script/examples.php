@@ -1,4 +1,4 @@
 <?php
-  $title='Examples of ImageMagick Usage';
-  include('session.php');
+  header("Location: /examples/", true, 301);
+  exit();
 ?>

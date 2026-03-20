@@ -13,7 +13,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <dl >
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/index.php">Introduction</a>: convert, edit, or compose images from the command-line or program interface.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
+  <li><a href="/examples/">Examples of ImageMagick usage</a>: a few examples that show what you can do with an image using ImageMagick.</li>
   <li><a href="https://usage.imagemagick.org/">Anthony Thyssen's examples of ImageMagick usage</a>:  a comprehensive tutorial of using ImageMagick from the command line.</li>
   <li><a href="/color/">Color names</a>: how to specify a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA color.</li>
   <li><a href="/color-management/">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>

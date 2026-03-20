@@ -22,7 +22,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>Overall, ImageMagick is a powerful and versatile software suite for displaying, converting, and editing image files. Its support for scripting and automation, along with its other features, make it a valuable tool for a wide range of image-related tasks.</p>
 
-<p>Here are just a few <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of what ImageMagick can do for you:</p>
+<p>Here are just a few <a href="/examples/">examples</a> of what ImageMagick can do for you:</p>
 <div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
   <tr>

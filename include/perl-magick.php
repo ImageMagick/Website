@@ -12,7 +12,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>There are a number of useful scripts available to show you the value of PerlMagick. You can do Web based image manipulation and conversion with <a href="https://imagemagick.org/archive/perl">MagickStudio</a>, or use <a href="https://github.com/ImageMagick/ImageMagick/tree/main/PerlMagick/demo/tree.pl">L-systems</a> to create images of plants using mathematical constructs, and finally navigate through collections of thumbnail images and select the image to view with the <a href="http://webmagick.sourceforge.net/">WebMagick Image Navigator</a>.</p>
 
-<p>You can try PerlMagick from your Web browser at the <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick functions.</p>
+<p>You can try PerlMagick from your Web browser at the <a href="https://imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">ImageMagick Studio</a>. Or, you can see <a href="/examples/">examples</a> of select PerlMagick functions.</p>
 
 <h2><a class="anchor" id="installation"></a>Installation</h2>
 
@@ -305,7 +305,7 @@ close(IMAGE);
 
 <h2><a class="anchor" id="manipulate"></a>Manipulate an Image</h2>
 
-<p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="<?php echo $_SESSION['RelativePath']?>/../script/examples.php">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
+<p>Once you create an image with, for example, method ReadImage() you may want to operate on it. Below is a list of all the image manipulations methods available to you with PerlMagick.  There are <a href="/examples/">examples</a> of select PerlMagick methods. Here is an example call to an image manipulation method:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$image-&gt;Crop(geometry=&gt;'100x100+10+20');
 $image-&gt;[$x]-&gt;Frame("100x200");
