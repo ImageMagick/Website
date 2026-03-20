@@ -60,7 +60,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/version.php">Get the Version and Copyrights</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/mime.php">Mime Methods</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/deprecate.php">Deprecated Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">Error and Warning Codes</a></li>
+  <li><a href="/exception/">Error and Warning Codes</a></li>
 </ul>
 
 <p>After you write your MagickCore program, compile it like this:</p>

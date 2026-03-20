@@ -17,7 +17,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/mogrify.php">Command-line Interface</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/wand-view.php">Wand View Methods</a></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/magick-deprecate.php">Deprecated Methods</a></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">Error and Warning Codes</a></li>
+  <li><a href="/exception/">Error and Warning Codes</a></li>
 </ul>
 
 <p>After you write your MagickWand program, compile it like this:</p>

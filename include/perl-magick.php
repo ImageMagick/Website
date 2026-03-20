@@ -2507,7 +2507,7 @@ print $1;               # print the error number
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Error 400: Memory allocation failed
 </samp></pre>
 
-<p>Review the complete list of <a href="<?php echo $_SESSION['RelativePath']?>/../script/exception.php">error and warning codes</a>.</p>
+<p>Review the complete list of <a href="/exception/">error and warning codes</a>.</p>
 
 <p>The following illustrates how you can use a numeric status code:</p>
 

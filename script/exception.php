@@ -1,4 +1,4 @@
 <?php
-  $title='Exceptions';
-  include('session.php');
+  header("Location: /exception/", true, 301);
+  exit();
 ?>
