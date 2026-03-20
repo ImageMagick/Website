@@ -1,3 +1,4 @@
 <?php
-  header("Location: https://github.com/ImageMagick/Website/blob/main/ChangeLog.md");
+  header("Location: /changelog/", true, 301);
+  exit();
 ?>
