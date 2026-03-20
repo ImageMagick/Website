@@ -1554,7 +1554,7 @@ duplicate or unused colors removed.  The ordering of an existing color
 palette may be altered. When converting an image from color to grayscale,
 it is more efficient to convert the image to the gray colorspace before
 reducing the number of colors. Refer to
-the <a href="<?php echo $_SESSION['RelativePath']?>/../script/quantize.php">
+the <a href="/quantize/">
 color reduction algorithm</a> for more details.</p>
 
 <div style="margin: auto;">
@@ -4448,7 +4448,7 @@ handle negative offsets.</p>
 
 <p>If <a href="#colors">-colors</a> is also specified, the total unique colors
 in the image and color reduction error values are printed. Refer to <a
-href="<?php echo $_SESSION['RelativePath']?>/../script/quantize.php">color
+href="/quantize/">color
 reduction algorithm</a> for a description of these values.</p>
 
 <p>If <a href="#verbose">-verbose</a> precedes this option, copious
@@ -7529,7 +7529,7 @@ the use of an optimal tree depth for the color reduction algorithm.</p>
 image with the fastest computational speed and the least amount of memory.
 However, the default depth is inappropriate for some images. To assure the
 best representation, try values between 2 and 8 for this parameter.  Refer to
-the <a href="<?php echo $_SESSION['RelativePath'] ?>/../script/quantize.php"
+the <a href="/quantize/"
 >color reduction algorithm</a> for more details.</p>
 
 <p>The <a href="#colors">-colors</a> or <a href="#monochrome">-monochrome</a>

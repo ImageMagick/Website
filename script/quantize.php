@@ -1,4 +1,4 @@
 <?php
-  $title='Color Reduction Utilizing Adaptive Spatial Subdivision';
-  include('session.php');
+  header("Location: /quantize/", true, 301);
+  exit();
 ?>
