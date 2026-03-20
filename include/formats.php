@@ -1559,7 +1559,7 @@ the supported image formats.</p>
     <td>VID</td>
     <td>RW</td>
     <td>Visual Image Directory</td>
-    <td>Used to create a thumbnailed directory (tiled thumbnails) of a set of images which may be used to select images to view via the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program, or saved to a <a href="#MIFF">MIFF</a> or <a href="#SHTML">SHTML</a> file.</td>
+    <td>Used to create a thumbnailed directory (tiled thumbnails) of a set of images which may be used to select images to view via the <a href="/display/">display</a> program, or saved to a <a href="#MIFF">MIFF</a> or <a href="#SHTML">SHTML</a> file.</td>
   </tr>
 
   <tr>
@@ -1573,7 +1573,7 @@ the supported image formats.</p>
     <td>X</td>
     <td>RW</td>
     <td>Select image from or display image to your X server screen</td>
-    <td>Also see the <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a>
+    <td>Also see the <a href="/import/">import</a> and <a href="/display/">display</a>
     programs.</td>
   </tr>
 

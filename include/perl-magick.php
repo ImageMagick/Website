@@ -2449,7 +2449,7 @@ $weight = ($image-&gt;QueryFont('Helvetica'))[5];
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$mime = $image-&gt;MagickToMime('tif');
 </samp></pre>
 
-<p>Use RemoteCommand() to send a command to an already running <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> or <a href="/animate/">animate</a> application. The only parameter is the name of the image file to display or animate.</p>
+<p>Use RemoteCommand() to send a command to an already running <a href="/display/">display</a> or <a href="/animate/">animate</a> application. The only parameter is the name of the image file to display or animate.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$image-&gt;RemoteCommand('image.jpg');
 </samp></pre>

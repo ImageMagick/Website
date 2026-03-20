@@ -143,12 +143,12 @@ so we explicitly set one:
 
 <h4>STDIN, STDOUT, and file descriptors</h4>
 <p>Linux and Windows permit the output of one command to be piped to the input of another. ImageMagick permits image data to be read and written from the <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> STDIN (<var>standard in</var>) and STDOUT (<var>standard out</var>), respectively, using a pseudo-filename of <samp>-</samp>.  In this example we pipe the output of
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
+<a href="/magick/">magick</a> to the <a href="/display/">display</a> program:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
 
-<p>The second explicit format "<samp>gif:</samp>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a>
+<p>The second explicit format "<samp>gif:</samp>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <a href="/display/">display</a>
  command can readily recognize the format as GIF.  The <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> program also accepts STDIN as input in this way:
 </p>
 
@@ -764,7 +764,7 @@ above.</p>
 
 
 <h4>Standard Out</h4>
-  <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">display</a> program:
+  <p>Linux permits the output of one command to be piped to another.  ImageMagick permits piping one command to another with a filename of <samp>-</samp>.  In this example we pipe the output of <a href="/magick/">magick</a> to the <a href="/display/">display</a> program:
   </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>

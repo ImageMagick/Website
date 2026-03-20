@@ -6391,8 +6391,7 @@ in the same manner as in <a href="#crop">-crop</a>.</p>
 
 <p>The only command recognized is the name of an image file to load.</p>
 
-<p>If you have more than one <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/display.php">display</a> application
+<p>If you have more than one <a href="/display/">display</a> application
 running simultaneously, use the <a href="#window"> window</a> option to
 specify which application to control.</p>
 
