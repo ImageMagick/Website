@@ -1,4 +1,4 @@
 <?php
-  $title='Contrast Limited Adaptive Histogram Equalization';
-  include('session.php');
+  header("Location: /clahe/", true, 301);
+  exit();
 ?>

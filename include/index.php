@@ -102,7 +102,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/clahe.php">Histogram equalization</a></td>
+    <td><a href="/clahe/">Histogram equalization</a></td>
     <td>use adaptive histogram equalization to improve contrast in images.</td>
   </tr>
   <tr>
