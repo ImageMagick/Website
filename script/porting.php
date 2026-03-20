@@ -1,4 +1,4 @@
 <?php
-  $title='Porting to ImageMagick Version 7';
-  include('session.php');
+  header("Location: /porting/", true, 301);
+  exit();
 ?>

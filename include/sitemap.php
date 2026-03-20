@@ -24,7 +24,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="/license/">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
   <li><a href="/export/">Export classification</a>: export control status of ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/privacy-policy.php">Privacy policy</a>: we do not collect personal identifier information.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/porting.php">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
+  <li><a href="/porting/">ImageMagick version 7</a>: learn how ImageMagick version 7 differs from previous versions.</li>
   <li><a href="/history/">History</a>: how ImageMagick was conceived and developed.</li>
 </dl>
 
