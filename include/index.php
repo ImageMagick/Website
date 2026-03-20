@@ -163,7 +163,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="/architecture/#threads">Threads of execution support</a></td>
-    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
+    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="/openmp/">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/resize/">Transform</a></td>

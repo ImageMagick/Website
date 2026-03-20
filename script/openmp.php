@@ -1,4 +1,4 @@
 <?php
-  $title='Parallel Execution with OpenMP';
-  include('session.php');
+  header("Location: /openmp/", true, 301);
+  exit();
 ?>

@@ -18,7 +18,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <li><a href="/color/">Color names</a>: how to specify a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA color.</li>
   <li><a href="/color-management/">Color management</a>: accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a>: ImageMagick depends on external resources including configuration files, loadable modules, fonts, and environment variables.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
+  <li><a href="/openmp/">Parallel execution</a>: ImageMagick is threaded to take advantage of speed-ups offered by the multicore processor chips.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security policy</a>: best practices strongly encourage you to configure a security policy that suits your local environment.</li>
   <li><a href="/architecture/">Architecture</a>: get to know more about the software and algorithms behind ImageMagick.</li>
   <li><a href="/license/">License</a>: the legally binding and authoritative terms and conditions for use, reproduction, and distribution of ImageMagick.</li>
@@ -254,7 +254,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="/architecture/#threads">Threads of execution support</a></td>
-    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
+    <td>ImageMagick is thread safe and most internal algorithms execute in <a href="/openmp/">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/resize/">Transform</a></td>
