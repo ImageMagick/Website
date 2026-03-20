@@ -1,4 +1,4 @@
 <?php
-  $title='Notice';
-  include('session.php');
+  header("Location: /notice/", true, 301);
+  exit();
 ?>
