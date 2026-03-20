@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Identify';
-  include('session.php');
+  header("Location: /identify/", true, 301);
+  exit();
 ?>

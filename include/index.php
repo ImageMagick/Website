@@ -118,7 +118,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">Image identification</a></td>
+    <td><a href="/identify/">Image identification</a></td>
     <td>describe the format and attributes of an image.</td>
   </tr>
   <tr>
