@@ -110,7 +110,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>secure methods and tools to cache images, image sequences, video, audio or metadata in a local folder..</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
+    <td><a href="/fx/">Image calculator</a></td>
     <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
   <tr>

@@ -1,4 +1,4 @@
 <?php
-  $title='The FX Special Effects Image Operator';
-  include('session.php');
+  header("Location: /fx/", true, 301);
+  exit();
 ?>

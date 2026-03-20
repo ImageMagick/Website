@@ -667,13 +667,12 @@ used for image processing use. </p>
 <p>There are some special prefixes (before the first ':') which performs
 calculations based on the user provided string that follows that prefix.  For
 example you can do a numerical calculation use <samp>%[fx:...]</samp> to
-evaluate the given <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/fx.php">FX</a> expressions:</p>
+evaluate the given <a href="/fx/">FX</a> expressions:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>%[fx:<var>expression</var>] </samp></pre>
 
 <p>Use <samp>pixel:</samp> or <samp>hex:</samp> to evaluate a pixel color as defined by the <a
-href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX</a>
+href="/fx/">FX</a>
 expression:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>%[pixel:<var>expression</var>] </samp></pre>

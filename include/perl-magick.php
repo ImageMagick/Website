@@ -2345,7 +2345,7 @@ $p-&gt;Write('fx.miff');
 
 <p>replaces the red channel with the average of the green and blue channels.</p>
 
-<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX, The Special Effects Image Operator</a> for a detailed discussion of this method.</p>
+<p>See <a href="/fx/">FX, The Special Effects Image Operator</a> for a detailed discussion of this method.</p>
 
 <p>Histogram() returns the unique colors in the image and a count for each one. The returned values are an array of red, green, blue, opacity, and count values.</p>
 

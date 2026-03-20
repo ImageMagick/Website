@@ -4163,7 +4163,7 @@ appending <samp>%</samp> as a percentage of the maximum possible intensity (255,
 the expression is read from a file titled by the remaining characters in the
 string.</p>
 
-<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">FX,
+<p>See <a href="/fx/">FX,
 The Special Effects Image Operator</a> for a detailed discussion of this
 option.</p>
 

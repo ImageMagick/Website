@@ -19,7 +19,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>We now provide <a href="/download/#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
 
-<p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="/script/fx.php">Fx</a> special-effects image operator interpreter.  It has vastly improved error checking and performance.</p>
+<p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="/fx/">Fx</a> special-effects image operator interpreter.  It has vastly improved error checking and performance.</p>
 
 <p><a href="https://github.com/fmw42">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamless and saliency blending</a> composite operators.</p>
 

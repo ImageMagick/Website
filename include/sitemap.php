@@ -64,7 +64,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </ul></li>
   <li><a href="/command-line-processing/">Command line processing</a>: the anatomy of the command line.</li>
   <li><a href="/command-line-options/">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
+  <li><a href="/fx/">Fx</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="http://www.fmwconcepts.com/imagemagick/" rel="noopener noreferrer" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations.</li>
 </dl>
 
@@ -201,7 +201,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>secure methods and tools to cache images, image sequences, video, audio or metadata in a local folder..</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Image calculator</a></td>
+    <td><a href="/fx/">Image calculator</a></td>
     <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
   <tr>
