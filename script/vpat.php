@@ -1,4 +1,4 @@
 <?php
-  $title='Voluntary Product Accessibility Template';
-  include('session.php');
+  header("Location: /vpat/", true, 301);
+  exit();
 ?>
