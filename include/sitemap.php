@@ -197,7 +197,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>use adaptive histogram equalization to improve contrast in images.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-cache.php">Image cache</a></td>
+    <td><a href="/magick-cache/">Image cache</a></td>
     <td>secure methods and tools to cache images, image sequences, video, audio or metadata in a local folder..</td>
   </tr>
   <tr>
