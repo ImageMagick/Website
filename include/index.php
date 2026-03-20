@@ -54,7 +54,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>overlap one image over another.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">Connected component labeling</a></td>
+    <td><a href="/connected-components/">Connected component labeling</a></td>
     <td>uniquely label connected regions in an image.</td>
   </tr>
   <tr>

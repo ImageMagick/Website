@@ -1958,7 +1958,7 @@ the chroma channels.</p>
   <h2><a class="anchor" id="connected-components"></a>-connected-components <var>connectivity</var></h2>
 </div>
 
-<p class="magick-description"><a href="<?php echo $_SESSION['RelativePath']?>/../script/connected-components.php">connected-components</a> labeling detects connected regions in an image, choose from 4 or 8 way connectivity.</p>
+<p class="magick-description"><a href="/connected-components/">connected-components</a> labeling detects connected regions in an image, choose from 4 or 8 way connectivity.</p>
 
 <p>Use <samp><a href="#define" >-define</a> connected-components:verbose=true</samp> to output statistics associated with each unique label.</p>
 

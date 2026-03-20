@@ -1,4 +1,4 @@
 <?php
-  $title='Connected Components Labeling';
-  include('session.php');
+  header("Location: /connected-components/", true, 301);
+  exit();
 ?>
