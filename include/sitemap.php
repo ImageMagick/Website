@@ -93,7 +93,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <dl >
   <li><a href="/formats/">Supported image formats</a>: annotated list of all image formats that ImageMagick can read and/or write.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
+  <li><a href="/high-dynamic-range/">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">Magick Vector Graphics</a>: a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/miff.php">Magick Image File Format</a>: MIFF is ImageMagick's own platform-independent format for storing bitmap images.</li>
 </dl>
@@ -189,7 +189,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>certain algorithms are <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High dynamic-range images</a></td>
+    <td><a href="/high-dynamic-range/">High dynamic-range images</a></td>
     <td>accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</td>
   </tr>
   <tr>

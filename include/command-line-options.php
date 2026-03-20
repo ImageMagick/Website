@@ -862,8 +862,7 @@ negative results without clipping to the color value range
 (0..QuantumRange).</p>
 
 <p>See the discussion on HDRI implementations of ImageMagick on the page <a
-href="<?php echo $_SESSION['RelativePath']
-?>/../script/high-dynamic-range.php" >High Dynamic-Range Images</a>. For more
+href="/high-dynamic-range/" >High Dynamic-Range Images</a>. For more
 about HDRI go the ImageMagick <a
 href="https://usage.imagemagick.org/basics/#hdri" >Usage</a> pages or this
 <a
@@ -2037,7 +2036,7 @@ detection. Without an output bias, the negative values is clipped at zero.
 is not needed, as ImageMagick is able to store/handle any
 negative results without clipping to the color value range (0..QuantumRange).
 See the discussion on HDRI implementations of ImageMagick on the page <a
-href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High
+href="/high-dynamic-range/">High
 Dynamic-Range Images</a>. For more about HDRI go the ImageMagick <a
 href="https://usage.imagemagick.org/basics/#hdri">Usage</a> pages or this
 <a href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">Wikipedia</a>
@@ -3583,8 +3582,7 @@ padding that was discussed above for the magnitude and phase component
 images.</p>
 
 <p>See the discussion on HDRI implementations of ImageMagick on the page <a
-href="<?php echo $_SESSION['RelativePath']
-?>/../script/high-dynamic-range.php" >High Dynamic-Range Images</a>. For more
+href="/high-dynamic-range/" >High Dynamic-Range Images</a>. For more
 about HDRI go the ImageMagick <a
 href="https://usage.imagemagick.org/basics/#hdri" >Usage</a> pages, <a
 href="http://www.fmwconcepts.com/imagemagick/fourier_transforms/fourier.html"

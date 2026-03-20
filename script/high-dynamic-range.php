@@ -1,4 +1,4 @@
 <?php
-  $title='High Dynamic-Range Images';
-  include('session.php');
+  header("Location: /high-dynamic-range/", true, 301);
+  exit();
 ?>

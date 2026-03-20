@@ -295,7 +295,7 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x64-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -330,14 +330,14 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-arm64-dll.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-arm64-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>ARM64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -372,14 +372,14 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-dll.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-Q16-HDRI-x86-static.exe";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled</td>
+    <td>Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
   </tr>
 
   <tr>
@@ -428,21 +428,21 @@ display logo.gif</samp></pre>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x64.7z";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable Win64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-arm64.7z";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable ARM64 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tr>
   <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . "-portable-Q16-HDRI-x86.7z";
   ?>
     <td><a href= "https://imagemagick.org/archive/binaries/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Portable Win32 static at 16 bits-per-pixel component with <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+    <td>Portable Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
   </tr>
 
   <tbody>

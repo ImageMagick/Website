@@ -52,7 +52,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <h2><a class="anchor" id="cache"></a>The Pixel Cache</h2>
 
-<p>The ImageMagick pixel cache is a repository for image pixels with up to 64 channels.  The channels are stored contiguously at the depth specified when ImageMagick was built.  The channel depths are 8 bits-per-pixel component for the Q8 version of ImageMagick, 16 bits-per-pixel component for the Q16 version, and 32 bits-per-pixel component for the Q32 version.  By default pixel components are 32-bit floating-bit <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">high dynamic-range</a> quantities. The channels can hold any value but typically contain red, green, blue, and alpha intensities or cyan, magenta, yellow, black and alpha intensities.  A channel might contain the colormap indexes for colormapped images or the black channel for CMYK images.  The pixel cache storage may be heap memory, disk-backed memory mapped, or on disk.  The pixel cache is reference-counted.  Only the cache properties are copied when the cache is cloned.  The cache pixels are subsequently copied only when you signal your intention to update any of the pixels.</p>
+<p>The ImageMagick pixel cache is a repository for image pixels with up to 64 channels.  The channels are stored contiguously at the depth specified when ImageMagick was built.  The channel depths are 8 bits-per-pixel component for the Q8 version of ImageMagick, 16 bits-per-pixel component for the Q16 version, and 32 bits-per-pixel component for the Q32 version.  By default pixel components are 32-bit floating-bit <a href="/high-dynamic-range/">high dynamic-range</a> quantities. The channels can hold any value but typically contain red, green, blue, and alpha intensities or cyan, magenta, yellow, black and alpha intensities.  A channel might contain the colormap indexes for colormapped images or the black channel for CMYK images.  The pixel cache storage may be heap memory, disk-backed memory mapped, or on disk.  The pixel cache is reference-counted.  Only the cache properties are copied when the cache is cloned.  The cache pixels are subsequently copied only when you signal your intention to update any of the pixels.</p>
 
 <h2>Create the Pixel Cache</h2>
 
@@ -489,7 +489,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 
 <p>The ImageMagick Q16 version of ImageMagick permits you to read and write 16 bit images without scaling but the pixel cache consumes twice as many resources as the Q8 version.  If your system has constrained memory or disk resources, consider the Q8 version of ImageMagick.  In addition, the Q8 version typically executes faster than the Q16 version.</p>
 
-<p>A great majority of image formats and algorithms restrict themselves to a fixed range of pixel values from 0 to some maximum value, for example, the Q16 version of ImageMagick permit intensities from 0 to 65535.  High dynamic-range imaging (HDRI), however, permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  Enable <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">HDRI</a> at ImageMagick build time to deal with high dynamic-range images, but be mindful that each pixel component is a 32-bit floating point value. In addition, pixel values are not clamped by default so some algorithms may have unexpected results due to out-of-band pixel values than the non-HDRI version.</p>
+<p>A great majority of image formats and algorithms restrict themselves to a fixed range of pixel values from 0 to some maximum value, for example, the Q16 version of ImageMagick permit intensities from 0 to 65535.  High dynamic-range imaging (HDRI), however, permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  Enable <a href="/high-dynamic-range/">HDRI</a> at ImageMagick build time to deal with high dynamic-range images, but be mindful that each pixel component is a 32-bit floating point value. In addition, pixel values are not clamped by default so some algorithms may have unexpected results due to out-of-band pixel values than the non-HDRI version.</p>
 
 <p>If you are dealing with large images, make sure the pixel cache is written to a disk area with plenty of free space.  Under Linux, this is typically <samp>/tmp</samp> and for Windows, <samp>c:/temp</samp>.  You can tell ImageMagick to write the pixel cache to an alternate location and conserve memory with these options:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
@@ -878,13 +878,13 @@ __kernel void Convolve(const __global CLPixelType *source,__constant float *filt
 #include "filter/image-private.h"
 #include "filter/monitor-private.h"
 #include "filter/quantum-private.h"
-
+
 /*
   Forward declarations.
 */
 static MagickBooleanType
   WriteMGKImage(const ImageInfo *,Image *,ExceptionInfo *);
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -919,7 +919,7 @@ static MagickBooleanType IsMGK(const unsigned char *magick,const size_t length)
     return(MagickTrue);
   return(MagickFalse);
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1095,7 +1095,7 @@ static Image *ReadMGKImage(const ImageInfo *image_info,ExceptionInfo *exception)
   (void) CloseBlob(image);
   return(GetFirstImageInList(image));
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1131,7 +1131,7 @@ ModuleExport unsigned long RegisterMGKImage(void)
   (void) RegisterMagickInfo(entry);
   return(MagickImageCoderSignature);
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1155,7 +1155,7 @@ ModuleExport void UnregisterMGKImage(void)
 {
   (void) UnregisterMagickInfo("MGK");
 }
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %
@@ -1304,7 +1304,7 @@ display logo.mgk
 #include &lt;math.h>
 #include "MagickCore/studio.h"
 #include "MagickCore/MagickCore.h"
-
+
 /*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                             %

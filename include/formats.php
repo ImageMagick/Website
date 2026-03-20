@@ -43,8 +43,7 @@ example,</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg </samp></pre>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
-Imagemagick is <a href="<?php echo $_SESSION['RelativePath']
-?>/../script/high-dynamic-range.php">HDRI</a>-enabled.  Essentially the A and
+Imagemagick is <a href="/high-dynamic-range/">HDRI</a>-enabled.  Essentially the A and
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
@@ -369,7 +368,7 @@ the supported image formats.</p>
     <td><a href="http://www.openexr.org">EXR</a></td>
     <td>RW</td>
     <td>High dynamic-range (HDR) file format developed by Industrial Light &amp; Magic</td>
-    <td>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="/command-line-options/#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
+    <td>See <a href="/high-dynamic-range/">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="/command-line-options/#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
   </tr>
 
   <tr>
