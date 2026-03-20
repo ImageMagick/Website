@@ -38,7 +38,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>accurate color management with color profiles or in lieu of-- built-in gamma compression or expansion as demanded by the colorspace.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/color-thresholding.php">Color thresholding</a></td>
+    <td><a href="/color-thresholding/">Color thresholding</a></td>
     <td>force all pixels in the color range to white otherwise black.</td>
   </tr>
   <tr>
