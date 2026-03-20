@@ -142,7 +142,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a></td>
+    <td><a href="/multispectral-imagery/">Multispectral imagery</a></td>
     <td>support multispectral imagery up to 32 bands, 22 of them meta channels.</td>
   </tr>
   <tr>

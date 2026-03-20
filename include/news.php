@@ -15,7 +15,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <samp>--enable-64bit-channel-masks</samp> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
 
-<p>With recent releases of ImageMagick 7, we continue to evolve our support of <a href="<?php echo $_SESSION['RelativePath']?>/../script/multispectral-imagery.php">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
+<p>With recent releases of ImageMagick 7, we continue to evolve our support of <a href="/multispectral-imagery/">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
 <p>We now provide <a href="/download/#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
 
