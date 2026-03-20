@@ -1,4 +1,4 @@
 <?php
-  $title='MagickCore, Low-level C API';
-  include('session.php');
+  header("Location: /magick-core/", true, 301);
+  exit();
 ?>

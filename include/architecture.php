@@ -80,7 +80,7 @@ if (image == (Image *) NULL)
 </samp></pre></dd>
 </dl>
 
-<p>In our discussion of the pixel cache, we use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore API</a> to illustrate our points, however, the principles are the same for other program interfaces to ImageMagick.</p>
+<p>In our discussion of the pixel cache, we use the <a href="/magick-core/">MagickCore API</a> to illustrate our points, however, the principles are the same for other program interfaces to ImageMagick.</p>
 
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <a href="/command-line-options/#version">-version</a> option: </p>
 
@@ -99,7 +99,7 @@ Version: ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion ?> <?
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../api/cache.php#SyncAuthenticPixels">SyncAuthenticPixels()</a>: update the pixel cache with any modified pixels</li>
 </ul>
 
-<p>Here is a typical <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> code snippet for manipulating pixels in the pixel cache.  In our example, we copy pixels from the input image to the output image and decrease the intensity by 10%:</p>
+<p>Here is a typical <a href="/magick-core/">MagickCore</a> code snippet for manipulating pixels in the pixel cache.  In our example, we copy pixels from the input image to the output image and decrease the intensity by 10%:</p>
 
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>const Quantum
   *p;
@@ -736,7 +736,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <p>If you call the ImageMagick API from your OpenMP-enabled application and you intend to dynamically increase the number of threads available in subsequent parallel regions, be sure to perform the increase <var>before</var> you call the API otherwise ImageMagick may fault.</p>
 
-<p><a href="<?php echo $_SESSION['RelativePath']?>/../api/wand-view.php">MagickWand</a> supports wand views.  A view iterates over the entire, or portion, of the image in parallel and for each row of pixels, it invokes a callback method you provide.  This limits most of your parallel programming activity to just that one module.  There are similar methods in <a href="<?php echo $_SESSION['RelativePath']?>/../api/image-view.php">MagickCore</a>.  For an example, see the same sigmoidal contrast algorithm implemented in both <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php#wand-view">MagickWand</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php#image-view">MagickCore</a>.</p>
+<p><a href="<?php echo $_SESSION['RelativePath']?>/../api/wand-view.php">MagickWand</a> supports wand views.  A view iterates over the entire, or portion, of the image in parallel and for each row of pixels, it invokes a callback method you provide.  This limits most of your parallel programming activity to just that one module.  There are similar methods in <a href="<?php echo $_SESSION['RelativePath']?>/../api/image-view.php">MagickCore</a>.  For an example, see the same sigmoidal contrast algorithm implemented in both <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php#wand-view">MagickWand</a> and <a href="/magick-core/#image-view">MagickCore</a>.</p>
 
 <p>In most circumstances, the default number of threads is set to the number of processor cores on your system for optimal performance.  However, if your system is hyperthreaded or if you are running on a virtual host and only a subset of the processors are available to your server instance, you might get an increase in performance by setting the thread <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy</a> or the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable.  For example, your virtual host has 8 processors but only 2 are assigned to your server instance.  The default of 8 threads can cause severe performance problems.  One solution is to limit the number of threads to the available processors in your <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a> configuration file:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>&lt;policy domain="resource" name="thread" value="2"/>

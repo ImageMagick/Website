@@ -34,7 +34,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 <dl class="row">
   <dt class="col-md-4"><a class="anchor" id="c"></a>C</dt>
 
-<dd class="col-md-8">Use the thread-safe <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> library to convert, compose, and edit images from the C language.  There is also the low-level thread-safe <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> library for wizard-level developers.  The <a href="/api/MagickCache/index.html">MagickCache API</a> is a development library to utilize an efficient <a href="https://github.com/ImageMagick/MagickCache#readme">image cache</a>.</dd>
+<dd class="col-md-8">Use the thread-safe <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> library to convert, compose, and edit images from the C language.  There is also the low-level thread-safe <a href="/magick-core/">MagickCore</a> library for wizard-level developers.  The <a href="/api/MagickCache/index.html">MagickCache API</a> is a development library to utilize an efficient <a href="https://github.com/ImageMagick/MagickCache#readme">image cache</a>.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 
@@ -128,7 +128,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="ruby"></a>Ruby</dt>
 
-<dd class="col-md-8"><a href="https://rmagick.github.io/">RMagick</a> is an interface between the Ruby programming language and the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-core.php">MagickCore</a> image processing libraries.  Get started with RMagick by perusing the <a href="https://rmagick.github.io/">documentation</a>.</dd>
+<dd class="col-md-8"><a href="https://rmagick.github.io/">RMagick</a> is an interface between the Ruby programming language and the <a href="/magick-core/">MagickCore</a> image processing libraries.  Get started with RMagick by perusing the <a href="https://rmagick.github.io/">documentation</a>.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 
 <dd class="col-md-8"><a href="http://magickwand.rubyforge.org/">MagickWand for Ruby</a> is an interface between the Ruby programming language and the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-wand.php">MagickWand</a> image processing libraries.  Get started with MagickWand for PHP by perusing the <a href="http://magickwand.rubyforge.org/">documentation</a>.</dd>
