@@ -296,7 +296,7 @@ Resource limits:
   Time: unlimited
 </samp></pre>
 
-<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a>), with an <a href="/resources/#environment">environment variable</a>, with the <a href="/command-line-options/#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="/security-policy/">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a>), with an <a href="/resources/#environment">environment variable</a>, with the <a href="/command-line-options/#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>

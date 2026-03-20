@@ -167,7 +167,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </main><!-- /.container -->
   <footer class="text-center pt-5 my-5 text-body-secondary border-top">
     <div class="container-fluid">
-      <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">Security</a> •
+      <a href="/security-policy/">Security</a> •
       <a href="/news/">News</a>
     &nbsp;
       <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"></a>

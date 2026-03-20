@@ -11,7 +11,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="/mirror/">mirrors</a> around the world.</p>
 
-<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
+<p>It is strongly recommended to establish a <a href="/security-policy/">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
 <h2><a class="anchor" id="linux"></a>Linux Binary Release</h2>
 
@@ -30,7 +30,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
   <tr>
     <td><a href= "https://imagemagick.org/archive/binaries/magick">magick</a></td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
   </tr>
 
   <tr>
@@ -476,7 +476,7 @@ magick identify logo.gif</samp></pre>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Set objShell = wscript.createobject("wscript.shell")
 objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</samp></pre>
 
-<p>It is strongly recommended to establish a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
+<p>It is strongly recommended to establish a <a href="/security-policy/">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 
 <p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
