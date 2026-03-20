@@ -1416,7 +1416,7 @@ the supported image formats.</p>
     <td>GRADIENT</td>
     <td>R</td>
     <td>Gradual passing from one shade to another</td>
-    <td>Returns a rendered linear or radial top-to-bottom <a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">gradient image</a> using the specified image size.</td>
+    <td>Returns a rendered linear or radial top-to-bottom <a href="/gradient/">gradient image</a> using the specified image size.</td>
 
   </tr>
 
@@ -1516,7 +1516,7 @@ the supported image formats.</p>
     <td>RADIAL_GRADIENT</td>
     <td>R</td>
     <td>Gradual radial passing from one shade to another</td>
-    <td>Returns a rendered radial top-to-bottom <a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">gradient image</a> using the specified image size.</td>
+    <td>Returns a rendered radial top-to-bottom <a href="/gradient/">gradient image</a> using the specified image size.</td>
   </tr>
 
   <tr>

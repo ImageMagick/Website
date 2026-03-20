@@ -1,4 +1,4 @@
 <?php
-  $title='Image Gradients';
-  include('session.php');
+  header("Location: /gradient/", true, 301);
+  exit();
 ?>

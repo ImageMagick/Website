@@ -205,7 +205,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>apply a mathematical expression to an image, image sequence, or image channels.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/gradient.php">Image gradients</a></td>
+    <td><a href="/gradient/">Image gradients</a></td>
     <td>create a gradual blend of two colors whose shape is horizontal, vertical, circular, or elliptical.</td>
   </tr>
   <tr>
