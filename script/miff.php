@@ -1,4 +1,4 @@
 <?php
-  $title='Magick Image File Format';
-  include('session.php');
+  header("Location: /miff/", true, 301);
+  exit();
 ?>
