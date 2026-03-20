@@ -62,7 +62,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">magick montage</a>: create a composite image by combining several separate images.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
   </ul></li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command line processing</a>: the anatomy of the command line.</li>
+  <li><a href="/command-line-processing/">Command line processing</a>: the anatomy of the command line.</li>
   <li><a href="/command-line-options/">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="http://www.fmwconcepts.com/imagemagick/" rel="noopener noreferrer" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations.</li>
@@ -133,7 +133,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>force all pixels in the color range to white otherwise black.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a></td>
+    <td><a href="/command-line-processing/">Command-line processing</a></td>
     <td>utilize ImageMagick from the command-line.</td>
   </tr>
   <tr>

@@ -5,7 +5,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 }
 ?>
 <div>
-<p class="lead">Due to the standardization of sRGB on the Internet, most image formats use SRGB as the default working color space.  If the color space of an image is unknown and it is an 8- to 16-bit image format, assuming it is in the sRGB color space is a safe choice.  This extends to grayscale as well.  We assume non-linear grayscale. These assumptions are overridden if a particular image format includes color space and / or gamma metadata.  ImageMagick assumes linear color if the color space is RGB instead of sRGB.  You can also override the default color space assumptions with color profiles or the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> option.</p>
+<p class="lead">Due to the standardization of sRGB on the Internet, most image formats use SRGB as the default working color space.  If the color space of an image is unknown and it is an 8- to 16-bit image format, assuming it is in the sRGB color space is a safe choice.  This extends to grayscale as well.  We assume non-linear grayscale. These assumptions are overridden if a particular image format includes color space and / or gamma metadata.  ImageMagick assumes linear color if the color space is RGB instead of sRGB.  You can also override the default color space assumptions with color profiles or the <a href="/command-line-processing/#set">-set</a> option.</p>
 
 <p>ImageMagick supports color profiles, however, for images without a profile or a declaration of colorspace, ImageMagick assumes non-linear sRGB.  Most image processing algorithms assume a linear colorspace, therefore it might be prudent to convert to linear color or remove the gamma function before certain image processing algorithms are applied. For example,</p>
 
@@ -20,8 +20,8 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>Afterwards, the verbose information for the output file lists the colorspace as RGB. This only works on image types containing meta data that distinguishes between linear RGB and non-linear sRGB, such as PNG and GIF. Therefore, if the above command is run with a JPG or TIF output format, the verbose information for the colorspace still shows sRGB. In order to properly have the JPG output know that it is linear RGB, include an appropriate color profile.</p>
 
 
-<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#set">-set</a> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#intensity">-intensity</a
-> or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php#grayscale">-grayscale</a> options:</p>
+<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="/command-line-processing/#set">-set</a> or <a href="/command-line-processing/#intensity">-intensity</a
+> or <a href="/command-line-processing/#grayscale">-grayscale</a> options:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>
 convert myimage.png -colorspace LinearGray myRGBimage.png

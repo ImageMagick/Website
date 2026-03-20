@@ -2,9 +2,7 @@
 
 function geometryUrl()
 {
-	$href = $_SESSION['RelativePath'];
-	return (sprintf("<a href=\"%s/../script/command-line-processing.php#geometry\">Image Geometry</a>",
-	$href));
+	return "<a href=\"/command-line-processing/#geometry\">Image Geometry</a>";
 }
 
 function seeGeometry()

@@ -42,7 +42,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>force all pixels in the color range to white otherwise black.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command-line processing</a></td>
+    <td><a href="/command-line-processing/">Command-line processing</a></td>
     <td>utilize ImageMagick from the command-line.</td>
   </tr>
   <tr>
@@ -180,7 +180,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 </table>
 </div>
 <p>&nbsp;</p>
-<p><a href="https://usage.imagemagick.org" rel="noopener noreferrer" target="_blank">Examples of ImageMagick Usage</a> demonstrates how to use the software from the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">command line</a> to achieve various effects. There are also several scripts available on the <a href="http://www.fmwconcepts.com/imagemagick/" rel="noopener noreferrer" target="_blank">Fred's ImageMagick Scripts</a> and <a href="https://im.snibgo.com/" rel="noopener noreferrer" target="_blank">Snibgo's ImageMagick Scripts</a> websites, which can be used to apply geometric transforms, blur and sharpen images, remove noise, and perform other operations. Additionally, there is a tool called <a href="https://github.com/dlemstra/Magick.NET" rel="noopener noreferrer" target="_blank">Magick.NET</a> that allows users to access the functionality of ImageMagick without having to install the software on their own systems. Finally, the website also includes a <a href="http://im.snibgo.com/" rel="noopener noreferrer" target="_blank">Cookbook</a> with tips and examples for using ImageMagick on Windows systems.</p>
+<p><a href="https://usage.imagemagick.org" rel="noopener noreferrer" target="_blank">Examples of ImageMagick Usage</a> demonstrates how to use the software from the <a href="/command-line-processing/">command line</a> to achieve various effects. There are also several scripts available on the <a href="http://www.fmwconcepts.com/imagemagick/" rel="noopener noreferrer" target="_blank">Fred's ImageMagick Scripts</a> and <a href="https://im.snibgo.com/" rel="noopener noreferrer" target="_blank">Snibgo's ImageMagick Scripts</a> websites, which can be used to apply geometric transforms, blur and sharpen images, remove noise, and perform other operations. Additionally, there is a tool called <a href="https://github.com/dlemstra/Magick.NET" rel="noopener noreferrer" target="_blank">Magick.NET</a> that allows users to access the functionality of ImageMagick without having to install the software on their own systems. Finally, the website also includes a <a href="http://im.snibgo.com/" rel="noopener noreferrer" target="_blank">Cookbook</a> with tips and examples for using ImageMagick on Windows systems.</p>
 
 <h3><a class="anchor" id="community"></a>Community</h3>
 <p>Join the ImageMagick community by participating in the <a href="https://github.com/ImageMagick/ImageMagick/discussions" rel="noopener noreferrer" target="_blank">discussion</a> service. Here, you can find answers to questions asked by other ImageMagick users or ask your own questions. If you have a technical question, a suggestion for an improvement, or a fix for a bug, you can also open an <a href="https://github.com/ImageMagick/ImageMagick/issues" rel="noopener noreferrer" target="_blank">issue</a> to get help from the community.</p>
