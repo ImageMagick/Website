@@ -97,7 +97,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="perl"></a>Perl</dt>
 
-<dd class="col-md-8">Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">PerlMagick</a> to convert, compose, and edit images from the Perl language.</dd>
+<dd class="col-md-8">Use <a href="/perl-magick/">PerlMagick</a> to convert, compose, and edit images from the Perl language.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="php"></a>PHP</dt>
 

@@ -9,7 +9,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <a class="anchor" id="intro"></a>
 <p class="lead"><a href="/api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
-<p>Magick++ supports an object model which is inspired by <a href="/script/perl-magick.php">PerlMagick</a>.
+<p>Magick++ supports an object model which is inspired by <a href="/perl-magick/">PerlMagick</a>.
 Images support implicit reference counting so that copy constructors
 and assignment incur almost no cost. The cost of actually copying an
 image (if necessary) is done just before modification and this copy

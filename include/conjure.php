@@ -76,7 +76,7 @@ msl:font-metrics.origin.x
 msl:font-metrics.origin.y
 </samp></pre>
 
-<p>MSL supports most methods and attributes discussed in the <a href="<?php echo $_SESSION['RelativePath']?>/../script/perl-magick.php">Perl API for ImageMagick</a>.
+<p>MSL supports most methods and attributes discussed in the <a href="/perl-magick/">Perl API for ImageMagick</a>.
 </p>
 
 <p>In addition, MSL supports the <samp>swap</samp> element with a single <samp>indexes</samp> element.</p>
