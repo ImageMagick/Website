@@ -1869,8 +1869,7 @@ subtract
 
 <p class="magick-description">Set the type of image composition.</p>
 
-<p>See <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/compose.php">Alpha Compositing</a> for
+<p>See <a href="/compose/">Alpha Compositing</a> for
 a detailed discussion of alpha compositing.</p>
 
 <p>This setting affects image processing operators that merge two (or more)
@@ -3060,8 +3059,7 @@ filename:</p>
 
 <p>You can use 0,0 for the image size, which means to use the actual
 dimensions found in the image header. Otherwise, it is scaled to the given
-dimensions. See <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/compose.php">Alpha Compositing</a> for
+dimensions. See <a href="/compose/">Alpha Compositing</a> for
 a detailed discussion of alpha composition methods that are available. </p>
 
 <p>The "special augmented compose operators" such as "dissolve" that require
