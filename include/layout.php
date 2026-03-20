@@ -172,7 +172,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     &nbsp;
       <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"></a>
     &nbsp;
-      <a href="<?php echo $_SESSION['RelativePath']?>/../script/links.php">Related</a> •
+      <a href="/links/">Related</a> •
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/sitemap.php">Sitemap</a>
    <br>
       <a href="/support/">Sponsor</a> •

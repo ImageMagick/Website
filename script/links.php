@@ -1,4 +1,4 @@
 <?php
-  $title='Related Web Sites';
-  include('session.php');
+  header("Location: /links/", true, 301);
+  exit();
 ?>
