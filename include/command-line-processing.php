@@ -84,7 +84,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>,
 <a href="/compare/">compare</a>,
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/import.php">import</a>,
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">conjure</a>).
+<a href="/conjure/">conjure</a>).
 </li>
 </ul>
 

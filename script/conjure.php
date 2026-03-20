@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Conjure';
-  include('session.php');
+  header("Location: /conjure/", true, 301);
+  exit();
 ?>
