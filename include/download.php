@@ -7,7 +7,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <div>
 <p class="text-center"><a href="#linux">Linux Binary Release</a> • <a href="#macos">macOS Binary Release</a> • <a href="#iOS">iOS Binary Release</a> • <a href="#windows">Windows Binary Release</a></p>
 
-<p class="lead">You can install ImageMagick from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.</p>
+<p class="lead">You can install ImageMagick from <a href="/install-source/">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">changes</a> to the ImageMagick distribution.</p>
 
 <p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="<?php echo $_SESSION['RelativePath']?>/../script/mirror.php">mirrors</a> around the world.</p>
 
@@ -15,7 +15,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <h2><a class="anchor" id="linux"></a>Linux Binary Release</h2>
 
-<p>These are the Linux variations that we support.  If your system is not on the list, try installing from <a href="<?php echo $_SESSION['RelativePath']?>/../script/install-source.php">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
+<p>These are the Linux variations that we support.  If your system is not on the list, try installing from <a href="/install-source/">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">

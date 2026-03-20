@@ -1,5 +1,4 @@
 <?php
-  $title='Install from Source';
-  $description='Install ImageMagick from the source distribution.';
-  include('session.php');
+  header("Location: /install-source/", true, 301);
+  exit();
 ?>
