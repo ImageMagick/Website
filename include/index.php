@@ -138,7 +138,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a></td>
+    <td><a href="/motion-picture/">Motion picture support</a></td>
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>

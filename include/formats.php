@@ -295,7 +295,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a></td>
+    <td><a href="/motion-picture/">DPX</a></td>
     <td>RW</td>
     <td>SMPTE Digital Moving Picture Exchange 2.0 (SMPTE 268M-2003)</td>
     <td>Use <a href="/command-line-options/#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).</td>

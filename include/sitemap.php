@@ -92,7 +92,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2><a class="anchor" id="format"></a>Image Formats</h2>
 <dl >
   <li><a href="/formats/">Supported image formats</a>: annotated list of all image formats that ImageMagick can read and/or write.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
+  <li><a href="/motion-picture/">Motion picture digital images</a>: use SMPTE DPX Version 2.0 to process images used by the motion picture (film and high-definition) industry.</li>
   <li><a href="/high-dynamic-range/">High dynamic-range images</a>: accurately represent the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.</li>
   <li><a href="/magick-vector-graphics/">Magick Vector Graphics</a>: a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.</li>
   <li><a href="/miff/">Magick Image File Format</a>: MIFF is ImageMagick's own platform-independent format for storing bitmap images.</li>
@@ -229,7 +229,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>extract features, describe shapes, and recognize patterns in images.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">Motion picture support</a></td>
+    <td><a href="/motion-picture/">Motion picture support</a></td>
     <td>read and write the common image formats used in digital film work.</td>
   </tr>
   <tr>

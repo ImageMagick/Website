@@ -1,4 +1,4 @@
 <?php
-  $title='Motion Picture Digital Images';
-  include('session.php');
+  header("Location: /motion-picture/", true, 301);
+  exit();
 ?>
