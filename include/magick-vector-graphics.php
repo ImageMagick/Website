@@ -366,7 +366,7 @@ underline</samp></pre></td>
   </tr>
   <tr>
     <td><a class="anchor" id="fill"></a>fill <var>color</var></td>
-    <td>Choose from any of these <a href="color.php">colors</a>.</td>
+    <td>Choose from any of these <a href="/color/">colors</a>.</td>
   </tr>
   <tr>
     <td><a class="anchor" id="fill-opacity"></a>fill-opacity <var>opacity</var></td>
