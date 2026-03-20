@@ -245,7 +245,7 @@ frame003.jpg</pre>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">'my title.jpg'</pre>
 
 
-    <p>Some ImageMagick command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> may exceed the capabilities of
+    <p>Some ImageMagick command-line <a href="/command-line-options/">options</a> may exceed the capabilities of
 your command-line processor.  Windows, for example, limits command-lines
 to 8192 characters.  If, for example, you have a draw option with polygon
 points that exceed the command-line length limit, put the draw option instead
@@ -274,7 +274,7 @@ image-5.jpg</pre>
 
 <h2><a class="anchor" id="option"></a>Command-line Options</h2>
 
-<p>You can direct the behavior of ImageMagick utilities with these command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a>.  The behavior of an option falls into one of these categories:</p>
+<p>You can direct the behavior of ImageMagick utilities with these command-line <a href="/command-line-options/">options</a>.  The behavior of an option falls into one of these categories:</p>
 
 <ul>
 <li><a href="#setting">Image Setting</a></li>
@@ -306,7 +306,7 @@ is reset or the command-line terminates.  The image settings include:</p>
 
 <p>An image operator differs from a setting in that it affects the image
 immediately as it appears on the command-line.  An operator is
-any command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">option</a> not listed as a
+any command-line <a href="/command-line-options/">option</a> not listed as a
 <a href="#setting">image setting</a> or
 <a href="#sequence">image sequence operator</a>.  Unlike an
 image setting, which persists until the command-line terminates,
@@ -351,7 +351,7 @@ these image sequence operators:</p>
 
 <h4><a class="anchor" id="geometry"></a>Image Geometry</h4>
 
-<p>Many command-line <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">options</a> take a <var>geometry</var> argument
+<p>Many command-line <a href="/command-line-options/">options</a> take a <var>geometry</var> argument
 to specify such things as the desired width and height of an image and other
 dimensional quantities. Because users want so many variations on the resulting
 dimensions, sizes, and positions of images (and because ImageMagick wants to
@@ -541,7 +541,7 @@ above.</p>
 
 <p>Each of these extensions are explained in the next few paragraphs.</p>
 
-<p>Instead of an output filename, you use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#exit">-exit</a> to completely prevent any image write.</p>
+<p>Instead of an output filename, you use <a href="/command-line-options/#exit">-exit</a> to completely prevent any image write.</p>
 
 <h4>Explicit Image Format</h4>
   <p>Images can be stored in a myriad of image formats including the better known JPEG, PNG, TIFF and others.  ImageMagick must know the desired format of the image before it is written.  ImageMagick leverages the filename extension to determine the format.  For example, <samp>image.jpg</samp> tells ImageMagick to write the image in the JPEG format.  In some cases the filename does not identify the image format.  In these cases, the image is written in the format it was originally read unless an explicit image format is specified.  For example, suppose we want to write our image to a filename of <samp>image</samp> in the raw red, green, and blue intensity format:

@@ -202,7 +202,7 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
   <tr>
     <td>MAGICK_FILTER_MODULE_PATH</td>
-    <td>Set search path to use when searching for filter process modules (invoked via  <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
+    <td>Set search path to use when searching for filter process modules (invoked via  <a href="/command-line-options/#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
   </tr>
   <tr>
     <td>MAGICK_CODER_MODULE_PATH</td>
@@ -218,7 +218,7 @@ $MAGICK_FONT_PATH</samp></pre>
   </tr>
   <tr>
     <td>MAGICK_DEBUG</td>
-    <td>Set debug options.  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug</a> for a description of debugging options.</td>
+    <td>Set debug options.  See <a href="/command-line-options/#debug">-debug</a> for a description of debugging options.</td>
   </tr>
   <tr>
     <td><a class="anchor" id="disk-limit"></a>MAGICK_DISK_LIMIT</td>

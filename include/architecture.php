@@ -296,7 +296,7 @@ Resource limits:
   Time: unlimited
 </samp></pre>
 
-<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">security policy</a> (see <a href="<?php echo $_SESSION['RelativePath']?>/../source/policy-open.xml">policy.xml</a>), with an <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">environment variable</a>, with the <a href="/command-line-options/#limit">-limit</a> command line option, or with the <a href="<?php echo $_SESSION['RelativePath']?>/../api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>
@@ -408,7 +408,7 @@ Resource limits:
 
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
-<p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug cache</a> option to the command-line:</p>
+<p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="/command-line-options/#debug">-debug cache</a> option to the command-line:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -debug cache logo: -sharpen 3x2 null:
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy
@@ -767,7 +767,7 @@ Performance[11]: 10i 4.348ips 0.793e 16.500u 0:02.300
 Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
 </samp></pre>
 <p>The sweet spot for this example is 6 threads. This makes sense since there are 6 physical cores.  The other 6 are hyperthreads. It appears that sharpening does not benefit from hyperthreading.</p>
-<p>In certain cases, it might be optimal to set the number of threads to 1 or to disable OpenMP completely with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit</a> command line option,  or the  <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy.xml</a> configuration file.</p>
+<p>In certain cases, it might be optimal to set the number of threads to 1 or to disable OpenMP completely with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#environment">MAGICK_THREAD_LIMIT</a> environment variable, <a href="/command-line-options/#limit">-limit</a> command line option,  or the  <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php#configure">policy.xml</a> configuration file.</p>
 
 <h2><a class="anchor" id="dynamic-throttle"></a>Enable Dynamic Throttling for Optimized Performance</h2>
 
@@ -1293,7 +1293,7 @@ display logo.mgk
 
 <h2><a class="anchor" id="filters"></a>Custom Image Filters</h2>
 
-<p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
+<p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="/command-line-options/#process">-process</a> option or from the MagickCore API method <a href="<?php echo $_SESSION['RelativePath']?>/../api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
 
 <p>Here is a listing of a sample <a href="<?php echo $_SESSION['RelativePath']?>/../source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>#include &lt;stdio.h>

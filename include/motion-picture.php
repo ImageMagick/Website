@@ -108,7 +108,7 @@ dpx:user.data
 
 <h2><a class="anchor" id="settings"></a>DPX Settings</h2>
 
-<p>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
+<p>Use <a href="/command-line-options/#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>-set gamma 1.7

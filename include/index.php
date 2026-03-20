@@ -30,7 +30,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-blur">Bilateral blur</a></td>
+    <td><a href="/command-line-options/#bilateral-blur">Bilateral blur</a></td>
     <td>non-linear, edge-preserving, and noise-reducing smoothing filter.</td>
   </tr>
   <tr>
@@ -67,7 +67,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/transform/#vision">Delineate image features</a></td>
-    <td><a href="http://usage.imagemagick.org/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
+    <td><a href="http://usage.imagemagick.org/transform/#canny">Canny edge detection</a>, <a href="/command-line-options/#hough-line">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/fourier/">Discrete Fourier transform</a></td>

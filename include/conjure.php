@@ -95,47 +95,47 @@ msl:font-metrics.origin.y
 
 <tbody>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug <var>events</var></a></td>
+    <td><a href="/command-line-options/#debug">-debug <var>events</var></a></td>
     <td>display copious debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#help">-help</a></td>
+    <td><a href="/command-line-options/#help">-help</a></td>
     <td>print program options</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#log">-log <var>format</var></a></td>
+    <td><a href="/command-line-options/#log">-log <var>format</var></a></td>
     <td>format of debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#monitor">-monitor</a></td>
+    <td><a href="/command-line-options/#monitor">-monitor</a></td>
     <td>monitor progress</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quiet">-quiet</a></td>
+    <td><a href="/command-line-options/#quiet">-quiet</a></td>
     <td>suppress all warning messages</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
+    <td><a href="/command-line-options/#regard-warnings">-regard-warnings</a></td>
     <td>pay attention to warning messages.</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#seed">-seed <var>value</var></a></td>
+    <td><a href="/command-line-options/#seed">-seed <var>value</var></a></td>
     <td>seed a new sequence of pseudo-random numbers</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a></td>
+    <td><a href="/command-line-options/#verbose">-verbose</a></td>
     <td>print detailed information about the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#version">-version</a></td>
+    <td><a href="/command-line-options/#version">-version</a></td>
     <td>print version information</td>
   </tr>
 

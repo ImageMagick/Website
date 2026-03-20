@@ -9,9 +9,8 @@ function option($opt, $sign="-")
 {
 	$odisp = str_replace(array("-", "[", "]"), array("-", "[", "]"), $opt);
 	$oref = str_replace(array("[", "]"), "_", $opt);
-	$href = $_SESSION['RelativePath'];
-	printf("<a class=\"text-nowrap\" href=\"%s/../script/command-line-options.php#%s\">%s%s</a>",
-	$href, $oref,$sign,$odisp);
+	printf("<a class=\"text-nowrap\" href=\"/command-line-options/#%s\">%s%s</a>",
+	$oref,$sign,$odisp);
 }
 
 function options()

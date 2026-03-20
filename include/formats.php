@@ -130,14 +130,14 @@ the supported image formats.</p>
     <td>BAYER</td>
     <td>RW</td>
     <td>Raw mosaiced samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>.</td>
   </tr>
 
   <tr>
     <td><a href="http://bellard.org/bpg/">BPG</a></td>
     <td>RW</td>
     <td>Better Portable Graphics</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> to specify the image compression quality.  To meet the requirements of BPG, the quality argument divided by 2 (e.g. -quality 92 assigns 46 as the BPG compression.</td>
+    <td>Use <a href="/command-line-options/#quality">-quality</a> to specify the image compression quality.  To meet the requirements of BPG, the quality argument divided by 2 (e.g. -quality 92 assigns 46 as the BPG compression.</td>
   </tr>
 
   <tr>
@@ -165,7 +165,7 @@ the supported image formats.</p>
     <td><a href="http://www.cineon.com/ff_draft.php">CIN</a></td>
     <td>RW</td>
     <td>Kodak Cineon Image Format</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).  Properties include cin:file.create_date, cin:file.create_time, cin:file.filename, cin:file.version, cin:film.count, cin:film.format, cin:film.frame_id, cin:film.frame_position, cin:film.frame_rate, cin:film.id, cin:film.offset, cin:film.prefix, cin:film.slate_info, cin:film.type, cin:image.label, cin:origination.create_date, cin:origination.create_time, cin:origination.device, cin:origination.filename, cin:origination.model, cin:origination.serial, cin:origination.x_offset, cin:origination.x_pitch, cin:origination.y_offset, cin:origination.y_pitch, cin:user.data.</td>
+    <td>Use <a href="/command-line-options/#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).  Properties include cin:file.create_date, cin:file.create_time, cin:file.filename, cin:file.version, cin:film.count, cin:film.format, cin:film.frame_id, cin:film.frame_position, cin:film.frame_rate, cin:film.id, cin:film.offset, cin:film.prefix, cin:film.slate_info, cin:film.type, cin:image.label, cin:origination.create_date, cin:origination.create_time, cin:origination.device, cin:origination.filename, cin:origination.model, cin:origination.serial, cin:origination.x_offset, cin:origination.x_pitch, cin:origination.y_offset, cin:origination.y_pitch, cin:user.data.</td>
   </tr>
 
   <tr>
@@ -179,14 +179,14 @@ the supported image formats.</p>
     <td>CMYK</td>
     <td>RW</td>
     <td>Raw cyan, magenta, yellow, and black samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
     <td>CMYKA</td>
     <td>RW</td>
     <td>Raw cyan, magenta, yellow, black, and alpha samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -228,7 +228,7 @@ the supported image formats.</p>
     <td>DCM</td>
     <td>R</td>
     <td>Digital Imaging and Communications in Medicine (DICOM) image</td>
-    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:rescale=true</a> to enable interpretation of the rescale slope and intercept settings in the file. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define dcm:window=centerXwidth</a> to override the center and width settings in the file with your own values.</td>
+    <td>Used by the medical community for images like X-rays.  ImageMagick sets the initial display range based on the Window Center (0028,1050) and Window Width (0028,1051) tags. Use <a href="/command-line-options/#define">-define dcm:display-range=reset</a> to set the display range to the minimum and maximum pixel values. Use <a href="/command-line-options/#define">-define dcm:rescale=true</a> to enable interpretation of the rescale slope and intercept settings in the file. Use <a href="/command-line-options/#define">-define dcm:window=centerXwidth</a> to override the center and width settings in the file with your own values.</td>
   </tr>
 
   <tr>
@@ -249,7 +249,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/DirectDraw_Surface">DDS</a></td>
     <td>RW</td>
     <td>Microsoft Direct Draw Surface</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the compression (e.g. <samp>-define dds:compression={dxt1, dxt5, none}</samp>). Other defines include <samp>dds:cluster-fit={true,false}</samp>, <samp>dds:weight-by-alpha={true,false}</samp>, <samp>dds:fast-mipmaps={true,false}</samp>, and use <samp>dds:mipmaps</samp> to set the number of mipmaps (use <samp>fromlist</samp> to use the image list).</td>
+    <td>Use <a href="/command-line-options/#define">-define</a> to specify the compression (e.g. <samp>-define dds:compression={dxt1, dxt5, none}</samp>). Other defines include <samp>dds:cluster-fit={true,false}</samp>, <samp>dds:weight-by-alpha={true,false}</samp>, <samp>dds:fast-mipmaps={true,false}</samp>, and use <samp>dds:mipmaps</samp> to set the number of mipmaps (use <samp>fromlist</samp> to use the image list).</td>
 
   </tr>
 
@@ -292,21 +292,21 @@ the supported image formats.</p>
     <td><a href="http://www.graphviz.org">DOT</a></td>
     <td>R</td>
     <td>Graph Visualization</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the layout engine (e.g. <samp>-define dot:layout-engine=twopi</samp>).</td>
+    <td>Use <a href="/command-line-options/#define">-define</a> to specify the layout engine (e.g. <samp>-define dot:layout-engine=twopi</samp>).</td>
   </tr>
 
   <tr>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/motion-picture.php">DPX</a></td>
     <td>RW</td>
     <td>SMPTE Digital Moving Picture Exchange 2.0 (SMPTE 268M-2003)</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).</td>
+    <td>Use <a href="/command-line-options/#set">-set</a> to specify the image gamma or black and white points (e.g. <samp>-set gamma 1.7</samp>, <samp>-set reference-black 95</samp>, <samp>-set reference-white 685</samp>).</td>
   </tr>
 
   <tr>
     <td>EMF</td>
     <td>R</td>
     <td>Microsoft Enhanced Metafile (32-bit)</td>
-    <td>Only available under Microsoft Windows.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height.</td>
+    <td>Only available under Microsoft Windows.  Use <a href="/command-line-options/#size">-size</a> command line option to specify the maximum width and height.</td>
   </tr>
 
   <tr>
@@ -369,7 +369,7 @@ the supported image formats.</p>
     <td><a href="http://www.openexr.org">EXR</a></td>
     <td>RW</td>
     <td>High dynamic-range (HDR) file format developed by Industrial Light &amp; Magic</td>
-    <td>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
+    <td>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">High Dynamic-Range Images</a> for details on this image format. To specify the output color type, use <samp>-define exr:color-type={RGB,RGBA,YC,YCA,Y,YA,R,G,B,A}</samp>. Use <a href="/command-line-options/#sampling-factor">-sampling-factor</a> to specify the sampling rate for YC(A) (e.g. <samp>2x2 or 4:2:0</samp>). Requires the <a href="http://www.openexr.org/">OpenEXR</a> delegate library.</td>
   </tr>
 
   <tr>
@@ -411,7 +411,7 @@ the supported image formats.</p>
     <td>FPX</td>
     <td>RW</td>
     <td>FlashPix Format</td>
-    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://github.com/ImageMagick/libfpx">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define fpx:view</a>.</td>
+    <td>FlashPix has the option to store mega- and giga-pixel images at various resolutions in a single file which permits conservative bandwidth and fast reveal times when displayed within a Web browser.  Requires the <a href="https://github.com/ImageMagick/libfpx">FlashPix SDK</a>. Specify the FlashPix viewing parameters with the <a href="/command-line-options/#define">-define fpx:view</a>.</td>
   </tr>
 
   <tr>
@@ -425,7 +425,7 @@ the supported image formats.</p>
     <td><a href="http://www.fileformat.info/format/gif/egff.htm">GIF</a></td>
     <td>RW</td>
     <td>CompuServe Graphics Interchange Format</td>
-    <td>8-bit RGB PseudoColor with up to 256 palette entries. Specify the format <samp>GIF87</samp> to write the older version 87a of the format.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#transparent-color">-transparent-color</a> to specify the GIF transparent color (e.g. <samp>-transparent-color wheat</samp>).</td>
+    <td>8-bit RGB PseudoColor with up to 256 palette entries. Specify the format <samp>GIF87</samp> to write the older version 87a of the format.  Use <a href="/command-line-options/#transparent-color">-transparent-color</a> to specify the GIF transparent color (e.g. <samp>-transparent-color wheat</samp>).</td>
   </tr>
 
   <tr>
@@ -439,21 +439,21 @@ the supported image formats.</p>
     <td>GRAY</td>
     <td>RW</td>
     <td>Raw gray samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <samp>magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</samp>.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <samp>-define quantum:format=signed</samp>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <samp>magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</samp>.</td>
   </tr>
 
   <tr>
     <td>GRAYA</td>
     <td>RW</td>
     <td>Raw gray and alpha samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
     <td>GROUP4</td>
     <td>RW</td>
     <td>Raw CCITT Group 4 samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the image width and height.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> to specify the image width and height.</td>
   </tr>
 
   <tr>
@@ -544,42 +544,42 @@ the supported image formats.</p>
     <td><a href="http://www.openjpeg.org/">JP2</a></td>
     <td>RW</td>
     <td>JPEG-2000 JP2 File Format Syntax</td>
-    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">JPT</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2C</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2K</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.jpeg.org/">JPEG</a></td>
     <td>RW</td>
     <td>Joint Photographic Experts Group JFIF format</td>
-    <td>Note, JPEG is a lossy compression.  In addition, you cannot create black and white images with JPEG nor can you save transparency.<br /><br /> Requires <a href="http://www.ijg.org/files/">jpegsrc.v8c.tar.gz</a>.  You can set quality scaling for luminance and chrominance separately (e.g. <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> 90,70). You can optionally define the DCT method, for example to specify the float method, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:dct-method=float</a>. By default we compute optimal Huffman coding tables.  Specify <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:optimize-coding=false</a> to use the default Huffman tables. Specify <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:arithmetic-coding=true</a> to enable Huffman optimization. Two other options include <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:block-smoothing</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:fancy-upsampling</a>. y default, ImageMagick generates JPEG images at 8‑bit depth. When <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:high-bit-depth</a> is enabled, it will produce 12‑bit or 16‑bit images if the source image depth exceeds 8 bits. Set the sampling factor with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:sampling-factor</a>. You can size the image with <samp>jpeg:size</samp>, for example <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:size=128x128</a>. To restrict the maximum file size, use <samp>jpeg:extent</samp>, for example <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:extent=400KB</a>.  To define one or more custom quantization tables, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define jpeg:q-table=<i>filename</i></a>. These values are multiplied by <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality</a> argument divided by 100.0. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
+    <td>Note, JPEG is a lossy compression.  In addition, you cannot create black and white images with JPEG nor can you save transparency.<br /><br /> Requires <a href="http://www.ijg.org/files/">jpegsrc.v8c.tar.gz</a>.  You can set quality scaling for luminance and chrominance separately (e.g. <a href="/command-line-options/#quality">-quality</a> 90,70). You can optionally define the DCT method, for example to specify the float method, use <a href="/command-line-options/#define">-define jpeg:dct-method=float</a>. By default we compute optimal Huffman coding tables.  Specify <a href="/command-line-options/#define">-define jpeg:optimize-coding=false</a> to use the default Huffman tables. Specify <a href="/command-line-options/#define">-define jpeg:arithmetic-coding=true</a> to enable Huffman optimization. Two other options include <a href="/command-line-options/#define">-define jpeg:block-smoothing</a> and <a href="/command-line-options/#define">-define jpeg:fancy-upsampling</a>. y default, ImageMagick generates JPEG images at 8‑bit depth. When <a href="/command-line-options/#define">-define jpeg:high-bit-depth</a> is enabled, it will produce 12‑bit or 16‑bit images if the source image depth exceeds 8 bits. Set the sampling factor with <a href="/command-line-options/#define">-define jpeg:sampling-factor</a>. You can size the image with <samp>jpeg:size</samp>, for example <a href="/command-line-options/#define">-define jpeg:size=128x128</a>. To restrict the maximum file size, use <samp>jpeg:extent</samp>, for example <a href="/command-line-options/#define">-define jpeg:extent=400KB</a>.  To define one or more custom quantization tables, use <a href="/command-line-options/#define">-define jpeg:q-table=<i>filename</i></a>. These values are multiplied by <a href="/command-line-options/#quality">-quality</a> argument divided by 100.0. To avoid reading a particular associated image profile, use <a href="/command-line-options/#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
   </tr>
 
   <tr>
     <td><a href="http://www.json.org">JSON</a></td>
     <td>W</td>
     <td>JavaScript Object Notation, a lightweight data-interchange format</td>
-    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define json:version</a>.  The current version is 1.0.  Any version less than 1.0, returns the original JSON output which included misspelled labels.</td>
+    <td>Include additional attributes about the image with these defines: <a href="/command-line-options/#define">-define json:locate</a>, <a href="/command-line-options/#define">-define json:limit</a>, <a href="/command-line-options/#define">-define json:moments</a>, or <a href="/command-line-options/#define">-define json:features</a>.  Specify the JSON model schema version with <a href="/command-line-options/#define">-define json:version</a>.  The current version is 1.0.  Any version less than 1.0, returns the original JSON output which included misspelled labels.</td>
   </tr>
 
   <tr>
@@ -702,7 +702,7 @@ the supported image formats.</p>
     <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">MVG</a></td>
     <td>RW</td>
     <td>Magick Vector Graphics.</td>
-    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#draw">-draw</a> option.</td>
+    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="/command-line-options/#draw">-draw</a> option.</td>
   </tr>
 
   <tr>
@@ -771,7 +771,7 @@ the supported image formats.</p>
     <td>PCD</td>
     <td>RW</td>
     <td>Photo CD</td>
-    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bordercolor">-bordercolor</a> to specify the border color (e.g. <samp>-bordercolor black</samp>).</td>
+    <td>The maximum resolution written is 768x512 pixels since larger images require huffman compression (which is not supported). Use <a href="/command-line-options/#bordercolor">-bordercolor</a> to specify the border color (e.g. <samp>-bordercolor black</samp>).</td>
   </tr>
 
   <tr>
@@ -785,7 +785,7 @@ the supported image formats.</p>
     <td>PCL</td>
     <td>W</td>
     <td>HP Page Control Language</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify fit to page option (e.g. <samp>-define pcl:fit-to-page=true</samp>).</td>
+    <td>Use <a href="/command-line-options/#define">-define</a> to specify fit to page option (e.g. <samp>-define pcl:fit-to-page=true</samp>).</td>
   </tr>
 
   <tr>
@@ -806,7 +806,7 @@ the supported image formats.</p>
     <td>PDF</td>
     <td>RW</td>
     <td>Portable Document Format</td>
-    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <samp>-define pdf:use-cropbox=true</samp> or <samp>-define pdf:use-trimbox=true</samp>).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  To specify direct conversion from  Postscript to PDF, use <samp>-define delegate:bimodel=true</samp>. Use <samp>-define pdf:fit-page=true</samp> to scale to the page size. To immediately stop processing upon an error, set <samp>-define pdf:stop-on-error</samp> to <samp>true</samp>. To set the page direction preferences to right-to-left, try  <samp>-define pdf:page-direction=right-to-left</samp>. By default, the PDF is printed using "screen" for annotations and images.  Use <samp>-define pdf:printed=true</samp> to instead utilize the printer options. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  Generate thumbnails with <samp>-define pdf:thumbnail=true</samp>. To enable interpolation when rendering, use <samp>-define pdf:interpolate=true</samp>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read.  By default, ImageMagick sets the page size to the MediaBox. Some PDF files, however, have a CropBox or TrimBox that is smaller than the MediaBox and may include white space, registration or cutting marks outside the CropBox or TrimBox. To force ImageMagick to use the CropBox or TrimBox rather than the MediaBox, use <a href="/command-line-options/#define">-define</a> (e.g. <samp>-define pdf:use-cropbox=true</samp> or <samp>-define pdf:use-trimbox=true</samp>).  Use <a href="/command-line-options/#density">-density</a> to improve the appearance of your PDF rendering (e.g. -density 300x300).  To specify direct conversion from  Postscript to PDF, use <samp>-define delegate:bimodel=true</samp>. Use <samp>-define pdf:fit-page=true</samp> to scale to the page size. To immediately stop processing upon an error, set <samp>-define pdf:stop-on-error</samp> to <samp>true</samp>. To set the page direction preferences to right-to-left, try  <samp>-define pdf:page-direction=right-to-left</samp>. By default, the PDF is printed using "screen" for annotations and images.  Use <samp>-define pdf:printed=true</samp> to instead utilize the printer options. Use <a href="/command-line-options/#alpha">-alpha remove </a> to remove transparency.  When writing to a PDF, thumbnails are included by default.  Generate thumbnails with <samp>-define pdf:thumbnail=true</samp>. To enable interpolation when rendering, use <samp>-define pdf:interpolate=true</samp>.</td>
   </tr>
 
   <tr>
@@ -883,7 +883,7 @@ the supported image formats.</p>
     <td><a href="http://www.libpng.org/pub/png/">PNG</a></td>
     <td>RW</td>
     <td>Portable Network Graphics</td>
-    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).  Set the maximum chunk size with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define png:chunk-malloc-max=<i>value</i></a>.</td>
+    <td>Requires libpng-1.0.11 or later, <a href="http://www.libpng.org/pub/png/libpng.html">libpng-1.2.5</a> or later recommended. The PNG specification does not support pixels-per-inch units, only pixels-per-centimeter. To avoid reading a particular associated image profile, use <a href="/command-line-options/#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).  Set the maximum chunk size with <a href="/command-line-options/#define">-define png:chunk-malloc-max=<i>value</i></a>.</td>
   </tr>
 
   <tr>
@@ -932,7 +932,7 @@ the supported image formats.</p>
     <td><a href="http://netpbm.sourceforge.net/doc/pnm.html">PNM</a></td>
     <td>RW</td>
     <td>Portable anymap</td>
-    <td>PNM is a family of formats supporting portable bitmaps (PBM) , graymaps (PGM), and pixmaps (PPM). There is no file format associated with pnm itself. If PNM is used as the output format specifier, then ImageMagick automagically selects the most appropriate format to represent the image.  The default is to write the binary version of the formats. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compress">-compress none</a> to write the ASCII version of the formats.</td>
+    <td>PNM is a family of formats supporting portable bitmaps (PBM) , graymaps (PGM), and pixmaps (PPM). There is no file format associated with pnm itself. If PNM is used as the output format specifier, then ImageMagick automagically selects the most appropriate format to represent the image.  The default is to write the binary version of the formats. Use <a href="/command-line-options/#compress">-compress none</a> to write the ASCII version of the formats.</td>
   </tr>
 
   <tr>
@@ -953,7 +953,7 @@ the supported image formats.</p>
     <td>PS</td>
     <td>RW</td>
     <td>Adobe PostScript file</td>
-    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> (e.g. <samp>-define eps:use-cropbox=true</samp>). Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <samp>-define delegate:bimodel=true</samp>.</td>
+    <td>Requires <a href="https://www.ghostscript.com/download.html">Ghostscript</a> to read. To force ImageMagick to respect the crop box, use <a href="/command-line-options/#define">-define</a> (e.g. <samp>-define eps:use-cropbox=true</samp>). Use <a href="/command-line-options/#density">-density</a> to improve the appearance of your Postscript rendering (e.g. -density 300x300).  Use <a href="/command-line-options/#alpha">-alpha remove </a> to remove transparency. To specify direct conversion from PDF to Postscript, use <samp>-define delegate:bimodel=true</samp>.</td>
   </tr>
 
   <tr>
@@ -981,7 +981,7 @@ the supported image formats.</p>
     <td><a href="http://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">PSD</a></td>
     <td>RW</td>
     <td>Adobe Photoshop multispectral bitmap file</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:alpha-unblend=off</a> to disable alpha blending in the merged image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
+    <td>Use <a href="/command-line-options/#define">-define psd:alpha-unblend=off</a> to disable alpha blending in the merged image. Use <a href="/command-line-options/#define">-define psd:additional-info=all|selective</a> to transfer additional information from the input PSD file to output PSD file. The 'selective' option will preserve all additional information that is not related to the geometry of the image. The 'all' option should only be used when the geometry of the image has not been changed. This option is helpful when transferring non-simple layers, such as adjustment layers from the input PSD file to the output PSD file. This define is available as of Imagemagick version 6.9.5-8. Use <a href="/command-line-options/#define">-define psd:preserve-opacity-mask=true</a> to preserve the opacity mask of a layer and add it back to the layer when the image is saved.</td>
   </tr>
 
   <tr>
@@ -1030,21 +1030,21 @@ the supported image formats.</p>
     <td>RGB</td>
     <td>RW</td>
     <td>Raw red, green, and blue samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
     <td>RGB565</td>
     <td>R</td>
     <td>Raw red, green, blue pixels in the 5-6-5 format</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the image width and height.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> to specify the image width and height.</td>
   </tr>
 
   <tr>
     <td>RGBA</td>
     <td>RW</td>
     <td>Raw red, green, blue, and alpha samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -1114,7 +1114,7 @@ the supported image formats.</p>
     <td>SPARSE-COLOR</td>
     <td>W</td>
     <td>Raw text file</td>
-    <td>Format compatible with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sparse-color">-sparse-color</a> option. Lists only non-fully-transparent pixels.</td>
+    <td>Format compatible with the <a href="/command-line-options/#sparse-color">-sparse-color</a> option. Lists only non-fully-transparent pixels.</td>
   </tr>
 
   <tr>
@@ -1135,7 +1135,7 @@ the supported image formats.</p>
     <td><a href="http://www.w3.org/Graphics/SVG">SVG</a></td>
     <td>RW</td>
     <td>Scalable Vector Graphics</td>
-    <td>By default, ImageMagick renders SVGs with <a href="http://www.inkscape.org/">inkscape</a> if it is in your execution path; otherwise <a href="http://developer.gnome.org/rsvg/">RSVG</a>. If neither is available, ImageMagick reverts to its internal SVG renderer (called MSVG). The default resolution is 96 dpi. Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify the maximum width and height. (<samp>-size</samp> is currently ignored by the Inkscape renderer due to a limitation on the Inkscape side). The SVG standard expects to draw over a transparent background.  Set <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#background">-background none</a> to comply with the standard. If you want to substitute entities and you trust the SVG source, enable this option: <samp>-define svg:substitute-entities=true</samp>. If you want to render a very large SVG and you trust the source, enable this option: <samp>-define svg:parse-huge=true</samp>. Enable embedding if your SVG embeds another SVG and you trust the source:  <samp>-define svg:embedding=true</samp>. If RSVG is installed and you want to render an SVG using RSVG, add <samp>rsvg:</samp> just before the file name. If you want to render an SVG using MSVG, add <samp>msvg:</samp> just before the file name.</td>
+    <td>By default, ImageMagick renders SVGs with <a href="http://www.inkscape.org/">inkscape</a> if it is in your execution path; otherwise <a href="http://developer.gnome.org/rsvg/">RSVG</a>. If neither is available, ImageMagick reverts to its internal SVG renderer (called MSVG). The default resolution is 96 dpi. Use the <a href="/command-line-options/#size">-size</a> command line option to specify the maximum width and height. (<samp>-size</samp> is currently ignored by the Inkscape renderer due to a limitation on the Inkscape side). The SVG standard expects to draw over a transparent background.  Set <a href="/command-line-options/#background">-background none</a> to comply with the standard. If you want to substitute entities and you trust the SVG source, enable this option: <samp>-define svg:substitute-entities=true</samp>. If you want to render a very large SVG and you trust the source, enable this option: <samp>-define svg:parse-huge=true</samp>. Enable embedding if your SVG embeds another SVG and you trust the source:  <samp>-define svg:embedding=true</samp>. If RSVG is installed and you want to render an SVG using RSVG, add <samp>rsvg:</samp> just before the file name. If you want to render an SVG using MSVG, add <samp>msvg:</samp> just before the file name.</td>
   </tr>
 
   <tr>
@@ -1156,7 +1156,7 @@ the supported image formats.</p>
     <td><a href="http://www.libtiff.org/">TIFF</a></td>
     <td>RW</td>
     <td>Tagged image file multispectral format</td>
-    <td>Also known as <samp>TIF</samp>. Requires <a href="http://www.libtiff.org/">tiff-v3.6.1.tar.gz</a> or later.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the rows per strip (e.g. <samp>-define tiff:rows-per-strip=8</samp>).  To define the tile geometry, use for example, <samp>-define tiff:tile-geometry=128x128</samp>. To specify a <var>signed</var> format, use  <samp>-define quantum:format=signed</samp>. To specify a single-precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 64 for a double-precision floating-point format.  Use <samp>-define quantum:polarity=min-is-black</samp> or <samp>-define quantum:polarity=min-is-white</samp> toggle the photometric interpretation for a bilevel image.  Specify the extra samples as associated or unassociated alpha with, for example, <samp>-define tiff:alpha=unassociated</samp>.  Set the fill order with <samp>-define tiff:fill-order=msb|lsb</samp>. Set the TIFF endianness with <samp>-define tiff:endian=msb|lsb</samp>. Use <samp>-define tiff:exif-properties=false</samp> to skip reading the EXIF properties.  Use <samp>-define tiff:gps-properties=false</samp> to skip reading the GPS properties. You can set a number of TIFF software attributes including document name, host computer, artist, timestamp, make, model, software, and copyright.  For example, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set tiff:software "My Company"</a>. If you want to ignore certain TIFF tags, use this option: <samp>-define tiff:ignore-tags=comma-separated-list-of-tag-IDs</samp>. Since version 6.9.1-4 there is support for reading photoshop layers in TIFF files, this can be disabled with <samp>-define tiff:ignore-layers=true</samp>. To preserve compression of the source image, use: <samp>-define tiff:preserve-compression=true</samp>.</td>
+    <td>Also known as <samp>TIF</samp>. Requires <a href="http://www.libtiff.org/">tiff-v3.6.1.tar.gz</a> or later.  Use <a href="/command-line-options/#define">-define</a> to specify the rows per strip (e.g. <samp>-define tiff:rows-per-strip=8</samp>).  To define the tile geometry, use for example, <samp>-define tiff:tile-geometry=128x128</samp>. To specify a <var>signed</var> format, use  <samp>-define quantum:format=signed</samp>. To specify a single-precision floating-point format, use <samp>-define quantum:format=floating-point</samp>.  Set the depth to 64 for a double-precision floating-point format.  Use <samp>-define quantum:polarity=min-is-black</samp> or <samp>-define quantum:polarity=min-is-white</samp> toggle the photometric interpretation for a bilevel image.  Specify the extra samples as associated or unassociated alpha with, for example, <samp>-define tiff:alpha=unassociated</samp>.  Set the fill order with <samp>-define tiff:fill-order=msb|lsb</samp>. Set the TIFF endianness with <samp>-define tiff:endian=msb|lsb</samp>. Use <samp>-define tiff:exif-properties=false</samp> to skip reading the EXIF properties.  Use <samp>-define tiff:gps-properties=false</samp> to skip reading the GPS properties. You can set a number of TIFF software attributes including document name, host computer, artist, timestamp, make, model, software, and copyright.  For example, <a href="/command-line-options/#set">-set tiff:software "My Company"</a>. If you want to ignore certain TIFF tags, use this option: <samp>-define tiff:ignore-tags=comma-separated-list-of-tag-IDs</samp>. Since version 6.9.1-4 there is support for reading photoshop layers in TIFF files, this can be disabled with <samp>-define tiff:ignore-layers=true</samp>. To preserve compression of the source image, use: <samp>-define tiff:preserve-compression=true</samp>.</td>
   </tr>
 
   <tr>
@@ -1170,14 +1170,14 @@ the supported image formats.</p>
     <td><a href="http://www.freetype.org/">TTF</a></td>
     <td>R</td>
     <td>TrueType font file</td>
-    <td>Requires <a href="http://www.freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <samp>-set type:hinting off</samp>).</td>
+    <td>Requires <a href="http://www.freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="/command-line-options/#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <samp>-set type:hinting off</samp>).</td>
   </tr>
 
   <tr>
     <td>TXT</td>
     <td>RW</td>
     <td>Multispectral raw text file</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to specify the color compliance (e.g. <samp>-define txt:compliance=css</samp>).</td>
+    <td>Use <a href="/command-line-options/#define">-define</a> to specify the color compliance (e.g. <samp>-define txt:compliance=css</samp>).</td>
   </tr>
 
    <tr>
@@ -1212,7 +1212,7 @@ the supported image formats.</p>
     <td>UYVY</td>
     <td>RW</td>
     <td>Interleaved YUV raw image</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> command line options to specify width and height.  Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> command line options to specify width and height.  Use <a href="/command-line-options/#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
   </tr>
 
   <tr>
@@ -1255,7 +1255,7 @@ the supported image formats.</p>
     <td><a href="http://en.wikipedia.org/wiki/WebP">WEBP</a></td>
     <td>RW</td>
     <td>Weppy image format</td>
-    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  The muxing delegate library is required to read animated Webp image containers. Specify the encoding options with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">WebP Encoding Options</a> for more details.</td>
+    <td>Requires the <a href="https://developers.google.com/speed/webp/download">WEBP</a> delegate library.  The muxing delegate library is required to read animated Webp image containers. Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/webp.php">WebP Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
@@ -1276,7 +1276,7 @@ the supported image formats.</p>
     <td>X</td>
     <td>RW</td>
     <td>display or import an image to or from an X11 server</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define</a> to obtain the image from the root window (e.g. <samp>-define x:screen=true</samp>).  Set <samp>x:silent=true</samp> to turn off the beep when importing an image.</td>
+    <td>Use <a href="/command-line-options/#define">-define</a> to obtain the image from the root window (e.g. <samp>-define x:screen=true</samp>).  Set <samp>x:silent=true</samp> to turn off the beep when importing an image.</td>
   </tr>
 
   <tr>
@@ -1318,28 +1318,28 @@ the supported image formats.</p>
     <td><a href="https://yaml.org/">YAML</a></td>
     <td>W</td>
     <td>human-readable data-serialization language</td>
-    <td>Include additional attributes about the image with these defines: <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:locate</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:limit</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:moments</a>, or <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:features</a>.  Specify the JSON model schema version with <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define yaml:version</a>.  The current version is 1.0.</td>
+    <td>Include additional attributes about the image with these defines: <a href="/command-line-options/#define">-define yaml:locate</a>, <a href="/command-line-options/#define">-define yaml:limit</a>, <a href="/command-line-options/#define">-define yaml:moments</a>, or <a href="/command-line-options/#define">-define yaml:features</a>.  Specify the JSON model schema version with <a href="/command-line-options/#define">-define yaml:version</a>.  The current version is 1.0.</td>
   </tr>
 
   <tr>
     <td>YCbCr</td>
     <td>RW</td>
     <td>Raw Y, Cb, and Cr samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.</td>
   </tr>
 
   <tr>
     <td>YCbCrA</td>
     <td>RW</td>
     <td>Raw Y, Cb, Cr, and alpha samples</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to specify the image width, height, and depth.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.</td>
   </tr>
 
   <tr>
     <td>YUV</td>
     <td>RW</td>
     <td>CCIR 601 4:1:1</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> command line options to specify width, height, and depth.   Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> command line options to specify width, height, and depth.   Use <a href="/command-line-options/#sampling-factor">-sampling-factor</a> to set the desired subsampling (e.g. -sampling-factor 4:2:2).</td>
   </tr>
   </tbody>
 </table>
@@ -1371,15 +1371,15 @@ the supported image formats.</p>
     <td>Canvas image of specified color</td>
     <td>Useful to create solid color <var>canvas</var> images. Use
        <a href="<?php echo $_SESSION['RelativePath']
-       ?>/../script/command-line-options.php#size" >-size</a> and <a
+       ?>/../command-line-options/#size" >-size</a> and <a
        href="<?php echo $_SESSION['RelativePath']
-       ?>/../script/command-line-options.php#depth" >-depth</a> to specify the
+       ?>/../command-line-options/#depth" >-depth</a> to specify the
        image width, height, and depth.  Example canvas color specifications
        include <samp>canvas:red</samp> and <samp>canvas:#FF0000</samp>.<br/>
 
        If no color is specified a '<samp>white</samp>' canvas image is
        generated.  If no <a href="<?php echo $_SESSION['RelativePath']
-       ?>/../script/command-line-options.php#size" >-size</a> is specified
+       ?>/../command-line-options/#size" >-size</a> is specified
        a single pixel image of the specified color is generated.</td>
 
   </tr>
@@ -1452,7 +1452,7 @@ the supported image formats.</p>
     <td>MAP</td>
     <td>RW</td>
     <td>Colormap intensities and indices</td>
-    <td>Set <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth</a> to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
+    <td>Set <a href="/command-line-options/#depth">-depth</a> to set the sample size of the intensities; indices are 16-bit if colors &gt; 256.</td>
   </tr>
 
   <tr>
@@ -1537,14 +1537,14 @@ the supported image formats.</p>
     <td>STEGANO</td>
     <td>R</td>
     <td>Steganographic image</td>
-    <td>Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option to specify width, height, and offset of the steganographic image</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> command line option to specify width, height, and offset of the steganographic image</td>
   </tr>
 
   <tr>
     <td>TILE</td>
     <td>R</td>
     <td>Tiled image</td>
-    <td>Create a tiled version of an image at by tiling a image. Use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> to specify the tiled image size. Tiles are composited on an image background and therefore is responsive to the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose">-compose</a> option.  The image is specified similar to
+    <td>Create a tiled version of an image at by tiling a image. Use <a href="/command-line-options/#size">-size</a> to specify the tiled image size. Tiles are composited on an image background and therefore is responsive to the <a href="/command-line-options/#compose">-compose</a> option.  The image is specified similar to
     <samp>TILE:image.miff</samp>.</td>
   </tr>
 
@@ -1620,7 +1620,7 @@ the supported image formats.</p>
     <td> NETSCAPE</td>
     <td>R</td>
     <td>image using colors in Netscape 216 (6x6x6 ) color cube, 216x144</td>
-    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#map">-map</a> option to create <var>web safe</var> images.</td>
+    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="/command-line-options/#map">-map</a> option to create <var>web safe</var> images.</td>
   </tr>
 
   <tr>
@@ -1642,7 +1642,7 @@ the supported image formats.</p>
 <br/>
 <h2><a class="anchor" id="builtin-patterns"></a>Built-in Patterns</h2>
 
-<p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <samp>pattern:</samp> format tag may be used via the syntax <samp>pattern:</samp><var>name</var> to request an embedded pattern (e.g. <samp>pattern:checkerboard</samp>). The pattern size is controlled with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size</a> command line option.</p>
+<p>ImageMagick includes a number of built-in (embedded) patterns which may be referenced as if they were an image file. The <samp>pattern:</samp> format tag may be used via the syntax <samp>pattern:</samp><var>name</var> to request an embedded pattern (e.g. <samp>pattern:checkerboard</samp>). The pattern size is controlled with the <a href="/command-line-options/#size">-size</a> command line option.</p>
 
 <div class="pre-scrollable">
 <table class="table table-sm table-hover table-striped table-responsive">
@@ -2079,7 +2079,7 @@ the supported image formats.</p>
     <td>ICC</td>
     <td>RW</td>
     <td>International Color Consortium color profile</td>
-    <td>Also known as <samp>ICM</samp>. To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with
+    <td>Also known as <samp>ICM</samp>. To read, use <a href="/command-line-options/#profile">-profile</a> with
       <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>.</td>
   </tr>
 
@@ -2087,7 +2087,7 @@ the supported image formats.</p>
     <td>IPTC</td>
     <td>RW</td>
     <td>IPTC Newsphoto (binary)</td>
-    <td>To read, use <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></td>
+    <td>To read, use <a href="/command-line-options/#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></td>
   </tr>
 
   <tr>

@@ -26,7 +26,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   1: 4x10+252+0 253.9,4.1 31 srgb(255,255,255)
 </samp></pre>
 <p>Add <samp>-define connected-components:exclude-header=true</samp> to show the objects without the header-line.  Add <samp>-define connected-components:exclude-ids=true</samp>. Use <samp>-define connected-components:sort=<var>area | width | height | x | y</samp> to sort the verbose connected components objects.  By default, the objects are listed in decreasing area.  Add <samp>-define connected-components:sort-order=<var>increasing | decreasing</var> to specify the sort order.</p>
-<p>Use <samp>-connected-components 8</samp> to visit 8 neighbors rather than 4.  By default, neighbor colors must be exact to be part of a unique object. Use the <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz</a> option to include pixels as part of an object that are <var>close</var> in color.</p>
+<p>Use <samp>-connected-components 8</samp> to visit 8 neighbors rather than 4.  By default, neighbor colors must be exact to be part of a unique object. Use the <a href="/command-line-options/#fuzz">-fuzz</a> option to include pixels as part of an object that are <var>close</var> in color.</p>
 <p>You might want to eliminate small objects by merging them with their larger neighbors.  If so, use this command:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick objects.gif -define connected-components:area-threshold=410 -connected-components 4 \
   -auto-level objects.jpg</samp></pre>

@@ -81,288 +81,288 @@ Channel maximum locations:
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#adjoin">-adjoin</a></td>
+    <td><a href="/command-line-options/#adjoin">-adjoin</a></td>
     <td>join images into a single multi-image file</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#alpha">-alpha</a></td>
+    <td><a href="/command-line-options/#alpha">-alpha</a></td>
     <td>on, activate, off, deactivate, set, opaque, copy",
 transparent, extract, background, or shape the alpha channel</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#authenticate">-authenticate <var>value</var></a></td>
+    <td><a href="/command-line-options/#authenticate">-authenticate <var>value</var></a></td>
     <td>decrypt image with this password</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#auto-orient">-auto-orient</a></td>
+    <td><a href="/command-line-options/#auto-orient">-auto-orient</a></td>
     <td>automagically orient image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#background">-background <var>color</var></a></td>
+    <td><a href="/command-line-options/#background">-background <var>color</var></a></td>
     <td>background color</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#brightness-contrast">-brightness-contrast <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#brightness-contrast">-brightness-contrast <var>geometry</var></a></td>
     <td>improve brightness / contrast of the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#channel">-channel <var>type</var></a></td>
+    <td><a href="/command-line-options/#channel">-channel <var>type</var></a></td>
     <td>apply option to select image channels</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#colorspace">-colorspace <var>type</var></a></td>
+    <td><a href="/command-line-options/#colorspace">-colorspace <var>type</var></a></td>
     <td>set image colorspace</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#compose">-compose <var>operator</var></a></td>
+    <td><a href="/command-line-options/#compose">-compose <var>operator</var></a></td>
     <td>set image composite operator</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#crop">-crop <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#crop">-crop <var>geometry</var></a></td>
     <td>crop the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#decipher">-decipher <var>filename</var></a></td>
+    <td><a href="/command-line-options/#decipher">-decipher <var>filename</var></a></td>
     <td>convert cipher pixels to plain</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#debug">-debug <var>events</var></a></td>
+    <td><a href="/command-line-options/#debug">-debug <var>events</var></a></td>
     <td>display copious debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#define">-define <var>format:option</var></a></td>
+    <td><a href="/command-line-options/#define">-define <var>format:option</var></a></td>
     <td>define one or more image format options</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#density">-density <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#density">-density <var>geometry</var></a></td>
     <td>horizontal and vertical density of the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#depth">-depth <var>value</var></a></td>
+    <td><a href="/command-line-options/#depth">-depth <var>value</var></a></td>
     <td>image depth</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#dissimilarity-threshold">-dissimilarity-threshold <var>value</var></a></td>
+    <td><a href="/command-line-options/#dissimilarity-threshold">-dissimilarity-threshold <var>value</var></a></td>
     <td>maximum distortion for (sub)image match (default 0.2)</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#distort">-distort <var>type coefficients</var></a></td>
+    <td><a href="/command-line-options/#distort">-distort <var>type coefficients</var></a></td>
     <td>distort image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#encipher">-encipher <var>filename</var></a></td>
+    <td><a href="/command-line-options/#encipher">-encipher <var>filename</var></a></td>
     <td>convert plain pixels to cipher pixels</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#extract">-extract <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#extract">-extract <var>geometry</var></a></td>
     <td>extract area from image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#fuzz">-fuzz <var>distance</var></a></td>
+    <td><a href="/command-line-options/#fuzz">-fuzz <var>distance</var></a></td>
     <td>colors within this distance are considered equal</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#gravity">-gravity <var>type</var></a></td>
+    <td><a href="/command-line-options/#gravity">-gravity <var>type</var></a></td>
     <td>horizontal and vertical text placement</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#help">-help</a></td>
+    <td><a href="/command-line-options/#help">-help</a></td>
     <td>print program options</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#highlight-color">-highlight-color <var>color</var></a></td>
+    <td><a href="/command-line-options/#highlight-color">-highlight-color <var>color</var></a></td>
     <td>emphasize pixel differences with this color</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#identify">-identify</a></td>
+    <td><a href="/command-line-options/#identify">-identify</a></td>
     <td>identify the format and characteristics of the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#interlace">-interlace <var>type</var></a></td>
+    <td><a href="/command-line-options/#interlace">-interlace <var>type</var></a></td>
     <td>type of image interlacing scheme</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#level">-level <var>value</var></a></td>
+    <td><a href="/command-line-options/#level">-level <var>value</var></a></td>
     <td>adjust the level of image contrast</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#limit">-limit <var>type value</var></a></td>
+    <td><a href="/command-line-options/#limit">-limit <var>type value</var></a></td>
     <td>pixel cache resource limit</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#log">-log <var>format</var></a></td>
+    <td><a href="/command-line-options/#log">-log <var>format</var></a></td>
     <td>format of debugging information</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#lowlight-color">-lowlight-color <var>color</var></a></td>
+    <td><a href="/command-line-options/#lowlight-color">-lowlight-color <var>color</var></a></td>
     <td>de-emphasize pixel differences with this color</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#metric">-metric <var>type</var></a></td>
+    <td><a href="/command-line-options/#metric">-metric <var>type</var></a></td>
     <td>measure differences between images with this metric.  The default metric is RMSE.</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#negate">-negate</a></td>
+    <td><a href="/command-line-options/#negate">-negate</a></td>
     <td>replace each pixel with its complementary color </td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#profile">-profile <var>filename</var></a></td>
+    <td><a href="/command-line-options/#profile">-profile <var>filename</var></a></td>
     <td>add, delete, or apply an image profile</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quality">-quality <var>value</var></a></td>
+    <td><a href="/command-line-options/#quality">-quality <var>value</var></a></td>
     <td>JPEG/MIFF/PNG compression level</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quantize">-quantize <var>colorspace</var></a></td>
+    <td><a href="/command-line-options/#quantize">-quantize <var>colorspace</var></a></td>
     <td>reduce image colors in this colorspace</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#quiet">-quiet</a></td>
+    <td><a href="/command-line-options/#quiet">-quiet</a></td>
     <td>suppress all warning messages</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#read-mask">-read-mask <var>filename</var></a></td>
+    <td><a href="/command-line-options/#read-mask">-read-mask <var>filename</var></a></td>
     <td>associate a read mask with the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#regard-warnings">-regard-warnings</a></td>
+    <td><a href="/command-line-options/#regard-warnings">-regard-warnings</a></td>
     <td>pay attention to warning messages.</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#repage">-repage <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#repage">-repage <var>geometry</var></a></td>
     <td>size and location of an image canvas</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#resize">-resize <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#resize">-resize <var>geometry</var></a></td>
     <td>resize the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#respect-parentheses">-respect-parentheses</a></td>
+    <td><a href="/command-line-options/#respect-parentheses">-respect-parentheses</a></td>
     <td>settings remain in effect until parenthesis boundary.</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#rotate">-rotate <var>degrees</var></a></td>
+    <td><a href="/command-line-options/#rotate">-rotate <var>degrees</var></a></td>
     <td>apply Paeth rotation to the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sampling-factor">-sampling-factor <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#sampling-factor">-sampling-factor <var>geometry</var></a></td>
     <td>horizontal and vertical sampling factor</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#seed">-seed <var>value</var></a></td>
+    <td><a href="/command-line-options/#seed">-seed <var>value</var></a></td>
     <td>seed a new sequence of pseudo-random numbers</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#separate">-separate</a></td>
+    <td><a href="/command-line-options/#separate">-separate</a></td>
     <td>separate an image channel into a grayscale image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#set">-set <var>attribute value</var></a></td>
+    <td><a href="/command-line-options/#set">-set <var>attribute value</var></a></td>
     <td>set an image attribute</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#sigmoidal">-sigmoidal-contrast <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#sigmoidal">-sigmoidal-contrast <var>geometry</var></a></td>
     <td>increase the contrast without saturating highlights or shadows</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#similarity-threshold">-similarity-threshold <var>value</var></a></td>
+    <td><a href="/command-line-options/#similarity-threshold">-similarity-threshold <var>value</var></a></td>
     <td>minimum distortion for (sub)image match (default 0.0)</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#size">-size <var>geometry</var></a></td>
+    <td><a href="/command-line-options/#size">-size <var>geometry</var></a></td>
     <td>width and height of image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#subimage-search">-subimage-search</a></td>
+    <td><a href="/command-line-options/#subimage-search">-subimage-search</a></td>
     <td>search for subimage</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#synchronize">-synchronize</a></td>
+    <td><a href="/command-line-options/#synchronize">-synchronize</a></td>
     <td>synchronize image to storage device</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#taint">-taint</a></td>
+    <td><a href="/command-line-options/#taint">-taint</a></td>
     <td>mark the image as modified</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#transparent-color">-transparent-color <var>color</var></a></td>
+    <td><a href="/command-line-options/#transparent-color">-transparent-color <var>color</var></a></td>
     <td>transparent color</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#trim">-trim</a></td>
+    <td><a href="/command-line-options/#trim">-trim</a></td>
     <td>trim image edges</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#verbose">-verbose</a></td>
+    <td><a href="/command-line-options/#verbose">-verbose</a></td>
     <td>print detailed information about the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#version">-version</a></td>
+    <td><a href="/command-line-options/#version">-version</a></td>
     <td>print version information</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#virtual-pixel">-virtual-pixel <var>method</var></a></td>
+    <td><a href="/command-line-options/#virtual-pixel">-virtual-pixel <var>method</var></a></td>
     <td>access method for pixels outside the boundaries of the image</td>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#write-mask">-write-mask <var>filename</var></a></td>
+    <td><a href="/command-line-options/#write-mask">-write-mask <var>filename</var></a></td>
     <td>associate a write mask with the image</td>
   </tr>
 

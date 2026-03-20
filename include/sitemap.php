@@ -63,7 +63,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/stream.php">magick stream</a>: a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</li>
   </ul></li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-processing.php">Command line processing</a>: the anatomy of the command line.</li>
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
+  <li><a href="/command-line-options/">Command line options</a>: annotated list of all options that can appear on the command-line.</li>
   <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/fx.php">Fx</a>: apply a mathematical expression to an image or image channels.</li>
   <li><a href="http://www.fmwconcepts.com/imagemagick/" rel="noopener noreferrer" target="_blank">Fred's ImageMagick Scripts</a>:  a plethora of command-line scripts that perform geometric transforms, blurs, sharpens, edging, noise removal, and color manipulations.</li>
 </dl>
@@ -121,7 +121,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>create a GIF animation sequence from a group of images.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#bilateral-blur">Bilateral blur</a></td>
+    <td><a href="/command-line-options/#bilateral-blur">Bilateral blur</a></td>
     <td>non-linear, edge-preserving, and noise-reducing smoothing filter.</td>
   </tr>
   <tr>
@@ -158,7 +158,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/transform/#vision">Delineate image features</a></td>
-    <td><a href="http://usage.imagemagick.org/transform/#canny">Canny edge detection</a>, <a href="<?php echo $_SESSION['RelativePath']?>/../script/command-line-options.php#hough-line">Hough lines</a>.</td>
+    <td><a href="http://usage.imagemagick.org/transform/#canny">Canny edge detection</a>, <a href="/command-line-options/#hough-line">Hough lines</a>.</td>
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/fourier/">Discrete Fourier transform</a></td>
