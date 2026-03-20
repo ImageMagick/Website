@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Magick';
-  include('session.php');
+  header("Location: /magick/", true, 301);
+  exit();
 ?>

@@ -341,7 +341,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </ul>
 </div>
 <p>&nbsp;</p>
-<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="/command-line-tools/">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>.</p>
+<p class="lead">Below is list of command-line options recognized by the ImageMagick <a href="/command-line-tools/">command-line tools</a>. If you want a description of a particular option, click on the option name in the navigation bar above and you will go right to it. Unless otherwise noted, each option is recognized by the commands: <a href="/magick/">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">mogrify</a>.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="adaptive-blur"></a>-adaptive-blur <var>radius</var>[x<var>sigma</var>]</h2>

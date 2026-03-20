@@ -50,7 +50,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <dl >
   <li><a href="/command-line-tools/">Command-line tools</a>: overview of the ImageMagick commands.
   <ul >
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
+    <li><a href="/magick/">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="/animate/">magick animate</a>: animates an image sequence on any X server.</li>
     <li><a href="/compare/">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
     <li><a href="/composite/">magick composite</a>: overlaps one image over another.</li>

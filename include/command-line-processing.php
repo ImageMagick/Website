@@ -78,7 +78,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <li>zero, one, or more image sequence operators.</li>
 <li>zero, one, or more image stacks.</li>
 <li>zero or one output image filenames (required by
-<a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>,
+<a href="/magick/">magick</a>,
 <a href="/convert/">convert</a>,
 <a href="/composite/">composite</a>,
 <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>,
@@ -149,7 +149,7 @@ so we explicitly set one:
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: gif:- | magick display gif:-</samp></pre>
 
 <p>The second explicit format "<samp>gif:</samp>" is optional in the preceding example.  The GIF image format has a unique signature within the image so ImageMagick's <a href="/display/">display</a>
- command can readily recognize the format as GIF.  The <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> program also accepts STDIN as input in this way:
+ command can readily recognize the format as GIF.  The <a href="/magick/">magick</a> program also accepts STDIN as input in this way:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick rose: gif:- | magick - -resize "200%" bigrose.jpg'</samp></pre>

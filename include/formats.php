@@ -701,7 +701,7 @@ the supported image formats.</p>
     <td><a href="/magick-vector-graphics/">MVG</a></td>
     <td>RW</td>
     <td>Magick Vector Graphics.</td>
-    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="/command-line-options/#draw">-draw</a> option.</td>
+    <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="/magick/">magick</a>'s <a href="/command-line-options/#draw">-draw</a> option.</td>
   </tr>
 
   <tr>
@@ -1619,7 +1619,7 @@ the supported image formats.</p>
     <td> NETSCAPE</td>
     <td>R</td>
     <td>image using colors in Netscape 216 (6x6x6 ) color cube, 216x144</td>
-    <td>Most commonly used with the <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="/command-line-options/#map">-map</a> option to create <var>web safe</var> images.</td>
+    <td>Most commonly used with the <a href="/magick/">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="/command-line-options/#map">-map</a> option to create <var>web safe</var> images.</td>
   </tr>
 
   <tr>
@@ -2079,7 +2079,7 @@ the supported image formats.</p>
     <td>RW</td>
     <td>International Color Consortium color profile</td>
     <td>Also known as <samp>ICM</samp>. To read, use <a href="/command-line-options/#profile">-profile</a> with
-      <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>.</td>
+      <a href="/magick/">magick</a>.</td>
   </tr>
 
   <tr>
