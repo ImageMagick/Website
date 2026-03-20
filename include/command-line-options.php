@@ -2214,7 +2214,7 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<p>See <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
+<p>See <a href="/defines/">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
 </samp></pre>

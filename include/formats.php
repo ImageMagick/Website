@@ -1198,7 +1198,7 @@ the supported image formats.</p>
     <td><a href="https://developer.android.com/media/platform/hdr-image-format">UHDR</a></td>
     <td>RW</td>
     <td>Ultra HDR</td>
-    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library. Recognized <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a> include <samp>uhdr:hdr-color-gamut</samp>, <samp>uhdr:hdr-color-transfer</samp>, <samp>uhdr:sdr-color-gamut</samp>, <samp>uhdr:gainmap-quality</samp>, <samp>uhdr:gainmap-gamma</samp>, <samp>uhdr:gainmap-min-content-boost</samp>, <samp>uhdr:gainmap-max-content-boost</samp>, and <samp>uhdr:target-display-peak-brightness</samp>.</td>
+    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library. Recognized <a href="/defines/">defines</a> include <samp>uhdr:hdr-color-gamut</samp>, <samp>uhdr:hdr-color-transfer</samp>, <samp>uhdr:sdr-color-gamut</samp>, <samp>uhdr:gainmap-quality</samp>, <samp>uhdr:gainmap-gamma</samp>, <samp>uhdr:gainmap-min-content-boost</samp>, <samp>uhdr:gainmap-max-content-boost</samp>, and <samp>uhdr:target-display-peak-brightness</samp>.</td>
   </tr>
 
   <tr>
@@ -1226,7 +1226,7 @@ the supported image formats.</p>
     <td>VIDEO</td>
     <td>RW</td>
     <td>Various video formats</td>
-    <td>Video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="<?php echo $_SESSION['RelativePath']?>/../script/defines.php">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
+    <td>Video formats such as APNG, AVI, MP4, WEBM, etc.  Refer to <a href="/defines/">defines</a>  for a description of these defines: <samp>video:intermediate-format</samp>, <samp>video:pixel-format</samp>, and <samp>video:vsync</samp> defines, that can affect the operation on these video formats.</td>
     <td> </td>
   </tr>
 
