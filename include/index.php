@@ -130,7 +130,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>read, process, or write mega-, giga-, or tera-pixel image sizes.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">Montage</a></td>
+    <td><a href="/montage/">Montage</a></td>
     <td>juxtapose image thumbnails on an image canvas.</td>
   </tr>
   <tr>

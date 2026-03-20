@@ -1099,7 +1099,7 @@ the supported image formats.</p>
     <td>SHTML</td>
     <td>W</td>
     <td>Hypertext Markup Language client-side image map</td>
-    <td>Used to write HTML clickable image maps based on a the output of <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a> or a format which supports tiled images such as <a href="#MIFF">MIFF</a>.</td>
+    <td>Used to write HTML clickable image maps based on a the output of <a href="/montage/">montage</a> or a format which supports tiled images such as <a href="#MIFF">MIFF</a>.</td>
   </tr>
 
   <tr>
@@ -1472,7 +1472,7 @@ the supported image formats.</p>
     <td>NULL</td>
     <td>RW</td>
     <td>NULL image</td>
-    <td>Useful for creating blank tiles with <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a> (use <samp>NULL:</samp>). Also useful as an output format when evaluating image read performance.</td>
+    <td>Useful for creating blank tiles with <a href="/montage/">montage</a> (use <samp>NULL:</samp>). Also useful as an output format when evaluating image read performance.</td>
   </tr>
 
   <tr>

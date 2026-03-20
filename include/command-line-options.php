@@ -4288,7 +4288,7 @@ coordinate (60,70). (<?php seeGeometry();?>)</p>
 href="#gravity">-gravity</a> gives the direction that the image gravitates
 within the composite.</p>
 
-<p>When used as an option to <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>, <a
+<p>When used as an option to <a href="/montage/">montage</a>, <a
 href="#gravity">-gravity</a> gives the direction that an image gravitates
 within a tile. The default gravity is <samp>Center</samp> for this purpose.</p>
 

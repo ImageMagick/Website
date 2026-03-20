@@ -2185,7 +2185,7 @@ South, SouthEast</td>
 
 <p>MontageImage() is an alias for method Montage().</p>
 
-<p>Most of the attributes listed above have an analog in <a href="<?php echo $_SESSION['RelativePath']?>/../script/montage.php">montage</a>. See the documentation for a more detailed description of these attributes.</p>
+<p>Most of the attributes listed above have an analog in <a href="/montage/">montage</a>. See the documentation for a more detailed description of these attributes.</p>
 
 <h2><a class="anchor" id="blobs"></a>Working with Blobs</h2>
 

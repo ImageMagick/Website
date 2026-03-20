@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Montage';
-  include('session.php');
+  header("Location: /montage/", true, 301);
+  exit();
 ?>
