@@ -543,28 +543,28 @@ the supported image formats.</p>
     <td><a href="http://www.openjpeg.org/">JP2</a></td>
     <td>RW</td>
     <td>JPEG-2000 JP2 File Format Syntax</td>
-    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option. See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option. See <a href="/jp2/">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">JPT</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="/jp2/">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2C</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="/jp2/">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>
     <td><a href="http://www.openjpeg.org/">J2K</a></td>
     <td>RW</td>
     <td>JPEG-2000 Code Stream Syntax</td>
-    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="<?php echo $_SESSION['RelativePath']?>/../script/jp2.php">JP2 Encoding Options</a> for more details.</td>
+    <td>Specify the encoding options with the <a href="/command-line-options/#define">-define</a> option  See <a href="/jp2/">JP2 Encoding Options</a> for more details.</td>
   </tr>
 
   <tr>

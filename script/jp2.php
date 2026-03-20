@@ -1,4 +1,4 @@
 <?php
-  $title='JP2 Encoding Options';
-  include('session.php');
+  header("Location: /jp2/", true, 301);
+  exit();
 ?>
