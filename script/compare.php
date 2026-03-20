@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Compare';
-  include('session.php');
+  header("Location: /compare/", true, 301);
+  exit();
 ?>

@@ -52,7 +52,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   <ul >
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>: convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more.</li>
     <li><a href="/animate/">magick animate</a>: animates an image sequence on any X server.</li>
-    <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/compare.php">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
+    <li><a href="/compare/">magick compare</a>: mathematically and visually annotate the difference between an image and its reconstruction.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/composite.php">magick composite</a>: overlaps one image over another.</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/conjure.php">magick conjure</a>: interprets and executes scripts written in the Magick Scripting Language (MSL).</li>
     <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/display.php">magick display</a>: displays an image or image sequence on any X server.</li>
