@@ -1,5 +1,4 @@
 <?php
-  $title='Resources';
-  $description='Influence ImageMagick\'s default behavior with external configuration files and environment variables.';
-  include('session.php');
+  header("Location: /resources/", true, 301);
+  exit();
 ?>

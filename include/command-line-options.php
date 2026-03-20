@@ -2143,8 +2143,7 @@ output.</p>
 
 <p>Use <a href="#debug">+debug</a> to turn off all logging.</p>
 
-<p>Debugging may also be set using the <samp>MAGICK_DEBUG</samp> <a href="<?php
-echo $_SESSION['RelativePath'] ?>/../script/resources.php#environment"
+<p>Debugging may also be set using the <samp>MAGICK_DEBUG</samp> <a href="/resources/#environment"
 >environment variable</a>.  The allowed values for the <samp>MAGICK_DEBUG</samp>
 environment variable are the same as for the <a href="#debug">-debug</a>
 option.</p>
@@ -5239,8 +5238,7 @@ limit as well:</p>
 <p>Here ImageMagick stops processing if an image requires more than 500MB of disk storage.</p>
 
 <p>In addition to command-line resource limit option, resources can be set
-with <a href="<?php echo $_SESSION['RelativePath']
-?>/../script/resources.php#environment" >environment variables</a>. Set the
+with <a href="/resources/#environment" >environment variables</a>. Set the
 environment variables <samp>MAGICK_AREA_LIMIT</samp>,
 <samp>MAGICK_DISK_LIMIT</samp>, <samp>MAGICK_FILE_LIMIT</samp>,
 <samp>MAGICK_MEMORY_LIMIT</samp>, <samp>MAGICK_MAP_LIMIT</samp>,
