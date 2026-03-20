@@ -698,7 +698,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-vector-graphics.php">MVG</a></td>
+    <td><a href="/magick-vector-graphics/">MVG</a></td>
     <td>RW</td>
     <td>Magick Vector Graphics.</td>
     <td>The native ImageMagick vector metafile format. A text file containing vector drawing commands accepted by <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a>'s <a href="/command-line-options/#draw">-draw</a> option.</td>

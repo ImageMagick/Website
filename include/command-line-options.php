@@ -3135,8 +3135,7 @@ these options <var>before</var> the <a href="#draw">-draw</a> option.</p>
 <p>Strings that begin with a number must be quoted (e.g. use '1.png' rather
 than 1.png).</p>
 
-<p>Drawing primitives conform to the <a href="<?php echo
-$_SESSION['RelativePath'] ?>/../script/magick-vector-graphics.php" >Magick
+<p>Drawing primitives conform to the <a href="/magick-vector-graphics/" >Magick
 Vector Graphics</a> format.</p>
 <p>Note, drawing requires an alpha channel.  If none is available, an all opaque alpha channel is implicitly created.</p>
 
