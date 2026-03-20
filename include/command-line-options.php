@@ -5271,9 +5271,7 @@ through <samp>grep memory|open|destroy|disk</samp> for more readable sifting.
 </p>
 
 <p>For more about ImageMagick's use of resources, see the section <b>Cache
-Storage and Resource Requirements</b> on the <a href="<?php echo
-$_SESSION['RelativePath'] ?>/../script/architecture.php#cache
-">Architecture</a> page.  </p>
+Storage and Resource Requirements</b> on the <a href="/architecture/#cache">Architecture</a> page.  </p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="linear-stretch"></a>-linear-stretch <var>black-point</var><br />-linear-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h2>

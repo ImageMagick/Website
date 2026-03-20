@@ -36,10 +36,10 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>Want more performance from ImageMagick?  Try these options:</p>
 
 <ul>
-<li>add more memory to your system, see <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#cache">the pixel cache</a>;</li>
-<li>add more cores to your system, see <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#threads">threads of execution support</a>;</li>
+<li>add more memory to your system, see <a href="/architecture/#cache">the pixel cache</a>;</li>
+<li>add more cores to your system, see <a href="/architecture/#threads">threads of execution support</a>;</li>
 <li>reduce lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library;</li>
-<li>push large images to a solid-state drive, see <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">large image support</a>.</li>
+<li>push large images to a solid-state drive, see <a href="/architecture/#tera-pixel">large image support</a>.</li>
 </ul>
 <p>If these options are prohibitive, you can reduce the quality of the image results.  The default build is Q16 HDRI.  If you disable <a href="<?php echo $_SESSION['RelativePath']?>/../script/high-dynamic-range.php">HDRI</a>, you use half the memory and instead of predominantly floating point operations, you use the typically more efficient integer operations.  The trade-off is reduced precision and you cannot process out of range pixel values (e.g. negative).  If you build the Q8 non-HDRI  version of ImageMagick, you again reduce the memory requirements in half-- and once again there is a trade-off, even less precision and no out of range pixel values.  For a Q8 non-HDRI build of ImageMagick, use these <samp>configure</samp> script options: <samp>--with-quantum-depth=8 --disable-hdri</samp>.</p>
 <h4>Older News</h4>

@@ -94,7 +94,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>correct for, or induce image distortions including perspective.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#distributed">Heterogeneous distributed processing</a></td>
+    <td><a href="/architecture/#distributed">Heterogeneous distributed processing</a></td>
     <td>certain algorithms are <a href="<?php echo $_SESSION['RelativePath']?>/../script/opencl.php">OpenCL</a>-enabled to take advantage of speed-ups offered by executing in concert across heterogeneous platforms consisting of CPUs, GPUs, and other processors.</td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#tera-pixel">Large image support</a></td>
+    <td><a href="/architecture/#tera-pixel">Large image support</a></td>
     <td>read, process, or write mega-, giga-, or tera-pixel image sizes.</td>
   </tr>
   <tr>
@@ -162,7 +162,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>insert descriptive or artistic text in an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#threads">Threads of execution support</a></td>
+    <td><a href="/architecture/#threads">Threads of execution support</a></td>
     <td>ImageMagick is thread safe and most internal algorithms execute in <a href="<?php echo $_SESSION['RelativePath']?>/../script/openmp.php">parallel</a> to take advantage of speed-ups offered by multicore processor chips.</td>
   </tr>
   <tr>
@@ -174,7 +174,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>render portions of an image invisible.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php#virtual-pixels">Virtual pixel support</a></td>
+    <td><a href="/architecture/#virtual-pixels">Virtual pixel support</a></td>
     <td>convenient access to pixels outside the image boundaries.</td>
   </tr>
 </table>

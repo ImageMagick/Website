@@ -184,7 +184,7 @@ convert: no images defined `wizard.jpg'</pre>
 
 <p>Note, numeric values in policies are floating-point with an optional SI prefix (e.g., 10MiB).</p>
 
-<p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/architecture.php">Architecture</a>.</p>
+<p>For additional details about resource limits and the policy configuration file, read <a href="<?php echo $_SESSION['RelativePath']?>/../script/resources.php">Resources</a> and <a href="/architecture/">Architecture</a>.</p>
 
 <p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
 
@@ -241,13 +241,13 @@ Path: ImageMagick-7/policy.xml
     name: temporary-path
     value: /opt/tmp
   Policy: Module
-    rights: Write 
+    rights: Write
     pattern: {HTTP,HTTPS,MVG,PS,PDF}
   Policy: Filter
-    rights: None 
+    rights: None
     pattern: *
   Policy: Path
-    rights: None 
+    rights: None
     pattern: @*
   Policy: System
     name: font
