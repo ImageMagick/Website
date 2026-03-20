@@ -1,4 +1,4 @@
 <?php
-  $title='Advanced Windows Source Installation';
-  include('session.php');
+  header("Location: /advanced-windows-installation/", true, 301);
+  exit();
 ?>
