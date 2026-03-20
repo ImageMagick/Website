@@ -1,4 +1,4 @@
 <?php
-  $title='Command-line Tools: Mogrify';
-  include('session.php');
+  header("Location: /mogrify/", true, 301);
+  exit();
 ?>

@@ -1619,7 +1619,7 @@ the supported image formats.</p>
     <td> NETSCAPE</td>
     <td>R</td>
     <td>image using colors in Netscape 216 (6x6x6 ) color cube, 216x144</td>
-    <td>Most commonly used with the <a href="/magick/">magick</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/mogrify.php">magick mogrify</a> programs with the <a href="/command-line-options/#map">-map</a> option to create <var>web safe</var> images.</td>
+    <td>Most commonly used with the <a href="/magick/">magick</a> and <a href="/mogrify/">magick mogrify</a> programs with the <a href="/command-line-options/#map">-map</a> option to create <var>web safe</var> images.</td>
   </tr>
 
   <tr>
