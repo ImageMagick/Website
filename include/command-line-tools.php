@@ -13,7 +13,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <dl class="row">
   <dt class="col-md-4"><a class="anchor" id="magick"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></dt><dd class="col-md-8">convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
-  <dt class="col-md-4"><a class="anchor" id="magick-script"></a><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick-script.php">magick-script</a></dt><dd class="col-md-8">use this scripting language interpreter to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
+  <dt class="col-md-4"><a class="anchor" id="magick-script"></a><a href="/magick-script/">magick-script</a></dt><dd class="col-md-8">use this scripting language interpreter to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
 </dl>
 <p>We also support sub-commands for compatibility with ImageMagick <a href="http://legacy.imagemagick.org">version 6</a>:</p>
 <dl class="row">
