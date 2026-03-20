@@ -83,7 +83,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <div class="collapse navbar-collapse" id="magick-navbars">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download</a>
+          <a class="nav-link <?php IsActive($topic,'Download'); ?>" href="/download/">Download</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?php IsActive($topic,'Tools'); ?>" href="/command-line-tools/">Tools</a>

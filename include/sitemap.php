@@ -31,7 +31,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2><a class="anchor" id="download"></a>Download ImageMagick</h2>
 
 <dl >
-  <li><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
+  <li><a href="/download/">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
   <li><a href="https://imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
   <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
   <li><a href="https://imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
@@ -213,7 +213,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>describe the format and attributes of an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
+    <td><a href="/download/#iOS">ImageMagick on the iPhone</a></td>
     <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>

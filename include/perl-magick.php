@@ -8,7 +8,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p class="text-center"><a href="#installation">Installation</a> • <a href="#overview">Overview</a> • <a href="#example">Example Script</a> • <a href="#read">Read or Write an Image</a> • <a href="#manipulate">Manipulate an Image</a> • <a href="#set-attribute">Set an Image Attribute</a> • <a href="#get-attribute">Get an Image Attribute</a> • <a href="#compare">Compare an Image to its Reconstruction</a> • <a href="#montage">Create an Image Montage</a> • <a href="#blobs">Working with Blobs</a> • <a href="#direct-access">Direct-access to Image Pixels</a> • <a href="#miscellaneous">Miscellaneous Methods</a> • <a href="#exceptions">Handling Exceptions</a>• <a href="#constants">Constant</a> </p>
 
 <a class="anchor" id="introduction"></a>
-<p class="lead"><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">PerlMagick</a> is an objected-oriented <a href="http://www.perl.com/perl/">Perl</a> interface to ImageMagick. Use the module to read, manipulate, or write an image or image sequence from within a Perl script. This makes it very suitable for Web CGI scripts. You must have ImageMagick 6.5.5 or above and Perl version 5.005_02 or greater installed on your system for PerlMagick to build properly.</p>
+<p class="lead"><a href="/download/">PerlMagick</a> is an objected-oriented <a href="http://www.perl.com/perl/">Perl</a> interface to ImageMagick. Use the module to read, manipulate, or write an image or image sequence from within a Perl script. This makes it very suitable for Web CGI scripts. You must have ImageMagick 6.5.5 or above and Perl version 5.005_02 or greater installed on your system for PerlMagick to build properly.</p>
 
 <p>There are a number of useful scripts available to show you the value of PerlMagick. You can do Web based image manipulation and conversion with <a href="https://imagemagick.org/archive/perl">MagickStudio</a>, or use <a href="https://github.com/ImageMagick/ImageMagick/tree/main/PerlMagick/demo/tree.pl">L-systems</a> to create images of plants using mathematical constructs, and finally navigate through collections of thumbnail images and select the image to view with the <a href="http://webmagick.sourceforge.net/">WebMagick Image Navigator</a>.</p>
 
@@ -57,7 +57,7 @@ make</samp></pre>
 
 <p><b>Windows XP / Windows 2000</b></p>
 
-<p>ImageMagick must already be installed on your system. Also, the ImageMagick source distribution for <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">Windows 2000</a> is required. You must also have the <samp>nmake</samp> from the Visual C++ or J++ development environment. Copy <samp>\bin\IMagick.dll</samp> and <samp>\bin\X11.dll</samp> to a directory in your dynamic load path such as <samp>c:\perl\site\5.00502</samp>.</p>
+<p>ImageMagick must already be installed on your system. Also, the ImageMagick source distribution for <a href="/download/">Windows 2000</a> is required. You must also have the <samp>nmake</samp> from the Visual C++ or J++ development environment. Copy <samp>\bin\IMagick.dll</samp> and <samp>\bin\X11.dll</samp> to a directory in your dynamic load path such as <samp>c:\perl\site\5.00502</samp>.</p>
 
 <p>Next, type</p>
 

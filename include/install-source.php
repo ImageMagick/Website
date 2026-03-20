@@ -12,7 +12,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick identify -version
 </samp></pre>
 
-<p>If the <a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md" rel="noopener noreferrer" target="_blank">changes</a> to the ImageMagick distribution.</p>
+<p>If the <a href="<?php echo $_SESSION['RelativePath']?>/../script/identify.php">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="/download/">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md" rel="noopener noreferrer" target="_blank">changes</a> to the ImageMagick distribution.</p>
 
 <p>The authoritative source code repository is <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>. </p>
 
@@ -24,7 +24,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-<?php echo MagickLibVersionText ?></samp></pre>
 
-<p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
@@ -65,7 +65,7 @@ make</samp></pre>
 
 <h2><a class="anchor" id="windows"></a>Install from Windows Source</h2>
 <p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your <samp>magick</samp> commands go to the old version.<p>
-<p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">binary release</a>.</p>
+<p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="/download/">binary release</a>.</p>
 
 <p>Clone the Github repo:<p>
 

@@ -10,7 +10,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p>ImageMagick includes a command-line interface for executing complex image processing tasks, as well as APIs for integrating its features into software applications. It is written in C and can be used on a variety of operating systems, including Linux, Windows, and macOS.</p>
 
-<p>The main website for ImageMagick can be found at <a href="https://imagemagick.org">https://imagemagick.org</a>. The most recent version available is <a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php">ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion; ?></a>. The source code for this software can be accessed through a <a href="https://github.com/ImageMagick/ImageMagick" rel="noopener noreferrer" target="_blank">repository</a>. In addition, we maintain a legacy version of ImageMagick, <a href="https://legacy.imagemagick.org" rel="noopener noreferrer" target="_blank">version 6</a>. Read our <a href="/../script/porting.php">porting</a> guide for comprehensive details on transitioning from version 6 to version 7.</p>
+<p>The main website for ImageMagick can be found at <a href="https://imagemagick.org">https://imagemagick.org</a>. The most recent version available is <a href="/download/">ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion; ?></a>. The source code for this software can be accessed through a <a href="https://github.com/ImageMagick/ImageMagick" rel="noopener noreferrer" target="_blank">repository</a>. In addition, we maintain a legacy version of ImageMagick, <a href="https://legacy.imagemagick.org" rel="noopener noreferrer" target="_blank">version 6</a>. Read our <a href="/../script/porting.php">porting</a> guide for comprehensive details on transitioning from version 6 to version 7.</p>
 
 <p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="<?php echo $_SESSION['RelativePath']?>/../script/security-policy.php">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.</p>
 
@@ -122,7 +122,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>describe the format and attributes of an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/download.php#iOS">ImageMagick on the iPhone</a></td>
+    <td><a href="/download/#iOS">ImageMagick on the iPhone</a></td>
     <td>convert, edit, or compose images on your <a href="https://www.apple.com/ios/">iOS</a> device such as the iPhone or iPad.</td>
   </tr>
   <tr>
