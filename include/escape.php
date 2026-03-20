@@ -360,11 +360,11 @@ when enclosed in braces (long form):</p>
     <td>image compression type</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull]</a></td>
+    <td><a href="/convex-hull/">%[convex-hull]</a></td>
     <td>points that form a convex hull around the foreground object.  Use <samp><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="/command-line-options/#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[convex-hull:extreme-points]</a></td>
+    <td><a href="/convex-hull/">%[convex-hull:extreme-points]</a></td>
     <td>return the top, right, bottom, and left extreme points of the convex hull.</td>
   </tr>
   <tr>
@@ -460,7 +460,7 @@ when enclosed in braces (long form):</p>
     <td>CALCULATED: minimum value statistic of image</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">%[minimum-bounding-box]</a></td>
+    <td><a href="/convex-hull/">%[minimum-bounding-box]</a></td>
     <td>Use <samp><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></samp> to identify the image background color.  Use <samp><a href="/command-line-options/#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <samp>minimum-bounding-box:area</samp>, <samp>minimum-bounding-box:width</samp>, <samp>minimum-bounding-box:height</samp>, <samp>minimum-bounding-box:angle</samp>, and <samp>minimum-bounding-box:unrotate</samp>.</td>
   </tr>
   <tr>

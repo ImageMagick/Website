@@ -58,7 +58,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>uniquely label connected regions in an image.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convex-hull.php">Convex hull</a></td>
+    <td><a href="/convex-hull/">Convex hull</a></td>
     <td>smallest area convex polygon containing the image foreground objects.  In addition, the minimum bounding box and unrotate angle are also generated.</td>
   </tr>
   <tr>
