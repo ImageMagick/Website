@@ -86,7 +86,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     <td>convert ordinary images into unintelligible gibberish and back again.</td>
   </tr>
   <tr>
-    <td><a href="<?php echo $_SESSION['RelativePath']?>/../script/convert.php">Format conversion</a></td>
+    <td><a href="/convert/">Format conversion</a></td>
     <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
