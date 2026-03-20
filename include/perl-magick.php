@@ -2191,7 +2191,7 @@ South, SouthEast</td>
 
 <p>A blob contains data that directly represent a particular image
 format in memory instead of on disk. PerlMagick supports
-blobs in any of these image <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a> and provides methods to convert a blob to or from a particular image format.</p>
+blobs in any of these image <a href="/formats/">formats</a> and provides methods to convert a blob to or from a particular image format.</p>
 
 <table class="table table-sm table-hover table-striped table-responsive caption-top">
 <caption>Blob Methods</caption>

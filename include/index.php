@@ -4,7 +4,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   exit();
 }
 ?>
-<p class="lead">ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969" rel="noopener noreferrer" target="_blank">&#174;</a></sup> is a free, <a href="/license/">open-source</a> software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">formats</a>, including JPEG, PNG, GIF, TIFF, and Ultra HDR.</p>
+<p class="lead">ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969" rel="noopener noreferrer" target="_blank">&#174;</a></sup> is a free, <a href="/license/">open-source</a> software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file <a href="/formats/">formats</a>, including JPEG, PNG, GIF, TIFF, and Ultra HDR.</p>
 
 <p>ImageMagick is widely used in industries such as web development, graphic design, and video editing, as well as in scientific research, medical imaging, and astronomy. Its versatile and customizable nature, along with its robust image processing capabilities, make it a popular choice for a wide range of image-related tasks.</p>
 
@@ -87,7 +87,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   </tr>
   <tr>
     <td><a href="/convert/">Format conversion</a></td>
-    <td>convert an image from one <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php">format </a> to another (e.g. PNG to JPEG).</td>
+    <td>convert an image from one <a href="/formats/">format </a> to another (e.g. PNG to JPEG).</td>
   </tr>
   <tr>
     <td><a href="https://usage.imagemagick.org/distorts/">Generalized pixel distortion</a></td>

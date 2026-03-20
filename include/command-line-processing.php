@@ -136,7 +136,7 @@ so we explicitly set one:
 
 <h4>Built-in Images and Patterns</h4>
 
-<p>ImageMagick has a number of built-in <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-images">images</a> and <a href="<?php echo $_SESSION['RelativePath']?>/../script/formats.php#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
+<p>ImageMagick has a number of built-in <a href="/formats/#builtin-images">images</a> and <a href="/formats/#builtin-patterns">patterns</a>.  To utilize the checkerboard pattern, for example, use:
 </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 640x480 pattern:checkerboard checkerboard.png</samp></pre>

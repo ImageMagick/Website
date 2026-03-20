@@ -3909,8 +3909,7 @@ href="#fill">-fill</a> option.</p>
 <p class="magick-description">The image format type.</p>
 
 <p>When used with the <samp>mogrify</samp> utility, this option converts any
-image to the image <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/formats.php">format</a> you specify.
+image to the image <a href="/formats/">format</a> you specify.
 For a list of image format types supported by ImageMagick, use <a
 href="#list">-list format</a>.</p>
 
