@@ -1,4 +1,4 @@
 <?php
-  $title='Format and Print Image Properties';
-  include('session.php');
+  header("Location: /escape/", true, 301);
+  exit();
 ?>

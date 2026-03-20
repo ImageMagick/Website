@@ -1119,7 +1119,7 @@ option has been given.  To modify a caption of images already in memory use
 "<samp><a href="#set">-set</a> caption</samp>". </p>
 
 <p>The caption can contain special format characters listed in the <a
-href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php">Format and
+href="/escape/">Format and
 Print Image Properties</a>. These attributes are expanded when the caption
 is finally assigned to the individual images. </p>
 
@@ -1806,7 +1806,7 @@ option has been given.  To modify a comment of images already in memory use
 "<samp><a href="#set">-set</a> comment</samp>". </p>
 
 <p>The comment can contain special format characters listed in the <a
-href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php">Format and
+href="/escape/">Format and
 Print Image Properties</a>. These attributes are expanded when the comment
 is finally assigned to the individual images. </p>
 
@@ -2202,8 +2202,7 @@ previously created.  Use <a href="#define">+define "*"</a> to remove all
 existing definitions.</p>
 
 <p>The same 'artifact' settings can also be defined using the <a
-href="#set" >-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image
+href="#set" >-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="/escape/" >Format and Print Image
 Properties</a> in the defined value. </p>
 
 <p>The <var>option</var> and <var>key</var> are case-independent (they are
@@ -3928,8 +3927,7 @@ filename becomes <var>image.tiff</var>.</p>
 
 <p class="magick-description">Output formatted image characteristics.</p>
 
-<p>See <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/escape.php">Format and Print Image
+<p>See <a href="/escape/">Format and Print Image
 Properties</a> for an explanation on how to specify the argument to this
 option.</p>
 
@@ -4776,8 +4774,7 @@ assigned to an image is used as a header string to print above the postscript
 image. </p>
 
 <p>You can include the image filename, type, width, height, or other image
-attribute by embedding special format character.  See <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/escape.php">Format and Print Image
+attribute by embedding special format character.  See <a href="/escape/">Format and Print Image
 Properties</a> for details of the percent escape codes.</p>
 
 <p>For example,</p>
@@ -6729,8 +6726,7 @@ the same name. </p>
 <p>This includes string 'properties' that are set by and assigned to images
 using the options <a href="#comment" >-comment</a>, <a href="#label"
 >-label</a>, <a href="#caption" >-caption</a>. These options actually assign
-a global 'artifact' which are automatically assigned (and any <a href="<?php
-echo $_SESSION['RelativePath'] ?>/../script/escape.php" >Format Percent
+a global 'artifact' which are automatically assigned (and any <a href="/escape/" >Format Percent
 Escapes</a> expanded) to images as they are read in.  For example:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick rose: -set Comment 'Rose is a rose is a rose is a rose' rose.jpg
@@ -6738,8 +6734,7 @@ identify -format %c rose.jpg
 Rose is a rose is a rose is a rose
 </samp></pre>
 
-<p>The set value can also make use of <a href="<?php echo
-$_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image
+<p>The set value can also make use of <a href="/escape/" >Format and Print Image
 Properties</a> in the defined value.  For example:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick rose: -set origsize '%wx%h' -resize 50% \
@@ -6782,8 +6777,8 @@ the original image has long since been modified or destroyed. For example: </p>
   label:'%[rosesize]'   label_size_of_rose.gif"
 </samp></pre>
 
-<p>Note that <a href="<?php echo $_SESSION['RelativePath']
-?>/../script/escape.php" >Format Percent Escapes</a> will only match
+<p>Note that <a href="/escape/"
+>Format Percent Escapes</a> will only match
 a 'artifact' if the given <var>key</var> does not match an existing
 'attribute' or 'property'.  </p>
 

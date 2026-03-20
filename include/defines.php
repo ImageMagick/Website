@@ -18,7 +18,7 @@ definition of a flag is created with that name. This used to control on/off
 options.  Use <a href="/command-line-options/#define">-define keys</a> to remove definitions
 previously created.  Use <a href="/command-line-options/#define">+define "*"</a> to remove all existing definitions.</p>
 
-<p>The same 'artifact' settings can also be defined using the <a href="/command-line-options/#set">-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="<?php echo $_SESSION['RelativePath']?>/../script/escape.php" >Format and Print Image Properties</a> in the defined value. </p>
+<p>The same 'artifact' settings can also be defined using the <a href="/command-line-options/#set">-set "option:<var>key</var>" "<var>value</var>"</a> option, which also allows the use of <a href="/escape/" >Format and Print Image Properties</a> in the defined value. </p>
 
 <p>The <var>option</var> and <var>key</var> are case-independent (they are
 converted to lowercase for use within the decoders) while the <var>value</var>
