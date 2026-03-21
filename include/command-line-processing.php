@@ -25,17 +25,17 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>Without knowing much about the ImageMagick command-line, you can probably surmise that the first command above converts an image in the JPEG format to one in the PNG format.  However, very few may realize the second, more complex command, gives a flat two-dimensional label a three-dimensional look with rich textures and simulated depth:</p>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/label.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/label.gif" width="78" height="53" alt="label" /></a>
-<img style="margin-top:16px; margin-bottom:17px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/button.gif">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/button.gif" width="78" height="53" alt="button" /></a>
+  <a href="/image/label.gif"><img src="/image/label.gif" width="78" height="53" alt="label" /></a>
+<img style="margin-top:16px; margin-bottom:17px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/button.gif">
+  <img src="/image/button.gif" width="78" height="53" alt="button" /></a>
 </ul>
 
 
 <p>Here we show percent completion of a task as a shaded cylinder:</p>
 
 <ul>
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/cylinder_shaded.png" width="320" height="200" alt="Shaded Cylinder" />
+  <img src="/image/cylinder_shaded.png" width="320" height="200" alt="Shaded Cylinder" />
 </ul>
 
 <p>Given the complexity of the rendering, you might be surprised it is accomplished by a single command-line:</p>
@@ -657,7 +657,7 @@ setting for more specifics.</p>
 
 <h4>Basic adjustments to width and height; the operators <samp>%</samp>, <samp>^</samp>, and <samp>!</samp> </h4>
 <p>Here, just below, are a few simple examples of <var>geometry</var>, showing how it might be used as an argument to the <a href="/command-line-options/#resize">-resize</a> option. We'll use the internal image <samp>logo:</samp> for our input image.
-<a href="<?php echo $_SESSION['RelativePath']?>/../image/logo.png">
+<a href="/image/logo.png">
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
 </p>
 

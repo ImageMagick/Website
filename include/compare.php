@@ -18,10 +18,10 @@ magick compare rose.jpg reconstruct.jpg difference.png
 magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/reconstruct.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/reconstruct.jpg" width="70" height="46" alt="rose" /></a>
-  <img style="margin:13px 0;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/difference.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/difference.png" width="70" height="46" alt="rose" /></a>
+  <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
+  <a href="/image/reconstruct.jpg"><img src="/image/reconstruct.jpg" width="70" height="46" alt="rose" /></a>
+  <img style="margin:13px 0;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/difference.png"><img src="/image/difference.png" width="70" height="46" alt="rose" /></a>
 </ul>
 
 <p>The red areas of the difference image emphasizes (highlight) pixels that are affected by the image sharpening, whereas white de-emphasizes (lowlight) pixels that are untouched by the sharpening process.</p>

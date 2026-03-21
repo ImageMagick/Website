@@ -10,7 +10,7 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 
 <p>For example, consider the following white rectangle on a black background:</p>
 
-<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" name="convert-hull" /></ul>
+<ul><img class="img-fluid d-block" src="/image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" name="convert-hull" /></ul>
 
 <p>The convex hull set of points may be computed as:</p>
 
@@ -24,16 +24,16 @@ magick [-fuzz <var>XXX</var>%] [-define convex-hull:background-color] -format "%
 
 <p>Here is an example using a non-convex shaped image on a black background:</p>
 
-<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" name="convert-hull-blocks" /></ul>
+<ul><img class="img-fluid d-block" src="/image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" name="convert-hull-blocks" /></ul>
 
 <ul><pre class="code">magick blocks_black.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</pre></ul>
 
-<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" name="convert-hull" /></ul>
+<ul><img class="img-fluid d-block" src="/image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" name="convert-hull" /></ul>
 
 <p>Finally, here is an example with a non-constant, non-black background using -fuzz to determine the background color:</p>
 
-<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn.png" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
+<ul><img class="img-fluid d-block" src="/image/convex-hull-barn.png" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
 
 <ul><pre class="code">magick barn_rot20.png -fuzz 30% -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</pre></ul>
 
-<ul><img class="img-fluid d-block" src="<?php echo $_SESSION['RelativePath']?>/../image/convex-hull-barn-closure.png" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull" /></ul>
+<ul><img class="img-fluid d-block" src="/image/convex-hull-barn-closure.png" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull" /></ul>

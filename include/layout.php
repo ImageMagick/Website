@@ -138,8 +138,8 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
       </div>
       <div class="col-md-3">
         <div class="container text-center my-3">
-          <a href="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" rel="noopener noreferrer" target="_blank">
-            <img alt="The Tao of the Spiritual Warrior" class="img-fluid img-thumbnail" height="1468" loading="lazy" src="<?php echo $_SESSION['RelativePath']?>/../image/wizard.png" width="1104">
+          <a href="/image/wizard.png" rel="noopener noreferrer" target="_blank">
+            <img alt="The Tao of the Spiritual Warrior" class="img-fluid img-thumbnail" height="1468" loading="lazy" src="/image/wizard.png" width="1104">
           </a>
           <p class="mt-2"><iframe src="https://github.com/sponsors/ImageMagick/button" title="Sponsor ImageMagick" height="35" width="107" style="border: 0;"></iframe></p>
         </div>
@@ -166,7 +166,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
       <a href="/security-policy/">Security</a> •
       <a href="/news/">News</a>
     &nbsp;
-      <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="<?php echo $_SESSION['RelativePath']?>/../image/wand.ico"></a>
+      <a href="#"><img class="d-inline" id="wand" alt="And Now a Touch of Magick" width="16" height="16" src="/image/wand.ico"></a>
     &nbsp;
       <a href="/links/">Related</a> •
       <a href="/sitemap/">Sitemap</a>

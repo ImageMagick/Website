@@ -16,11 +16,11 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick composite -gravity center smile.gif  rose: rose-over.png </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/smile.gif"><img src="<?php echo $_SESSION['RelativePath']?>/../image/smile.gif" width="48" height="48" alt="smile" /></a>
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/over.gif" width="56" height="46" alt="over" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose-over.png" width="70" height="46" alt="rose" /></a>
+  <a href="/image/smile.gif"><img src="/image/smile.gif" width="48" height="48" alt="smile" /></a>
+  <img src="/image/over.gif" width="56" height="46" alt="over" />
+  <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
+  <img style="margin-top:13px; margin-bottom:13px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/rose-over.png"><img src="/image/rose-over.png" width="70" height="46" alt="rose" /></a>
 </ul>
 
 <p>You can create three-dimensional effect with the <var>Atop</var>:</p>
@@ -30,11 +30,11 @@ magick -size 70x70 canvas:none -draw "circle 35,35 35,20" -channel RGB -negate -
 magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/white-highlight.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/white-highlight.png" width="70" height="70" alt="white highlight" /></a>
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/atop.gif" width="56" height="70" alt="atop" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-circle.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/red-circle.png" width="70" height="70" alt="red circle" /></a>
-  <img style="margin-top:25px; margin-bottom:25px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png" width="70" height="70" alt="red ball" /></a>
+  <a href="/image/white-highlight.png"><img src="/image/white-highlight.png" width="70" height="70" alt="white highlight" /></a>
+  <img src="/image/atop.gif" width="56" height="70" alt="atop" />
+  <a href="/image/red-circle.png"><img src="/image/red-circle.png" width="70" height="70" alt="red circle" /></a>
+  <img style="margin-top:25px; margin-bottom:25px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/red-ball.png"><img src="/image/red-ball.png" width="70" height="70" alt="red ball" /></a>
 </ul>
 
 <p>Or suppose you want to blend a bear into a stream <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamlessly</a>.  Try this command:</p>

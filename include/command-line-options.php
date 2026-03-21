@@ -450,7 +450,7 @@ coordinates (<var>x'</var>, <var>y'</var>) of a pixel at
 position (<var>x</var>, <var>y</var>) in the original
 image are calculated using the following matrix equation.</p>
 
-<p class="text-center"><img class="img-fluid img-thumbnail" alt="affine transformation"  src="<?php echo $_SESSION['RelativePath']?>/../image/affine.png"/> </p>
+<p class="text-center"><img class="img-fluid img-thumbnail" alt="affine transformation"  src="/image/affine.png"/> </p>
 
 <p> The size of the resulting image is that of the smallest rectangle that
 contains the transformed source image.  The parameters
@@ -630,8 +630,7 @@ conventionally considered to be <var>downward</var> for images.)</p>
 <p>The new (transformed) coordinates (<var>x'</var>, <var>y'</var>) of a pixel at position (<var>x</var>, <var>y</var>) in the image are calculated using the following matrix
 equation.</p>
 
-<p class="text-center"><img class="img-fluid img-thumbnail" alt="annotate transformation"  src="<?php
-echo $_SESSION['RelativePath']?>/../image/annotate.png"/></p>
+<p class="text-center"><img class="img-fluid img-thumbnail" alt="annotate transformation"  src="/image/annotate.png"/></p>
 
 <p>If <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var> are omitted, they default to 0. This makes the
 bottom-left of the text becomes the upper-left corner of the image, which is
@@ -949,7 +948,7 @@ the background image is weighted by the exact opposite amount. That is a
 <p>Convolve the image with a Gaussian or normal distribution using the given
 <var >Sigma</var> value.  The formula is:</p>
 
-<p class="text-center"><img class="img-fluid img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/></p>
+<p class="text-center"><img class="img-fluid img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/></p>
 
 <p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>
@@ -4206,7 +4205,7 @@ chunk, use</p>
 <p>Convolve the image with a Gaussian or normal distribution using the given
 <var >Sigma</var> value.  The formula is:</p>
 
-<p class="text-center"><img class="img-fluid img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="<?php echo $_SESSION['RelativePath']?>/../image/gaussian-blur.png"/> </p>
+<p class="text-center"><img class="img-fluid img-thumbnail" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/> </p>
 
 <p>The <var>sigma</var> value is the important argument, and
 determines the actual amount of blurring that will take place. </p>

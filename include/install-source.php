@@ -79,7 +79,7 @@ make</samp></pre>
 <p>Next, launch your Visual Studio IDE and choose <samp>Open->Project</samp>.  Select the configure workspace from the <samp>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/configure</samp> folder and open configure.sln.  Choose <samp>Build->Build Solution</samp>
 to compile the program and on completion run the program.</p>
 
-<ul><img class="img-fluid img-thumbnail" src="<?php echo $_SESSION['RelativePath']?>/../image/configure.jpg" alt="[configure]" /></ul>
+<ul><img class="img-fluid img-thumbnail" src="/image/configure.jpg" alt="[configure]" /></ul>
 
 <p>Press <samp>Next</samp> and click on the multi-threaded static build.  Now press, on <samp>Next</samp> twice and finally <samp>Finish</samp>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <samp>Open->Project</samp> and select the VisualStaticMT workspace from the <samp>ImageMagick-<?php echo(MagickLibVersionText); ?>/VisualMagick/</samp>  folder.  Finally, choose <samp>Build->Build Solution</samp> to compile and build the ImageMagick distribution.</p>
 

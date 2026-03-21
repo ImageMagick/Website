@@ -16,15 +16,15 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -background '#336699' -geometry 70x70+4+4 rose.jpg red-ball.png montage.jpg </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
-  <img style="margin-top:14px; margin-bottom:14px;" src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" />
+  <a href="/image/rose.jpg">
+  <img style="margin-top:14px; margin-bottom:14px;" src="/image/rose.jpg" width="70" height="46" alt="rose" />
   </a>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png">
-  <img style="margin-top:2px; margin-bottom:2px;" src="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png" width="70" height="70" alt="red ball" />
+  <a href="/image/red-ball.png">
+  <img style="margin-top:2px; margin-bottom:2px;" src="/image/red-ball.png" width="70" height="70" alt="red ball" />
   </a>
-  <img style="margin-top:27px; margin-bottom:27px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/montage.jpg">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/montage.jpg" width="148" height="74" alt="montage" />
+  <img style="margin-top:27px; margin-bottom:27px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/montage.jpg">
+  <img src="/image/montage.jpg" width="148" height="74" alt="montage" />
   </a>
 </ul>
 
@@ -33,15 +33,15 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick montage -label %f -frame 5 -background '#336699' -geometry 70x70+4+4 rose.jpg red-ball.png frame.jpg </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
-  <img style="margin-top:31px; margin-bottom:31px;" src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose.jpg" />
+  <a href="/image/rose.jpg">
+  <img style="margin-top:31px; margin-bottom:31px;" src="/image/rose.jpg" width="70" height="46" alt="rose.jpg" />
   </a>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png">
-  <img style="margin-top:19px; margin-bottom:19px;" src="<?php echo $_SESSION['RelativePath']?>/../image/red-ball.png" width="70" height="70" alt="red ball" />
+  <a href="/image/red-ball.png">
+  <img style="margin-top:19px; margin-bottom:19px;" src="/image/red-ball.png" width="70" height="70" alt="red ball" />
   </a>
-	<img style="margin-top:44px; margin-bottom:44px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/frame.jpg">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/frame.jpg" width="176" height="108" alt="frame" />
+	<img style="margin-top:44px; margin-bottom:44px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/frame.jpg">
+  <img src="/image/frame.jpg" width="176" height="108" alt="frame" />
   </a>
 </ul>
 

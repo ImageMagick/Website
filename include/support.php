@@ -58,7 +58,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2>Bitcoin</h2>
 <p>Our Bitcoin Address is: <a href="bitcoin:bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k?label=ImageMagick%20Donation">bc1qd7lckxu36ceupgt4wpnvnug3dr8jcnpqxsla2k</a>.  Or you can reference the below QR code:</p>
 <ul>
-<dt class="col-md-4"><img src="<?php echo $_SESSION['RelativePath']?>/../image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>
+<dt class="col-md-4"><img src="/image/bitcoin.svg" alt="Click to Donate to ImageMagick via Bitcoin" title="Click to Donate to ImageMagick via Bitcoin" width="160" height="160" /></dt>
 </ul>
 </fieldset>
 <br/>

@@ -30,9 +30,9 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>Here, we convert a black to a navy blue image:</p>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/black.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/black.png" width="64" height="64" alt="black" /></a>
-  <img style="margin-top:22px; margin-bottom:22px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/navy.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/navy.png" width="64" height="64" alt="navy" /></a>
+  <a href="/image/black.png"><img src="/image/black.png" width="64" height="64" alt="black" /></a>
+  <img style="margin-top:22px; margin-bottom:22px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/navy.png"><img src="/image/navy.png" width="64" height="64" alt="navy" /></a>
 </ul>
 
 <p>Or the expression can be complex:</p>
@@ -45,9 +45,9 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>This expression results in a high contrast version of the source image:</p>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" /></a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose-sigmoidal.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/rose-sigmoidal.png" width="70" height="46" alt="rose-sigmoidal" /></a>
+  <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
+  <img style="margin-top:13px; margin-bottom:13px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/rose-sigmoidal.png"><img src="/image/rose-sigmoidal.png" width="70" height="46" alt="rose-sigmoidal" /></a>
 </ul>
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
@@ -60,7 +60,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>The command above returns this image:</p>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/radial-gradient.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/radial-gradient.png" width="70" height="70" alt="radial-gradient" /></a>
+  <a href="/image/radial-gradient.png"><img src="/image/radial-gradient.png" width="70" height="70" alt="radial-gradient" /></a>
 </ul>
 
 <p>This FX expression adds random noise to an image:</p>
@@ -88,7 +88,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
   -clut -rotate -90 julia-set.png</samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
+  <a href="/image/julia-set.png"><img src="/image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
@@ -330,10 +330,10 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 </samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm.png" width="128" height="96" alt="logo-sm.png" /></a>
-<img style="margin-top:38px; margin-bottom:38px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-fx.png"><img src="<?php echo $_SESSION['RelativePath']?>/../image/logo-sm-fx.png" width="128" height="96" alt="logo-sm-fx.png" /></a>
+  <a href="/image/logo-sm-flop.png"><img src="/image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
+  <a href="/image/logo-sm.png"><img src="/image/logo-sm.png" width="128" height="96" alt="logo-sm.png" /></a>
+<img style="margin-top:38px; margin-bottom:38px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/logo-sm-fx.png"><img src="/image/logo-sm-fx.png" width="128" height="96" alt="logo-sm-fx.png" /></a>
 </ul>
 
 <br/>

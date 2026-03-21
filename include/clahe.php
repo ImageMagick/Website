@@ -14,15 +14,15 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>To visualize the benefits of CLAHE, we have a low contrast image of mountains:</p>
 <p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>We can improve the image with global histogram equalization:</p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-equalize.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains-equalize.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>We can further improve the image with the contrast limited adaptive histogram equalization image processing technique:</p>
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/mountains.jpg"><img src="<?php echo $_SESSION['RelativePath']?>/../image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
+  <a href="/image/mountains.jpg"><img src="/image/mountains-clahe.jpg" width="500" height="333" alt="label" /></a>
 </ul>
 <p>The latter image was produced with this command:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick mountains.jpg -clahe 25x25%+128+3 mountains-clahe.jpg</samp></pre>

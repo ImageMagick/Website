@@ -17,12 +17,12 @@ rose:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick mogrify -resize 50% rose.jpg</samp></pre>
 
 <ul>
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg">
-  <img src="<?php echo $_SESSION['RelativePath']?>/../image/rose.jpg" width="70" height="46" alt="rose" />
+  <a href="/image/rose.jpg">
+  <img src="/image/rose.jpg" width="70" height="46" alt="rose" />
   </a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="<?php echo $_SESSION['RelativePath']?>/../image/right.gif" width="20" height="20" alt="==>" />
-  <a href="<?php echo $_SESSION['RelativePath']?>/../image/rose.png">
-  <img style="margin-top:12px; margin-bottom: 11px;" src="<?php echo $_SESSION['RelativePath']?>/../image/rose.png" width="35" height="23" alt="rose" />
+  <img style="margin-top:13px; margin-bottom:13px;" src="/image/right.gif" width="20" height="20" alt="==>" />
+  <a href="/image/rose.png">
+  <img style="margin-top:12px; margin-bottom: 11px;" src="/image/rose.png" width="35" height="23" alt="rose" />
   </a>
 </ul>
 
