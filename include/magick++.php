@@ -8,7 +8,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p class="text-center"><a href="#documentation">Documentation</a> • <a href="#get">Obtaining Magick++</a> • <a href="#install">Installation</a> • <a href="#bugs">Reporting Bugs</a></p>
 
 <a class="anchor" id="intro"></a>
-<p class="lead"><a href="/api/Magick++/index.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
+<p class="lead"><a href="/magick++/Api.html">Magick++ API</a> is the object-oriented C++ API to the <a href="https://imagemagick.org/">ImageMagick</a> image-processing library.</p>
 <p>Magick++ supports an object model which is inspired by <a href="/perl-magick/">PerlMagick</a>.
 Images support implicit reference counting so that copy constructors
 and assignment incur almost no cost. The cost of actually copying an
@@ -30,9 +30,9 @@ performed on multiple images stored in STL containers.
 </p>
 <h2>Documentation</h2>
 <a class="anchor" id="documentation"></a>
-<p>Detailed <a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/index.html">documentation</a> is
+<p>Detailed <a href="/magick++/">documentation</a> is
 provided for all Magick++ classes, class methods, and template
-functions which comprise the API.  See a <a href="/Magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/Magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
+functions which comprise the API.  See a <a href="/magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2>Obtaining Magick++</h2>
 <a class="anchor" id="get"></a>
 <p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
@@ -42,7 +42,7 @@ or <a href="https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B">G
 <h2>Installation</h2>
 <a class="anchor" id="install"></a>
 <p>Once you have the Magick++ sources available, follow these detailed
-<a href="<?php echo $_SESSION['RelativePath']?>/../Magick++/Install.html">installation instructions</a> for UNIX and
+<a href="/magick++/Install.html">installation instructions</a> for UNIX and
 Windows.
 </p>
 <h2>Usage</h2>

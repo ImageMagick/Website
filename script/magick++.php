@@ -1,4 +1,4 @@
 <?php
-  $title='Magick++, C++ API';
-  include('session.php');
+  header("Location: /magick++/", true, 301);
+  exit();
 ?>
