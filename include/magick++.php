@@ -29,7 +29,7 @@ provided for all Magick++ classes, class methods, and template
 functions which comprise the API.  See a <a href="/magick++/tutorial/Magick++_tutorial.pdf">  Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/magick++/tutorial/Magick++_tutorial.odt" >source</a> if you want to correct, enhance, or expand the tutorial.</p>
 <h2>Obtaining Magick++</h2>
 <a class="anchor" id="get"></a>
-<p>Magick++ is included as part of <a href="../index.php">ImageMagick</a>
+<p>Magick++ is included as part of <a href="/">ImageMagick</a>
 source releases and may be retrieved via <a href="/download/">HTTP</a>
 or <a href="https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B">GitHub</a>.
 </p>
