@@ -1369,16 +1369,13 @@ the supported image formats.</p>
     <td>R</td>
     <td>Canvas image of specified color</td>
     <td>Useful to create solid color <var>canvas</var> images. Use
-       <a href="<?php echo $_SESSION['RelativePath']
-       ?>/../command-line-options/#size" >-size</a> and <a
-       href="<?php echo $_SESSION['RelativePath']
-       ?>/../command-line-options/#depth" >-depth</a> to specify the
+       <a href="/command-line-options/#size" >-size</a> and <a
+       href="/command-line-options/#depth" >-depth</a> to specify the
        image width, height, and depth.  Example canvas color specifications
        include <samp>canvas:red</samp> and <samp>canvas:#FF0000</samp>.<br/>
 
        If no color is specified a '<samp>white</samp>' canvas image is
-       generated.  If no <a href="<?php echo $_SESSION['RelativePath']
-       ?>/../command-line-options/#size" >-size</a> is specified
+       generated.  If no <a href="/command-line-options/#size" >-size</a> is specified
        a single pixel image of the specified color is generated.</td>
 
   </tr>

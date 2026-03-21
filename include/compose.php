@@ -134,15 +134,13 @@ For example the default compose method can be specified as just 'Over'.</p>
 <p>Many of these compose methods will clear the destination image which was
 not overlaid by the source image.  This is to be expected as part of that
 specific composition methods definition. You can disable this by setting the
-special <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#define"
+special <a href="/command-line-options/#define"
 >-define</a> 'compose:outside-overlay' to a value of 'false' will turn off
 this behavior. </p>
 
 <p>On top of the above 12 Duff-Porter Alpha Composition methods, one special
 related method '<samp>Copy</samp>' has been provided. This is equivalent to
-using the '<samp>Src</samp>'  with the special <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#define"
+using the '<samp>Src</samp>'  with the special <a href="/command-line-options/#define"
 >-define</a> option '<samp>compose:outside-overlay</samp>' set to
 '<samp>false</samp>', so as to only modify the overlaid area, without clearing
 the rest of the image outside the overlaid area.  </p>
@@ -268,7 +266,7 @@ below. </p>
 <p> The math composition is applied on an individual channel basis as defined by the <a href="/command-line-options/#channel" >-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha
 composition effects, becoming involved. </p>
 
-<p>Use <samp>-define compose:sync=false</samp> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="/command-line-options/#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p> 
+<p>Use <samp>-define compose:sync=false</samp> and the above mathematical compositions will no longer synchronise its actions with the alpha channel.  Instead the math composition is applied on an individual channel basis as defined by the <a href="/command-line-options/#channel">-channel</a>.  This includes the alpha channel. This special usage allows you to perform true mathematics of the image channels, without alpha composition effects, becoming involved.</p>
 
 <p>This define is not applied to the lighting composition methods (see below) even though they are closely related to mathematical composition methods.</p>
 
@@ -434,13 +432,10 @@ setting in the "<samp>composite</samp>" command.  For example... </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>composite ... -blend 50x50 ...  </samp></pre>
 
-<p>The "<samp>magick</samp>" command can accept these extra arguments to its <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#composite"
->-composite</a> operator, using the special <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#define">-define</a>
+<p>The "<samp>magick</samp>" command can accept these extra arguments to its <a href="/command-line-options/#composite"
+>-composite</a> operator, using the special <a href="/command-line-options/#define">-define</a>
 attribute of <samp>compose:args</samp>.  This means you can now
-make use of these special augmented <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#compose"
+make use of these special augmented <a href="/command-line-options/#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
@@ -564,8 +559,7 @@ with a brief summary of what they do. For more details see the equivalent
     <td>blur</td>
     <td>Arguments:
         <var>Width</var>[x<var>Height</var>[+<var>Angle</var>][+<var>Angle2</var>]]
-    <br/>Equivalent to "<samp>composite</samp>" <a href="<?php echo
-        $_SESSION['RelativePath']?>/../command-line-options/#blur-composite">-blur</a>.
+    <br/>Equivalent to "<samp>composite</samp>" <a href="/command-line-options/#blur-composite">-blur</a>.
     A Variable Blur Mapping Composition method, where each pixel in the
         overlaid region is replaced with an Elliptical Weighted Average (EWA),
         with an ellipse (typically a circle) of the given sigma size, scaled

@@ -565,15 +565,11 @@ up that name specific data sources. </p>
 
 <p>The primary search space (if not a specific attribute listed above) is
 a free-form property string.  Such strings are associated and saved with
-images, and are typically set using either the <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#set" >-set</a>
+images, and are typically set using either the <a href="/command-line-options/#set" >-set</a>
 CLI option (or API equivalent), or from special convenience options
-(such as <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#label"
->-label</a>, <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#comment"
->-comment</a>, <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#caption"
+(such as <a href="/command-line-options/#label"
+>-label</a>, <a href="/command-line-options/#comment"
+>-comment</a>, <a href="/command-line-options/#caption"
 >-caption</a>). </p>
 
 <p>These convenience options are globally saved (as 'global options' so they can
@@ -582,8 +578,7 @@ individual images, only when they are read in. At that time any internal
 percent escape present is then handled. </p>
 
 <p>To change a property of an image already in memory, you need to use <a
-href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#set" >-set</a>.
+href="/command-line-options/#set" >-set</a>.
 </p>
 
 <p>Note that properties, like attributes (and profiles), are saved with
@@ -606,8 +601,7 @@ artifacts, being an internal operational setting, is not saved with images (if
 such is possible). </p>
 
 <p>For example when you use <samp>-define 'distort:viewport=100x100'</samp> you
-are in fact generating a global option, which the <a href="<?php echo
-$_SESSION['RelativePath']?>/../command-line-options/#distort"
+are in fact generating a global option, which the <a href="/command-line-options/#distort"
 >-distort</a> operator will use to modify its behavior (distorted output
 image 'view'). </p>
 
