@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 
 <p class="magick-description">The <a href="/command-line-options/#define">-define</a> command-line option adds specific global settings generally used to control coders and image processing operations.</p>

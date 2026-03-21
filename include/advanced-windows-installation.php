@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="lead">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
 

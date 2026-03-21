@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="lead">The functionality of ImageMagick is typically utilized from the <a href="/command-line-processing/">command-line</a> or you can use the features from programs written in your favorite language. Choose from these interfaces:
 <a href="/develop/#ada">G2F</a> (Ada),

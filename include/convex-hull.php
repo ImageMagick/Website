@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="text-center"><a href="#about">Convex Hull</a> • <a href="#box">Minimum Bounding Box</a> • <a href="#unrotate">Unrotate an Image</a></p>
 

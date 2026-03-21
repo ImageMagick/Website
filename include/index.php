@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <p class="lead">ImageMagick<sup><a href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=78333969" rel="noopener noreferrer" target="_blank">&#174;</a></sup> is a free, <a href="/license/">open-source</a> software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file <a href="/formats/">formats</a>, including JPEG, PNG, GIF, TIFF, and Ultra HDR.</p>
 
 <p>ImageMagick is widely used in industries such as web development, graphic design, and video editing, as well as in scientific research, medical imaging, and astronomy. Its versatile and customizable nature, along with its robust image processing capabilities, make it a popular choice for a wide range of image-related tasks.</p>

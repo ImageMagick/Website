@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="text-center"><a href="#miff-header">MIFF Header</a> • <a href="#binary">MIFF Binary Data</a></p>
 

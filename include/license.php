@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="text-center"><a href="#terms">Terms and Conditions for Use, Reproduction, and Distribution</a> • <a href="#apply">How to Apply the License to your Work</a></p>
 

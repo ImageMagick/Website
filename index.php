@@ -1,4 +1,4 @@
 <?php
   $title='Mastering Digital Image Alchemy';
-  include('session.php');
+  include('script/session.php');
 ?>

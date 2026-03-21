@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="text-center"><a href="#contribute">Contribute a Bug Fix or Enhancement</a> • <a href="#support">Sponsor the ImageMagick Project</a></p>
 

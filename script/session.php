@@ -35,7 +35,6 @@
   $useCache=!isset($dynamic_content);
   if (isset($_SERVER['MAGICK_DISABLE_CACHE']) && $_SERVER['MAGICK_DISABLE_CACHE'] == "true")
     $useCache=false;
-  session_name('ImageMagick');
   if (!$useCache) {
     session_cache_limiter('private_no_expire, must-revalidate');
   } else {
@@ -43,12 +42,9 @@
       /*
         Render cached content.
       */
-      session_start();
       readfile($cacheName);
       echo "<!-- Magick Cache " . date('jS F Y H:i',filemtime($cacheName)) .
         " -->";
-      session_unset();
-      session_destroy();
       ob_end_flush();
       exit;
     }
@@ -59,15 +55,12 @@
   */
   ini_set("url_rewriter.tags", "a=href,area=href,input=src,fieldset=");
   ini_set("arg_separator.output","&amp;");
-  session_start();
-  $path=pathinfo($filename);
-  $_SESSION['AbsolutePath']=$path['dirname'];
   $path=pathinfo($_SERVER['SCRIPT_NAME']);
   if (($_SERVER['SERVER_NAME'] == 'www.imagemagick.com') ||
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.net') ||
       ($_SERVER['SERVER_NAME'] == 'www.imagemagick.org'))
     {
-      header("Location: https://imagemagick.org/index.php");
+      header("Location: https://imagemagick.org/");
       exit;
     }
   $use_sts = true;
@@ -81,19 +74,17 @@
     header('Status-Code: 301');
     header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
   }
-  require_once($_SESSION['AbsolutePath'] . '/../class/Mail.php');
-  require_once($_SESSION['AbsolutePath'] . '/../class/MetaContent.php');
-  require_once($_SESSION['AbsolutePath'] . '/../function/geometry.php');
-  require_once($_SESSION['AbsolutePath'] . '/../include/define.php');
-  require_once($_SESSION['AbsolutePath'] . '/../include/layout.php');
+  require_once(__DIR__ . '/../class/Mail.php');
+  require_once(__DIR__ . '/../class/MetaContent.php');
+  require_once(__DIR__ . '/../function/geometry.php');
+  require_once(__DIR__ . '/../include/define.php');
+  require_once(__DIR__ . '/../include/layout.php');
   SiteHeader($title,$topic,$folder);
-  require_once($_SESSION['AbsolutePath'] . '/../include/' . $script);
+  require_once(__DIR__ . '/../include/' . $script);
   SiteFooter();
   if ($useCache) {
     file_put_contents($cacheName,ob_get_contents());
   }
-  session_unset();
-  session_destroy();
   ob_end_flush();
   exit;
 ?>

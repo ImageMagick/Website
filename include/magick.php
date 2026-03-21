@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION) || !is_array($_SESSION)) {
-  header("Location: ../script/index.php");
-  exit();
-}
-?>
 <div>
 <p class="lead">Use the <samp>magick</samp> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <samp>magick</samp> command or see below for example usages of the command.</p>
 
