@@ -23,7 +23,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 
 <p><a href="https://github.com/fmw42">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamless and saliency blending</a> composite operators.</p>
 
-<p>We recently updated Anthony's <a href="<?php echo $_SESSION['RelativePath']?>/../../Usage">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
+<p>We recently updated Anthony's <a href="https://usage.imagemagick.org/">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
 
 
 <h4>Related Software</h4>

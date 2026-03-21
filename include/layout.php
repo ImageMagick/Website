@@ -119,7 +119,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <div class="col-lg-8 mx-auto text-body-secondary pt-5 pt-lg-5">
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <div class="mt-3 ms-3">
-      <a href="<?php echo $_SESSION['RelativePath']?>/../" class="text-decoration-none">
+      <a href="/" class="text-decoration-none">
         <h1 class="fs-2 mb-1 display-5"><?php echo $myTitle; ?></h1>
       </a>
       <h2 class="fs-5 text-muted h4"><?php echo $subtitle; ?></h2>

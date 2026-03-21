@@ -16,7 +16,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick conjure -dimensions 400x400 msl:incantation.msl
 </samp></pre>
 
-<p>The MSL script <a href="<?php echo $_SESSION['RelativePath']?>/../source/incantation.msl">incantation.msl</a> used above is here:</p>
+<p>The MSL script <a href="/source/incantation.msl">incantation.msl</a> used above is here:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;image&gt;

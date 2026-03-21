@@ -49,7 +49,7 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <h2><a class="anchor" id="techniques"></a>ImageMagick Techniques</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></dd>
+  <dd class="col-md-8"><a href="/docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></dd>
   <dd class="col-md-8"><a href="http://www.fmwconcepts.com/imagemagick/digital_image_filtering.pdf">Digital Image Filtering</a></dd>
 </ul>
 
