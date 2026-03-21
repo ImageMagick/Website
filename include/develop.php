@@ -42,7 +42,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="c__"></a>C++</dt>
 
-<dd class="col-md-8"><a href="<?php echo $_SESSION['RelativePath']?>/../script/magick++.php">Magick++</a> provides a thread-safe object-oriented C++ interface to ImageMagick.  See <a href="/magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
+<dd class="col-md-8"><a href="/magick++/">Magick++</a> provides a thread-safe object-oriented C++ interface to ImageMagick.  See <a href="/magick++/tutorial/Magick++_tutorial.pdf">A Gentle Introduction to Magick++</a> for an introductory tutorial to Magick++.  We include the <a href="/magick++/tutorial/Magick++_tutorial.odt">source</a> if you want to correct, enhance, or expand the tutorial.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="go"></a>GO</dt>
   <dd class="col-md-8"><a href="https://github.com/gographics/imagick">GoImagick</a> is a set of Go bindings to ImageMagick's MagickWand and MagickCore C APIs.</dd>

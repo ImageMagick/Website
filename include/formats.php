@@ -2086,7 +2086,7 @@ the supported image formats.</p>
     <td>IPTC</td>
     <td>RW</td>
     <td>IPTC Newsphoto (binary)</td>
-    <td>To read, use <a href="/command-line-options/#profile">-profile</a> with <a href="<?php echo $_SESSION['RelativePath']?>/../script/magick.php">magick</a></td>
+    <td>To read, use <a href="/command-line-options/#profile">-profile</a> with <a href="/magick/">magick</a></td>
   </tr>
 
   <tr>

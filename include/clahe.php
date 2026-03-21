@@ -30,5 +30,5 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
 <p>For tile sizes that do not divide evenly into the image dimensions, CLAHE utilizes virtual pixels, as such the results can vary slightly based on your chosen virtual pixel method.  For example,</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick mountains.jpg -virtual-pixel mirror -clahe 300x300+128+3! mountains-clahe.jpg</samp></pre>
 <p>Notice the <samp>!</samp>.  That forces the tile size to exactly 300x300 pixels, whereas without the <samp>!</samp>, the tile size respects the aspect ratio of the image and results in tile dimensions of <samp>300x200</samp>.</p>
- 
+
 </div>

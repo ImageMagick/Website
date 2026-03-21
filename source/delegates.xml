@@ -61,7 +61,7 @@
   <delegate decode="bpg" command="&apos;bpgdec&apos; -b 16 -o &apos;%o.png&apos; &apos;%i&apos;; /usr/bin/mv &apos;%o.png&apos; &apos;%o&apos;"/>
   <delegate decode="png" encode="bpg" command="&apos;bpgenc&apos; -b 12 -o &apos;%o&apos; &apos;%i&apos;"/>
   <delegate decode="blender" command="&apos;blender&apos; -b &apos;%i&apos; -F PNG -o &apos;%o&apos;&apos;\n&apos;magick&apos; convert -concatenate &apos;%o*.png&apos; &apos;%o&apos;"/>
-  <delegate decode="browse" stealth="True" spawn="True" command="&apos;xdg-open&apos; http://www.imagemagick.org/; /usr/bin/rm &apos;%i&apos;"/>
+  <delegate decode="browse" stealth="True" spawn="True" command="&apos;xdg-open&apos; https://imagemagick.org/; /usr/bin/rm &apos;%i&apos;"/>
   <delegate decode="cdr" command="&apos;uniconvertor&apos; &apos;%i&apos; &apos;%o.svg&apos;; /usr/bin/mv &apos;%o.svg&apos; &apos;%o&apos;"/>
   <delegate decode="cgm" command="&apos;uniconvertor&apos; &apos;%i&apos; &apos;%o.svg&apos;; /usr/bin/mv &apos;%o.svg&apos; &apos;%o&apos;"/>
   <delegate decode="https" command="&apos;curl&apos; -s -k -L -o &apos;%o&apos; &apos;https:%M&apos;"/>

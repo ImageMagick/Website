@@ -14,7 +14,7 @@
 <!--
   Creating a security policy that fits your specific local environment
   before making use of ImageMagick is highly advised. You can find guidance on
-  setting up this policy at https://imagemagick.org/script/security-policy.php,
+  setting up this policy at https://imagemagick.org/security-policy/,
   and it's important to verify your policy using the validation tool located
   at https://imagemagick-secevaluator.doyensec.com/.
 
@@ -78,7 +78,7 @@
     <policy domain="coder" rights="none" pattern="*" />
     <policy domain="coder" rights="read|write" pattern="{GIF,JPEG,PNG,WEBP}" />
 
-  See https://imagemagick.org/script/security-policy.php for a deeper
+  See https://imagemagick.org/security-policy/ for a deeper
   understanding of ImageMagick security policies.
 -->
 <policymap>

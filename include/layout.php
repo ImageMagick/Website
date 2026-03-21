@@ -34,10 +34,6 @@ if (!isset($_SESSION) || !is_array($_SESSION)) {
     $meta->creator="ImageMagick Studio LLC";
     $myTitle=$title;
     $subtitle=$meta->sitename;
-    if ($_SERVER['REQUEST_URI'] == '/script/index.php') {
-      $myTitle=$meta->sitename;
-      $subtitle=$title;
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
