@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-18](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-17...7.1.2-18) - 2026-03-22
+
+### Merged
+
+- Fix animated JXL frame delay handling [`#8622`](https://github.com/ImageMagick/ImageMagick/pull/8622)
+- Fix off-by-one in MNG FRAM chunk delay/timeout parsing [`#8623`](https://github.com/ImageMagick/ImageMagick/pull/8623)
+- Fix MNG frame disposal for transparent animations [`#8625`](https://github.com/ImageMagick/ImageMagick/pull/8625)
+- Fix composite -dissolve adding random noise [`#8621`](https://github.com/ImageMagick/ImageMagick/pull/8621)
+- Bump actions/download-artifact from 8.0.0 to 8.0.1 [`#8629`](https://github.com/ImageMagick/ImageMagick/pull/8629)
+
+### Commits
+
+- beta release [`ba45717`](https://github.com/ImageMagick/ImageMagick/commit/ba457178852252cf7ef3900dce4041508dd9d905)
+- check for undefined shift [`ec50f94`](https://github.com/ImageMagick/ImageMagick/commit/ec50f94efbeaa241165062f6d848ba158f50b83b)
+- eliminate compiler warning [`050b6aa`](https://github.com/ImageMagick/ImageMagick/commit/050b6aaa31ef304c22815fa68b146ef96ff138df)
+- https://github.com/ImageMagick/ImageMagick/issues/8624 [`8947775`](https://github.com/ImageMagick/ImageMagick/commit/8947775ecf138e9227df57f8dee63b5f79f58387)
+- https://github.com/ImageMagick/ImageMagick/issues/8630 [`4de5698`](https://github.com/ImageMagick/ImageMagick/commit/4de569883decdea6c4bd25b381fb7d7fef7dab56)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-9r56-3gjq-hqf7 [`bee248e`](https://github.com/ImageMagick/ImageMagick/commit/bee248ee853a686a969fae9cfb1e02dd5aae245b)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8793-7xv6-82cf [`ee4468a`](https://github.com/ImageMagick/ImageMagick/commit/ee4468a8ab0635fcaa9c561e583c56ada3b1b721)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-mw3m-pqr2-qv7c [`e2d506a`](https://github.com/ImageMagick/ImageMagick/commit/e2d506aa7989c52e9bbd7878858918cbf35e3335)
+- tweak MINGW conditional compile [`db74d60`](https://github.com/ImageMagick/ImageMagick/commit/db74d606ab93e878c63db5ea555459014938dbd8)
+- Updated the caphyon/advinst-github-action. [`79f3741`](https://github.com/ImageMagick/ImageMagick/commit/79f37417b5c75e2d8c89a704511666b3f3ba539a)
+- https://github.com/ImageMagick/ImageMagick/issues/8632 [`5c4cca7`](https://github.com/ImageMagick/ImageMagick/commit/5c4cca722ac88c8ce60de063c51193650493b4c5)
+- https://github.com/ImageMagick/ImageMagick/discussions/6914 [`093f1b7`](https://github.com/ImageMagick/ImageMagick/commit/093f1b790217824e6ff535462852bd5c755bce4c)
+- support "open" on Mac OS X [`03d19de`](https://github.com/ImageMagick/ImageMagick/commit/03d19de047d7ce79e1f617562c43184ba54fa06e)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-6p22-q7w5-33pg [`3f55da3`](https://github.com/ImageMagick/ImageMagick/commit/3f55da39c813cc44ff21a61d6e0b85c375a2c1a2)
+- Updated configure. [`063a246`](https://github.com/ImageMagick/ImageMagick/commit/063a2462ad370f94da0d94f71fb02d7d81dc7bb3)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-mw3m-pqr2-qv7c [`d3af057`](https://github.com/ImageMagick/ImageMagick/commit/d3af057fb9d3666762ca3731c2360f544f607f88)
+- sync pixels before writing if ping is active [`df8cbbb`](https://github.com/ImageMagick/ImageMagick/commit/df8cbbb980e45c2721df9a01acba4cf6ec466493)
+- sync pixels [`79e4127`](https://github.com/ImageMagick/ImageMagick/commit/79e41271465164880f0e79525fd4619fdc685727)
+- https://github.com/ImageMagick/ImageMagick/issues/8630 [`47e6b33`](https://github.com/ImageMagick/ImageMagick/commit/47e6b33f59de5478598f321d95663be63b4bf354)
+- https://github.com/ImageMagick/ImageMagick/issues/8630 [`f79cd57`](https://github.com/ImageMagick/ImageMagick/commit/f79cd57f635d78e457182123ba6062971552c011)
+- Updated the Windows dependencies. [`b0695c9`](https://github.com/ImageMagick/ImageMagick/commit/b0695c97b73b011ae14b25aed588ac6cc3c51c4b)
+- sync pixels within JPEG coder [`4d7ebd3`](https://github.com/ImageMagick/ImageMagick/commit/4d7ebd363e6e68ed2721e599a35c93a3c217c282)
+- release [`d4e4b2b`](https://github.com/ImageMagick/ImageMagick/commit/d4e4b2b35a573fb7d96bc64ff1a417415bbe0f4c)
+
 ## [7.1.2-17](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-16...7.1.2-17) - 2026-03-15
 
 ### Merged
