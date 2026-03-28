@@ -74,7 +74,6 @@
     header('Status-Code: 301');
     header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
   }
-  require_once(__DIR__ . '/../class/Mail.php');
   require_once(__DIR__ . '/../class/MetaContent.php');
   require_once(__DIR__ . '/../function/geometry.php');
   require_once(__DIR__ . '/../include/define.php');
