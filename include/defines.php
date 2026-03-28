@@ -721,6 +721,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>dcm:fix-byte-order=<var>true</var></td>
+    <td>Fix incorrect byte order when reading pixels from the file.</td>
+  </tr>
+
+  <tr>
     <td>dcm:rescale=<var>true</var></td>
      <td>Enable interpretation of the rescale slope and intercept settings
      in the file.</td>
