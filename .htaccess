@@ -1,0 +1,48 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# If the request was made to 50.251.58.13, redirect to imagemagick.org
+RewriteCond %{HTTP_HOST} ^50\.251\.58\.13$
+RewriteRule ^(.*)$ https://imagemagick.org/ [R=301,L]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.imagemagick\.org [NC]
+RewriteRule ^(.*)$ https://imagemagick.org/$1 [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect any request that starts with /Usage
+RewriteCond %{REQUEST_URI} ^/Usage
+RewriteRule ^(.*)$ https://usage.imagemagick.org/ [R=301,L]
+
+# Set MIME types for ebook and media files
+AddType application/epub+zip .epub
+
+# Prevent directory listing
+# Options -Indexes
+
+# Cache static files for performance
+<FilesMatch "\.(pdf|epub|mp4|webp|jpg|jpeg|png|gif|css|js)$">
+  Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Protect .htaccess itself
+<Files .htaccess>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Prevent hotlinking of media files
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?imagemagick\.org/ [NC]
+RewriteRule \.(pdf|epub|mp4|webp|jpg|jpeg|png|gif)$ - [F]
+
+# ImageMagick downloads
+RewriteRule ^ImageMagick/download/(.*)$ https://download.imagemagick.org/archive/$1 [R=302,L]
+RewriteRule ^download/(.*)$ https://download.imagemagick.org/archive/$1 [R=302,L]
+RewriteRule ^download https://download.imagemagick.org/archive [R=302,L]
+
+# Custom 404 error page
+# ErrorDocument 404 /404.html
