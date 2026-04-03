@@ -39,5 +39,10 @@ RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https://(www\.)?imagemagick\.org/ [NC]
 RewriteRule \.(pdf|epub|mp4|webp|jpg|jpeg|png|gif)$ - [F]
 
+# On download.imagemagick.org, only allow the /archive path
+RewriteCond %{HTTP_HOST} ^download\.imagemagick\.org$ [NC]
+RewriteCond %{REQUEST_URI} !^/archive(?:/|$) [NC]
+RewriteRule ^(.*)$ https://download.imagemagick.org/archive/ [R=301,L]
+
 # Custom 404 error page
 # ErrorDocument 404 /404.html
