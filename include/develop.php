@@ -32,7 +32,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 
-<dd class="col-md-8"><a href="https://imagemagick.org/archive/ch/">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
+<dd class="col-md-8"><a href="https://download.imagemagick.org/archive/ch/">ChMagick</a> is a <a href="http://www.softintegration.com/">Ch</a> binding to the MagickCore and MagickWand API.  Ch is an embeddable C/C++ interpreter for cross-platform scripting.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="c__"></a>C++</dt>
 
@@ -106,7 +106,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
 <dd class="col-md-8"><a href="http://wand-py.org/">Wand</a> is a ctypes-based ImagedMagick binding library for Python.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
-<dd class="col-md-8"><a href="https://imagemagick.org/archive/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
+<dd class="col-md-8"><a href="https://download.imagemagick.org/archive/python/">PythonMagick</a> is an object-oriented Python interface to ImageMagick.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
 <dd class="col-md-8"><a href="http://www.assembla.com/wiki/show/pythonmagickwand">PythonMagickWand</a> is an object-oriented Python interface to MagickWand based on ctypes.</dd>
   <dt class="col-md-4"><a class="anchor" id="php"></a>&nbsp;</dt>
@@ -139,7 +139,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 
 <dt class="col-md-4"><a class="anchor" id="tcl"></a>Tcl/Tk</dt>
 
-<dd class="col-md-8"><a href="https://imagemagick.org/archive/tcl">TclMagick</a> a native Tcl-extension to the ImageMagick MagickWand API.</dd>
+<dd class="col-md-8"><a href="https://download.imagemagick.org/archive/tcl">TclMagick</a> a native Tcl-extension to the ImageMagick MagickWand API.</dd>
 
 <dt class="col-md-4"><a class="anchor" id="wasm"></a>WebAssembly</dt>
 <dd class="col-md-8"><a href="https://github.com/dlemstra/Magick.WASM">Magick.WASM</a> the WASM library for ImageMagick.</dd>

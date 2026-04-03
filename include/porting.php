@@ -17,7 +17,7 @@ better reporting of which option failed, the consolidation and deprecation of
 options, and more global use of 'image properties' (more commonly known as
 'percent escapes' in option arguments. </p>
 
-<p>ImageMagick version 7 is available now as a <a href="https://imagemagick.org/archive/">production</a> release.</p>
+<p>ImageMagick version 7 is available now as a <a href="https://download.imagemagick.org/archive/">production</a> release.</p>
 
 <p>Now that ImageMagick version 7 is released, we continue to support version 6 for a minimum of 10 years.  Support for version 6 is limited primarily to bug fixes and security patches with few enhancements.</p>
 

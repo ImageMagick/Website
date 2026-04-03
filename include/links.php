@@ -72,7 +72,7 @@
 <h2><a class="anchor" id="bank"></a>Image Bank</h2>
 
 <ul>
-  <dd class="col-md-8"><a href="https://imagemagick.org/archive/image-bank/">Image Bank</a>: a small digital test image bank</dd>
+  <dd class="col-md-8"><a href="https://download.imagemagick.org/archive/image-bank/">Image Bank</a>: a small digital test image bank</dd>
 </ul>
 
 <h2><a class="anchor" id="related-projects"></a>Related Projects</h2>

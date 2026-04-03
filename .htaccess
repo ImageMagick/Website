@@ -39,10 +39,5 @@ RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https://(www\.)?imagemagick\.org/ [NC]
 RewriteRule \.(pdf|epub|mp4|webp|jpg|jpeg|png|gif)$ - [F]
 
-# ImageMagick downloads
-RewriteRule ^ImageMagick/download/(.*)$ https://download.imagemagick.org/archive/$1 [R=302,L]
-RewriteRule ^download/(.*)$ https://download.imagemagick.org/archive/$1 [R=302,L]
-RewriteRule ^download https://download.imagemagick.org/archive [R=302,L]
-
 # Custom 404 error page
 # ErrorDocument 404 /404.html

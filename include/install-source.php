@@ -18,7 +18,7 @@
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-<?php echo MagickLibVersionText ?></samp></pre>
 
-<p>Or download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>Or download <a href="https://download.imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
 
@@ -66,7 +66,7 @@ make</samp></pre>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</samp></pre>
 
 
-<p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://imagemagick.org/archive/windows">ImageMagick-Windows.zip</a> from <a href="https://imagemagick.org/archive/windows">imagemagick.org</a> or a <a href="/mirror/">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>and run <samp>CloneRepositories.cmd</samp>.  Or download <a href="https://download.imagemagick.org/archive/windows">ImageMagick-Windows.zip</a> from <a href="https://download.imagemagick.org/archive/windows">imagemagick.org</a> or a <a href="/mirror/">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>unzip ImageMagick-windows.zip</samp></pre>
 <p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p>

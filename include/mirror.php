@@ -18,7 +18,7 @@
   <dt>Switzerland</dt>
     <dd><a href="https://mirror.metanet.ch/imagemagick/" rel="noopener noreferrer" target="_blank">https://mirror.metanet.ch/imagemagick/</a></dd>
   <dt>United States</dt>
-    <dd><a href="https://imagemagick.org/archive/" rel="noopener noreferrer" target="_blank">https://imagemagick.org/archive</a></dd>
+    <dd><a href="https://download.imagemagick.org/archive/" rel="noopener noreferrer" target="_blank">https://download.imagemagick.org/archive/</a></dd>
     <dd><a href="https://github.com/ImageMagick" rel="noopener noreferrer" target="_blank">https://github.com/ImageMagick</a> (Git)</dd>
   <dt>Select Binaries </dt>
     <dd><a href="http://www.macports.org/ports.php?by=name&amp;substr=imagemagick" rel="noopener noreferrer" target="_blank">http://www.macports.org/ports.php?by=name&amp;substr=imagemagick</a> (Mac OS X)</dd>

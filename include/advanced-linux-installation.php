@@ -5,7 +5,7 @@
 
 <h2><a class="anchor" id="download"></a>Download &amp; Unpack</h2>
 
-<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.  Download <a href="https://imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.  Download <a href="https://download.imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 
 <p>Unpack the distribution it with this command:</p>
 
@@ -254,7 +254,7 @@ Options used to compile and link:
     <td>--without-perl</td>
     <td>disable build/install of PerlMagick, or
   <br /><br />
-  By default, PerlMagick is conveniently compiled and installed as part of ImageMagick's normal <samp>configure</samp>, <samp>make</samp>, <samp>sudo make install</samp> process. When <samp>--without-perl</samp> is specified, you must first install ImageMagick, download the <a href="https://imagemagick.org/archive/perl/">PerlMagick</a> source distribution, build, and finally install PerlMagick. Note, PerlMagick is configured even if <samp>--without-perl</samp> is specified. If the argument <var>--with-perl=/path/to/perl</var> is supplied, <var>/../path/to/perl</var> is be taken as the PERL interpreter to use. This important in case the <samp>perl</samp> executable in your PATH is not PERL5, or is not the PERL you want to use.</td>
+  By default, PerlMagick is conveniently compiled and installed as part of ImageMagick's normal <samp>configure</samp>, <samp>make</samp>, <samp>sudo make install</samp> process. When <samp>--without-perl</samp> is specified, you must first install ImageMagick, download the <a href="https://download.imagemagick.org/archive/perl/">PerlMagick</a> source distribution, build, and finally install PerlMagick. Note, PerlMagick is configured even if <samp>--without-perl</samp> is specified. If the argument <var>--with-perl=/path/to/perl</var> is supplied, <var>/../path/to/perl</var> is be taken as the PERL interpreter to use. This important in case the <samp>perl</samp> executable in your PATH is not PERL5, or is not the PERL you want to use.</td>
   </tr>
   <tr>
     <td>--with-perl=PERL</td>
@@ -423,7 +423,7 @@ identify logo.gif</samp></pre>
 
 <h2><a class="anchor" id="linux"></a>Linux-specific Build instructions</h2>
 
-<p>Download <a href="https://imagemagick.org/archive/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://imagemagick.org/archive">imagemagick.org</a> or its <a href="/download/">mirrors</a> and verify the distribution against its <a href="https://imagemagick.org/archive/linux/SRPMS/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://download.imagemagick.org/archive/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or its <a href="/download/">mirrors</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/linux/SRPMS/digest.rdf">message digest</a>.</p>
 
 <p>Build ImageMagick with this command:</p>
 
@@ -453,7 +453,7 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 
 <p>Now lets build ImageMagick:</p>
 
-	  <p><a href="/download/">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+	  <p><a href="/download/">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 	  <p>Unpack and change into the top-level ImageMagick directory:</p>
     <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>.tar.gz
 cd ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?></samp></pre>

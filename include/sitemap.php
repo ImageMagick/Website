@@ -26,11 +26,11 @@
 
 <dl >
   <li><a href="/download/">Download ImageMagick</a>: ImageMagick source and binary distributions are available from a variety of FTP and Web mirrors.</li>
-  <li><a href="https://imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
-  <li><a href="https://imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
-  <li><a href="https://imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
+  <li><a href="https://download.imagemagick.org/archive">Linux source</a>: Linux source distributions.</li>
+  <li><a href="https://download.imagemagick.org/archive/windows">Windows source</a>: Windows source distributions.</li>
+  <li><a href="https://download.imagemagick.org/archive/binaries">Linux and Windows binaries</a>: Linux and Windows binary distributions.</li>
   <li><a href="https://github.com/ImageMagick/ImageMagick">Git repository</a>: stable and development source releases.</li>
-  <li><a href="https://imagemagick.org/archive/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
+  <li><a href="https://download.imagemagick.org/archive/delegates">Delegate libraries</a>: ImageMagick depends on a number of optional delegate libraries to extend its functionality.</li>
 </dl>
 
 <h2><a class="anchor" id="install"></a>Install ImageMagick</h2>
@@ -77,9 +77,9 @@
     <li><a href="http://code.google.com/p/nmagick">nMagick</a>: is a port of the ImageMagick library to the haXe and Neko platforms.</li>
     <li><a href="http://wiki.freepascal.org/PascalMagick">PascalMagick</a>: a Pascal binding for the MagickWand API and also the low-level MagickCore library.</li>
     <li><a href="/perl-magick/">PerlMagick</a>: convert, compose, and edit images from the Perl language.</li>
-    <li><a href="https://imagemagick.org/archive/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
+    <li><a href="https://download.imagemagick.org/archive/python/">PythonMagick</a>: an object-oriented Python interface to ImageMagick.</li>
     <li><a href="http://rmagick.rubyforge.org/">RMagick</a>: is an interface between the Ruby programming language and ImageMagick.</li>
-    <li><a href="https://imagemagick.org/archive/tcl">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
+    <li><a href="https://download.imagemagick.org/archive/tcl">TclMagick</a>: a native Tcl-extension to the ImageMagick MagickWand API.</li>
   </ul></li>
 </dl>
 
