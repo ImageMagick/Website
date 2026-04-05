@@ -87,10 +87,10 @@ Version: ImageMagick <?php echo MagickLibVersionText . MagickLibSubversion ?> <?
 
 <p>Once the pixel cache is associated with an image, you typically want to get, update, or put pixels into it.  We refer to pixels inside the image region as <a href="#authentic-pixels">authentic pixels</a> and outside the region as <a href="#virtual-pixels">virtual pixels</a>.  Use these methods to access the pixels in the cache:</p>
 <ul>
-  <li><a href="/api/cache.php#GetVirtualPixels">GetVirtualPixels()</a>: gets pixels that you do not intend to modify or pixels that lie outside the image region (e.g. pixel @ -1,-3)</li>
-  <li><a href="/api/cache.php#GetAuthenticPixels">GetAuthenticPixels()</a>: gets pixels that you intend to modify</li>
-  <li><a href="/api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a>: queue pixels that you intend to set</li>
-  <li><a href="/api/cache.php#SyncAuthenticPixels">SyncAuthenticPixels()</a>: update the pixel cache with any modified pixels</li>
+  <li>GetVirtualPixels(): gets pixels that you do not intend to modify or pixels that lie outside the image region (e.g. pixel @ -1,-3)</li>
+  <li>GetAuthenticPixels(): gets pixels that you intend to modify</li>
+  <li>QueueAuthenticPixels(): queue pixels that you intend to set</li>
+  <li>SyncAuthenticPixels(): update the pixel cache with any modified pixels</li>
 </ul>
 
 <p>Here is a typical <a href="/magick-core/">MagickCore</a> code snippet for manipulating pixels in the pixel cache.  In our example, we copy pixels from the input image to the output image and decrease the intensity by 10%:</p>
@@ -130,9 +130,9 @@ if (y &lt; (ssize_t) source-&gt;rows)
   { /* an exception was thrown */ }
 </samp></pre>
 
-<p>When we first create the destination image by cloning the source image, the pixel cache pixels are not copied.  They are only copied when you signal your intentions to modify or set the pixel cache by calling <a href="/api/cache.php#GetAuthenticPixels">GetAuthenticPixels()</a> or <a href="/api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a>. Use <a href="/api/cache.php#QueueAuthenticPixels">QueueAuthenticPixels()</a> if you want to set new pixel values rather than update existing ones.  You could use GetAuthenticPixels() to set pixel values but it is slightly more efficient to use QueueAuthenticPixels() instead. Finally, use <a href="/api/cache.php#SyncAuthenticPixels">SyncAuthenticPixels()</a> to ensure any updated pixels are pushed to the pixel cache.</p>
+<p>When we first create the destination image by cloning the source image, the pixel cache pixels are not copied.  They are only copied when you signal your intentions to modify or set the pixel cache by calling GetAuthenticPixels() or QueueAuthenticPixels(). Use QueueAuthenticPixels() if you want to set new pixel values rather than update existing ones.  You could use GetAuthenticPixels() to set pixel values but it is slightly more efficient to use QueueAuthenticPixels() instead. Finally, use SyncAuthenticPixels() to ensure any updated pixels are pushed to the pixel cache.</p>
 
-<p>You can associate arbitrary content with each pixel, called <em>meta</em> content.  Use  <a href="/api/cache.php#GetVirtualMetacontent">GetVirtualMetacontent()</a> (to read the content) or <a href="/api/cache.php#GetAuthenticMetacontent">GetAuthenticMetacontent()</a> (to update the content) to gain access to this content.  For example, to print the metacontent, use:</p>
+<p>You can associate arbitrary content with each pixel, called <em>meta</em> content. Use GetVirtualMetacontent()(to read the content) or GetAuthenticMetacontent() (to update the content) to gain access to this content.  For example, to print the metacontent, use:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>const void
   *metacontent;
@@ -159,7 +159,7 @@ if (y &lt; (ssize_t) source-&gt;rows)
 <h2><a class="anchor" id="virtual-pixels"></a>Virtual Pixels</h2>
 
 <p>There are a plethora of image processing algorithms that require a neighborhood of pixels about a pixel of interest.  The algorithm typically includes a caveat concerning how to handle pixels around the image boundaries, known as edge pixels.  With virtual pixels, you do not need to concern yourself about special edge processing other than choosing  which virtual pixel method is most appropriate for your algorithm.</p>
- <p>Access to the virtual pixels are controlled by the <a href="/api/cache.php#SetImageVirtualPixelMethod">SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <a href="/command-line-options/#virtual-pixel">-virtual-pixel</a> option from the command line.  The methods include:</p>
+ <p>Access to the virtual pixels are controlled by the SetImageVirtualPixelMethod()</a> method from the MagickCore API or the <a href="/command-line-options/#virtual-pixel">-virtual-pixel</a> option from the command line.  The methods include:</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">
@@ -290,7 +290,7 @@ Resource limits:
   Time: unlimited
 </samp></pre>
 
-<p>You can set these limits either as a <a href="/security-policy/">security policy</a> (see <a href="/source/policy-open.xml">policy.xml</a>), with an <a href="/resources/#environment">environment variable</a>, with the <a href="/command-line-options/#limit">-limit</a> command line option, or with the <a href="/api/resource.php#SetMagickResourceLimit">SetMagickResourceLimit()</a> MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
+<p>You can set these limits either as a <a href="/security-policy/">security policy</a> (see <a href="/source/policy-open.xml">policy.xml</a>), with an <a href="/resources/#environment">environment variable</a>, with the <a href="/command-line-options/#limit">-limit</a> command line option, or with the SetMagickResourceLimit() MagickCore API method. As an example, our online web interface to ImageMagick, <a href="https://magickstudio.imagemagick.org/">MagickStudio</a>, includes these policy limits to help prevent a denial-of-service:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
 &lt;!ELEMENT policymap (policy)*>
@@ -432,7 +432,7 @@ magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2
 
 <h2>Cache Views</h2>
 
-<p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="/api/cache-view.php">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
+<p>GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), and SyncAuthenticPixels(), from the MagickCore API, can only deal with one pixel cache area per image at a time.  Suppose you want to access the first and last scanline from the same image at the same time?  The solution is to use a <var>cache view</var>.  A cache view permits you to access as many areas simultaneously in the pixel cache as you require.  The cache view <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache-view.h">methods</a> are analogous to the previous methods except you must first open a view and close it when you are finished with it. Here is a snippet of MagickCore code that permits us to access the first and last pixel row of the image simultaneously:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>CacheView
   *first_row,
   *last_row;
@@ -506,7 +506,7 @@ magick image.mpc -crop 100x100+200+0 +repage 3.png
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>(void) printf("image width: %lu, height: %lu\n",image-&gt;columns,image-&gt;rows);
 </samp></pre>
 
-<p>For a great majority of image properties, such as an image comment or description, we use the <a href="/api/property.php#GetImageProperty">GetImageProperty()</a> and <a href="/api/property.php#SetImageProperty">SetImageProperty()</a> methods.  Here we set a property and fetch it right back:</p>
+<p>For a great majority of image properties, such as an image comment or description, we use the GetImageProperty() and SetImageProperty() methods.  Here we set a property and fetch it right back:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>const char
   *comment;
 
@@ -518,7 +518,7 @@ if (comment == (const char *) NULL)
 
 <p>ImageMagick supports artifacts with the GetImageArtifact() and SetImageArtifact() methods.  Artifacts are stealth properties that are not exported to image formats (e.g. PNG).</p>
 
-<p>Image profiles are handled with <a href="/api/profile.php#GetImageProfile">GetImageProfile()</a>, <a href="/api/profile.php#SetImageProfile">SetImageProfile()</a>, and <a href="/api/profile.php#ProfileImage">ProfileImage()</a> methods.  Here we set a profile and fetch it right back:</p>
+<p>Image profiles are handled with GetImageProfile(), SetImageProfile(), and ProfileImage() methods.  Here we set a profile and fetch it right back:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>StringInfo
   *profile;
 
@@ -540,7 +540,7 @@ if (profile != (StringInfo *) NULL)
 
 <p>ImageMagick provides for streaming pixels as they are read from or written to an image.  This has several advantages over the pixel cache.  The time and resources consumed by the pixel cache scale with the area of an image, whereas the pixel stream resources scale with the width of an image.  The disadvantage is the pixels must be consumed as they are streamed so there is no persistence.</p>
 
-<p>Use <a href="/api/stream.php#ReadStream">ReadStream()</a> or <a href="/api/stream.php#WriteStream">WriteStream()</a> with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
+<p>Use ReadStream() or WriteStream() with an appropriate callback method in your MagickCore program to consume the pixels as they are streaming.  Here's an abbreviated example of using ReadStream:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
 {
   register const Quantum
@@ -603,7 +603,7 @@ magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
 
 <h2><a class="anchor" id="threads"></a>Threads of Execution</h2>
 
-<p>Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips. However, you are welcome to use ImageMagick algorithms in your threads of execution with the exception of the MagickCore's GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), or SyncAuthenticPixels() pixel cache methods.  These methods are intended for one thread of execution only with the exception of an OpenMP parallel section.  To access the pixel cache with more than one thread of execution, use a cache view.  We do this for the <a href="/api/composite.php#CompositeImage">CompositeImage()</a> method, for example.  Suppose we want to composite a single source image over a different destination image in each thread of execution.  If we use GetVirtualPixels(), the results are unpredictable because multiple threads would likely be asking for different areas of the pixel cache simultaneously.  Instead we use GetCacheViewVirtualPixels() which creates a unique view for each thread of execution ensuring our program behaves properly regardless of how many threads are invoked.  The other program interfaces, such as the <a href="/magick-wand/">MagickWand API</a>, are completely thread safe so there are no special precautions for threads of execution.</p>
+<p>Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by the multicore processor chips. However, you are welcome to use ImageMagick algorithms in your threads of execution with the exception of the MagickCore's GetVirtualPixels(), GetAuthenticPixels(), QueueAuthenticPixels(), or SyncAuthenticPixels() pixel cache methods.  These methods are intended for one thread of execution only with the exception of an OpenMP parallel section.  To access the pixel cache with more than one thread of execution, use a cache view.  We do this for the CompositeImage() method, for example.  Suppose we want to composite a single source image over a different destination image in each thread of execution.  If we use GetVirtualPixels(), the results are unpredictable because multiple threads would likely be asking for different areas of the pixel cache simultaneously.  Instead we use GetCacheViewVirtualPixels() which creates a unique view for each thread of execution ensuring our program behaves properly regardless of how many threads are invoked.  The other program interfaces, such as the <a href="/magick-wand/">MagickWand API</a>, are completely thread safe so there are no special precautions for threads of execution.</p>
 
 <p>Here is an MagickCore code snippet that takes advantage of threads of execution with the <a href="/openmp/">OpenMP</a> programming paradigm:</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>CacheView
@@ -730,7 +730,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <p>If you call the ImageMagick API from your OpenMP-enabled application and you intend to dynamically increase the number of threads available in subsequent parallel regions, be sure to perform the increase <var>before</var> you call the API otherwise ImageMagick may fault.</p>
 
-<p><a href="/api/wand-view.php">MagickWand</a> supports wand views.  A view iterates over the entire, or portion, of the image in parallel and for each row of pixels, it invokes a callback method you provide.  This limits most of your parallel programming activity to just that one module.  There are similar methods in <a href="/api/image-view.php">MagickCore</a>.  For an example, see the same sigmoidal contrast algorithm implemented in both <a href="/magick-wand/#wand-view">MagickWand</a> and <a href="/magick-core/#image-view">MagickCore</a>.</p>
+<p><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickWand/wand-view.h">MagickWand</a> supports wand views.  A view iterates over the entire, or portion, of the image in parallel and for each row of pixels, it invokes a callback method you provide.  This limits most of your parallel programming activity to just that one module.  There are similar methods in <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/image-view.h">MagickCore</a>.  For an example, see the same sigmoidal contrast algorithm implemented in both <a href="/magick-wand/#wand-view">MagickWand</a> and <a href="/magick-core/#image-view">MagickCore</a>.</p>
 
 <p>In most circumstances, the default number of threads is set to the number of processor cores on your system for optimal performance.  However, if your system is hyperthreaded or if you are running on a virtual host and only a subset of the processors are available to your server instance, you might get an increase in performance by setting the thread <a href="/resources/#configure">policy</a> or the <a href="/resources/#environment">MAGICK_THREAD_LIMIT</a> environment variable.  For example, your virtual host has 8 processors but only 2 are assigned to your server instance.  The default of 8 threads can cause severe performance problems.  One solution is to limit the number of threads to the available processors in your <a href="/source/policy-open.xml">policy.xml</a> configuration file:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>&lt;policy domain="resource" name="thread" value="2"/>
@@ -1287,7 +1287,7 @@ display logo.mgk
 
 <h2><a class="anchor" id="filters"></a>Custom Image Filters</h2>
 
-<p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="/command-line-options/#process">-process</a> option or from the MagickCore API method <a href="/api/module.php#ExecuteModuleProcess">ExecuteModuleProcess()</a>.</p>
+<p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  We call these image filters and they are invoked from the command line with the <a href="/command-line-options/#process">-process</a> option or from the MagickCore API method ExecuteModuleProcess().</p>
 
 <p>Here is a listing of a sample <a href="/source/analyze.c">custom image filter</a>.  It computes a few statistics such as the pixel brightness and saturation mean and standard-deviation.</p>
 <pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>#include &lt;stdio.h>

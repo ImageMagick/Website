@@ -28,7 +28,7 @@ With a language interface, use ImageMagick to modify or create images dynamicall
 <dl class="row">
   <dt class="col-md-4"><a class="anchor" id="c"></a>C</dt>
 
-<dd class="col-md-8">Use the thread-safe <a href="/magick-wand/">MagickWand</a> library to convert, compose, and edit images from the C language.  There is also the low-level thread-safe <a href="/magick-core/">MagickCore</a> library for wizard-level developers.  The <a href="/api/MagickCache/index.html">MagickCache API</a> is a development library to utilize an efficient <a href="https://github.com/ImageMagick/MagickCache#readme">image cache</a>.</dd>
+<dd class="col-md-8">Use the thread-safe <a href="/magick-wand/">MagickWand</a> library to convert, compose, and edit images from the C language.  There is also the low-level thread-safe <a href="/magick-core/">MagickCore</a> library for wizard-level developers.  The MagickCache API is a development library to utilize an efficient <a href="https://github.com/ImageMagick/MagickCache#readme">image cache</a>.</dd>
 
   <dt class="col-md-4"><a class="anchor" id="ch"></a>Ch</dt>
 

@@ -277,7 +277,7 @@ magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha o
 MagickWand-config</samp></pre>
 <p>The FilterImage() method has been removed.  Use ConvolveImage() instead.</p>
 
-<p>In addition, all deprecated <a href="https://legacy.imagemagick.org/api/deprecate.php">MagickCore</a> and <a href="https://legacy.imagemagick.org/api/magick-deprecate.php">MagickWand</a> methods are no longer available in version 7.</p>
+<p>In addition, all deprecated <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/deprecate.h">MagickCore</a> and <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickWand/deprecate.h">MagickWand</a> methods are no longer available in version 7.</p>
 
 <p>The Bessel filter was removed as it is an alias for Jinc.  Use -filter Jinc instead.</p>
 

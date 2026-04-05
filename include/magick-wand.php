@@ -1,16 +1,16 @@
 <div>
-<p class="lead">The <a href="/api/MagickWand/index.html">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="/api/MagickCore/index.html">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found here:</p>
+<p class="lead">The <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand">MagickWand API</a> is the recommended interface between the C programming language and the ImageMagick image processing libraries.  Unlike the <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickCore">MagickCore</a> C API, MagickWand uses only a few opaque types.  Accessors are available to set or get important wand properties.  A description of the MagickWand public methods are found on GitHub:</p>
 
 <ul>
-  <li><a href="/api/magick-wand.php">Magick Wand Methods</a></li>
-  <li><a href="/api/magick-property.php">Set or Get Magick Wand Properties</a></li>
-  <li><a href="/api/magick-image.php">Magick Wand Image Methods</a></li>
-  <li><a href="/api/pixel-iterator.php">Pixel Iterator Methods</a></li>
-  <li><a href="/api/pixel-wand.php">Pixel Wand Methods</a></li>
-  <li><a href="/api/drawing-wand.php">Image Vector Drawing</a></li>
-  <li><a href="/api/mogrify.php">Command-line Interface</a></li>
-  <li><a href="/api/wand-view.php">Wand View Methods</a></li>
-  <li><a href="/api/magick-deprecate.php">Deprecated Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/MagickWand.h">Magick Wand Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/magick-property.h">Set or Get Magick Wand Properties</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/magick-image.h">Magick Wand Image Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/pixel-iterator.h">Pixel Iterator Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/pixel-wand.h">Pixel Wand Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/drawing-wand.h">Image Vector Drawing</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/mogrify.h">Command-line Interface</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/wand-view.h">Wand View Methods</a></li>
+  <li><a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand/deprecate.h">Deprecated Methods</a></li>
   <li><a href="/exception/">Error and Warning Codes</a></li>
 </ul>
 
