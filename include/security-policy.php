@@ -113,7 +113,7 @@
   &lt;policy domain="cache" name="synchronize" value="true"/>
   &lt;!-- Replace passphrase for secure distributed processing -->
   &lt;!-- <policy domain="cache" name="shared-secret" value="secret-passphrase" stealth="true"/> -->
-  &lt;!-- Do not permit any delegates to execute. -->
+  &lt;!-- Do not permit any external delegates to execute. -->
   &lt;policy domain="delegate" rights="none" pattern="*"/>
   &lt;!-- Do not permit any image filters to load. -->
   &lt;policy domain="filter" rights="none" pattern="*"/>
@@ -145,7 +145,7 @@
 
 <p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, processing will stop and an exception will be thrown.</p>
 
-<p>Starting with ImageMagick 7.0.1-8, you can prevent the use of any delegate or all delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <samp>coder</samp> and set rights to none and the glob pattern to HTTPS to prevent delegate usage. Additionally, users are prevented from executing any image filters and from performing indirect reads. If you want to, for example, read text from a file (e.g. <samp>caption:@myCaption.txt</samp>), you'll need to disable this path policy.</p>
+<p>Starting with ImageMagick 7.0.1-8, you can prevent the use of any external delegate or all external delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <samp>coder</samp> and set rights to none and the glob pattern to HTTPS to prevent external delegate usage. Additionally, users are prevented from executing any image filters and from performing indirect reads. If you want to, for example, read text from a file (e.g. <samp>caption:@myCaption.txt</samp>), you'll need to disable this path policy.</p>
 
 <p>Policy <a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a>, before ImageMagick 7.1.1-16, are <em>case sensitive</em>.  To get expected behavior, coders and modules must be upper-case (e.g. "EPS" not "eps") or use a case-insensitive pattern such as <samp>[Pp][Nn][Gg]</samp>.</p>
 
@@ -155,7 +155,7 @@
 convert: attempt to perform an operation not allowed by the security policy `HTTPS'
 convert: no images defined `wizard.jpg'</pre>
 
-<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
+<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all external delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>&lt;policy domain="delegate" rights="none" pattern="*" />
 &lt;policy domain="module" rights="none" pattern="*" />
