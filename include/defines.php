@@ -917,6 +917,11 @@ use:</p>
   </tr>
 
   <tr>
+    <td>icon:png-compression-size</td>
+    <td>Set the minimum image size threshold above which a PNG image is stored instead of a BMP image.</td>
+  </tr>
+
+  <tr>
     <td>identify:convex-hull=<var>true</var></td>
     <td>Display convex hull & minimum bounding box.</td>
   </tr>
