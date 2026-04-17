@@ -30,25 +30,6 @@
   </tr>
 
   <tr>
-  <?php $filename = "ImageMagick-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
-  ?>
-    <td><a href= "https://download.imagemagick.org/archive/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Fedora x86_64 RPM</td>
-  </tr>
-
-  <tr>
-  <?php $filename = "ImageMagick-libs-" . MagickLibVersionText . MagickLibSubversion . ".x86_64.rpm";
-  ?>
-    <td><a href= "https://download.imagemagick.org/archive/linux/CentOS/x86_64/<?php echo $filename; ?>"><?php echo $filename; ?></a></td>
-    <td>Fedora x86_64 RPM</td>
-  </tr>
-
-  <tr>
-    <td><a href="https://download.imagemagick.org/archive/linux/CentOS">ImageMagick RPM's</a></td>
-    <td>Development, Perl, C++, and documentation RPM's.</td>
-  </tr>
-
-  <tr>
     <td><a href="https://download.imagemagick.org/archive/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">ImageMagick-i386-pc-solaris2.11.tar.gz</a></td>
     <td>Solaris Sparc 2.11</td>
   </tr>
@@ -66,44 +47,6 @@
 </table></div>
 
 <p>Verify its <a href="https://download.imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
-
-<p>ImageMagick RPM's are self-installing.  Simply type the following command and you're ready to start using ImageMagick:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -Uvh ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>.x86_64.rpm</samp></pre>
-
-<p>You'll need the libraries as well:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -Uvh ImageMagick-libs-<?php echo MagickLibVersionText . MagickLibSubversion ?>.x86_64.rpm</samp></pre>
-
-<p>Note, if there are missing dependencies, install them from the <a href="https://fedoraproject.org/wiki/EPEL">EPEL</a> repo.</p>
-
-<p>For other systems, create (or choose) a directory to install the package into and change to that directory, for example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd $HOME</samp></pre>
-
-<p>Next, extract the contents of the package.  For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick.tar.gz</samp></pre>
-
-<p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export MAGICK_HOME="$HOME/ImageMagick-<?php echo MagickLibVersionText ?>"</samp></pre>
-
-<p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PATH="$MAGICK_HOME/bin:$PATH</samp></pre>
-
-
-<p>On Linux and Solaris machines add <samp>$MAGICK_HOME/lib</samp> to the <samp>LD_LIBRARY_PATH</samp> environment variable:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib
-export LD_LIBRARY_PATH</samp></pre>
-
-<p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
-identify logo.gif
-display logo.gif</samp></pre>
-
-<p>Congratulations, you have a working ImageMagick distribution under Linux or Linux and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
 
 <h2><a class="anchor" id="macos"></a>macOS Binary Release</h2>
 
