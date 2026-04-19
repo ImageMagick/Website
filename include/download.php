@@ -46,57 +46,6 @@
 
 <p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source</p>
 
-<h2><a class="anchor" id="iOS"></a>iOS Binary Release</h2>
-
-<p><a href="http://www.cloudgoessocial.net/2011/03/21/im-xcode4-ios4-3/">~Claudio</a> provides iOS builds of ImageMagick.</p>
-
-<h4>Download iOS Distribution</h4>
-
-<p>You can download the iOS distribution directly from ImageMagick's <a href="https://download.imagemagick.org/archive/iOS">repository</a>.</p>
-
-<p>There are always 2 packages for the compiled ImageMagick:</p>
-
-<ul>
-<li>iOSMagick-VERSION-libs.zip</li>
-<li>iOSMagick-VERSION.zip</li>
-</ul>
-
-<p>The first one includes headers and compiled libraries that have been used to compile ImageMagick. Most users would need this one.</p>
-
-<h4>ImageMagick compiling script for iOS OS and iOS Simulator</h4>
-
-<p>To run the script:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./imagemagick_compile.sh <var>VERSION</var></samp></pre>
-<p>where <var>VERSION</var> is the version of ImageMagick you want to compile (i.e.: <?php echo MagickLibVersionText . MagickLibSubversion; ?>, svn, ...)</p>
-
-<p>This script compiles ImageMagick as a static library to be included in iOS projects and adds support for</p>
-<ul>
-<li>png</li>
-<li>jpeg</li>
-<li>tiff</li>
-</ul>
-
-<p>Upon successful compilation a folder called <samp>IMPORT_ME</samp> is created on your <samp>~/Desktop</samp>. You can import it into your Xcode project.</p>
-
-<h4>Xcode project settings</h4>
-
-<p>After including everything into Xcode please also make sure to have these settings (Build tab of the project information):</p>
-<ul>
-<li>Other Linker Flags: -lMagickCore-Q16 -lMagickWand-Q16 -ljpeg -lpng -lbz2 -lz</li>
-<li>Header Search Paths: $(SRCROOT) - make it Recursive</li>
-<li>Library Search Paths: $(SRCROOT) - make it Recursive</li>
-</ul>
-
-<p>On the lower left click on the small-wheel and select: Add User-Defined Setting</p>
-<ul>
-<li>Key: OTHER_CFLAGS</li>
-<li>Value: -Dmacintosh=1</li>
-</ul>
-
-<h4>Sample project</h4>
-
-<p>A <a href="http://www.cloudgoessocial.net/im_iphone/IM_Test.zip">sample project </a> is available for download. It is not updated too often, but it does give an idea of all the settings and some ways to play around with ImageMagick in an iOS application.</p>
-
 <h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
 
 <p>ImageMagick runs on Windows 10 (x86 , x64 &amp; arm64) or newer or Windows Server 2012 or newer.</p>
