@@ -3,7 +3,7 @@
 
 <p class="text-info">It is strongly recommended to establish a security policy suitable for your local environment before utilizing ImageMagick.</p>
 
-<p class="lead">The default policy is open, which is useful for ImageMagick installations running in a secure environment, such as in a Docker container or behind a firewall.</p>
+<p class="lead">ImageMagick is intentionally open by default, and that design choice reflects its primary use in controlled environments such as Docker containers or other sandboxed deployments.</p>
 
 <p>ImageMagick is a tool that allows you to manipulate images. While it offers a range of features and capabilities, there is often a trade-off between security and convenience. To ensure optimal security, you can restrict ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can include details such as memory usage limits, allowed paths for reading and writing, limits on the number of images in a sequence, maximum workflow runtime, allowed disk space for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. By customizing the security policy, you can help secure your environment and ensure that ImageMagick is a responsible member of your local system, such as by preventing overloading with large images.</p>
 
@@ -11,7 +11,7 @@
 
 <p>Keep in mind that what is considered reasonable for one environment may not be suitable for another. For example, you may have ImageMagick sandboxed in a secure environment, while someone else may use it to process images on a publicly accessible website. Or, ImageMagick may be running on a host with a lot of memory, while another instance is running on a device with limited resources. In the case of the host with large memory, it may make sense to allow large image processing, but not on the device with limited resources. If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</p>
 
-<p>To help you get started, as of version 7.1.1-16, ImageMagick provides security polices that you can select when installing ImageMagick.  Choose from:
+<p>To help you get started, as of version 7.1.1-16, ImageMagick provides security polices that you can select when installing ImageMagick.  ImageMagick’s security model is “everything allowed unless denied,” and the last matching policy wins.  Choose from:
 
 <ul>
 <dt><a href="/source/policy-open.xml">open</a></dt>
