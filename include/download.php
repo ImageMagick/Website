@@ -29,20 +29,6 @@
     <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
   </tr>
 
-  <tr>
-    <td><a href="https://download.imagemagick.org/archive/binaries/ImageMagick-i386-pc-solaris2.11.tar.gz">ImageMagick-i386-pc-solaris2.11.tar.gz</a></td>
-    <td>Solaris Sparc 2.11</td>
-  </tr>
-
-  <tr>
-    <td><a href="https://download.imagemagick.org/archive/binaries/ImageMagick-x86_64-pc-cygwin.tar.gz">ImageMagick-x86_64-pc-cygwin.tar.gz</a></td>
-    <td>Cygwin</td>
-  </tr>
-
-  <tr>
-    <td><a href="https://download.imagemagick.org/archive/binaries/ImageMagick-i686-pc-mingw32.tar.gz">ImageMagick-i686-pc-mingw32.tar.gz</a></td>
-    <td>MinGW</td>
-  </tr>
   </tbody>
 </table></div>
 
