@@ -5547,6 +5547,7 @@ name. </p>
 <dt class="col-md-4">MSE</dt><dd class="col-md-8">   mean error squared, average of the channel error squared</dd>
 <dt class="col-md-4">NCC</dt><dd class="col-md-8">   normalized cross correlation</dd>
 <dt class="col-md-4">PAE</dt><dd class="col-md-8">   peak absolute (normalized peak absolute)</dd>
+<dt class="col-md-4">PDC</dt><dd class="col-md-8">    the total number of pixels whose values differ (-fuzz affected)</dd>
 <dt class="col-md-4">PHASE</dt><dd class="col-md-8">  phase correlation</dd>
 <dt class="col-md-4">PHASH</dt><dd class="col-md-8"> perceptual hash for the sRGB and HCLp colorspaces.  Specify an alternative colorspace with <samp>-define phash:colorspaces=<var>colorspace,colorspace,...</var></samp></dd>
 <dt class="col-md-4">PSNR</dt><dd class="col-md-8">  peak signal to noise ratio</dd>
