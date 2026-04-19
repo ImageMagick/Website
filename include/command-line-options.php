@@ -5538,7 +5538,7 @@ name. </p>
 
 <div class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary">
 <dl class="row">
-<dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, number of different pixels (-fuzz affected)</dd>
+<dt class="col-md-4">AE</dt><dd class="col-md-8">    absolute error count, magnitude of pixel differences (-fuzz affected)</dd>
 <dt class="col-md-4">DPC</dt><dd class="col-md-8">  discrete phase correlation</dd>
 <dt class="col-md-4">DSSIM</dt><dd class="col-md-8">  structural dissimilarity index</dd>
 <dt class="col-md-4">FUZZ</dt><dd class="col-md-8">  mean color distance</dd>
@@ -5547,7 +5547,7 @@ name. </p>
 <dt class="col-md-4">MSE</dt><dd class="col-md-8">   mean error squared, average of the channel error squared</dd>
 <dt class="col-md-4">NCC</dt><dd class="col-md-8">   normalized cross correlation</dd>
 <dt class="col-md-4">PAE</dt><dd class="col-md-8">   peak absolute (normalized peak absolute)</dd>
-<dt class="col-md-4">PDC</dt><dd class="col-md-8">    the total number of pixels whose values differ (-fuzz affected)</dd>
+<dt class="col-md-4">PDC</dt><dd class="col-md-8">    pixel difference count  whose values differ (-fuzz affected)</dd>
 <dt class="col-md-4">PHASE</dt><dd class="col-md-8">  phase correlation</dd>
 <dt class="col-md-4">PHASH</dt><dd class="col-md-8"> perceptual hash for the sRGB and HCLp colorspaces.  Specify an alternative colorspace with <samp>-define phash:colorspaces=<var>colorspace,colorspace,...</var></samp></dd>
 <dt class="col-md-4">PSNR</dt><dd class="col-md-8">  peak signal to noise ratio</dd>
@@ -5556,8 +5556,7 @@ name. </p>
 </dl>
 </div>
 
-<p>Control the '<samp>AE</samp>', or absolute count of pixels that are different,
-with the <a href="#fuzz" >-fuzz</a> factor (ignore pixels which
+<p>Control the '<samp>AE</samp>' and '<samp>PDC</samp>', absolute count of pixels that are different, with the <a href="#fuzz" >-fuzz</a> factor (ignore pixels which
 only changed by a small amount).  Use '<samp>PAE</samp>' to find the
 size of the <a href="#fuzz" >-fuzz</a> factor needed to make all pixels
 'similar', while '<samp>MAE</samp>' determines the factor needed
@@ -7247,7 +7246,7 @@ href="#stretch">-stretch</a>, and <a href="#weight">-weight</a>. </p>
 <p>When utilizing the HDRI-enabled compile of ImageMagick and the FFTW delegate is installed, specific metrics—<strong>NCC</strong>, <strong>MSE</strong>, <strong>RMSE</strong>, <strong>PSNR</strong>, <strong>PHASE</strong>, and <strong>DPC</strong>—are automatically accelerated using FFT (Fast Fourier Transform) processing. This is the default behavior. However, by using the flag <code>-define compare:frequency-domain=false</code>, you can disable FFT acceleration and instead opt for the slower spatial domain processing, if desired.</p>
 <p>The <strong>similarity score</strong> image matches the dimensions of the larger image. Each pixel in this output represents a potential position for the top-left corner of the small image within the larger one. The brightest spot in the similarity image corresponds to the best match location. For FFT-accelerated metrics, the similarity score at this position is also displayed in square brackets alongside the match coordinates.</p>
 <p>It is important to note that the best match in the similarity image does not necessarily imply a perfect match. The actual brightness of the peak reflects the quality of the match. Additionally, other bright peaks in the similarity image may indicate alternate potential matching locations.</p>
-<p>Metrics differ in their definition of a <i>perfect match</i>. For metrics like <strong>MSE</strong>, <strong>RMSE</strong>, <strong>PSNR</strong> (<strong>MAE</strong>, <strong>FUZZ</strong>, <strong>DSIM</strong>, and <strong>PHASH</strong>), a perfect match has a value of 0. Conversely, metrics such as <strong>NCC</strong>, <strong>PHASE</strong>, <strong>DPC</strong> (<strong>AE</strong>, <strong>PAE</strong>, <strong>MEPP</strong>, and <strong>SSIM</strong>) define a perfect match as 1. To maintain consistency, for metrics where the perfect match is 0, the similarity image is inverted, ensuring that the best match location appears as the brightest point, just as it does for metrics with a perfect match at 1. </p>
+<p>Metrics differ in their definition of a <i>perfect match</i>. For metrics like <strong>MSE</strong>, <strong>RMSE</strong>, <strong>PSNR</strong> (<strong>MAE</strong>, <strong>FUZZ</strong>, <strong>DSIM</strong>, and <strong>PHASH</strong>), a perfect match has a value of 0. Conversely, metrics such as <strong>NCC</strong>, <strong>PHASE</strong>, <strong>DPC</strong>, <strong>AE</strong>, <strong>PDC</strong>, <strong>PAE</strong>, <strong>MEPP</strong>, and <strong>SSIM</strong> define a perfect match as 1. To maintain consistency, for metrics where the perfect match is 0, the similarity image is inverted, ensuring that the best match location appears as the brightest point, just as it does for metrics with a perfect match at 1. </p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="swap"></a>-swap <var>index,index</var></h2>
