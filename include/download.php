@@ -44,59 +44,7 @@
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install ghostscript</samp></pre>
 
-<p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you can download the ImageMagick macOS distribution we provide:</p>
-
-<div>
-<table class="table table-sm table-hover table-striped table-responsive">
-  <col width="40%"/> <col width="60%"/>
-  <thead>
-  <tr>
-    <th>Version</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><a href="https://download.imagemagick.org/archive/binaries/ImageMagick-x86_64-apple-darwin20.1.0.tar.gz">ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</a></td>
-    <td>macOS High Sierra</td>
-  </tr>
-  <tbody>
-</table></div>
-
-<p>Verify its <a href="https://download.imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
-
-<p>Create (or choose) a directory to install the package into and change to that directory, for example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd $HOME</samp></pre>
-
-<p>Next, extract the contents of the package.  For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</samp></pre>
-
-<p>Set the <samp>MAGICK_HOME</samp> environment variable to the path where you extracted the ImageMagick files. For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export MAGICK_HOME="$HOME/ImageMagick-<?php echo MagickLibVersionText ?>"</samp></pre>
-
-<p>If the <samp>bin</samp> subdirectory of the extracted package is not already in your executable search path, add it to your <samp>PATH</samp> environment variable. For example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PATH="$MAGICK_HOME/bin:$PATH"</samp></pre>
-
-
-<p>Set the <samp>DYLD_LIBRARY_PATH</samp> environment variable:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"</samp></pre>
-
-<p>Finally, to verify ImageMagick is working properly, type the following on the command line:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
-identify logo.gif
-display logo.gif</samp></pre>
-
-<p><b>Note</b>, the <a href="/display/">display</a> program requires the X11 server available on your Mac OS X installation DVD. Once that is installed, you will also need to set <samp>export DISPLAY=:0</samp>.</p>
-
-<p>The best way to deal with all the exports is to put them at the end of your .profile file</p>
-
-<p>Congratulations, you have a working ImageMagick distribution under macOS and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
+<p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source</p>
 
 <h2><a class="anchor" id="iOS"></a>iOS Binary Release</h2>
 
