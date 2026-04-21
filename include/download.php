@@ -25,7 +25,10 @@
   <tbody>
 
   <tr>
-    <td><a href= "https://download.imagemagick.org/archive/binaries/magick">magick</a></td>
+    <td>
+      <a href= "https://github.com/ImageMagick/ImageMagick/releases/download/<?php echo MagickLibVersionText . MagickLibSubversion ?>/ImageMagick-9fbd2b7-gcc-x86_64.AppImage">ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>-gcc-x86_64.AppImage </a><br/>
+      <a href= "https://github.com/ImageMagick/ImageMagick/releases/download/<?php echo MagickLibVersionText . MagickLibSubversion ?>/ImageMagick-9fbd2b7-clang-x86_64.AppImage">ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>-clang-x86_64.AppImage </a><br/>
+    </td>
     <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
   </tr>
 
