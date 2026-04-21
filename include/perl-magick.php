@@ -17,7 +17,7 @@
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>yum install ImageMagick-perl
 </samp></pre>
 
-<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="https://download.imagemagick.org/archive/ImageMagick.tar.gz">source</a> release.</p>
+<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="<?php echo MagickReleaseUrl . "ImageMagick-" . MagickVersion . ".7z" ?>">source</a> release.</p>
 
 <p>Unpack the distribution with this command:</p>
 

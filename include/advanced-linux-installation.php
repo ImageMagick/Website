@@ -5,7 +5,7 @@
 
 <h2><a class="anchor" id="download"></a>Download &amp; Unpack</h2>
 
-<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.  Download <a href="https://download.imagemagick.org/archive/ImageMagick.tar.gz">ImageMagick.tar.gz</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or a <a href="/download/">mirror</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.  Download <a href="<?php echo MagickReleaseUrl . "ImageMagick-" . MagickVersion . ".7z" ?>"><?php echo "ImageMagick-" . MagickVersion . ".7z" ?></a> from <a href="https://github.com/ImageMagick/ImageMagick/releases">GitHub</a>.</p>
 
 <p>Unpack the distribution it with this command:</p>
 
