@@ -127,7 +127,7 @@ $PREFIX/config
 $USERPROFILE/.config/ImageMagick
 &lt;<var>client path</var>&gt;</samp></pre>
 
-<p>Above, $PREFIX is the default install path, typically <samp>c:\\Program Files\\ImageMagick-<?php echo(MagickLibVersionText); ?></samp>.</p>
+<p>Above, $PREFIX is the default install path, typically <samp>c:\\Program Files\\ImageMagick-<?php echo(MagickLibVersion); ?></samp>.</p>
 
 <p>For an uninstalled Windows installation, the configuration load order is:</p>
 
@@ -144,32 +144,32 @@ $USERPROFILE/.config/ImageMagick
 <h4>Coders</h4>
 <p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
-$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/coders
+&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/coders
+$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/coders
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/coders
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/coders</samp></pre>
+&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/coders</samp></pre>
 
 <h4>Filters</h4>
 <p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
-$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/filters
+&lt;<var>client path</var>&gt;/../lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/filters
+$MAGICK_HOME/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/filters
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/filters
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersionText); ?>/modules-Q16/filters</samp></pre>
+&lt;<var>client path</var>&gt;/lib/ImageMagick-<?php echo(MagickLibVersion); ?>/modules-Q16/filters</samp></pre>
 
 <h2><a class="anchor" id="fonts"></a>Fonts</h2>
 
 <p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersionText); ?>
+$MAGICK_HOME/etc/ImageMagick/-<?php echo(MagickLibVersion); ?>
 
-$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersionText); ?>
+$MAGICK_HOME/share/ImageMagick-<?php echo(MagickLibVersion); ?>
 
 $XDG_CACHE_HOME/ImageMagick
 $HOME/.config/ImageMagick

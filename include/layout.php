@@ -20,7 +20,7 @@
     $meta->keywords2="image processing software, image conversion tool, batch image editing, open-source image editor, ImageMagick command-line, resize images ImageMagick, crop and rotate images, ImageMagick tutorial, ImageMagick automation, ImageMagick for developers, ImageMagick CLI, ImageMagick filters and effects, ImageMagick scripting, ImageMagick API integration";
     $meta->sitename="ImageMagick";
     $meta->stylesheet="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
-    $meta->version=MagickLibVersionText . MagickLibSubversion;
+    $meta->version=MagickVersion;
     $meta->slogan="Mastering digital image alchemy.";
     $meta->email="webmaster@imagemagick.org";
     $meta->image="https://imagemagick.org/image/logo.png";

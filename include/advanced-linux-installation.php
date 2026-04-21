@@ -19,7 +19,7 @@
 <p>The configure script looks at your environment and decides what it can cobble together to get ImageMagick compiled and installed on your system.  This includes finding a compiler, where your compiler header files are located (e.g. stdlib.h), and if any delegate libraries are available for ImageMagick to use (e.g. JPEG, PNG, TIFF, etc.).  If you are willing to accept configure's default options, and build from within the source directory, you can simply type:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>
-cd ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion; ?>
+cd ImageMagick-<?php echo MagickVersion; ?>
 
 ./configure</samp></pre>
 
@@ -431,7 +431,7 @@ identify logo.gif</samp></pre>
 
 <p>After the build you, locate the RPMS folder and install the ImageMagick binary RPM distribution:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -ivh ImageMagick-<?php echo MagickLibVersionText ?>.-?.*.rpm</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>rpm -ivh ImageMagick-<?php echo MagickLibVersion ?>.-?.*.rpm</samp></pre>
 
 <h2><a class="anchor" id="macos"></a>macOS-specific Build instructions</h2>
 
@@ -455,8 +455,8 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 
 	  <p><a href="/download/">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
 	  <p>Unpack and change into the top-level ImageMagick directory:</p>
-    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>.tar.gz
-cd ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?></samp></pre>
+    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-<?php echo MagickVersion ?>.tar.gz
+cd ImageMagick-<?php echo MagickVersion ?></samp></pre>
 	  <p>Configure ImageMagick:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./configure --prefix=/opt --with-quantum-depth=16 \
   --disable-dependency-tracking --with-x=yes \
@@ -479,8 +479,8 @@ cd ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?></samp></
 
 <p>Although you can download and install delegate libraries yourself, many are already available in the <a href="http://gnuwin32.sourceforge.net/">GnuWin32</a> distribution.  Download and install whichever delegate libraries you require such as JPEG, PNG, TIFF, etc.  Make sure you specify the development headers when you install a package.  Next type,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar jxvf ImageMagick-<?php echo MagickLibVersionText ?>-?.tar.bz2
-cd ImageMagick-<?php echo MagickLibVersionText . MagickLibSubversion ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar jxvf ImageMagick-<?php echo MagickLibVersion ?>-?.tar.bz2
+cd ImageMagick-<?php echo MagickVersion ?>
 
 export CPPFLAGS="-Ic:/Progra~1/GnuWin32/include"
 export LDFLAGS="-Lc:/Progra~1/GnuWin32/lib"
