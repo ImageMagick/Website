@@ -5,6 +5,62 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-21](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-20...7.1.2-21) - 2026-04-21
+
+### Commits
+
+- release [`c86de04`](https://github.com/ImageMagick/ImageMagick/commit/c86de049cefb8dd739e16f0e2fdc1ef8d2006d59)
+
+## [7.1.2-20](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-19...7.1.2-20) - 2026-04-21
+
+### Merged
+
+- Fix JXL orientation when writing. [`#8673`](https://github.com/ImageMagick/ImageMagick/pull/8673)
+- build(deps): bump actions/upload-artifact from 7.0.0 to 7.0.1 [`#8677`](https://github.com/ImageMagick/ImageMagick/pull/8677)
+
+### Commits
+
+- beta release [`f601163`](https://github.com/ImageMagick/ImageMagick/commit/f601163bdd3c52187c6b8430490a86c200f7c6de)
+- Use the version instead of sha in the version of the AppImage. [`3ec02c4`](https://github.com/ImageMagick/ImageMagick/commit/3ec02c45fdd27090486cad138121cbd7b77f0b2c)
+- Corrected the patch that was made earlier to fix reading JPEG compressed TIFF images (dlemstra/Magick.NET/issues/1993) [`3da25c6`](https://github.com/ImageMagick/ImageMagick/commit/3da25c642d3052f81ab8e6f953698e440fbc33ac)
+- eliminate deprecated omp_set_nested() [`e529068`](https://github.com/ImageMagick/ImageMagick/commit/e529068b3e8d8bcbbb85bbabde97754fd3a0e2b9)
+- latest autoconf/automake updatde [`2db63fd`](https://github.com/ImageMagick/ImageMagick/commit/2db63fdb82537b89b56dfb8b5cc592568138b194)
+- eliminate compiler warning [`ad3d279`](https://github.com/ImageMagick/ImageMagick/commit/ad3d27937f1a93a50a646d203e0f3eaec9cf2b84)
+- eliminate compile warning [`141d988`](https://github.com/ImageMagick/ImageMagick/commit/141d98841a1101ed09163abd79358334d9627458)
+- https://github.com/ImageMagick/ImageMagick/issues/8674 [`1aea2ad`](https://github.com/ImageMagick/ImageMagick/commit/1aea2ad128418c3ab1e8a75e88dec1d35e9b5198)
+- support MSYS2 [`9848360`](https://github.com/ImageMagick/ImageMagick/commit/9848360d87c8c2f1f822c3f09f9e5befd86ff7ee)
+- Added extra checks for older version of libxml2 that can raise errors inside xmlCreatePushParserCtxt. [`2d6a2bb`](https://github.com/ImageMagick/ImageMagick/commit/2d6a2bb8bc75543e012bbe5912c538114199e4fe)
+- support MSYS2 [`e9050b7`](https://github.com/ImageMagick/ImageMagick/commit/e9050b78548df30a0581f837025fb725119ae92d)
+- Simplify windows (sym)link check and moved it to nt-base where the rest of the methods are. [`ddb2e42`](https://github.com/ImageMagick/ImageMagick/commit/ddb2e4200f30d34c110dc05c9eab9d860d32122d)
+- Fix missing volatile on quantum_info in WriteOnePNGImage [`c9ccc99`](https://github.com/ImageMagick/ImageMagick/commit/c9ccc99f71fe68bf946ef45f00947e6f33ceea2d)
+- Updated the Windows dependencies. [`ddb1f6c`](https://github.com/ImageMagick/ImageMagick/commit/ddb1f6cc59d1f280a000dcbd3a0daa3f9fab1c58)
+- allow namespace::pattern when checking policy rights [`7499ad0`](https://github.com/ImageMagick/ImageMagick/commit/7499ad060e4e5730242a33afa917a1a26385e197)
+- cosmetic [`b94650b`](https://github.com/ImageMagick/ImageMagick/commit/b94650bb07b6001b1f02ba6c6554978dde618869)
+- eliminate compiler warning [`3cb2bda`](https://github.com/ImageMagick/ImageMagick/commit/3cb2bdabbd9b47e2c8b64b16af76f808f626faa6)
+- Make another variable volatile. [`ea1d15b`](https://github.com/ImageMagick/ImageMagick/commit/ea1d15bf80a4673e271699e3ef630be1d8902c31)
+- mentioned symlink system policy [`313aeba`](https://github.com/ImageMagick/ImageMagick/commit/313aeba06f8fd6d24df7e120171eafc7d0b6439a)
+- Call CloseBlob on the correct image to prevent the blob from remaining open (dlemstra/Magick.NET/issues/1997) [`f7496a3`](https://github.com/ImageMagick/ImageMagick/commit/f7496a3751205e8d1765da9d4922a6d51377dec9)
+- https://github.com/ImageMagick/ImageMagick/issues/8674 [`9e1b9fd`](https://github.com/ImageMagick/ImageMagick/commit/9e1b9fdba8048764d34d53af0bf21a4e0f53c081)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-7mxf-ff4f-jj7p [`2598004`](https://github.com/ImageMagick/ImageMagick/commit/25980041f145afc621233a1c050291231b627c48)
+- release icon directory [`635006f`](https://github.com/ImageMagick/ImageMagick/commit/635006fc10288ae0379bf6056ea11169b5dfcdcf)
+- check that we have enough coordinates for a round line cap [`8ae4ff1`](https://github.com/ImageMagick/ImageMagick/commit/8ae4ff1c3dd8d3dfef18b8b85e54ca6c1155f208)
+- Removed unmaintained vms files. [`5e2f3f6`](https://github.com/ImageMagick/ImageMagick/commit/5e2f3f68520bcb4ae2d0ddf37949bdc82263506a)
+- Also add a source archive to the release. [`f7ff407`](https://github.com/ImageMagick/ImageMagick/commit/f7ff407cccc32ba3a09b70e5366d557b75c1764d)
+- Added missing dependency and use more consistent names. [`9b7504b`](https://github.com/ImageMagick/ImageMagick/commit/9b7504b6672fd57a29b0e7cf7959d30d264c0cf7)
+- update exception message [`c32d3b1`](https://github.com/ImageMagick/ImageMagick/commit/c32d3b1101c6fa727d746b69522d2e613b931d2b)
+- evaluate each requested right independently and combine them [`9051eb4`](https://github.com/ImageMagick/ImageMagick/commit/9051eb4387e78879d67e5a13611b6b621544959b)
+- do not call ThrowFatalException() [`0f87015`](https://github.com/ImageMagick/ImageMagick/commit/0f870154177109229cc4de1a484b335f38e68f95)
+- eliminate compiler warning [`c4aa2a6`](https://github.com/ImageMagick/ImageMagick/commit/c4aa2a623a4ffea350ff9ea1d37c6dd21523d6e7)
+- cosmetic [`6cbcfd6`](https://github.com/ImageMagick/ImageMagick/commit/6cbcfd6c61bbe29041c132d3cb4d614f299588ab)
+- latest automake/autoconf updates [`4ffb6c7`](https://github.com/ImageMagick/ImageMagick/commit/4ffb6c7d3e089e99f82a111c0b318d458f03bcc2)
+- check for 1 linecap point [`93aac80`](https://github.com/ImageMagick/ImageMagick/commit/93aac80d3688a7844bdc5fd5e77f36659a2ae0e3)
+- support pixel difference count (PDC) compare metric [`bfd1fcf`](https://github.com/ImageMagick/ImageMagick/commit/bfd1fcf351277688ba82d88d3d70e7f0d6811a48)
+- remove ceil() [`d5e020d`](https://github.com/ImageMagick/ImageMagick/commit/d5e020d54ec11001ae3074992b0407e99d379d02)
+- scale the pixel distortion [`c92cd35`](https://github.com/ImageMagick/ImageMagick/commit/c92cd3515d881b4ef4f8a27ecf866f2bc3b7af6e)
+- Updated the Windows dependencies. [`5e318be`](https://github.com/ImageMagick/ImageMagick/commit/5e318be89bb9c4c11867cea792b1323017db8652)
+- cosmetic [`9bc5c37`](https://github.com/ImageMagick/ImageMagick/commit/9bc5c37a56ee9876d8768e6f0178299f11809971)
+- release [`51e1d5d`](https://github.com/ImageMagick/ImageMagick/commit/51e1d5d976cdbe8f52ffbde7bf8d47d92d783fd9)
+
 ## [7.1.2-19](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-18...7.1.2-19) - 2026-04-12
 
 ### Merged
