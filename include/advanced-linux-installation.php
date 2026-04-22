@@ -423,7 +423,7 @@ identify logo.gif</samp></pre>
 
 <h2><a class="anchor" id="linux"></a>Linux-specific Build instructions</h2>
 
-<p>Download <a href="https://download.imagemagick.org/archive/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or its <a href="/download/">mirrors</a> and verify the distribution against its <a href="https://download.imagemagick.org/archive/linux/SRPMS/digest.rdf">message digest</a>.</p>
+<p>Download <a href="https://download.imagemagick.org/archive/linux/SRPMS/ImageMagick.src.rpm">ImageMagick.src.rpm</a> from <a href="https://download.imagemagick.org/archive">imagemagick.org</a> or its <a href="/download/">mirrors</a>.</p>
 
 <p>Build ImageMagick with this command:</p>
 
@@ -453,7 +453,8 @@ sudo port -v install graphviz +gs +wmf +jbig +jpeg2 +lcms </samp></pre>
 
 <p>Now lets build ImageMagick:</p>
 
-	  <p><a href="/download/">Download</a> the ImageMagick source distribution and verify the distribution against its <a href="https://download.imagemagick.org/archive/digest.rdf">message digest</a>.</p>
+	  <p><a href="/download/">Download</a> the ImageMagick source distribution and verify the distribution against its
+    <a href="<?php echo MagickProvenanceUrl ?>">provenance</a>.</p>
 	  <p>Unpack and change into the top-level ImageMagick directory:</p>
     <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>tar xvzf ImageMagick-<?php echo MagickVersion ?>.tar.gz
 cd ImageMagick-<?php echo MagickVersion ?></samp></pre>

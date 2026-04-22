@@ -6,4 +6,5 @@
   define('MagickVersion', MagickLibVersion . '-21');
   define('MagickReleaseDate', '2026-04-21');
   define('MagickReleaseUrl', "https://github.com/ImageMagick/ImageMagick/releases/download/" . MagickVersion . "/");
+  define('MagickProvenanceUrl', MagickReleaseUrl . "multiple.intoto.jsonl");
 ?>

@@ -35,7 +35,7 @@
   </tbody>
 </table></div>
 
-<p>Verify its <a href="https://download.imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="<?php echo MagickProvenanceUrl ?>">provenance</a>.</p>
 
 <h2><a class="anchor" id="macos"></a>macOS Binary Release</h2>
 
@@ -246,7 +246,7 @@
   <tbody>
 </table></div>
 
-<p>Verify its <a href="https://download.imagemagick.org/archive/binaries/digest.rdf">message digest</a>.</p>
+<p>Verify its <a href="<?php echo MagickProvenanceUrl ?>">provenance</a>.</p>
 
 <p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>. ImageMagick uses Advanced Installer to <a href="https://www.advancedinstaller.com/imagemagick-latest-release-automatically-published-to-winget.html">publish the latest release to the winget repository</a>.</p>
 
