@@ -1559,9 +1559,10 @@ color reduction algorithm</a> for more details.</p>
 <p>This option permits saturation changes, hue rotation, luminance to alpha,
 and various other effects.  Although variable-sized transformation matrices
 can be used, typically one uses a 5x5 matrix for an RGBA image and a 6x6
-for CMYKA (or RGBA with offsets).  The matrix is similar to those used by
-Adobe Flash except offsets are in column 6 rather than 5 (in support of
-CMYKA images) and offsets are normalized (divide Flash offset by 255).</p>
+for CMYKA (or RGBA with offsets).  The matrix is similar to
+<a href="https://code.tutsplus.com/manipulate-visual-effects-with-the-colormatrixfilter-and-convolutionfilter--active-3221t">that used by Adobe Flash</a>except Imagemagick's offsets are in column 6 rather than 5
+(in support of CMYKA images) and Imagemagick's offsets are normalized
+(divide Flash offsets by 255).</p>
 
 <p>As an example, to add contrast to an image with offsets, try this command:</p>
 
