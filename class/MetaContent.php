@@ -1,32 +1,19 @@
 <?php
   class MetaContent
   {
-    public $creator;
     public $description;
-    public $keywords2;
-    public $image;
-    public $license;
-    public $name;
-    public $sameAs;
-    public $slogan;
-    public $stylesheet;
     public $url;
-    public $version;
 
     function metadata($title)
     {
       /*
         Formulate the description for each page.
       */
-      $description=$this->description;
-      if (!empty($title))
-        $description="$title – $this->description";
-      $meta_words=ucfirst($title);
       $meta="<meta charset=\"utf-8\">\n";
       $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n\n";
       $meta.="  <!-- Title and Description -->\n";
       if (empty($title))
-        $meta.="  <title>ImageMagick | $this->slogan</title>\n";
+        $meta.="  <title>ImageMagick | Mastering digital image alchemy.</title>\n";
       else
         $meta.="  <title>ImageMagick | $title</title>\n";
       $meta.="  <meta name=\"description\" content=\"$this->description\">\n\n";
@@ -44,8 +31,8 @@
       $meta.="  <!-- Preconnect for External Resources -->\n";
       $meta.="  <link rel=\"preconnect\" href=\"https://cse.google.com\">\n\n";
       $meta.="  <!-- Stylesheets -->\n";
-      $meta.="  <link rel=\"preload\" href=\"$this->stylesheet\" as=\"style\" crossorigin=\"anonymous\">\n";
-      $meta.="  <link rel=\"stylesheet\" href=\"$this->stylesheet\">\n\n";
+      $meta.="  <link rel=\"preload\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\" as=\"style\" crossorigin=\"anonymous\">\n";
+      $meta.="  <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\">\n\n";
       $meta.="  <!-- Accessibility Enhancement -->\n";
       $meta.="  <style>\n";
       $meta.="    html {\n";
@@ -72,54 +59,59 @@
       $meta.="  <!-- Open Graph Meta Tags -->\n";
       $meta.="  <meta property=\"og:title\" content=\"ImageMagick | $title\">\n";
       $meta.="  <meta property=\"og:description\" content=\"$this->description\">\n";
-      $meta.="  <meta property=\"og:image\" content=\"$this->image\">\n";
-      $meta.="  <meta property=\"og:logo\" content=\"$this->image\">\n";
+      $meta.="  <meta property=\"og:image\" content=\"https://imagemagick.org/image/logo.png\">\n";
+      $meta.="  <meta property=\"og:logo\" content=\"https://imagemagick.org/image/logo.png\">\n";
       $meta.="  <meta property=\"og:url\" content=\"$this->url\">\n";
       $meta.="  <meta property=\"og:type\" content=\"website\">\n";
-      $meta.="  <meta property=\"og:site_name\" content=\"$this->name\">\n";
+      $meta.="  <meta property=\"og:site_name\" content=\"ImageMagick\">\n";
       $meta.="  <meta property=\"og:locale\" content=\"en_us\">\n\n";
       $meta.="  <!-- Twitter Card Meta Tags -->\n";
       $meta.="  <meta name=\"twitter:card\" content=\"summary_large_image\">\n";
-      $site=strtolower($this->name);
+      $site=strtolower("ImageMagick");
       $meta.="  <meta name=\"twitter:site\" content=\"@$site\">\n";
       $meta.="  <meta name=\"twitter:creator\" content=\"@$site\">\n";
       $meta.="  <meta name=\"twitter:title\" content=\"ImageMagick | $title\">\n";
       $meta.="  <meta name=\"twitter:description\" content=\"$this->description\">\n";
-      $meta.="  <meta name=\"twitter:image\" content=\"$this->image\">\n";
-      $meta.="  <meta name=\"twitter:image:alt\" content=\"$this->name logo and tag line\">\n\n";
+      $meta.="  <meta name=\"twitter:image\" content=\"https://imagemagick.org/image/logo.png\">\n";
+      $meta.="  <meta name=\"twitter:image:alt\" content=\"ImageMagick logo and tag line\">\n\n";
       $meta.="  <!-- JSON-LD Structured Data -->\n";
       $meta.="  <script type=\"application/ld+json\">\n";
       $meta.="  {\n";
       $meta.="    \"@context\": \"https://schema.org\",\n";
       $meta.="    \"@type\": \"SoftwareApplication\",\n";
-      $meta.="    \"name\": \"$this->name\",\n";
+      $meta.="    \"name\": \"ImageMagick\",\n";
       $meta.="    \"url\": \"$this->url\",\n";
-      $meta.="    \"image\": \"$this->image\",\n";
+      $meta.="    \"image\": \"https://imagemagick.org/image/logo.png\",\n";
       $meta.="    \"description\": \"$this->description\",\n";
       $meta.="    \"applicationCategory\": \"Multimedia\",\n";
       $meta.="    \"operatingSystem\": \"Windows, macOS, Linux, Unix\",\n";
-      $meta.="    \"softwareVersion\": \"$this->version\",\n";
-      $meta.="    \"license\": \"$this->license\",\n";
+      $meta.="    \"softwareVersion\": \"".MagickVersion."\",\n";
+      $meta.="    \"license\": \"https://imagemagick.org/license/\",\n";
       $meta.="    \"creator\": {\n";
       $meta.="      \"@type\": \"Organization\",\n";
-      $meta.="      \"name\": \"$this->creator\",\n";
+      $meta.="      \"name\": \"ImageMagick Studio LLC\",\n";
       $meta.="      \"url\": \"https://imagemagick.org\"\n";
       $meta.="    },\n";
 			$meta.="    \"keywords\": [\n";
-      $phrases = explode(',', $meta_words . ", " . $this->keywords2);
-      $quoted = array_map(function($phrase) {
-          return '"' . trim($phrase) . '"';
-      }, $phrases);
-      $keywords = implode(",\n      ", $quoted);
-      $meta.="      $keywords\n";
+      $meta.="      \"".ucfirst($title)."\",\n";
+      $meta.="      \"image processing software\",\n";
+      $meta.="      \"image conversion tool\",\n";
+      $meta.="      \"batch image editing\",\n";
+      $meta.="      \"open-source image editor\",\n";
+      $meta.="      \"ImageMagick command-line\",\n";
+      $meta.="      \"resize images ImageMagick\",\n";
+      $meta.="      \"crop and rotate images\",\n";
+      $meta.="      \"ImageMagick tutorial\",\n";
+      $meta.="      \"ImageMagick automation\",\n";
+      $meta.="      \"ImageMagick for developers\",\n";
+      $meta.="      \"ImageMagick CLI\",\n";
+      $meta.="      \"ImageMagick filters and effects\",\n";
+      $meta.="      \"ImageMagick scripting\",\n";
+      $meta.="      \"ImageMagick API integration\"\n";
       $meta.="    ],\n";
 			$meta.="    \"sameAs\": [\n";
-      $phrases = explode(',', $this->sameAs);
-      $quoted = array_map(function($phrase) {
-          return '"' . trim($phrase) . '"';
-      }, $phrases);
-      $sameAs = implode(",\n      ", $quoted);
-      $meta.="      $sameAs\n";
+      $meta.="      \"https://github.com/ImageMagick\",\n";
+      $meta.="      \"https://x.com/imagemagick\"\n";
       $meta.="    ],\n";
       $meta.="    \"offers\": {\n";
       $meta.="      \"@type\": \"Offer\",\n";

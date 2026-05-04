@@ -12,17 +12,8 @@
   function SiteHeader($title,$topic,$folder)
   {
     $meta=new MetaContent;
-    $meta->name="ImageMagick";
     $meta->description="ImageMagick is a powerful open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for developers, designers, and researchers.";
     $meta->url="https://imagemagick.org" . (isset($folder) ? '/' . $folder . '/' : $_SERVER['SCRIPT_NAME']);
-    $meta->sameAs="https://github.com/ImageMagick, https://x.com/imagemagick";
-    $meta->keywords2="image processing software, image conversion tool, batch image editing, open-source image editor, ImageMagick command-line, resize images ImageMagick, crop and rotate images, ImageMagick tutorial, ImageMagick automation, ImageMagick for developers, ImageMagick CLI, ImageMagick filters and effects, ImageMagick scripting, ImageMagick API integration";
-    $meta->stylesheet="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
-    $meta->version=MagickVersion;
-    $meta->slogan="Mastering digital image alchemy.";
-    $meta->image="https://imagemagick.org/image/logo.png";
-    $meta->license="https://imagemagick.org/license/";
-    $meta->creator="ImageMagick Studio LLC";
     $myTitle=$title;
 ?>
 <!DOCTYPE html>
