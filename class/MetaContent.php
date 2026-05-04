@@ -1,11 +1,8 @@
 <?php
   class MetaContent
   {
-    public $company_name;
     public $creator;
     public $description;
-    public $email;
-    public $generator;
     public $keywords2;
     public $image;
     public $license;
