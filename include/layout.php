@@ -18,7 +18,6 @@
     $meta->url="https://imagemagick.org" . (isset($folder) ? '/' . $folder . '/' : $_SERVER['SCRIPT_NAME']);
     $meta->sameAs="https://github.com/ImageMagick, https://x.com/imagemagick";
     $meta->keywords2="image processing software, image conversion tool, batch image editing, open-source image editor, ImageMagick command-line, resize images ImageMagick, crop and rotate images, ImageMagick tutorial, ImageMagick automation, ImageMagick for developers, ImageMagick CLI, ImageMagick filters and effects, ImageMagick scripting, ImageMagick API integration";
-    $meta->sitename="ImageMagick";
     $meta->stylesheet="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
     $meta->version=MagickVersion;
     $meta->slogan="Mastering digital image alchemy.";
@@ -27,7 +26,6 @@
     $meta->license="https://imagemagick.org/license/";
     $meta->creator="ImageMagick Studio LLC";
     $myTitle=$title;
-    $subtitle=$meta->sitename;
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
@@ -63,9 +61,7 @@
   </script>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="/" title="$meta->sitename;">
-      <?php echo $meta->sitename; ?>
-    </a>
+    <a class="navbar-brand fw-bold" href="/" title="ImageMagick">ImageMagick</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#magick-navbars" aria-controls="magick-navbars" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -116,7 +112,7 @@
       <a href="/" class="text-decoration-none">
         <h1 class="fs-2 mb-1 display-5"><?php echo $myTitle; ?></h1>
       </a>
-      <h2 class="fs-5 text-muted h4"><?php echo $subtitle; ?></h2>
+      <h2 class="fs-5 text-muted h4">ImageMagick</h2>
     </div>
   </header>
 

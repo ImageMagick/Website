@@ -11,7 +11,6 @@
     public $license;
     public $name;
     public $sameAs;
-    public $sitename;
     public $slogan;
     public $stylesheet;
     public $url;
@@ -30,9 +29,9 @@
       $meta.="  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n\n";
       $meta.="  <!-- Title and Description -->\n";
       if (empty($title))
-        $meta.="  <title>$this->sitename | $this->slogan</title>\n";
+        $meta.="  <title>ImageMagick | $this->slogan</title>\n";
       else
-        $meta.="  <title>$this->sitename | $title</title>\n";
+        $meta.="  <title>ImageMagick | $title</title>\n";
       $meta.="  <meta name=\"description\" content=\"$this->description\">\n\n";
       $meta.="  <!-- Canonical URL -->\n";
       $meta.="  <link rel=\"canonical\" href=\"$this->url\">\n\n";
@@ -74,7 +73,7 @@
       $meta.="    }\n";
       $meta.="  </style>\n\n";
       $meta.="  <!-- Open Graph Meta Tags -->\n";
-      $meta.="  <meta property=\"og:title\" content=\"$this->sitename | $title\">\n";
+      $meta.="  <meta property=\"og:title\" content=\"ImageMagick | $title\">\n";
       $meta.="  <meta property=\"og:description\" content=\"$this->description\">\n";
       $meta.="  <meta property=\"og:image\" content=\"$this->image\">\n";
       $meta.="  <meta property=\"og:logo\" content=\"$this->image\">\n";
@@ -87,7 +86,7 @@
       $site=strtolower($this->name);
       $meta.="  <meta name=\"twitter:site\" content=\"@$site\">\n";
       $meta.="  <meta name=\"twitter:creator\" content=\"@$site\">\n";
-      $meta.="  <meta name=\"twitter:title\" content=\"$this->sitename | $title\">\n";
+      $meta.="  <meta name=\"twitter:title\" content=\"ImageMagick | $title\">\n";
       $meta.="  <meta name=\"twitter:description\" content=\"$this->description\">\n";
       $meta.="  <meta name=\"twitter:image\" content=\"$this->image\">\n";
       $meta.="  <meta name=\"twitter:image:alt\" content=\"$this->name logo and tag line\">\n\n";
