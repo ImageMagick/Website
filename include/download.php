@@ -9,7 +9,7 @@
 
 <h2><a class="anchor" id="linux"></a>Linux Binary Release</h2>
 
-<p>These are the Linux variations that we support.  If your system is not on the list, try installing from <a href="/install-source/">source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
+<p>We provide AppImage as the only pre-built Linux binary.  If you require a different binary for your distribution or need custom compile options, you will need to <a href="/install-source/">build from source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">
