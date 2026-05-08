@@ -45,9 +45,11 @@ forever.</p>
 <p>ImageMagick only scrambles the image pixels.  The image metadata remains
 untouched and readable by anyone with access to the image file.</p>
 
-<p>ImageMagick uses the <a
-href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>
-cipher in Counter mode.  We use the first half of your passphrase to derive the nonce.  The second half is the cipher key. When used correctly, AES-CTR provides a high level of confidentiality. To avoid information leaks, you must use a fresh passphrase for each image your encrypt.</p>
+<p>ImageMagick uses AES in Counter (CTR) mode to scramble the pixel data of an image. The current implementation derives both the AES key and the IV (initial counter) deterministically from the user‑supplied passphrase: the first half of the passphrase becomes the AES key, and the second half is hashed together with the image dimensions to produce the IV. Because this IV is derived solely from the passphrase and the image’s width and height, encrypting multiple images with the same passphrase and the same dimensions produces the same IV and therefore the same keystream.</p>
+
+<p>CTR mode requires a unique, non‑repeating IV for every encryption under the same key. Reusing an IV in CTR mode causes keystream reuse, which allows attackers to recover information about the plaintexts by XORing ciphertexts. For this reason, the current deterministic IV construction does not provide cryptographically strong confidentiality.</p>
+
+<p>To avoid keystream reuse and the resulting information leaks, users would need to supply a different passphrase for every image, which is impractical and still does not meet modern cryptographic expectations. ImageMagick’s encipher feature is therefore suitable only for casual obfuscation, not for security‑sensitive encryption.</p>
 
 <p>Currently only ImageMagick can restore your enciphered image content.  We
 use a standard cipher and mode so other vendors could support enciphered image content.</p>
