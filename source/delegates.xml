@@ -85,7 +85,7 @@
   <delegate decode="lep" mode="decode" command="&apos;lepton&apos; &apos;%i&apos; &apos;%o&apos;"/>
   <delegate decode="miff" encode="show" spawn="True" command="&apos;magick&apos; display -immutable -delay 0 -title &apos;%M&apos; &apos;%i&apos;"/>
   <delegate decode="miff" encode="win" stealth="True" spawn="True" command="&apos;magick&apos; display -immutable -delay 0 -title &apos;%M&apos; &apos;%i&apos;"/>
-  <delegate decode="mpeg:decode" command="&apos;ffmpeg&apos; -nostdin -v -1 -i &apos;%i&apos; -vframes %S -vcodec pam -an -f rawvideo -y &apos;%u.pam&apos; 2&gt; &apos;%u&apos;"/>
+  <delegate decode="video:decode" command="&apos;ffmpeg&apos; -nostdin -v -1 -i &apos;%i&apos; -vframes %S -vcodec pam -an -f rawvideo -y &apos;%u.pam&apos; 2&gt; &apos;%u&apos;"/>
   <delegate decode="odt" command="&apos;soffice&apos; --convert-to pdf -outdir `dirname &apos;%i&apos;` &apos;%i&apos; 2&gt; &apos;%u&apos;; /usr/bin/mv &apos;%i.pdf&apos; &apos;%o&apos;"/>
   <delegate decode="pcl:cmyk" stealth="True" command="&apos;pcl6&apos; -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 &apos;-sDEVICE=pamcmyk32&apos; -dTextAlphaBits=%u -dGraphicsAlphaBits=%u &apos;-r%s&apos; %s &apos;-sOutputFile=%s&apos; &apos;%s&apos;"/>
   <delegate decode="pcl:color" stealth="True" command="&apos;pcl6&apos; -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 &apos;-sDEVICE=ppmraw&apos; -dTextAlphaBits=%u -dGraphicsAlphaBits=%u &apos;-r%s&apos; %s &apos;-sOutputFile=%s&apos; &apos;%s&apos;"/>
@@ -119,5 +119,5 @@
   <delegate decode="xps:cmyk" stealth="True" command="&apos;gxps&apos; -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 &apos;-sDEVICE=bmpsep8&apos; -dTextAlphaBits=%u -dGraphicsAlphaBits=%u &apos;-r%s&apos; %s &apos;-sOutputFile=%s&apos; &apos;%s&apos;"/>
   <delegate decode="xps:color" stealth="True" command="&apos;gxps&apos; -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 &apos;-sDEVICE=ppmraw&apos; -dTextAlphaBits=%u -dGraphicsAlphaBits=%u &apos;-r%s&apos; %s &apos;-sOutputFile=%s&apos; &apos;%s&apos;"/>
   <delegate decode="xps:mono" stealth="True" command="&apos;gxps&apos; -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 &apos;-sDEVICE=pbmraw&apos; -dTextAlphaBits=%u -dGraphicsAlphaBits=%u &apos;-r%s&apos; %s &apos;-sOutputFile=%s&apos; &apos;%s&apos;"/>
-  <delegate encode="mpeg:encode" stealth="True" command="&apos;ffmpeg&apos; -nostdin -v -1 -i &apos;%M%%d.jpg&apos; &apos;%u.%m&apos; 2&gt; &apos;%u&apos;"/>
+  <delegate encode="video:encode" stealth="True" command="&apos;ffmpeg&apos; -nostdin -v -1 -i &apos;%M%%d.jpg&apos; &apos;%u.%m&apos; 2&gt; &apos;%u&apos;"/>
 </delegatemap>
