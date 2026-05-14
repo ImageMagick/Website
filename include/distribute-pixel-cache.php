@@ -4,6 +4,12 @@
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>
 &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="true"/> </samp></pre>
 
+<p>Here we create a distributed pixel cache service and utilize it from our desktop:</p>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -distribute-cache 6668 &amp;  # start on localhost
+magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
+  -define registry:cache:hosts=localhost:6668 \
+  myhugeimage.jpg -sharpen 5x2 myhugeimage.png </samp></pre>
+
 <p>Here we create two distributed pixel caches and utilize them from our desktop:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
 magick -distribute-cache 6668 &amp;  # start on 192.168.100.51
