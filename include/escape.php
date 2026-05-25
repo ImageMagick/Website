@@ -415,7 +415,7 @@ when enclosed in braces (long form):</p>
   </tr>
   <tr>
     <td>%[input]</td>
-    <td>&nbsp;</td>
+    <td>the input image filename.</td>
   </tr>
   <tr>
     <td>%[interlace]</td>
