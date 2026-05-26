@@ -210,7 +210,7 @@
 <dt class="col-md-4"> <var>x</var> <samp>&lt;=</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x</var> &lt;= <var>y</var>,  otherwise 0.0</dd>
 <dt class="col-md-4"> <var>x</var> <samp>&gt;</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x</var> &gt; <var>y</var>,  otherwise 0.0</dd>
 <dt class="col-md-4"> <var>x</var> <samp>&gt;=</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x</var> &gt;= <var>y</var>,  otherwise 0.0</dd>
-<dt class="col-md-4"> <var>x</var> <samp>==</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x </var>==<var> y</var>, otherwise 0.0</dd>
+<dt class="col-md-4"> <var>x</var> <samp>==</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x </var>==<var> y</var>, otherwise 0.0. Two values as equal when their difference is within about 1e‑12.</dd>
 <dt class="col-md-4"> <var>x</var> <samp>!=</samp> <var>y</var></dt><dd class="col-md-8"> boolean relation, return value 1.0 if <var>x </var>!=<var> y</var>, otherwise 0.0</dd>
 <dt class="col-md-4"> <var>x</var> <samp>&amp;</samp> <var>y</var></dt><dd class="col-md-8"> binary AND</dd>
 <dt class="col-md-4"> <var>x</var> <samp>|</samp> <var>y</var></dt><dd class="col-md-8"> binary OR</dd>
