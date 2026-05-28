@@ -433,23 +433,23 @@ use:</p>
   </tr>
 
   <tr>
+    <td>identify:convex-hull=<var>true</var></td>
+    <td>Display convex hull & minimum bounding box.</td>
+  </tr>
+
+  <tr>
+    <td>identify:locate=<var>value</var></td>
+    <td>Display minimum or maximum pixel locations. Valid values are <samp>minimum</samp> or <samp>maximum</samp>. The default is <samp>maximum</samp>.</td>
+  </tr>
+
+  <tr>
+    <td>identify:limit=<var>value</var></td>
+    <td>The maximum number of pixel locations to display when using <samp>identify:locate</samp>.</td>
+  </tr>
+
+  <tr>
     <td>json:features</td>
     <td>Include features in verbose information.</td>
-  </tr>
-
-  <tr>
-    <td>json:limit</td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>json:locate</td>
-    <td> </td>
-  </tr>
-
-  <tr>
-    <td>json:moments</td>
-    <td>Include image moments in verbose information.</td>
   </tr>
 
   <tr>
@@ -922,18 +922,18 @@ use:</p>
   </tr>
 
   <tr>
-    <td>identify:convex-hull=<var>true</var></td>
-    <td>Display convex hull & minimum bounding box.</td>
+    <td>json:limit</td>
+    <td> </td>
   </tr>
 
   <tr>
-    <td>identify:locate=<var>value</var></td>
-    <td>Display minimum or maximum pixel locations. Valid values are <samp>minimum</samp> or <samp>maximum</samp>. The default is <samp>maximum</samp>.</td>
+    <td>json:locate</td>
+    <td> </td>
   </tr>
 
   <tr>
-    <td>identify:limit=<var>value</var></td>
-    <td>The maximum number of pixel locations to display when using <samp>identify:locate</samp>.</td>
+    <td>json:moments</td>
+    <td>Include image moments in verbose information.</td>
   </tr>
 
   <tr>
@@ -1767,32 +1767,6 @@ use:</p>
   <tr>
     <td>xmp:validate=<var>{true,false}</var></td>
     <td>By default, ImageMagick validates any XMP profile embedded in an image.</td>
-  </tr>
-
-  <tr>
-    <td colspan=2><p></p></td>
-  </tr>
-
-  <tr>
-    <td colspan=2><p></p></td>
-  </tr>
-
-  <tr>
-    <th align="center" colspan=2>Identify Defines</th>
-  </tr>
-
-  <tr>
-    <td colspan=2><p></p></td>
-  </tr>
-
-  <tr>
-    <td>identify:locate=<var>minimum|maximum</var></td>
-   <td>Locate the coordinates of one or more image minimum or maximum.</td>
-  </tr>
-
-  <tr>
-    <td>identify:limit=<var>number</var></td>
-    <td>Locate the coordinates for the number of minima or maxima specified.</td>
   </tr>
 
 </table>
