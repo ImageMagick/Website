@@ -5,6 +5,67 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-25](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-24...7.1.2-25) - 2026-06-04
+
+### Merged
+
+- validate argument count for polynomial distortion [`#8780`](https://github.com/ImageMagick/ImageMagick/pull/8780)
+- fix oob read of gps rationals in GetEXIFProperty [`#8782`](https://github.com/ImageMagick/ImageMagick/pull/8782)
+- reject hdr files with a negative width or height [`#8765`](https://github.com/ImageMagick/ImageMagick/pull/8765)
+- reject pgx files with invalid dimensions or precision [`#8764`](https://github.com/ImageMagick/ImageMagick/pull/8764)
+- reject rla files with an inverted active window [`#8770`](https://github.com/ImageMagick/ImageMagick/pull/8770)
+- build(deps): bump github/codeql-action from 4.35.5 to 4.36.0 [`#8775`](https://github.com/ImageMagick/ImageMagick/pull/8775)
+- reject fits files with an invalid bits per pixel [`#8760`](https://github.com/ImageMagick/ImageMagick/pull/8760)
+- reject sgi files with zero columns or rows [`#8761`](https://github.com/ImageMagick/ImageMagick/pull/8761)
+- reject dds files with zero columns or rows [`#8762`](https://github.com/ImageMagick/ImageMagick/pull/8762)
+
+### Commits
+
+- trigger a build [`d73fb3c`](https://github.com/ImageMagick/ImageMagick/commit/d73fb3cfcd82b2083c40829b3e42f911093aaf91)
+- beta release [`867f838`](https://github.com/ImageMagick/ImageMagick/commit/867f838dcc0b75248737f68d159d89cafa00d955)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-q62c-h75r-2xhc [`960367f`](https://github.com/ImageMagick/ImageMagick/commit/960367f3318e650ba8544c0ce3844d7897aba43b)
+- update configure [`75bfcea`](https://github.com/ImageMagick/ImageMagick/commit/75bfceaaad2889d96ee78184ad3ec49c9b2c5b2c)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-g22q-f7gc-5jhr [`1db660b`](https://github.com/ImageMagick/ImageMagick/commit/1db660b5c6725421c1212ecc88b4e2fa0b68703f)
+- https://github.com/ImageMagick/ImageMagick/issues/8774 [`7bbbc2d`](https://github.com/ImageMagick/ImageMagick/commit/7bbbc2d3e6a05887158c57971ffe4bcad97b9b44)
+- eliminate compiler exception [`81c1296`](https://github.com/ImageMagick/ImageMagick/commit/81c1296d44b9b705ae24ca8f64dc92378888df92)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-px7q-ggqj-hcf2 [`6c8afb5`](https://github.com/ImageMagick/ImageMagick/commit/6c8afb5bc8e408061acb14757f1cdf466fbfad48)
+- cosmetic [`bc64d17`](https://github.com/ImageMagick/ImageMagick/commit/bc64d176401ca65d9239ebb8f158392cf4d54079)
+- reset primitive offset [`fac66fd`](https://github.com/ImageMagick/ImageMagick/commit/fac66fdbf0fb9a9a3b0b1a5fc4e4a1078043141b)
+- Centralize checking if pinged images have a size that has zero columns or rows and removed redundant checks. [`a89f4e4`](https://github.com/ImageMagick/ImageMagick/commit/a89f4e45235804c8adf4a0e28ce683d636cc547c)
+- eliminate compiler warning [`9851324`](https://github.com/ImageMagick/ImageMagick/commit/98513244a39c64ecc0463b8b089ae113a93b16d2)
+- export exception message [`eba82d1`](https://github.com/ImageMagick/ImageMagick/commit/eba82d1ef5c29d54be8d04111e59e47a255e4d66)
+- fix rare exception message leak [`94bea84`](https://github.com/ImageMagick/ImageMagick/commit/94bea84eb33a6a043a09529cd88310264f2fd2dc)
+- use absolute values for PHASH logs [`f72f5b8`](https://github.com/ImageMagick/ImageMagick/commit/f72f5b846b90d3631f3ce79fc2abe8308531c402)
+- cosmetic [`092b960`](https://github.com/ImageMagick/ImageMagick/commit/092b960a4deacc1dce014cca78d39e8d8796ef76)
+- phrase correction [`7b3b271`](https://github.com/ImageMagick/ImageMagick/commit/7b3b271e2ab9fc509d6ef3cc87779178e9fffa8f)
+- prevent reading explicit image filenames [`5c00648`](https://github.com/ImageMagick/ImageMagick/commit/5c00648e4ab6a9d35a644f126388250faa138dbb)
+- Cosmetic. [`dad02f4`](https://github.com/ImageMagick/ImageMagick/commit/dad02f4a151816e0faaa8a10d6a22f88ae668335)
+- 2nd attempt to scale pHash [`0c1cf1e`](https://github.com/ImageMagick/ImageMagick/commit/0c1cf1e07631ea805201dcb6419334e2f69c20df)
+- change  sign [`3894eff`](https://github.com/ImageMagick/ImageMagick/commit/3894eff1aa434bc5a9e281a1d830173b6a9392f9)
+- revert [`b728346`](https://github.com/ImageMagick/ImageMagick/commit/b7283460f10bcdf474be06183938fe474d87e3fb)
+- normalize each channel independently [`7f22f9f`](https://github.com/ImageMagick/ImageMagick/commit/7f22f9f82f51eedaffbe7ac3e9b291717d984754)
+- Put the version in the release notes. [`8d99f81`](https://github.com/ImageMagick/ImageMagick/commit/8d99f8175eeb578c41df1a674b615a603a4e8bbb)
+- Updated the Windows dependencies and configure. [`877ba07`](https://github.com/ImageMagick/ImageMagick/commit/877ba07d2fc13c1dce33bda0f1f64fc5a4e42e80)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-p9rq-q46c-g4x6 [`aa288f3`](https://github.com/ImageMagick/ImageMagick/commit/aa288f3023da9ad9e0d85563d76ea7e1cb58abed)
+- Cosmetic. [`5810d75`](https://github.com/ImageMagick/ImageMagick/commit/5810d7530b7e04ed56dc3d06209a59fef8c7d123)
+- Added extra checks for the width and height. [`271ec74`](https://github.com/ImageMagick/ImageMagick/commit/271ec741384c6c135238ff64aa3307174cd14afe)
+- Revert extra check that was committed by accident. [`6eb7428`](https://github.com/ImageMagick/ImageMagick/commit/6eb7428915948c4743cb6ef95cf8925ac2df3605)
+- https://github.com/ImageMagick/ImageMagick/issues/8766 [`a2bdddb`](https://github.com/ImageMagick/ImageMagick/commit/a2bdddb486600bfbfefac57676610e652d8081a5)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-j989-f892-2335 [`310e325`](https://github.com/ImageMagick/ImageMagick/commit/310e325e65f5171f35ec6305c9c21ec253d80852)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-44cp-c3ww-9rv5 [`e8a6145`](https://github.com/ImageMagick/ImageMagick/commit/e8a61457c90fcc632217cf5504da5c31e4b8d95c)
+- https://github.com/ImageMagick/ImageMagick/issues/8778 [`a829e2e`](https://github.com/ImageMagick/ImageMagick/commit/a829e2eddf32454986f8b5290775f168f53a80e4)
+- revert [`f5f5f36`](https://github.com/ImageMagick/ImageMagick/commit/f5f5f364d21af2c2986ca9ece08018ee3f5bf272)
+- https://github.com/ImageMagick/ImageMagick/issues/8766 [`3fea455`](https://github.com/ImageMagick/ImageMagick/commit/3fea455d9fd697ad4a8cb234f9d391d2eb1baa24)
+- support SetQuantumExtent() private method [`706439c`](https://github.com/ImageMagick/ImageMagick/commit/706439c6cbdb940720d3018008790b17e6c3b0a2)
+- need to export so coders can leverage SetQuantumExtent() [`9fb23a5`](https://github.com/ImageMagick/ImageMagick/commit/9fb23a562797719aa5a37a9e20f3199044d160ab)
+- fix wrong type [`22b1aac`](https://github.com/ImageMagick/ImageMagick/commit/22b1aac590984b2829a9153e99d92db10773f8e5)
+- fix method type [`6512f37`](https://github.com/ImageMagick/ImageMagick/commit/6512f373da00cd634a12aa913f3d9d4b57b2d8f9)
+- cosmetic [`ec374e3`](https://github.com/ImageMagick/ImageMagick/commit/ec374e334c1327d4b0e04e0b8d2da013c0536dcb)
+- Minor optimization of the ClipPixelCacheNexus method. [`e9dcf3a`](https://github.com/ImageMagick/ImageMagick/commit/e9dcf3a10eec6bb64df2091bfe2bb8c517e6d379)
+- Make sure the mask is properly respected when setting the alpha channel (#8778) [`1015688`](https://github.com/ImageMagick/ImageMagick/commit/10156885f0a15094d354fc10515b43b7a4bd7eec)
+- Cosmetic. [`037e462`](https://github.com/ImageMagick/ImageMagick/commit/037e46295029cb01f0f42c57bc664b27ffd3d7d0)
+- release [`04a04ea`](https://github.com/ImageMagick/ImageMagick/commit/04a04eaaa22f721f204c4bf4c6b24b08b1afe5c5)
+
 ## [7.1.2-24](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-23...7.1.2-24) - 2026-05-26
 
 ### Merged
