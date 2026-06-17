@@ -360,7 +360,7 @@ radius that will provide meaningful results for the Gaussian distribution.
 
 <p class="magick-description">Resize the image using data-dependent triangulation.</p>
 
-<p><?php seeGeometry(); ?> The <a href="#adaptive-resize">-adaptive-resize</a>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. The <a href="#adaptive-resize">-adaptive-resize</a>
 option defaults to data-dependent triangulation.  Use the <a
 href="#filter">-filter</a> to choose a different resampling algorithm.
 Offsets, if present in the geometry string, are ignored, and the <a
@@ -976,7 +976,7 @@ pixels which are outside the image proper are blurred into the final result.
 <p class="magick-description">Surround the image with a border of color. </p>
 
 <p>Set the width and height using the <var>size</var> portion of the
-<var>geometry</var> argument.  <?php seeGeometry(); ?> Offsets are
+<var>geometry</var> argument.  See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. Offsets are
 ignored. </p>
 
 <p>As of IM 6.7.8-8, the <var>geometry</var> arguments behave as follows:</p>
@@ -1341,7 +1341,7 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p class="magick-description">Remove pixels from the interior of an image.</p>
 
-<p><?php seeGeometry(); ?> The <var>width</var>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. The <var>width</var>
 and <var>height</var> given in the of the <var>size</var>
 portion of the <var>geometry</var> argument give the number of
 columns and rows to remove. The <var>offset</var> portion of
@@ -2049,7 +2049,7 @@ entry.  </p>
 
 <p class="magick-description">Cut out one or more rectangular regions of the image.</p>
 
-<p><?php seeGeometry(); ?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <p>The <var>width</var> and <var>height</var> of the <var>geometry</var> argument give the size of the image that remains
 after cropping, and <var>x</var> and <var>y</var> in the
@@ -3413,7 +3413,7 @@ image is centered on an 800x600 black canvas: </p>
 
 <p>Append <samp>&lt;</samp> to pad only if the image is smaller than the specified size <em>and</em> not crop if the image is larger (i.e. no-op).  Append <samp>&gt;</samp> to crop only if the image is larger than the specified size <em>and</em> not extend if the image is smaller. (i.e. no-op).</p>
 
-<p><?php seeGeometry(); ?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="extract"></a>-extract <var>geometry</var></h2>
@@ -3442,7 +3442,7 @@ equivalent to:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
 </samp></pre>
 
-<p><?php seeGeometry(); ?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="family"></a>-family <var>fontFamily</var></h2>
@@ -3929,7 +3929,7 @@ option.</p>
 <p>The color of the border is specified with the <a href="#mattecolor"
 >-mattecolor</a> command line option. </p>
 
-<p><?php seeGeometry(); ?> The <var>size</var> portion of the <var>geometry</var> argument indicates the amount of extra width and
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. The <var>size</var> portion of the <var>geometry</var> argument indicates the amount of extra width and
 height that is added to the dimensions of the image. If no offsets are given
 in the <var>geometry</var> argument, then the border added is
 a solid color.  Offsets <var>x</var> and <var>y</var>, if present, specify that
@@ -4232,7 +4232,7 @@ pixels which are outside the image proper are blurred into the final result.
 
 <p class="magick-description">Set the preferred size and location of the image.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="gravity"></a>-gravity <var>type</var></h2>
@@ -4271,7 +4271,7 @@ is (−40,+20). The argument to <a href="#gravity">-gravity</a> is
 (100−40,50+20)=(60,70), so the specified 10x10 region is located at
 that point. (In addition, the <a href="#gravity">-gravity</a> affects the
 region itself, which is <var>centered</var> at the pixel
-coordinate (60,70). (<?php seeGeometry();?>)</p>
+coordinate (60,70). (See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.)</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick image.png -gravity Center -region 10x10-40+20 \
   -negate output.png
@@ -4409,7 +4409,7 @@ mapping. </p>
 manner as the <a href="#geometry">-geometry</a> option, using X11 style to
 handle negative offsets.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="iconic"></a>-iconic</h2>
@@ -5289,7 +5289,7 @@ normalization of mathematical images. </p>
 
 <p class="magick-description">Rescale image with seam-carving.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="list"></a>-list <var>type</var></h2>
@@ -5916,7 +5916,7 @@ orientation</a> option.</p>
 
 <p class="magick-description">Set the size and location of an image on the larger virtual canvas.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <p>For convenience you can specify the page size using <var>media</var> (see below). Offsets can then be added as with other
 <var>geometry</var> arguments (e.g. <a
@@ -6364,7 +6364,7 @@ reduce the number of colors in an animated image sequence. </p>
 <p>The <var>x</var> and <var>y</var> offsets are treated
 in the same manner as in <a href="#crop">-crop</a>.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <p>Use <samp>+region</samp> to remove any previously set regions.</p>
 
@@ -6399,7 +6399,7 @@ This useful when saving the result to vector formats such as MVG or SVG.</p>
 rather than a setting.  You can separately set the canvas size or the offset
 of the image on that canvas by only providing those components. </p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <p>If a <samp>!</samp> flag is given the offset given is added to the existing
 offset to move the image relative to its previous position. This useful for
@@ -6449,7 +6449,7 @@ resolution specified in the standard file header.</p>
 
 <p class="magick-description">Resize an image.</p>
 
-<p><?php seeGeometry();?> Offsets, if present in the geometry string, are
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. Offsets, if present in the geometry string, are
 ignored, and the <a href="#gravity">-gravity</a> option has no effect.</p>
 
 <p>If the <a href="#filter">-filter</a> option
@@ -6540,7 +6540,7 @@ the current <a href="#filter">-filter</a> setting. </p>
 <p>The key feature of the <a href="#sample">-sample</a> is that no new colors
 will be added to the resulting image, though some colors may disappear. </p>
 
-<p><?php seeGeometry();?> Offsets, if present in the geometry string, are
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. Offsets, if present in the geometry string, are
 ignored, unlike <a href="#resize">-resize</a>. </p>
 
 
@@ -6853,7 +6853,7 @@ argument specifies the width of the region to be removed from both sides of
 the image and the height of the regions to be removed from top and bottom.
 Offsets are ignored.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="shear"></a>-shear <var>Xdegrees</var>[x<var>Ydegrees</var>]</h2>
@@ -7071,7 +7071,7 @@ default value. </p>
 
 <p>This will add rows and columns of the current <a
 href="#background">-background</a> color into the given image according to the
-given  <a href="#gravity">-gravity</a> geometry setting.  <?php seeGeometry();?> Essentially <a href="#splice">-splice</a> will divide the
+given  <a href="#gravity">-gravity</a> geometry setting.  See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. Essentially <a href="#splice">-splice</a> will divide the
 image into four quadrants, separating them by the inserted rows and columns.
 </p>
 
@@ -7358,7 +7358,7 @@ convert in.png -channel RGB -threshold -1 white.png
 <p>This is similar to <a href="#resize">-resize</a>, except it is optimized
 for performance.  In addition, comments and color profiles are removed, and <samp>Thumb</samp> properties are set.  This option respects <a href="#filter">-filter</a>, e.g., for additional performance but with a slight degradation in quality, use  <samp>-filter box</samp>.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="tile"></a>-tile <var>filename</var></h2>
@@ -7372,7 +7372,7 @@ for performance.  In addition, comments and color profiles are removed, and <sam
 
 <p class="magick-description">Specify the layout of images.</p>
 
-<p><?php seeGeometry();?></p>
+<p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <div style="margin: auto;">
   <h2>-tile</h2>
