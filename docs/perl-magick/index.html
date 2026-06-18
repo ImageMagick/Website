@@ -21,7 +21,7 @@ description: "Use PerlMagick to read, manipulate, or write an image or image seq
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>yum install ImageMagick-perl
 </samp></pre>
 
-<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest <a href="<?php echo MagickReleaseUrl . "ImageMagick-" . MagickVersion . ".7z" ?>">source</a> release.</p>
+<p>If not, you must install PerlMagick from the ImageMagick source distribution.  Download the latest {% include download-link.html variant="source" label="source" %} release.</p>
 
 <p>Unpack the distribution with this command:</p>
 
@@ -30,7 +30,7 @@ description: "Use PerlMagick to read, manipulate, or write an image or image seq
 
 <p>Next configure and compile ImageMagick:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd ImageMagick-<?php echo MagickVersion ?>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cd ImageMagick-{{ site.magick.version }}
 
 ./configure -with-perl
 make</samp></pre>
