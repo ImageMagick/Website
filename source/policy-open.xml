@@ -153,4 +153,6 @@
   <!-- Set the maximum amount of memory in bytes that are permitted for
        allocation requests. -->
   <!-- <policy domain="system" name="max-memory-request" value="256MiB"/> -->
+  <!-- Blocks all SVG entity‑substitution attempts by denying the svg:substitute-entities define -->
+  <!-- <policy domain="system" name="svg" rights="none" pattern="substitute-entities"/> -->
 </policymap>
