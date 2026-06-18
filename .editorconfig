@@ -1,6 +1,6 @@
 root = true
 
-[*.{css,js,php}]
+[*.{css,html,js,json,php}]
 
 indent_size = 2
 indent_style = space
