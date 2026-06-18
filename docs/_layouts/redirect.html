@@ -1,4 +1,8 @@
-{% assign dest = page.url | remove: ".php" | replace: "/script/", "/" %}
+{% if page.redirect_to %}
+  {% assign dest = page.redirect_to %}
+{% else %}
+  {% assign dest = page.url | remove: ".php" | replace: "/script/", "/" %}
+{% endif %}
 <!DOCTYPE html>
 <html>
   <head>
