@@ -1,15 +1,14 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": { 
-      "DISABLE_CACHE": "true"
-    }
-  },
-  "onCreateCommand": "sudo a2enmod rewrite && sudo apache2ctl start",
-  "forwardPorts": [ 7070 ],
+  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+  "postStartCommand": "bundle install && bundle exec jekyll serve --source docs --incremental --force_polling --livereload --port 7070",
+  "forwardPorts": [
+    7070
+  ],
   "customizations": {
     "vscode": {
-      "extensions": [ "editorconfig.editorconfig" ],
+      "extensions": [
+        "editorconfig.editorconfig"
+      ],
       "settings": {
         "extensions.ignoreRecommendations": true
       }
