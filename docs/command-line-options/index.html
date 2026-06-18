@@ -1365,7 +1365,7 @@ sides of the image.  </p>
 href="#splice">-splice</a> that was given the same <var>geometry</var> and <a href="#gravity">-gravity</a> settings. </p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="clahe"></a>-clahe <var>width</var>x<var>height</var>{%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</h2>
+  <h2><a class="anchor" id="clahe"></a>-clahe <var>width</var>x<var>height</var>&#123%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</h2>
 </div>
 
 <p class="magick-description">Contrast limited adaptive histogram equalization.</p>
@@ -2306,7 +2306,7 @@ same physical dimensions (in inches or centimeters), use the
 <p class="magick-description">Obtain image by descending window hierarchy.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="deskew"></a>-deskew <var>threshold{%}</var></h2>
+  <h2><a class="anchor" id="deskew"></a>-deskew <var>threshold&#123%}</var></h2>
 </div>
 
 <p class="magick-description">Straighten an image.  A threshold of 40% works for most images.</p>
@@ -2327,7 +2327,7 @@ same physical dimensions (in inches or centimeters), use the
 <p class="magick-description">Render text right-to-left or left-to-right.  Requires the <a href="https://github.com/HOST-Oman/libraqm">RAQM</a> delegate library and <a href="https://en.wikipedia.org/wiki/Complex_text_layout">complex text layout</a>.</p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="displace"></a>-displace <var>horizontal-scale</var>{%}{!}<br />-displace <var>horizontal-scale</var>x<var>vertical-scale</var>{%}{!}</h2>
+  <h2><a class="anchor" id="displace"></a>-displace <var>horizontal-scale</var>&#123%}{!}<br />-displace <var>horizontal-scale</var>x<var>vertical-scale</var>&#123%}{!}</h2>
 </div>
 
 <p class="magick-description">Shift image pixels as defined by a displacement map.</p>
@@ -5524,7 +5524,7 @@ name. </p>
 name. </p>
 
 <div style="margin: auto;">
-  <h2><a class="anchor" id="mean-shift"></a>-mean-shift <var>width</var>x<var>height</var>{<var>+distance</var>{%}</h2>
+  <h2><a class="anchor" id="mean-shift"></a>-mean-shift <var>width</var>x<var>height</var>{<var>+distance</var>&#123%}</h2>
 </div>
 
 <p class="magick-description">Image noise removal and color reduction/segmentation (e.g. -mean-shift 7x7+10%).</p>
@@ -7827,7 +7827,7 @@ href="#stretch">-stretch</a>, and <a href="#style">-style</a>. </p>
   <h2><a class="anchor" id="white-balance"></a>-white-balance</h2>
 </div>
 <p>Applies white balancing to an image according to a grayworld assumption in the LAB colorspace.</p>
-<p>Use <samp>-define white-balance:vibrance=<em>value{%}</em></kdb> to change the color vibrance of the a &amp; b channels.</p>
+<p>Use <samp>-define white-balance:vibrance=<em>value&#123%}</em></kdb> to change the color vibrance of the a &amp; b channels.</p>
 
 <div style="margin: auto;">
   <h2><a class="anchor" id="white-point"></a>-white-point <var>x,y</var></h2>
