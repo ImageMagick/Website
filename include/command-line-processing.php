@@ -286,82 +286,82 @@ subsequent processing such as reading an image, an image operator, or when
 writing an image as appropriate.  An image setting stays in effect until it
 is reset or the command-line terminates.  The image settings include:</p>
 
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#adjoin" class="me-2">-adjoin</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#affine" class="me-2">-affine</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#alpha" class="me-2">-alpha</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#antialias" class="me-2">-antialias</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#authenticate" class="me-2">-authenticate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#background" class="me-2">-background</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#bias" class="me-2">-bias</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#black-point-compensation" class="me-2">-black-point-compensation</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#blue-primary" class="me-2">-blue-primary</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#bordercolor" class="me-2">-bordercolor</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#caption" class="me-2">-caption</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#channel" class="me-2">-channel</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#comment" class="me-2">-comment</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#compress" class="me-2">-compress</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#debug" class="me-2">-debug</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#define" class="me-2">-define</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#delay" class="me-2">-delay</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#density" class="me-2">-density</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#depth" class="me-2">-depth</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#direction" class="me-2">-direction</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#display" class="me-2">-display</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#dispose" class="me-2">-dispose</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#dither" class="me-2">-dither</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#encoding" class="me-2">-encoding</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#endian" class="me-2">-endian</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#extract" class="me-2">-extract</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#family" class="me-2">-family</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#fill" class="me-2">-fill</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#filter" class="me-2">-filter</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#font" class="me-2">-font</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#format" class="me-2">-format</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#fuzz" class="me-2">-fuzz</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#geometry" class="me-2">-geometry</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#gravity" class="me-2">-gravity</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#green-primary" class="me-2">-green-primary</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#interlace" class="me-2">-interlace</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#intent" class="me-2">-intent</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#interpolate" class="me-2">-interpolate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#label" class="me-2">-label</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#limit" class="me-2">-limit</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#linewidth" class="me-2">-linewidth</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#log" class="me-2">-log</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#loop" class="me-2">-loop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#mattecolor" class="me-2">-mattecolor</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#monitor" class="me-2">-monitor</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#orient" class="me-2">-orient</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#page" class="me-2">-page</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#pointsize" class="me-2">-pointsize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#preview" class="me-2">-preview</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#quality" class="me-2">-quality</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#quiet" class="me-2">-quiet</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#read-mask" class="me-2">-read-mask</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#red-primary" class="me-2">-red-primary</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#region" class="me-2">-region</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#render" class="me-2">-render</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#repage" class="me-2">-repage</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sampling-factor" class="me-2">-sampling-factor</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#scene" class="me-2">-scene</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#seed" class="me-2">-seed</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#size" class="me-2">-size</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#stretch" class="me-2">-stretch</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#stroke" class="me-2">-stroke</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#strokewidth" class="me-2">-strokewidth</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#style" class="me-2">-style</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#texture" class="me-2">-texture</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#tile" class="me-2">-tile</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#transparent-color" class="me-2">-transparent-color</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#treedepth" class="me-2">-treedepth</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#type" class="me-2">-type</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#undercolor" class="me-2">-undercolor</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#units" class="me-2">-units</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#verbose" class="me-2">-verbose</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#virtual-pixel" class="me-2">-virtual-pixel</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#weight" class="me-2">-weight</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#write-mask" class="me-2">-write-mask</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#adjoin" class="me-2">-adjoin</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#affine" class="me-2">-affine</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#alpha" class="me-2">-alpha</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#antialias" class="me-2">-antialias</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#authenticate" class="me-2">-authenticate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#background" class="me-2">-background</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#bias" class="me-2">-bias</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#black-point-compensation" class="me-2">-black-point-compensation</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#blue-primary" class="me-2">-blue-primary</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#bordercolor" class="me-2">-bordercolor</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#caption" class="me-2">-caption</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#channel" class="me-2">-channel</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#comment" class="me-2">-comment</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#compress" class="me-2">-compress</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#debug" class="me-2">-debug</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#define" class="me-2">-define</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#delay" class="me-2">-delay</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#density" class="me-2">-density</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#depth" class="me-2">-depth</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#direction" class="me-2">-direction</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#display" class="me-2">-display</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#dispose" class="me-2">-dispose</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#dither" class="me-2">-dither</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#encoding" class="me-2">-encoding</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#endian" class="me-2">-endian</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#extract" class="me-2">-extract</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#family" class="me-2">-family</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#fill" class="me-2">-fill</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#filter" class="me-2">-filter</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#font" class="me-2">-font</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#format" class="me-2">-format</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#fuzz" class="me-2">-fuzz</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#geometry" class="me-2">-geometry</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#gravity" class="me-2">-gravity</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#green-primary" class="me-2">-green-primary</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#interlace" class="me-2">-interlace</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#intent" class="me-2">-intent</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#interpolate" class="me-2">-interpolate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#label" class="me-2">-label</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#limit" class="me-2">-limit</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#linewidth" class="me-2">-linewidth</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#log" class="me-2">-log</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#loop" class="me-2">-loop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#mattecolor" class="me-2">-mattecolor</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#monitor" class="me-2">-monitor</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#orient" class="me-2">-orient</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#page" class="me-2">-page</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#pointsize" class="me-2">-pointsize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#preview" class="me-2">-preview</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#quality" class="me-2">-quality</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#quiet" class="me-2">-quiet</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#read-mask" class="me-2">-read-mask</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#red-primary" class="me-2">-red-primary</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#region" class="me-2">-region</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#render" class="me-2">-render</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#repage" class="me-2">-repage</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sampling-factor" class="me-2">-sampling-factor</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#scene" class="me-2">-scene</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#seed" class="me-2">-seed</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#size" class="me-2">-size</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#stretch" class="me-2">-stretch</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#stroke" class="me-2">-stroke</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#strokewidth" class="me-2">-strokewidth</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#style" class="me-2">-style</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#texture" class="me-2">-texture</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#tile" class="me-2">-tile</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#transparent-color" class="me-2">-transparent-color</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#treedepth" class="me-2">-treedepth</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#type" class="me-2">-type</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#undercolor" class="me-2">-undercolor</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#units" class="me-2">-units</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#verbose" class="me-2">-verbose</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#virtual-pixel" class="me-2">-virtual-pixel</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#weight" class="me-2">-weight</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#write-mask" class="me-2">-write-mask</a></li>
 </ul>
 
 <p>In this example, <var>-channel</var> applies to each of the images, since, as we mentioned, settings persist:
@@ -379,92 +379,92 @@ any command-line <a href="/command-line-options/">option</a> not listed as a
 image setting, which persists until the command-line terminates,
 an operator is applied to the current image set and forgotten.  The image operators include:</p>
 
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#annotate" class="me-2">-annotate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#black-threshold" class="me-2">-black-threshold</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#blur" class="me-2">-blur</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#border" class="me-2">-border</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#charcoal" class="me-2">-charcoal</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#chop" class="me-2">-chop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#clip" class="me-2">-clip</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#clip-path" class="me-2">-clip-path</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#clip-mask" class="me-2">-clip-mask</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#colors" class="me-2">-colors</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#colorize" class="me-2">-colorize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#colorspace" class="me-2">-colorspace</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#color-threshold" class="me-2">-color-threshold</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#compose" class="me-2">-compose</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#contrast" class="me-2">-contrast</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#convolve" class="me-2">-convolve</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#cycle" class="me-2">-cycle</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#despeckle" class="me-2">-despeckle</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#draw" class="me-2">-draw</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#edge" class="me-2">-edge</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#emboss" class="me-2">-emboss</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#enhance" class="me-2">-enhance</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#equalize" class="me-2">-equalize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#evaluate" class="me-2">-evaluate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#extent" class="me-2">-extent</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#flip" class="me-2">-flip</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#flop" class="me-2">-flop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#floodfill" class="me-2">-floodfill</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#frame" class="me-2">-frame</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#fx" class="me-2">-fx</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#gamma" class="me-2">-gamma</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#gaussian-blur" class="me-2">-gaussian-blur</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#grayscale" class="me-2">-grayscale</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#implode" class="me-2">-implode</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#integral" class="me-2">-integral</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#kmeans" class="me-2">-kmeans</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#lat" class="me-2">-lat</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#level" class="me-2">-level</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#map" class="me-2">-map</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#median" class="me-2">-median</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#modulate" class="me-2">-modulate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#monochrome" class="me-2">-monochrome</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#negate" class="me-2">-negate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#noise" class="me-2">-noise</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#normalize" class="me-2">-normalize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#opaque" class="me-2">-opaque</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#ordered-dither" class="me-2">-ordered-dither</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#paint" class="me-2">-paint</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#posterize" class="me-2">-posterize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#raise" class="me-2">-raise</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#profile" class="me-2">-profile</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#random-threshold" class="me-2">-random-threshold</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#resample" class="me-2">-resample</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#resize" class="me-2">-resize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#roll" class="me-2">-roll</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#rotate" class="me-2">-rotate</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#rotational-blur" class="me-2">-rotational-blur</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sample" class="me-2">-sample</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#scale" class="me-2">-scale</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sepia-tone" class="me-2">-sepia-tone</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#segment" class="me-2">-segment</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#shade" class="me-2">-shade</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#shadow" class="me-2">-shadow</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sharpen" class="me-2">-sharpen</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#shave" class="me-2">-shave</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#shear" class="me-2">-shear</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sigmoidal-contrast" class="me-2">-sigmoidal-contrast</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#solarize" class="me-2">-solarize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#splice" class="me-2">-splice</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#spread" class="me-2">-spread</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#strip" class="me-2">-strip</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#swirl" class="me-2">-swirl</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#threshold" class="me-2">-threshold</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#transparent" class="me-2">-transparent</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#thumbnail" class="me-2">-thumbnail</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#tint" class="me-2">-tint</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#transform" class="me-2">-transform</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#trim" class="me-2">-trim</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#unsharp" class="me-2">-unsharp</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#version" class="me-2">-version</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#wave" class="me-2">-wave</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#white-balance" class="me-2">-white-balance</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#white-point" class="me-2">-white-point</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#white-threshold" class="me-2">-white-threshold</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#annotate" class="me-2">-annotate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#black-threshold" class="me-2">-black-threshold</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#blur" class="me-2">-blur</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#border" class="me-2">-border</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#charcoal" class="me-2">-charcoal</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#chop" class="me-2">-chop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#clip" class="me-2">-clip</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#clip-path" class="me-2">-clip-path</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#clip-mask" class="me-2">-clip-mask</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#colors" class="me-2">-colors</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#colorize" class="me-2">-colorize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#colorspace" class="me-2">-colorspace</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#color-threshold" class="me-2">-color-threshold</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#compose" class="me-2">-compose</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#contrast" class="me-2">-contrast</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#convolve" class="me-2">-convolve</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#cycle" class="me-2">-cycle</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#despeckle" class="me-2">-despeckle</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#draw" class="me-2">-draw</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#edge" class="me-2">-edge</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#emboss" class="me-2">-emboss</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#enhance" class="me-2">-enhance</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#equalize" class="me-2">-equalize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#evaluate" class="me-2">-evaluate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#extent" class="me-2">-extent</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#flip" class="me-2">-flip</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#flop" class="me-2">-flop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#floodfill" class="me-2">-floodfill</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#frame" class="me-2">-frame</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#fx" class="me-2">-fx</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#gamma" class="me-2">-gamma</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#gaussian-blur" class="me-2">-gaussian-blur</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#grayscale" class="me-2">-grayscale</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#implode" class="me-2">-implode</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#integral" class="me-2">-integral</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#kmeans" class="me-2">-kmeans</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#lat" class="me-2">-lat</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#level" class="me-2">-level</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#map" class="me-2">-map</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#median" class="me-2">-median</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#modulate" class="me-2">-modulate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#monochrome" class="me-2">-monochrome</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#negate" class="me-2">-negate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#noise" class="me-2">-noise</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#normalize" class="me-2">-normalize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#opaque" class="me-2">-opaque</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#ordered-dither" class="me-2">-ordered-dither</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#paint" class="me-2">-paint</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#posterize" class="me-2">-posterize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#raise" class="me-2">-raise</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#profile" class="me-2">-profile</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#random-threshold" class="me-2">-random-threshold</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#resample" class="me-2">-resample</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#resize" class="me-2">-resize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#roll" class="me-2">-roll</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#rotate" class="me-2">-rotate</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#rotational-blur" class="me-2">-rotational-blur</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sample" class="me-2">-sample</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#scale" class="me-2">-scale</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sepia-tone" class="me-2">-sepia-tone</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#segment" class="me-2">-segment</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#shade" class="me-2">-shade</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#shadow" class="me-2">-shadow</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sharpen" class="me-2">-sharpen</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#shave" class="me-2">-shave</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#shear" class="me-2">-shear</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sigmoidal-contrast" class="me-2">-sigmoidal-contrast</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#solarize" class="me-2">-solarize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#splice" class="me-2">-splice</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#spread" class="me-2">-spread</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#strip" class="me-2">-strip</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#swirl" class="me-2">-swirl</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#threshold" class="me-2">-threshold</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#transparent" class="me-2">-transparent</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#thumbnail" class="me-2">-thumbnail</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#tint" class="me-2">-tint</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#transform" class="me-2">-transform</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#trim" class="me-2">-trim</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#unsharp" class="me-2">-unsharp</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#version" class="me-2">-version</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#wave" class="me-2">-wave</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#white-balance" class="me-2">-white-balance</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#white-point" class="me-2">-white-point</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#white-threshold" class="me-2">-white-threshold</a></li>
 </ul>
 
 <p>In this example, <var>-negate</var> negates the wand image but not the wizard:</p>
@@ -480,9 +480,9 @@ size may result in an unexpected output. In such a case,
 
 <h4><a class="anchor" id="channel"></a>Image Channel Operator</h4>
 <p>Operate directly on image channels:</p>
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#channel-fx" class="me-2">-channel-fx</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#separate">-separate</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#channel-fx" class="me-2">-channel-fx</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#separate">-separate</a></li>
 </ul>
 
 <h4><a class="anchor" id="sequence"></a>Image Sequence Operator</h4>
@@ -491,43 +491,43 @@ size may result in an unexpected output. In such a case,
 image sequence immediately as it appears on the command-line.  Choose from
 these image sequence operators:</p>
 
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#append" class="me-2">-append</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#affinity" class="me-2">-affinity</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#average" class="me-2">-average</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#clut" class="me-2">-clut</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#coalesce" class="me-2">-coalesce</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#combine" class="me-2">-combine</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#compare" class="me-2">-compare</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#complex" class="me-2">-complex</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#composite" class="me-2">-composite</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#copy" class="me-2">-copy</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#debug" class="me-2">-debug</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#deconstruct" class="me-2">-deconstruct</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#delete" class="me-2">-delete</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#evaluate-sequence" class="me-2">-evaluate-sequence</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#fft" class="me-2">-fft</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#flatten" class="me-2">-flatten</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#fx" class="me-2">-fx</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#hald-clut" class="me-2">-hald-clut</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#ift" class="me-2">-ift</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#identify" class="me-2">-identify</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#insert" class="me-2">-insert</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#layers" class="me-2">-layers</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#limit" class="me-2">-limit</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#map" class="me-2">-map</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#maximum" class="me-2">-maximum</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#minimum" class="me-2">-minimum</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#morph" class="me-2">-morph</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#mosaic" class="me-2">-mosaic</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#optimize" class="me-2">-optimize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#print" class="me-2">-print</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#process" class="me-2">-process</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#quiet" class="me-2">-quiet</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#read" class="me-2">-read</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#swap" class="me-2">-swap</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#write" class="me-2">-write</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#append" class="me-2">-append</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#affinity" class="me-2">-affinity</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#average" class="me-2">-average</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#clut" class="me-2">-clut</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#coalesce" class="me-2">-coalesce</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#combine" class="me-2">-combine</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#compare" class="me-2">-compare</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#complex" class="me-2">-complex</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#composite" class="me-2">-composite</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#copy" class="me-2">-copy</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#debug" class="me-2">-debug</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#deconstruct" class="me-2">-deconstruct</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#delete" class="me-2">-delete</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#evaluate-sequence" class="me-2">-evaluate-sequence</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#fft" class="me-2">-fft</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#flatten" class="me-2">-flatten</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#fx" class="me-2">-fx</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#hald-clut" class="me-2">-hald-clut</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#ift" class="me-2">-ift</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#identify" class="me-2">-identify</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#insert" class="me-2">-insert</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#layers" class="me-2">-layers</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#limit" class="me-2">-limit</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#map" class="me-2">-map</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#maximum" class="me-2">-maximum</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#minimum" class="me-2">-minimum</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#morph" class="me-2">-morph</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#mosaic" class="me-2">-mosaic</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#optimize" class="me-2">-optimize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#print" class="me-2">-print</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#process" class="me-2">-process</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#quiet" class="me-2">-quiet</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#read" class="me-2">-read</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#swap" class="me-2">-swap</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#write" class="me-2">-write</a></li>
 </ul>
 <p>In this example, <var>-append</var> appends three images into one:</p>
 
@@ -548,29 +548,29 @@ Keep in mind that some of these parse their arguments in slightly
 different ways. See the documentation for the individual option or
 setting for more specifics.</p>
 
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#adaptive-resize" class="me-2">-adaptive-resize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#border" class="me-2">-border</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#borderwidth" class="me-2">-borderwidth</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#chop" class="me-2">-chop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#density" class="me-2">-density</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#extent" class="me-2">-extent</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#extract" class="me-2">-extract</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#frame" class="me-2">-frame</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#geometry" class="me-2">-geometry</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#iconGeometry" class="me-2">-iconGeometry</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#liquid-rescale" class="me-2">-liquid-rescale</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#page" class="me-2">-page</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#region" class="me-2">-region</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#repage" class="me-2">-repage</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#resize" class="me-2">-resize</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#sample" class="me-2">-sample</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#scale" class="me-2">-scale</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#shave" class="me-2">-shave</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#splice" class="me-2">-splice</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#thumbnail" class="me-2">-thumbnail</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#window" class="me-2">-window</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#adaptive-resize" class="me-2">-adaptive-resize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#border" class="me-2">-border</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#borderwidth" class="me-2">-borderwidth</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#chop" class="me-2">-chop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#crop" class="me-2">-crop</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#density" class="me-2">-density</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#extent" class="me-2">-extent</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#extract" class="me-2">-extract</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#frame" class="me-2">-frame</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#geometry" class="me-2">-geometry</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#iconGeometry" class="me-2">-iconGeometry</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#liquid-rescale" class="me-2">-liquid-rescale</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#page" class="me-2">-page</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#region" class="me-2">-region</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#repage" class="me-2">-repage</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#resize" class="me-2">-resize</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#sample" class="me-2">-sample</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#scale" class="me-2">-scale</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#shave" class="me-2">-shave</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#splice" class="me-2">-splice</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#thumbnail" class="me-2">-thumbnail</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#window" class="me-2">-window</a></li>
 </ul>
 
 <p>The <var>geometry</var> argument might take any of the forms listed in the table below. These will described in more detail in the subsections following the table. The usual form is <var>size</var>[<var>offset</var>], meaning <var>size</var> is required and <var>offset</var> is optional. Occasionally, [<var>size</var>]<var>offset</var> is possible. In no cases are spaces permitted within the <var>geometry</var> argument.</p>
@@ -727,11 +727,11 @@ above.</p>
 
 <p>In addition to the image operators already discussed, the following image operators are most useful when processing images in an image stack:</p>
 
-<ul>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#clone" class="me-2">-clone</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#delete" class="me-2">-delete</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#insert" class="me-2">-insert</a></li>
-  <li class="d-inline text-nowrap">&bull; <a href="/command-line-options/#swap" class="me-2">-swap</a></li>
+<ul class="list-unstyled d-flex flex-wrap">
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#clone" class="me-2">-clone</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#delete" class="me-2">-delete</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#insert" class="me-2">-insert</a></li>
+  <li class="text-nowrap">&bull; <a href="/command-line-options/#swap" class="me-2">-swap</a></li>
 </ul>
 
 <p>The arguments to these operators are indexes into the image sequence by number, starting with zero, for the first image, and so on. However if you give a negative index, the images are indexed from the end (last image added). That is, an index of -1 is the last image in the current image sequence, -2 gives the second-to-last, and so on.</p>
