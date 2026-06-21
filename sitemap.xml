@@ -10,29 +10,36 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <url><loc>https://imagemagick.org/www/</loc></url>
   <url><loc>https://imagemagick.org/script/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/</loc></url>
+  <url><loc>https://imagemagick.org/docs/</loc></url>
   <url><loc>https://imagemagick.org/api/</loc></url>
+  <url><loc>https://imagemagick.org/resources/</loc></url>
+  <url><loc>https://imagemagick.org/download/</loc></url>
 
   <!-- ========================= -->
-  <!-- Documentation (Usage/) -->
+  <!-- Documentation (/docs/) -->
   <!-- ========================= -->
-  <url><loc>https://imagemagick.org/Usage/basics/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/transform/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/resize/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/color/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/masking/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/blur/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/compose/</loc></url>
-  <url><loc>https://imagemagick.org/Usage/advanced/</loc></url>
+  <url><loc>https://imagemagick.org/docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf</loc></url>
 
   <!-- ========================= -->
   <!-- API Documentation -->
   <!-- ========================= -->
   <url><loc>https://imagemagick.org/api/MagickCore/</loc></url>
   <url><loc>https://imagemagick.org/api/MagickWand/</loc></url>
-  <url><loc>https://imagemagick.org/api/PerlMagick/</loc></url>
+  <url><loc>https://imagemagick.org/api/Magick++/</loc></url>
+
+  <!-- ========================= -->
+  <!-- Resources (configuration files, modules, fonts, locales) -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/resources/coder.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/colors.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/configure.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/delegates.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/english.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/francais.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/locale.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/log.xml</loc></url>
+  <url><loc>https://imagemagick.org/resources/mime.xml</loc></url>
 
   <!-- ========================= -->
   <!-- Examples & Scripts -->
@@ -42,22 +49,13 @@
   <url><loc>https://imagemagick.org/script/mogrify.php</loc></url>
 
   <!-- ========================= -->
-  <!-- Changelogs & Release Notes -->
-  <!-- ========================= -->
-  <url><loc>https://imagemagick.org/www/Changelog/</loc></url>
-  <url><loc>https://imagemagick.org/www/ChangeLog.html</loc></url>
-  <url><loc>https://imagemagick.org/www/ChangeLog-6.html</loc></url>
-
-  <!-- ========================= -->
   <!-- Downloads -->
   <!-- ========================= -->
-  <url><loc>https://imagemagick.org/download/</loc></url>
   <url><loc>https://imagemagick.org/download/releases/</loc></url>
   <url><loc>https://imagemagick.org/download/binaries/</loc></url>
 
   <!-- Example downloadable assets -->
   <url><loc>https://imagemagick.org/download/releases/ImageMagick-7.1.2-25.tar.gz</loc></url>
-  <url><loc>https://imagemagick.org/download/binaries/ImageMagick-7.1.2-25-Q16-x64-dll.exe</loc></url>
+  <url><loc>https://imagemagick.org/download/binaries/magick.exe</loc></url>
 
 </urlset>
-
