@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ========================= -->
+  <!-- Root Pages -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://imagemagick.org/</loc>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url><loc>https://imagemagick.org/www/</loc></url>
+  <url><loc>https://imagemagick.org/script/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/</loc></url>
+  <url><loc>https://imagemagick.org/api/</loc></url>
+
+  <!-- ========================= -->
+  <!-- Documentation (Usage/) -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/Usage/basics/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/transform/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/resize/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/color/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/masking/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/blur/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/compose/</loc></url>
+  <url><loc>https://imagemagick.org/Usage/advanced/</loc></url>
+
+  <!-- ========================= -->
+  <!-- API Documentation -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/api/MagickCore/</loc></url>
+  <url><loc>https://imagemagick.org/api/MagickWand/</loc></url>
+  <url><loc>https://imagemagick.org/api/PerlMagick/</loc></url>
+
+  <!-- ========================= -->
+  <!-- Examples & Scripts -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/script/convert.php</loc></url>
+  <url><loc>https://imagemagick.org/script/composite.php</loc></url>
+  <url><loc>https://imagemagick.org/script/mogrify.php</loc></url>
+
+  <!-- ========================= -->
+  <!-- Changelogs & Release Notes -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/www/Changelog/</loc></url>
+  <url><loc>https://imagemagick.org/www/ChangeLog.html</loc></url>
+  <url><loc>https://imagemagick.org/www/ChangeLog-6.html</loc></url>
+
+  <!-- ========================= -->
+  <!-- Downloads -->
+  <!-- ========================= -->
+  <url><loc>https://imagemagick.org/download/</loc></url>
+  <url><loc>https://imagemagick.org/download/releases/</loc></url>
+  <url><loc>https://imagemagick.org/download/binaries/</loc></url>
+
+  <!-- Example downloadable assets -->
+  <url><loc>https://imagemagick.org/download/releases/ImageMagick-7.1.2-25.tar.gz</loc></url>
+  <url><loc>https://imagemagick.org/download/binaries/ImageMagick-7.1.2-25-Q16-x64-dll.exe</loc></url>
+
+</urlset>
+
