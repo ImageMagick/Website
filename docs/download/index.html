@@ -50,7 +50,13 @@ topic: "Download"
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install ghostscript</samp></pre>
 
-<p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source</p>
+<p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source.</p>
+
+<p>If you require a build with a wider set of delegates and codecs (e.g. SVG via librsvg, raw image support via libraw, OpenMP support, JPEG XL, Cairo, and more), Homebrew also provides <samp>imagemagick-full</samp> as an official formula:</p>
+
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install imagemagick-full</samp></pre>
+
+<p>Note that <samp>imagemagick-full</samp> is keg-only (not linked into system paths by default) and conflicts with <samp>imagemagick</samp>; install only one at a time.  See <samp>brew info imagemagick-full</samp> for instructions on adding it to your <samp>PATH</samp>.</p>
 
 <h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
 
