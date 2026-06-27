@@ -14,5 +14,5 @@ compress_html:
 
 magick:
   lib_version: "7.1.2"
-  version: "7.1.2-25"
-  release_date: "2026-06-05"
+  version: "7.1.2-26"
+  release_date: "2026-06-21"
