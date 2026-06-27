@@ -1,0 +1,13 @@
+defaults:
+- scope:
+    path: ""
+  values:
+    layout: default
+
+include:
+  - .well-known
+
+magick:
+  lib_version: "7.1.2"
+  version: "7.1.2-25"
+  release_date: "2026-06-05"
