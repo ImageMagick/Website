@@ -787,7 +787,7 @@ image-2.jpg</pre>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick *.jpg +adjoin page-%d.pdf</samp></pre>
 
-<p>Use <samp>-define filename:literal=true</samp> to bypass interpreting embedded formatting characters and instead use the filename literally.</p>
+<p>Use <samp>-define registry:filename:literal=true</samp> to bypass interpreting embedded formatting characters and instead use the filename literally.</p>
 
 <h4>Stream Buffering</h4>
 
