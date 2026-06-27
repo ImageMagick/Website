@@ -1,0 +1,15 @@
+{% assign release_url = "https://github.com/ImageMagick/ImageMagick/releases/download/" | append: site.magick.version | append: "/" %}
+
+{% if include.variant == "source" %}
+  {% assign filename = "ImageMagick-" | append: site.magick.version | append: ".7z" %}
+{% else %}
+  {% assign filename = "ImageMagick-" | append: site.magick.version | append: "-" | append: include.variant %}
+{% endif %}
+
+{% if include.label %}
+  {% assign link_text = include.label %}
+{% else %}
+  {% assign link_text = filename %}
+{% endif %}
+
+<a href="{{ release_url }}{{ filename }}">{{ link_text }}</a>
