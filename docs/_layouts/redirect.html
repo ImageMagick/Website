@@ -1,0 +1,14 @@
+{% assign dest = page.url | remove: ".php" | replace: "/script/", "/" %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ dest }}">
+    <link rel="canonical" href="{{ dest }}">
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ dest }}">{{ dest }}</a>…</p>
+    <script>window.location.replace("{{ dest }}");</script>
+  </body>
+</html>
