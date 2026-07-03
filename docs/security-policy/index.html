@@ -128,7 +128,7 @@ description: "It is strongly recommended to establish a security policy suitable
   &lt;policy domain="filter" rights="none" pattern="*"/>
   &lt;!-- Don't read/write from/to stdin/stdout. -->
   &lt;policy domain="path" rights="none" pattern="-"/>
-  &lt;policy domain="path" rights="none" pattern="fd:*"/>
+  &lt;policy domain="path" rights="none" pattern="[Ff][Dd]:*"/>
   &lt;!-- Sensitive paths are not permitted. -->
   &lt;policy domain="path" rights="none" pattern="/etc/*"/>
   &lt;!-- Relative paths are not permitted. -->
