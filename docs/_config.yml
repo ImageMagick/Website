@@ -7,11 +7,6 @@ defaults:
 include:
   - .well-known
 
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-
 magick:
   lib_version: "7.1.2"
   version: "7.1.2-27"
