@@ -16,7 +16,7 @@ description: "Establish a security policy suitable for your local environment be
 <li>Define exactly what types of input ImageMagick is allowed to process.</li>
 <li>Adapt the system to your threat model rather than forcing a one‑size‑fits‑all configuration.</li>
 </ul>
-<p>This flexibility is intentional. ImageMagick ships in an open state so it can be embedded into controlled environments, containers, pipelines, or isolated servers, where administrators can then tighten the policy to match their needs. The more untrusted input you expect to handle, the more restrictive your policy should be.</p>
+<p>This flexibility is intentional. ImageMagick ships in an open state so it can be embedded into controlled environments, containers, pipelines, or isolated servers, where administrators can then tighten the policy to match their needs. <strong class="text-warning">The more untrusted input you expect to handle, the more restrictive your policy should be</strong>.</p>
 
 <p>To ensure optimal security, you can restrict ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can include details such as memory usage limits, allowed paths for reading and writing, limits on the number of images in a sequence, maximum workflow runtime, allowed disk space for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. By customizing the security policy, you can help secure your environment and ensure that ImageMagick is a responsible member of your local system, such as by preventing overloading with large images.</p>
 
