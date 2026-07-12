@@ -8,9 +8,7 @@ title: "Convex Hull"
 
 <p>The convex-hull string format returns a list of x,y coordinates of the vertices of the convex-hull polygon containing all the non-black pixels within it.</p>
 
-<pre class="code">
-magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:
-</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:</samp> </pre>
 
 <p>Use <code>%[convex-hull:extreme-points]</code> to only return the top, right, bottom, and left extreme points.</p>
 
