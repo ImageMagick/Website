@@ -1835,14 +1835,14 @@ that the image <code>bird.miff</code> has a width of 512 and a height of
 
 <p>This is a convert version of "<code>compare</code>" for two same sized images. The syntax is as follows, but other metrics are allowed.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png reference.png -metric RMSE -compare \ <br/> difference.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png reference.png -metric RMSE -compare \ <br/> difference.png
+</samp></pre>
 
 <p>To get the metric value use the string format "%[distortion]".</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png reference.png -metric RMSE -compare -format \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png reference.png -metric RMSE -compare -format \
    "%[distortion]" info:
-</code></pre>
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="complex"></a>-complex <var>operator</var></h2>
@@ -3518,14 +3518,14 @@ formats that do not limit the color or compress the image. Thus, MIFF, TIF,
 PFM, EXR and PNG are the recommended image formats to use. All of these
 formats, except PNG support multi-frame images. So for example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png -fft fft_image.miff
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png -fft fft_image.miff
+</samp></pre>
 
 <p>generates a magnitude image as <code>fft_image.miff[0]</code> and a phase
 image as <code>fft_image.miff[1]</code>. Similarly,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png -fft fft_image.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png -fft fft_image.png
+</samp></pre>
 
 <p>generates a magnitude image as <code>fft_image-0.png</code> and a phase image
 as <code>fft_image-1.png</code>. If you prefer this representation, then you can
@@ -3783,20 +3783,20 @@ href="#set" >-set</a>):-</p>
 
 <p>For example, to get a 8 lobe jinc windowed sinc filter (Genseng filter?):</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png \
   -filter sinc \
   -set filter:window=jinc \
   -set filter:lobes=8 \
   -resize 150% image.jpg"
-</code></pre>
+</samp></pre>
 
 <p>Or a raw un-windowed Sinc filter with 4 lobes:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png \
   -set filter:filter=sinc \
   -set filter:lobes=4 \
   -resize 150% image.jpg"
-</code></pre>
+</samp></pre>
 
 <p>To extract the data for a raw windowing function, combine it with
 a '<code>Box</code>' filter.  For example the '<code>Welch</code> parabolic
@@ -4280,9 +4280,9 @@ that point. (In addition, the <a href="#gravity">-gravity</a> affects the
 region itself, which is <var>centered</var> at the pixel
 coordinate (60,70). (See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.)</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png -gravity Center -region 10x10-40+20 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png -gravity Center -region 10x10-40+20 \
   -negate output.png
-</code></pre>
+</samp></pre>
 
 <p>When used as an option to <a href="/composite/">composite</a>, <a
 href="#gravity">-gravity</a> gives the direction that the image gravitates
@@ -4353,8 +4353,8 @@ dimensions.  Create it with the <code>HALD:</code> prefix (e.g. HALD:8).  You
 can apply any color transformation to the Hald image and then use this option
 to apply the transform to the image. </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png hald.png -hald-clut transform.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png hald.png -hald-clut transform.png
+</samp></pre>
 
 <p>This option provides a convenient method for you to use Gimp or Photoshop
 to make color corrections to the Hald CLUT image and subsequently apply them
@@ -5647,8 +5647,8 @@ href="#modulate">-modulate 120,90</a>.</p>
 <p>Use <a href="#set">-set</a> attribute of '<code>option:modulate:colorspace</code>' to specify which colorspace to
 modulate.  Choose from <code>HCL</code>, <code>HCLp</code>, <code>HSB</code>, <code>HSI</code>, <code>HSL</code> (the default), <code>HSV</code>, <code>HWB</code>, or <code>LCH</code> (LCHab).  For example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.png -set option:modulate:colorspace hsb -modulate 120,90 modulate.png
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="moments"></a>-moments</h2>
