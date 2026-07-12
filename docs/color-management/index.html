@@ -21,12 +21,12 @@ description: "ImageMagick supports accurate color management with color profiles
 <p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="/command-line-processing/#set">-set</a> or <a href="/command-line-processing/#intensity">-intensity</a
 > or <a href="/command-line-processing/#grayscale">-grayscale</a> options:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>
-convert myimage.png -colorspace LinearGray myRGBimage.png
-convert myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
-convert myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
-convert myimage.png -grayscale Rec709luminance myRGBimage.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>
+$magick myimage.png -colorspace LinearGray myRGBimage.png
+$magick myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
+$magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
+$magick myimage.png -grayscale Rec709luminance myRGBimage.png
+</samp></pre>
 
 <p>Note that LinearGray is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
 
@@ -36,24 +36,24 @@ convert myimage.png -grayscale Rec709luminance myRGBimage.png
 
 <p>When separating and recombining channels, with potential intermediate processing, it is important to identify the colorspace used, especially during the recombination. For example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick myimage.png -separate myimage_channels_%d.png
-magick myimage_channels_*.png -combine myimage2.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -separate myimage_channels_%d.png
+magick myimage_channels_*.png -combine myimage2.png</samp></pre>
 
 <p>In the above example, the separated channels are non-linear and the default for <code>-combine</code> is to assume non-linear channels. So the result is the same as the input.</p>
 
 If one desires to separate to linear grayscale channels, recombine them later back to non-linear color, perhaps after some processing, then use the same concept as above for maintaining linear grayscale:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
 magick myimage_channels_*.png -set colorspace RGB -combine -colorspace sRGB myimage2.png
-</code></pre>
+</samp></pre>
 
 <p>When converting to another colorspace and back, such as between sRGB and HSL, the following two commands handle the first case of non-linear channels and the second case of linear channels:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
-magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
+magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png</samp></pre>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
-magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set colorspace sRGB myimage2.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
+magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set colorspace sRGB myimage2.png</samp></pre>
 
 <p>A majority of the image formats assume an sRGB colorspace (e.g. JPEG, PNG, etc.). A few support only linear RGB (e.g. EXR, DPX, CIN, HDR) or only linear GRAY. A few formats support CMYK. For example JPG does, but PNG does not. Then there is the occasional format that also supports LAB (that is CieLAB) (e.g. TIFF, PSD, JPG, JP2). For additional information, see the <a href="/formats/#colorspace" >Colorspace</a> and <a href="/formats/#supported" >Supported Formats</a> pages.</p>
 
