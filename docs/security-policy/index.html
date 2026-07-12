@@ -162,7 +162,7 @@ description: "Establish a security policy suitable for your local environment be
   &lt;!-- Set the maximum amount of memory in bytes that is permitted for
        allocation requests. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
-  &lt;-- If the basename of path is a symbolic link, the open fails -->
+  &lt;!-- If the basename of path is a symbolic link, the open fails -->
   &lt;policy domain="system" name="symlink" rights="none" pattern="follow"/>
   &lt;-- Blocks all SVG entity‑substitution attempts by denying the svg:substitute-entities define -->
   &lt;policy domain="system" name="svg" rights="none" pattern="substitute-entities"/>
