@@ -229,14 +229,12 @@ Rec709Luminance</code></pre>
 <h2><a class="anchor" id="mask"></a>Masks</h2>
 <p>Version 7 supports masks for most image operators.  White pixels in a read mask ignores corresponding pixel in an image whereas white pixels in a write mask protects the corresponding pixel in the image.  From the command-line, you can associate a mask with an image with the <code>-read-mask</code> and <code>-write-mask</code> options.  This polarity matches the masks in version 6 of ImageMagick for ease of porting your workflow.  For convenience, we continue to support the <code>-mask</code> option in version 7 to match the behavior of version 6.</p>
 <p>In this example, we compute the distortion of a masked reconstructed image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png</samp></pre>
 <p>Here we protect certain pixels from change:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3  +write-mask rose_blue.png</samp></pre></pre>
 
 <p>A mask associated with an image persists until it is modified or removed.  This may produce unexpected results for complex command-lines.  Here we only want to clip when applying the alpha option, not the resize:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">
-magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
-</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png</samp></pre>
 
 <h2><a class="anchor" id="core"></a>MagickCore API</h2>
 <p>Here are a list of changes to the MagickCore API:</p>
@@ -269,9 +267,9 @@ magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha o
 </li>
 </ul>
 <h2><a class="anchor" id="headers"></a>Header Files</h2>
-<p>Prior versions of ImageMagick (4-6) reference the ImageMagick header files as <samp>$ magick/</code> and <code>wand/</code>.  ImageMagick 7 instead uses <code>MagickCore/</code> and <code>MagickWand/</samp> respectively.  For example,</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code><code>#include &lt;MagickCore/MagickCore.h>
-#include &lt;MagickWand/MagickWand.h></code></code></pre>
+<p>Prior versions of ImageMagick (4-6) reference the ImageMagick header files as <samp>$ magick/</code> and <code>wand/</code>.  ImageMagick 7 instead uses <code>MagickCore/</code> and <code>MagickWand/</code> respectively.  For example,</p>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>#include &lt;MagickCore/MagickCore.h>
+#include &lt;MagickWand/MagickWand.h></code></pre>
 
 <h2><a class="anchor" id="deprecate"></a>Deprecated Features Removed</h2>
 <p>All deprecated features from ImageMagick version 6 are removed in version 7.  These include the <code>Magick-config</code> and <code>Wand-config</code> configuration utilities.  Instead use:</p>
