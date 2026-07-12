@@ -9,7 +9,7 @@ description: "ImageMagick supports color thresholding, a technique to segment im
 
 <p>To illustrate how color thresholding performs, use this image:</p>
 
-<pre class="code">convert <var>input-image</var> -colorspace <var>XXX</var> -color-threshold <var>"start - stop"</var> <var>output-image</var></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick <var>input-image</var> -colorspace <var>XXX</var> -color-threshold <var>"start - stop"</var> <var>output-image</var></samp></pre>
 
 <p>The following are some typical examples of use:</p>
 
@@ -17,7 +17,7 @@ description: "ImageMagick supports color thresholding, a technique to segment im
 
 <p>Start by choosing one sRGB color (somewhere on the image -- in this case the yellow of the flowers) and offset it low and high to form two sRGB colors. The lower values form the start color and the higher values form the stop color. Begin with <code>sRGB(183,132,20)</code>. Offset its values by +-20 to identify the start color (-) and the stop color (+); namely, R=183+-20, G=132+-20, and B=40+-20:</p>
 
-<pre class="code">magick monet.jpg -color-threshold 'sRGB(163,112,0)-sRGB(203,152,40)' monet.gif</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick monet.jpg -color-threshold 'sRGB(163,112,0)-sRGB(203,152,40)' monet.gif</samp></pre>
 
 <p>this returns the outline of the yellow flower petals:</p>
 
@@ -25,7 +25,7 @@ description: "ImageMagick supports color thresholding, a technique to segment im
 
 <p>Now, pick two RGB colors: <code>sRGB(159,150,0)</code> and <code>sRGB(205,100,45):</code></p>
 
-<pre class="code">magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</code></ul>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$magick monet.jpg -color-threshold 'sRGB(159,150,0)-sRGB(205,100,45)' monet.gif</samp></pre></ul>
 
 <ul><img class="img-fluid img-thumbnail" src="/image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
@@ -39,13 +39,13 @@ magick xc:"srgb(183,132,20)" -colorspace HSV txt:
 
 <p>Now, offset its HSV values as H=41+-20, S=89+-10, and V=72+-10, to create the start color (-) and stop color (+):</p>
 
-<pre class="code">magick monet.jpg -colorspace HSV -color-threshold 'hsv(21,79%,62%)-hsv(61,99%,85%)' monet.gif</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick monet.jpg -colorspace HSV -color-threshold 'hsv(21,79%,62%)-hsv(61,99%,85%)' monet.gif</samp></pre>
 
 <ul><img class="img-fluid img-thumbnail" src="/image/color-thresholding-rgb.gif" alt="[Color Thresholding]" width="265" height="333" name="color-thresholding" /></ul>
 
 <p>Next, pick two RGB colors. Use <code>-colorspace HSV</code> to convert the image to HSV, and apply the RGB start and stop colors.  Choose <code>sRGB(158,77,33)</code> and <code>sRGB(213,217,2)</code>:</p>
 
-<pre class="code">magick monet.jpg -colorspace HSV -color-threshold "sRGB(158,77,33)-sRGB(213,217,2)" monet.gif</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick monet.jpg -colorspace HSV -color-threshold "sRGB(158,77,33)-sRGB(213,217,2)" monet.gif</samp></pre>
 
 <p>Here is the expected results:</p>
 
@@ -65,7 +65,7 @@ magick xc:"sRGB(205,100,45)" -colorspace gray txt:
 
 <p>Notice that the start intensity must be smaller than stop intensity:</p>
 
-<pre class="code">magick monet.jpg -colorspace gray -color-threshold 'gray(46.4152%)-gray(55.3278%)' monet.gif</pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick monet.jpg -colorspace gray -color-threshold 'gray(46.4152%)-gray(55.3278%)' monet.gif</samp></pre>
 
 <p>Here is the results of the color thresholding operation:</p>
 
