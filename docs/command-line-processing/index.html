@@ -719,7 +719,7 @@ $ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</samp
 
 <p>In school, your teacher probably permitted you to work on problems on a scrap of paper and then copy the results to your test paper.  An image stack is similar.  It permits you to work on an image or image sequence in isolation and subsequently introduce the results back into the command-line.  The image stack is delineated with parenthesis.  Image operators only affect images in the current stack.  For example, we can limit the image rotation to just the wizard image like this:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif</samp></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif</samp></pre>
 
 
 <p class="text-info">Notice again that the  parentheses are <var>escaped</var> by preceding them with
