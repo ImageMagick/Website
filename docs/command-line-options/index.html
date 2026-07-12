@@ -469,7 +469,7 @@ four parameters suffice for rotation and scaling without translation.</p>
 respectively, is accomplished with the following.</p>
 
 <p>See <a href="#transform">-transform</a>, and the <a
-href="#distort">-distort</a> method '<code>Affineprojection</code> for more
+href="#distort">-distort</a> method <code>Affineprojection</code> for more
 information </p>
 
 
@@ -479,14 +479,14 @@ information </p>
 <p>Translation by a displacement (<var>t<sub>x</sub></var>, <var>t<sub>y</sub></var>) is accomplished like so:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>-affine 1,0,0,1,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>
-<codesamp></pre>
+</code></pre>
 
 <p>Rotate clockwise about the origin (the upper left-hand corner) by an angle
 <var>a</var> by letting <var>c</var> = cos(<var>a</var>), <var>s</var>
 = sin(<var>a</var>), and using the following.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>-affine <var>c</var>,<var>s</var>,-<var>s</var>,<var>c</var>
-<codesamp></pre>
+</code></pre>
 
 <p>The cumulative effect of a sequence of <a href="#affine" >-affine</a>
 transformations can be accomplished by instead by a single <a href="#affine"
