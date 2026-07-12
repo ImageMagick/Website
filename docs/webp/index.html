@@ -5,63 +5,63 @@ title: "WebP Encoding Options"
 <p class="lead">ImageMagick's WebP image format accepts a plethora of encoding options as detailed below. The default encoding options are:<p>
 
 <ul class="small">
-  <li class="list-group-item"><samp>quality = 75</samp></li>
-  <li class="list-group-item"><samp>alpha-filtering = 1</samp></li>
-  <li class="list-group-item"><samp>alpha-quality = 100</samp></li>
-  <li class="list-group-item"><samp>autofilter = 0</samp></li>
-  <li class="list-group-item"><samp>filter-sharpness = 0</samp></li>
-  <li class="list-group-item"><samp>filter-strength = 60</samp></li>
-  <li class="list-group-item"><samp>lossless = 0</samp></li>
-  <li class="list-group-item"><samp>method = 4</samp></li>
-  <li class="list-group-item"><samp>pass = 1</samp></li>
-  <li class="list-group-item"><samp>preprocessing = 0</samp></li>
-  <li class="list-group-item"><samp>segments = 4</samp></li>
-  <li class="list-group-item"><samp>sns-strength = 50</samp></li>
-  <li class="list-group-item"><samp>target-psnr = 0</samp></li>
-  <li class="list-group-item"><samp>target-size = 0</samp></li>
+  <li class="list-group-item"><code>quality = 75</code></li>
+  <li class="list-group-item"><code>alpha-filtering = 1</code></li>
+  <li class="list-group-item"><code>alpha-quality = 100</code></li>
+  <li class="list-group-item"><code>autofilter = 0</code></li>
+  <li class="list-group-item"><code>filter-sharpness = 0</code></li>
+  <li class="list-group-item"><code>filter-strength = 60</code></li>
+  <li class="list-group-item"><code>lossless = 0</code></li>
+  <li class="list-group-item"><code>method = 4</code></li>
+  <li class="list-group-item"><code>pass = 1</code></li>
+  <li class="list-group-item"><code>preprocessing = 0</code></li>
+  <li class="list-group-item"><code>segments = 4</code></li>
+  <li class="list-group-item"><code>sns-strength = 50</code></li>
+  <li class="list-group-item"><code>target-psnr = 0</code></li>
+  <li class="list-group-item"><code>target-size = 0</code></li>
 </ul>
 <p>For digital pictures, like portrait, inner shot, consider these defines:</p>
 <div class="mb-1">
-  <pre class="p-3"><samp>-define webp:sns-strength=80
+  <pre class="p-3"><code>-define webp:sns-strength=80
 -define webp:filter-sharpness=4
 -define webp:filter-strength=35
--define webp:preprocessing=0</samp></pre>
+-define webp:preprocessing=0</code></pre>
 </div>
 
 <p>For outdoor photographs, with natural lighting, consider these defines:</p>
 <div class="mb-1">
-  <pre class="p-3"><samp>-define webp:sns-strength=80
+  <pre class="p-3"><code>-define webp:sns-strength=80
 -define webp:filter-sharpness=3
 -define webp:filter-strength=30
--define webp:preprocessing=2</samp></pre>
+-define webp:preprocessing=2</code></pre>
 </div>
 
 <p>For hand or line drawing, with high-contrast details, consider these defines:</p>
 <div class="mb-1">
-  <pre class="p-3"><samp>-define webp:sns-strength=25
+  <pre class="p-3"><code>-define webp:sns-strength=25
 -define webp:filter-sharpness=6
--define webp:filter-strength=10</samp></pre>
+-define webp:filter-strength=10</code></pre>
 </div>
 
 <p>For small-sized colorful images, consider these defines:</p>
 <div class="mb-1">
-  <pre class="p-3"><samp>-define webp:sns-strength=0
+  <pre class="p-3"><code>-define webp:sns-strength=0
 -define webp:filter-strength=0
--define webp:preprocessing=0</samp></pre>
+-define webp:preprocessing=0</code></pre>
 </div>
 
 <p>For text images, consider these defines:</p>
 <div class="mb-1">
-  <pre class="p-3"><samp>-define webp:sns-strength=0
+  <pre class="p-3"><code>-define webp:sns-strength=0
 -define webp:filter-strength=0
 -define webp:preprocessing=0
--define webp:segments=2</samp></pre>
+-define webp:segments=2</code></pre>
 </div>
 
-<p>ImageMagick sets <samp>pass=6</samp> if <samp>target-psnr</samp> or <samp>target-size</samp> are specified. However, it does not set <samp>target-psnr=40</samp> if <samp>pass</samp> is specified without <samp>target-psnr</samp> or <samp>target-size</samp>.
+<p>ImageMagick sets <code>pass=6</code> if <code>target-psnr</code> or <code>target-size</code> are specified. However, it does not set <code>target-psnr=40</code> if <code>pass</code> is specified without <code>target-psnr</code> or <code>target-size</code>.
     </p>
 
-<p> If <samp>quality</samp> is specified, ImageMagick sets <samp>near_lossless</samp> to the same value.  <samp>near_lossless</samp> cannot be set directly.  If <samp>quality</samp> is set to <samp>100</samp> or greater, ImageMagick sets <samp>lossless=1</samp>> You can override this with: <samp>-quality 100 -define webp:lossless=false</samp>
+<p> If <code>quality</code> is specified, ImageMagick sets <code>near_lossless</code> to the same value.  <code>near_lossless</code> cannot be set directly.  If <code>quality</code> is set to <code>100</code> or greater, ImageMagick sets <code>lossless=1</code>> You can override this with: <code>-quality 100 -define webp:lossless=false</code>
     </p>
 
 <p>Here is a complete list of WebP encoding options:</p>

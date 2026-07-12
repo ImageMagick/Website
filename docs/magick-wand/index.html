@@ -20,15 +20,15 @@ description: "Recommended interface between the C programming language and the I
 
 <p>After you write your MagickWand program, compile it like this:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>cc `MagickWand-config --cflags --cppflags` -O2 -o wand wand.c `MagickWand-config --ldflags --libs`</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cc `MagickWand-config --cflags --cppflags` -O2 -o wand wand.c `MagickWand-config --ldflags --libs`</code></pre>
 
-<p>Set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
+<p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</code></pre>
 
 <p>Here is a example program that utilizes the MagickWand API to get you started, <a href="/source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>#include &lt;stdio.h>
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;MagickWand/MagickWand.h>
 
@@ -83,11 +83,11 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</samp></pre>
+</code></pre>
 
 <p>Here is another program that shows one way to get and set image pixels with the MagickWand API, <a href="/source/contrast.c">contrast.c</a>. It reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk.</p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>#include &lt;stdio.h>
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>#include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
 #include &lt;MagickWand/MagickWand.h>
@@ -192,10 +192,10 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</samp></pre>
+</code></pre>
 <p><a class="anchor" id="wand-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="/source/wand/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>#include &lt;stdio.h>
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>#include &lt;stdio.h>
 #include &lt;stdio.h>
 #include &lt;stdlib.h>
 #include &lt;math.h>
@@ -294,11 +294,11 @@ int main(int argc,char **argv)
   MagickWandTerminus();
   return(0);
 }
-</samp></pre>
-<p><samp>MagickWandTerminus()</samp> is a function in the ImageMagick library that is used to clean up and release resources when shutting down an application that uses ImageMagick. This function should be called in the primary thread of the application's process during the shutdown process. It's crucial that this function is invoked only after any threads that are using ImageMagick functions have terminated.</p>
+</code></pre>
+<p><code>MagickWandTerminus()</code> is a function in the ImageMagick library that is used to clean up and release resources when shutting down an application that uses ImageMagick. This function should be called in the primary thread of the application's process during the shutdown process. It's crucial that this function is invoked only after any threads that are using ImageMagick functions have terminated.</p>
 
-<p>ImageMagick might internally use threads via OpenMP (a method for parallel programming). As a result, it's important to ensure that any function calls into ImageMagick have completed before calling <samp>MagickWandTerminus()</samp>. This prevents issues with OpenMP worker threads accessing resources that are destroyed by this termination function.</p>
+<p>ImageMagick might internally use threads via OpenMP (a method for parallel programming). As a result, it's important to ensure that any function calls into ImageMagick have completed before calling <code>MagickWandTerminus()</code>. This prevents issues with OpenMP worker threads accessing resources that are destroyed by this termination function.</p>
 
-<p>If OpenMP is being used (starting from version 5.0), the OpenMP implementation itself handles starting and stopping worker threads and allocating and freeing resources using its own methods. This means that after calling <samp>MagickWandTerminus()</samp>, some OpenMP resources and worker threads might still remain allocated. To address this, the function <samp>omp_pause_resource_all(omp_pause_hard)</samp> can be invoked. This function, introduced in OpenMP version 5.0, ensures that any resources allocated by OpenMP (such as threads and thread-specific memory) are freed. It's recommended to call this function after <samp>MagickWandTerminus()</samp> has completed its execution.</p>
+<p>If OpenMP is being used (starting from version 5.0), the OpenMP implementation itself handles starting and stopping worker threads and allocating and freeing resources using its own methods. This means that after calling <code>MagickWandTerminus()</code>, some OpenMP resources and worker threads might still remain allocated. To address this, the function <code>omp_pause_resource_all(omp_pause_hard)</code> can be invoked. This function, introduced in OpenMP version 5.0, ensures that any resources allocated by OpenMP (such as threads and thread-specific memory) are freed. It's recommended to call this function after <code>MagickWandTerminus()</code> has completed its execution.</p>
 <p><a href="/MagickWand/">MagickWand Examples in C</a> illustrates how to use the ImageMagick MagickWand API. Each example is presented as a C function, complete with headers, so that it can be copied to a file and then included in your own C project.</p>
 </div>

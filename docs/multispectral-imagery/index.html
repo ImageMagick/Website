@@ -7,15 +7,15 @@ title: "Multispectral Imagery"
 <p>Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images that display the information captured in each spectral band.</p>
 <p>Overall, multispectral imagery provides a powerful tool for analyzing and understanding the world around us, allowing us to gain insights that would be impossible to obtain using visible light imagery alone.</p>
 <h4>Multispectral Support in ImageMagick</h4>
-<p>ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels. If you build ImageMagick with the configure script <samp>--enable-64bit-channel-masks</samp> option, you can process 62 band multispectral images with up to 52 meta channels.</p>
+<p>ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels. If you build ImageMagick with the configure script <code>--enable-64bit-channel-masks</code> option, you can process 62 band multispectral images with up to 52 meta channels.</p>
 <p>We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels.  We label them as "meta", "meta1", "meta2", etc..  Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc.</p>
 <h5>Create a Multispectral Image</h5>
 <p>Begin with a multispectral image, typically in the TIFF or PSD format.  If you don't have one, you can create your own.  In our example, we create a single CMYK pixel with two meta channels.  Stuff this in a file titled <code>multiMeta.txt</code>:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>0,0: 10,20,30,40,50,60</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>0,0: 10,20,30,40,50,60</code></pre>
 <p>Let's convert that to the TIFF image format:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</code></pre>
 <p>Let confirm that worked as expected:<p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>$ identify -verbose multiMeta.tif
 Image:
   Filename: multiMeta.tif
   Permissions: rw-------
@@ -139,18 +139,18 @@ Image:
   Tainted: False
   Filesize: 306B
   Number pixels: 1
-</samp></pre>
+</code></pre>
 <p>Notice the channel depth and statistics associated with the two meta channels.<p>
 <h5>Working with Multispectral Images</h5>
 <p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</code></pre></pre>
 <p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <p>And in this example, we create two meta channels:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</code></pre></pre>
 <p>In this example, we blend two meta channels into a single alpha channel:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</code></pre></pre>
 <br/>
 <h5>Writing Multispectral Images</h5>
 <p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick multiMeta.tif -resize 50% resizedMeta.tif</code></pre></pre>
 </div>

@@ -9,7 +9,7 @@ description: "Maximize image processing with the -define command-line option, ta
 <p>This option creates one or more definitions for coders and decoders to use
 while reading and writing image data.  Definitions are generally used to
 control image file format coder modules, and image processing operations,
-beyond what is provided by normal means.  Defined settings are listed in <a href="/command-line-options/#verbose">-verbose</a> information ("<samp>info:</samp>" output format) as "Artifacts". </p>
+beyond what is provided by normal means.  Defined settings are listed in <a href="/command-line-options/#verbose">-verbose</a> information ("<code>info:</code>" output format) as "Artifacts". </p>
 
 <p>If <var>value</var> is missing for a definition, an empty-valued
 definition of a flag is created with that name. This used to control on/off
@@ -24,14 +24,14 @@ is case-dependent.</p>
 
 <p>Such settings are global in scope, and affect all images and operations. </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
-magick arrow.tga -set colorspace:auto-grayscale=off myArrow.tga </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
+magick arrow.tga -set colorspace:auto-grayscale=off myArrow.tga </code></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
-<samp>registry:</samp>.  For example, to set a temporary path to put work files,
+<code>registry:</code>.  For example, to set a temporary path to put work files,
 use:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>-define registry:temporary-path=/data/tmp </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-define registry:temporary-path=/data/tmp </code></pre>
 
 <p>Here is a list of recognized defines:</p>
 
@@ -59,7 +59,7 @@ use:</p>
 
   <tr>
     <td>auto-threshold:verbose</td>
-    <td>return derived threshold as the <samp>auto-threshold:threshold</samp> image property.</td>
+    <td>return derived threshold as the <code>auto-threshold:threshold</code> image property.</td>
   </tr>
 
   <tr>
@@ -77,7 +77,7 @@ use:</p>
 
   <tr>
     <td>compare:frequency-domain=<var>boolean</var></td>
-    <td>Certain similarity metrics such as DPC, MSE, NCC, PSNR, Phase, and RMSE operate in the frequency domain when FFTW and HDRI are enabled. To utilize their spatial equivalents, you can use the command <samp>-define compare:frequency-domain=false</samp>. However, note that DPC and PHASE metrics do not have spatial equivalents, so this command will be ignored for them.</td>
+    <td>Certain similarity metrics such as DPC, MSE, NCC, PSNR, Phase, and RMSE operate in the frequency domain when FFTW and HDRI are enabled. To utilize their spatial equivalents, you can use the command <code>-define compare:frequency-domain=false</code>. However, note that DPC and PHASE metrics do not have spatial equivalents, so this command will be ignored for them.</td>
   </tr>
 
   <tr>
@@ -102,7 +102,7 @@ use:</p>
 
   <tr>
     <td>compare:virtual-pixels=<var>boolean</var></td>
-    <td>ImageMagick compares images pixel by pixel, aligning from the top-left corner. If sizes differ, unmatched areas in the smaller image are treated as virtual pixels, possibly affecting comparison results. To limit comparison to authentic pixels only, use <samp>-define compare:virtual-pixels=false</samp>.</td>
+    <td>ImageMagick compares images pixel by pixel, aligning from the top-left corner. If sizes differ, unmatched areas in the smaller image are treated as virtual pixels, possibly affecting comparison results. To limit comparison to authentic pixels only, use <code>-define compare:virtual-pixels=false</code>.</td>
   </tr>
 
  <tr>
@@ -428,7 +428,7 @@ use:</p>
 
   <tr>
     <td>fx:debug=true</td>
-    <td>Debug <samp>-fx</samp> expression.</td>
+    <td>Debug <code>-fx</code> expression.</td>
   </tr>
 
   <tr>
@@ -443,12 +443,12 @@ use:</p>
 
   <tr>
     <td>identify:locate=<var>value</var></td>
-    <td>Display minimum or maximum pixel locations. Valid values are <samp>minimum</samp> or <samp>maximum</samp>. The default is <samp>maximum</samp>.</td>
+    <td>Display minimum or maximum pixel locations. Valid values are <code>minimum</code> or <code>maximum</code>. The default is <code>maximum</code>.</td>
   </tr>
 
   <tr>
     <td>identify:limit=<var>value</var></td>
-    <td>The maximum number of pixel locations to display when using <samp>identify:locate</samp>.</td>
+    <td>The maximum number of pixel locations to display when using <code>identify:locate</code>.</td>
   </tr>
 
   <tr>
@@ -539,7 +539,7 @@ use:</p>
 
   <tr>
     <td>preserve-timestamp=<var>true|false</var></td>
-    <td>Preserve file timestamp (<samp>mogrify</samp> only).</td>
+    <td>Preserve file timestamp (<code>mogrify</code> only).</td>
   </tr>
 
   <tr>
@@ -549,12 +549,12 @@ use:</p>
 
   <tr>
     <td>quantum:format=<var>type</var></td>
-    <td>Set the type to <samp>floating-point</samp> to specify a floating-point
+    <td>Set the type to <code>floating-point</code> to specify a floating-point
     format for raw files (e.g. GRAY:) or for MIFF and TIFF images in HDRI mode
     to preserve negative values. If <a href="/command-line-options/#depth">-depth</a> 16 is
     included, the result is a single precision floating point format.
     If <a href="/command-line-options/#depth">-depth</a> 32 is included, the result is
-    double precision floating point format. For signed pixel data, use <samp>-define quantum:format=signed</samp></td>
+    double precision floating point format. For signed pixel data, use <code>-define quantum:format=signed</code></td>
   </tr>
 
   <tr>
@@ -572,8 +572,8 @@ use:</p>
  <tr>
     <td>quantum:polarity=<var>photometric-interpretation</var></td>
     <td>Set the photometric-interpretation of an image (typically for TIFF
-    image file format) to either <samp>min-is-black</samp> (default) or
-    <samp>min-is-white</samp>.</td>
+    image file format) to either <code>min-is-black</code> (default) or
+    <code>min-is-white</code>.</td>
   </tr>
 
   <tr>
@@ -590,7 +590,7 @@ use:</p>
 
   <tr>
     <td>registry:option:pedantic=<var>true | false</var></td>
-    <td>By default, if a command-line option is also a filename (e.g., -quality), it is intrepetted as a filename.  Set this option to <samp>true</samp> to interpret it as an option. </td>
+    <td>By default, if a command-line option is also a filename (e.g., -quality), it is intrepetted as a filename.  Set this option to <code>true</code> to interpret it as an option. </td>
   </tr>
 
   <tr>
@@ -805,7 +805,7 @@ use:</p>
 
   <tr>
     <td>dot:layout-engine=<var>value</var></td>
-    <td>Specify the layout engine for the DOT image format (e.g., <samp>neato</samp>).</td>
+    <td>Specify the layout engine for the DOT image format (e.g., <code>neato</code>).</td>
   </tr>
 
   <tr>
@@ -858,12 +858,12 @@ use:</p>
 
   <tr>
     <td>heic:cicp=<var>value</var></td>
-    <td>Set the HEIC color primaries, transfer characteristics, matrix coefficients, and full range flag. Use <samp>1/13/6/1</samp> for full range BT.709. If omitted, the source HEIC CICP value is preserved when available unless <samp>heic:preserve-cicp=false</samp> is set. When preserving source matrix coefficient 0 with <samp>heic:chroma=420</samp> or <samp>422</samp>, ImageMagick writes matrix coefficient 6 (BT.601) for the subsampled YCbCr output. Explicit <samp>heic:cicp</samp> values with matrix coefficient 0 require <samp>heic:chroma=444</samp>. See ISO/IEC 14496-12:2022 standard for a description of these fields and values.</td>
+    <td>Set the HEIC color primaries, transfer characteristics, matrix coefficients, and full range flag. Use <code>1/13/6/1</code> for full range BT.709. If omitted, the source HEIC CICP value is preserved when available unless <code>heic:preserve-cicp=false</code> is set. When preserving source matrix coefficient 0 with <code>heic:chroma=420</code> or <code>422</code>, ImageMagick writes matrix coefficient 6 (BT.601) for the subsampled YCbCr output. Explicit <code>heic:cicp</code> values with matrix coefficient 0 require <code>heic:chroma=444</code>. See ISO/IEC 14496-12:2022 standard for a description of these fields and values.</td>
   </tr>
 
   <tr>
     <td>heic:clli=<var>value</var></td>
-    <td>Set the HEIC content light level information as <samp>MaxCLL,MaxFALL</samp>. If omitted, the source HEIC content light level is preserved when available unless <samp>heic:preserve-clli=false</samp> is set.</td>
+    <td>Set the HEIC content light level information as <code>MaxCLL,MaxFALL</code>. If omitted, the source HEIC content light level is preserved when available unless <code>heic:preserve-clli=false</code> is set.</td>
   </tr>
 
   <tr>
@@ -1013,16 +1013,16 @@ use:</p>
 
   <tr>
     <td>jpeg:dct-method=<var>value</var></td>
-    <td>Choose from <samp>default</samp>, <samp>fastest</samp>,
-    <samp>float</samp>, <samp>ifast</samp>, and <samp>islow</samp>.</td>
+    <td>Choose from <code>default</code>, <code>fastest</code>,
+    <code>float</code>, <code>ifast</code>, and <code>islow</code>.</td>
   </tr>
 
   <tr>
     <td>jpeg:extent=<var>value</var></td>
-    <td>Restrict the maximum JPEG file size, for example <samp>-define
-    jpeg:extent=400KB</samp>.  The JPEG encoder will search for the highest
+    <td>Restrict the maximum JPEG file size, for example <code>-define
+    jpeg:extent=400KB</code>.  The JPEG encoder will search for the highest
     compression quality level that results in an output file that does not
-    exceed the value. The <samp>-quality</samp> option also will be respected
+    exceed the value. The <code>-quality</code> option also will be respected
     starting with version 6.9.2-5. Between 6.9.1-0 and 6.9.2-4, add -quality
     100 in order for the jpeg:extent to work properly. Prior to 6.9.1-0, the
     -quality setting was ignored.</td>
@@ -1061,7 +1061,7 @@ use:</p>
   <tr>
     <td>jpeg:size=<var>geometry</var></td>
     <td>Set the size hint of a JPEG image, for
-    example, <samp>-define jpeg:size=128x128</samp>.
+    example, <code>-define jpeg:size=128x128</code>.
     It is most useful for increasing performance and reducing the memory
     requirements when reducing the size of a large JPEG image.</td>
   </tr>
@@ -1078,8 +1078,8 @@ use:</p>
 
   <tr>
     <td>minimum-bounding-box:orientation=<var>value</var></td>
-    <td>Find smallest perpendicular distance from edge to origin. Valid values are <samp>horizontal</samp>
-    and <samp>vertical</samp>.
+    <td>Find smallest perpendicular distance from edge to origin. Valid values are <code>horizontal</code>
+    and <code>vertical</code>.
     </td>
   </tr>
 
@@ -1247,7 +1247,7 @@ use:</p>
     Value = <var>png24</var> and <var>png48</var>
     allow transparency, only if a single color is fully transparent and that
     color does not also appear in an opaque pixel; such transparency is
-    written in a PNG <samp>tRNS</samp> chunk.
+    written in a PNG <code>tRNS</code> chunk.
     Value = <var>png00</var> causes the image to inherit its
     color-type and bit-depth from the input image, if the input was also
     a PNG.</td>
@@ -1272,40 +1272,40 @@ use:</p>
     <p>The "include-chunk" and "exclude-chunk" lists only affect the behavior
     of the PNG encoder and have no effect on the PNG decoder.</p>
 
-    <p>As a special case, if the <samp>sRGB</samp> chunk is excluded and
-    the <samp>gAMA</samp> chunk is included, the <samp>gAMA</samp> chunk will
+    <p>As a special case, if the <code>sRGB</code> chunk is excluded and
+    the <code>gAMA</code> chunk is included, the <code>gAMA</code> chunk will
     only be written if gamma is not 1/2.2, since most decoders do not assume
     sRGB for gAMA=0.45455 when no colorspace information is included in
     the PNG file.  Because the list is processed from left to right, you
     can achieve this with a single define:</p>
 
-    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>-define png:include-chunk=none,gAMA
-    </samp></pre>
+    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-define png:include-chunk=none,gAMA
+    </code></pre>
 
-    <p>As a special case, if the <samp>sRGB</samp> chunk is not excluded and
+    <p>As a special case, if the <code>sRGB</code> chunk is not excluded and
     the PNG encoder recognizes that the image contains the sRGB ICC profile,
-    the PNG encoder will write the <samp>sRGB</samp> chunk instead of the
+    the PNG encoder will write the <code>sRGB</code> chunk instead of the
     entire ICC profile.  To force the PNG encoder to write the sRGB
-    profile as an <samp>iCCP</samp> chunk in the output PNG instead of the
-    <samp>sRGB</samp> chunk, exclude the <samp>sRGB</samp> chunk.</p>
+    profile as an <code>iCCP</code> chunk in the output PNG instead of the
+    <code>sRGB</code> chunk, exclude the <code>sRGB</code> chunk.</p>
 
-    <p>The critical PNG chunks <samp>IHDR</samp>, <samp>PLTE</samp>,
-    <samp>IDAT</samp>, and <samp>IEND</samp> cannot be excluded.  Any such
+    <p>The critical PNG chunks <code>IHDR</code>, <code>PLTE</code>,
+    <code>IDAT</code>, and <code>IEND</code> cannot be excluded.  Any such
     entries appearing in the list will be ignored.</p>
 
-    <p>If the ancillary PNG <samp>tRNS</samp> chunk is excluded and the
+    <p>If the ancillary PNG <code>tRNS</code> chunk is excluded and the
     image has transparency, the PNG colortype is forced to be 4 or 6
     (GRAY_ALPHA or RGBA).  If the image is not transparent, then the
-    <samp>tRNS</samp> chunk isn't written anyhow, and there is no effect
+    <code>tRNS</code> chunk isn't written anyhow, and there is no effect
     on the PNG colortype of the output image.</p>
 
     <p>The <a href="/command-line-options/#strip">-strip</a>
     option does the equivalent of the following for PNG output:</p>
 
-    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</samp></pre>
+    <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-define png:exclude-chunk=EXIF,iCCP,iTXt,sRGB,tEXt,zCCP,zTXt,date</code></pre>
 
     <p>The default behavior is to include all known PNG ancillary chunks
-    plus ImageMagick's private <samp>vpAg</samp> ("virtual page") chunk,
+    plus ImageMagick's private <code>vpAg</code> ("virtual page") chunk,
     and to exclude all PNG chunks that are unknown to ImageMagick,
     regardless of their PNG "copy-safe" status as described in the
     PNG specification.</p>
@@ -1313,11 +1313,11 @@ use:</p>
     <p>Any chunk names that are not known to ImageMagick are ignored
     if they appear in either the "include-chunk" or "exclude-chunk" list.
     The ancillary chunks currently known to ImageMagick are
-    <samp>bKGD</samp>, <samp>cHRM</samp>, <samp>gAMA</samp>, <samp>iCCP</samp>,
-    <samp>oFFs</samp>, <samp>orNT</samp>, <samp>pHYs</samp>, <samp>sRGB</samp>, <samp>tEXt</samp>,
-    <samp>tRNS</samp>, <samp>vpAg</samp>, and <samp>zTXt</samp>.</p>
+    <code>bKGD</code>, <code>cHRM</code>, <code>gAMA</code>, <code>iCCP</code>,
+    <code>oFFs</code>, <code>orNT</code>, <code>pHYs</code>, <code>sRGB</code>, <code>tEXt</code>,
+    <code>tRNS</code>, <code>vpAg</code>, and <code>zTXt</code>.</p>
 
-    <p>You can also put <samp>date</samp> in the list to include or exclude
+    <p>You can also put <code>date</code> in the list to include or exclude
     the "Date:create" and "Date:modify" text chunks that ImageMagick normally
     inserts in the output PNG.</p></td>
   </tr>
@@ -1339,16 +1339,16 @@ use:</p>
   <tr>
     <td>png:preserve-iCCP[=<var>true</var>]</td>
     <td>By default, the PNG decoder and encoder examine any ICC profile
-    that is present, either from an <samp>iCCP</samp> chunk in the PNG
+    that is present, either from an <code>iCCP</code> chunk in the PNG
     input or supplied via an option, and if the profile is recognized
-    to be the sRGB profile, converts it to the <samp>sRGB</samp> chunk.
-    You can use <samp>-define png:preserve-iCCP</samp> to prevent
-    this from happening; in such cases the <samp>iCCP</samp> chunk
-    will be read or written and no <samp>sRGB</samp> chunk will be
+    to be the sRGB profile, converts it to the <code>sRGB</code> chunk.
+    You can use <code>-define png:preserve-iCCP</code> to prevent
+    this from happening; in such cases the <code>iCCP</code> chunk
+    will be read or written and no <code>sRGB</code> chunk will be
     written.  There are some ICC profiles that claim to be sRGB but
     have various errors that cause them to be rejected by libpng16; such
-    profiles are recognized anyhow and converted to the <samp>sRGB</samp>
-    chunk, but are rejected if the <samp>-define png:preserve-iCCP</samp>
+    profiles are recognized anyhow and converted to the <code>sRGB</code>
+    chunk, but are rejected if the <code>-define png:preserve-iCCP</code>
     is present. Note that not all "sRGB" ICC profiles are recognized
     yet; we will add them to the list as we encounter them.</td>
   </tr>
@@ -1582,17 +1582,17 @@ use:</p>
 
   <tr>
     <td>video:intermediate-format=<var>{pam,webp}</var></td>
-    <td>Set the video intermediate format option of <samp>ffmpeg</samp>.</td>
+    <td>Set the video intermediate format option of <code>ffmpeg</code>.</td>
   </tr>
 
   <tr>
     <td>video:pixel-format=<var>value</var></td>
-    <td>Set the pixel format option of <samp>ffmpeg</samp>.</td>
+    <td>Set the pixel format option of <code>ffmpeg</code>.</td>
   </tr>
 
   <tr>
     <td>video:vsync=<var>value</var></td>
-    <td>Set the vsync option of <samp>ffmpeg</samp>.</td>
+    <td>Set the vsync option of <code>ffmpeg</code>.</td>
   </tr>
 
   <tr>

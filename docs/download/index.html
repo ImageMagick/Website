@@ -32,7 +32,7 @@ topic: "Download"
       {% include download-link.html variant="gcc-x86_64.AppImage" %}<br/>
       {% include download-link.html variant="clang-x86_64.AppImage" %}
     </td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <samp>~/.config/ImageMagick/policy.xml</samp> and verify with this command: <samp>./magick -list policy</samp>.</td>
+    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, .e.g., <code>~/.config/ImageMagick/policy.xml</code> and verify with this command: <code>./magick -list policy</code>.</td>
   </tr>
 
   </tbody>
@@ -44,19 +44,19 @@ topic: "Download"
 
 <p>We recommend <a href="https://brew.sh">Homebrew</a> which provides pre-built binaries for Mac (some users prefer <a href="https://macports.org">MacPorts</a>).  Download HomeBrew and type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install imagemagick</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install imagemagick</code></pre>
 
 <p>ImageMagick depends on Ghostscript fonts.  To install them, type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install ghostscript</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install ghostscript</code></pre>
 
-<p>If you require a build with a wider set of delegates and codecs (e.g. SVG via librsvg, raw image support via libraw, OpenMP support, JPEG XL, Cairo, and more), Homebrew also provides <samp>imagemagick-full</samp> as an official formula:</p>
+<p>If you require a build with a wider set of delegates and codecs (e.g. SVG via librsvg, raw image support via libraw, OpenMP support, JPEG XL, Cairo, and more), Homebrew also provides <code>imagemagick-full</code> as an official formula:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>brew install imagemagick-full</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install imagemagick-full</code></pre>
 
-<p>Note that <samp>imagemagick-full</samp> is keg-only, meaning its binaries are not automatically linked into your <samp>PATH</samp>.</p>
+<p>Note that <code>imagemagick-full</code> is keg-only, meaning its binaries are not automatically linked into your <code>PATH</code>.</p>
 
-<p>The <samp>brew</samp> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source.</p>
+<p>The <code>brew</code> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source.</p>
 
 <h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
 
@@ -232,29 +232,29 @@ topic: "Download"
 
 <p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>. ImageMagick uses Advanced Installer to <a href="https://www.advancedinstaller.com/imagemagick-latest-release-automatically-published-to-winget.html">publish the latest release to the winget repository</a>.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.Q16-HDRI</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.Q16</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.Q8</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q16-HDRI</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q16</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q8</code></pre>
 
 <p>Or through one of the unofficial releases from <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>, <a href="https://scoop.sh/">scoop</a>, or <a href="https://community.chocolatey.org/">chocolatey</a>.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>winget install ImageMagick.ImageMagick</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>scoop install main/imagemagick</samp></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>choco install imagemagick</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.ImageMagick</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>scoop install main/imagemagick</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>choco install imagemagick</code></pre>
 
 <p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick logo: logo.gif
-magick identify logo.gif</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: logo.gif
+magick identify logo.gif</code></pre>
 
-<p>If you have any problems, you likely need <samp>vcomp140.dll</samp>.  To install it, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable Package</a>.</p>
+<p>If you have any problems, you likely need <code>vcomp140.dll</code>.  To install it, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable Package</a>.</p>
 
-<p>Note, use a double quote (<samp>"</samp>) rather than a single quote (<samp>'</samp>) for the ImageMagick command line under Windows:</p>
+<p>Note, use a double quote (<code>"</code>) rather than a single quote (<code>'</code>) for the ImageMagick command line under Windows:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick "e:/myimages/image.png" "e:/myimages/image.jpg"</code></pre>
 <p>Use two double quotes for VBScript scripts:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>Set objShell = wscript.createobject("wscript.shell")
-objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>Set objShell = wscript.createobject("wscript.shell")
+objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</code></pre>
 
 <p>It is strongly recommended to establish a <a href="/security-policy/">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
 

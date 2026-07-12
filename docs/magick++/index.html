@@ -43,27 +43,27 @@ or <a href="https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B">G
 Windows.
 </p>
 <h2>Usage</h2>
-<p>A helper script named <samp>Magick++-config</samp> is installed
+<p>A helper script named <code>Magick++-config</code> is installed
 under Linux which assists with recalling compilation options required
 to compile and link programs which use Magick++. For example, the
-following command compiles and links the source file <samp>demo.cpp</samp>
-to produce the executable <samp>demo</samp> (notice that quotes are
+following command compiles and links the source file <code>demo.cpp</code>
+to produce the executable <code>demo</code> (notice that quotes are
 backward quotes):
 </p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
-  `Magick++-config --ldflags --libs` </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>c++ `Magick++-config --cxxflags --cppflags` -O2 -o demo demo.cpp \
+  `Magick++-config --ldflags --libs` </code></pre>
 
-<p>Set the <samp>PKG_CONFIG_PATH</samp> environment variable if ImageMagick is not in your default system path:</p>
+<p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </code></pre>
 
 <p>Windows users may get started by manually editing a project file
 for one of the Magick++ demo programs.
 </p>
 <p>Note, under Windows (and possibly the Mac) it may be necessary to initialize the ImageMagick library prior to using the Magick++ library. This initialization is performed by passing the path to the ImageMagick DLLs (assumed to be in the same directory as your program) to the MagickPlusPlusGenesis() function call. This is commonly performed by providing the path to your program (argv[0]) as shown in the following example: </p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>int main( int argc, char ** argv) {
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>int main( int argc, char ** argv) {
   MagickPlusPlusGenesis genesis(*argv);
-  ...  </samp></pre>
+  ...  </code></pre>
 <p>This initialization step is not required under Linux, Linux,
 Cygwin, or any other operating environment that supports the notion
 of <var>installing</var> ImageMagick in a known location.  </p>

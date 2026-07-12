@@ -25,18 +25,18 @@ description: "Build ImageMagick from source on Windows with Visual Studio, confi
 <p>Naming of these components might differ between version of Visual Studio. The example above use the Visual Studio 2017 names.</p>
 
 <h2>Clone the dependencies</h2>
-<p>The ImageMagick library is built with a number of third party libraries. Run <samp>CloneRepositories.IM7.cmd</samp> to clone
+<p>The ImageMagick library is built with a number of third party libraries. Run <code>CloneRepositories.IM7.cmd</code> to clone
 these libraries and the ImageMagick library. To clone the legacy ImageMagick 6 library and it's dependencies
-run <samp>CloneRepositories.IM6.cmd</samp>.</p>
+run <code>CloneRepositories.IM6.cmd</code>.</p>
 
 <h2>Build Configure.exe</h2>
-<p>One of the folders in this project is called <samp>Configure</samp>. This folder contains the solution file <samp>Configure.sln</samp>
-for the latest 2022 version of Visual Studio, and <samp>Configure.2017.sln</samp> for older versions. Open one of those and
-start a <samp>Release</samp> build of the project. This will create a file called <samp>Configure.exe</samp> in the folder. Running this
+<p>One of the folders in this project is called <code>Configure</code>. This folder contains the solution file <code>Configure.sln</code>
+for the latest 2022 version of Visual Studio, and <code>Configure.2017.sln</code> for older versions. Open one of those and
+start a <code>Release</code> build of the project. This will create a file called <code>Configure.exe</code> in the folder. Running this
 program will start a Wizard that allows configuration of ImageMagick and its individual components.</p>
 
 <h2>Build ImageMagick</h2>
-<p>Depending on which options where chosen when running <samp>configure.exe</samp> one of the following solutions will be created in the root of the repository:</p>
+<p>Depending on which options where chosen when running <code>configure.exe</code> one of the following solutions will be created in the root of the repository:</p>
 
 <ul>
 <li>IM7.Dynamic.sln (Dynamic Multi-threaded DLL runtimes)</li>
@@ -44,5 +44,5 @@ program will start a Wizard that allows configuration of ImageMagick and its ind
 <li>IM7.Static.sln (Static Multi-threaded runtimes)</li>
 </ul>
 
-<p>Open the solution to start building ImageMagick. The binaries will be created in the <samp>Output\bin</samp> folder.</p>
+<p>Open the solution to start building ImageMagick. The binaries will be created in the <code>Output\bin</code> folder.</p>
 </div>

@@ -4,30 +4,30 @@ title: "Command-line Tools: Import"
 <div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead">Use the <samp>import</samp> program to capture some or all of an X server screen and save the image to a file. <samp>import</samp> captures the window selected by clicking or program argument. See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <samp>import</samp> command or see below for example usages of the command.</p>
+<p class="lead">Use the <code>import</code> program to capture some or all of an X server screen and save the image to a file. <code>import</code> captures the window selected by clicking or program argument. See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>import</code> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <samp>import</samp> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
+<p>We list a few examples of the <code>import</code> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import rose.jpg </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import rose.jpg </code></pre>
 
 <p>To select the area you want to capture, move the cursor to the desired window and click (or click and drag) the left mouse button. To cancel the capture, click the right mouse button.</p>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import -window root screen.ps </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import -window root screen.ps </code></pre>
 
 <p>This command enables you to select a specific area on your screen and copy the selection to your clipboard. You can use this feature to conveniently post images on applications that support image uploading:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick import clipboard:</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import clipboard:</code></pre>
 
-<p>You can find additional examples of using <samp>import</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>import</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <samp>import</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <code>import</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover table-striped table-responsive">
   <tbody>

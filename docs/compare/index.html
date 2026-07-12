@@ -4,15 +4,15 @@ title: "Command-line Tools: Compare"
 <div>
 <p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
 
-<p class="lead">Use the <samp>compare</samp> program to mathematically and visually annotate the difference between an image and its reconstruction.  See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <samp>compare</samp> command or see below for example usages of the command.</p>
+<p class="lead">Use the <code>compare</code> program to mathematically and visually annotate the difference between an image and its reconstruction.  See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>compare</code> command or see below for example usages of the command.</p>
 
 <h2><a class="anchor" id="usage"></a>Example Usage</h2>
 
-<p>We list a few examples of the <samp>compare</samp> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one that's been sharpened:</p>
+<p>We list a few examples of the <code>compare</code> command here to illustrate its usefulness and ease of use. To get started, lets compare an image to one that's been sharpened:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick rose.jpg -sharpen 0x1 reconstruct.jpg
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose.jpg -sharpen 0x1 reconstruct.jpg
 magick compare rose.jpg reconstruct.jpg difference.png
-magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre>
+magick compare -compose src rose.jpg reconstruct.jpg difference.png </code></pre>
 
 <ul>
   <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
@@ -25,32 +25,32 @@ magick compare -compose src rose.jpg reconstruct.jpg difference.png </samp></pre
 
 <p>In addition to the visual interpretation of the difference in an image and its reconstruction, we report a mathematical measure of the difference:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -verbose -metric rmse rose.jpg reconstruct.jpg difference.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick compare -verbose -metric rmse rose.jpg reconstruct.jpg difference.png
 Image: rose.jpg
  Channel distortion: RMSE
    red: 2833.91 (0.0432427)
    green: 2401.45 (0.0366438)
    blue: 2560.43 (0.0390696)
    all: 2604.73 (0.0397456)
-</samp></pre>
+</code></pre>
 <p>Or, if you just want the red channel distortion, use this command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
-27.2817 (0.227348) </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick compare -channel red -metric PSNR rose.jpg reconstruct.jpg difference.png
+27.2817 (0.227348) </code></pre>
 
 <p>Or, if you just want the overall image distortion, use this command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
-28.0142 (0.233452) </samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick compare -metric PSNR rose.jpg reconstruct.jpg difference.png
+28.0142 (0.233452) </code></pre>
 
 <p>If the reconstructed image is a subimage of the image, the compare program returns the best match offset.  In addition, it returns a similarity image such that an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.pfm
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick compare -metric NCC -subimage-search logo.png hat.png similarity.pfm
 0 (0) @ 417,44 [0]
 $ magick identify -define identify:locate=maximum -define identify:limit=1 similarity.pfm
 Channel maximum locations:
   Gray: 65532.9 (0.999967) 417,44
-</samp></pre>
+</code></pre>
 
 <p>The value in the brackets is the normalized simularity metric.</p>
 
@@ -58,9 +58,9 @@ Channel maximum locations:
 
 <p>The subimage search feature in ImageMagick can be quite slow due to its iterative nature. However, if your release of ImageMagick includes FFTW (Fastest Fourier Transform in the West) support and your metric is DPC, MSE, NCC, RMSE, PHASE, or PSNR, you can expect an order of magnitude speed increase in processing time. For discussion, refer to <a href="https://github.com/ImageMagick/ImageMagick/discussions/3950" target="_blank">Accelerated Subimage-search Compare</a>.</p>
 
-<p>If the <samp>-subimage-search</samp> option is not enabled, ImageMagick performs a direct pixel-by-pixel comparison between the two images, starting from their page offset, typically the top-left corners. In cases where the images differ in size, the smaller image is aligned with the larger one.  The extra areas in the smaller image are treated as virtual pixels. These virtual pixels can be processed according to the chosen virtual pixel method, which influences how unmatched regions are handled in the comparison. Consequently, the comparison metrics may be affected by these additional areas, potentially impacting the overall similarity assessment. To only compare authentic pixels, use <samp>-define compare:virtual-pixels=false</samp>.</p>
+<p>If the <code>-subimage-search</code> option is not enabled, ImageMagick performs a direct pixel-by-pixel comparison between the two images, starting from their page offset, typically the top-left corners. In cases where the images differ in size, the smaller image is aligned with the larger one.  The extra areas in the smaller image are treated as virtual pixels. These virtual pixels can be processed according to the chosen virtual pixel method, which influences how unmatched regions are handled in the comparison. Consequently, the comparison metrics may be affected by these additional areas, potentially impacting the overall similarity assessment. To only compare authentic pixels, use <code>-define compare:virtual-pixels=false</code>.</p>
 
-<p>You can find additional examples of using <samp>compare</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>compare</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 <p>Two images are considered similar if their difference according to the specified metric and fuzz value is 0, with the exception of the normalized cross correlation metric (NCC), where two images are considered similar when their normalized cross correlation is 1. The default metric is NCC.</p>
 
@@ -68,7 +68,7 @@ Channel maximum locations:
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <samp>compare</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <code>compare</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <table class="table table-sm table-hover table-striped table-responsive">
   <tbody>

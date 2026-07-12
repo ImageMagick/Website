@@ -21,20 +21,20 @@ title: "High Dynamic-Range Images"
 
 <p>To disable the HDRI version of ImageMagick, use this Linux/Linux command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>./configure --disable-hdri
-</samp></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>./configure --disable-hdri
+</code></pre>
 
 <p>Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="/install-source/">Install from Windows Source</a>.</p>
 
 <p>To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick identify -version
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick identify -version
 Features: HDRI
-</samp></pre>
+</code></pre>
 
 <p>With HDRI enabled, you can now create images with a much wider dynamic range, allowing for more vivid colors and better contrast. It ensures that HDR content can be displayed accurately on compatible devices while maintaining backward compatibility with SDR displays.  In this example, you can store the difference between a standard dynamic range (SDR) image and its high dynamic range (<a href="https://gregbenzphotography.com/hdr/">HDR</a>) counterpart. Essentially, a <a href="https://helpx.adobe.com/camera-raw/using/gain-map.html">gain map</a> captures the additional brightness and color information that HDR provides over SDR:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -define uhdr:hdr-color-gamut=bt709 -define uhdr:hdr-color-transfer=hlg \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -define uhdr:hdr-color-gamut=bt709 -define uhdr:hdr-color-transfer=hlg \
   \( img_sdr.tif -depth 8 \)  \( img_hdr.tif -depth 16 \) uhdr:ultrahdr.jpg
-</samp></pre>
+</code></pre>
 </div>
