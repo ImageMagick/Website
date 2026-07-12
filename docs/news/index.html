@@ -6,11 +6,21 @@ title: "News"
 
 <h4>Recent News</h4>
 
-<p>The <samp>magick convert</samp> command is deprecated, use <samp>magick</samp> instead.  The deprecated command still works, however, it now posts a warning it is deprecated.</p>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">ImageMagick Security News</h4>
+<p>Over the last several months, ImageMagick has delivered huge security improvements, fixing buffer overflows, policy bypasses, and injection risks.  The GitHub Advisory Database now lists dozens of closed advisories, reflecting the project’s strengthened defenses.</p>
+<hr>
+<p class="mb-0">
+  Reference: <a href="https://github.com/ImageMagick/ImageMagick/security/advisories" class="alert-link">
+    GitHub Closed Advisories
+  </a>
+</p>
+</div>
+<p>The <code>magick convert</code> command is deprecated, use <code>magick</code> instead.  The deprecated command still works, however, it now posts a warning it is deprecated.</p>
 
 <p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="/security-policy/">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.  As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="/security-policy/">security policies</a>: Open, Limited, Secure, and Websafe.<p>
 
-<p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <samp>--enable-64bit-channel-masks</samp> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
+<p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <code>--enable-64bit-channel-masks</code> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
 
 <p>With recent releases of ImageMagick 7, we continue to evolve our support of <a href="/multispectral-imagery/">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
 
@@ -38,7 +48,7 @@ title: "News"
 <li>reduce lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library;</li>
 <li>push large images to a solid-state drive, see <a href="/architecture/#tera-pixel">large image support</a>.</li>
 </ul>
-<p>If these options are prohibitive, you can reduce the quality of the image results.  The default build is Q16 HDRI.  If you disable <a href="/high-dynamic-range/">HDRI</a>, you use half the memory and instead of predominantly floating point operations, you use the typically more efficient integer operations.  The trade-off is reduced precision and you cannot process out of range pixel values (e.g. negative).  If you build the Q8 non-HDRI  version of ImageMagick, you again reduce the memory requirements in half-- and once again there is a trade-off, even less precision and no out of range pixel values.  For a Q8 non-HDRI build of ImageMagick, use these <samp>configure</samp> script options: <samp>--with-quantum-depth=8 --disable-hdri</samp>.</p>
+<p>If these options are prohibitive, you can reduce the quality of the image results.  The default build is Q16 HDRI.  If you disable <a href="/high-dynamic-range/">HDRI</a>, you use half the memory and instead of predominantly floating point operations, you use the typically more efficient integer operations.  The trade-off is reduced precision and you cannot process out of range pixel values (e.g. negative).  If you build the Q8 non-HDRI  version of ImageMagick, you again reduce the memory requirements in half-- and once again there is a trade-off, even less precision and no out of range pixel values.  For a Q8 non-HDRI build of ImageMagick, use these <code>configure</code> script options: <code>--with-quantum-depth=8 --disable-hdri</code>.</p>
 <h4>Older News</h4>
 <p>We discovered a bug in the pseudo-random generator prior to ImageMagick 7.0.9-11, the first 3 values repeated because the random state was not initialized properly.  As a consequence of the fix, expect a different numerical sequence when seeding (-seed).</p>
 
