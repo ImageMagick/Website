@@ -10,17 +10,17 @@ title: "Command-line Tools: Import"
 
 <p>We list a few examples of the <code>import</code> command here to illustrate its usefulness and ease of use.  To get started, lets import an image of an X11 window in the JPEG format:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import rose.jpg </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick import rose.jpg </samp></pre>
 
 <p>To select the area you want to capture, move the cursor to the desired window and click (or click and drag) the left mouse button. To cancel the capture, click the right mouse button.</p>
 
 <p>To capture the entire X server screen in the Postscript image format:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import -window root screen.ps </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick import -window root screen.ps </samp></pre>
 
 <p>This command enables you to select a specific area on your screen and copy the selection to your clipboard. You can use this feature to conveniently post images on applications that support image uploading:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick import clipboard:</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick import clipboard:</samp></pre>
 
 <p>You can find additional examples of using <code>import</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 

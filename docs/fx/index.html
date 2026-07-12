@@ -193,7 +193,7 @@ title: "The FX Special Effects Image Operator"
   <dt class="col-md-4"> image attributes:</dt>
   	<dd class="col-md-8"> s.depth, s.kurtosis, s.maxima, s.mean, s.minima, s.resolution.x, s.resolution.y, s.skewness, s.standard_deviation</dd>
   <dt class="col-md-4"> user settings:</dt>
-  	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</code></pre></pre><dd>
+  	<dd class="col-md-8">define Fx symbols as user settings, e.g. <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</samp></pre></pre><dd>
 </dl>
 
 <h4>The FX Expression</h4>
@@ -275,7 +275,7 @@ title: "The FX Special Effects Image Operator"
 <dt class="col-md-4"> <code>log(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> logarithm base 10</dd>
 <dt class="col-md-4"> <code>logtwo(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> logarithm base 2</dd>
 <dt class="col-md-4"> <code>ln(</code><var>x</var><code>)</code></dt><dd class="col-md-8"> natural logarithm</dd>
-<dt class="col-md-4"> <code>magicktime()</code></dt><dd class="col-md-8"> the current time in seconds since the epoch, 00:00:00 UTC</dd>
+<dt class="col-md-4"> <samp>$ magicktime()</samp></dt><dd class="col-md-8"> the current time in seconds since the epoch, 00:00:00 UTC</dd>
 <dt class="col-md-4"> <code>max(</code><var>x</var>, <var>y</var><code>)</code></dt><dd class="col-md-8"> maximum of <var>x</var> and <var>y</var></dd>
 <dt class="col-md-4"> <code>min(</code><var>x</var>, <var>y</var><code>)</code></dt><dd class="col-md-8"> minimum of <var>x</var> and <var>y</var></dd>
 <dt class="col-md-4"> <code>mod(</code><var>x</var>, <var>y</var><code>)</code></dt><dd class="col-md-8"> floating-point remainder function</dd>
@@ -387,11 +387,11 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>This example tests the difference between two images, measured by RMSE. If the difference is greater than 0.1 it returns 1; otherwise it returns 0:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]>0.1]" info:</samp></pre></pre>
 
 <p>The color-escape <code>%[pixel:]</code> or <code>%[hex:]</code> is evaluated once per image and per color channel in that image (<a href="/command-line-options/#channel">-channel</a> is ignored), The values generated are then converted into a color string (a named color or hex color value).  The symbols <code>i</code> and <code>j</code> are set to zero, and <code>s</code> and <code>t</code> refer to each successively current image and index.</p>
 
 <p>The <code>epoch()</code> method takes an date-time property, for example:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick rose.png -precision 16 -format '%[fx:epoch(%%[date:modify])]' info:</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick rose.png -precision 16 -format '%[fx:epoch(%%[date:modify])]' info:</samp></pre></pre>
 
 </div>

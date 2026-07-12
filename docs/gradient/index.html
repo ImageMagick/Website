@@ -122,7 +122,7 @@ magick -size 256x128 -define gradient:angle=0 gradient:black-white linear_gradie
 
 <p>The equivalent of </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick -size 128x256 gradient: -rotate 90 linear_gradient_east.png </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick -size 128x256 gradient: -rotate 90 linear_gradient_east.png </samp></pre></pre>
 
 <p>can be generate by either of the following (or by reversing the direction and swapping <em>fromColor</em> and <em>toColor</em>):</p>
 
@@ -143,7 +143,7 @@ magick -size 256x128 -define gradient:radii=128,128 radial-gradient:black-white 
 magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white radial_gradient_minimum.png </code></pre>
 <p><img src="/image/gradients/radial_gradient_minimum.png" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick -size 256x128 -define gradient:extent=diagonal radial-gradient:black-white radial_gradient_diagonal.png </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick -size 256x128 -define gradient:extent=diagonal radial-gradient:black-white radial_gradient_diagonal.png </samp></pre></pre>
 
 <p><img src="/image/gradients/radial_gradient_diagonal.png" width="256" height="128"></p>
 
@@ -151,7 +151,7 @@ magick -size 256x128 -define gradient:radii=64,64 radial-gradient:black-white ra
 magick -size 256x128 -define gradient:radii=128,64 radial-gradient:black-white radial_gradient_ellipse.png </code></pre>
 <p><img src="/image/gradients/radial_gradient_ellipse.png" alt="radial gradient ellipse" width="256" height="128"></p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick -size 256x256 -define gradient:radii=128,64 -define gradient:angle=45 radial-gradient:black-white radial_gradient_ellipse_angle45.png </samp></pre></pre>
 
 <p><img src="/image/gradients/radial_gradient_ellipse_angle45.png" alt="radial gradient ellipse angle 45" width="256" height="256"></p>
 

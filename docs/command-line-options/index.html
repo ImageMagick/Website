@@ -413,7 +413,7 @@ strings, such as '<code>%d</code>' or '<code>%03d</code>', are familiar to those
 who have used the standard <code>printf()</code>' C-library function. As an
 example, the command</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick logo: rose: -morph 15 my%02dmorph.jpg</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick logo: rose: -morph 15 my%02dmorph.jpg</samp></pre></pre>
 
 <p>will create a sequence of 17 images (the two given plus 15 more created by
 <a href="#morph">-morph</a>), named: my00morph.jpg, my01morph.jpg,
@@ -1323,13 +1323,13 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
 </code></pre>
 <p>Use a similar command to define a read mask:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre></pre>
 
 <p>In this example, we compute the mean RGB value for all opaque pixels of an image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick wizard-alpha.png -channel-fx "alpha=>read-mask" -channel rgb -format "%[fx:mean]\n" info:</samp></pre></pre>
 
 <p>Let's create two meta channels and populate them with a copy of the gray pixels:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick gray.pgm -channel-fx "gray=>meta, gray=>meta1" gray.tif</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick gray.pgm -channel-fx "gray=>meta, gray=>meta1" gray.tif</samp></pre></pre>
 <p>Notice we save the results into a TIFF image file.  Not all formats support multipectral images.  TIFF, MIFF, MPC, and FTXT do.</p>
 
 <p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
@@ -2991,7 +2991,7 @@ to be removed.</p>
 <p>The <code>circle</code> primitive makes a disk (filled) or circle (unfilled).
 Give the center and any point on the perimeter (boundary). Note, by using a translation, you can remove the need to calculate the circles edge coordinate, but can just give the radius directly:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick -size 100x60 xc: -stroke SeaGreen  -fill PaleGreen -strokewidth 2 -draw 'translate 50,30 circle 0,0 25,0' circle.gif</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick -size 100x60 xc: -stroke SeaGreen  -fill PaleGreen -strokewidth 2 -draw 'translate 50,30 circle 0,0 25,0' circle.gif</samp></pre></pre>
 
 <p>The <code>arc</code> primitive is used to inscribe an elliptical segment in
 to a given rectangle. An <code>arc</code> requires the two corners used for
@@ -3389,7 +3389,7 @@ href="#list">-list evaluate</a>.</p>
 </div>
 
 <p class="lead">Stop processing at this point.</p>
-<p> No further options are processed after this option. Useful in a script to force the <code>magick</code> command to exit without actually closing the pipeline that it is processing options from.  You can also use the option as a <em>final</em> option on the <code>magick</code> command line instead of an implicit output image, to completely prevent any image write. Note, even the <code>NULL:</code> coder requires at least one image, for it to 'not write'! This option does not require any images at all.</p>
+<p> No further options are processed after this option. Useful in a script to force the <samp>$ magick</code> command to exit without actually closing the pipeline that it is processing options from.  You can also use the option as a <em>final</em> option on the <code>magick</code> command line instead of an implicit output image, to completely prevent any image write. Note, even the <code>NULL:</samp> coder requires at least one image, for it to 'not write'! This option does not require any images at all.</p>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="extent"></a>-extent <var>geometry</var></h2>
@@ -4312,7 +4312,7 @@ convert the given image into a grayscale image. </p>
 <p>which is equivalent to:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">
-<pre><code>magick in.png -colorspace LinearGray out.png</code></pre>
+<pre><samp>$ magick in.png -colorspace LinearGray out.png</samp></pre>
 </pre>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
@@ -5931,7 +5931,7 @@ href="#page">-page</a> <code>Letter+43+43</code>).</p>
 
 <p>Use <var>media</var> as shorthand to specify the dimensions (<var>width</var>x<var>height</var>) of the <var>PostScript</var> page in dots per inch or a TEXT page in pixels.
 The choices for paper sizes are: <code>4x6</code>, <code>5x7</code>, <code>7x9</code>, <code>8x10</code>, <code>9x11</code>, <code>9x12</code>, <code>10x13</code>, <code>10x14</code>, <code>11x17</code>, <code>4A0</code>, <code>2A0</code>, <code>a0</code>, <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>a4</code>, <code>a4small</code>, <code>a5</code>, <code>a6</code>, <code>a7</code>, <code>a8</code>, <code>a9</code>, <code>a10</code>, <code>archa</code>, <code>archb</code>, <code>archC</code>, <code>archd</code>, <code>arche</code>, <code>b0</code>, <code>b1</code>, <code>b10</code>, <code>b2</code>, <code>b3</code>, <code>b4</code>, <code>b5</code>, <code>b6</code>, <code>b7</code>, <code>b8</code>, <code>b9</code>, <code>c0</code>, <code>c1</code>, <code>c2</code>, <code>c3</code>, <code>c4</code>, <code>c5</code>, <code>c6</code>, <code>c7</code>, <code>csheet</code>, <code>dsheet</code>, <code>esheet</code>, <code>executive</code>, <code>flsa</code>, <code>flse</code>, <code>folio</code>, <code>halfletter</code>, <code>isob0</code>, <code>isob1</code>, <code>isob10</code>, <code>isob2</code>, <code>isob3</code>, <code>isob4</code>, <code>isob5</code>, <code>isob6</code>, <code>isob7</code>, <code>isob8</code>, <code>isob9</code>, <code>jisb0</code>, <code>jisb1</code>, <code>jisb2</code>, <code>jisb3</code>, <code>jisb4</code>, <code>jisb5</code>, <code>jisb6</code>, <code>ledger</code>, <code>legal</code>, <code>letter</code>, <code>lettersmall</code>, <code>monarch</code>, <code>quarto</code>, <code>statement</code>, <code>tabloid</code>. To determine the corresponding size in pixels at 72DPI, use this command for example:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick xc: -format "%[papersize:a4]" info:</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick xc: -format "%[papersize:a4]" info:</samp></pre></pre>
 
 <p>This option is also used to place subimages when writing to a multi-image
 format that supports offsets, such as GIF89 and MNG. When used for this
@@ -6063,7 +6063,7 @@ visible effect.</p>
 <p class="lead">Image preview type.</p>
 
 <p>Use this option to affect the preview operation of an image (e.g.
-<pre><code>magick file.png -preview Gamma Preview:gamma.png</code></pre>). Choose from
+<pre><samp>$ magick file.png -preview Gamma Preview:gamma.png</samp></pre>). Choose from
 these previews:</p>
 
 <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>
@@ -6136,7 +6136,7 @@ wildcard expressions may be used to remove more than one profile.  Here we
 remove all profiles from the image except for the XMP profile:  <code>+profile
 "!xmp,*"</code>. </p>
 
-<p>Use <pre><code>magick identify -verbose</code></pre> to find out which profiles are in the
+<p>Use <pre><samp>$ magick identify -verbose</samp></pre> to find out which profiles are in the
 image file. Use <a href="#strip">-strip</a> to remove all profiles (and
 comments).</p>
 

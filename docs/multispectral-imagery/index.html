@@ -143,14 +143,14 @@ Image:
 <p>Notice the channel depth and statistics associated with the two meta channels.<p>
 <h5>Working with Multispectral Images</h5>
 <p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre></pre>
 <p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
 <p>And in this example, we create two meta channels:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre></pre>
 <p>In this example, we blend two meta channels into a single alpha channel:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre></pre>
 <br/>
 <h5>Writing Multispectral Images</h5>
 <p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><code>magick multiMeta.tif -resize 50% resizedMeta.tif</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre></pre>
 </div>

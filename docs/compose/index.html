@@ -429,14 +429,14 @@ setting in the "<code>composite</code>" command.  For example... </p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>composite ... -blend 50x50 ...  </code></pre>
 
-<p>The "<code>magick</code>" command can accept these extra arguments to its <a href="/command-line-options/#composite"
+<p>The "<samp>$ magick</samp>" command can accept these extra arguments to its <a href="/command-line-options/#composite"
 >-composite</a> operator, using the special <a href="/command-line-options/#define">-define</a>
 attribute of <code>compose:args</code>.  This means you can now
 make use of these special augmented <a href="/command-line-options/#compose"
 >-compose</a> methods, those the argument and the method both need to be set
 separately.  For example... </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick ... -compose blend  -define compose:args=50,50 -composite ...  </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick ... -compose blend  -define compose:args=50,50 -composite ...  </samp></pre></pre>
 
 <p>The following is a table of these special 'argumented' compose methods,
 with a brief summary of what they do. For more details see the equivalent

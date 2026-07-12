@@ -13,7 +13,7 @@ description: "Customize the configuration and installation of ImageMagick on Lin
 
 <p>Unpack the distribution it with this command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>tar xvzf ImageMagick.tar.gz</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ tar xvzf ImageMagick.tar.gz</samp></pre>
 
 <p>Now that you have the ImageMagick Linux/Linux source distribution unpacked, let's configure it.</p>
 
@@ -22,9 +22,9 @@ description: "Customize the configuration and installation of ImageMagick on Lin
 
 <p>The configure script looks at your environment and decides what it can cobble together to get ImageMagick compiled and installed on your system.  This includes finding a compiler, where your compiler header files are located (e.g. stdlib.h), and if any delegate libraries are available for ImageMagick to use (e.g. JPEG, PNG, TIFF, etc.).  If you are willing to accept configure's default options, and build from within the source directory, you can simply type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cd ImageMagick-{{ site.magick.version }}
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ cd ImageMagick-{{ site.magick.version }}
 
-./configure</code></pre>
+./configure</samp></pre>
 
 <p>Watch the configure script output to verify that it finds everything that
  you think it should.  Pay particular attention to the last lines of the script output.  For example, here is a recent report from our system:</p>
@@ -412,11 +412,11 @@ identify logo.gif</code></pre>
 
 <p>To verify the ImageMagick build configuration, type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick identify -list configure</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick identify -list configure</samp></pre></pre>
 
 <p>To list which image formats are supported , type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick identify -list format </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick identify -list format </samp></pre></pre>
 
 <p>For a more comprehensive test, you run the ImageMagick test suite by typing:</p>
 
@@ -522,7 +522,7 @@ no encode delegate for this image format </code></pre>
 
 <p>Now reconfigure, rebuild, and reinstall ImageMagick.  To verify JPEG is now properly supported within ImageMagick, use this command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick identify -list format </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick identify -list format </samp></pre></pre>
 
 <p>You should see a mode of rw- associated with the JPEG tag.  This mode means the image can be read or written and can only support one image per image file.</p>
 

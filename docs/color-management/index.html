@@ -7,11 +7,11 @@ description: "ImageMagick supports accurate color management with color profiles
 
 <p>ImageMagick supports color profiles, however, for images without a profile or a declaration of colorspace, ImageMagick assumes non-linear sRGB.  Most image processing algorithms assume a linear colorspace, therefore it might be prudent to convert to linear color or remove the gamma function before certain image processing algorithms are applied. For example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</samp></pre></pre>
 
 <p>To declare that an image is linear RGB rather than sRGB, you can use the set option:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick myimage.png -set colorspace RGB myRGBimage.png</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.png -set colorspace RGB myRGBimage.png</samp></pre></pre>
 
 <p>Note that declaring an image as linear is not the same as converting the image to linear. Declaring it is linear only sets the meta data and does not change the pixel data. Whereas converting to linear actually changes the pixel data as described in more detail below.</p>
 
@@ -32,7 +32,7 @@ convert myimage.png -grayscale Rec709luminance myRGBimage.png
 
 <p>The same concept is needed when separating channels.  Normally, the conversion to separate each channel of an sRGB color image produces separate non-linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as linear grayscale. For example, the following produces linear grayscale channels.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</samp></pre></pre>
 
 <p>When separating and recombining channels, with potential intermediate processing, it is important to identify the colorspace used, especially during the recombination. For example,</p>
 

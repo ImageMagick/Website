@@ -9,7 +9,7 @@ description: "Read and write images in a variety of formats (over 200)."
 
 <p>To get a complete listing of which image formats are supported on your system, type</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick identify -list format </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick identify -list format </samp></pre></pre>
 
 <p>On some platforms, ImageMagick automagically processes these extensions: .gz for Zip compression, .Z for Linux compression, .bz2 for block compression, and .pgp for PGP encryption. For example, a PNM image called image.pnm.gz is automagically uncompressed.</p>
 
@@ -38,14 +38,14 @@ satisfactory results processing in the sRGB colorspace, you may get improved
 results in linear RGB (essentially sRGB with the gamma function removed).  For
 example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg </code></pre></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg </samp></pre></pre>
 
 <p>As of IM 6.7.8-2 one can properly work in LAB colorspace whether or not
 Imagemagick is <a href="/high-dynamic-range/">HDRI</a>-enabled.  Essentially the A and
 B channels are stored with a 50% gray bias, to allow it to handle the
 negatives required by the format.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><code>magick lab.tif -resize 50% resize.jpg </code></pre></pre> </ul>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick lab.tif -resize 50% resize.jpg </samp></pre></pre> </ul>
 
 <p>Again, it may not make sense for some image processing operators to work
 directly in LAB space, but ImageMagick permits it and generally returns
@@ -436,7 +436,7 @@ the supported image formats.</p>
     <td>GRAY</td>
     <td>RW</td>
     <td>Raw gray samples</td>
-    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <code>-define quantum:format=floating-point</code>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <code>-define quantum:format=signed</code>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <code>magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</code>.</td>
+    <td>Use <a href="/command-line-options/#size">-size</a> and <a href="/command-line-options/#depth">-depth</a> to specify the image width, height, and depth.  To specify a single precision floating-point format, use <code>-define quantum:format=floating-point</code>.  Set the depth to 32 for single precision floats, 64 for double precision, and 16 for half-precision.  For signed pixel data, use <code>-define quantum:format=signed</code>. ImageMagick supports scanline padding.  If your image is not padded, you can instead read the image as a 1-D vector and reshape it:  <samp>$ magick -size 38700x1 -depth 1 gray:image.bin -reshape 180x215 image.png</samp>.</td>
   </tr>
 
   <tr>
@@ -936,7 +936,7 @@ the supported image formats.</p>
     <td>POCKETMOD</td>
     <td>RW</td>
     <td>Pocketmod personal organizer format</td>
-    <td>Example usage: <pre><code>magick -density 300 pages?.pdf pocketmod:organize.pdf</code></pre> </td>
+    <td>Example usage: <pre><samp>$ magick -density 300 pages?.pdf pocketmod:organize.pdf</samp></pre> </td>
   </tr>
 
   <tr>
@@ -1432,7 +1432,7 @@ the supported image formats.</p>
     <td>INLINE</td>
     <td>RW</td>
     <td>Base64-encoded inline image</td>
-    <td>The inline image look similar to <code>inline:data:;base64,/9j/4AAQSk...knrn//2Q==</code>.  If the inline image exceeds 5000 characters, reference it from a file (e.g. <code>inline:inline.txt</code>). You can also write a base64-encoded image.  Embed the mime type in the filename, for example, <pre><code>magick myimage inline:jpeg:myimage.txt</code></pre>.</td>
+    <td>The inline image look similar to <code>inline:data:;base64,/9j/4AAQSk...knrn//2Q==</code>.  If the inline image exceeds 5000 characters, reference it from a file (e.g. <code>inline:inline.txt</code>). You can also write a base64-encoded image.  Embed the mime type in the filename, for example, <pre><samp>$ magick myimage inline:jpeg:myimage.txt</samp></pre>.</td>
   </tr>
 
   <tr>
@@ -1592,7 +1592,7 @@ the supported image formats.</p>
 <br/>
 <h2><a class="anchor" id="builtin-images"></a>Built-in Images</h2>
 
-<p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <code>magick:</code> format tag may be used via the syntax <code>magick:</code><var>name</var> to request an embedded image (e.g. <code>magick:logo</code>). For backwards compatibility, the image specifications <code>GRANITE:</code>, <code>LOGO:</code>, <code>NETSCAPE:</code>, and <code>ROSE:</code> may also be used to request images with those names.</p>
+<p>ImageMagick includes a number of built-in (embedded) images which may be referenced as if they were an image file. The <samp>$ magick:</code> format tag may be used via the syntax <code>magick:</code><var>name</var> to request an embedded image (e.g. <code>magick:logo</code>). For backwards compatibility, the image specifications <code>GRANITE:</code>, <code>LOGO:</code>, <code>NETSCAPE:</code>, and <code>ROSE:</samp> may also be used to request images with those names.</p>
 
 <div class="pre-scrollabl">
 <table class="table table-sm table-hover table-striped table-responsive">

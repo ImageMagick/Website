@@ -13,9 +13,9 @@ title: "Parallel Execution with OpenCL"
         </ul>
     </li>
     <li><strong>Compile-time flag:</strong> ImageMagick's OpenCL must be explicitly enabled when compiling. This is done by running <code>configure</code> with <code>--enable-opencl</code> flag set.</li>
-    <li><strong>Check runtime support:</strong> to verify if OpenCL support is enabled, run <pre><code>magick --version</code></pre>. The command output should read <code>Features: ... <strong>OpenCL</strong> ...</code></li>
+    <li><strong>Check runtime support:</strong> to verify if OpenCL support is enabled, run <pre><samp>$ magick --version</code></pre>. The command output should read <code>Features: ... <strong>OpenCL</strong> ...</samp></li>
     <li><strong>Runtime flag:</strong> OpenCL is disabled by default in runtime. To enable it use the environment variable <code>MAGICK_OCL_DEVICE=true</code>, e.g. <code>MAGICK_OCL_DEVICE=true magick &lt;options&gt;</code>. And to only enable a specific device use <code>MAGICK_OCL_DEVICE=GPU</code> or <code>MAGICK_OCL_DEVICE=CPU</code>.</li>
-    <li><strong>Command line utility:</strong> for proper OpenCL support it's recommended to use <code>magick</code> utility over <code>convert</code>, <code>mogrify</code> and others.</li>
+    <li><strong>Command line utility:</strong> for proper OpenCL support it's recommended to use <samp>$ magick</code> utility over <code>convert</code>, <code>mogrify</samp> and others.</li>
     <li><strong>Image type:</strong> OpenCL acceleration only works on images without a color map. Use true color images instead.</li>
     <li><strong>Operators:</strong> the following is a list of image operators that have been OpenCL accelerated.
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">  blur
@@ -25,7 +25,7 @@ title: "Parallel Execution with OpenCL"
   grayscale
   motion-blur
   resize</pre>
-        The following operators are OpenCL accelerated as well, but they require alpha channel to be enabled, e.g. <pre><code>magick sample.jpg -alpha on -despeckle null:</code></pre>.
+        The following operators are OpenCL accelerated as well, but they require alpha channel to be enabled, e.g. <pre><samp>$ magick sample.jpg -alpha on -despeckle null:</samp></pre>.
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">  despeckle
   equalize
   modulate</pre>

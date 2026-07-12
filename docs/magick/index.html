@@ -2,15 +2,15 @@
 title: "Command-line Tools: Magick"
 ---
 <div>
-<p class="lead">Use the <code>magick</code> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>magick</code> command or see below for example usages of the command.</p>
+<p class="lead">Use the <samp>$ magick</code> program to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.   See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>magick</samp> command or see below for example usages of the command.</p>
 
-<p>We list a few examples of the <code>magick</code> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
+<p>We list a few examples of the <samp>$ magick</samp> command here to illustrate its usefulness and ease of use.  To get started, lets convert an image in the JPEG format to PNG:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose.jpg rose.png </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose.jpg rose.png </samp></pre>
 
 <p>Next, we reduce the image size before it is written to the PNG format:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose.jpg -resize 50% rose.png </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose.jpg -resize 50% rose.png </samp></pre>
 
 <ul>
   <a href="/image/rose.jpg">
@@ -38,17 +38,17 @@ title: "Command-line Tools: Magick"
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png'); </code></pre>
 
-<p>Utilize other command-line <a href="/command-line-tools/">tools</a> from the <code>magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</code> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
+<p>Utilize other command-line <a href="/command-line-tools/">tools</a> from the <samp>$ magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</samp> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>ln -s magick identify
 identify rose.jpg rose.png
 magick identify rose.jpg rose.png </code></pre>
 
-<p>You can find additional examples of using <code>magick</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <samp>$ magick</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <code>magick</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <samp>$ magick</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">
