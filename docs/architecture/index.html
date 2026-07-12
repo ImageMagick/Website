@@ -598,8 +598,8 @@ image=ReadStream(image_info,&amp;StreamPixels,exception);
 
 <p>For really large images, or if there is limited resources on your host, you can utilize a distributed pixel cache on one or more remote hosts:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -distribute-cache 6668 &amp;  // start on 192.168.100.50
-magick -distribute-cache 6668 &amp;  // start on 192.168.100.51
-magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
+$ magick -distribute-cache 6668 &amp;  // start on 192.168.100.51
+$ magick -limit memory 2mb -limit map 2mb -limit disk 2gb \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png
 </samp></pre>
@@ -741,8 +741,8 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 </code></pre>
 
 <p>Or suppose your 12 core hyperthreaded computer defaults to 24 threads.  Set the MAGICK_THREAD_LIMIT environment variable and you will likely get improved performance:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export MAGICK_THREAD_LIMIT=12
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ export MAGICK_THREAD_LIMIT=12
+</samp></pre>
 
 <p>The OpenMP committee has not defined the behavior of mixing OpenMP with other threading models such as Posix threads.  However, using modern releases of Linux, OpenMP and Posix threads appear to interoperate without complaint.  If you want to use Posix threads from a program module that calls one of the ImageMagick application programming interfaces (e.g. MagickCore, MagickWand, Magick++, etc.) from Mac OS X or an older Linux release, you may need to disable OpenMP support within ImageMagick.  Add the <code>--disable-openmp</code> option to the configure script command line and rebuild and reinstall ImageMagick.</p>
 
@@ -1287,7 +1287,7 @@ $ display logo.mgk
 
 <p>Before you build, set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
 
 <h2><a class="anchor" id="filters"></a>Custom Image Filters</h2>
 
@@ -1565,6 +1565,6 @@ Image: logo:
 
 <p>Before you build, set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
 
 </div>
