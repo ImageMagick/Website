@@ -52,7 +52,7 @@ topic: "CLI"
   -append -background white -gravity center -extent 320x200 cylinder_shaded.png</samp></pre>
 
 <p>Run this script contributed by <a href="https://github.com/geemack">Geemack</a>.   You'll get a glimpse of the power and versatility of the ImageMagick command-line:</p>
-<pre class="pre-scrollable p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
   xc:gold \( xc:teal -duplicate 2 +append \) -modulate 100,100,"%[fx:rand()*200]" \
   xc:white -scale x1 +append -write mpr:clut +delete radial-gradient: mpr:clut \
   -clut -scale 100x4% -wave "%[fx:rand()*24+24]"x"%[fx:w/ceil(rand()*4+1)]" -extent "%[w]x%[w]" \
