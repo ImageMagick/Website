@@ -5,7 +5,10 @@ description: "Establish a security policy suitable for your local environment be
 <div>
 <p class="text-center"><a href="#policy">Security Policy </a> • <a href="#example">Example Security Policy</a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
 
-<p class="text-warning">Establish a security policy suitable for your local environment before utilizing ImageMagick.  ImageMagick’s security model is “everything allowed unless denied,” and the last matching policy wins.  Be careful when adding new rules: any later policy can override earlier denies or allows. Place broad deny rules first, followed by specific exceptions, and review ordering to avoid accidental authorization.</p>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">ImageMagick Security Policy</h4>
+<p>Establish a security policy suitable for your local environment before utilizing ImageMagick.  ImageMagick’s security model is “everything allowed unless denied,” and the last matching policy wins.  Be careful when adding new rules: any later policy can override earlier denies or allows. Place broad deny rules first, followed by specific exceptions, and review ordering to avoid accidental authorization.</p>
+</div>
 
 <p class="lead">ImageMagick is intentionally open by default, and that design choice reflects its primary use in controlled environments such as Docker containers or other sandboxed deployments.</p>
 <p>Security always involves balancing protection against potential vulnerabilities with the practical need to get work done. In ImageMagick, the security policy is the mechanism that lets you tune that balance. It acts as the control point between strict lockdown and operational convenience, allowing you to decide which features, coders, and operations are permitted in your environment.</p>
