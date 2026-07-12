@@ -316,15 +316,15 @@ title: "The FX Special Effects Image Operator"
 
 <p>As an example, we form an image by averaging the first image and third images (the second (index 1) image is ignored and just junked):</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
+</samp></pre>
 
 <p>By default, the image to which <code>p</code>, <code>r</code>, <code>g</code>, <code>b</code>, <code>a</code>, etc., are applied is the current image <code>s</code> in the image list. This is equivalent to <code>u</code> except when used in an escape sequence <code>%[fx:...]</code>. </p>
 
 <p>It is important to note the special role played by the first image. This is the only image in the image sequence that is modified, other images are used only for their data. As an illustrative example, consider the following, and note that the setting <a href="/command-line-options/#channel">-channel red</a> instructs <a href="/command-line-options/#fx">-fx</a> to modify only the green channel; nothing in the red or blue channels will change. It is instructive to ponder why the result is not symmetric.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
+</samp></pre>
 
 <ul>
   <a href="/image/logo-sm-flop.png"><img src="/image/logo-sm-flop.png" width="128" height="96" alt="logo-sm-flop.png" /></a>
@@ -360,8 +360,8 @@ p{12,34}.b   blue pixel value at column number 12, row 34 of the image
 
 <p>Use the <a href="/command-line-options/#channel">-channel</a> setting to specify the output channel of the result. If no output channel is given, the result is set over all channels except the opacity channel. For example, to replace the red channel of <code>alpha.png</code> with the average of the green channels from the images <code>alpha.png</code> and <code>beta.png</code>, use:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
+</samp></pre>
 
 
 <h4>Results</h4>
@@ -381,9 +381,9 @@ Red channel of NW corner of image #1 is 0.184582
 
 <p>Here we use the image indexes to <var>rotate</var> each image differently, and use <code>-set</code> with the image index to set a different <var>pause delay</var> on the first image in the animation:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \
   -set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif
-</code></pre>
+</samp></pre>
 
 <p>This example tests the difference between two images, measured by RMSE. If the difference is greater than 0.1 it returns 1; otherwise it returns 0:</p>
 
