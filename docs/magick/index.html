@@ -24,9 +24,9 @@ title: "Command-line Tools: Magick"
 
 <p>You can combine multiple image-processing operations to produce complex results:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 320x85 canvas:none -font Bookman-DemiItalic -pointsize 72 \
   -draw "text 25,60 \'Magick\'" -channel RGBA -blur 0x6 -fill darkred -stroke magenta \
-  -draw "text 20,55 \'Magick\'" fuzzy-magick.png </code></pre>
+  -draw "text 20,55 \'Magick\'" fuzzy-magick.png </samp></pre>
 
 <ul>
   <a href="/image/fuzzy-magick.png"><img src="/image/fuzzy-magick.png" width="320" height="85" alt="fuzzy-magick" /></a>
@@ -38,17 +38,17 @@ title: "Command-line Tools: Magick"
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
   -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png'); </code></pre>
 
-<p>Utilize other command-line <a href="/command-line-tools/">tools</a> from the <samp>$ magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</samp> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
+<p>Utilize other command-line <a href="/command-line-tools/">tools</a> from the <samp>$ magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</code> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>ln -s magick identify
-identify rose.jpg rose.png
-magick identify rose.jpg rose.png </code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ ln -s magick identify
+$ identify rose.jpg rose.png
+$ magick identify rose.jpg rose.png </samp></pre>
 
-<p>You can find additional examples of using <samp>$ magick</samp> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
+<p>You can find additional examples of using <code>magick</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.</p>
 
 <h2><a class="anchor" id="options"></a>Option Summary</h2>
 
-<p>The <samp>$ magick</samp> command recognizes these options.  Click on an option to get more details about how that option works.</p>
+<p>The <code>magick</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
 
 <div>
 <table class="table table-sm table-hover table-striped table-responsive">
