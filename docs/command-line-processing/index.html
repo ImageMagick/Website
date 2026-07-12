@@ -12,10 +12,10 @@ topic: "CLI"
 
 <p>Or it can be complex with a plethora of <a href="#option">options</a>, as in the following:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick label.gif -alpha Set \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick label.gif -alpha Set \
   \( +clone  -shade 110x90 -normalize -negate +clone  -compose Plus -composite \) \
   \( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -alpha Off \) \
-  -delete 0 +swap  -compose Multiply -composite  button.gif</code></pre>
+  -delete 0 +swap  -compose Multiply -composite  button.gif</samp></pre>
 
 <p class="text-info">This example command is long enough that the command must be written across several lines, so we formatted it for clarity by inserting backslashes (<code>\</code>). The backslash is the Linux <var>line-continuation</var> character. In the Windows shell, use a caret character (<code>^</code>) for line-continuation. We use the Linux style on these web pages, as above. Sometimes, however, the lines are wrapped by your browser if the browser window is small enough, but the command-lines, shown in white, are still intended to be typed as one line. Line continuation characters need not be entered. The <var>parentheses</var> that are <var>escaped</var> above using the backslash are not escaped in Windows. There are some other differences between Windows and Linux (involving quotation marks, for instance), but we'll discuss some of those issues later, as they arise. </p>
 
@@ -39,7 +39,7 @@ topic: "CLI"
 
 <p>Given the complexity of the rendering, you might be surprised it is accomplished by a single command-line:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 320x90 canvas:none -stroke snow4 -size 1x90 -tile gradient:white-snow4 \
   -draw 'roundrectangle 16, 5, 304, 85 20,40' +tile -fill snow \
   -draw 'roundrectangle 264, 5, 304, 85  20,40' -tile gradient:chartreuse-green \
   -draw 'roundrectangle 16,  5, 180, 85  20,40' -tile gradient:chartreuse1-chartreuse3 \
@@ -49,10 +49,10 @@ topic: "CLI"
   -shadow 80x3+3+3 \) +swap -background none -layers merge \( +size -pointsize 90 \
   -strokewidth 1 -fill red label:'50 %' -trim +repage \( +clone -background firebrick3 \
   -shadow 80x3+3+3 \) +swap -background none -layers merge \) -insert 0 -gravity center \
-  -append -background white -gravity center -extent 320x200 cylinder_shaded.png</code></pre>
+  -append -background white -gravity center -extent 320x200 cylinder_shaded.png</samp></pre>
 
 <p>Run this script contributed by <a href="https://github.com/geemack">Geemack</a>.   You'll get a glimpse of the power and versatility of the ImageMagick command-line:</p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -background none -size 960x960 xc:black \( xc:darkred -duplicate 1 +append \) \
   xc:gold \( xc:teal -duplicate 2 +append \) -modulate 100,100,"%[fx:rand()*200]" \
   xc:white -scale x1 +append -write mpr:clut +delete radial-gradient: mpr:clut \
   -clut -scale 100x4% -wave "%[fx:rand()*24+24]"x"%[fx:w/ceil(rand()*4+1)]" -extent "%[w]x%[w]" \
@@ -61,7 +61,7 @@ topic: "CLI"
   -virtual-pixel none -distort SRT "%[fx:t*360/n]" +repage -flatten -extent 100x50% \
   \( +clone -rotate 180 \) -append +channel -virtual-pixel none -distort SRT "0.96 %[fx:rand()*360]" \
   \( +clone -flop \) +repage -insert "%[fx:round(rand())]" -background black \
-  -flatten -brightness-contrast 20,20 -normalize dragonFire.png</code></pre>
+  -flatten -brightness-contrast 20,20 -normalize dragonFire.png</samp></pre>
 <p>To ensure the script can run under Windows, change any backslash-parens (\() to just parens, the backslash (\) to <code>^</code>, and double-up the percent (%) signs.</p>
 <p>In the next sections we dissect the anatomy of the ImageMagick command-line.  Hopefully, after carefully reading and better understanding how the command-line works, you should be able to accomplish complex image-processing tasks without resorting to the sometimes daunting <a href="/develop/">program interfaces</a>.</p>
 
@@ -660,11 +660,11 @@ setting for more specifics.</p>
 This fine image</a> is 640 pixels wide and 480 pixels high. We say its <var>dimensions</var> are 640x480. When we give dimensions of an image, the width (the horizontal dimension) always precedes the height (the vertical dimension). This will be true when we speak of coordinates or <var>offsets</var> into an image, which will always be <var>x</var>–value followed by <var>y</var>. Just think of your high school algebra classes and the <var>xy</var>–plane. (Well, almost: our <var>y</var>–axis will always go downward!)
 </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -resize '200%' bigWiz.png
-magick logo: -resize '200x50%' longShortWiz.png
-magick logo: -resize '100x200' notThinWiz.png
-magick logo: -resize '100x200^' biggerNotThinWiz.png
-magick logo: -resize '100x200!' dochThinWiz.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -resize '200%' bigWiz.png
+$ magick logo: -resize '200x50%' longShortWiz.png
+$ magick logo: -resize '100x200' notThinWiz.png
+$ magick logo: -resize '100x200^' biggerNotThinWiz.png
+$ magick logo: -resize '100x200!' dochThinWiz.png</samp></pre>
 
 <p>The first of the four commands is simple—it stretches both the width and height of the input image by <code>200%</code> in each direction; it magnifies the whole thing by a factor of two. The second command specifies different percentages for each direction, stretching the width to <code>200</code>% and squashing the height to <code>50%</code>. The resulting image (in this example) has dimensions 1280x240. Notice that the percent symbol needn't be repeated; the following are equivalent: <code>200x50%</code>, <code>200%x50</code>, <code>200%x50%</code>.
 </p>
@@ -680,10 +680,10 @@ magick logo: -resize '100x200!' dochThinWiz.png</code></pre>
 Here are a few more examples:
 </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -resize '100' wiz1.png
-magick logo: -resize 'x200' wiz2.png
-magick logo: -resize '100x200&gt;' wiz3.png
-magick logo: -resize '100x200&lt;' wiz4.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -resize '100' wiz1.png
+$ magick logo: -resize 'x200' wiz2.png
+$ magick logo: -resize '100x200&gt;' wiz3.png
+$ magick logo: -resize '100x200&lt;' wiz4.png</samp></pre>
 
 <p>If only one dimension is given it is taken to be the width. When only the width is specified, as in the first example above, the width is accepted as given and the height is chosen to maintain the aspect ratio of the input image. Similarly, if only the height is specified, as in the second example above, the height is accepted and the width is chosen to maintain the aspect ratio.</p>
 
@@ -703,9 +703,9 @@ Here are some examples to illustrate the use of <var>offsets</var> in <var>geome
 <a href="/command-line-options/#region">-region</a> option. This option allows many other options to modify the pixels within a specified rectangular subregion of an image. As such, it needs to be given the width and height of that region, and also an <var>offset</var> into the image, which is a pair of coordinates that indicate the location of the region within the larger image. Below, in the first example, we specify a region of size <code>100x200</code> to be located at the <var>xy</var>–coordinates <var>x</var>=10, <var>y</var>=20. Let's use the usual algebraic notation (<var>x</var>,<var>y</var>)=(10,20), for convenience.
 </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -region '100x200+10+20' -negate wizNeg1.png
-magick logo: -region '100x200-10+20' -negate wizNeg2.png
-magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -region '100x200+10+20' -negate wizNeg1.png
+$ magick logo: -region '100x200-10+20' -negate wizNeg2.png
+$ magick logo: -gravity center -region '100x200-10+20' -negate wizNeg3.png</samp></pre>
 
 <p>Note that offsets always require +/− signs. The offset is not actually a true location within the image; its coordinates must be added to some other location. Let's refer to that as the <var>current location</var>. In the first two examples above, though, that location is the upper-left hand corner of the image, which has coordinates (0,0). (That is the default situation when there are no other directives given to change it.) The first example above puts the <code>100x200</code> rectangle's own upper-left corner at (10,20). </p>
 
