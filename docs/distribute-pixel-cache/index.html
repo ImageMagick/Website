@@ -8,17 +8,17 @@ title: "Distributed Pixel Cache"
 &lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="true"/> </code></pre>
 
 <p>Here we create a distributed pixel cache service and utilize it from our desktop:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -distribute-cache 6668 &amp;  # start on localhost
-magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -distribute-cache 6668 &amp;  # start on localhost
+$ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=localhost:6668 \
-  myhugeimage.jpg -sharpen 5x2 myhugeimage.png </code></pre>
+  myhugeimage.jpg -sharpen 5x2 myhugeimage.png </samp></pre>
 
 <p>Here we create two distributed pixel caches and utilize them from our desktop:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
-magick -distribute-cache 6668 &amp;  # start on 192.168.100.51
-magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -distribute-cache 6668 &amp;  # start on 192.168.100.50
+$ magick -distribute-cache 6668 &amp;  # start on 192.168.100.51
+$ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668 \
-  myhugeimage.jpg -sharpen 5x2 myhugeimage.png </code></pre>
+  myhugeimage.jpg -sharpen 5x2 myhugeimage.png </samp></pre>
 <p>For large image sequences, the servers are contacted in a round-robin fashion to distribute the load over multiple distributed pixel caches (assuming you have a host list rather than a single host).  In our example, some modest resources are available on the desktop as defined by the -limit option.  For smaller images, they are allocated on the desktop up to the specified limits.</p>
 <p>Your image processing tasks are likely to perform slower when utilizing a distributed pixel cache due to shuffling pixels between the client and the server over a network.  Algorithms that access virtual pixels (e.g. -sharpen) are noticeably slower, up to 3 times slower, than algorithms that only access authentic pixels (e.g. -negate) due to increased network traffic.</p>
 <p>A client can only contact a compatible distributed pixel cache server.  Compatibility requires the same ImageMagick library interface, quantum depth, HDRI status, OS word size, endianness, and passphrase.  The distributed pixel cache checks these attributes and throws an exception if these requirements are not met.</p>
