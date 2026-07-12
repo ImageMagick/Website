@@ -44,6 +44,8 @@ description: "Establish a security policy suitable for your local environment be
 
 <p>We encourage you to review each rule in your <code>policy.xml</code> configuration file.  Adjust the parameters according to your organization's requirements. You can modify the allowed image formats, set specific paths, and restrict certain operations based on your security needs.  Remember that customizing the security policy is a delicate balance between functionality and security. Overly restrictive policies might hinder legitimate image processing tasks, while overly permissive policies can introduce vulnerabilities.</p>
 
+<p>Doyensec provides a policy evaluator tool that can assist you in designing and auditing your security policy.  The tool is found at <a href="https://imagemagick-secevaluator.doyensec.com/">imagemagick-secevaluator.doyensec.com</a>.</p>
+
 <h2><a class="anchor" id="example"></a>Example Security Policy</h2>
 
 <p>Here is an example security policy:</p>
@@ -275,7 +277,6 @@ Path: [built-in]
     rights: None</pre>
 <p>Notice the <samp>shared-secret</samp> policy is not listed due to the <samp>stealth</samp> property.</p>
 
-<p>Doyensec provides a policy evaluator tool that can assist you in designing and auditing your security policy.  The tool is found at <a href="https://imagemagick-secevaluator.doyensec.com/">imagemagick-secevaluator.doyensec.com</a>.</p>
 
 <h2><a class="anchor" id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
 
