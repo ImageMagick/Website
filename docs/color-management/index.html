@@ -22,10 +22,10 @@ description: "ImageMagick supports accurate color management with color profiles
 > or <a href="/command-line-processing/#grayscale">-grayscale</a> options:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>
-$magick myimage.png -colorspace LinearGray myRGBimage.png
-$magick myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
-$magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
-$magick myimage.png -grayscale Rec709luminance myRGBimage.png
+$ magick myimage.png -colorspace LinearGray myRGBimage.png
+$ magick myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
+$ magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
+$ magick myimage.png -grayscale Rec709luminance myRGBimage.png
 </samp></pre>
 
 <p>Note that LinearGray is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
