@@ -82,8 +82,8 @@ if (image == (Image *) NULL)
 
 <p>When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache.  For example, a 1-channel 1-bit monochrome PBM image is scaled to 8-bit gray image, if you are using the Q8 version of ImageMagick, and 16-bit RGBA for the Q16 version.  You can determine which version you have with the <a href="/command-line-options/#version">-version</a> option: </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ identify -version
-Version: ImageMagick {{ site.magick.version }} {{ site.magick.release_date }} Q16-HDRI https://imagemagick.org</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ identify -version
+Version: ImageMagick {{ site.magick.version }} {{ site.magick.release_date }} Q16-HDRI https://imagemagick.org</samp></pre>
 
 <p>As you can see, the convenience of the pixel cache sometimes comes with a trade-off in storage (e.g. storing a 1-bit monochrome image as 16-bit is wasteful) and speed (i.e. storing the entire image in memory is generally slower than accessing one scanline of pixels at a time).  In most cases, the benefits of the pixel cache typically outweigh any disadvantages.</p>
 
@@ -407,7 +407,7 @@ Resource limits:
 <p>Note, the cache limits are global to each invocation of ImageMagick, meaning if you create several images, the combined resource requirements are compared to the limit to determine the pixel cache storage disposition.</p>
 
 <p>To determine which type and how much resources are consumed by the pixel cache, add the <a href="/command-line-options/#debug">-debug cache</a> option to the command-line:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick -debug cache logo: -sharpen 3x2 null:
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -debug cache logo: -sharpen 3x2 null:
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy
 2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
@@ -424,7 +424,7 @@ Resource limits:
   destroy LOGO[0]
 2016-12-17T13:33:42-05:00 0:00.050 0.100u 7.0.0 Cache magick: cache.c/DestroyPixelCache/1275/Cache
   destroy LOGO[0]
-</code></pre>
+</samp></pre>
 <p>This command utilizes a pixel cache in memory.  The logo consumed 4.688MiB and after it was sharpened, 3.516MiB.</p>
 
 
@@ -750,7 +750,7 @@ void ConvertBMPToImage(const BITMAPINFOHEADER *bmp_info,
 
 <h4>Threading Performance</h4>
 <p>It can be difficult to predict behavior in a parallel environment.   Performance might depend on a number of factors including the compiler, the version of the OpenMP library, the processor type, the number of cores, the amount of memory, whether hyperthreading is enabled, the mix of applications that are executing concurrently with ImageMagick, or the particular image-processing algorithm you utilize.  The only way to be certain of optimal performance, in terms of the number of threads, is to benchmark.   ImageMagick includes progressive threading when benchmarking a command and returns the elapsed time and efficiency for one or more threads.  This can help you identify how many threads is the most efficient in your environment.  For this benchmark we sharpen a 1920x1080 image of a model 10 times with 1 to 12 threads:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick -bench 10 model.png -sharpen 5x2 null:
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -bench 10 model.png -sharpen 5x2 null:
 Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810
 Performance[2]: 10i 2.020ips 0.640e 9.190u 0:04.950
 Performance[3]: 10i 2.786ips 0.710e 9.400u 0:03.590
@@ -763,7 +763,7 @@ Performance[9]: 10i 4.484ips 0.798e 12.860u 0:02.230
 Performance[10]: 10i 4.274ips 0.790e 14.830u 0:02.340
 Performance[11]: 10i 4.348ips 0.793e 16.500u 0:02.300
 Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210
-</code></pre>
+</samp></pre>
 <p>The sweet spot for this example is 6 threads. This makes sense since there are 6 physical cores.  The other 6 are hyperthreads. It appears that sharpening does not benefit from hyperthreading.</p>
 <p>In certain cases, it might be optimal to set the number of threads to 1 or to disable OpenMP completely with the <a href="/resources/#environment">MAGICK_THREAD_LIMIT</a> environment variable, <a href="/command-line-options/#limit">-limit</a> command line option,  or the  <a href="/resources/#configure">policy.xml</a> configuration file.</p>
 

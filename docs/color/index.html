@@ -115,11 +115,11 @@ hsla(120, 255,  127.5,  1.0)       the same, with an alpha value of 1.0</code></
 <p>Specify the Lab colors like this:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cielab(62.253188, 23.950124, 48.410653)</code></pre>
 <p>Note, the <code>a</code> and <code>b</code> components of any Lab color you specify are biased internally by 50% to ensure it fits in the quantum range (typically 0 to 65535).  The bias is retained when writing to the TIFF and MIFF image formats.  However, the TXT format supports negative pixel values so the bias is removed when writing to this format:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick xc:cyan -colorspace LAB txt:
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick xc:cyan -colorspace LAB txt:
 # ImageMagick pixel enumeration: 1,1,65535,cielab
 0,0: (59711,20409.5,-3632.9)  #E93F4FBA71CF  cielab(91.1132,-48.0855,-14.1358)
 
-$ magick -size 100x100 xc:"cielab(91.1132,-48.0855,-14.1358)" -colorspace sRGB cyan.png</code></pre>
+$ magick -size 100x100 xc:"cielab(91.1132,-48.0855,-14.1358)" -colorspace sRGB cyan.png</samp></pre>
 
 <p>Or specify colors generically with the <code>icc-color</code> keyword, for example:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>

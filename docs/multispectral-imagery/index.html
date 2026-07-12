@@ -13,9 +13,9 @@ title: "Multispectral Imagery"
 <p>Begin with a multispectral image, typically in the TIFF or PSD format.  If you don't have one, you can create your own.  In our example, we create a single CMYK pixel with two meta channels.  Stuff this in a file titled <code>multiMeta.txt</code>:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>0,0: 10,20,30,40,50,60</code></pre>
 <p>Let's convert that to the TIFF image format:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
 <p>Let confirm that worked as expected:<p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>$ identify -verbose multiMeta.tif
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
 Image:
   Filename: multiMeta.tif
   Permissions: rw-------
@@ -139,7 +139,7 @@ Image:
   Tainted: False
   Filesize: 306B
   Number pixels: 1
-</code></pre>
+</samp></pre>
 <p>Notice the channel depth and statistics associated with the two meta channels.<p>
 <h5>Working with Multispectral Images</h5>
 <p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
