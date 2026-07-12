@@ -15,7 +15,7 @@ title: "Multispectral Imagery"
 <p>Let's convert that to the TIFF image format:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
 <p>Let confirm that worked as expected:<p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75vh;"><samp>$ identify -verbose multiMeta.tif
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
 Image:
   Filename: multiMeta.tif
   Permissions: rw-------
