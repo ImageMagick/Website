@@ -20,11 +20,11 @@ description: "Recommended interface between the C programming language and the I
 
 <p>After you write your MagickWand program, compile it like this:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cc `MagickWand-config --cflags --cppflags` -O2 -o wand wand.c `MagickWand-config --ldflags --libs`</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ cc `MagickWand-config --cflags --cppflags` -O2 -o wand wand.c `MagickWand-config --ldflags --libs`</samp></pre>
 
 <p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</samp></pre>
 
 <p>Here is a example program that utilizes the MagickWand API to get you started, <a href="/source/wand.c">wand.c</a>. It reads an image, creates a thumbnail, and writes the result to disk.</p>
 
