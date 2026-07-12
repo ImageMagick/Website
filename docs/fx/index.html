@@ -21,8 +21,8 @@ title: "The FX Special Effects Image Operator"
 
 <p>The expression can be simple:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 64x64 canvas:black -channel blue -fx "1/2" fx_navy.png
+</samp></pre>
 
 <p>Here, we convert a black to a navy blue image:</p>
 
@@ -34,10 +34,10 @@ title: "The FX Special Effects Image Operator"
 
 <p>Or the expression can be complex:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose: \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose: \
   -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \
   rose-sigmoidal.png
-</code></pre>
+</samp></pre>
 
 <p>This expression results in a high contrast version of the source image:</p>
 
@@ -49,10 +49,10 @@ title: "The FX Special Effects Image Operator"
 
 <p>The expression can include variable assignments.  Assignments, in most cases, reduce the complexity of an expression and permit some operations that might not be possible any other way.  For example, lets create a radial gradient:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 70x70 canvas: \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 70x70 canvas: \
   -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \
   radial-gradient.png
-</code></pre>
+</samp></pre>
 
 <p>The command above returns this image:</p>
 
@@ -62,15 +62,15 @@ title: "The FX Special Effects Image Operator"
 
 <p>This FX expression adds random noise to an image:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \
   myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \
   cos(2*Pi*rone); pnoise=sqrt(p)*myn*sqrt(iso)* \
   channel(4.28,3.86,6.68)/255; max(0,p+pnoise)' noisy.png
-</code></pre>
+</samp></pre>
 
 <p>This FX script utilizes a loop to create a <a href="https://en.wikipedia.org/wiki/Julia_set">Julia set</a>:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 400x400 xc:gray -fx " \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 400x400 xc:gray -fx " \
   Xi=2.4*i/w-1.2; \
   Yj=2.4*j/h-1.2; \
   for (pixel=0.0, (hypot(Xi,Yj) &lt; 2.0) &amp;&amp; (pixel &lt; 1.0), \
@@ -82,17 +82,17 @@ title: "The FX Special Effects Image Operator"
   pixel == 1.0 ? 0.0 : pixel" \
   \( -size 1x1 xc:white xc:red xc:orange xc:yellow xc:green1 xc:cyan xc:blue \
      xc:blueviolet xc:white -reverse +append -filter Cubic -resize 1024x1! \) \
-  -clut -rotate -90 julia-set.png</code></pre>
+  -clut -rotate -90 julia-set.png</samp></pre>
 
 <ul>
   <a href="/image/julia-set.png"><img src="/image/julia-set.png" width="160" height="160" alt="Julia Fractals" /></a>
 </ul>
 
 <p>This FX script prints the first 10 prime numbers:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick xc:gray -fx " \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick xc:gray -fx " \
   for (prime=2, prime &lt; 30, composite=0; \
     for (nn=2, nn &lt; (prime/2+1), if ((prime % nn) == 0, composite++, ); nn++); \
-      if (composite &lt;= 0, debug(prime), ); prime++)" null:</code></pre>
+      if (composite &lt;= 0, debug(prime), ); prime++)" null:</samp></pre>
 
 <p>See <a href="https://usage.imagemagick.org/transform/index.html#fx">Using FX, The Special Effects Image Operator</a> for more examples.</p>
 
@@ -305,7 +305,7 @@ title: "The FX Special Effects Image Operator"
 <li>single character variables are reserved.  Assignments to reserved built-ins throw an exception;  e.g. <code>r=3.0; r</code> returns <em>Attempted assignment to non-UserSymbol 'r' at '3.0'</em>.</li>
 <li>unary operators have a lower priority than binary operators, that is, the unary minus (negation) has lower precedence than exponentiation, so -3^2 is interpreted as -(3^2) = -9.  Use parentheses to clarify your intent (e.g. (-3)^2 = 9).</li>
 <li>care must be exercised when using the slash ('/') symbol. The string of characters <var>1/2x</var> is interpreted as (1/2)x. The contrary interpretation should be written explicitly as 1/(2x). Again, the use of parentheses helps clarify the meaning and should be used whenever there is any chance of misinterpretation.</li>
-<li>As <code>--<code> is the variable decrement operator, use parenthesis to subtract a negative number, e.g, <code>-4-(-5)</code>.</li>
+<li>As <code>--</code> is the variable decrement operator, use parenthesis to subtract a negative number, e.g, <code>-4-(-5)</code>.</li>
 </ul>
 <br/>
 
