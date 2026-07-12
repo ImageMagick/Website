@@ -54,7 +54,7 @@ title: "Connected Components Labeling"
   -define connected-components:mean-color=true -connected-components 4 stars.gif</samp></pre>
 <h4>Connected Components</h4>
 <p>The algorithm walks through the pixels of a component, in the usual row-column order, looking for a component above or to the left.  For the component at top-left, there are no components above or to the left to merge into.  As a result, there are special cases where you need to rotate, repeat the connected components, then rotate back.  For example</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code> magick  \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick  \
   objects.gif  \
   -define connected-components:verbose=true \
   -define connected-components:area-threshold=6000 \
@@ -62,6 +62,6 @@ title: "Connected Components Labeling"
   -connected-components 4 -rotate 180 \
   -connected-components 4 -rotate -180 \
   objects.png
-</code></pre>
+</samp></pre>
 
 </div>
