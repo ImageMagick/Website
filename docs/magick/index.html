@@ -34,9 +34,9 @@ title: "Command-line Tools: Magick"
 
 <p>or here we resize an image with improved quality:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick input.png -colorspace RGB +sigmoidal-contrast 11.6933 \
   -define filter:filter=Sinc -define filter:window=Jinc -define filter:lobes=3 \
-  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png'); </code></pre>
+  -resize 400% -sigmoidal-contrast 11.6933 -colorspace sRGB output.png'); </samp></pre>
 
 <p>Utilize other command-line <a href="/command-line-tools/">tools</a> from the <samp>$ magick</code> tool.  To invoke this functionality, simply create a symbolic link to the <code>magick</code> tool or specify the tool you want to use as the first argument.  These two methods are equivalent:</p>
 
