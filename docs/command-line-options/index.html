@@ -479,14 +479,14 @@ information </p>
 <p>Translation by a displacement (<var>t<sub>x</sub></var>, <var>t<sub>y</sub></var>) is accomplished like so:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>-affine 1,0,0,1,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>
-</code></pre>
+<codesamp></pre>
 
 <p>Rotate clockwise about the origin (the upper left-hand corner) by an angle
 <var>a</var> by letting <var>c</var> = cos(<var>a</var>), <var>s</var>
 = sin(<var>a</var>), and using the following.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>-affine <var>c</var>,<var>s</var>,-<var>s</var>,<var>c</var>
-</code></pre>
+<codesamp></pre>
 
 <p>The cumulative effect of a sequence of <a href="#affine" >-affine</a>
 transformations can be accomplished by instead by a single <a href="#affine"
@@ -1131,7 +1131,7 @@ instead.</p>
 <p>For example,</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>-caption "%m:%f %wx%h"  bird.miff
-</code></pre>
+<codesamp></pre>
 
 <p>produces an image caption of <code>MIFF:bird.miff 512x480</code> (assuming
 that the image <code>bird.miff</code> has a width of 512 and a height of
@@ -1320,8 +1320,8 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 <p>A channel without an operation symbol implies separate (i.e, semicolon).</p>
 
 <p>Here we take an sRGB image and a grayscale image and inject the grayscale image into the alpha channel:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick wizard.png mask.pgm -channel-fx '| gray=>alpha' wizard-alpha.png
+</samp></pre>
 <p>Use a similar command to define a read mask:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick wizard.png mask.pgm -channel-fx '| gray=>read-mask' wizard-mask.png</samp></pre></pre>
 
@@ -1389,8 +1389,8 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
 
 <p>For example, in the command</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick cockatoo.tif -clip -negate negated.tif
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick cockatoo.tif -clip -negate negated.tif
+</samp></pre>
 
 <p>only the pixels within the clipping path are negated.</p>
 
@@ -1571,14 +1571,14 @@ for CMYKA (or RGBA with offsets).  The matrix is similar to
 
 <p>As an example, to add contrast to an image with offsets, try this command:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick kittens.jpg -color-matrix \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick kittens.jpg -color-matrix \
   " 1.5 0.0 0.0 0.0, 0.0, -0.157 \
     0.0 1.5 0.0 0.0, 0.0, -0.157 \
     0.0 0.0 1.5 0.0, 0.0, -0.157 \
     0.0 0.0 0.0 1.0, 0.0,  0.0 \
     0.0 0.0 0.0 0.0, 1.0,  0.0 \
     0.0 0.0 0.0 0.0, 0.0,  1.0" kittens.png
-</code></pre>
+</samp></pre>
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="colorspace"></a>-colorspace <var>value</var></h2>
 </div>
@@ -1790,10 +1790,10 @@ href="#separate">-separate</a>, so long as the channel settings are the same.
 Thus, in the following example, the final image should be a copy of the
 original.  </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick original.png -channel RGB -separate sepimage.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick original.png -channel RGB -separate sepimage.png
 convert sepimage-0.png sepimage-1.png sepimage-2.png -channel RGB \
   -combine imagecopy.png
-</code></pre>
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="comment"></a>-comment <var>string</var></h2>
@@ -1975,8 +1975,8 @@ contrast.</p>
 
 <p>For a more pronounced effect you can repeat the option:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose: -contrast -contrast rose_c2.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose: -contrast -contrast rose_c2.png
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="contrast-stretch"></a>-contrast-stretch <var>black-point</var><br />-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</h2>
@@ -2130,8 +2130,8 @@ a comma-separated list consisting of one or more of the following domains:
 
 <p>For example, to log cache and blob events, use.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -debug "Cache,Blob" rose: rose.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -debug "Cache,Blob" rose: rose.png
+</samp></pre>
 
 <p>The <code>User</code> domain is normally empty, but developers can log user
 events in their private copy of ImageMagick.</p>
@@ -2212,8 +2212,8 @@ is case-dependent.</p>
 
 <p>See <a href="/defines/">ImageMagick Defines</a> for a list of recognized defines.  For example:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick bilevel.tif -define ps:imagemask eps3:stencil.ps
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick bilevel.tif -define ps:imagemask eps3:stencil.ps
+</samp></pre>
 
 <p>Set attributes of the image registry by prefixing the value with
 <code>registry:</code>.  For example, to set a temporary path to put work files,
@@ -2785,10 +2785,10 @@ perspective distortion of the built-in "rose:" image. Note how spaces were
 used to group the 4 sets of coordinate pairs, to make it easier to read and
 understand.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose:  -virtual-pixel black \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose:  -virtual-pixel black \
   -distort Perspective '0,0,0,0  0,45,0,45  69,0,60,10  69,45,60,35' \
    rose_3d_rotated.gif"
-</code></pre>
+</samp></pre>
 
 <p>If more that the required number of coordinate pairs are given for
 a distortion, the distortion method is 'least squares' fitted to produce the
@@ -2809,10 +2809,10 @@ images become smaller (minified) in the output, which is very common when
 using '<code>perspective</code>' distortion. For example here we view
 a infinitely tiled 'plane' all the way to the horizon. </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 90x90 pattern:checkerboard -normalize -virtual-pixel tile \
   -distort perspective  '0,0,5,45  89,0,45,46  0,89,0,89  89,89,89,89' \
    checks_tiled.jpg
-</code></pre>
+</samp></pre>
 
 <p>Note that a infinitely tiled perspective images involving the horizon can
 be very slow, because of the number of pixels that are compressed to generate
@@ -3389,7 +3389,7 @@ href="#list">-list evaluate</a>.</p>
 </div>
 
 <p class="lead">Stop processing at this point.</p>
-<p> No further options are processed after this option. Useful in a script to force the <samp>$ magick</code> command to exit without actually closing the pipeline that it is processing options from.  You can also use the option as a <em>final</em> option on the <code>magick</code> command line instead of an implicit output image, to completely prevent any image write. Note, even the <code>NULL:</samp> coder requires at least one image, for it to 'not write'! This option does not require any images at all.</p>
+<p> No further options are processed after this option. Useful in a script to force the <code>magick</code> command to exit without actually closing the pipeline that it is processing options from.  You can also use the option as a <em>final</em> option on the <code>magick</code> command line instead of an implicit output image, to completely prevent any image write. Note, even the <code>NULL:</code> coder requires at least one image, for it to 'not write'! This option does not require any images at all.</p>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="extent"></a>-extent <var>geometry</var></h2>
@@ -3407,16 +3407,16 @@ specify how to compose the image with the background, use <a href="#compose"
 display.  If the aspect ratio of the input image isn't exactly 4:3, then the
 image is centered on an 800x600 black canvas: </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick input.jpg -resize 800x600 -background black -compose Copy \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick input.jpg -resize 800x600 -background black -compose Copy \
   -gravity center -extent 800x600 -quality 92 output.jpg
-</code></pre>
+</samp></pre>
 
 <p>The command can also be used with a ratio. If the image is not already at that ratio, it will be cropped to fit it. The <a href="#gravity">-gravity</a> setting has the expected effects.
 
 <p>The following command crops a JPEG image so that it has a 4:3 ratio:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick input.jpg -extent 4:3 -quality 92 output.jpg
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick input.jpg -extent 4:3 -quality 92 output.jpg
+</samp></pre>
 
 <p>Append <code>&lt;</code> to pad only if the image is smaller than the specified size <em>and</em> not crop if the image is larger (i.e. no-op).  Append <code>&gt;</code> to crop only if the image is larger than the specified size <em>and</em> not extend if the image is smaller. (i.e. no-op).</p>
 
@@ -3431,23 +3431,23 @@ image is centered on an 800x600 black canvas: </p>
 <p>This option is most useful for extracting a subregion of a very large raw
 image.  Note that these two commands are equivalent:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 16000x16000 -depth 8 -extract 640x480+1280+960 \
   image.rgb image.png",
 convert -size 16000x16000 -depth 8 'image.rgb[640x480+1280+960]' \
   image.rgb image.png"
-</code></pre>
+</samp></pre>
 
 <p>If you omit the offsets, as in</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 16000x16000 -depth 8 -extract 640x480 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 16000x16000 -depth 8 -extract 640x480 \
   image.rgb image.png
-</code></pre>
+</samp></pre>
 
 <p>the image is <var>resized</var> to the specified dimensions instead,
 equivalent to:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 16000x16000 -depth 8 -resize 640x480 image.rgb image.png
+</samp></pre>
 
 <p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
@@ -3550,9 +3550,9 @@ function into what is usually called the spectrum. A log function is used to
 enhance the darker values more in comparison to the lighter values. This can
 be done, for example, as follows:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick fft_image.miff[0] -contrast-stretch 0 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick fft_image.miff[0] -contrast-stretch 0 \
   -evaluate log 1000 fft_image_spectrum.png"
-</code></pre>
+</samp></pre>
 
 <p>where either <a href="#contrast-stretch">-contrast-stretch</a> 0 or <a
 href="#auto-level">-auto-level</a> is used to scale the image to full dynamic
@@ -3802,7 +3802,7 @@ href="#set" >-set</a>):-</p>
 a '<code>Box</code>' filter.  For example the '<code>Welch</code> parabolic
 windowing function. </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick null: -define filter:filter=Box \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick null: -define filter:filter=Box \
   -define filter:window=Welch \
   -define filter:support=1.0 \
   -define filter:verbose=1 \
@@ -3810,7 +3810,7 @@ windowing function. </p>
 gnuplot
   set grid
   plot \"window_welch.dat\" with lines
-</code></pre>
+</samp></pre>
 
 <p>Note that the use of expert options is provided for image processing experts
 who have studied and understand how resize filters work. Without this
@@ -4191,8 +4191,8 @@ is useful if the image is of a known gamma but not set as an image attribute
 display gamma; e.g., if your image is sRGB and you want to write a PNG gAMA
 chunk, use</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick input.png +gamma .45455 output.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick input.png +gamma .45455 output.png
+</samp></pre>
 
 <p>(0.45455 is 1/2.2)</p>
 
@@ -4306,8 +4306,8 @@ convert the given image into a grayscale image. </p>
 
 <p>For example, to convert an image to (linear) Rec709Luminance grayscale,  type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -grayscale Rec709Luminance out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -grayscale Rec709Luminance out.png
+</samp></pre>
 
 <p>which is equivalent to:</p>
 
@@ -4317,13 +4317,13 @@ convert the given image into a grayscale image. </p>
 
 <p>Similarly, to convert an image to (non-linear) Rec709Luma grayscale,  type:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -grayscale Rec709Luma out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -grayscale Rec709Luma out.png
+</samp></pre>
 
 <p>which is equivalent to:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -colorspace Gray out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -colorspace Gray out.png
+</samp></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
 regardless of the current colorpsace of the image. But a 'mathematical'
@@ -4472,13 +4472,13 @@ href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a>,
 <p>For example, depending upon the image format used to store the result of
 the <a href="#fft">-fft</a>, one would use either</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick fft_image.miff -ift fft_image_ift.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick fft_image.miff -ift fft_image_ift.png
+</samp></pre>
 
 <p>or</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick fft_image-0.png fft_image-1.png -ift fft_image_ift.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick fft_image-0.png fft_image-1.png -ift fft_image_ift.png
+</samp></pre>
 
 <p>The resulting image may need to be cropped due to padding introduced when
 the original image, prior to the <a href="#fft">-fft</a> or <a
@@ -5178,7 +5178,7 @@ memory:</p>
 
 <p>Use <a href="#list">-list resource</a> to list the current limits. For example, our system shows these limits:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-> identify -list resource
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick identify -list resource
 Resource limits:
   Width: 100MP
   Height: 100MP
@@ -5190,7 +5190,7 @@ Resource limits:
   Thread: 12
   Throttle: 0
   Time: unlimited
-</code></pre>
+</samp></pre>
 
 <p>Requests for pixel storage to keep intermediate images are satisfied by one
 of three resource categories: in-memory pool, memory-mapped files pool, and
@@ -5381,8 +5381,8 @@ VirtualPixel
 list</code>" to get a complete listing of all the "<code>-list</code>" arguments
 available:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick identify -list list
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick identify -list list
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="log"></a>-log <var>string</var></h2>
@@ -5415,8 +5415,8 @@ characters:</p>
 
 <p>For example:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -debug coder -log "%u %m:%l %e" in.gif out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -debug coder -log "%u %m:%l %e" in.gif out.png
+</samp></pre>
 
 <p>The default behavior is to print all of the components.</p>
 
@@ -6148,8 +6148,8 @@ used. Instead, simply write the file to an image format such as <var>APP1, 8BIM,
 
 <p>Set <code>-define precision:highres-transform=true</code> to increase the transform precision.  Note, there is a slight performance penalty as the high-precision transform is floating point rather than unsigned.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick cockatoo.jpg profile.exif
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick cockatoo.jpg profile.exif
+</samp></pre>
 
 <p>It is important to note that results may depend on whether or not the
 original image already has an included profile. Also, keep in mind that <a
@@ -6158,8 +6158,8 @@ therefore a conversion is made each time it is encountered, in order, in the
 command-line. For instance, in the following example, if the original image is
 CMYK with profile, a CMYK-CMYK-RGB conversion results.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick CMYK.tif -profile "CMYK.icc" -profile "RGB.icc" RGB.tiff
+</samp></pre>
 
 <p>Furthermore, since ICC profiles are not necessarily symmetric, extra
 conversion steps can yield unwanted results.  CMYK profiles are often very
@@ -6468,9 +6468,9 @@ orthogonal filter.</p>
 coding.  If your image is gamma-corrected, you can remove the nonlinear gamma
 correction, apply the transform, then restore it like this:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick portrait.jpg -gamma .45455 -resize 25% -gamma 2.2  \
   -quality 92 passport.jpg
-</code></pre>
+</samp></pre>
 
 <p>Note, some resampling functions are damped oscillations in approximation of a Sinc function.  As such, you may get negative lobes if your release of ImageMagick is HDRI-enabled.  To eliminate them, add <a href="#clamp">-clamp</a> to your command-line.</p>
 
@@ -6751,15 +6751,15 @@ attribute. </p>
 <p>This option can also associate a colorspace or profile with your image.
 For example,</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick image.psd -set profile ISOcoated_v2_eci.icc image-icc.psd
+</samp></pre>
 
 <p>Some 'properties' must be defined in a specific way to be used. For
 example only 'properties' prefixed with "<code>filename:</code>" can be used to
 modify the output filename of an image. For example</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose: -set filename:mysize '%wx%h' 'rose_%[filename:mysize].png'
+</samp></pre>
 
 <p>If the setting value is prefixed with "<code>option:</code>" the setting will
 be saved as a global "Artifact" exactly as if it was set using the <a
@@ -6768,9 +6768,9 @@ can be used to pass 'attributes' and 'properties' of one specific image,
 in a way that allows you to use them in a completely different image, even if
 the original image has long since been modified or destroyed. For example: </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick rose:  -set option:rosesize '%wx%h' -delete 0 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rose:  -set option:rosesize '%wx%h' -delete 0 \
   label:'%[rosesize]'   label_size_of_rose.gif"
-</code></pre>
+</samp></pre>
 
 <p>Note that <a href="/escape/"
 >Format Percent Escapes</a> will only match
@@ -6785,8 +6785,8 @@ previously-formatted ancillary chunks into the output PNG file, using
 the commandline option as shown below or by setting the profile via a
 programming interface:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -set profile PNG-chunk-x:&lt;filename&gt; out.png
+</samp></pre>
 
 <p>where <var>x</var> is a location flag and
 <var>filename</var> is a file containing the chunk
@@ -6800,9 +6800,9 @@ of the same type, then add a short unique string after the "x" to prevent
 subsequent profiles from overwriting the preceding ones, e.g.,</p>
 
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -set profile PNG-chunk-b01:file01 \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -set profile PNG-chunk-b01:file01 \
   -profile PNG-chunk-b02:file02 out.png
-</code></pre>
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="shade"></a>-shade <var>azimuth</var>x<var>elevation</var></h2>
@@ -6888,16 +6888,16 @@ important to note, since horizontal and vertical shears do not
 <var>commute</var>, i.e., the order matters in a sequence of shears. For
 example, the following two commands are not equivalent.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -shear 20x0 -shear 0x60 logo-sheared.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -shear 20x0 -shear 0x60 logo-sheared.png
 convert logo: -shear 0x60 -shear 20x0 logo-sheared.png
-</code></pre>
+</samp></pre>
 
 <p>The first of the two commands above is equivalent to the following, except
 for the amount of empty space created; the command that follows generates
 a smaller image, and so is a better choice in terms of time and space.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: -shear 20x60 logo-sheared.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -shear 20x60 logo-sheared.png
+</samp></pre>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="sigmoidal-contrast"></a>-sigmoidal-contrast <var>contrast</var>x<var>mid-point</var></h2>
@@ -7341,17 +7341,17 @@ red values, while those at or below 50% red would be set to 0 in the red
 channel. The green, blue, and alpha channels (if present) would be unchanged.
 </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -channel red -threshold 50% out.png
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -channel red -threshold 50% out.png
+</samp></pre>
 
 <p>As (possibly) impractical but instructive examples, the following would
 generate an all-black and an all-white image with the same dimensions as the
 input image.</p>
 
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick in.png -channel RGB -threshold 100% black.png
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick in.png -channel RGB -threshold 100% black.png
 convert in.png -channel RGB -threshold -1 white.png
-</code></pre>
+</samp></pre>
 
 <p> See also <a href="#black-threshold">-black-threshold</a> and <a href="#white-threshold">-white-threshold</a>.
 </p>
@@ -7442,8 +7442,8 @@ titled <code>bird.miff</code> and whose width is 512 and height is 480.</p>
 
 <p>This option applies the transformation matrix from a previous <a href="#affine">-affine</a> option.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -affine 2,2,-2,2,0,0 -transform bird.ppm bird.jpg
+</samp></pre>
 
 
 <p>This operator has been now been superseded by the  <a
@@ -7583,8 +7583,8 @@ href="#type">-type</a> option can be used to override this behavior. For
 example, to prevent a JPEG from being written in grayscale format even though
 only gray pixels are present, use.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick bird.png -type TrueColor bird.jpg
-</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick bird.png -type TrueColor bird.jpg
+</samp></pre>
 
 <p>Similarly, use <a href="#type">-type TrueColorAlpha</a> to force the
 encoder to write an alpha channel even though the image is opaque, if the
