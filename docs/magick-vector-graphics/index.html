@@ -3,7 +3,7 @@ title: "Magick Vector Graphics"
 description: "Master vector designs with Magick Vector Graphics (MVG) on ImageMagick."
 ---
 <div>
-<p class="text-center"><a href="magick-vector-graphics.php#overview">MVG Overview</a> • <a href="magick-vector-graphics.php#primitives">Drawing Primitives</a></p>
+<p class="text-center"><a href="#overview">MVG Overview</a> • <a href="#primitives">Drawing Primitives</a></p>
 
 <p class="lead">This specification defines the features and syntax for Magick Vector Graphics (MVG), a modularized language for describing two-dimensional vector and mixed vector/raster graphics in ImageMagick.  You can use the language to draw from the
 command line, from an MVG file, from an <a href="http://www.w3.org/TR/SVG/">SVG -- Scalable Vector Graphics</a> file or from one of the ImageMagick <a href="develop.php">program interfaces</a>.  Use this command, for example, to render an arc:</p>
@@ -192,7 +192,7 @@ pop graphic-context
 
 <p>to produce the same pie chart we created with the MVG language.</p>
 
-<p>Drawing is available from many of the ImageMagick <a href="develop.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="magick-wand.php">MagickWand</a> language: </p>
+<p>Drawing is available from many of the ImageMagick <a href="develop.php">program interfaces</a> as well.  ImageMagick converts the drawing API calls to MVG and renders it.  Here is example code written in the <a href="/magick-wand">MagickWand</a> language: </p>
 
 <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>(void) PushDrawingWand(draw_wand);
 {
@@ -615,7 +615,7 @@ SouthEast</code></pre></td>
 
   <tr>
     <td>change-mask</td>
-    <td>Replace any destination pixel that is the similar to the source images pixel (as defined by the current <a href="magick-vector-graphics.php#fuzz">-fuzz</a> factor), with transparency. </td>
+    <td>Replace any destination pixel that is the similar to the source images pixel (as defined by the current <a href="#fuzz">-fuzz</a> factor), with transparency. </td>
   </tr>
   </tbody>
 </table></td>
