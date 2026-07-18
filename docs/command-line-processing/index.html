@@ -187,6 +187,11 @@ In a Windows command shell the brackets are not interpreted but using quotes doe
 
 <p>Notice that in the last two commands, a single image is written. The output in this case, where the image type is MNG, is a multi-frame file because the MNG format supports multiple frames. Had the output format been JPG, which only supports single frames, the output would have consisted of separate frames. More about that below, in the section about the <a href="#output">Output Filename</a>.
 </p>
+<p>The <code>-define image:frames=<i>list</i></code> define provides an alternative to the bracket syntax for selecting specific frames from multi‑image formats such as GIF, TIFF, PDF, MIFF, and MNG. Instead of appending a frame range to the input filename, you can specify the desired frames directly with a define:</p>
+
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick -define image:frames=0-3 images.gif images.mng</samp></pre></pre>
+
+<p>This example extracts frames 0 through 3. The define accepts the same grammar as the bracket syntax.</p>
 
 <h4>Selecting an Image Region</h4>
 <p>Raw images are a sequence of color intensities without additional meta information such as width, height, or image signature.  With raw image formats, you must specify the image width and height but you can also specify a region of the image to read.  In our example, the image is in the raw 8-bit RGB format and is 6000 pixels wide and 4000 pixels high.  However, we only want a region of 600 by 400 near the center of the image:
