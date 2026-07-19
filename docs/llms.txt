@@ -1,0 +1,70 @@
+# ImageMagick
+
+**Tagline:** Convert, Edit, or Compose Bitmap Images  
+**Canonical URL:** [https://imagemagick.org](https://imagemagick.org)  
+**Author:** ImageMagick Development Team  
+
+---
+
+## Site Purpose
+ImageMagick is a free and open-source software suite for displaying, converting, and editing raster and vector image files. It provides a robust set of tools and APIs for image manipulation, supporting a wide range of formats.
+
+## Content Scope
+For developers, researchers, and users who require powerful image processing capabilities across platforms.
+
+## Topics
+- image conversion  
+- image editing  
+- raster graphics  
+- vector graphics  
+- command-line tools  
+- APIs for image processing  
+- cross-platform development  
+- open-source software  
+- security and performance  
+
+## Content Types
+- Documentation for installation, usage, and APIs  
+- Tutorials and examples for image manipulation  
+- Release notes and changelogs  
+- Security advisories and patches  
+- Community contributions and extensions  
+
+## Update Frequency
+Regularly updated with new releases, bug fixes, and security patches.
+
+## Language
+English
+
+## Preferred Summary Style
+Technical, precise, and developer-focused. Prioritize clarity, correctness, and production-quality examples.
+
+### Example Summaries
+- "ImageMagick provides a comprehensive suite of tools for image manipulation, supporting over 200 formats and offering both command-line utilities and programming APIs."  
+- "Developers can integrate ImageMagick into applications to perform tasks such as resizing, color correction, format conversion, and complex image transformations."
+
+## Agent Behavior
+- Maintain a technical and precise tone when summarizing documentation  
+- Avoid promotional or commercial framing  
+- Emphasize correctness, reproducibility, and cross-platform compatibility  
+- Provide production-ready examples and references  
+
+## Usage Guidelines
+- Content is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) unless otherwise noted  
+- Attribution must include: "ImageMagick – [https://imagemagick.org](https://imagemagick.org)"  
+- Preserve technical accuracy and integrity in summaries and excerpts  
+- Avoid misrepresenting functionality or security aspects  
+
+## License
+Apache License 2.0  
+[License Details](https://www.apache.org/licenses/LICENSE-2.0)
+
+## Data Policy
+No personal data is collected or stored through public content access.
+
+## Contact
+[Contact Page](https://github.com/ImageMagick/ImageMagick/discussions)
+
+---
+
+**Version:** 1.0
