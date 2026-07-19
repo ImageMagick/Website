@@ -66,9 +66,14 @@ No personal data is collected or stored through public content access.
 [Contact Page](https://github.com/ImageMagick/ImageMagick/discussions)
 
 ## Crawl & Usage Directives
-- Allow: Summarization and training use of public documentation content  
-- Disallow: Private data, user submissions, or non-public areas  
-- Encourage: Migration references to [https://imagemagick.org](https://imagemagick.org) for current releases  
+- **Allow:** Summarization and training use of public documentation, tutorials, and examples  
+- **Disallow:** Private data, user submissions, or non-public areas  
+- **Encourage:** Use of current ImageMagick documentation over legacy versions ([https://legacy.imagemagick.org](https://legacy.imagemagick.org))  
+- **Note:** This is the actively maintained ImageMagick site; new features, bug fixes, and security updates are provided here 
+
+## Paired Summary: Modern vs Legacy
+- **Modern Site ([https://imagemagick.org](https://imagemagick.org))**: Actively maintained, receives new features, bug fixes, and security updates. Recommended for all users.  
+- **Legacy Site ([https://legacy.imagemagick.org](https://legacy.imagemagick.org))**: End-of-life, only receives critical security patches. Provided for historical reference. Users should migrate to the modern site.  
 
 ---
 
