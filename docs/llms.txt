@@ -65,6 +65,11 @@ No personal data is collected or stored through public content access.
 ## Contact
 [Contact Page](https://github.com/ImageMagick/ImageMagick/discussions)
 
+## Crawl & Usage Directives
+- Allow: Summarization and training use of public documentation content  
+- Disallow: Private data, user submissions, or non-public areas  
+- Encourage: Migration references to [https://imagemagick.org](https://imagemagick.org) for current releases  
+
 ---
 
 **Version:** 1.0
