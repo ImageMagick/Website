@@ -230,9 +230,8 @@ and behave identically to their SVG, PDF, and Photoshop equivalents.</p>
   </tr>
 
   <tr>
-    <td>divide-fx</td>
-    <td>The source is divided by the destination and replaces the
-        destination.</td>
+    <td>divide</td>
+    <td>Works by dividing the pixel values of one input image by those of another, channel by channel. This produces specialized blending effects, often for normalization or highlighting contrasts.</td>
   </tr>
 
   <tr>
@@ -256,7 +255,7 @@ and behave identically to their SVG, PDF, and Photoshop equivalents.</p>
   </tr>
 
   <tr>
-    <td>divide<br/>(divide-dst)</td>
+    <td>divide-dst</td>
     <td>Performs a true mathematical division of the destination color by the
         source color, channel by channel ( <code>Dc / Sc</code> ), and replaces
         the destination. Where the two images are equal the result is white
