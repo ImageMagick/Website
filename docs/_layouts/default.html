@@ -48,6 +48,11 @@
     :root {
       --bs-code-color: revert;
     }
+
+    .table td, .table th {
+      white-space: normal;     /* allow wrapping */
+      word-break: break-word;  /* break long words/strings */
+    }
   </style>
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="{{ title }}">
