@@ -291,8 +291,12 @@ clip-path url(#myClipPath)
 
 <p>Here is a complete description of the MVG drawing primitives:</p>
 
-<div>
+<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
 <table class="table table-sm table-hover table-striped">
+  <colgroup>
+    <col style="width:30%">
+    <col style="width:70%">
+  </colgroup>
 <thead>
   <tr>
     <th>Primitive</th>
@@ -449,7 +453,12 @@ SouthEast</code></pre></td>
   <tr>
     <td><a class="anchor" id="compose"></a>image <var>compose x,y width,height 'filename'</var></td>
     <td>Choose from these compose operations:
-    <table class="table table-sm table-hover table-striped">
+<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
+<table class="table table-sm table-hover table-striped">
+  <colgroup>
+    <col style="width:30%">
+    <col style="width:70%">
+  </colgroup>
   <tbody>
   <tr>
     <th align="left" style="width: 8%">Method</th>
@@ -618,7 +627,7 @@ SouthEast</code></pre></td>
     <td>Replace any destination pixel that is the similar to the source images pixel (as defined by the current <a href="#fuzz">-fuzz</a> factor), with transparency. </td>
   </tr>
   </tbody>
-</table></td>
+</table></div></td>
   </tr>
   <tr>
     <td><a class="anchor" id="interline-spacing"></a>interline-spacing <var>pixels</var></td>
