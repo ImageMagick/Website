@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-29](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-28...7.1.2-29) - 2026-07-27
+
+### Commits
+
+- beta release [`b8ae505`](https://github.com/ImageMagick/ImageMagick/commit/b8ae505adbccbf4fa7352afbfbd68b297ad5d511)
+- Updated the dependencies. [`90f5b91`](https://github.com/ImageMagick/ImageMagick/commit/90f5b91b864024cd9e9c0c82306ba071388141b1)
+- add WEBP compress case when writing [`f35294e`](https://github.com/ImageMagick/ImageMagick/commit/f35294ec0d07d8b3ad6b92df3fd7d298fe5391fa)
+- Removed unnecessary include. [`1e2f64f`](https://github.com/ImageMagick/ImageMagick/commit/1e2f64f8546a2dcfef1aebc068e3daba924fb176)
+- Removed checks for values from tif_config.h that are not included, libtiff will report errors itself now. [`7cf1988`](https://github.com/ImageMagick/ImageMagick/commit/7cf198897d451446866557537430c331583e43aa)
+- Only set the TIFFTAG_WEBP_LEVEL when the quality is not undefined. [`02ac849`](https://github.com/ImageMagick/ImageMagick/commit/02ac849fab759e6653822a84dfec2d5b862d22a2)
+- Make sure we read the bits_per_sample before using it. [`0af4ede`](https://github.com/ImageMagick/ImageMagick/commit/0af4ede10f4b4d700ea7dcf1608b13fe8219a5a0)
+- Added missing typecast. [`b919b37`](https://github.com/ImageMagick/ImageMagick/commit/b919b37fd4205722f03f4ff1f71f0c9519102369)
+- release [`360eda5`](https://github.com/ImageMagick/ImageMagick/commit/360eda553586e389c9c725fc49df94f209a8a3c7)
+
 ## [7.1.2-28](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-27...7.1.2-28) - 2026-07-26
 
 ### Merged
