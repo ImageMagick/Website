@@ -60,8 +60,7 @@ jobs:
           DOC_HTML=("Blob.html" "CoderInfo.html" "Geometry.html" "Image++.html" "Montage.html" "Pixels.html")
           DOXY_HTML=("Blob.html" "CoderInfo.html" "Geometry.html" "Image.html" "Montage.html" "Pixels.html")  # Image.html is the only one that differs from the doxygen file
           for i in "${!DOC_HTML[@]}"; do
-              python3 .github/build/scripts/compare-signatures.py docs/magick++/"${DOC_HTML[$i]}" ImageMagick/www/api/Magick++/classMagick_1_1"${DOXY_HTML[$i]}"
-              if [ $? -ne 0 ]; then
+              if ! python3 .github/build/scripts/compare-signatures.py docs/magick++/"${DOC_HTML[$i]}" ImageMagick/www/api/Magick++/classMagick_1_1"${DOXY_HTML[$i]}"; then
                   diff="true"
               fi
           done
