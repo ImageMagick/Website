@@ -31,8 +31,7 @@ def extract_signatures(doc_file):
                         signatures[method] = {'returns': [], 'signatures': []}
                     signatures[method]['returns'].append(returns)
                     signatures[method]['signatures'].append(f"{method} ({signature})")
-        return signatures
-    return {}
+    return signatures
 
 """
 This function checks if the signatures in the doxygen file match the signatures collected from the html file
