@@ -4,12 +4,16 @@ on:
     - main
     paths:
     - '.github/workflows/doc-check.yml'
+    - '.github/build/scripts/compare-signatures.py'
+    - '.github/build/python/requirements.txt'
     - 'docs/magick\+\+/**'
   pull_request:
     branches:
     - main
     paths:
     - '.github/workflows/doc-check.yml'
+    - '.github/build/scripts/compare-signatures.py'
+    - '.github/build/python/requirements.txt'
     - 'docs/magick\+\+/**'
   workflow_dispatch:
   schedule:
