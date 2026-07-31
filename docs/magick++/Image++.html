@@ -71,34 +71,34 @@
             exception handling is optional but strongly recommended):
         </p>
 <pre class="code">
-#include &lt;Magick++.h> 
-#include &lt;iostream> 
-using namespace std; 
-using namespace Magick; 
-int main(int argc,char **argv) 
-{ 
+#include &lt;Magick++.h>
+#include &lt;iostream>
+using namespace std;
+using namespace Magick;
+int main(int argc,char **argv)
+{
   InitializeMagick(*argv);
 
-  // Construct the image object. Separating image construction from the 
-  // the read operation ensures that a failure to read the image file 
-  // doesn't render the image object useless. 
+  // Construct the image object. Separating image construction from the
+  // the read operation ensures that a failure to read the image file
+  // doesn't render the image object useless.
   Image image;
-  try { 
-    // Read a file into image object 
+  try {
+    // Read a file into image object
     image.read( "girl.gif" );
 
     // Crop the image to specified size (width, height, xOffset, yOffset)
     image.crop( Geometry(100,100, 100, 100) );
 
-    // Write the image to a file 
-    image.write( "x.gif" ); 
-  } 
-  catch( Exception &amp;error_ ) 
-    { 
-      cout &lt;&lt; "Caught exception: " &lt;&lt; error_.what() &lt;&lt; endl; 
-      return 1; 
-    } 
-  return 0; 
+    // Write the image to a file
+    image.write( "x.gif" );
+  }
+  catch( Exception &amp;error_ )
+    {
+      cout &lt;&lt; "Caught exception: " &lt;&lt; error_.what() &lt;&lt; endl;
+      return 1;
+    }
+  return 0;
 }
 </pre>
         The following is the source to a program which illustrates the use of
@@ -117,22 +117,22 @@ int main(int argc,char **argv)
             <li> Write the third image to a file.</li>
         </ol>
 <pre class="code">
-#include &lt;Magick++.h> 
-#include &lt;iostream> 
-using namespace std; 
-using namespace Magick; 
-int main(int argc,char **argv) 
-{ 
+#include &lt;Magick++.h>
+#include &lt;iostream>
+using namespace std;
+using namespace Magick;
+int main(int argc,char **argv)
+{
   InitializeMagick(*argv);
 
-  Image master("horse.jpg"); 
-  Image second = master; 
-  second.resize("640x480"); 
-  Image third = master; 
-  third.resize("800x600"); 
-  second.write("horse640x480.jpg"); 
-  third.write("horse800x600.jpg"); 
-  return 0; 
+  Image master("horse.jpg");
+  Image second = master;
+  second.resize("640x480");
+  Image third = master;
+  third.resize("800x600");
+  second.write("horse640x480.jpg");
+  third.write("horse800x600.jpg");
+  return 0;
 }
 </pre>
         During the entire operation, a maximum of three images exist in memory
@@ -143,23 +143,23 @@ int main(int argc,char **argv)
             writes it to a file:
         </p>
 <pre class="code">
-#include &lt;Magick++.h> 
-using namespace std; 
-using namespace Magick; 
-int main(int argc,char **argv) 
-{ 
+#include &lt;Magick++.h>
+using namespace std;
+using namespace Magick;
+int main(int argc,char **argv)
+{
   InitializeMagick(*argv);
-  Image image( "100x100", "white" ); 
-  image.pixelColor( 49, 49, "red" ); 
-  image.write( "red_pixel.png" ); 
-  return 0; 
+  Image image( "100x100", "white" );
+  image.pixelColor( 49, 49, "red" );
+  image.write( "red_pixel.png" );
+  return 0;
 }
 </pre>
         If you wanted to change the color image to grayscale, you could add the
         lines:
 <pre class="code">
-image.quantizeColorSpace( GRAYColorspace ); 
-image.quantizeColors( 256 ); 
+image.quantizeColorSpace( GRAYColorspace );
+image.quantizeColors( 256 );
 image.quantize( );
 </pre>
         <p>or, more simply: </p>
@@ -186,23 +186,23 @@ image.quantize( );
             &#160;
         </p>
 <pre class="code">
-#include &gt;Magick++.h> 
-using namespace std; 
-using namespace Magick; 
-int main(int argc,char **argv) 
-{ 
+#include &gt;Magick++.h>
+using namespace std;
+using namespace Magick;
+int main(int argc,char **argv)
+{
   InitializeMagick(*argv);
 
-  // Read GIF file from disk 
+  // Read GIF file from disk
   Image image( "giraffe.gif" );
-  // Write to BLOB in JPEG format 
-  Blob blob; 
-  image.magick( "JPEG" ) // Set JPEG output format 
+  // Write to BLOB in JPEG format
+  Blob blob;
+  image.magick( "JPEG" ) // Set JPEG output format
   image.write( &amp;blob );
 
   [ Use BLOB data (in JPEG format) here ]
 
-  return 0; 
+  return 0;
 }
 </pre>
         <p>
@@ -218,21 +218,21 @@ int main(int argc,char **argv)
             </font> ]
         </p>
 <pre class="code">
-Blob blob( data, length ); 
+Blob blob( data, length );
 Image image( blob );
 </pre>
         or
 <pre class="code">
-Blob blob( data, length ); 
-Image image; 
+Blob blob( data, length );
+Image image;
 image.read( blob);
 </pre>
         some images do not contain their size or format so the size and format must be specified in advance:
 <pre class="code">
-Blob blob( data, length ); 
-Image image; 
-image.size( "640x480") 
-image.magick( "RGBA" ); 
+Blob blob( data, length );
+Image image;
+image.size( "640x480")
+image.magick( "RGBA" );
 image.read( blob);
 </pre>
         <center>
@@ -427,9 +427,9 @@ image.read( blob);
         abstraction on top of <i>Image</i>, must be used.
         <p>Image manipulation methods are very easy to use.&#160; For example: </p>
 <pre class="code">
-Image image; 
-image.read("myImage.tiff"); 
-image.addNoise(GaussianNoise); 
+Image image;
+image.read("myImage.tiff");
+image.addNoise(GaussianNoise);
 image.write("myImage.tiff");
 </pre>
         adds gaussian noise to the image file "myImage.tiff".
@@ -2441,11 +2441,11 @@ image.write("myImage.tiff");
             code:
         </p>
 <pre class="code">
-string filename("file.tiff"); 
-Image image; 
-image.read(filename); 
-image.resolutionUnits(PixelsPerInchResolution); 
-image.density(Geometry(150,150));   // could also use image.density("150x150") 
+string filename("file.tiff");
+Image image;
+image.read(filename);
+image.resolutionUnits(PixelsPerInchResolution);
+image.density(Geometry(150,150));   // could also use image.density("150x150")
 image.write(filename)
 </pre>
         The supported image attributes and the method arguments required to
@@ -4316,19 +4316,19 @@ image.write(filename)
 <pre class="code">
 <img class="icon" src="Cache.png" name="Graphic1" width="254" border="0" alt="cache" />
 
-Image image("cow.png"); 
+Image image("cow.png");
 // Ensure that there are no other references to this image.
 image.modifyImage();
 // Set the image type to TrueColor DirectClass representation.
 image.type(TrueColorType);
-// Request pixel region with size 60x40, and top origin at 20x30 
-ssize_t columns = 60; 
-Quantum *pixel_cache = image.getPixels(20,30,columns,40); 
-// Set pixel at column 5, and row 10 in the pixel cache to red. 
-ssize_t column = 5; 
-ssize_t row = 10; 
-Quantum *pixel = pixel_cache+row*columns+column; 
-*pixel = Color("red"); 
+// Request pixel region with size 60x40, and top origin at 20x30
+ssize_t columns = 60;
+Quantum *pixel_cache = image.getPixels(20,30,columns,40);
+// Set pixel at column 5, and row 10 in the pixel cache to red.
+ssize_t column = 5;
+ssize_t row = 10;
+Quantum *pixel = pixel_cache+row*columns+column;
+*pixel = Color("red");
 // Save changes to underlying image .
 image.syncPixels();
   // Save updated image to file.
@@ -4400,7 +4400,7 @@ image.write("horse.png");
                             or setPixels call and should never be deallocated by the user.
                         </font><font size="-1">
                             The pixel meta-content represent an array of type void, with each entry
-                            corresponding to an x,y pixel position. 
+                            corresponding to an x,y pixel position.
                         </font>
                     </td>
                 </tr>
@@ -4484,8 +4484,8 @@ image.write("horse.png");
                     <td><font size="-1">void</font></td>
                     <td>
                         <font size="-1">
-                            <a href="Enumerations.html#QuantumTypes">QuantumTypes</a>
-                            quantum_, const unsigned char *source_,
+                            const <a href="Enumerations.html#QuantumTypes">QuantumType</a>
+                            quantum_, const unsigned char *source_
                         </font>
                     </td>
                     <td>
@@ -4504,7 +4504,7 @@ image.write("horse.png");
                     <td><font size="-1">void</font></td>
                     <td>
                         <font size="-1">
-                            <a href="Enumerations.html#QuantumTypes">QuantumTypes</a>
+                            const <a href="Enumerations.html#QuantumTypes">QuantumType</a>
                             quantum_, unsigned char *destination_
                         </font>
                     </td>

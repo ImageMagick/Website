@@ -12,7 +12,7 @@
 <p>Geometry provides a convenient means to specify a geometry
 argument. The object may be initialized from a C string or C++ string
 containing a geometry specification. It may also be initialized by
-more efficient parameterized constructors. 
+more efficient parameterized constructors.
 </p>
 <h3><a name="GeometrySpecifications"></a>Geometry
 Specifications</h3>
@@ -20,7 +20,7 @@ Specifications</h3>
 <kbd>&quot;&lt;width&gt;x&lt;height&gt;{+-}&lt;xoffset&gt;{+-}&lt;yoffset&gt;&quot;</kbd>
 (where <i>width</i>, <i>height</i>, <i>xoffset</i>, and <i>yoffset</i>
 are numbers) for specifying the size and placement location for an
-object. 
+object.
 </p>
 <p style="margin-bottom: 0in">The <i>width</i> and <i>height</i>
 parts of the geometry specification are measured in pixels. The
@@ -29,7 +29,7 @@ and are used to specify the distance of the placement coordinate from
 the left and top and edges of the image, respectively. Both types of
 offsets are measured from the indicated edge of the object to the
 corresponding edge of the image. The X offset may be specified in the
-following ways: 
+following ways:
 </p>
 	<table width="90%" border="1" cellpadding="2" cellspacing="3">
 		<col width="21*" />
@@ -53,7 +53,7 @@ following ways:
 			</td>
 		</tr>
 	</table>
-<p style="margin-bottom: 0in">The Y offset has similar meanings: 
+<p style="margin-bottom: 0in">The Y offset has similar meanings:
 </p>
 	<table width="90%" border="1" cellpadding="2" cellspacing="3">
 		<col width="27*" />
@@ -89,7 +89,7 @@ images. The form of an extended geometry string is
 Extended geometry strings should <em>only</em> be used <em>when resizing
 an image</em>. Using an extended geometry string for other
 applications may cause the API call to fail. The available
-qualifiers are shown in the following table: 
+qualifiers are shown in the following table:
 </p>
 <p align="center" STYLE="margin-bottom: 0in"><b>ImageMagick Geometry
 Qualifiers</b></p>
@@ -153,10 +153,10 @@ specifications are short-hand for the pixel geometry required to fill
 a page of that size. Since the 11x17 inch page size used in the US
 starts with a digit, it is not supported as a Postscript page size
 nickname. Instead, substitute the geometry specification &quot;<kbd>792x1224&gt;&quot;</kbd>
-when 11x17 output is desired. 
+when 11x17 output is desired.
 </p>
 <p style="margin-bottom: 0in">An example of a Postscript page size
-specification is <kbd>&quot;letter+43+43&gt;&quot;</kbd>. 
+specification is <kbd>&quot;letter+43+43&gt;&quot;</kbd>.
 </p>
 <p align="center" style="margin-bottom: 0in"><b>Postscript Page Size
 Nicknames</b></p>
@@ -472,7 +472,7 @@ Nicknames</b></p>
 <p style="margin-bottom: 0in">Geometry provides methods to initialize
 its value from strings, from a set of parameters, or via attributes.
 The methods available for use in Geometry are shown in the following
-table: 
+table:
 </p>
 <p align="center" style="margin-bottom: 0in"><b>Geometry Methods</b></p>
 <table width="100%" border="1" cellpadding="2" cellspacing="3">
@@ -495,16 +495,15 @@ table:
 		</td>
 	</tr>
 	<tr>
-		<td rowspan="3" width="10%"> 
+		<td rowspan="5" width="10%">
 			<p>Geometry</p>
 		</td>
-		<td rowspan="3" width="10%" bgcolor="#666666">
+		<td rowspan="5" width="10%" bgcolor="#666666">
 			<p>&#160;</p>
 		</td>
 		<td width="44%">
 			<p>size_t width_, size_t height_, ssize_t xOff_ =
-			0, ssize_t yOff_ = 0, bool xNegative_ = false, bool
-			yNegative_ = false</p>
+			0, ssize_t yOff_ = 0</p>
 		</td>
 		<td width="37%">
 			<p>Construct geometry via explicit parameters.</p>
@@ -512,7 +511,7 @@ table:
 	</tr>
 	<tr>
 		<td width="44%">
-			<p>const string geometry_</p>
+			<p>const std::string&amp; geometry_</p>
 		</td>
 		<td width="37%">
 			<p>Construct geometry from C++ string</p>
@@ -524,6 +523,22 @@ table:
 		</td>
 		<td width="37%">
 			<p>Construct geometry from C string</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="44%">
+			<p>const Geometry&amp; geometry_</p>
+		</td>
+		<td width="37%">
+			<p>Copy constructor.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="44%">
+			<p>const MagickCore::RectangleInfo&amp; rectangle_</p>
+		</td>
+		<td width="37%">
+			<p>Construct from RectangleInfo.</p>
 		</td>
 	</tr>
 	<tr>
