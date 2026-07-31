@@ -45,19 +45,22 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
 
+      - name: Generate Magick++ documentation
+        run: |
+          # Magick++.dox.in is an autoconf template; substitute the placeholders normally filled in by `configure`
+          cd ImageMagick/config
+          sed -e 's/@srcdir@/./g' -e 's/@PACKAGE_VERSION@/0.0.0/g' Magick++.dox.in > Magick++.dox
+          doxygen Magick++.dox
+
       - name: Compare documentation
         run: |
           diff=""
-          # first generate the Magick++ documentation to be up to date with the current code
-          cd ImageMagick/config && doxygen Magick++.dox.in &> /dev/null
-          cd ../..
-
           # documentation files with function signatures that we can compare with their corresponding doxygen file (currently)
           DOC_HTML=("Blob.html" "CoderInfo.html" "Geometry.html" "Image++.html" "Montage.html" "Pixels.html")
           DOXY_HTML=("Blob.html" "CoderInfo.html" "Geometry.html" "Image.html" "Montage.html" "Pixels.html")  # Image.html is the only one that differs from the doxygen file
           for i in "${!DOC_HTML[@]}"; do
               python3 .github/build/scripts/compare-signatures.py docs/magick++/"${DOC_HTML[$i]}" ImageMagick/www/api/Magick++/classMagick_1_1"${DOXY_HTML[$i]}"
-              if [ $? -eq -1 ]; then
+              if [ $? -ne 0 ]; then
                   diff="true"
               fi
           done
