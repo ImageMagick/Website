@@ -50,6 +50,7 @@ jobs:
           # Magick++.dox.in is an autoconf template; substitute the placeholders normally filled in by `configure`
           cd ImageMagick/config
           sed -e 's/@srcdir@/./g' -e 's/@PACKAGE_VERSION@/0.0.0/g' Magick++.dox.in > Magick++.dox
+          echo "WARN_IF_UNDOCUMENTED = NO" >> Magick++.dox
           doxygen Magick++.dox
 
       - name: Compare documentation
