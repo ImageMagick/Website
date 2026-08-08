@@ -9,7 +9,7 @@ updates:
 
   - package-ecosystem: "pip"
     directories:
-      - "/.github/build/python"
+      - "/.github/build/scripts"
     cooldown:
       default-days: 7
     schedule:

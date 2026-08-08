@@ -5,7 +5,7 @@ on:
     paths:
     - '.github/workflows/doc-check.yml'
     - '.github/build/scripts/compare-signatures.py'
-    - '.github/build/python/requirements.txt'
+    - '.github/build/scripts/requirements.txt'
     - 'docs/magick\+\+/**'
   pull_request:
     branches:
@@ -13,7 +13,7 @@ on:
     paths:
     - '.github/workflows/doc-check.yml'
     - '.github/build/scripts/compare-signatures.py'
-    - '.github/build/python/requirements.txt'
+    - '.github/build/scripts/requirements.txt'
     - 'docs/magick\+\+/**'
   workflow_dispatch:
   schedule:
@@ -44,7 +44,7 @@ jobs:
           python-version: 3.14
 
       - name: Install Python dependencies
-        run: python -m pip install --user -r .github/build/python/requirements.txt --require-hashes
+        run: python -m pip install --user -r .github/build/scripts/requirements.txt --require-hashes
 
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
