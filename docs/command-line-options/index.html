@@ -764,7 +764,7 @@ the image, for correct viewing. </p>
 <p>This EXIF profile setting is usually set using a gravity sensor in digital
 camera, however photos taken directly downward or upward may not have an
 appropriate value.  Also images that have been orientation 'corrected' without
-reseting this setting, may be 'corrected' again resulting in a incorrect
+resetting this setting, may be 'corrected' again resulting in a incorrect
 result.  If the EXIF profile was previously stripped, the  <a
 href="#auto-orient" >-auto-orient</a> operator will do nothing. </p>
 
@@ -1330,7 +1330,7 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p>Let's create two meta channels and populate them with a copy of the gray pixels:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick gray.pgm -channel-fx "gray=>meta, gray=>meta1" gray.tif</samp></pre></pre>
-<p>Notice we save the results into a TIFF image file.  Not all formats support multipectral images.  TIFF, MIFF, MPC, and FTXT do.</p>
+<p>Notice we save the results into a TIFF image file.  Not all formats support multispectral images.  TIFF, MIFF, MPC, and FTXT do.</p>
 
 <p>Add <code>-debug pixel</code> prior to the <code>-channel-fx</code> option to track the channel morphology.</p>
 
@@ -4336,7 +4336,7 @@ convert the given image into a grayscale image. </p>
 </samp></pre>
 
 <p>Note that a 'colorspace' intensity method will produce the same result
-regardless of the current colorpsace of the image. But a 'mathematical'
+regardless of the current colorspace of the image. But a 'mathematical'
 intensity method depends on the current colorspace the image is currently
 using. </p>
 
@@ -4594,7 +4594,7 @@ href="#intensity" >-intensity</a> setting.</p>
 
 <p>The <a href="#colorspace" >-colorspace gray</a> image conversion also uses
 the current intensity setting, but will always convert the image to the
-appropriate sRGB or linear-RGB colorspace before appling the above
+appropriate sRGB or linear-RGB colorspace before applying the above
 function.</p>
 
 <p>To print a complete list of possible pixel intensity setting methods, use <a href="#list">-list intensity</a>.</p>
