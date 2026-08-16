@@ -183,12 +183,12 @@ copy of the original if this is a problem.</font></td>
       <center><a name="flattenImages"></a> <font size="-1">flattenImages</font></center>
       </td>
       <td><font size="-1"><a href="Image++.html">Image</a>
-*flattendImage_, <a
+*flattenedImage_, <a
  href="http://www.sgi.com/tech/stl/InputIterator.html"> InputIterator</a>
 first_, <a href="http://www.sgi.com/tech/stl/InputIterator.html">InputIterator</a>
 last_</font></td>
       <td><font size="-1">Merge a sequence of image frames which
-represent image  layers into a single composited representation. The <i>flattendImage_</i>
+represent image  layers into a single composited representation. The <i>flattenedImage_</i>
 parameter points to an existing Image to update with the flattened
 image. This function is useful for combining Photoshop layers into a
 single image.</font></td>
@@ -600,7 +600,7 @@ for repeated use.</font></td>
       <center><a name="edgeImage"></a> <font size="-1">edgeImage</font></center>
       </td>
       <td><font size="-1">size_t radius_ = 0.0</font></td>
-      <td><font size="-1">Edge image (hilight edges in image).&#160;
+      <td><font size="-1">Edge image (highlight edges in image).&#160;
 The radius  is the radius of the pixel neighborhood.. Specify a radius
 of zero for automatic radius selection.</font></td>
     </tr>
@@ -610,7 +610,7 @@ of zero for automatic radius selection.</font></td>
       </td>
       <td><font size="-1">const double radius_ = 1, const double sigma_
 = 0.5</font></td>
-      <td><font size="-1">Emboss image (hilight edges with 3D effect).
+      <td><font size="-1">Emboss image (highlight edges with 3D effect).
 The radius_  parameter specifies the radius of the Gaussian, in pixels,
 not counting the center pixel.&#160; The sigma_ parameter specifies the
 standard deviation  of the Laplacian, in pixels.</font></td>

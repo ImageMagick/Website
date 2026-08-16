@@ -724,7 +724,7 @@
   <mime type="audio/x-wav" description="WAV audio" data-type="string" offset="8" magic="WAVE" priority="50" />
   <mime type="audio/x-wav" description="WAV audio" data-type="string" offset="8" magic="WAV " priority="50" />
   <mime type="audio/x-wav" description="WAV audio" priority="100" pattern="*.wav" />
-  <mime type="audio/x-xi" description="Scream Tracker instrument" data-type="string" offset="0" magic="Extended Intrument:" priority="50" />
+  <mime type="audio/x-xi" description="Scream Tracker instrument" data-type="string" offset="0" magic="Extended Instrument:" priority="50" />
   <mime type="audio/x-xi" description="Scream Tracker instrument" priority="100" pattern="*.xi" />
   <mime type="audio/x-xm" description="FastTracker II audio" data-type="string" offset="0" magic="Extended Module:" priority="50" />
   <mime type="audio/x-xm" description="FastTracker II audio" priority="100" pattern="*.xm" />
