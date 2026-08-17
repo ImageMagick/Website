@@ -68,7 +68,7 @@
   <type name="Lucida-Bright-Demibold" fullname="Lucida Bright Demibold" family="Lucida Bright" weight="600" style="normal" stretch="normal" glyphs="/usr/share/fonts/msttcore/lbrited.ttf"/>
   <type name="Lucida-Bright-Demibold-Italic" fullname="Lucida Bright Demibold Italic" family="Lucida Bright" weight="600" style="italic" stretch="normal" glyphs="/usr/share/fonts/msttcore/lbritedi.ttf"/>
   <type name="Lucida-Bright-Italic" fullname="Lucida Bright Italic" family="Lucida Bright" weight="400" style="italic" stretch="normal" glyphs="/usr/share/fonts/msttcore/lbritei.ttf"/>
-  <type name="Lucida-Caligraphy-Italic" fullname="Lucida Caligraphy Italic" family="Lucida Caligraphy" weight="400" style="italic" stretch="normal" glyphs="/usr/share/fonts/msttcore/lcalig.ttf"/>
+  <type name="Lucida-Calligraphy-Italic" fullname="Lucida Calligraphy Italic" family="Lucida Calligraphy" weight="400" style="italic" stretch="normal" glyphs="/usr/share/fonts/msttcore/lcalig.ttf"/>
   <type name="Lucida-Console, Lucida-Console" fullname="Lucida Console, Lucida Console" family="Regular" weight="400" style="lucon.ttf" stretch="normal" glyphs="/usr/share/fonts/msttcore/"/>
   <type name="Lucida-Fax-Demibold" fullname="Lucida Fax Demibold" family="Lucida Fax" weight="600" style="normal" stretch="normal" glyphs="/usr/share/fonts/msttcore/lfaxd.ttf"/>
   <type name="Lucida-Fax-Demibold-Italic" fullname="Lucida Fax Demibold Italic" family="Lucida Fax" weight="600" style="italic" stretch="normal" glyphs="/usr/share/fonts/msttcore/lfaxdi.ttf"/>
