@@ -113,11 +113,11 @@ Options used to compile and link:
 <dt class="col-md-4">CXXFLAGS</dt>
   <dd class="col-md-8">Compiler flags (e.g. <code>-g -O2</code>) to compile C++ code.</dd>
 <dt class="col-md-4">CPPFLAGS</dt>
-  <dd class="col-md-8">Include paths (.e.g. <code>-I/usr/local</code>) to look for header files.</dd>
+  <dd class="col-md-8">Include paths (e.g. <code>-I/usr/local</code>) to look for header files.</dd>
 <dt class="col-md-4">LDFLAGS</dt>
-  <dd class="col-md-8">Library paths (.e.g. <code>-L/usr/local</code>) to look for libraries systems that support the notion of a library run-path may require an additional argument in order to find shared libraries at run time. For example, the Solaris linker requires an argument of the form <var>-R/path</var>.  Some Linux systems will work with <code>-rpath /usr/local/lib</code>, while some other Linux systems who's gcc does not pass <code>-rpath</code> to the linker, require an argument of the form <code>-Wl,-rpath,/usr/local/lib</code>.</dd>
+  <dd class="col-md-8">Library paths (e.g. <code>-L/usr/local</code>) to look for libraries systems that support the notion of a library run-path may require an additional argument in order to find shared libraries at run time. For example, the Solaris linker requires an argument of the form <var>-R/path</var>.  Some Linux systems will work with <code>-rpath /usr/local/lib</code>, while some other Linux systems who's gcc does not pass <code>-rpath</code> to the linker, require an argument of the form <code>-Wl,-rpath,/usr/local/lib</code>.</dd>
 <dt class="col-md-4">LIBS</dt>
-  <dd class="col-md-8">Extra libraries (.e.g. <code>-l/usr/local/lib</code>) required to link.</dd>
+  <dd class="col-md-8">Extra libraries (e.g. <code>-l/usr/local/lib</code>) required to link.</dd>
 </dl>
 
 <p>Here is an example of setting configure variables from the command line:</p>
@@ -158,7 +158,7 @@ Options used to compile and link:
     <td>--disable-installed</td>
     <td>disable building an installed ImageMagick (default enabled).
   <br/><br />
-  By default the ImageMagick build is configured to formally install into a directory tree.  This the most secure and reliable way to install ImageMagick.  Use this option to configure ImageMagick so that it doesn't use hard-coded paths and locates support files by computing an offset path from the executable (or from the location specified by the MAGICK_HOME environment variable. The uninstalled configuration is ideal for binary distributions which are expected to extract and run in any location.</td>
+  By default the ImageMagick build is configured to formally install into a directory tree.  This is the most secure and reliable way to install ImageMagick.  Use this option to configure ImageMagick so that it doesn't use hard-coded paths and locates support files by computing an offset path from the executable (or from the location specified by the MAGICK_HOME environment variable. The uninstalled configuration is ideal for binary distributions which are expected to extract and run in any location.</td>
   </tr>
   <tr>
     <td>--enable-ccmalloc</td>
@@ -253,7 +253,7 @@ Options used to compile and link:
     <td>--with-frozenpaths</td>
     <td>enable frozen delegate paths.
   <br /><br />
-  Normally, external program names are substituted into the <code>delegates.xml</code> configuration file without full paths. Specify this option to enable saving full paths to programs using locations determined by configure. This useful for environments where programs are stored under multiple paths, and users may use different PATH settings than the person who builds ImageMagick.</td>
+  Normally, external program names are substituted into the <code>delegates.xml</code> configuration file without full paths. Specify this option to enable saving full paths to programs using locations determined by configure. This is useful for environments where programs are stored under multiple paths, and users may use different PATH settings than the person who builds ImageMagick.</td>
   </tr>
   <tr>
     <td>--without-magick-plus-plus</td>
@@ -390,7 +390,7 @@ Options used to compile and link:
 <dt class="col-md-4">make clean</dt>
   <dd class="col-md-8"> Remove everything in the build directory created by <code>make</code>.</dd>
 <dt class="col-md-4">make distclean</dt>
-  <dd class="col-md-8">remove everything in the build directory created by <code>configure</code> and <code>make</code>.  This useful if you want to start over from scratch.</dd>
+  <dd class="col-md-8">remove everything in the build directory created by <code>configure</code> and <code>make</code>.  This is useful if you want to start over from scratch.</dd>
 <dt class="col-md-4">make uninstall</dt>
   <dd class="col-md-8">Remove all files from the system which are (or would be) installed by <code>sudo make install</code> using the current configuration.  Note that this target is imperfect for PerlMagick since Perl no longer supports an <var>uninstall</var> target.</dd>
 </dl>
