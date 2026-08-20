@@ -79,7 +79,7 @@ Use <code>width</code> to limit the maximum width of an image in pixels.  Exceed
 To limit the elapsed time of any ImageMagick command to 5 minutes, use this policy:
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre>
-For convenience, define arguments for the memory, map, and disk resources with SI prefixes (.e.g 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
+For convenience, define arguments for the memory, map, and disk resources with SI prefixes (e.g. 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
 
 <dt class="col-md-4"><a href="/source/quantization-table.xml">quantization-table.xml</a></dt>
   <dd class="col-md-8">Custom JPEG quantization tables. Activate with <code>-define:q-table=quantization-table.xml</code>.</dd>
@@ -101,7 +101,7 @@ For convenience, define arguments for the memory, map, and disk resources with S
   <dd class="col-md-8">Associate names with Windows font glyphs.</dd>
 </dl>
 
-<p>Under Linux and Linux, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
+<p>Under Linux and Linux-like operating systems, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
 $PREFIX/etc/ImageMagick-7
@@ -300,6 +300,6 @@ $MAGICK_FONT_PATH</code></pre>
   </tr>
 </table></div>
 
-<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (.e.g <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="/security-policy/">security policies</a>, but you cannot relax them.</p>
+<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (e.g. <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="/security-policy/">security policies</a>, but you cannot relax them.</p>
 
 </div>

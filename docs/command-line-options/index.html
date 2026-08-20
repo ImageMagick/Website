@@ -1377,7 +1377,7 @@ href="#splice">-splice</a> that was given the same <var>geometry</var> and <a hr
   <h2><a class="anchor" id="clamp"></a>-clamp</h2>
 </div>
 
-<p class="lead">Set each pixel whose value is below zero to zero and any the pixel whose value is above the quantum range to the quantum range (e.g. 65535) otherwise the pixel value remains unchanged.</p>
+<p class="lead">Set each pixel whose value is below zero to zero and any pixel whose value is above the quantum range to the quantum range (e.g. 65535) otherwise the pixel value remains unchanged.</p>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="clip"></a>-clip</h2>
@@ -2195,7 +2195,7 @@ href="#verbose" >-verbose</a> information ("<code>info:</code>" output format)
 as "Artifacts". </p>
 
 <p>If <var>value</var> is missing for a definition, an empty-valued
-definition of a flag is created with that name. This used to control on/off
+definition of a flag is created with that name. This is used to control on/off
 options.  Use <a href="#define">+define key</a> to remove definitions
 previously created.  Use <a href="#define">+define "*"</a> to remove all
 existing definitions.</p>
@@ -5178,7 +5178,7 @@ color (+ form). </p>
 
 <p>The value for <code>file</code> is in number of files. The other limits are
 in bytes. Define arguments for the memory, map, area, and disk resource limits
-with SI prefixes (.e.g 100MB).</p>
+with SI prefixes (e.g. 100MB).</p>
 
 <p>By default the limits are 768 files, 3GB of image area, 1.5GiB memory, 3GiB
 memory map, and 18.45EB of disk.  These limits are adjusted relative to the
@@ -6320,7 +6320,7 @@ href="#raise">-raise</a> does not alter the dimensions of the image.</p>
 
 <p class="lead">Prevent updates to image pixels specified by the mask.</p>
 
-<p>This the same as using a mask used for composite masking operations, with
+<p>This is the same as using a mask used for composite masking operations, with
 grayscale values causing blended updates of the image the mask is attached to.
 </p>
 
@@ -6408,7 +6408,7 @@ specify which application to control.</p>
 <p class="lead">Render vector operations.</p>
 
 <p>Use <a href="#render">+render</a> to turn off rendering vector operations.
-This useful when saving the result to vector formats such as MVG or SVG.</p>
+This is useful when saving the result to vector formats such as MVG or SVG.</p>
 
 <div style="mx-auto my-3 text-center">
 <h2><a class="anchor" id="repage"></a>-repage <var>geometry</var></h2>
@@ -6423,7 +6423,7 @@ of the image on that canvas by only providing those components. </p>
 <p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument.</p>
 
 <p>If a <code>!</code> flag is given the offset given is added to the existing
-offset to move the image relative to its previous position. This useful for
+offset to move the image relative to its previous position. This is useful for
 animation sequences. </p>
 
 <p>A given a canvas size of zero such as '<code>0x0</code>' forces it to
