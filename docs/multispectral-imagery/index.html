@@ -151,6 +151,6 @@ Image:
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre></pre>
 <br/>
 <h5>Writing Multispectral Images</h5>
-<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multisprectal images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
+<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multispectral images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre></pre>
 </div>
