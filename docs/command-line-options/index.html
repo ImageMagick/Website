@@ -712,7 +712,7 @@ dark shadows. It also does not work well for diagrams or cartoon like images.
 
 <p>It uses the <a href="#channel" >-channel</a> setting, (including the
 '<var>sync</var>' flag for channel synchronization), to determine which color
-values is used and modified. As the default <a href="#channel"
+values are used and modified. As the default <a href="#channel"
 >-channel</a> setting is '<var>RGB,sync</var>', channels are modified
 together by the same gamma value, preserving colors. </p>
 
@@ -2030,7 +2030,7 @@ positive and negative results are relative to a user-specified bias value.
 This is important for non-HDRI compilations of ImageMagick when dealing with
 convolutions that contain negative as well as positive values. This is
 especially the case with convolutions involving high pass filters or edge
-detection. Without an output bias, the negative values is clipped at zero.
+detection. Without an output bias, the negative values are clipped at zero.
 </p>
 
 <p>When using an ImageMagick with the HDRI compile-time setting, <a href="#bias">-bias</a>
@@ -3026,7 +3026,7 @@ optional comma. </p>
 </code></pre>
 
 <p>The <code>Bezier</code> primitive creates a spline curve and requires three
-or points to define its shape. The first and last points are the
+or more points to define its shape. The first and last points are the
 <var>knots</var> and these points are attained by the curve, while any
 intermediate coordinates are <var>control points</var>. If two control points
 are specified, the line between each end knot and its sequentially respective
@@ -4563,7 +4563,7 @@ being applied to calculate the final greyscale value. </p>
 </dl>
 </div>
 
-<p>Note that the above R,G,B values is the image's linear-RGB values, while
+<p>Note that the above R,G,B values are the image's linear-RGB values, while
 R',G',B' are sRGB non-linear values. </p>
 
 <p>These intensity methods are mathematical in nature and will use the
@@ -4773,7 +4773,7 @@ lookup for positions outside the boundaries of the image. </p>
 <p>Use this option to assign a specific label to the image, as it is read in
 or created.  You can use the <a href="#set" >-set</a> operation to re-assign
 a the labels of images already read in.  Image formats such as TIFF, PNG,
-MIFF, supports saving the label information with the image.</p>
+MIFF, support saving the label information with the image.</p>
 
 <p>When saving an image to a <var>PostScript</var> file, any label
 assigned to an image is used as a header string to print above the postscript
