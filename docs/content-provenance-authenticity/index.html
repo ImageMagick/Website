@@ -8,19 +8,19 @@ description: "Content Provenance and Authenticity (C2PA) is an open standard tha
 <p>
   Use the following command to encode provenance information into an image:
 </p>
-<pre class="bg-light p-3 rounded"><code>magick input.png \
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick input.png \
 -define c2pa:key=mykey.pem \
 -define c2pa:cert=mycert.pem \
 -define c2pa:manifest=manifest.json \
-c2pa:output.png</code></pre>
+c2pa:output.png</samp></pre>
 
 <h2 class="mt-5">Decoding Example</h2>
 <p>
   To inspect and verify the embedded C2PA data, run:
 </p>
-<pre class="bg-light p-3 rounded"><code>magick identify c2pa:output.png</code></pre>
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick identify c2pa:output.png</samp></pre>
 
 <h2 class="mt-5">Conclusion</h2>
 <p> The C2PA coder extends ImageMagick’s capabilities by allowing developers to encode and decode provenance metadata alongside standard image processing tasks.
 </p>
-<div>
+</div>
