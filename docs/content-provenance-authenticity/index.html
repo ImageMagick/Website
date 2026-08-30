@@ -1,0 +1,26 @@
+---
+title: "Content Provenance and Authenticity"
+description: "Content Provenance and Authenticity (C2PA) is an open standard that provides a framework for embedding secure, tamper-evident metadata into digital media to prove its origin, authenticity, and any edits made"
+---
+<div>
+<p class="lead">ImageMagick integrates the <strong>C2PA coder</strong> to embed and verify content provenance using cryptographic keys, certificates, and manifests. This enables trusted workflows for digital assets.</p>
+<h2 class="mt-5">Encoding Example</h2>
+<p>
+  Use the following command to encode provenance information into an image:
+</p>
+<pre class="bg-light p-3 rounded"><code>magick input.png \
+-define c2pa:key=mykey.pem \
+-define c2pa:cert=mycert.pem \
+-define c2pa:manifest=manifest.json \
+c2pa:output.png</code></pre>
+
+<h2 class="mt-5">Decoding Example</h2>
+<p>
+  To inspect and verify the embedded C2PA data, run:
+</p>
+<pre class="bg-light p-3 rounded"><code>magick identify c2pa:output.png</code></pre>
+
+<h2 class="mt-5">Conclusion</h2>
+<p> The C2PA coder extends ImageMagick’s capabilities by allowing developers to encode and decode provenance metadata alongside standard image processing tasks.
+</p>
+<div>
