@@ -9,10 +9,10 @@ description: "Content Provenance and Authenticity (C2PA) is an open standard tha
   Use the following command to encode provenance information into an image:
 </p>
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick input.png \
--define c2pa:key=mykey.pem \
--define c2pa:cert=mycert.pem \
--define c2pa:manifest=manifest.json \
-c2pa:output.png</samp></pre>
+  -define c2pa:key=mykey.pem \
+  -define c2pa:cert=mycert.pem \
+  -define c2pa:manifest=manifest.json \
+  c2pa:output.png</samp></pre>
 
 <h2 class="mt-5">Decoding Example</h2>
 <p>
