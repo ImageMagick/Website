@@ -277,7 +277,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="http://www.djvu.org/">DJVU</a></td>
+    <td><a href="https://djvu.org/">DJVU</a></td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -298,7 +298,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="http://www.graphviz.org">DOT</a></td>
+    <td><a href="https://www.graphviz.org/">DOT</a></td>
     <td>R</td>
     <td>Graph Visualization</td>
     <td>Use <a href="/command-line-options/#define">-define</a> to specify the layout engine (e.g. <code>-define dot:layout-engine=twopi</code>).</td>
@@ -578,7 +578,7 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="http://www.jpeg.org/">JPEG</a></td>
+    <td><a href="https://jpeg.org/">JPEG</a></td>
     <td>RW</td>
     <td>Joint Photographic Experts Group JFIF format</td>
     <td>Note, JPEG is a lossy compression.  In addition, you cannot create black and white images with JPEG nor can you save transparency.<br /><br /> Requires <a href="http://www.ijg.org/files/">jpegsrc.v8c.tar.gz</a>.  You can set quality scaling for luminance and chrominance separately (e.g. <a href="/command-line-options/#quality">-quality</a> 90,70). You can optionally define the DCT method, for example to specify the float method, use <a href="/command-line-options/#define">-define jpeg:dct-method=float</a>. By default we compute optimal Huffman coding tables.  Specify <a href="/command-line-options/#define">-define jpeg:optimize-coding=false</a> to use the default Huffman tables. Specify <a href="/command-line-options/#define">-define jpeg:arithmetic-coding=true</a> to enable Huffman optimization. Two other options include <a href="/command-line-options/#define">-define jpeg:block-smoothing</a> and <a href="/command-line-options/#define">-define jpeg:fancy-upsampling</a>. y default, ImageMagick generates JPEG images at 8‑bit depth. When <a href="/command-line-options/#define">-define jpeg:high-bit-depth</a> is enabled, it will produce 12‑bit or 16‑bit images if the source image depth exceeds 8 bits. Set the sampling factor with <a href="/command-line-options/#define">-define jpeg:sampling-factor</a>. You can size the image with <code>jpeg:size</code>, for example <a href="/command-line-options/#define">-define jpeg:size=128x128</a>. To restrict the maximum file size, use <code>jpeg:extent</code>, for example <a href="/command-line-options/#define">-define jpeg:extent=400KB</a>.  To define one or more custom quantization tables, use <a href="/command-line-options/#define">-define jpeg:q-table=<i>filename</i></a>. These values are multiplied by <a href="/command-line-options/#quality">-quality</a> argument divided by 100.0. To avoid reading a particular associated image profile, use <a href="/command-line-options/#define">-define profile:skip=<i>name</i></a> (e.g. profile:skip=ICC).</td>
@@ -592,10 +592,10 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="https://jpeg.org/jpegxl">JXL</a></td>
+    <td><a href="https://jpeg.org/jpegxl/">JXL</a></td>
     <td>RW</td>
     <td>JPEG XL image coding system</td>
-    <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl.git">JPEG XL</a> delegate library. Use <code>-define jxl:effort=<i>integer</i></code> to set the effort and <code>-define jxl:decoding-speed=<i>integer</i></code> to set the decoding speed. Use <code>-define jxl:distance=<i>integer</i></code> to set the JPEG XL encoder’s frame distance and <code>-define jxl:quality=<i>integer</i></code> to set the frame distance. To specify a single precision floating-point format, use <code>-define quantum:format=floating-point</code>.  Set the depth to 32 for single precision floats and 16 for half-precision.</td>
+    <td>Requires the <a href="https://gitlab.com/wg1/jpeg-xl">JPEG XL</a> delegate library. Use <code>-define jxl:effort=<i>integer</i></code> to set the effort and <code>-define jxl:decoding-speed=<i>integer</i></code> to set the decoding speed. Use <code>-define jxl:distance=<i>integer</i></code> to set the JPEG XL encoder’s frame distance and <code>-define jxl:quality=<i>integer</i></code> to set the frame distance. To specify a single precision floating-point format, use <code>-define quantum:format=floating-point</code>.  Set the depth to 32 for single precision floats and 16 for half-precision.</td>
   </tr>
 
   <tr>
@@ -1144,7 +1144,7 @@ the supported image formats.</p>
     <td><a href="http://www.w3.org/Graphics/SVG">SVG</a></td>
     <td>RW</td>
     <td>Scalable Vector Graphics</td>
-    <td>By default, ImageMagick renders SVGs with <a href="http://www.inkscape.org/">inkscape</a> if it is in your execution path; otherwise <a href="http://developer.gnome.org/rsvg/">RSVG</a>. If neither is available, ImageMagick reverts to its internal SVG renderer (called MSVG). The default resolution is 96 dpi. Use the <a href="/command-line-options/#size">-size</a> command line option to specify the maximum width and height. (<code>-size</code> is currently ignored by the Inkscape renderer due to a limitation on the Inkscape side). The SVG standard expects to draw over a transparent background.  Set <a href="/command-line-options/#background">-background none</a> to comply with the standard. If you want to substitute entities and you trust the SVG source, enable this option: <code>-define svg:substitute-entities=true</code>. If you want to render a very large SVG and you trust the source, enable this option: <code>-define svg:parse-huge=true</code>. Enable embedding if your SVG embeds another SVG and you trust the source:  <code>-define svg:embedding=true</code>. If RSVG is installed and you want to render an SVG using RSVG, add <code>rsvg:</code> just before the file name. If you want to render an SVG using MSVG, add <code>msvg:</code> just before the file name.</td>
+    <td>By default, ImageMagick renders SVGs with <a href="https://inkscape.org/">Inkscape</a> if it is in your execution path; otherwise <a href="https://gitlab.gnome.org/GNOME/librsvg">RSVG</a>. If neither is available, ImageMagick reverts to its internal SVG renderer (called MSVG). The default resolution is 96 dpi. Use the <a href="/command-line-options/#size">-size</a> command line option to specify the maximum width and height. (<code>-size</code> is currently ignored by the Inkscape renderer due to a limitation on the Inkscape side). The SVG standard expects to draw over a transparent background.  Set <a href="/command-line-options/#background">-background none</a> to comply with the standard. If you want to substitute entities and you trust the SVG source, enable this option: <code>-define svg:substitute-entities=true</code>. If you want to render a very large SVG and you trust the source, enable this option: <code>-define svg:parse-huge=true</code>. Enable embedding if your SVG embeds another SVG and you trust the source:  <code>-define svg:embedding=true</code>. If RSVG is installed and you want to render an SVG using RSVG, add <code>rsvg:</code> just before the file name. If you want to render an SVG using MSVG, add <code>msvg:</code> just before the file name.</td>
   </tr>
 
   <tr>
@@ -1176,10 +1176,10 @@ the supported image formats.</p>
   </tr>
 
   <tr>
-    <td><a href="http://www.freetype.org/">TTF</a></td>
+    <td><a href="https://freetype.org/">TTF</a></td>
     <td>R</td>
     <td>TrueType font file</td>
-    <td>Requires <a href="http://www.freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="/command-line-options/#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <code>-set type:hinting off</code>).</td>
+    <td>Requires <a href="https://freetype.org/">freetype 2</a>. Opening as file returns a preview image. Use <a href="/command-line-options/#set">-set</a> if you do not want to hint glyph outlines after their scaling to device pixels (e.g. <code>-set type:hinting off</code>).</td>
   </tr>
 
   <tr>
@@ -1207,7 +1207,7 @@ the supported image formats.</p>
     <td><a href="https://developer.android.com/media/platform/hdr-image-format">UHDR</a></td>
     <td>RW</td>
     <td>Ultra HDR</td>
-    <td>Requires the <a href="https://github.com/google/libultrahdr.git">libultrahdr</a> delegate library. Recognized <a href="/defines/">defines</a> include <code>uhdr:hdr-color-gamut</code>, <code>uhdr:hdr-color-transfer</code>, <code>uhdr:sdr-color-gamut</code>, <code>uhdr:gainmap-quality</code>, <code>uhdr:gainmap-gamma</code>, <code>uhdr:gainmap-min-content-boost</code>, <code>uhdr:gainmap-max-content-boost</code>, and <code>uhdr:target-display-peak-brightness</code>.</td>
+    <td>Requires the <a href="https://github.com/google/libultrahdr">libultrahdr</a> delegate library. Recognized <a href="/defines/">defines</a> include <code>uhdr:hdr-color-gamut</code>, <code>uhdr:hdr-color-transfer</code>, <code>uhdr:sdr-color-gamut</code>, <code>uhdr:gainmap-quality</code>, <code>uhdr:gainmap-gamma</code>, <code>uhdr:gainmap-min-content-boost</code>, <code>uhdr:gainmap-max-content-boost</code>, and <code>uhdr:target-display-peak-brightness</code>.</td>
   </tr>
 
   <tr>
