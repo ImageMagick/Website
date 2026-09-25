@@ -10,6 +10,7 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
 <p>Establish a security policy suitable for your local environment before utilizing ImageMagick.  ImageMagick’s security model is “everything allowed unless denied,” and the last matching policy wins.  Be careful when adding new rules: any later policy can override earlier denies or allows. Place broad deny rules first, followed by specific exceptions, and review ordering to avoid accidental authorization.</p>
 </div>
 
+
 <p class="lead">ImageMagick is intentionally open by default, and that design choice reflects its primary use in controlled environments such as Docker containers or other sandboxed deployments.</p>
 <p>Security always involves balancing protection against potential vulnerabilities with the practical need to get work done. In ImageMagick, the security policy is the mechanism that lets you tune that balance. It acts as the control point between strict lockdown and operational convenience, allowing you to decide which features, coders, and operations are permitted in your environment.</p>
 <p>A well‑designed policy can:</p>
@@ -20,6 +21,11 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
 <li>Adapt the system to your threat model rather than forcing a one‑size‑fits‑all configuration.</li>
 </ul>
 <p>This flexibility is intentional. ImageMagick ships in an open state so it can be embedded into controlled environments, containers, pipelines, or isolated servers, where administrators can then tighten the policy to match their needs. <strong class="text-warning">The more untrusted input you expect to handle, the more restrictive your policy should be</strong>.</p>
+
+<p>ImageMagick generally evaluates security policies using a "last matching policy wins" model. For path policies, ImageMagick additionally evaluates canonical filesystem paths (resolved paths) and enforces canonical denies to prevent policy bypass through alternate path representations, symlinks, or path traversal tricks. As a result, path authorization may be more restrictive than a simple last-match-wins evaluation.<p>
+<p>Path policies are evaluated against both the supplied path and its canonical form. Canonical path denies cannot be bypassed by later rules that only match alternative lexical representations of the same filesystem location.</p>
+
+<h2><a class="anchor" id="environment"></a>Selecting the Right Security Policy for Your Environment</h2>
 
 <p>To ensure optimal security, you can restrict ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can include details such as memory usage limits, allowed paths for reading and writing, limits on the number of images in a sequence, maximum workflow runtime, allowed disk space for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. By customizing the security policy, you can help secure your environment and ensure that ImageMagick is a responsible member of your local system, such as by preventing overloading with large images.</p>
 
