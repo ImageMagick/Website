@@ -155,6 +155,8 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
   &lt;policy domain="path" rights="none" pattern="*../*"/>
   &lt;!-- Indirect reading is not permitted. -->
   &lt;policy domain="path" rights="none" pattern="@*"/>
+  &lt;!-- Pipes are not permitted. -->
+  &lt;policy domain="path" rights="none" pattern="|*"/>
   &lt;!-- Deny all image modules and specifically exempt reading or writing
        web-safe image formats. -->
   &lt;policy domain="module" rights="none" pattern="*" />
