@@ -1346,6 +1346,10 @@ href="#clut">-clut</a> operator is a good example of this. </p>
 
 <p class="lead">Remove pixels from the interior of an image.</p>
 
+<p>Specify both dimensions explicitly: for example, <code>-chop 1x1</code>
+removes one column and one row. A single value such as <code>-chop 1</code>
+does not mean <code>1x1</code>; the omitted height depends on the page geometry.</p>
+
 <p>See <a href="/command-line-processing/#geometry">Image Geometry</a> for complete details about the <em class="arg">geometry</em> argument. The <var>width</var>
 and <var>height</var> given in the of the <var>size</var>
 portion of the <var>geometry</var> argument give the number of
@@ -7090,6 +7094,10 @@ default value. </p>
 </div>
 
 <p class="lead">Splice the current background color into the image.</p>
+
+<p>Specify both dimensions explicitly: for example, <code>-splice 3x3</code>
+adds three columns and three rows. A single value such as <code>-splice 3</code>
+does not mean <code>3x3</code>; the omitted height depends on the page geometry.</p>
 
 <p>This will add rows and columns of the current <a
 href="#background">-background</a> color into the given image according to the
