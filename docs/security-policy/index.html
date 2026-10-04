@@ -56,7 +56,8 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
 
 <p>Here is an example security policy:</p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>
+&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
   &lt;!ELEMENT policymap (policy)*>
   &lt;!ATTLIST policymap xmlns CDATA #FIXED "">
@@ -69,113 +70,157 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
   &lt;!ATTLIST policy stealth NMTOKEN #IMPLIED>
   &lt;!ATTLIST policy value CDATA #IMPLIED>
 ]>
+
 &lt;!--
-  Creating a security policy that fits your specific local environment
-  before making use of ImageMagick is highly advised. You can find guidance on
-  setting up this policy at https://imagemagick.org/security-policy/,
-  and it's important to verify your policy using the validation tool located
-  at https://imagemagick-secevaluator.doyensec.com/.  We also strongly
-  recommend that all users validate their security assumptions by testing their
-  configurations after making any policy changes. This helps ensure that the
-  intended restrictions are functioning as expected in their specific
-  deployment environment.
+  Hardened ImageMagick Security Policy
 
+  This policy is intended for processing untrusted images in publicly
+  accessible environments such as web applications and internet-facing
+  services.
 
-  Web-safe ImageMagick security policy:
+  Key protections include:
 
-  This security protocol designed for web-safe usage focuses on situations
-  where ImageMagick is applied in publicly accessible contexts, like websites.
-  It deactivates the capability to read from or write to any image formats
-  other than web-safe formats like GIF, JPEG, and PNG. Additionally, this
-  policy prohibits the execution of image filters and indirect reads, thereby
-  thwarting potential security breaches. By implementing these limitations,
-  the web-safe policy fortifies the safeguarding of systems accessible to
-  the public, reducing the risk of exploiting ImageMagick's capabilities
-  for potential attacks.
+    * Restrictive resource limits to mitigate denial-of-service attacks.
+    * Delegates and image filters disabled to prevent external code execution.
+    * Path restrictions to block indirect reads, pipes, file descriptors,
+      relative path traversal, and access to sensitive system files.
+    * Only a limited set of web-safe image formats are permitted.
+    * SVG entity substitution is explicitly disabled.
+    * Symlink following is disabled.
+    * Memory initialization and cache synchronization are enabled to improve
+      security and data integrity.
+
+  Before deploying ImageMagick, customize this policy to suit your environment.
+  Review the ImageMagick security policy documentation:
+
+      https://imagemagick.org/security-policy/
+
+  Validate any policy changes with:
+
+      https://imagemagick-secevaluator.doyensec.com/
+
+  After modifying policy.xml, test all restrictions to verify that the
+  intended protections are enforced in your deployment environment.
 -->
+
 &lt;policymap>
-  &lt;!-- Set maximum parallel threads. -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Resource Limits                                                -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Maximum number of worker threads. -->
   &lt;policy domain="resource" name="thread" value="2"/>
-  &lt;!-- Set maximum time in seconds or mnemonics, e.g. "2 minutes". When this
-       limit is exceeded, an exception is thrown and processing stops. -->
+
+  &lt;!-- Maximum processing time before an exception is thrown. -->
   &lt;policy domain="resource" name="time" value="60"/>
-  &lt;!-- Set maximum number of open pixel cache files. When this limit is
-       exceeded, any subsequent pixels cached to disk are closed and reopened
-       on demand. -->
+
+  &lt;!-- Maximum number of open pixel cache files. -->
   &lt;policy domain="resource" name="file" value="768"/>
-  &lt;!-- Set maximum amount of memory in bytes to allocate for the pixel cache
-       from the heap. When this limit is exceeded, the image pixels are cached
-       to memory-mapped disk. -->
+
+  &lt;!-- Maximum heap memory available to the pixel cache. -->
   &lt;policy domain="resource" name="memory" value="256MiB"/>
-  &lt;!-- Set maximum amount of memory map in bytes to allocate for the pixel
-       cache. When this limit is exceeded, the image pixels are cached to
-       disk. -->
+
+  &lt;!-- Maximum memory-mapped cache size before spilling to disk. -->
   &lt;policy domain="resource" name="map" value="512MiB"/>
-  &lt;!-- Set the maximum width * height of an image that can reside in the pixel
-       cache memory. Images that exceed the area limit are cached to disk. -->
+
+  &lt;!-- Maximum image area cached in memory. Larger images use disk cache. -->
   &lt;policy domain="resource" name="area" value="32MP"/>
-  &lt;!-- Set maximum amount of disk space in bytes permitted for use by the pixel
-       cache. When this limit is exceeded, the pixel cache is not be created
-       and an exception is thrown. -->
+
+  &lt;!-- Maximum disk space available for the pixel cache. -->
   &lt;policy domain="resource" name="disk" value="1GiB"/>
-  &lt;!-- Set the maximum length of an image sequence.  When this limit is
-       exceeded, an exception is thrown. -->
+
+  &lt;!-- Maximum number of images allowed in an image sequence. -->
   &lt;policy domain="resource" name="list-length" value="16"/>
-  &lt;!-- Set the maximum width of an image.  When this limit is exceeded, an
-       exception is thrown. -->
+
+  &lt;!-- Maximum permitted image width. -->
   &lt;policy domain="resource" name="width" value="4KP"/>
-  &lt;!-- Set the maximum height of an image.  When this limit is exceeded, an
-       exception is thrown. -->
+
+  &lt;!-- Maximum permitted image height. -->
   &lt;policy domain="resource" name="height" value="4KP"/>
-  &lt;!-- Periodically yield the CPU for at least the time specified in
-       milliseconds. -->
+
+  &lt;!-- Periodically yield the CPU (milliseconds). -->
   &lt;policy domain="resource" name="throttle" value="2"/>
-  &lt;!-- Dynamically yield the CPU relative to the system load average. -->
+
+  &lt;!-- Disable load-based dynamic throttling. -->
   &lt;policy domain="resource" name="dynamic-throttle" value="false"/>
-  &lt;!-- Do not create temporary files in the default shared directories, instead
-       specify a private area to store only ImageMagick temporary files. -->
-  &lt;!-- <policy domain="resource" name="temporary-path" value="/magick/tmp"/> -->
-  &lt;!-- Force memory initialization by memory mapping select memory
-       allocations. -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Pixel Cache Security                                           -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Initialize selected allocations with anonymous memory mapping. -->
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
-  &lt;!-- Ensure all image data is fully flushed and synchronized to disk. -->
+
+  &lt;!-- Force cache data to be flushed and synchronized to disk. -->
   &lt;policy domain="cache" name="synchronize" value="true"/>
-  &lt;!-- Replace passphrase for secure distributed processing -->
-  &lt;!-- <policy domain="cache" name="shared-secret" value="secret-passphrase" stealth="true"/> -->
-  &lt;!-- Do not permit any external delegates to execute. -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Delegate and Filter Restrictions                               -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Disable all external delegates. -->
   &lt;policy domain="delegate" rights="none" pattern="*"/>
-  &lt;!-- Do not permit any image filters to load. -->
+
+  &lt;!-- Disable all image filters. -->
   &lt;policy domain="filter" rights="none" pattern="*"/>
-  &lt;!-- Don't read/write from/to stdin/stdout. -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Path Restrictions                                              -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Disallow stdin and stdout access. -->
   &lt;policy domain="path" rights="none" pattern="-"/>
-  &lt;policy domain="path" rights="none" pattern="[Ff][Dd]:*"/>
-  &lt;!-- Sensitive paths are not permitted. -->
+
+  &lt;!-- Disallow file descriptor access such as fd:3. -->
+  &lt;policy domain="path" rights="none" pattern="[Ff][Dd\]:*"/>
+
+  &lt;!-- Protect sensitive system files. -->
   &lt;policy domain="path" rights="none" pattern="/etc/*"/>
-  &lt;!-- Relative paths are not permitted. -->
+
+  &lt;!-- Prevent relative path traversal. -->
   &lt;policy domain="path" rights="none" pattern="*../*"/>
-  &lt;!-- Indirect reading is not permitted. -->
+
+  &lt;!-- Prevent indirect file reads using @filename syntax. -->
   &lt;policy domain="path" rights="none" pattern="@*"/>
-  &lt;!-- Pipes are not permitted. -->
+
+  &lt;!-- Prevent pipe-based input tput. -->
   &lt;policy domain="path" rights="none" pattern="|*"/>
-  &lt;!-- Deny all image modules and specifically exempt reading or writing
-       web-safe image formats. -->
-  &lt;policy domain="module" rights="none" pattern="*" />
-  &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" />
-  &lt;!-- This policy sets the number of times to replace content of certain
-       memory buffers and temporary files before they are freed or deleted. -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Module Restrictions                                             -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Deny all image modules by default. -->
+  &lt;policy domain="module" rights="none" pattern="*"/>
+
+  &lt;!-- Permit only web-safe image formats. -->
+  &lt;policy domain="module" rights="read | write"
+          pattern="{GIF,JPEG,PNG,WEBP}"/>
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- System Security Options                                        -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Overwrite sensitive temporary data before removal. -->
   &lt;policy domain="system" name="shred" value="1"/>
-  &lt;!-- Enable the initialization of buffers with zeros, resulting in a minor
-       performance penalty but with improved security. -->
+
+  &lt;!-- Initialize buffers using anonymous memory mapping. -->
   &lt;policy domain="system" name="memory-map" value="anonymous"/>
-  &lt;!-- Set the maximum amount of memory in bytes that is permitted for
-       allocation requests. -->
+
+  &lt;!-- Maximum single allocation request. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
-  &lt;!-- If the basename of path is a symbolic link, the open fails -->
-  &lt;policy domain="system" name="symlink" rights="none" pattern="follow"/>
-  &lt;!-- Blocks all SVG entity‑substitution attempts by denying the
-    svg:substitute-entities define -->
-  &lt;policy domain="system" name="svg" rights="none" pattern="substitute-entities"/>
-&lt;/policymap></code></pre>
+
+  &lt;!-- Prevent following symbolic links. -->
+  &lt;policy domain="system" name="symlink"
+          rights="none" pattern="follow"/>
+
+  &lt;!-- Disable SVG entity substitution. -->
+  &lt;policy domain="system" name="svg"
+          rights="none" pattern="substitute-entities"/>
+
+&lt;/policymap>
+</code></pre>
 
 <p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 8192 pixels, or if an image sequence has more than 32 frames, processing will stop and an exception will be thrown.</p>
 
