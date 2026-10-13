@@ -377,6 +377,8 @@ Path: [built-in]
 
 <li>Prevent execution of image filters and indirect reads: You can prevent users from executing image filters and performing indirect reads to increase security.</li>
 
+<li>Enable pipes only when needed: Pipe support is disabled by default. Configuring ImageMagick with <code>--enable-pipes</code> allows filenames beginning with <code>|</code> to read from or write to external commands. This can enable command execution through untrusted filenames, so validate and sanitize user input carefully. If pipes are enabled but not needed at runtime, deny them with a path policy such as <code>&lt;policy domain="path" rights="none" pattern="|*"/&gt;</code>.</li>
+
 <li>Use a current version of ImageMagick: It is important to use a current version of ImageMagick to take advantage of the latest security fixes and updates.</li>
 </ol>
 
