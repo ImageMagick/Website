@@ -5,6 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-34](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-33...7.1.2-34) - 2026-10-14
+
+### Merged
+
+- fix broken ImageMagick Usage link [`#9026`](https://github.com/ImageMagick/ImageMagick/pull/9026)
+- build(deps): bump ubuntu from `da6fc2b` to `f144425` in /.devcontainer [`#9018`](https://github.com/ImageMagick/ImageMagick/pull/9018)
+
+### Commits
+
+- beta release [`ef5df48`](https://github.com/ImageMagick/ImageMagick/commit/ef5df48a1ec6187acf44f698288664bdecf6e5cf)
+- cosmetic [`c271950`](https://github.com/ImageMagick/ImageMagick/commit/c271950f8c496e40175b1d55128317cdd6bb2935)
+- eliminate compiler warning [`f03eacf`](https://github.com/ImageMagick/ImageMagick/commit/f03eacf4789541a18222cf669e8dbcbb79e07e29)
+- eliminate compiler warning [`cf01b29`](https://github.com/ImageMagick/ImageMagick/commit/cf01b29d0ae9dabf83a1e62c93ecb074f807bc89)
+- https://github.com/ImageMagick/ImageMagick/issues/9011 [`2c1021b`](https://github.com/ImageMagick/ImageMagick/commit/2c1021b8a44c282e3da06754ed6985b43d33c244)
+- Added check for libraw version 0.21 and raise warning when dng:read-thumbnails is used. [`1937e00`](https://github.com/ImageMagick/ImageMagick/commit/1937e00e2255251d1490b068ada4207d1aa233d0)
+- Hide convert warning from test output. [`b88a07b`](https://github.com/ImageMagick/ImageMagick/commit/b88a07b290c3fc4ccce0c1f01aa5962d1ceb9781)
+- Improved the filter even more. [`1741715`](https://github.com/ImageMagick/ImageMagick/commit/17417150fa3d21e2b80884a41d5f32f7b4129a32)
+- Improved filter even more. [`d7d6a1d`](https://github.com/ImageMagick/ImageMagick/commit/d7d6a1d216e15f09834e63ba6f3d4d68c46c01d9)
+- Fix Q8 connected-components validation input [`7e57af2`](https://github.com/ImageMagick/ImageMagick/commit/7e57af217e7108cb1319b9168bb8cc13c950bd26)
+- https://github.com/ImageMagick/ImageMagick/issues/9015 [`081827b`](https://github.com/ImageMagick/ImageMagick/commit/081827b8a3e3b5cc9a6f683456ea7b3bfb856edf)
+- Preserve source depth when decoding HEIC sequences [`1e2e12e`](https://github.com/ImageMagick/ImageMagick/commit/1e2e12e76d0f454b88421467110ef91b27af2b60)
+- Fix HEIC source selection and primary image lookup [`c2ba621`](https://github.com/ImageMagick/ImageMagick/commit/c2ba6210d6b512e59f8de4de5cf9c46027c733e9)
+- Read available ICC profiles for each HEIC sequence frame [`28f1f93`](https://github.com/ImageMagick/ImageMagick/commit/28f1f93624a25ff4237d773adac6cc418f1dbb85)
+- Add an option to read only the HEIC primary image [`165faf2`](https://github.com/ImageMagick/ImageMagick/commit/165faf2688f983c22ee4812ce54e373c27b7faf4)
+- Select image-sequence tracks when reading HEIC animations [`f1d8c90`](https://github.com/ImageMagick/ImageMagick/commit/f1d8c903247ede3e99b231d6c0c387066d311435)
+- Prefer primary images for HEIC and HEIF still-image brands [`5f543cd`](https://github.com/ImageMagick/ImageMagick/commit/5f543cd9f95f61f50dd50ef4a8c812586acce083)
+- Silence warning [`a0dd832`](https://github.com/ImageMagick/ImageMagick/commit/a0dd8322970802a74df6f6416ed64ab20cf4c9fd)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-x48p-6655-8qgv [`270f70f`](https://github.com/ImageMagick/ImageMagick/commit/270f70f609f659a01aaa2a8ed7bd887f79722d45)
+- Allow two tests to pass when a security policy blocks it. [`e2ddd0d`](https://github.com/ImageMagick/ImageMagick/commit/e2ddd0d1c42e063dced0f7ab7187b384ee378d86)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-vmj6-qx38-9gf5 [`11977ca`](https://github.com/ImageMagick/ImageMagick/commit/11977ca6cdb1b028c6fc2de0726ff027a8457445)
+- Also use the pre-build dependencies for the daily linux build. [`59b8722`](https://github.com/ImageMagick/ImageMagick/commit/59b87221dec394cfb31ef047bfd7e3c6443de58f)
+- Updated dependencies. [`c9932b6`](https://github.com/ImageMagick/ImageMagick/commit/c9932b6bcedc42a4447777234da527996835a414)
+- Also run daily when the configure or dependencies are updated. [`d9a987d`](https://github.com/ImageMagick/ImageMagick/commit/d9a987d59db236697537a01ce0794303be4f34f1)
+- support ShuffleImages() [`3d7aaa6`](https://github.com/ImageMagick/ImageMagick/commit/3d7aaa6223680621fa7a171f17162f19c1fdd98d)
+- support ShuffleImages() [`04cf4f7`](https://github.com/ImageMagick/ImageMagick/commit/04cf4f7b5bc90e6c228f3b9f1685d5d85ebbf0d7)
+- https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-g5j8-ff59-wp88 [`5f6b60f`](https://github.com/ImageMagick/ImageMagick/commit/5f6b60f2e18aa760aae94f0601a2758d190451c8)
+- eliminate compiler warning [`7145ceb`](https://github.com/ImageMagick/ImageMagick/commit/7145cebdde5ba5a319ac8c134eee1736371cf4e4)
+- Silence warnings. [`581f921`](https://github.com/ImageMagick/ImageMagick/commit/581f9210d323db94756c710c545ffad48e356df4)
+- Silence warning. [`43154d4`](https://github.com/ImageMagick/ImageMagick/commit/43154d48ccf7f0bf0d9d98ee32927d86e4109dd9)
+- Corrected compiler flag in the daily build. [`8920906`](https://github.com/ImageMagick/ImageMagick/commit/892090606554b532a99535a8d88e0148f5dbf20b)
+- support shuffle type [`66ade98`](https://github.com/ImageMagick/ImageMagick/commit/66ade989da1501ed51a64289eb29a88b8b1c89b6)
+- Corrected settings for the daily build. [`06d1730`](https://github.com/ImageMagick/ImageMagick/commit/06d1730e171bf146b947db07b3f914484b8e1029)
+- Made the build file executable. [`c5d4ca8`](https://github.com/ImageMagick/ImageMagick/commit/c5d4ca8a04ba5e597e433d0482c43eefdb22a62f)
+- release [`a0c4bf7`](https://github.com/ImageMagick/ImageMagick/commit/a0c4bf729a26a5c2feb28b0365b47a8db736078a)
+
 ## [7.1.2-33](https://github.com/ImageMagick/ImageMagick/compare/7.1.2-32...7.1.2-33) - 2026-10-10
 
 ### Merged

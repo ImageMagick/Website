@@ -9,5 +9,5 @@ include:
 
 magick:
   lib_version: "7.1.2"
-  version: "7.1.2-33"
-  release_date: "2026-10-10"
+  version: "7.1.2-34"
+  release_date: "2026-10-14"
