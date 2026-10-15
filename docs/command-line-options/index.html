@@ -267,6 +267,7 @@ description: "Explore the complete list of ImageMagick command-line options with
   <li><a class="dropdown-item" href="#sharpen">sharpen</a></li>
   <li><a class="dropdown-item" href="#shave">shave</a></li>
   <li><a class="dropdown-item" href="#shear">shear</a></li>
+  <li><a class="dropdown-item" href="#shuffle">shuffle</a></li>
   <li><a class="dropdown-item" href="#sigmoidal-contrast">sigmoidal-contrast</a></li>
   <li><a class="dropdown-item" href="#silent">silent</a></li>
   <li><a class="dropdown-item" href="#similarity-threshold">similarity-threshold</a></li>
@@ -6917,6 +6918,25 @@ a smaller image, and so is a better choice in terms of time and space.</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick logo: -shear 20x60 logo-sheared.png
 </samp></pre>
+
+<div style="mx-auto my-3 text-center">
+  <h2><a class="anchor" id="shuffle"></a>-shuffle <var>strategy</var>]</h2>
+</div>
+
+<p class="lead">Reorders the sequence of images in an image list based on ascending, descending, or random criteria.</p>
+
+<p>This operator rearranges the order of images in the current image sequence according to the specified strategy, allowing you to sort frames in ascending or descending order or mix them up entirely at random. This provides a built-in mechanism for batch-processing frames, testing animations, or randomizing image layouts directly within your command-line workflows without needing external scripting.</p>
+
+<p>Choose from these strategies:</p>
+
+<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
+<dl class="row">
+<dt class="col-md-4">Undefined</dt><dd class="col-md-8">0:  No strategy specified (equivalent to '<code>random</code>').</dd>
+<dt class="col-md-4">Ascending</dt><dd class="col-md-8">Sort the images by filename in alphabetical order.</dd>
+<dt class="col-md-4">Descending</dt><dd class="col-md-8">Sort the images by filename in reverse alphabetical order.</dd>
+<dt class="col-md-4">Random</dt><dd class="col-md-8">Shuffle the positions of the images into a completely randomized order.</dd>
+</dl>
+</div>
 
 <div style="mx-auto my-3 text-center">
   <h2><a class="anchor" id="sigmoidal-contrast"></a>-sigmoidal-contrast <var>contrast</var>x<var>mid-point</var></h2>
