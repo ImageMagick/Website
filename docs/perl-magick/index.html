@@ -2459,6 +2459,11 @@ $weight = ($image-&gt;QueryFont('Helvetica'))[5];
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$image-&gt;RemoteCommand('image.jpg');
 </code></pre>
 
+<p>Use Shuffle() to reorder the sequence of images in an image list based on ascending, descending, or random criteria. For example:</p>
+
+<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$image-&gt;Shuffle('random');
+</code></pre>
+
 <p>The Smush() method smushes a set of images together. For example,</p>
 
 <pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$p = $image-&gt;Smush(stack=&gt;{true,false},offset=&gt;<var>integer</var>);
