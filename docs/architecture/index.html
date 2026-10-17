@@ -463,6 +463,9 @@ Resource limits:
   &lt;!-- Maximum single allocation request. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
 
+  &lt;!-- Maximum size of an image profile. -->
+  &lt;policy domain="system" name="max-profile-size" value="256MiB"/>
+
   &lt;!-- Prevent following symbolic links. -->
   &lt;policy domain="system" name="symlink"
           rights="none" pattern="follow"/>
