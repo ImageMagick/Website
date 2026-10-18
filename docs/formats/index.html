@@ -1,6 +1,6 @@
 ---
 title: "Image Formats"
-description: "Explore supported image formats in ImageMagick, including JPEG, PNG, TIFF, GIF, and more. Learn about read/write capabilities, compression options, and advanced features."
+description: "Explore all supported image formats, pseudo formats, built-in images, patterns, and embedded profiles in ImageMagick."
 ---
 
 <!-- Page Jump Navigation -->
@@ -44,32 +44,18 @@ description: "Explore supported image formats in ImageMagick, including JPEG, PN
   <p class="text-body-secondary mb-4">
     Most image formats assume an sRGB colorspace, while others support linear RGB, linear GRAY, CMYK, or LAB. To determine your image colorspace, use:
   </p>
-
   <div class="row g-3 mb-4">
     <div class="col-md-6">
       <div class="card im-card p-3 bg-dark text-light font-mono small h-100">
-        $ magick identify -verbose image.jpg<br>
-        ...<br>
-        Colorspace: sRGB
+        $ magick identify -verbose image.jpg<br>...<br>Colorspace: sRGB
       </div>
     </div>
     <div class="col-md-6">
       <div class="card im-card p-3 bg-dark text-light font-mono small h-100">
-        $ magick image.jpg -print "%[colorspace]\n" null:<br>
-        sRGB
+        $ magick image.jpg -print "%[colorspace]\n" null:<br>sRGB
       </div>
     </div>
   </div>
-
-  <p class="text-body-secondary mb-3">
-    Many processing algorithms yield improved results in linear RGB (gamma removed). For example:
-  </p>
-  <div class="card im-card p-3 bg-dark text-light font-mono small mb-3">
-    $ magick image.jpg -colorspace RGB -resize 50% -colorspace sRGB resize.jpg
-  </div>
-  <p class="small text-body-secondary mb-0">
-    As of IM 6.7.8-2, you can work properly in LAB colorspace (with A and B channels stored with a 50% gray bias).
-  </p>
 </section>
 
 <!-- Supported Formats Section -->
@@ -78,37 +64,190 @@ description: "Explore supported image formats in ImageMagick, including JPEG, PN
     <i class="bi bi-file-earmark-richtext fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Supported Image Formats</h2>
   </div>
-  <p class="text-body-secondary mb-3">ImageMagick supports reading over 100 major file formats.</p>
+  <p class="text-body-secondary mb-3">Complete directory of all major file formats supported by ImageMagick.</p>
 
   <div class="card im-card p-3">
-    <div class="table-responsive" style="max-height: 65svh;">
+    <div class="table-responsive" style="max-height: 70svh;">
       <table class="table table-hover table-striped mb-0 align-middle small">
         <thead class="table-dark sticky-top">
           <tr>
-            <th class="ps-3 font-mono">Tag</th>
-            <th>Mode</th>
-            <th>Description</th>
-            <th class="pe-3">Notes</th>
+            <th class="ps-3 font-mono" style="width:12%">Tag</th>
+            <th style="width:8%">Mode</th>
+            <th style="width:30%">Description</th>
+            <th class="pe-3" style="width:50%">Notes</th>
           </tr>
         </thead>
         <tbody>
+          <tr><td class="ps-3 font-mono">AAI</td><td>RW</td><td>AAI Dune image</td><td class="pe-3 text-body-secondary"></td></tr>
           <tr><td class="ps-3 font-mono">AI</td><td>RW</td><td>Adobe Illustrator CS2</td><td class="pe-3 text-body-secondary"></td></tr>
           <tr><td class="ps-3 font-mono">APNG</td><td>RW</td><td>Animated Portable Network Graphics</td><td class="pe-3 text-body-secondary">Requires explicit specifier (<code>apng:myImage.apng</code>) and <code>ffmpeg</code>.</td></tr>
-          <tr><td class="ps-3 font-mono">AVIF</td><td>RW</td><td>AV1 Image File Format</td><td class="pe-3 text-body-secondary">Derived from keyframes of AV1 video.</td></tr>
-          <tr><td class="ps-3 font-mono">BMP</td><td>RW</td><td>Microsoft Windows bitmap</td><td class="pe-3 text-body-secondary">Default version 4. Use BMP3/BMP2 for older versions.</td></tr>
-          <tr><td class="ps-3 font-mono">EPS</td><td>RW</td><td>Adobe Encapsulated PostScript</td><td class="pe-3 text-body-secondary">Requires Ghostscript to read.</td></tr>
-          <tr><td class="ps-3 font-mono">EXR</td><td>RW</td><td>OpenEXR High dynamic-range format</td><td class="pe-3 text-body-secondary">Requires OpenEXR delegate library.</td></tr>
-          <tr><td class="ps-3 font-mono">GIF</td><td>RW</td><td>CompuServe Graphics Interchange Format</td><td class="pe-3 text-body-secondary">8-bit RGB PseudoColor up to 256 colors.</td></tr>
+          <tr><td class="ps-3 font-mono">ART</td><td>RW</td><td>PFS: 1st Publisher</td><td class="pe-3 text-body-secondary">Originally used on Macintosh/PFS: 1st Publisher clip art.</td></tr>
+          <tr><td class="ps-3 font-mono">ARW</td><td>R</td><td>Sony Digital Camera Alpha Raw Image Format</td><td class="pe-3 text-body-secondary">Set <code>-define dng:use-camera-wb=true</code> to use embedded profile.</td></tr>
+          <tr><td class="ps-3 font-mono">AVI</td><td>R</td><td>Microsoft Audio/Visual Interleaved</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">AVIF</td><td>RW</td><td>Format derived from keyframes of AV1 video</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">AVS</td><td>RW</td><td>AVS X image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">BAYER</td><td>RW</td><td>Raw mosaiced samples</td><td class="pe-3 text-body-secondary">Use size and depth parameters; support for floats via quantum:format.</td></tr>
+          <tr><td class="ps-3 font-mono">BPG</td><td>RW</td><td>Better Portable Graphics</td><td class="pe-3 text-body-secondary">Use quality option.</td></tr>
+          <tr><td class="ps-3 font-mono">BMP, BMP2, BMP3</td><td>RW</td><td>Microsoft Windows bitmap</td><td class="pe-3 text-body-secondary">Default version 4. Use BMP3/BMP2 for versions 3 and 2.</td></tr>
+          <tr><td class="ps-3 font-mono">BRF</td><td>W</td><td>Braille Ready Format</td><td class="pe-3 text-body-secondary">6-dot braille matrix encoding.</td></tr>
+          <tr><td class="ps-3 font-mono">CALS</td><td>R</td><td>Continuous Acquisition and Life-cycle Support Type 1</td><td class="pe-3 text-body-secondary">US military blueprint archive format.</td></tr>
+          <tr><td class="ps-3 font-mono">CIN</td><td>RW</td><td>Kodak Cineon Image Format</td><td class="pe-3 text-body-secondary">Use -set for gamma, black/white points, and cineon properties.</td></tr>
+          <tr><td class="ps-3 font-mono">CIP</td><td>W</td><td>Cisco IP phone image format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">CMYK</td><td>RW</td><td>Raw cyan, magenta, yellow, and black samples</td><td class="pe-3 text-body-secondary">Use size/depth; supports float formats.</td></tr>
+          <tr><td class="ps-3 font-mono">CMYKA</td><td>RW</td><td>Raw cyan, magenta, yellow, black, and alpha samples</td><td class="pe-3 text-body-secondary">Supports float formats via quantum:format.</td></tr>
+          <tr><td class="ps-3 font-mono">CR2</td><td>R</td><td>Canon Digital Camera Raw Image Format</td><td class="pe-3 text-body-secondary">Requires explicit specifier (<code>cr2:image.cr2</code>).</td></tr>
+          <tr><td class="ps-3 font-mono">CRW</td><td>R</td><td>Canon Digital Camera Raw Image Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">CUBE</td><td>R</td><td>Color grading preset lookup table</td><td class="pe-3 text-body-secondary">Pixel-by-pixel replacement mapping.</td></tr>
+          <tr><td class="ps-3 font-mono">CUR</td><td>R</td><td>Microsoft Cursor Icon</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">CUT</td><td>R</td><td>DR Halo</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">C2PA</td><td>R</td><td>C2PA Provenance Metadata</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">DCM</td><td>R</td><td>Digital Imaging and Communications in Medicine (DICOM)</td><td class="pe-3 text-body-secondary">Medical X-ray support; handles window center/width tags.</td></tr>
+          <tr><td class="ps-3 font-mono">DCR</td><td>R</td><td>Digital Camera Raw Image File</td><td class="pe-3 text-body-secondary">Use DCRAW delegate program.</td></tr>
+          <tr><td class="ps-3 font-mono">DCX</td><td>RW</td><td>ZSoft IBM PC multi-page Paintbrush image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">DDS</td><td>RW</td><td>Microsoft Direct Draw Surface</td><td class="pe-3 text-body-secondary">Compression defines like dxt1, dxt5, and mipmaps.</td></tr>
+          <tr><td class="ps-3 font-mono">DEBUG</td><td>W</td><td>Raw pixel debug file</td><td class="pe-3 text-body-secondary">For developers.</td></tr>
+          <tr><td class="ps-3 font-mono">DIB</td><td>RW</td><td>Microsoft Windows Device Independent Bitmap</td><td class="pe-3 text-body-secondary">BMP file without BMP header.</td></tr>
+          <tr><td class="ps-3 font-mono">DJVU</td><td>R</td><td>DjVu Document Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">DMR</td><td>RW</td><td>Digital media repository</td><td class="pe-3 text-body-secondary">Requires MagickCache delegate library.</td></tr>
+          <tr><td class="ps-3 font-mono">DNG</td><td>R</td><td>Digital Negative</td><td class="pe-3 text-body-secondary">Requires explicit specifier (<code>dng:image.dng</code>).</td></tr>
+          <tr><td class="ps-3 font-mono">DOT</td><td>R</td><td>Graph Visualization</td><td class="pe-3 text-body-secondary">Layout engine options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">DPX</td><td>RW</td><td>SMPTE Digital Moving Picture Exchange 2.0</td><td class="pe-3 text-body-secondary">Gamma and black/white point controls.</td></tr>
+          <tr><td class="ps-3 font-mono">EMF</td><td>R</td><td>Microsoft Enhanced Metafile (32-bit)</td><td class="pe-3 text-body-secondary">Windows only; size option supported.</td></tr>
+          <tr><td class="ps-3 font-mono">EPDF</td><td>RW</td><td>Encapsulated Portable Document Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">EPI</td><td>RW</td><td>Adobe Encapsulated PostScript Interchange</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPS</td><td>RW</td><td>Adobe Encapsulated PostScript</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPS2</td><td>W</td><td>Adobe Level II Encapsulated PostScript</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPS3</td><td>W</td><td>Adobe Level III Encapsulated PostScript</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPSF</td><td>RW</td><td>Adobe Encapsulated PostScript</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPSI</td><td>RW</td><td>Adobe Encapsulated PostScript Interchange format</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EPT</td><td>RW</td><td>Encapsulated PostScript with TIFF preview</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">EXR</td><td>RW</td><td>Industrial Light & Magic High Dynamic-Range</td><td class="pe-3 text-body-secondary">Requires OpenEXR library.</td></tr>
+          <tr><td class="ps-3 font-mono">FARBFELD</td><td>RW</td><td>Farbfeld lossless image format</td><td class="pe-3 text-body-secondary">sRGB 16-bit RGBA lossless format.</td></tr>
+          <tr><td class="ps-3 font-mono">FAX</td><td>RW</td><td>Group 3 TIFF</td><td class="pe-3 text-body-secondary">Fixed width 1728; non-square pixels.</td></tr>
+          <tr><td class="ps-3 font-mono">FITS</td><td>RW</td><td>Flexible Image Transport System</td><td class="pe-3 text-body-secondary">Supports single and double-precision floats.</td></tr>
+          <tr><td class="ps-3 font-mono">FL32</td><td>RW</td><td>FilmLight floating point image format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">FLIF</td><td>RW</td><td>Free Lossless Image Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">FPX</td><td>RW</td><td>FlashPix Format</td><td class="pe-3 text-body-secondary">Multi-resolution pyramid storage; requires FlashPix SDK.</td></tr>
+          <tr><td class="ps-3 font-mono">FTXT</td><td>RW</td><td>Multispectral channels as formatted text</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">GIF</td><td>RW</td><td>CompuServe Graphics Interchange Format</td><td class="pe-3 text-body-secondary">8-bit RGB PseudoColor up to 256 palette entries.</td></tr>
+          <tr><td class="ps-3 font-mono">GPLT</td><td>R</td><td>Gnuplot plot files</td><td class="pe-3 text-body-secondary">Requires gnuplot.</td></tr>
+          <tr><td class="ps-3 font-mono">GRAY</td><td>RW</td><td>Raw gray samples</td><td class="pe-3 text-body-secondary">Supports scanline padding and float/signed options.</td></tr>
+          <tr><td class="ps-3 font-mono">GRAYA</td><td>RW</td><td>Raw gray and alpha samples</td><td class="pe-3 text-body-secondary">Supports float configurations.</td></tr>
+          <tr><td class="ps-3 font-mono">GROUP4</td><td>RW</td><td>Raw CCITT Group 4 samples</td><td class="pe-3 text-body-secondary">Use size option.</td></tr>
+          <tr><td class="ps-3 font-mono">HDR</td><td>RW</td><td>Radiance RGBE image format</td><td class="pe-3 text-body-secondary">High dynamic range support.</td></tr>
           <tr><td class="ps-3 font-mono">HEIC</td><td>RW</td><td>Apple High Efficiency Image Format</td><td class="pe-3 text-body-secondary">Requires libheif delegate library.</td></tr>
-          <tr><td class="ps-3 font-mono">JPEG</td><td>RW</td><td>Joint Photographic Experts Group JFIF</td><td class="pe-3 text-body-secondary">Lossy compression, no transparency support.</td></tr>
+          <tr><td class="ps-3 font-mono">HPGL</td><td>R</td><td>HP-GL plotter language</td><td class="pe-3 text-body-secondary">Requires hp2xx.</td></tr>
+          <tr><td class="ps-3 font-mono">HRZ</td><td>RW</td><td>Slow Scan TeleVision</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">HTML</td><td>RW</td><td>HTML with client-side image map</td><td class="pe-3 text-body-secondary">Requires html2ps to read.</td></tr>
+          <tr><td class="ps-3 font-mono">ICO</td><td>R</td><td>Microsoft icon (ICON)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">INFO</td><td>W</td><td>Format and characteristics of the image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">ISOBRL</td><td>W</td><td>ISO/TR 11548-1 Braille (8-dot)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">ISOBRL6</td><td>W</td><td>ISO/TR 11548-1 Braille (6-dot)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">JBIG</td><td>RW</td><td>Joint Bi-level Image experts Group (BIE, JBG)</td><td class="pe-3 text-body-secondary">Requires jbigkit.</td></tr>
+          <tr><td class="ps-3 font-mono">JNG</td><td>RW</td><td>Multiple-image Network Graphics</td><td class="pe-3 text-body-secondary">JPEG in PNG-style wrapper with transparency.</td></tr>
+          <tr><td class="ps-3 font-mono">JP2</td><td>RW</td><td>JPEG-2000 JP2 File Format Syntax</td><td class="pe-3 text-body-secondary">Encoding options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">JPT</td><td>RW</td><td>JPEG-2000 Code Stream Syntax</td><td class="pe-3 text-body-secondary">Encoding options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">J2C</td><td>RW</td><td>JPEG-2000 Code Stream Syntax</td><td class="pe-3 text-body-secondary">Encoding options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">J2K</td><td>RW</td><td>JPEG-2000 Code Stream Syntax</td><td class="pe-3 text-body-secondary">Encoding options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">JPEG</td><td>RW</td><td>Joint Photographic Experts Group JFIF format</td><td class="pe-3 text-body-secondary">Lossy compression; quality scaling, Huffman, and DCT options.</td></tr>
+          <tr><td class="ps-3 font-mono">JSON</td><td>W</td><td>JavaScript Object Notation data-interchange</td><td class="pe-3 text-body-secondary">Supports attributes, moments, and features defines.</td></tr>
           <tr><td class="ps-3 font-mono">JXL</td><td>RW</td><td>JPEG XL image coding system</td><td class="pe-3 text-body-secondary">Requires JPEG XL delegate library.</td></tr>
-          <tr><td class="ps-3 font-mono">PDF</td><td>RW</td><td>Portable Document Format</td><td class="pe-3 text-body-secondary">Requires Ghostscript to read.</td></tr>
-          <tr><td class="ps-3 font-mono">PNG</td><td>RW</td><td>Portable Network Graphics</td><td class="pe-3 text-body-secondary">Requires libpng-1.0.11 or later.</td></tr>
-          <tr><td class="ps-3 font-mono">PSD</td><td>RW</td><td>Adobe Photoshop multispectral bitmap</td><td class="pe-3 text-body-secondary">Supports layers and channel properties.</td></tr>
-          <tr><td class="ps-3 font-mono">QOI</td><td>RW</td><td>Quite OK Image Format</td><td class="pe-3 text-body-secondary">Fast, lossless image compression.</td></tr>
-          <tr><td class="ps-3 font-mono">SVG</td><td>RW</td><td>Scalable Vector Graphics</td><td class="pe-3 text-body-secondary">Renders via Inkscape or RSVG if available.</td></tr>
-          <tr><td class="ps-3 font-mono">TIFF</td><td>RW</td><td>Tagged Image File Format</td><td class="pe-3 text-body-secondary">Multi-page and multispectral capabilities.</td></tr>
+          <tr><td class="ps-3 font-mono">JXR</td><td>RW</td><td>JPEG extended range</td><td class="pe-3 text-body-secondary">Requires jxrlib.</td></tr>
+          <tr><td class="ps-3 font-mono">KERNEL</td><td>W</td><td>Morphology kernel format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MAN</td><td>R</td><td>Linux reference manual pages</td><td class="pe-3 text-body-secondary">Requires groff and Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">MAT</td><td>R</td><td>MATLAB image format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MIFF</td><td>RW</td><td>Magick multispectral image file format</td><td class="pe-3 text-body-secondary">Persists all image attributes and channel data.</td></tr>
+          <tr><td class="ps-3 font-mono">MONO</td><td>RW</td><td>Bi-level bitmap (LSB order)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MNG</td><td>RW</td><td>Multiple-image Network Graphics</td><td class="pe-3 text-body-secondary">PNG-like multi-image animation container.</td></tr>
+          <tr><td class="ps-3 font-mono">M2V</td><td>RW</td><td>MPEG-2 video format</td><td class="pe-3 text-body-secondary">Requires ffmpeg.</td></tr>
+          <tr><td class="ps-3 font-mono">MPEG</td><td>RW</td><td>MPEG-1 video format</td><td class="pe-3 text-body-secondary">Requires ffmpeg.</td></tr>
+          <tr><td class="ps-3 font-mono">MPC</td><td>RW</td><td>Magick Pixel Cache image file format</td><td class="pe-3 text-body-secondary">Native in-memory uncompressed cache format.</td></tr>
+          <tr><td class="ps-3 font-mono">MPO</td><td>R</td><td>Multi-picture Object</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MPR</td><td>RW</td><td>Magick Persistent Registry</td><td class="pe-3 text-body-secondary">Read/write images directly in memory via registry keys.</td></tr>
+          <tr><td class="ps-3 font-mono">MRW</td><td>R</td><td>Sony (Minolta) Raw Image File</td><td class="pe-3 text-body-secondary">Embedded profile options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">MSL</td><td>RW</td><td>Magick Scripting Language</td><td class="pe-3 text-body-secondary">XML scripting for conjure utility; requires libxml2.</td></tr>
+          <tr><td class="ps-3 font-mono">MTV</td><td>RW</td><td>MTV Raytracing image format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MVG</td><td>RW</td><td>Magick Vector Graphics</td><td class="pe-3 text-body-secondary">Native vector drawing metafile format.</td></tr>
+          <tr><td class="ps-3 font-mono">NEF</td><td>R</td><td>Nikon Digital SLR Camera Raw Image File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">ORF</td><td>R</td><td>Olympus Digital Camera Raw Image File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">ORA</td><td>R</td><td>OpenRaster layered graphics exchange format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">OTB</td><td>RW</td><td>On-the-air Bitmap</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">P7</td><td>RW</td><td>Xv's Visual Schnauzer thumbnail format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PALM</td><td>RW</td><td>Palm pixmap</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PAM</td><td>W</td><td>Common 2-dimensional bitmap format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">CLIPBOARD</td><td>RW</td><td>Windows Clipboard</td><td class="pe-3 text-body-secondary">Windows only.</td></tr>
+          <tr><td class="ps-3 font-mono">PBM</td><td>RW</td><td>Portable bitmap format (black and white)</td><td class="pe-3 text-body-secondary">Netpbm family.</td></tr>
+          <tr><td class="ps-3 font-mono">PCD</td><td>RW</td><td>Photo CD</td><td class="pe-3 text-body-secondary">Max resolution written 768x512.</td></tr>
+          <tr><td class="ps-3 font-mono">PCDS</td><td>RW</td><td>Photo CD</td><td class="pe-3 text-body-secondary">Decoded with sRGB color tables.</td></tr>
+          <tr><td class="ps-3 font-mono">PCL</td><td>W</td><td>HP Page Control Language</td><td class="pe-3 text-body-secondary">Fit-to-page option via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">PCX</td><td>RW</td><td>ZSoft IBM PC Paintbrush file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PDB</td><td>RW</td><td>Palm Database ImageViewer Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PDF</td><td>RW</td><td>Portable Document Format</td><td class="pe-3 text-body-secondary">Requires Ghostscript; cropbox, trimbox, and density options.</td></tr>
+          <tr><td class="ps-3 font-mono">PEF</td><td>R</td><td>Pentax Electronic File</td><td class="pe-3 text-body-secondary">Requires explicit specifier (<code>pef:image.pef</code>).</td></tr>
+          <tr><td class="ps-3 font-mono">PES</td><td>R</td><td>Embrid Embroidery Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PFA</td><td>R</td><td>Postscript Type 1 font (ASCII)</td><td class="pe-3 text-body-secondary">Returns preview image.</td></tr>
+          <tr><td class="ps-3 font-mono">PFB</td><td>R</td><td>Postscript Type 1 font (binary)</td><td class="pe-3 text-body-secondary">Returns preview image.</td></tr>
+          <tr><td class="ps-3 font-mono">PFM</td><td>RW</td><td>Portable float map format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PGM</td><td>RW</td><td>Portable graymap format (gray scale)</td><td class="pe-3 text-body-secondary">Netpbm family.</td></tr>
+          <tr><td class="ps-3 font-mono">PHM</td><td>RW</td><td>Portable float map format 16-bit half</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PICON</td><td>RW</td><td>Personal Icon</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PICT</td><td>RW</td><td>Apple Macintosh QuickDraw/PICT file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PIX</td><td>R</td><td>Alias/Wavefront RLE image format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PNG, PNG8, PNG24, PNG32, PNG48, PNG64, PNG00</td><td>RW</td><td>Portable Network Graphics variants</td><td class="pe-3 text-body-secondary">Requires libpng; supports indexed, RGB, and RGBA bit depths.</td></tr>
+          <tr><td class="ps-3 font-mono">PNM</td><td>RW</td><td>Portable anymap family</td><td class="pe-3 text-body-secondary">Automagically selects PBM, PGM, or PPM representation.</td></tr>
+          <tr><td class="ps-3 font-mono">POCKETMOD</td><td>RW</td><td>Pocketmod personal organizer format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PPM</td><td>RW</td><td>Portable pixmap format (color)</td><td class="pe-3 text-body-secondary">Netpbm family.</td></tr>
+          <tr><td class="ps-3 font-mono">PS, PS2, PS3</td><td>RW</td><td>Adobe PostScript (Levels I, II, III)</td><td class="pe-3 text-body-secondary">Requires Ghostscript.</td></tr>
+          <tr><td class="ps-3 font-mono">PSB</td><td>RW</td><td>Adobe Large Document Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PSD</td><td>RW</td><td>Adobe Photoshop multispectral bitmap file</td><td class="pe-3 text-body-secondary">Supports alpha blending, adjustment layers, and opacity masks.</td></tr>
+          <tr><td class="ps-3 font-mono">PTIF</td><td>RW</td><td>Pyramid encoded TIFF</td><td class="pe-3 text-body-secondary">Multi-resolution pyramid structure.</td></tr>
+          <tr><td class="ps-3 font-mono">PWP</td><td>R</td><td>Seattle File Works multi-image file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">QOI</td><td>RW</td><td>Quite OK Image Format</td><td class="pe-3 text-body-secondary">Fast, lossless compression.</td></tr>
+          <tr><td class="ps-3 font-mono">RAD</td><td>R</td><td>Radiance image file</td><td class="pe-3 text-body-secondary">Requires ra_ppm.</td></tr>
+          <tr><td class="ps-3 font-mono">RAF</td><td>R</td><td>Fuji CCD-RAW Graphic File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">RAW</td><td>R</td><td>Raw samples</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">RGB, RGBA</td><td>RW</td><td>Raw RGB and RGBA sample streams</td><td class="pe-3 text-body-secondary">Size and depth parameters required.</td></tr>
+          <tr><td class="ps-3 font-mono">RGB565</td><td>R</td><td>Raw red, green, blue pixels in 5-6-5 format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">RGF</td><td>RW</td><td>LEGO Mindstorms EV3 Robot Graphics File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">RLA</td><td>R</td><td>Alias/Wavefront image file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">RLE</td><td>R</td><td>Utah Run length encoded image file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SCT</td><td>R</td><td>Scitex Continuous Tone Picture</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SFW</td><td>R</td><td>Seattle File Works image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SF3</td><td>R</td><td>Simple File Format Family</td><td class="pe-3 text-body-secondary">Lightweight text-based structure.</td></tr>
+          <tr><td class="ps-3 font-mono">SGI</td><td>RW</td><td>Irix RGB image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SHTML</td><td>W</td><td>HTML client-side image map</td><td class="pe-3 text-body-secondary">Based on montage or tiled output.</td></tr>
+          <tr><td class="ps-3 font-mono">SID, MrSID</td><td>R</td><td>Multiresolution seamless image</td><td class="pe-3 text-body-secondary">Decoding delegated to mrsidgeodecode or gdal_translate.</td></tr>
+          <tr><td class="ps-3 font-mono">SPARSE-COLOR</td><td>W</td><td>Raw text file for sparse color options</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">STRIMG</td><td>RW</td><td>String to images and back</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SUN</td><td>RW</td><td>SUN Rasterfile</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SVG</td><td>RW</td><td>Scalable Vector Graphics</td><td class="pe-3 text-body-secondary">Renders via Inkscape, RSVG, or internal MSVG renderer.</td></tr>
+          <tr><td class="ps-3 font-mono">TEXT</td><td>R</td><td>Text file</td><td class="pe-3 text-body-secondary">Requires explicit specifier (<code>text:README.txt</code>).</td></tr>
+          <tr><td class="ps-3 font-mono">TGA</td><td>RW</td><td>Truevision Targa image (ICB, VDA, VST)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">TIFF</td><td>RW</td><td>Tagged image file multispectral format (TIF)</td><td class="pe-3 text-body-secondary">Extensive strip, tile, endian, and compression tag controls.</td></tr>
+          <tr><td class="ps-3 font-mono">TIM</td><td>R</td><td>PSX TIM file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">TTF</td><td>R</td><td>TrueType font file</td><td class="pe-3 text-body-secondary">Requires Freetype 2; returns preview image.</td></tr>
+          <tr><td class="ps-3 font-mono">TXT</td><td>RW</td><td>Multispectral raw text file</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">UBRL, UBRL6</td><td>W</td><td>Unicode Braille (8-dot and 6-dot)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">UHDR</td><td>RW</td><td>Ultra HDR</td><td class="pe-3 text-body-secondary">Requires libultrahdr delegate library.</td></tr>
+          <tr><td class="ps-3 font-mono">UIL</td><td>W</td><td>X-Motif UIL table</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">UYVY</td><td>RW</td><td>Interleaved YUV raw image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">VICAR</td><td>RW</td><td>VICAR rasterfile format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">VIDEO</td><td>RW</td><td>Various video formats (APNG, AVI, MP4, WEBM)</td><td class="pe-3 text-body-secondary">Refer to video defines.</td></tr>
+          <tr><td class="ps-3 font-mono">VIFF</td><td>RW</td><td>Khoros Visualization Image File Format</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">WBMP</td><td>RW</td><td>Wireless bitmap</td><td class="pe-3 text-body-secondary">Uncompressed monochrome only.</td></tr>
+          <tr><td class="ps-3 font-mono">WDP</td><td>RW</td><td>JPEG extended range</td><td class="pe-3 text-body-secondary">Requires jxrlib.</td></tr>
           <tr><td class="ps-3 font-mono">WEBP</td><td>RW</td><td>WebP image format</td><td class="pe-3 text-body-secondary">Requires WEBP delegate library.</td></tr>
+          <tr><td class="ps-3 font-mono">WMF</td><td>R</td><td>Windows Metafile</td><td class="pe-3 text-body-secondary">Requires libwmf.</td></tr>
+          <tr><td class="ps-3 font-mono">WPG</td><td>R</td><td>Word Perfect Graphics File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">X</td><td>RW</td><td>Display or import from X11 server</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">XBM</td><td>RW</td><td>X Windows system bitmap</td><td class="pe-3 text-body-secondary">Black and white only.</td></tr>
+          <tr><td class="ps-3 font-mono">XCF</td><td>R</td><td>GIMP image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">XPM</td><td>RW</td><td>X Windows system pixmap (PM)</td><td class="pe-3 text-body-secondary">Color icons.</td></tr>
+          <tr><td class="ps-3 font-mono">XWD</td><td>RW</td><td>X Windows system window dump</td><td class="pe-3 text-body-secondary">Screen dumps.</td></tr>
+          <tr><td class="ps-3 font-mono">X3F</td><td>R</td><td>Sigma Camera RAW Picture File</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">YAML</td><td>W</td><td>Human-readable data-serialization language</td><td class="pe-3 text-body-secondary">Supports locate, limit, and moment defines.</td></tr>
+          <tr><td class="ps-3 font-mono">YCbCr, YCbCrA</td><td>RW</td><td>Raw Y, Cb, Cr, and alpha samples</td><td class="pe-3 text-body-secondary">Size and depth parameters required.</td></tr>
+          <tr><td class="ps-3 font-mono">YUV</td><td>RW</td><td>CCIR 601 4:1:1</td><td class="pe-3 text-body-secondary">Sampling-factor option supported.</td></tr>
         </tbody>
       </table>
     </div>
@@ -121,28 +260,51 @@ description: "Explore supported image formats in ImageMagick, including JPEG, PN
     <i class="bi bi-cpu fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Pseudo-image Formats</h2>
   </div>
-  <p class="text-body-secondary mb-3">Formats generated via algorithms or targeting specific input/output pipelines.</p>
+  <p class="text-body-secondary mb-3">Algorithmic image formats and specialized target pipelines.</p>
 
   <div class="card im-card p-3">
-    <div class="table-responsive" style="max-height: 50svh;">
+    <div class="table-responsive" style="max-height: 60svh;">
       <table class="table table-hover table-striped mb-0 align-middle small">
         <thead class="table-dark sticky-top">
           <tr>
-            <th class="ps-3 font-mono">Tag</th>
-            <th>Mode</th>
-            <th>Description</th>
-            <th class="pe-3">Notes</th>
+            <th class="ps-3 font-mono" style="width:15%">Tag</th>
+            <th style="width:8%">Mode</th>
+            <th style="width:30%">Description</th>
+            <th class="pe-3" style="width:47%">Notes</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="ps-3 font-mono">CANVAS</td><td>R</td><td>Canvas image of specified color</td><td class="pe-3 text-body-secondary">Useful for solid background generation.</td></tr>
-          <tr><td class="ps-3 font-mono">GRADIENT</td><td>R</td><td>Gradual color transition</td><td class="pe-3 text-body-secondary">Renders linear or radial gradients.</td></tr>
-          <tr><td class="ps-3 font-mono">HALD</td><td>R</td><td>Identity Hald CLUT Image</td><td class="pe-3 text-body-secondary">Used for color grading manipulation.</td></tr>
-          <tr><td class="ps-3 font-mono">HISTOGRAM</td><td>W</td><td>Image color histogram</td><td class="pe-3 text-body-secondary">Computes unique colors as comments.</td></tr>
-          <tr><td class="ps-3 font-mono">INLINE</td><td>RW</td><td>Base64-encoded inline image</td><td class="pe-3 text-body-secondary">Embeds data URI strings directly.</td></tr>
-          <tr><td class="ps-3 font-mono">NULL</td><td>RW</td><td>NULL image target</td><td class="pe-3 text-body-secondary">Useful for benchmarking and layout tiles.</td></tr>
-          <tr><td class="ps-3 font-mono">SCREENSHOT</td><td>R</td><td>Display contents capture</td><td class="pe-3 text-body-secondary">Captures monitor screens.</td></tr>
-          <tr><td class="ps-3 font-mono">TILE</td><td>R</td><td>Tiled pattern image</td><td class="pe-3 text-body-secondary">Creates seamless repeating patterns.</td></tr>
+          <tr><td class="ps-3 font-mono">ASHLAR</td><td>W</td><td>Image sequence laid out in continuous irregular courses</td><td class="pe-3 text-body-secondary">Custom canvas sizing and tile alignment.</td></tr>
+          <tr><td class="ps-3 font-mono">CANVAS</td><td>R</td><td>Canvas image of specified color</td><td class="pe-3 text-body-secondary">Solid color generation via size and color parameters.</td></tr>
+          <tr><td class="ps-3 font-mono">CAPTION</td><td>R</td><td>Image caption</td><td class="pe-3 text-body-secondary">Supports text splitting via caption:split.</td></tr>
+          <tr><td class="ps-3 font-mono">CLIP</td><td>RW</td><td>Clip path of image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">CLIPBOARD</td><td>RW</td><td>Clipboard</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">FRACTAL</td><td>R</td><td>Plasma fractal image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">GRADIENT</td><td>R</td><td>Linear or radial gradient image</td><td class="pe-3 text-body-secondary">Gradual shade transitions.</td></tr>
+          <tr><td class="ps-3 font-mono">HALD</td><td>R</td><td>Identity Hald CLUT Image</td><td class="pe-3 text-body-secondary">Color grading lookup tables.</td></tr>
+          <tr><td class="ps-3 font-mono">HISTOGRAM</td><td>W</td><td>Histogram of the image</td><td class="pe-3 text-body-secondary">Outputs unique colors as comments.</td></tr>
+          <tr><td class="ps-3 font-mono">INLINE</td><td>RW</td><td>Base64-encoded inline image</td><td class="pe-3 text-body-secondary">Data URI strings for web integration.</td></tr>
+          <tr><td class="ps-3 font-mono">LABEL</td><td>R</td><td>Text image format</td><td class="pe-3 text-body-secondary">Text specified directly as filename.</td></tr>
+          <tr><td class="ps-3 font-mono">MAP</td><td>RW</td><td>Colormap intensities and indices</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MASK</td><td>RW</td><td>Grayscale image mask sequence</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">MATTE</td><td>W</td><td>MATTE format</td><td class="pe-3 text-body-secondary">Write-only.</td></tr>
+          <tr><td class="ps-3 font-mono">NULL</td><td>RW</td><td>NULL image</td><td class="pe-3 text-body-secondary">Blank montage tiles and performance evaluation.</td></tr>
+          <tr><td class="ps-3 font-mono">OPEN</td><td>W</td><td>Display image to computer screen</td><td class="pe-3 text-body-secondary">MacOS X only.</td></tr>
+          <tr><td class="ps-3 font-mono">PANGO</td><td>R</td><td>Advanced text caption layout</td><td class="pe-3 text-body-secondary">Markup, justification, and hinting options via defines.</td></tr>
+          <tr><td class="ps-3 font-mono">PLASMA</td><td>R</td><td>Plasma fractal image</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">PREVIEW</td><td>W</td><td>Preview image enhancement or effect range</td><td class="pe-3 text-body-secondary">Parameter selection assistant.</td></tr>
+          <tr><td class="ps-3 font-mono">PRINT</td><td>W</td><td>Send image to computer printer</td><td class="pe-3 text-body-secondary">Uses PRINTER or LPDEST variables.</td></tr>
+          <tr><td class="ps-3 font-mono">SCAN</td><td>R</td><td>Import image from scanner device</td><td class="pe-3 text-body-secondary">Requires SANE.</td></tr>
+          <tr><td class="ps-3 font-mono">RADIAL_GRADIENT</td><td>R</td><td>Gradual radial color passing</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SCANX</td><td>R</td><td>Import image from default scanner</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">SCREENSHOT</td><td>R</td><td>Computer display content capture</td><td class="pe-3 text-body-secondary">Multi-monitor support under Windows.</td></tr>
+          <tr><td class="ps-3 font-mono">STEGANO</td><td>R</td><td>Steganographic image</td><td class="pe-3 text-body-secondary">Width, height, and offset controls.</td></tr>
+          <tr><td class="ps-3 font-mono">TILE</td><td>R</td><td>Tiled image pattern</td><td class="pe-3 text-body-secondary">Responsive to compose options.</td></tr>
+          <tr><td class="ps-3 font-mono">UNIQUE</td><td>W</td><td>Write only unique pixels</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">VID</td><td>RW</td><td>Visual Image Directory</td><td class="pe-3 text-body-secondary">Thumbnailed directory generation.</td></tr>
+          <tr><td class="ps-3 font-mono">WIN</td><td>RW</td><td>Select or display image to Windows screen</td><td class="pe-3 text-body-secondary">Windows only.</td></tr>
+          <tr><td class="ps-3 font-mono">X</td><td>RW</td><td>Select or display image to X server screen</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">XC</td><td>R</td><td>Canvas image of specified color</td><td class="pe-3 text-body-secondary">Backward compatible alias for canvas:.</td></tr>
         </tbody>
       </table>
     </div>
@@ -157,24 +319,84 @@ description: "Explore supported image formats in ImageMagick, including JPEG, PN
   </div>
   <p class="text-body-secondary mb-3">Embedded sample images referenceable via <code>magick:name</code>.</p>
 
-  <div class="row row-cols-1 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card im-card p-3 h-100 text-center">
-        <span class="font-mono fw-bold text-primary mb-1">LOGO</span>
-        <p class="small text-body-secondary mb-0">ImageMagick Logo (640x480)</p>
-      </div>
+  <div class="card im-card p-3">
+    <div class="table-responsive">
+      <table class="table table-hover table-striped mb-0 align-middle small">
+        <thead class="table-dark">
+          <tr>
+            <th class="ps-3 font-mono" style="width:15%">Tag</th>
+            <th style="width:8%">Mode</th>
+            <th style="width:40%">Description</th>
+            <th class="pe-3" style="width:37%">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ps-3 font-mono">GRANITE</td><td>R</td><td>128x128 granite texture pattern</td><td class="pe-3 text-body-secondary">Granite texture asset.</td></tr>
+          <tr><td class="ps-3 font-mono">LOGO</td><td>R</td><td>ImageMagick Logo, 640x480</td><td class="pe-3 text-body-secondary">Standard logo asset.</td></tr>
+          <tr><td class="ps-3 font-mono">NETSCAPE</td><td>R</td><td>Netscape 216 color cube image, 216x144</td><td class="pe-3 text-body-secondary">Used with map option for web-safe colors.</td></tr>
+          <tr><td class="ps-3 font-mono">ROSE</td><td>R</td><td>Picture of a rose, 70x46</td><td class="pe-3 text-body-secondary">Classic sample image.</td></tr>
+          <tr><td class="ps-3 font-mono">WIZARD</td><td>R</td><td>ImageMagick Wizard, 480x640</td><td class="pe-3 text-body-secondary">Wizard mascot asset.</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="col">
-      <div class="card im-card p-3 h-100 text-center">
-        <span class="font-mono fw-bold text-primary mb-1">ROSE</span>
-        <p class="small text-body-secondary mb-0">Classic picture of a rose (70x46)</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card im-card p-3 h-100 text-center">
-        <span class="font-mono fw-bold text-primary mb-1">WIZARD</span>
-        <p class="small text-body-secondary mb-0">ImageMagick Wizard (480x640)</p>
-      </div>
+  </div>
+</section>
+
+<!-- Built-in Patterns Section -->
+<section id="builtin-patterns" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-grid-3x3 fs-3 text-primary"></i>
+    <h2 class="fw-bold mb-0">Built-in Patterns</h2>
+  </div>
+  <p class="text-body-secondary mb-3">Embedded patterns referenceable via <code>pattern:name</code>, controlled by the <code>-size</code> option.</p>
+
+  <div class="card im-card p-3">
+    <div class="table-responsive" style="max-height: 60svh;">
+      <table class="table table-hover table-striped mb-0 align-middle small">
+        <thead class="table-dark sticky-top">
+          <tr>
+            <th class="ps-3 font-mono" style="width:25%">Tag</th>
+            <th style="width:8%">Mode</th>
+            <th class="pe-3" style="width:67%">Description &amp; Dimensions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ps-3 font-mono">BRICKS</td><td>R</td><td>Brick pattern, 16x16</td></tr>
+          <tr><td class="ps-3 font-mono">CHECKERBOARD</td><td>R</td><td>Checkerboard pattern, 30x30</td></tr>
+          <tr><td class="ps-3 font-mono">CIRCLES</td><td>R</td><td>Circles pattern, 16x16</td></tr>
+          <tr><td class="ps-3 font-mono">CROSSHATCH</td><td>R</td><td>Crosshatch pattern, 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">CROSSHATCH30</td><td>R</td><td>Crosshatch pattern at 30 degrees, 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">CROSSHATCH45</td><td>R</td><td>Crosshatch pattern at 45 degrees, 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">FISHSCALES</td><td>R</td><td>Fish scales pattern, 16x8</td></tr>
+          <tr><td class="ps-3 font-mono">GRAY0 through GRAY100</td><td>R</td><td>Intensity gray patterns (0% to 100%), 32x32</td></tr>
+          <tr><td class="ps-3 font-mono">HEXAGONS</td><td>R</td><td>Hexagon pattern, 30x18</td></tr>
+          <tr><td class="ps-3 font-mono">HORIZONTAL</td><td>R</td><td>Horizontal line pattern, 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">HORIZONTAL2</td><td>R</td><td>Horizontal line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HORIZONTAL3</td><td>R</td><td>Horizontal line pattern, 9x9</td></tr>
+          <tr><td class="ps-3 font-mono">HORIZONTALSAW</td><td>R</td><td>Horizontal saw-tooth pattern, 16x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_BDIAGONAL</td><td>R</td><td>Backward diagonal line pattern (45° slope), 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_CROSS</td><td>R</td><td>Cross line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_DIAGCROSS</td><td>R</td><td>Diagonal line cross pattern (45° slope), 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_FDIAGONAL</td><td>R</td><td>Forward diagonal line pattern (45° slope), 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_HORIZONTAL</td><td>R</td><td>Horizontal line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">HS_VERTICAL</td><td>R</td><td>Vertical line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">LEFT30</td><td>R</td><td>Forward diagonal pattern (30° slope), 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">LEFT45</td><td>R</td><td>Forward diagonal line pattern (45° slope), 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">LEFTSHINGLE</td><td>R</td><td>Left shingle pattern, 24x24</td></tr>
+          <tr><td class="ps-3 font-mono">OCTAGONS</td><td>R</td><td>Octagons pattern, 16x16</td></tr>
+          <tr><td class="ps-3 font-mono">RIGHT30</td><td>R</td><td>Backward diagonal line pattern (30°), 8x4</td></tr>
+          <tr><td class="ps-3 font-mono">RIGHT45</td><td>R</td><td>Backward diagonal line pattern (30°), 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">RIGHTSHINGLE</td><td>R</td><td>Right shingle pattern, 24x24</td></tr>
+          <tr><td class="ps-3 font-mono">SMALLFISHSCALES</td><td>R</td><td>Small fish scales pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICAL</td><td>R</td><td>Vertical line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICAL2</td><td>R</td><td>Vertical line pattern, 8x8</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICAL3</td><td>R</td><td>Vertical line pattern, 9x9</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICALBRICKS</td><td>R</td><td>Vertical brick pattern, 16x16</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICALLEFTSHINGLE</td><td>R</td><td>Vertical left shingle pattern, 24x24</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICALRIGHTSHINGLE</td><td>R</td><td>Vertical right shingle pattern, 24x24</td></tr>
+          <tr><td class="ps-3 font-mono">VERTICALSAW</td><td>R</td><td>Vertical saw-tooth pattern, 8x16</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -185,23 +407,29 @@ description: "Explore supported image formats in ImageMagick, including JPEG, PN
     <i class="bi bi-shield-check fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Embedded Image Profiles</h2>
   </div>
-  <p class="text-body-secondary mb-3">Identifiers used to manage metadata profiles in TIFF, JPEG, and PDF formats.</p>
+  <p class="text-body-secondary mb-3">Identifiers used to add, remove, and save embedded metadata profiles (TIFF, JPEG, PDF).</p>
 
   <div class="card im-card p-3">
-    <table class="table table-hover table-striped mb-0 align-middle small">
-      <thead class="table-dark">
-        <tr>
-          <th class="ps-3 font-mono">Tag</th>
-          <th>Mode</th>
-          <th>Description</th>
-          <th class="pe-3">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="ps-3 font-mono">8BIM</td><td>RW</td><td>Photoshop resource format (binary)</td><td class="pe-3 text-body-secondary">Standard binary resource block.</td></tr>
-        <tr><td class="ps-3 font-mono">ICC</td><td>RW</td><td>International Color Consortium color profile</td><td class="pe-3 text-body-secondary">Also known as <code>ICM</code>.</td></tr>
-        <tr><td class="ps-3 font-mono">IPTC</td><td>RW</td><td>IPTC Newsphoto metadata</td><td class="pe-3 text-body-secondary">Used for press and copyright information.</td></tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-hover table-striped mb-0 align-middle small">
+        <thead class="table-dark">
+          <tr>
+            <th class="ps-3 font-mono" style="width:15%">Tag</th>
+            <th style="width:8%">Mode</th>
+            <th style="width:40%">Description</th>
+            <th class="pe-3" style="width:37%">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ps-3 font-mono">8BIM</td><td>RW</td><td>Photoshop resource format (binary)</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">8BIMTEXT</td><td>RW</td><td>Photoshop resource format (ASCII)</td><td class="pe-3 text-body-secondary">ASCII representation of 8BIM.</td></tr>
+          <tr><td class="ps-3 font-mono">APP1</td><td>RW</td><td>Raw application information</td><td class="pe-3 text-body-secondary"></td></tr>
+          <tr><td class="ps-3 font-mono">APP1JPEG</td><td>RW</td><td>Raw JPEG binary data</td><td class="pe-3 text-body-secondary">Profile in JPEG wrapper.</td></tr>
+          <tr><td class="ps-3 font-mono">ICC</td><td>RW</td><td>International Color Consortium color profile (ICM)</td><td class="pe-3 text-body-secondary">Read via -profile option.</td></tr>
+          <tr><td class="ps-3 font-mono">IPTC</td><td>RW</td><td>IPTC Newsphoto (binary)</td><td class="pe-3 text-body-secondary">Read via -profile option.</td></tr>
+          <tr><td class="ps-3 font-mono">IPTCTEXT</td><td>RW</td><td>IPTC Newsphoto (ASCII)</td><td class="pe-3 text-body-secondary">ASCII representation of IPTC.</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
