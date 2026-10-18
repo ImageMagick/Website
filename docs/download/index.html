@@ -1,272 +1,173 @@
 ---
 title: "Download"
 topic: "Download"
-description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-to-run binaries, portable builds, or source code to convert, edit, and compose images. Includes support for Q8/Q16, HDRI, and cross-platform installation options."
+description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-to-run binaries, portable builds, or source code to convert, edit, and compose images."
 ---
-<div>
-<p class="text-center"><a href="#linux">Linux Binary Release</a> • <a href="#macos">macOS Binary Release</a> • <a href="#windows">Windows Binary Release</a></p>
 
-<p class="lead">You can install ImageMagick from <a href="/install-source/">source</a>.  However, if you don't have a proper development environment or if you're anxious to get started, download a ready-to-run <a href="#linux">Linux</a> or <a href="#windows">Windows</a> executable.  Before you download, you may want to review recent <a href="/changelog/">changes</a> to the ImageMagick distribution.</p>
-
-<p>ImageMagick source and binary distributions are available from a variety of FTP and Web <a href="/mirror/">mirrors</a> around the world.</p>
-
-<p>It is strongly recommended to establish a <a href="/security-policy/">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
-
-<h2><a class="anchor" id="linux"></a>Linux Binary Release</h2>
-
-<p>We provide AppImage as the only pre-built Linux binary.  If you require a different binary for your distribution or need custom compile options, you will need to <a href="/install-source/">build from source</a>. Although ImageMagick runs fine on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:50%">
-    <col style="width:50%">
-  </colgroup>
-  <thead>
-  <tr>
-    <th>Version</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-
-  <tr>
-    <td>
-      {% include download-link.html variant="gcc-x86_64.AppImage" %}<br/>
-      {% include download-link.html variant="clang-x86_64.AppImage" %}
-    </td>
-    <td>Complete portable application on Linux, no installation required.  Just download and run.  This <a href="https://appimage.org/">AppImage</a> has an open security policy.  ImageMagick recommended practices <b>strongly</b> encourage you to configure a <a href="/security-policy/">security policy</a> that suits your local environment. Simply add a custom security policy in your local path, e.g., <code>~/.config/ImageMagick/policy.xml</code> and verify with this command: <code>./magick -list policy</code>.</td>
-  </tr>
-
-  </tbody>
-</table></div>
-
-<p>Verify its {% include provenance-link.html %}.</p>
-
-<h2><a class="anchor" id="macos"></a>macOS Binary Release</h2>
-
-<p>We recommend <a href="https://brew.sh">Homebrew</a> which provides pre-built binaries for Mac (some users prefer <a href="https://macports.org">MacPorts</a>).  Download HomeBrew and type:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install imagemagick</code></pre>
-
-<p>ImageMagick depends on Ghostscript fonts.  To install them, type:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install ghostscript</code></pre>
-
-<p>If you require a build with a wider set of delegates and codecs (e.g. SVG via librsvg, raw image support via libraw, OpenMP support, JPEG XL, Cairo, and more), Homebrew also provides <code>imagemagick-full</code> as an official formula:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>brew install imagemagick-full</code></pre>
-
-<p>Note that <code>imagemagick-full</code> is keg-only, meaning its binaries are not automatically linked into your <code>PATH</code>.</p>
-
-<p>The <code>brew</code> command downloads and installs ImageMagick with many of its delegate libraries (e.g. JPEG, PNG, Freetype, etc).  Homebrew <a href="https://github.com/Homebrew/homebrew-core/issues/31510">no longer allows</a> configurable builds; if you need different compile options (e.g. librsvg support), you will need to build from source.</p>
-
-<h2><a class="anchor" id="windows"></a>Windows Binary Release</h2>
-
-<p>ImageMagick runs on Windows 10 (x86 , x64 &amp; arm64) or newer or Windows Server 2012 or newer.</p>
-
-<p>The amount of memory can be an important factor, especially if you intend to work on large images.  A minimum of 512 MB of RAM is recommended, but the more RAM the better.  Although ImageMagick runs well on a single core computer, it automagically runs in parallel on multi-core systems reducing run times considerably.</p>
-
-<p>The Windows version of ImageMagick is self-installing.  Simply click on the appropriate version below and it will launch itself and ask you a few installation questions.  Versions with <var>Q8</var> in the name are 8 bits-per-pixel component (e.g. 8-bit red, 8-bit green, etc.), whereas,  <var>Q16</var> in the filename are 16 bits-per-pixel component. A Q16 version permits you to read or write 16-bit images without losing precision but requires twice as much resources as the Q8 version.  Versions with <var>dll</var> in the filename include ImageMagick libraries as <a href="http://www.answers.com/topic/dll">dynamic link libraries</a>. Unless you have a Windows 32-bit OS, we recommend this version of ImageMagick for 64-bit Windows:</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:50%">
-    <col style="width:50%">
-  </colgroup>
-  <thead>
-  <tr>
-    <th>Version</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-x64-dll.exe" %}</td>
-    <td>Win64 dynamic at 16 bits-per-pixel component with High-dynamic-range imaging enabled</td>
-  </tr>
-  </tbody>
-</table></div>
-
-<p>Or choose from these alternate Windows binary distributions:</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:50%">
-    <col style="width:50%">
-  </colgroup>
-  <thead>
-  <tr>
-    <th>Version</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>{% include download-link.html variant="Q16-x64-dll.exe" %}</td>
-    <td>Win64 dynamic at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-x64-static.exe" %}</td>
-    <td>Win64 static at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-x64-dll.exe" %}</td>
-    <td>Win64 dynamic at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-x64-static.exe" %}</td>
-    <td>Win64 static at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-x64-static.exe" %}</td>
-    <td>Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-arm64-dll.exe" %}</td>
-    <td>ARM64 dynamic at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-arm64-static.exe" %}</td>
-    <td>ARM64 static at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-arm64-dll.exe" %}</td>
-    <td>ARM64 dynamic at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-arm64-static.exe" %}</td>
-    <td>ARM64 dynamic at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-arm64-dll.exe" %}</td>
-    <td>ARM64 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-arm64-static.exe" %}</td>
-    <td>ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-x86-dll.exe" %}</td>
-    <td>Win32 dynamic at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-x86-static.exe" %}</td>
-    <td>Win32 static at 16 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-x86-dll.exe" %}</td>
-    <td>Win32 dynamic at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q8-x86-static.exe" %}</td>
-    <td>Win32 static at 8 bits-per-pixel component</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-x86-dll.exe" %}</td>
-    <td>Win32 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="Q16-HDRI-x86-static.exe" %}</td>
-    <td>Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-x64.7z" %}</td>
-    <td>Portable Win64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-arm64.7z" %}</td>
-    <td>Portable ARM64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-x86.7z" %}</td>
-    <td>Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q8-x64.7z" %}</td>
-    <td>Portable Win64 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q8-arm64.7z" %}</td>
-    <td>Portable ARM64 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q8-x86.7z" %}</td>
-    <td>Portable Win32 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-HDRI-x64.7z" %}</td>
-    <td>Portable Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-HDRI-arm64.7z" %}</td>
-    <td>Portable ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tr>
-    <td>{% include download-link.html variant="portable-Q16-HDRI-x86.7z" %}</td>
-    <td>Portable Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
-  </tr>
-
-  <tbody>
-</table></div>
-
-<p>Verify its {% include provenance-link.html %}.</p>
-
-<p>Alternatively, you can install ImageMagick with <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>. ImageMagick uses Advanced Installer to <a href="https://www.advancedinstaller.com/imagemagick-latest-release-automatically-published-to-winget.html">publish the latest release to the winget repository</a>.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q16-HDRI</code></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q16</code></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.Q8</code></pre>
-
-<p>Or through one of the unofficial releases from <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>, <a href="https://scoop.sh/">scoop</a>, or <a href="https://community.chocolatey.org/">chocolatey</a>.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>winget install ImageMagick.ImageMagick</code></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>scoop install main/imagemagick</code></pre>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>choco install imagemagick</code></pre>
-
-<p>To verify ImageMagick is working properly, type the following in a Command Prompt window:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick logo: logo.gif
-magick identify logo.gif</code></pre>
-
-<p>If you have any problems, you likely need <code>vcomp140.dll</code>.  To install it, download <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Visual C++ Redistributable Package</a>.</p>
-
-<p>Note, use a double quote (<code>"</code>) rather than a single quote (<code>'</code>) for the ImageMagick command line under Windows:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick "e:/myimages/image.png" "e:/myimages/image.jpg"</samp></pre>
-<p>Use two double quotes for VBScript scripts:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>Set objShell = wscript.createobject("wscript.shell")
-objShell.Exec("magick ""e:/myimages/image.png"" ""e:/myimages/image.jpg""")</code></pre>
-
-<p>It is strongly recommended to establish a <a href="/security-policy/">security policy</a> suitable for your local environment before utilizing ImageMagick.</p>
-
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
-
+<!-- Intro Banner -->
+<section class="mb-5">
+  <div class="p-4 p-md-5 rounded-3 bg-body-tertiary border">
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+      <a href="#linux" class="btn btn-outline-primary btn-sm px-3"><i class="bi bi-ubuntu me-1"></i> Linux Binary</a>
+      <a href="#macos" class="btn btn-outline-primary btn-sm px-3"><i class="bi bi-apple me-1"></i> macOS Binary</a>
+      <a href="#windows" class="btn btn-outline-primary btn-sm px-3"><i class="bi bi-windows me-1"></i> Windows Binary</a>
+    </div>
+
+    <p class="lead text-center mb-0">
+      You can install ImageMagick from <a href="/install-source/" class="fw-medium text-decoration-none">source</a>, or grab a ready-to-run package below. Review recent <a href="/changelog/" class="text-decoration-none">changes</a> or check our global <a href="/mirror/" class="text-decoration-none">mirrors</a>.
+    </p>
+  </div>
+</section>
+
+<!-- Security Alert Notice -->
+<div class="alert alert-warning d-flex align-items-center mb-5" role="alert">
+  <i class="bi bi-shield-exclamation flex-shrink-0 fs-4 me-3"></i>
+  <div>
+    It is strongly recommended to establish a <a href="/security-policy/" class="alert-link fw-semibold">security policy</a> suitable for your local environment before utilizing ImageMagick.
+  </div>
 </div>
+
+<!-- Linux Section -->
+<section id="linux" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-ubuntu fs-3 text-primary"></i>
+    <h2 class="fw-bold mb-0">Linux Binary Release</h2>
+  </div>
+  <p class="text-body-secondary mb-4">
+    We provide AppImage as the official portable binary format. For specialized configurations, please <a href="/install-source/" class="text-decoration-none">build from source</a>.
+  </p>
+
+  <div class="card im-card p-4 mb-3">
+    <div class="row align-items-center g-3">
+      <div class="col-lg-5">
+        <div class="d-flex flex-column gap-2">
+          <div>{% include download-link.html variant="gcc-x86_64.AppImage" %}</div>
+          <div>{% include download-link.html variant="clang-x86_64.AppImage" %}</div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <p class="small text-body-secondary mb-2">
+          Complete portable application, zero installation required. Verify using its {% include provenance-link.html %}.
+        </p>
+        <div class="bg-dark text-light p-2 rounded small font-mono">
+          $ mkdir -p ~/.config/ImageMagick && ./magick -list policy
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- macOS Section -->
+<section id="macos" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-apple fs-3 text-primary"></i>
+    <h2 class="fw-bold mb-0">macOS Binary Release</h2>
+  </div>
+  <p class="text-body-secondary mb-3">
+    We recommend using <a href="https://brew.sh" target="_blank" class="text-decoration-none">Homebrew</a> for macOS environments.
+  </p>
+
+  <div class="card im-card p-4 mb-3">
+    <h6 class="fw-bold mb-2">Standard Installation</h6>
+    <div class="bg-dark text-light p-3 rounded mb-3 font-mono small">
+      $ brew install imagemagick<br>
+      $ brew install ghostscript
+    </div>
+
+    <h6 class="fw-bold mb-2">Full Suite (Optional codecs: SVG, RAW, OpenMP)</h6>
+    <div class="bg-dark text-light p-3 rounded font-mono small">
+      $ brew install imagemagick-full
+    </div>
+    <span class="form-text mt-2 d-block">Note: <code>imagemagick-full</code> is keg-only and not automatically linked to your system PATH.</span>
+  </div>
+</section>
+
+<!-- Windows Section -->
+<section id="windows" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-windows fs-3 text-primary"></i>
+    <h2 class="fw-bold mb-0">Windows Binary Release</h2>
+  </div>
+  <p class="text-body-secondary mb-4">
+    Compatible with Windows 10/11 (x86, x64, ARM64) or Windows Server 2012+. 
+  </p>
+
+  <!-- Recommended Windows Install Card -->
+  <div class="card im-card p-4 mb-4 border-primary">
+    <div class="d-flex justify-content-between align-items-start mb-3">
+      <div>
+        <span class="badge bg-primary mb-2">Recommended for 64-Bit Windows</span>
+        <h5 class="fw-bold mb-1">Win64 Dynamic Q16-HDRI</h5>
+        <p class="small text-body-secondary mb-0">16 bits-per-pixel component with High Dynamic Range imaging enabled.</p>
+      </div>
+      <div class="fs-4 text-primary"><i class="bi bi-star-fill"></i></div>
+    </div>
+    <div>
+      {% include download-link.html variant="Q16-HDRI-x64-dll.exe" %}
+    </div>
+  </div>
+
+  <!-- Alternate Distributions Accordion / Table -->
+  <h5 class="fw-bold mb-3">Alternate Windows Binaries & Portable Archives</h5>
+  <div class="card im-card overflow-hidden mb-4">
+    <div class="table-responsive" style="max-height: 450px;">
+      <table class="table table-hover table-striped mb-0 align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th class="ps-3">Distribution Variant</th>
+            <th class="pe-3">Specifications & Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="Q16-x64-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win64 dynamic at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="Q16-x64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win64 static at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="Q8-x64-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win64 dynamic at 8 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="Q16-HDRI-x64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win64 static at 16 bits-per-pixel with high dynamic-range enabled</td>
+          </tr>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="portable-Q16-x64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win64 static (No installer or registry changes required)</td>
+          </tr>
+          <tr>
+            <td class="ps-3">{% include download-link.html variant="portable-Q16-HDRI-x64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win64 HDRI static archive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Package Managers -->
+  <h5 class="fw-bold mb-3">Command-Line Package Managers</h5>
+  <div class="card im-card p-4 mb-4">
+    <p class="small text-body-secondary mb-3">Quickly install via winget, scoop, or chocolatey:</p>
+    <div class="d-flex flex-column gap-2 font-mono small">
+      <div class="bg-dark text-light p-2 rounded">$ winget install ImageMagick.Q16-HDRI</div>
+      <div class="bg-dark text-light p-2 rounded">$ scoop install main/imagemagick</div>
+      <div class="bg-dark text-light p-2 rounded">$ choco install imagemagick</div>
+    </div>
+  </div>
+
+  <!-- Verification Snippet -->
+  <div class="card im-card p-4">
+    <h6 class="fw-bold mb-2">Verify Installation</h6>
+    <div class="bg-dark text-light p-3 rounded font-mono small mb-3">
+      $ magick logo: logo.gif<br>
+      $ magick identify logo.gif
+    </div>
+    <p class="small text-body-secondary mb-0">
+      Missing dependencies? You may need the <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank" class="text-decoration-none">Visual C++ Redistributable Package</a>.
+    </p>
+  </div>
+</section>
