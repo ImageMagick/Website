@@ -1,76 +1,173 @@
 ---
 title: "Related Web Sites"
+description: "Discover external web sites, tutorials, program interfaces, techniques, mirrors, and related projects supporting the ImageMagick ecosystem."
 ---
-<div>
-<p class="text-center"><a href="#command-line">Command-line Tutorials</a> • <a href="#program-interfaces">Program Interface Tutorials</a> • <a href="#techniques">ImageMagick Techniques</a> • <a href="#topics">ImageMagick Topics</a> • <a href="#book-review">ImageMagick Book Review</a> • <a href="#mirrors">Web Site Mirrors</a> • <a href="#bank">Image Bank</a> • <a href="#related-projects">Related Projects</a></p>
 
-<p class="lead">Listed here are a number of external web sites that are related to ImageMagick.  ImageMagick Studio does not maintain or endorse most of these sites, but we feel they are a helpful adjunct to the ImageMagick project.</p>
+<div class="container py-4">
+  <!-- Page Quick Nav Pills -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap justify-content-center gap-2 p-2 bg-body-tertiary rounded-3 border">
+        <a href="#web" class="btn btn-sm btn-outline-secondary border-0">Services</a>
+        <a href="#command-line" class="btn btn-sm btn-outline-secondary border-0">CLI Tutorials</a>
+        <a href="#program-interfaces" class="btn btn-sm btn-outline-secondary border-0">APIs</a>
+        <a href="#techniques" class="btn btn-sm btn-outline-secondary border-0">Techniques</a>
+        <a href="#topics" class="btn btn-sm btn-outline-secondary border-0">Topics</a>
+        <a href="#book-review" class="btn btn-sm btn-outline-secondary border-0">Legacy Discussion</a>
+        <a href="#mirrors" class="btn btn-sm btn-outline-secondary border-0">Mirrors</a>
+        <a href="#bank" class="btn btn-sm btn-outline-secondary border-0">Image Bank</a>
+        <a href="#related-projects" class="btn btn-sm btn-outline-secondary border-0">Related Projects</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- Lead Description -->
+  <div class="row mb-5">
+    <div class="col-lg-10 mx-auto text-center">
+      <p class="lead text-body-secondary">
+        Listed here are a number of external web sites that are related to ImageMagick. ImageMagick Studio does not maintain or endorse most of these sites, but we feel they are a helpful adjunct to the ImageMagick project.
+      </p>
+    </div>
+  </div>
 
-<h2><a class="anchor" id="web"></a>ImageMagick Services</h2>
-<ul>
-  <dd class="col-md-8"><a href="https://jqmagick.imagemagick.org" rel="noopener noreferrer" target="_blank">Legacy ImageMagick Discussions</a></dd>
-  <dd class="col-md-8"><a href="https://warrior.imagemagick.org" rel="noopener noreferrer" target="_blank">Magick Online Studio</a></dd>
-  <dd class="col-md-8"><a href="https://magickstudio.imagemagick.org" rel="noopener noreferrer" target="_blank">Magick Online Studio</a> (in development)</dd>
-</ul>
+  <!-- Categories Grid -->
+  <div class="row g-4">
+    <!-- ImageMagick Services -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="web">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-cloud-check text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">ImageMagick Services</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://jqmagick.imagemagick.org" rel="noopener noreferrer" target="_blank" class="text-decoration-none">Legacy ImageMagick Discussions</a></li>
+          <li><a href="https://warrior.imagemagick.org" rel="noopener noreferrer" target="_blank" class="text-decoration-none">Magick Online Studio</a></li>
+          <li><a href="https://magickstudio.imagemagick.org" rel="noopener noreferrer" target="_blank" class="text-decoration-none">Magick Online Studio</a> <span class="text-muted">(in development)</span></li>
+        </ul>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="command-line"></a>Command-line Tutorials</h2>
-<ul>
-  <dd class="col-md-8"><a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a></dd>
-  <dd class="col-md-8"><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/">Efficient Image Resizing With ImageMagick</a></dd>
-  <dd class="col-md-8"><a href="https://www.jpeek.com/articles/linuxmag/0606.pdf">ImageMagick, Part One</a></dd>
-  <dd class="col-md-8"><a href="https://www.jpeek.com/articles/linuxmag/0607.pdf">ImageMagick, Part Two</a></dd>
-</ul>
+    <!-- Command-line Tutorials -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="command-line">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-terminal text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">Command-line Tutorials</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://usage.imagemagick.org/" class="text-decoration-none">Examples of ImageMagick Usage</a></li>
+          <li><a href="http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/" class="text-decoration-none">Efficient Image Resizing With ImageMagick</a></li>
+          <li><a href="https://www.jpeek.com/articles/linuxmag/0606.pdf" class="text-decoration-none">ImageMagick, Part One</a></li>
+          <li><a href="https://www.jpeek.com/articles/linuxmag/0607.pdf" class="text-decoration-none">ImageMagick, Part Two</a></li>
+        </ul>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="program-interfaces"></a>Program Interface Tutorials</h2>
+    <!-- Program Interface Tutorials -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="program-interfaces">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-code-square text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">Program Interface Tutorials</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://imagemagick.org/magick-wand/" class="text-decoration-none">MagickWand C API - with Example Programs</a></li>
+          <li><a href="https://usage.imagemagick.org/api/" class="text-decoration-none">API &amp; Scripting Techniques</a></li>
+          <li><a href="https://rmagick.github.io/rvgtut.html" class="text-decoration-none">RVG - Ruby Vector Graphics</a></li>
+          <li><a href="https://www.php.net/manual/en/book.imagick.php" class="text-decoration-none">Imagick - the PHP ImageMagick Extension (install &amp; compile)</a></li>
+          <li><a href="https://www.php.net/manual/en/imagick.examples-1.php" class="text-decoration-none">Basic Uses of ImageMagick With PHP</a></li>
+        </ul>
+      </div>
+    </div>
 
-<ul>
-  <dd class="col-md-8"><a href="https://imagemagick.org/magick-wand/">MagickWand C API - with Example Programs</a></dd>
-  <dd class="col-md-8"><a href="https://usage.imagemagick.org/api/">API &amp; Scripting Techniques</a></dd>
-  <dd class="col-md-8"><a href="https://rmagick.github.io/rvgtut.html">RVG - Ruby Vector Graphics</a></dd>
-  <dd class="col-md-8"><a href="https://www.php.net/manual/en/book.imagick.php">Imagick - the PHP ImageMagick Extension (install &amp; compile)</a></dd>
-  <dd class="col-md-8"><a href="https://www.php.net/manual/en/imagick.examples-1.php">Basic Uses of ImageMagick With PHP</a></dd>
-</ul>
+    <!-- ImageMagick Techniques -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="techniques">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-file-earmark-pdf text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">ImageMagick Techniques</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="/docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf" class="text-decoration-none">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></li>
+          <li><a href="http://www.fmwconcepts.com/imagemagick/digital_image_filtering.pdf" class="text-decoration-none">Digital Image Filtering</a></li>
+        </ul>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="techniques"></a>ImageMagick Techniques</h2>
+    <!-- ImageMagick Topics -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="topics">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-globe text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">ImageMagick Topics</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://svnweb.freebsd.org/ports/head/graphics/ImageMagick7/" class="text-decoration-none">FreeBSD port</a></li>
+          <li><a href="http://directory.fsf.org/project/ImageMagick/" class="text-decoration-none">Free Software Foundation</a></li>
+          <li><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/" class="text-decoration-none">Hyperscale Image Resizing</a></li>
+          <li><a href="https://pkgsrc.se/graphics/ImageMagick/" class="text-decoration-none">NetBSD</a></li>
+          <li><a href="http://sourceforge.net/projects/imagemagick/" class="text-decoration-none">SourceForge</a></li>
+          <li><a href="/vpat/" class="text-decoration-none">Voluntary Product Accessibility Template</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/ImageMagick" class="text-decoration-none">WikiPedia</a></li>
+        </ul>
+      </div>
+    </div>
 
-<ul>
-  <dd class="col-md-8"><a href="/docs/AcceleratedTemplateMatchingUsingLocalStatisticsAndFourierTransforms.pdf">Accelerated Template Matching Using Local Statistics And Fourier Transforms</a></dd>
-  <dd class="col-md-8"><a href="http://www.fmwconcepts.com/imagemagick/digital_image_filtering.pdf">Digital Image Filtering</a></dd>
-</ul>
+    <!-- ImageMagick Legacy Discussion -->
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4" id="book-review">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-chat-left-text text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">ImageMagick Legacy Discussion</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://usage.imagemagick.org/" class="text-decoration-none">Examples of ImageMagick Usage</a></li>
+        </ul>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="topics"></a>ImageMagick Topics</h2>
-<ul>
-  <dd class="col-md-8"><a href="https://svnweb.freebsd.org/ports/head/graphics/ImageMagick7/">FreeBSD port</a></dd>
-  <dd class="col-md-8"><a href="http://directory.fsf.org/project/ImageMagick/">Free Software Foundation</a></dd>
-  <dd class="col-md-8"><a href="http://www.enterprisetech.com/2014/07/16/convey-dell-fpga-appliance-accelerates-hyperscale-image-resizing/">Hyperscale Image Resizing</a> </dd>
-  <dd class="col-md-8"><a href="https://pkgsrc.se/graphics/ImageMagick/">NetBSD</a></dd>
-  <dd class="col-md-8"><a href="http://sourceforge.net/projects/imagemagick/">SourceForge</a></dd>
-  <dd class="col-md-8"><a href="/vpat/">Voluntary Product Accessibility Template</a></dd>
-  <dd class="col-md-8"><a href="https://en.wikipedia.org/wiki/ImageMagick">WikiPedia</a></dd>
-</ul>
+    <!-- Web Site Mirrors -->
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4" id="mirrors">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-hdd-network text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">Web Site Mirrors</h5>
+        </div>
+        <div class="small">
+          <span class="fw-semibold text-body">United States</span>
+          <ul class="list-unstyled mt-1 mb-0">
+            <li><a href="https://imagemagick.org/" class="text-decoration-none font-mono">https://imagemagick.org</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="book-review"></a>ImageMagick Legacy Discussion</h2>
-<ul>
-  <dd class="col-md-8"><a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a></dd>
-</ul>
+    <!-- Image Bank -->
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4" id="bank">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-images text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">Image Bank</h5>
+        </div>
+        <p class="small text-body-secondary mb-0">
+          <a href="https://download.imagemagick.org/archive/image-bank/" class="text-decoration-none fw-semibold">Image Bank</a>: a small digital test image bank.
+        </p>
+      </div>
+    </div>
 
-<h2><a class="anchor" id="mirrors"></a>ImageMagick Web Site Mirrors</h2>
-<ul>
-  <dt class="col-md-4">United States</dt>
-    <dd class="col-md-8"><a href="https://imagemagick.org/">https://imagemagick.org</a></dd>
-</ul>
-
-<h2><a class="anchor" id="bank"></a>Image Bank</h2>
-
-<ul>
-  <dd class="col-md-8"><a href="https://download.imagemagick.org/archive/image-bank/">Image Bank</a>: a small digital test image bank</dd>
-</ul>
-
-<h2><a class="anchor" id="related-projects"></a>Related Projects</h2>
-<ul>
-  <dd class="col-md-8"><a href="https://github.com/ImageMagick/MagickCache" rel="noopener noreferrer" target="_blank">MagickCache</a></dd>
-  <dd class="col-md-8"><a href="https://wizard.imagemagick.org/" rel="noopener noreferrer" target="_blank">Wizard's Toolkit</a></dd>
-  <dd class="col-md-8"><a href="https://spiritual-warrior.org/" rel="noopener noreferrer" target="_blank">The Tao of the Spiritual Warrior</a></dd>
-</ul>
+    <!-- Related Projects -->
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4" id="related-projects">
+        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2">
+          <i class="bi bi-diagram-3 text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0">Related Projects</h5>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small">
+          <li><a href="https://github.com/ImageMagick/MagickCache" rel="noopener noreferrer" target="_blank" class="text-decoration-none">MagickCache</a></li>
+          <li><a href="https://wizard.imagemagick.org/" rel="noopener noreferrer" target="_blank" class="text-decoration-none">Wizard's Toolkit</a></li>
+          <li><a href="https://spiritual-warrior.org/" rel="noopener noreferrer" target="_blank" class="text-decoration-none">The Tao of the Spiritual Warrior</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
