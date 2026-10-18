@@ -1,33 +1,181 @@
 ---
 title: "Command-line Tools"
 topic: "Tools"
-description: "Explore ImageMagick’s powerful command-line tools to create, edit, compose, and convert images. Learn how to automate tasks like resizing, cropping, animating, comparing, and streaming images with versatile utilities designed for dynamic workflows and batch processing."
+description: "Explore ImageMagick’s powerful command-line tools to create, edit, compose, and convert images across dynamic workflows and batch processing."
 ---
-<div>
-<p class="lead">ImageMagick is a collection of command-line tools that can be used to modify and manipulate images. While many people are used to using graphical user interfaces (GUIs) like Gimp or Photoshop to edit images individually, these tools may not always be practical. For instance, if you need to process an image dynamically from a web script or apply the same operations to multiple images, or if you need to repeat a specific operation on the same or different images at different times, using a command-line utility like ImageMagick may be more efficient.</p>
 
-<p>The ImageMagick <a href="/command-line-processing/">command-line</a> tools exit with a status of 0 if the command line arguments have a proper syntax and no problems are encountered.  Expect a descriptive message and an exit status of 1 if any exception occurs such as improper syntax, a problem reading or writing an image, or any other problem that prevents the command from completing successfully.</p>
+<!-- Intro Section -->
+<section class="mb-5">
+  <div class="p-4 p-md-5 rounded-3 bg-body-tertiary border">
+    <p class="lead mb-4">
+      ImageMagick is a collection of command-line tools for modifying and manipulating images[cite: 4]. While graphical interfaces (GUIs) like Gimp or Photoshop are useful for individual edits, command-line utilities are far more efficient for web script automation, batch processing multiple files, or repeating complex tasks[cite: 4].
+    </p>
+    <div class="d-flex align-items-center gap-3 text-body-secondary small">
+      <div><i class="bi bi-check-circle-fill text-success me-1"></i> Exit status <code>0</code> on clean execution[cite: 4]</div>
+      <div><i class="bi bi-exclamation-triangle-fill text-warning me-1"></i> Exit status <code>1</code> on syntax or I/O errors[cite: 4]</div>
+    </div>
+  </div>
+</section>
 
-<p>Here is a short description for each command-line tool. Click on the program name to get details about the program usage and a list of command-line options that alters how the program behaves.  If you are just getting acquainted with ImageMagick, start with the <a href="#magick">magick</a> program.  Be sure to peruse Anthony Thyssen's tutorial on how to use ImageMagick utilities to <a href="https://usage.imagemagick.org/">create, edit, compose, or convert</a> images from the command-line.</p>
+<!-- Core Tools Section -->
+<section class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-terminal-fill fs-3 text-primary"></i>
+    <h2 class="fw-bold mb-0">Core Tools</h2>
+  </div>
+  <p class="text-body-secondary mb-4">
+    If you are just getting acquainted with ImageMagick, start with the <a href="#magick" class="text-decoration-none fw-medium">magick</a> program[cite: 4].
+  </p>
 
-<dl class="row">
-  <dt class="col-md-4"><a class="anchor" id="magick"></a><a href="/magick/">magick</a></dt><dd class="col-md-8">convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
-  <dt class="col-md-4"><a class="anchor" id="magick-script"></a><a href="/magick-script/">magick-script</a></dt><dd class="col-md-8">use this scripting language interpreter to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</dd>
-</dl>
-<p>We also support sub-commands for compatibility with ImageMagick <a href="http://legacy.imagemagick.org">version 6</a>:</p>
-<dl class="row">
-  <dt class="col-md-4"><a href="/animate/">magick animate</a></dt><dd class="col-md-8">animate an image sequence on any X server.</dd>
-  <dt class="col-md-4"><a class="anchor" id="compare"></a><a href="/compare/">magick compare</a></dt><dd class="col-md-8">mathematically and visually annotate the difference between an image and its reconstruction.</dd>
-  <dt class="col-md-4"><a class="anchor" id="composite"></a><a href="/composite/">magick composite</a></dt><dd class="col-md-8">overlap one image over another.</dd>
-  <dt class="col-md-4"><a class="anchor" id="conjure"></a><a href="/conjure/">magick conjure</a></dt><dd class="col-md-8">interpret and execute scripts written in the Magick Scripting Language (MSL).</dd>
-  <dt class="col-md-4"><a class="anchor" id="display"></a><a href="/display/">magick display</a></dt><dd class="col-md-8">display an image or image sequence on any X server.</dd>
-  <dt class="col-md-4"><a class="anchor" id="identify"></a><a href="/identify/">magick identify</a></dt><dd class="col-md-8">describe the format and characteristics of one or more image files.</dd>
-  <dt class="col-md-4"><a class="anchor" id="import"></a><a href="/import/">magick import</a></dt><dd class="col-md-8">save any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen.</dd>
-  <dt class="col-md-4"><a class="anchor" id="mogrify"></a><a href="/mogrify/">magick mogrify</a></dt><dd class="col-md-8">resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.  Mogrify overwrites the original image file, whereas, <a href="/magick/">magick</a> writes to a different image file.</dd>
-  <dt class="col-md-4"><a class="anchor" id="montage"></a><a href="/montage/">magick montage</a></dt><dd class="col-md-8">create a composite image by combining several separate images.  The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</dd>
-  <dt class="col-md-4"><a class="anchor" id="stream"></a><a href="/stream/">magick stream</a></dt><dd class="col-md-8">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</dd>
-</dl>
-<p>Your installation may have direct ImageMagick version 6 compatibility links.  If so, you can access the tools directly by referring to them by name.  For example,
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick identify -verbose myImage.png</samp></pre>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+    <div class="col">
+      <div class="card h-100 im-card p-4 border-primary">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/magick/" class="fw-bold fs-5 text-decoration-none font-mono">magick</a>
+          <span class="badge bg-primary">Primary Tool</span>
+        </div>
+        <p class="small text-body-secondary mb-0">
+          Convert between image formats as well as resize, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more[cite: 4].
+        </p>
+      </div>
+    </div>
 
-</div>
+    <div class="col">
+      <div class="card h-100 im-card p-4">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/magick-script/" class="fw-bold fs-5 text-decoration-none font-mono">magick-script</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Interpreter</span>
+        </div>
+        <p class="small text-body-secondary mb-0">
+          Use this scripting language interpreter to convert, resize, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and more[cite: 4].
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compatibility Sub-commands Section -->
+<section class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <i class="bi bi-layers-fill fs-3 text-secondary"></i>
+    <h2 class="fw-bold mb-0">Version 6 Compatibility Sub-commands</h2>
+  </div>
+  <p class="text-body-secondary mb-4">
+    ImageMagick supports legacy compatibility sub-commands for seamless workflow transitions from <a href="http://legacy.imagemagick.org" target="_blank" class="text-decoration-none">version 6</a>[cite: 4].
+  </p>
+
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/animate/" class="fw-bold text-decoration-none font-mono">magick animate</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Animation</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Animate an image sequence on any X server[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/compare/" class="fw-bold text-decoration-none font-mono">magick compare</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Analysis</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Mathematically and visually annotate the difference between an image and its reconstruction[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/composite/" class="fw-bold text-decoration-none font-mono">magick composite</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Composition</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Overlap one image over another[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/conjure/" class="fw-bold text-decoration-none font-mono">magick conjure</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Scripting</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Interpret and execute scripts written in the Magick Scripting Language (MSL)[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/display/" class="fw-bold text-decoration-none font-mono">magick display</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Viewer</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Display an image or image sequence on any X server[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/identify/" class="fw-bold text-decoration-none font-mono">magick identify</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Inspection</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Describe the format and characteristics of one or more image files[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/import/" class="fw-bold text-decoration-none font-mono">magick import</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Capture</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Save any visible window or rectangular screen portion on an X server as an image file[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/mogrify/" class="fw-bold text-decoration-none font-mono">magick mogrify</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Batch Edit</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Resize, blur, crop, etc. Overwrites original source files directly (unlike <code>magick</code>)[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/montage/" class="fw-bold text-decoration-none font-mono">magick montage</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Grid Layout</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Create a composite image by combining tiled separate images with optional frames and borders[cite: 4].</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-1">
+          <a href="/stream/" class="fw-bold text-decoration-none font-mono">magick stream</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Streaming</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Lightweight tool to stream raw pixel components row-by-row, ideal for large or tera-pixel images[cite: 4].</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Example Usage Snippet -->
+<section class="card im-card p-4">
+  <h6 class="fw-bold mb-2"><i class="bi bi-code-square me-2 text-primary"></i> Direct Command Execution</h6>
+  <p class="small text-body-secondary mb-3">
+    If your installation includes direct v6 compatibility symlinks, you can reference tools directly from your terminal[cite: 4]:
+  </p>
+  <div class="bg-dark text-light p-3 rounded font-mono small">
+    $ magick identify -verbose myImage.png
+  </div>
+</section>
