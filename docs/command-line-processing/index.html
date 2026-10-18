@@ -25,14 +25,14 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
 <section class="mb-5">
   <div class="p-4 p-md-5 rounded-3 bg-body-tertiary border">
     <p class="lead mb-4">
-      The ImageMagick command-line <a href="/command-line-tools/" class="text-decoration-none fw-medium">tools</a> can range from simple single-file conversions[cite: 5]:
+      The ImageMagick command-line <a href="/command-line-tools/" class="text-decoration-none fw-medium">tools</a> can range from simple single-file conversions:
     </p>
     
     <div class="bg-dark text-light p-3 rounded font-mono small mb-3">
       $ magick image.jpg image.png
     </div>
 
-    <p class="text-body-secondary mb-3">Or scale into complex multi-step processing pipelines with a plethora of options[cite: 5]:</p>
+    <p class="text-body-secondary mb-3">Or scale into complex multi-step processing pipelines with a plethora of options:</p>
     
     <div class="bg-dark text-light p-3 rounded font-mono small mb-4 overflow-x-auto">
       $ magick label.gif -alpha Set \<br>
@@ -58,7 +58,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
         <i class="bi bi-arrow-right fs-4 text-primary"></i>
         <a href="/image/button.gif" target="_blank"><img src="/image/button.gif" width="78" height="53" alt="button" class="border rounded"></a>
       </div>
-      <p class="small text-body-secondary mb-0">Transform flat typography into rich, textured dimensional UI buttons using single-line execution[cite: 5].</p>
+      <p class="small text-body-secondary mb-0">Transform flat typography into rich, textured dimensional UI buttons using single-line execution.</p>
     </div>
   </div>
 
@@ -68,7 +68,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
       <div class="text-center bg-body-secondary p-2 rounded mb-3">
         <img src="/image/cylinder_shaded.png" alt="Shaded Cylinder" class="img-fluid rounded" style="max-height: 110px;">
       </div>
-      <p class="small text-body-secondary mb-0">Generate complex vector-like primitives, gradients, shadows, and labels programmatically[cite: 5].</p>
+      <p class="small text-body-secondary mb-0">Generate complex vector-like primitives, gradients, shadows, and labels programmatically.</p>
     </div>
   </div>
 </div>
@@ -79,16 +79,16 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <i class="bi bi-diagram-3-fill fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">The Anatomy of the Command-line</h2>
   </div>
-  <p class="text-body-secondary mb-3">An ImageMagick command string consists of the following modular building blocks[cite: 5]:</p>
+  <p class="text-body-secondary mb-3">An ImageMagick command string consists of the following modular building blocks:</p>
   
   <div class="card im-card p-4">
     <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-      <li><i class="bi bi-check2-circle text-success me-2"></i> One or more required <strong>input filenames</strong>[cite: 5].</li>
-      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more persistent <strong>image settings</strong>[cite: 5].</li>
-      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more immediate <strong>image operators</strong>[cite: 5].</li>
-      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more <strong>image sequence operators</strong>[cite: 5].</li>
-      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more isolated <strong>image stacks</strong> (parentheses)[cite: 5].</li>
-      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero or one <strong>output image filename</strong>[cite: 5].</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> One or more required <strong>input filenames</strong>.</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more persistent <strong>image settings</strong>.</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more immediate <strong>image operators</strong>.</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more <strong>image sequence operators</strong>.</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero, one, or more isolated <strong>image stacks</strong> (parentheses).</li>
+      <li><i class="bi bi-check2-circle text-success me-2"></i> Zero or one <strong>output image filename</strong>.</li>
     </ul>
   </div>
 </section>
@@ -99,13 +99,13 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <i class="bi bi-box-arrow-in-right fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Input Filename Extensions</h2>
   </div>
-  <p class="text-body-secondary mb-4">ImageMagick extends input filenames far beyond simple file paths to support globbing, built-ins, and direct streams[cite: 5].</p>
+  <p class="text-body-secondary mb-4">ImageMagick extends input filenames far beyond simple file paths to support globbing, built-ins, and direct streams.</p>
 
   <div class="row g-3">
     <div class="col-md-6">
       <div class="card im-card p-3 h-100">
         <h6 class="fw-bold text-primary">Filename Globbing</h6>
-        <p class="small text-body-secondary mb-2">Wildcards like asterisks automatically match sets of files across all platforms (e.g., Windows and Linux)[cite: 5]:</p>
+        <p class="small text-body-secondary mb-2">Wildcards like asterisks automatically match sets of files across all platforms (e.g., Windows and Linux):</p>
         <div class="bg-dark text-light p-2 rounded small font-mono">$ magick *.jpg images.gif</div>
       </div>
     </div>
@@ -113,7 +113,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <div class="col-md-6">
       <div class="card im-card p-3 h-100">
         <h6 class="fw-bold text-primary">Explicit Image Format</h6>
-        <p class="small text-body-secondary mb-2">Force signature-less raw data streams by prefixing formats explicitly[cite: 5]:</p>
+        <p class="small text-body-secondary mb-2">Force signature-less raw data streams by prefixing formats explicitly:</p>
         <div class="bg-dark text-light p-2 rounded small font-mono">$ magick -size 640x480 -depth 8 rgb:image image.png</div>
       </div>
     </div>
@@ -121,7 +121,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <div class="col-md-6">
       <div class="card im-card p-3 h-100">
         <h6 class="fw-bold text-primary">Built-in Images & Patterns</h6>
-        <p class="small text-body-secondary mb-2">Generate standard procedural patterns instantly[cite: 5]:</p>
+        <p class="small text-body-secondary mb-2">Generate standard procedural patterns instantly:</p>
         <div class="bg-dark text-light p-2 rounded small font-mono">$ magick -size 640x480 pattern:checkerboard checkerboard.png</div>
       </div>
     </div>
@@ -129,7 +129,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <div class="col-md-6">
       <div class="card im-card p-3 h-100">
         <h6 class="fw-bold text-primary">STDIN / STDOUT Pipes</h6>
-        <p class="small text-body-secondary mb-2">Stream image pipelines seamlessly between processes using <code>-</code>[cite: 5]:</p>
+        <p class="small text-body-secondary mb-2">Stream image pipelines seamlessly between processes using <code>-</code>:</p>
         <div class="bg-dark text-light p-2 rounded small font-mono">$ magick logo: gif:- | magick display gif:-</div>
       </div>
     </div>
@@ -142,12 +142,12 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <i class="bi bi-sliders fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Command-line Options & Settings</h2>
   </div>
-  <p class="text-body-secondary mb-4">Options dictate execution behavior and are categorized into persistent settings, immediate operators, sequence operators, and geometry modifiers[cite: 5].</p>
+  <p class="text-body-secondary mb-4">Options dictate execution behavior and are categorized into persistent settings, immediate operators, sequence operators, and geometry modifiers.</p>
 
   <!-- Settings Grid -->
   <div id="setting" class="card im-card p-4 mb-4">
     <h5 class="fw-bold text-primary mb-3"><i class="bi bi-gear me-2"></i> Image Settings (Persistent)</h5>
-    <p class="small text-body-secondary mb-3">Persist across the command line until execution terminates or settings are overridden[cite: 5]:</p>
+    <p class="small text-body-secondary mb-3">Persist across the command line until execution terminates or settings are overridden:</p>
     <ul class="list-unstyled d-flex flex-wrap gap-2 small font-mono">
       <li><a href="/command-line-options/#adjoin" class="badge bg-secondary-subtle text-secondary-emphasis text-decoration-none p-2">-adjoin</a></li>
       <li><a href="/command-line-options/#alpha" class="badge bg-secondary-subtle text-secondary-emphasis text-decoration-none p-2">-alpha</a></li>
@@ -165,7 +165,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
   <!-- Operators Grid -->
   <div id="operator" class="card im-card p-4 mb-4">
     <h5 class="fw-bold text-primary mb-3"><i class="bi bi-lightning-charge me-2"></i> Image Operators (Immediate)</h5>
-    <p class="small text-body-secondary mb-3">Execute immediately against the current active image set[cite: 5]:</p>
+    <p class="small text-body-secondary mb-3">Execute immediately against the current active image set:</p>
     <ul class="list-unstyled d-flex flex-wrap gap-2 small font-mono">
       <li><a href="/command-line-options/#blur" class="badge bg-primary-subtle text-primary-emphasis text-decoration-none p-2">-blur</a></li>
       <li><a href="/command-line-options/#charcoal" class="badge bg-primary-subtle text-primary-emphasis text-decoration-none p-2">-charcoal</a></li>
@@ -187,7 +187,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <i class="bi bi-aspect-ratio fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Image Geometry Reference</h2>
   </div>
-  <p class="text-body-secondary mb-4">Geometry arguments control target widths, heights, percentages, and coordinate offsets without spaces[cite: 5].</p>
+  <p class="text-body-secondary mb-4">Geometry arguments control target widths, heights, percentages, and coordinate offsets without spaces.</p>
 
   <div class="card im-card overflow-hidden mb-4">
     <div class="table-responsive" style="max-height: 500px;">
@@ -201,35 +201,35 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
         <tbody>
           <tr>
             <td class="ps-3 font-mono">scale%</td>
-            <td class="pe-3 small text-body-secondary">Height and width both scaled by specified percentage[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Height and width both scaled by specified percentage.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">widthxheight</td>
-            <td class="pe-3 small text-body-secondary">Maximum values of height and width given; aspect ratio preserved[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Maximum values of height and width given; aspect ratio preserved.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">widthxheight^</td>
-            <td class="pe-3 small text-body-secondary">Minimum values of width and height given; aspect ratio preserved[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Minimum values of width and height given; aspect ratio preserved.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">widthxheight!</td>
-            <td class="pe-3 small text-body-secondary">Width and height strictly forced; original aspect ratio ignored[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Width and height strictly forced; original aspect ratio ignored.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">widthxheight&gt;</td>
-            <td class="pe-3 small text-body-secondary">Shrink image only if dimensions are larger than specified bounds[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Shrink image only if dimensions are larger than specified bounds.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">widthxheight&lt;</td>
-            <td class="pe-3 small text-body-secondary">Enlarge image only if dimensions are smaller than specified bounds[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Enlarge image only if dimensions are smaller than specified bounds.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">area@</td>
-            <td class="pe-3 small text-body-secondary">Resize image to total pixel area limit while preserving aspect ratio[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Resize image to total pixel area limit while preserving aspect ratio.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono">size+x+y</td>
-            <td class="pe-3 small text-body-secondary">Pixel offset coordinates adjusted by gravity rules[cite: 5].</td>
+            <td class="pe-3 small text-body-secondary">Pixel offset coordinates adjusted by gravity rules.</td>
           </tr>
         </tbody>
       </table>
@@ -243,11 +243,11 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
     <i class="bi bi-stack fs-3 text-primary"></i>
     <h2 class="fw-bold mb-0">Image Stack & Output Management</h2>
   </div>
-  <p class="text-body-secondary mb-4">Isolate operations using parenthesis blocks and export results using advanced formatting strings[cite: 5].</p>
+  <p class="text-body-secondary mb-4">Isolate operations using parenthesis blocks and export results using advanced formatting strings.</p>
 
   <div class="card im-card p-4 mb-4">
     <h5 class="fw-bold mb-2">Isolated Stack Processing Example</h5>
-    <p class="small text-body-secondary mb-3">Apply rotation strictly inside a parentheses stack without affecting preceding files[cite: 5]:</p>
+    <p class="small text-body-secondary mb-3">Apply rotation strictly inside a parentheses stack without affecting preceding files:</p>
     <div class="bg-dark text-light p-3 rounded font-mono small">
       $ magick wand.gif \( wizard.gif -rotate 30 \) +append images.gif
     </div>
@@ -255,7 +255,7 @@ description: "Learn how ImageMagick interprets and executes command-line instruc
 
   <div id="output" class="card im-card p-4">
     <h5 class="fw-bold mb-2">Sequential Output Formatting</h5>
-    <p class="small text-body-secondary mb-3">Extract property strings or format multi-page sequence outputs dynamically[cite: 5]:</p>
+    <p class="small text-body-secondary mb-3">Extract property strings or format multi-page sequence outputs dynamically:</p>
     <div class="bg-dark text-light p-3 rounded font-mono small mb-2">
       $ magick rose: -set filename:area '%wx%h' 'rose-%[filename:area].png'
     </div>
