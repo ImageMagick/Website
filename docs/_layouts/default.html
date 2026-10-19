@@ -180,6 +180,7 @@
     }
   }
   </script>
+  <script async src="https://cse.google.com/cse.js?cx=768caee9d91524d5c"></script>
 </head>
 
 <body>
@@ -224,11 +225,11 @@
         </ul>
 
         <div class="d-flex align-items-center gap-2">
-          <!-- Search trigger -->
-          <form class="d-flex" role="search" action="/search/">
+          <!-- Search Trigger Modal / Input -->
+          <form class="d-flex" action="index.html" role="search">
             <div class="input-group input-group-sm">
-              <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-search"></i></span>
-              <input class="form-control bg-dark text-light border-secondary shadow-none" type="search" name="q" placeholder="Search docs..." aria-label="Search">
+              <input class="form-control bg-body-tertiary border-secondary-subtle" type="search" placeholder="Search site..." name="q" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit" name="sa"><i class="bi bi-search"></i></button>
             </div>
           </form>
 
@@ -381,5 +382,8 @@
       document.documentElement.setAttribute('data-bs-theme', applied);
     }
   </script>
+  <div style="visibility: hidden;">
+    <div class="gcse-search"></div>
+  </div>
 </body>
 </html>
