@@ -22,7 +22,7 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
       </div>
       <h1 class="display-5 fw-bold mb-3">High Dynamic-Range Images</h1>
       <p class="lead text-body-secondary">
-        High dynamic-range imaging (HDRI) permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques[cite: 15]. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows[cite: 15]. The HDR imaging approach includes[cite: 15]:
+        High dynamic-range imaging (HDRI) permits a far greater dynamic range of exposures (i.e. a large difference between light and dark areas) than standard digital imaging techniques. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows. The HDR imaging approach includes:
       </p>
     </div>
   </div>
@@ -33,28 +33,28 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
       <div class="card im-card h-100 p-4 text-center">
         <i class="bi bi-cpu fs-3 text-primary mb-2"></i>
         <h6 class="fw-bold mb-2">Floating-Point</h6>
-        <p class="small text-body-secondary mb-0">Render/capture floating-point color space[cite: 15].</p>
+        <p class="small text-body-secondary mb-0">Render/capture floating-point color space.</p>
       </div>
     </div>
     <div class="col-md-3">
       <div class="card im-card h-100 p-4 text-center">
         <i class="bi bi-aspect-ratio fs-3 text-primary mb-2"></i>
         <h6 class="fw-bold mb-2">Wide Gamut</h6>
-        <p class="small text-body-secondary mb-0">Encompass entire perceivable gamut (extend outside [0,1])[cite: 15].</p>
+        <p class="small text-body-secondary mb-0">Encompass entire perceivable gamut (extend outside [0,1]).</p>
       </div>
     </div>
     <div class="col-md-3">
       <div class="card im-card h-100 p-4 text-center">
         <i class="bi bi-sliders fs-3 text-primary mb-2"></i>
         <h6 class="fw-bold mb-2">Post-Process</h6>
-        <p class="small text-body-secondary mb-0">Post-process in extended color space[cite: 15].</p>
+        <p class="small text-body-secondary mb-0">Post-process in extended color space.</p>
       </div>
     </div>
     <div class="col-md-3">
       <div class="card im-card h-100 p-4 text-center">
         <i class="bi bi-display fs-3 text-primary mb-2"></i>
         <h6 class="fw-bold mb-2">Tone-Mapping</h6>
-        <p class="small text-body-secondary mb-0">Apply tone-mapping for specific display[cite: 15].</p>
+        <p class="small text-body-secondary mb-0">Apply tone-mapping for specific display.</p>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
   <!-- Jzazbc Colorspace Card -->
   <div class="card im-card p-4 mb-5 bg-body-tertiary text-center">
     <p class="text-body-secondary mb-0">
-      ImageMagick supports the <strong>Jzazbc</strong> colorspace, for applications that require wide color gamut and high dynamic range[cite: 15].
+      ImageMagick supports the <strong>Jzazbc</strong> colorspace, for applications that require wide color gamut and high dynamic range.
     </p>
   </div>
 
@@ -75,12 +75,12 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
 
     <div class="card im-card p-4 mb-4">
       <p class="text-body-secondary mb-3">
-        By default, image pixels in ImageMagick version 7 are stored in a floating-point representation that range from 0 to the quantum depth, which is typically 16-bits (Q16)[cite: 15]. With HDRI enabled, the pixels can include negative values as well as values that exceed the quantum depth[cite: 15]. A majority of digital image formats do not support HDRI, and for those images any pixels outside the quantum range are clamped before they are stored[cite: 15].
+        By default, image pixels in ImageMagick version 7 are stored in a floating-point representation that range from 0 to the quantum depth, which is typically 16-bits (Q16). With HDRI enabled, the pixels can include negative values as well as values that exceed the quantum depth. A majority of digital image formats do not support HDRI, and for those images any pixels outside the quantum range are clamped before they are stored.
       </p>
       <p class="text-body-secondary mb-3">
-        The most promising HDR image format is EXR[cite: 15]. You must have the <a href="http://www.openexr.org" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">OpenEXR</a> delegate library installed to read or write this format[cite: 15]. Other HDR formats include TIFF 48-bit integer and 96-bit float formats, HDR, PFM, and ImageMagick's own MIFF format[cite: 15].
+        The most promising HDR image format is EXR. You must have the <a href="http://www.openexr.org" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">OpenEXR</a> delegate library installed to read or write this format. Other HDR formats include TIFF 48-bit integer and 96-bit float formats, HDR, PFM, and ImageMagick's own MIFF format.
       </p>
-      <p class="text-body-secondary mb-3">To disable the HDRI version of ImageMagick, use this Linux command[cite: 15]:</p>
+      <p class="text-body-secondary mb-3">To disable the HDRI version of ImageMagick, use this Linux command:</p>
 
       <!-- Code Terminal 1 -->
       <div class="terminal-card mb-3">
@@ -91,14 +91,14 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
           <span class="small text-secondary font-mono ms-2">configure-hdri.sh</span>
         </div>
         <div class="p-3 text-light font-mono small">
-          <span class="text-success">$</span> ./configure --disable-hdri[cite: 15]
+          <span class="text-success">$</span> ./configure --disable-hdri
         </div>
       </div>
 
       <p class="text-body-secondary mb-3">
-        Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="/install-source/" class="text-decoration-none fw-semibold">Install from Windows Source</a>[cite: 15].
+        Under Windows, follow the instructions (straightforward for a non-programmer) in a one hour process to build and configure your own executables: <a href="/install-source/" class="text-decoration-none fw-semibold">Install from Windows Source</a>.
       </p>
-      <p class="text-body-secondary mb-3">To verify HDRI is properly configured, look for "HDRI" as a feature[cite: 15]:</p>
+      <p class="text-body-secondary mb-3">To verify HDRI is properly configured, look for "HDRI" as a feature:</p>
 
       <!-- Code Terminal 2 -->
       <div class="terminal-card mb-3">
@@ -110,12 +110,12 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
         </div>
         <div class="p-3 text-light font-mono small">
           <span class="text-success">$</span> magick identify -version<br>
-          Features: HDRI[cite: 15]
+          Features: HDRI
         </div>
       </div>
 
       <p class="text-body-secondary mb-3">
-        With HDRI enabled, you can now create images with a much wider dynamic range, allowing for more vivid colors and better contrast[cite: 15]. It ensures that HDR content can be displayed accurately on compatible devices while maintaining backward compatibility with SDR displays[cite: 15]. In this example, you can store the difference between a standard dynamic range (SDR) image and its high dynamic range (<a href="https://gregbenzphotography.com/hdr/" class="text-decoration-none" target="_blank" rel="noopener">HDR</a>) counterpart[cite: 15]. Essentially, a <a href="https://helpx.adobe.com/camera-raw/using/gain-map.html" class="text-decoration-none" target="_blank" rel="noopener">gain map</a> captures the additional brightness and color information that HDR provides over SDR[cite: 15]:
+        With HDRI enabled, you can now create images with a much wider dynamic range, allowing for more vivid colors and better contrast. It ensures that HDR content can be displayed accurately on compatible devices while maintaining backward compatibility with SDR displays. In this example, you can store the difference between a standard dynamic range (SDR) image and its high dynamic range (<a href="https://gregbenzphotography.com/hdr/" class="text-decoration-none" target="_blank" rel="noopener">HDR</a>) counterpart. Essentially, a <a href="https://helpx.adobe.com/camera-raw/using/gain-map.html" class="text-decoration-none" target="_blank" rel="noopener">gain map</a> captures the additional brightness and color information that HDR provides over SDR:
       </p>
 
       <!-- Code Terminal 3 -->
@@ -128,7 +128,7 @@ description: "Learn how ImageMagick supports High Dynamic-Range Imaging (HDRI) w
         </div>
         <div class="p-3 text-light font-mono small">
           <span class="text-success">$</span> magick -define uhdr:hdr-color-gamut=bt709 -define uhdr:hdr-color-transfer=hlg \<br>
-          &nbsp;&nbsp;\( img_sdr.tif -depth 8 \) &nbsp;\( img_hdr.tif -depth 16 \) uhdr:ultrahdr.jpg[cite: 15]
+          &nbsp;&nbsp;\( img_sdr.tif -depth 8 \) &nbsp;\( img_hdr.tif -depth 16 \) uhdr:ultrahdr.jpg
         </div>
       </div>
     </div>
