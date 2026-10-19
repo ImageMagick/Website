@@ -1,156 +1,328 @@
 ---
 title: "Multispectral Imagery"
+description: "Learn about multispectral imagery support in ImageMagick, capturing wider wavelengths from ultraviolet to infrared, handling meta channels, and processing multi-band images."
 ---
-<div>
-<p class="lead">Multispectral imagery refers to images that are captured using multiple bands of the electromagnetic spectrum, beyond just the visible light spectrum. This means that they capture data across a wider range of wavelengths, from ultraviolet to infrared.</p>
-<p>By capturing data across multiple spectral bands, multispectral imagery can provide additional information about the objects or scenes being imaged, such as their composition, temperature, and vegetation health. This information can be used for a wide range of applications, including agriculture, environmental monitoring, disaster response, and military surveillance.</p>
-<p>Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images that display the information captured in each spectral band.</p>
-<p>Overall, multispectral imagery provides a powerful tool for analyzing and understanding the world around us, allowing us to gain insights that would be impossible to obtain using visible light imagery alone.</p>
-<h4>Multispectral Support in ImageMagick</h4>
-<p>ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels. If you build ImageMagick with the configure script <code>--enable-64bit-channel-masks</code> option, you can process 62 band multispectral images with up to 52 meta channels.</p>
-<p>We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels.  We label them as "meta", "meta1", "meta2", etc..  Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc.</p>
-<h5>Create a Multispectral Image</h5>
-<p>Begin with a multispectral image, typically in the TIFF or PSD format.  If you don't have one, you can create your own.  In our example, we create a single CMYK pixel with two meta channels.  Stuff this in a file titled <code>multiMeta.txt</code>:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>0,0: 10,20,30,40,50,60</code></pre>
-<p>Let's convert that to the TIFF image format:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
-<p>Let confirm that worked as expected:<p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
-Image:
-  Filename: multiMeta.tif
-  Permissions: rw-------
-  Format: TIFF (Tagged Image File Format)
-  Mime type: image/tiff
-  Class: DirectClass
-  Geometry: 1x1+0+0
-  Units: PixelsPerInch
-  Colorspace: CMYK
-  Type: ColorSeparation
-  Endianness: LSB
-  Depth: 16-bit
-  Channels: 6.2
-  Channel depth:
-    Cyan: 16-bit
-    Magenta: 16-bit
-    Yellow: 16-bit
-    Black: 16-bit
-    Meta channel[0]: 16-bit
-    Meta channel[1]: 16-bit
-  Channel statistics:
-    Pixels: 1
-    Cyan:
-      min: 10  (0.00015259)
-      max: 10 (0.00015259)
-      mean: 10 (0.00015259)
-      median: 10 (0.00015259)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-    Magenta:
-      min: 20  (0.00030518)
-      max: 20 (0.00030518)
-      mean: 20 (0.00030518)
-      median: 20 (0.00030518)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-    Yellow:
-      min: 30  (0.000457771)
-      max: 30 (0.000457771)
-      mean: 30 (0.000457771)
-      median: 30 (0.000457771)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-    Black:
-      min: 40  (0.000610361)
-      max: 40 (0.000610361)
-      mean: 40 (0.000610361)
-      median: 40 (0.000610361)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-    Meta channel[0]:
-      min: 50  (0.000762951)
-      max: 50 (0.000762951)
-      mean: 50 (0.000762951)
-      median: 50 (0.000762951)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-    Meta channel[1]:
-      min: 60  (0.000915541)
-      max: 60 (0.000915541)
-      mean: 60 (0.000915541)
-      median: 60 (0.000915541)
-      standard deviation: 0 (0)
-      kurtosis: -3
-      skewness: 0
-      entropy: 0
-  Image statistics:
-    Overall:
-      min: 10  (0.00015259)
-      max: 60 (0.000915541)
-      mean: 35 (0.000534066)
-      median: 35 (0.000534066)
-      standard deviation: 0 (0)
-      kurtosis: -1.79762
-      skewness: 4.44476e-15
-      entropy: 0
-  Total ink density: 0.15259%
-  Colors: 1
-  Histogram:
-             1: (10,20,30,40) #000A0014001E0028 cmyk(0.0389105,0.077821,0.116732,0.155642)
-  Rendering intent: Perceptual
-  Gamma: 0.454545
-  Chromaticity:
-    red primary: (0.64,0.33)
-    green primary: (0.3,0.6)
-    blue primary: (0.15,0.06)
-    white point: (0.3127,0.329)
-  Matte color: grey74
-  Background color: white
-  Border color: srgb(223,223,223)
-  Transparent color: black
-  Interlace: None
-  Intensity: Undefined
-  Compose: Over
-  Page geometry: 1x1+0+0
-  Dispose: Undefined
-  Iterations: 0
-  Compression: None
-  Orientation: TopLeft
-  Properties:
-    date:create: 2023-03-12T11:38:42+00:00
-    date:modify: 2023-03-12T11:38:42+00:00
-    date:timestamp: 2023-03-12T11:38:56+00:00
-    signature: c51848f16d296f7c95be14404cc582f49db6fd33f31b544a2ce10e440b3747b3
-    tiff:alpha: unspecified
-    tiff:endian: lsb
-    tiff:photometric: separated
-    tiff:rows-per-strip: 1
-  Artifacts:
-    verbose: true
-  Tainted: False
-  Filesize: 306B
-  Number pixels: 1
-</samp></pre>
-<p>Notice the channel depth and statistics associated with the two meta channels.<p>
-<h5>Working with Multispectral Images</h5>
-<p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre></pre>
-<p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
-<p>And in this example, we create two meta channels:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre></pre>
-<p>In this example, we blend two meta channels into a single alpha channel:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre></pre>
-<br/>
-<h5>Writing Multispectral Images</h5>
-<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multispectral images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre></pre>
+
+<div class="container py-4">
+  <!-- Lead Section -->
+  <div class="row mb-4">
+    <div class="col-lg-10 mx-auto text-center">
+      <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-3 fs-7">
+        <i class="bi bi-layers-fill"></i>
+        <span class="small fw-semibold">Advanced Image Processing</span>
+      </div>
+      <h1 class="display-5 fw-bold mb-3">Multispectral Imagery</h1>
+      <p class="lead text-body-secondary">
+        Multispectral imagery refers to images that are captured using multiple bands of the electromagnetic spectrum, beyond just the visible light spectrum. This means that they capture data across a wider range of wavelengths, from ultraviolet to infrared.
+      </p>
+    </div>
+  </div>
+
+  <!-- Information Grid Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-info-circle me-2"></i>Applications</h5>
+        <p class="small text-body-secondary mb-0">
+          By capturing data across multiple spectral bands, multispectral imagery provides additional information about objects or scenes, such as composition, temperature, and vegetation health, for use in agriculture, environmental monitoring, disaster response, and military surveillance.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-broadcast me-2"></i>Data Acquisition</h5>
+        <p class="small text-body-secondary mb-0">
+          Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images displaying the information captured in each spectral band.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-lightbulb me-2"></i>Insights</h5>
+        <p class="small text-body-secondary mb-0">
+          Overall, multispectral imagery provides a powerful tool for analyzing and understanding the world around us, allowing insights that would be impossible to obtain using visible light imagery alone.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multispectral Support in ImageMagick -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-cpu fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Multispectral Support in ImageMagick</h2>
+    </div>
+
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image. However, not all image formats support multispectral images. PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm" target="_blank" rel="noopener">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels.
+      </p>
+      <p class="text-body-secondary mb-3">
+        If you build ImageMagick with the configure script <code>--enable-64bit-channel-masks</code> option, you can process 62 band multispectral images with up to 52 meta channels.
+      </p>
+      <p class="text-body-secondary mb-0">
+        We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels. We label them as "meta", "meta1", "meta2", etc. Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon—e.g., resized, gamma adjusted, etc.
+      </p>
+    </div>
+  </section>
+
+  <!-- Create a Multispectral Image -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-file-earmark-plus fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Create a Multispectral Image</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      Begin with a multispectral image, typically in the TIFF or PSD format. If you don't have one, you can create your own. In our example, we create a single CMYK pixel with two meta channels. Stuff this in a file titled <code>multiMeta.txt</code>:
+    </p>
+
+    <!-- Code Block 1 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">multiMeta.txt</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        0,0: 10,20,30,40,50,60
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Let's convert that to the TIFF image format:</p>
+
+    <!-- Code Block 2 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">convert.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Let's confirm that worked as expected:</p>
+
+    <!-- Verbose Output Terminal Block -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">identify-verbose.log</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <samp>$ identify -verbose multiMeta.tif<br>
+Image:<br>
+  Filename: multiMeta.tif<br>
+  Permissions: rw-------<br>
+  Format: TIFF (Tagged Image File Format)<br>
+  Mime type: image/tiff<br>
+  Class: DirectClass<br>
+  Geometry: 1x1+0+0<br>
+  Units: PixelsPerInch<br>
+  Colorspace: CMYK<br>
+  Type: ColorSeparation<br>
+  Endianness: LSB<br>
+  Depth: 16-bit<br>
+  Channels: 6.2<br>
+  Channel depth:<br>
+    Cyan: 16-bit<br>
+    Magenta: 16-bit<br>
+    Yellow: 16-bit<br>
+    Black: 16-bit<br>
+    Meta channel[0]: 16-bit<br>
+    Meta channel[1]: 16-bit<br>
+  Channel statistics:<br>
+    Pixels: 1<br>
+    Cyan:<br>
+      min: 10  (0.00015259)<br>
+      max: 10 (0.00015259)<br>
+      mean: 10 (0.00015259)<br>
+      median: 10 (0.00015259)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+    Magenta:<br>
+      min: 20  (0.00030518)<br>
+      max: 20 (0.00030518)<br>
+      mean: 20 (0.00030518)<br>
+      median: 20 (0.00030518)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+    Yellow:<br>
+      min: 30  (0.000457771)<br>
+      max: 30 (0.000457771)<br>
+      mean: 30 (0.000457771)<br>
+      median: 30 (0.000457771)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+    Black:<br>
+      min: 40  (0.000610361)<br>
+      max: 40 (0.000610361)<br>
+      mean: 40 (0.000610361)<br>
+      median: 40 (0.000610361)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+    Meta channel[0]:<br>
+      min: 50  (0.000762951)<br>
+      max: 50 (0.000762951)<br>
+      mean: 50 (0.000762951)<br>
+      median: 50 (0.000762951)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+    Meta channel[1]:<br>
+      min: 60  (0.000915541)<br>
+      max: 60 (0.000915541)<br>
+      mean: 60 (0.000915541)<br>
+      median: 60 (0.000915541)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -3<br>
+      skewness: 0<br>
+      entropy: 0<br>
+  Image statistics:<br>
+    Overall:<br>
+      min: 10  (0.00015259)<br>
+      max: 60 (0.000915541)<br>
+      mean: 35 (0.000534066)<br>
+      median: 35 (0.000534066)<br>
+      standard deviation: 0 (0)<br>
+      kurtosis: -1.79762<br>
+      skewness: 4.44476e-15<br>
+      entropy: 0<br>
+  Total ink density: 0.15259%<br>
+  Colors: 1<br>
+  Histogram:<br>
+             1: (10,20,30,40) #000A0014001E0028 cmyk(0.0389105,0.077821,0.116732,0.155642)<br>
+  Rendering intent: Perceptual<br>
+  Gamma: 0.454545<br>
+  Chromaticity:<br>
+    red primary: (0.64,0.33)<br>
+    green primary: (0.3,0.6)<br>
+    blue primary: (0.15,0.06)<br>
+    white point: (0.3127,0.329)<br>
+  Matte color: grey74<br>
+  Background color: white<br>
+  Border color: srgb(223,223,223)<br>
+  Transparent color: black<br>
+  Interlace: None<br>
+  Intensity: Undefined<br>
+  Compose: Over<br>
+  Page geometry: 1x1+0+0<br>
+  Dispose: Undefined<br>
+  Iterations: 0<br>
+  Compression: None<br>
+  Orientation: TopLeft<br>
+  Properties:<br>
+    date:create: 2023-03-12T11:38:42+00:00<br>
+    date:modify: 2023-03-12T11:38:42+00:00<br>
+    date:timestamp: 2023-03-12T11:38:56+00:00<br>
+    signature: c51848f16d296f7c95be14404cc582f49db6fd33f31b544a2ce10e440b3747b3<br>
+    tiff:alpha: unspecified<br>
+    tiff:endian: lsb<br>
+    tiff:photometric: separated<br>
+    tiff:rows-per-strip: 1<br>
+  Artifacts:<br>
+    verbose: true<br>
+  Tainted: False<br>
+  Filesize: 306B<br>
+  Number pixels: 1</samp>
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-0">Notice the channel depth and statistics associated with the two meta channels.</p>
+  </section>
+
+  <!-- Working with Multispectral Images -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-sliders fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Working with Multispectral Images</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon—e.g., resized, gamma adjusted, etc. Here, we replace the first channel with the contents of the meta channel:
+    </p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">replace-channel.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      The original cyan channel has an intensity of 10. It's now, per the channel FX instructions, 50.
+    </p>
+
+    <p class="text-body-secondary mb-3">And in this example, we create two meta channels:</p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">create-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">In this example, we blend two meta channels into a single alpha channel:</p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">blend-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing Multispectral Images -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-file-earmark-arrow-down fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Writing Multispectral Images</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD. If you write to other image formats that do not support multispectral images, the channels are not preserved and instead lost—e.g., PNG. In this example, we read, resize, and write a multispectral image:
+    </p>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">resize-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick multiMeta.tif -resize 50% resizedMeta.tif
+      </div>
+    </div>
+  </section>
 </div>
