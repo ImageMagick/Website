@@ -2,61 +2,123 @@
 title: "Color Management"
 description: "Master color management in ImageMagick. Learn how sRGB, linear RGB, grayscale, and ICC profiles affect image processing, with practical command examples for accurate conversions and channel handling."
 ---
-<div>
-<p class="lead">Due to the standardization of sRGB on the Internet, most image formats use SRGB as the default working color space.  If the color space of an image is unknown and it is an 8- to 16-bit image format, assuming it is in the sRGB color space is a safe choice.  This extends to grayscale as well.  We assume non-linear grayscale. These assumptions are overridden if a particular image format includes color space and / or gamma metadata.  ImageMagick assumes linear color if the color space is RGB instead of sRGB.  You can also override the default color space assumptions with color profiles or the <a href="/command-line-processing/#set">-set</a> option.</p>
 
-<p>ImageMagick supports color profiles, however, for images without a profile or a declaration of colorspace, ImageMagick assumes non-linear sRGB.  Most image processing algorithms assume a linear colorspace, therefore it might be prudent to convert to linear color or remove the gamma function before certain image processing algorithms are applied. For example,</p>
+<div class="container-fluid px-0">
+  <!-- Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <p class="lead text-body-secondary">
+        Due to the standardization of sRGB on the Internet, most image formats use sRGB as the default working color space. If an image's color space is unknown and it is an 8- to 16-bit format, assuming sRGB—and non-linear grayscale—is a safe choice. These assumptions are overridden if the file includes specific color space or gamma metadata, if you apply explicit color profiles, or if you use the <a href="/command-line-processing/#set">-set</a> option.
+      </p>
+    </div>
+  </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</samp></pre></pre>
+  <!-- Section 1: Color Profiles & Linear Color -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Color Profiles and Linear Adjustments</h2>
+    <p>
+      For images without a profile or color space declaration, ImageMagick defaults to non-linear sRGB. Because most image processing algorithms perform best in a linear color space, it is often prudent to convert to linear color or remove the gamma function before applying heavy operations. For example:
+    </p>
 
-<p>To declare that an image is linear RGB rather than sRGB, you can use the set option:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.jpg -colorspace RGB -resize 200% -colorspace sRGB mybigimage.jpg</samp></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.png -set colorspace RGB myRGBimage.png</samp></pre></pre>
+    <h3 class="h5 mt-4 mb-3">Declaring vs. Converting Linear RGB</h3>
+    <p>
+      To declare that an image is linear RGB rather than sRGB without altering its actual pixel data, use the <code>-set</code> option:
+    </p>
 
-<p>Note that declaring an image as linear is not the same as converting the image to linear. Declaring it is linear only sets the meta data and does not change the pixel data. Whereas converting to linear actually changes the pixel data as described in more detail below.</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -set colorspace RGB myRGBimage.png</samp></pre>
+      </div>
+    </div>
 
-<p>Afterwards, the verbose information for the output file lists the colorspace as RGB. This only works on image types containing meta data that distinguishes between linear RGB and non-linear sRGB, such as PNG and GIF. Therefore, if the above command is run with a JPG or TIF output format, the verbose information for the colorspace still shows sRGB. In order to properly have the JPG output know that it is linear RGB, include an appropriate color profile.</p>
+    <p class="small text-muted">
+      <strong>Note:</strong> Declaring an image as linear only updates the metadata and leaves pixel data untouched, whereas converting actually changes the pixel values. Verbose file information will list the color space as RGB, though this only works on formats that support distinguishing linear vs. non-linear metadata (such as PNG and GIF). For JPG or TIF output formats, you must include an appropriate color profile to correctly embed linear color awareness.
+    </p>
+  </section>
 
+  <!-- Section 2: Grayscale Conversions -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Grayscale Conversions</h2>
+    <p>
+      Converting color images to grayscale normally yields non-linear gray. To generate linear gray instead, use the <a href="/command-line-processing/#set">-set</a>, <a href="/command-line-processing/#intensity">-intensity</a>, or <a href="/command-line-processing/#grayscale">-grayscale</a> options:
+    </p>
 
-<p>By default, converting color images to grayscale returns non-linear gray.  To instead convert to linear gray, use the <a href="/command-line-processing/#set">-set</a> or <a href="/command-line-processing/#intensity">-intensity</a
-> or <a href="/command-line-processing/#grayscale">-grayscale</a> options:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>
-$ magick myimage.png -colorspace LinearGray myRGBimage.png
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -colorspace LinearGray myRGBimage.png
 $ magick myimage.png -colorspace RGB -colorspace Gray myRGBimage.png
 $ magick myimage.png -intensity Rec709luminance -colorspace gray myRGBimage.png
-$ magick myimage.png -grayscale Rec709luminance myRGBimage.png
-</samp></pre>
+$ magick myimage.png -grayscale Rec709luminance myRGBimage.png</samp></pre>
+      </div>
+    </div>
+    <p class="small text-muted">Note: <code>LinearGray</code> is available as of ImageMagick 6.9.9-29 and 7.0.7-17.</p>
+  </section>
 
-<p>Note that LinearGray is new as of Imagemagick 6.9.9-29 and 7.0.7-17.</p>
+  <!-- Section 3: Channel Separation and Recombination -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Channel Separation and Recombination</h2>
+    <p>
+      When separating channels from an sRGB image, the default output produces non-linear grayscale images. If you wish to keep them as linear grayscale channels for processing, configure the color space beforehand:
+    </p>
 
-<p>The same concept is needed when separating channels.  Normally, the conversion to separate each channel of an sRGB color image produces separate non-linear grayscale images. However the same concept can be applied, if it is desired to keep the separate channels as linear grayscale. For example, the following produces linear grayscale channels.</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</samp></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><pre><samp>$ magick myimage.png -colorspace RGB -separate myimage_channels_%d.png</samp></pre></pre>
+    <p class="mt-3">
+      When performing intermediate processing between separation and recombination, tracking the color space is crucial:
+    </p>
 
-<p>When separating and recombining channels, with potential intermediate processing, it is important to identify the colorspace used, especially during the recombination. For example,</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -separate myimage_channels_%d.png
+$ magick myimage_channels_*.png -combine myimage2.png</samp></pre>
+      </div>
+    </div>
+    <p class="small text-muted">In the example above, channels are non-linear, and <code>-combine</code> defaults to assuming non-linear channels, resulting in an output identical to the input.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -separate myimage_channels_%d.png
-magick myimage_channels_*.png -combine myimage2.png</samp></pre>
+    <p class="mt-3">
+      To separate into linear grayscale channels, process them, and then recombine them back into a non-linear color image, use this pattern:
+    </p>
 
-<p>In the above example, the separated channels are non-linear and the default for <code>-combine</code> is to assume non-linear channels. So the result is the same as the input.</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
+$ magick myimage_channels_*.png -set colorspace RGB -combine -colorspace sRGB myimage2.png</samp></pre>
+      </div>
+    </div>
 
-If one desires to separate to linear grayscale channels, recombine them later back to non-linear color, perhaps after some processing, then use the same concept as above for maintaining linear grayscale:</p>
+    <h3 class="h5 mt-4 mb-3">Cross-Color Space Handling (e.g., HSL)</h3>
+    <p>The following commands handle non-linear vs. linear channel workflows when converting between sRGB and HSL:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -set colorspace RGB -separate myimage_channels_%d.png
-magick myimage_channels_*.png -set colorspace RGB -combine -colorspace sRGB myimage2.png
-</samp></pre>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
+$ magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png
 
-<p>When converting to another colorspace and back, such as between sRGB and HSL, the following two commands handle the first case of non-linear channels and the second case of linear channels:</p>
+$ magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
+$ magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set colorspace sRGB myimage2.png</samp></pre>
+      </div>
+    </div>
+  </section>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -colorspace HSL -separate myimage_channels_%d.png
-magick myimage_channels_*.png -set colorspace HSL -combine -colorspace sRGB myimage2.png</samp></pre>
+  <!-- Section 4: Format Support & Custom Colors -->
+  <section class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">Format Support and Linear Color Creation</h2>
+    <p>
+      While most image formats (like JPEG and PNG) assume an sRGB color space, some support only linear RGB (such as EXR, DPX, CIN, and HDR), linear GRAY, or CMYK (like JPG, but not PNG). Occasional formats also support LAB (CieLAB) like TIFF, PSD, JPG, and JP2. For further details, consult the <a href="/formats/#colorspace">Colorspace</a> and <a href="/formats/#supported">Supported Formats</a> pages.
+    </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick myimage.png -set colorspace RGB -colorspace HSL -separate myimage_channels_%d.png
-magick myimage_channels_*.png -set colorspace HSL -combine -colorspace RGB -set colorspace sRGB myimage2.png</samp></pre>
-
-<p>A majority of the image formats assume an sRGB colorspace (e.g. JPEG, PNG, etc.). A few support only linear RGB (e.g. EXR, DPX, CIN, HDR) or only linear GRAY. A few formats support CMYK. For example JPG does, but PNG does not. Then there is the occasional format that also supports LAB (that is CieLAB) (e.g. TIFF, PSD, JPG, JP2). For additional information, see the <a href="/formats/#colorspace" >Colorspace</a> and <a href="/formats/#supported" >Supported Formats</a> pages.</p>
-
-<p>When specifying individual colors as <code>rgb(...)</code> or hex, these colors will still be interpreted as non-linear, that is, as sRGB colors. However if one wants to create linear colors, use <code>icc-color(rgb,r,g,b)"</code>, where <code>r</code>, <code>g</code>, and <code>b</code> are in the range 0 to 1. See the <a href="/color/" >Color</a> page.</p>
-
+    <p class="mt-3">
+      When specifying individual colors using <code>rgb(...)</code> or hex notation, they are interpreted as non-linear sRGB. If you need to explicitly create linear colors, use the <code>icc-color(rgb,r,g,b)</code> syntax (where components range from 0 to 1). See the <a href="/color/">Color</a> page for more information.
+    </p>
+  </section>
 </div>
