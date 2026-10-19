@@ -177,26 +177,26 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
         <span class="small text-secondary font-mono ms-2">pixel-manipulation.c</span>
       </div>
       <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
-        <code>const Quantum *p;<br>
-Quantum *q;<br>
-ssize_t x, y;<br><br>
-destination=CloneImage(source,source-&gt;columns,source-&gt;rows,MagickTrue,exception);<br>
-for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)<br>
-{<br>
-  p=GetVirtualPixels(source,0,y,source-&gt;columns,1,exception);<br>
-  q=GetAuthenticPixels(destination,0,y,destination-&gt;columns,1,exception);<br>
-  if ((p == (const Quantum *) NULL) || (q == (Quantum *) NULL)) break;<br>
-  for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)<br>
-  {<br>
-    SetPixelRed(image,90*p-&gt;red/100,q);<br>
-    SetPixelGreen(image,90*p-&gt;green/100,q);<br>
-    SetPixelBlue(image,90*p-&gt;blue/100,q);<br>
-    SetPixelAlpha(image,90*p-&gt;opacity/100,q);<br>
-    p+=GetPixelChannels(source);<br>
-    q+=GetPixelChannels(destination);<br>
-  }<br>
-  if (SyncAuthenticPixels(destination,exception) == MagickFalse) break;<br>
-}</code>
+        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>const Quantum *p;<br>
+Quantum *q;
+ssize_t x, y;<br>
+destination=CloneImage(source,source-&gt;columns,source-&gt;rows,MagickTrue,exception);
+for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
+{
+  p=GetVirtualPixels(source,0,y,source-&gt;columns,1,exception);
+  q=GetAuthenticPixels(destination,0,y,destination-&gt;columns,1,exception);
+  if ((p == (const Quantum *) NULL) || (q == (Quantum *) NULL)) break;
+  for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)
+  {
+    SetPixelRed(image,90*p-&gt;red/100,q);
+    SetPixelGreen(image,90*p-&gt;green/100,q);
+    SetPixelBlue(image,90*p-&gt;blue/100,q);
+    SetPixelAlpha(image,90*p-&gt;opacity/100,q);
+    p+=GetPixelChannels(source);
+    q+=GetPixelChannels(destination);
+  }
+  if (SyncAuthenticPixels(destination,exception) == MagickFalse) break;
+}</code></pre>
       </div>
     </div>
 
