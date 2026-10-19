@@ -8,7 +8,7 @@ description: "Discover how ImageMagick leverages OpenMP for parallel execution, 
   <div class="row mb-4">
     <div class="col-12">
       <p class="lead text-body-secondary">
-        Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by multicore processor chips and <a href="https://www.openmp.org/">OpenMP</a>[cite: 3], an API specification for parallel programming[cite: 3]. If your compiler supports OpenMP directives (such as GCC or Visual Studio 2005)[cite: 3], ImageMagick automatically includes support[cite: 3].
+        Many of ImageMagick's internal algorithms are threaded to take advantage of speed-ups offered by multicore processor chips and <a href="https://www.openmp.org/">OpenMP</a>, an API specification for parallel programming. If your compiler supports OpenMP directives (such as GCC or Visual Studio 2005), ImageMagick automatically includes support.
       </p>
     </div>
   </div>
@@ -16,7 +16,7 @@ description: "Discover how ImageMagick leverages OpenMP for parallel execution, 
   <!-- Verification Section -->
   <section class="mb-5">
     <h2 class="h4 pb-2 border-bottom mb-3">Verifying OpenMP Support</h2>
-    <p>To verify if OpenMP is active in your ImageMagick build, look for the OpenMP feature string using the following command[cite: 3]:</p>
+    <p>To verify if OpenMP is active in your ImageMagick build, look for the OpenMP feature string using the following command:</p>
 
     <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
       <div class="card-body">
@@ -32,14 +32,14 @@ Features: OpenMP(4.5)</samp></pre>
   <section class="mb-5">
     <h2 class="h4 pb-2 border-bottom mb-3">How Parallel Execution Works</h2>
     <p>
-      With OpenMP enabled, most ImageMagick algorithms execute across all available system cores in parallel[cite: 3]. ImageMagick typically divides the work so that each thread processes 64 rows of pixels[cite: 3]. As rows are completed, OpenMP assigns additional chunks to each thread until the task is complete[cite: 3]. For example, running a resize operation on a quad-core system utilizes 4 cores (or 8 if hyperthreading is enabled)[cite: 3].
+      With OpenMP enabled, most ImageMagick algorithms execute across all available system cores in parallel. ImageMagick typically divides the work so that each thread processes 64 rows of pixels. As rows are completed, OpenMP assigns additional chunks to each thread until the task is complete. For example, running a resize operation on a quad-core system utilizes 4 cores (or 8 if hyperthreading is enabled).
     </p>
 
     <div class="card border-0 bg-body-tertiary shadow-sm mt-3">
       <div class="card-body">
         <h3 class="h6 fw-bold mb-2">Performance Tip</h3>
         <p class="small text-muted mb-0">
-          You can further increase performance by reducing memory lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library[cite: 3]. To enable it, add <code>--with-tcmalloc</code> to the <code>configure</code> command-line when building ImageMagick[cite: 3].
+          You can further increase performance by reducing memory lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library. To enable it, add <code>--with-tcmalloc</code> to the <code>configure</code> command-line when building ImageMagick.
         </p>
       </div>
     </div>
@@ -49,10 +49,10 @@ Features: OpenMP(4.5)</samp></pre>
   <section class="mb-5">
     <h2 class="h4 pb-2 border-bottom mb-3">The Perils of Parallel Execution and Benchmarking</h2>
     <p>
-      Predicting behavior in a parallel environment can be complex[cite: 3]. Performance depends on various factors including your compiler, OpenMP library version, processor type, core count, available memory, hyperthreading status, concurrent applications, and the specific image-processing algorithm used[cite: 3]. 
+      Predicting behavior in a parallel environment can be complex. Performance depends on various factors including your compiler, OpenMP library version, processor type, core count, available memory, hyperthreading status, concurrent applications, and the specific image-processing algorithm used. 
     </p>
     <p>
-      Because of these variables, benchmarking is the only reliable way to ensure optimal performance[cite: 3]. ImageMagick supports progressive threading benchmarks, returning elapsed time and efficiency metrics across one or more threads[cite: 3]. Below is an example benchmark measuring threads 1 through 8[cite: 3]:
+      Because of these variables, benchmarking is the only reliable way to ensure optimal performance. ImageMagick supports progressive threading benchmarks, returning elapsed time and efficiency metrics across one or more threads. Below is an example benchmark measuring threads 1 through 8:
     </p>
 
     <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
@@ -70,7 +70,7 @@ Performance[8]: 40i 4.831ips 0.872e 15.680u 0:02.070</samp></pre>
     </div>
 
     <p class="small text-muted">
-      Higher values of <strong>IPS</strong> (iterations-per-second) indicate better performance[cite: 3]. In the example above, 8 cores are optimal[cite: 3]. However, certain workloads perform best restricted to a single thread (e.g., using <code>-limit thread 1</code>)[cite: 3].
+      Higher values of <strong>IPS</strong> (iterations-per-second) indicate better performance. In the example above, 8 cores are optimal. However, certain workloads perform best restricted to a single thread (e.g., using <code>-limit thread 1</code>).
     </p>
   </section>
 
@@ -78,7 +78,7 @@ Performance[8]: 40i 4.831ips 0.872e 15.680u 0:02.070</samp></pre>
   <section class="mb-4">
     <h2 class="h4 pb-2 border-bottom mb-3">Disabling OpenMP</h2>
     <p class="mb-0">
-      If you need to disable OpenMP entirely, add <code>--disable-openmp</code> to your configure script command line, then rebuild and reinstall ImageMagick[cite: 3].
+      If you need to disable OpenMP entirely, add <code>--disable-openmp</code> to your configure script command line, then rebuild and reinstall ImageMagick.
     </p>
   </section>
 </div>
