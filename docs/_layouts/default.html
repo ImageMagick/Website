@@ -183,16 +183,6 @@
 </head>
 
 <body>
-  <!-- Theme Init -->
-  <script>
-    (function() {
-      const saved = localStorage.getItem('theme') || 'auto';
-      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const applied = saved === 'auto' ? (systemDark ? 'dark' : 'light') : saved;
-      document.documentElement.setAttribute('data-bs-theme', applied);
-    })();
-  </script>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top im-navbar">
     <div class="container-xl">
@@ -231,19 +221,16 @@
               <input class="form-control bg-dark text-light border-secondary shadow-none" type="search" name="q" placeholder="Search docs..." aria-label="Search">
             </div>
           </form>
-
-          <!-- Theme Dropdown -->
           <div class="dropdown">
-            <button class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1 border-0 text-white" type="button" id="themeSelect" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-circle-half"></i>
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="currentThemeIcon">🌓</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="themeSelect">
-              <li><button class="dropdown-item d-flex align-items-center gap-2" onclick="setTheme('light')"><i class="bi bi-sun-fill"></i> Light</button></li>
-              <li><button class="dropdown-item d-flex align-items-center gap-2" onclick="setTheme('dark')"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
-              <li><button class="dropdown-item d-flex align-items-center gap-2" onclick="setTheme('auto')"><i class="bi bi-circle-half"></i> Auto</button></li>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="themeDropdown">
+              <li><button class="dropdown-item" type="button" onclick="setTheme('light')">☀️ Light</button></li>
+              <li><button class="dropdown-item" type="button" onclick="setTheme('dark')">🌙 Dark</button></li>
+              <li><button class="dropdown-item" type="button" onclick="setTheme('auto')">🌓 Auto</button></li>
             </ul>
           </div>
-
           <a href="https://github.com/ImageMagick/ImageMagick" target="_blank" class="btn btn-sm btn-outline-light d-flex align-items-center gap-1 ms-1">
             <i class="bi bi-github"></i> <span class="d-none d-xl-inline">GitHub</span>
           </a>
@@ -373,13 +360,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function setTheme(theme) {
-      localStorage.setItem('theme', theme);
-      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const applied = theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme;
-      document.documentElement.setAttribute('data-bs-theme', applied);
-    }
   </script>
 </body>
 </html>
