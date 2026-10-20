@@ -2,80 +2,128 @@
 title: "MagickCore, Low-level C API"
 description: "Explore ImageMagick’s MagickCore API, a powerful C library for image processing. Learn functions for reading, writing, transforming, and analyzing images with cross‑platform support and advanced features."
 ---
-<div>
-<p  class="lead">The <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickCore">MagickCore API</a> is a low-level interface between the C programming language and the ImageMagick image processing libraries and is recommended for wizard-level programmers only.  Unlike the <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand">MagickWand</a> C API which uses only a few opaque types and accessors, with MagickCore you almost exclusively access the structure members directly.  A description of the MagickCore public methods are found on GitHub:</p>
 
-<ul>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/magick.h">Initialize or Destroy the ImageMagick Environment</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/constitute.h">Constitute an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/composite.h">Composite an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/image.h">Image Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/channel.h">Image Channel Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/color.h">Count the Colors in an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/colormap.h">Colormap Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/colorspace.h">Colorspace Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/distort.h">Image Distortions</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/layer.h">Dealing with Image Layers</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/profile.h">Dealing with Image Profiles</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/quantize.h">Reduce the Number of Unique Colors in an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/histogram.h">Image Histograms</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/segment.h">Segment an Image with Thresholding Fuzzy c-Means</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/resize.h">Resize an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/transform.h">Transform an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/shear.h">Shear or Rotate an Image by an Arbitrary Angle</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/enhance.h">Enhance an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/effect.h">Add an Effect</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/morphology.h">Morphological Erosions, Dilations, Openings, and Closings</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/fx.h">Add a Special Effect</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/decorate.h">Decorate an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/attribute.h">Get/Set an Image Attribute</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/property.h">Get/Set Image Properties</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/statistic.h">Get Image Statistics</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/feature.h">Get Image Features</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/annotate.h">Annotate an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/paint.h">Paint on an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/draw.h">Draw on an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/montage.h">Create an Image Thumbnail</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/fourier.h">Compute the discrete Fourier transform (DFT)</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/compare.h">Compare an Image to a Reconstructed Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/vision.h">Computer Vision</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/display.h">Interactively Display and Edit an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/animate.h">Interactively Animate an Image Sequence</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cipher.h">Convert to and from Cipher Pixels</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/list.h">Working with Image Lists</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/image-view.h">Image View Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache.h">Get or Set Image Pixels</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache-view.h">Working with Cache Views</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/stream.h">The Pixel FIFO</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/blob.h">Read or Write Binary Large OBjects</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/module.h">Loadable Modules</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/signature.h">Compute a Message Digest for an Image</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/registry.h">The Image Registry</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/exception.h">Dealing with Exceptions</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/memory_.h">Memory Allocation</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/resource_.h">Monitor or Limit Resource Consumption</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/monitor.h">Monitor the Progress of an Image Operation</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/version.h.in">Get the Version and Copyrights</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/mime.h">Mime Methods</a></li>
-  <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/deprecate.h">Deprecated Methods</a></li>
-  <li><a href="/exception/">Error and Warning Codes</a></li>
-</ul>
+<div class="container-fluid px-0">
+  <!-- Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <p class="lead text-body-secondary">
+        The <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickCore">MagickCore API</a> is a low-level interface between the C programming language and ImageMagick's core processing libraries. Designed for wizard-level programmers, MagickCore gives you direct access to structure members—unlike the <a href="https://github.com/ImageMagick/ImageMagick/tree/main/MagickWand">MagickWand</a> C API, which uses opaque types and accessors.
+      </p>
+    </div>
+  </div>
 
-<p>After you write your MagickCore program, compile it like this:</p>
+  <!-- API Index Reference -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">MagickCore Public Methods Reference</h2>
+    <p class="text-muted small">Explore headers and function definitions directly on GitHub:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ cc `MagickCore-config --cflags --cppflags` -O2 -o core core.c `MagickCore-config --ldflags --libs`</samp></pre>
+    <div class="card border-0 bg-body-tertiary shadow-sm mb-4">
+      <div class="card-body p-3">
+        <div class="row g-2 small">
+          <div class="col-md-6 col-lg-4">
+            <ul class="list-unstyled mb-0">
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/magick.h" class="text-decoration-none">&bull; Environment Init &amp; Destroy</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/constitute.h" class="text-decoration-none">&bull; Constitute an Image</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/composite.h" class="text-decoration-none">&bull; Composite an Image</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/image.h" class="text-decoration-none">&bull; Core Image Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/channel.h" class="text-decoration-none">&bull; Image Channel Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/color.h" class="text-decoration-none">&bull; Count Image Colors</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/colormap.h" class="text-decoration-none">&bull; Colormap Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/colorspace.h" class="text-decoration-none">&bull; Colorspace Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/distort.h" class="text-decoration-none">&bull; Image Distortions</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/layer.h" class="text-decoration-none">&bull; Dealing with Layers</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/profile.h" class="text-decoration-none">&bull; Image Profiles</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/quantize.h" class="text-decoration-none">&bull; Quantize &amp; Color Reduction</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/histogram.h" class="text-decoration-none">&bull; Image Histograms</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/segment.h" class="text-decoration-none">&bull; Fuzzy c-Means Segmentation</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/resize.h" class="text-decoration-none">&bull; Resize Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/transform.h" class="text-decoration-none">&bull; Transform Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/shear.h" class="text-decoration-none">&bull; Shear or Rotate</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/enhance.h" class="text-decoration-none">&bull; Enhance Methods</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <ul class="list-unstyled mb-0">
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/effect.h" class="text-decoration-none">&bull; Add Effects</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/morphology.h" class="text-decoration-none">&bull; Morphology Operations</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/fx.h" class="text-decoration-none">&bull; Special Effects (FX)</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/decorate.h" class="text-decoration-none">&bull; Decorate Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/attribute.h" class="text-decoration-none">&bull; Get/Set Attributes</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/property.h" class="text-decoration-none">&bull; Get/Set Properties</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/statistic.h" class="text-decoration-none">&bull; Image Statistics</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/feature.h" class="text-decoration-none">&bull; Image Features</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/annotate.h" class="text-decoration-none">&bull; Annotate Image</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/paint.h" class="text-decoration-none">&bull; Paint Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/draw.h" class="text-decoration-none">&bull; Vector Drawing</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/montage.h" class="text-decoration-none">&bull; Thumbnails &amp; Montage</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/fourier.h" class="text-decoration-none">&bull; Discrete Fourier Transform</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/compare.h" class="text-decoration-none">&bull; Compare Images</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/vision.h" class="text-decoration-none">&bull; Computer Vision</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/display.h" class="text-decoration-none">&bull; Interactive Display/Edit</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/animate.h" class="text-decoration-none">&bull; Interactive Animation</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cipher.h" class="text-decoration-none">&bull; Cipher Pixels</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <ul class="list-unstyled mb-0">
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/list.h" class="text-decoration-none">&bull; Image Lists</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/image-view.h" class="text-decoration-none">&bull; Image Views</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache.h" class="text-decoration-none">&bull; Pixel Cache</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache-view.h" class="text-decoration-none">&bull; Cache Views</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/stream.h" class="text-decoration-none">&bull; Pixel FIFO Stream</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/blob.h" class="text-decoration-none">&bull; Binary Large OBjects (BLOB)</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/module.h" class="text-decoration-none">&bull; Loadable Modules</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/signature.h" class="text-decoration-none">&bull; Message Digest Signature</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/registry.h" class="text-decoration-none">&bull; Image Registry</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/exception.h" class="text-decoration-none">&bull; Exception Handling</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/memory_.h" class="text-decoration-none">&bull; Memory Allocation</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/resource_.h" class="text-decoration-none">&bull; Resource Limits</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/monitor.h" class="text-decoration-none">&bull; Progress Monitoring</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/version.h.in" class="text-decoration-none">&bull; Version &amp; Copyright</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/mime.h" class="text-decoration-none">&bull; MIME Type Methods</a></li>
+              <li><a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/deprecate.h" class="text-decoration-none">&bull; Deprecated Methods</a></li>
+              <li><a href="/exception/" class="text-decoration-none">&bull; Error &amp; Warning Codes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>Set the <code>PKG_CONFIG_PATH</code> environment variable if ImageMagick is not in your default system path:</p>
+  <!-- Compilation & Environment Setup -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Compiling MagickCore Programs</h2>
+    <p>Compile your MagickCore C program using <code>MagickCore-config</code> flags:</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig </samp></pre>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ cc `MagickCore-config --cflags --cppflags` -O2 -o core core.c `MagickCore-config --ldflags --libs`</samp></pre>
+      </div>
+    </div>
 
-<p>Here is a example program that utilizes the MagickCore API to get you started, <a href="/source/core.c">core.c</a>. It reads a GIF image, creates a thumbnail, and writes it to disk in the PNG image format.</p>
+    <p class="small text-muted">If ImageMagick is installed outside your system's default path, export <code>PKG_CONFIG_PATH</code>:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig</samp></pre>
+      </div>
+    </div>
+  </section>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;string.h>
-#include &lt;time.h>
-#include &lt;MagickCore/MagickCore.h>
+  <!-- Code Examples Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Code Examples</h2>
+
+    <h3 class="h5 mt-4 mb-3">Example 1: Basic Image Resizing (<a href="/source/core.c">core.c</a>)</h3>
+    <p>This example reads a GIF image, resizes it into a thumbnail, and writes it back as a PNG file:</p>
+
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-4">
+      <div class="card-body p-0">
+        <pre class="overflow-auto p-3 mb-0 font-monospace text-body-secondary small" style="max-height: 60vh;"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;time.h&gt;
+#include &lt;MagickCore/MagickCore.h&gt;
 
 int main(int argc,char **argv)
 {
@@ -134,12 +182,20 @@ int main(int argc,char **argv)
   MagickCoreTerminus();
   return(0);
 }</code></pre>
-<p><a class="anchor" id="image-view"></a>Now lets perform the same contrast enhancement while taking advantage of our dual or quad-core processing system by running the algorithm in parallel utilizing wand views.  The <a href="/source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a> module reads an image, applies sigmoidal non-linearity contrast control, and writes the result to disk just like the previous contrast enhancement program, but now it does its work in parallel (assumes ImageMagick is built with OpenMP support).</p>
+      </div>
+    </div>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;math.h>
-#include &lt;MagickCore/MagickCore.h>
+    <h3 class="h5 mt-4 mb-3" id="image-view">Example 2: Parallel Processing with Wand Views (<a href="/source/core/sigmoidal-contrast.c">sigmoidal-contrast.c</a>)</h3>
+    <p>
+      This program applies sigmoidal non-linearity contrast control across multicore systems in parallel using OpenMP-backed Wand Views:
+    </p>
+
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-4">
+      <div class="card-body p-0">
+        <pre class="overflow-auto p-3 mb-0 font-monospace text-body-secondary small" style="max-height: 60vh;"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+#include &lt;MagickCore/MagickCore.h&gt;
 
 static MagickBooleanType SigmoidalContrast(ImageView *contrast_view,
   const ssize_t y,const int id,void *context)
@@ -164,10 +220,10 @@ static MagickBooleanType SigmoidalContrast(ImageView *contrast_view,
   pixels=GetImageViewAuthenticPixels(contrast_view);
   for (x=0; x &lt; (ssize_t) (extent.width-extent.x); x++)
   {
-    SetPixelRed(pixels,RoundToQuantum(SigmoidalContrast(GetPixelRed(pixels)));
-    SetPixelGreen(pixels,RoundToQuantum(SigmoidalContrast(GetPixelGreen(pixels)));
-    SetPixelBlue(pixels,RoundToQuantum(SigmoidalContrast(GetPixelBlue(pixels)));
-    SetPixelOpacity(pixels,RoundToQuantum(SigmoidalContrast(GetPixelOpacity(pixels)));
+    SetPixelRed(pixels,RoundToQuantum(SigmoidalContrast(GetPixelRed(pixels))));
+    SetPixelGreen(pixels,RoundToQuantum(SigmoidalContrast(GetPixelGreen(pixels))));
+    SetPixelBlue(pixels,RoundToQuantum(SigmoidalContrast(GetPixelBlue(pixels))));
+    SetPixelOpacity(pixels,RoundToQuantum(SigmoidalContrast(GetPixelOpacity(pixels))));
     pixels++;
   }
   indexes=GetImageViewAuthenticIndexes(contrast_view);
@@ -181,7 +237,6 @@ int main(int argc,char **argv)
 {
 #define ThrowImageException(image) \
 { \
- \
   CatchException(exception); \
   if (contrast_image != (Image *) NULL) \
     contrast_image=DestroyImage(contrast_image); \
@@ -191,10 +246,8 @@ int main(int argc,char **argv)
 { \
   char \
     *description; \
- \
   ExceptionType \
     severity; \
- \
   description=GetImageViewException(view,&amp;severity); \
   (void) fprintf(stderr,"%s %s %lu %s\n",GetMagickModule(),description); \
   description=DestroyString(description); \
@@ -226,7 +279,7 @@ int main(int argc,char **argv)
   */
   MagickCoreGenesis(*argv,MagickTrue);
   image_info=AcquireImageInfo();
-  (void) CopyMagickString(image_info->filename,argv[1],MaxTextExtent);
+  (void) CopyMagickString(image_info-&gt;filename,argv[1],MaxTextExtent);
   exception=AcquireExceptionInfo();
   contrast_image=ReadImage(image_info,exception);
   if (contrast_image == (Image *) NULL)
@@ -253,9 +306,24 @@ int main(int argc,char **argv)
   MagickCoreTerminus();
   return(0);
 }</code></pre>
-<p><code>MagickCoreTerminus()</code> is a function in the ImageMagick library that is used to clean up and release resources when shutting down an application that uses ImageMagick. This function should be called in the primary thread of the application's process during the shutdown process. It's crucial that this function is invoked only after any threads that are using ImageMagick functions have terminated.</p>
+      </div>
+    </div>
+  </section>
 
-<p>ImageMagick might internally use threads via OpenMP (a method for parallel programming). As a result, it's important to ensure that any function calls into ImageMagick have completed before calling <code>MagickCoreTerminus()</code>. This prevents issues with OpenMP worker threads accessing resources that are destroyed by this termination function.</p>
+  <!-- Cleanup & OpenMP Resource Termination -->
+  <section class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">Resource Cleanup and OpenMP Considerations</h2>
+    <p>
+      The <code>MagickCoreTerminus()</code> function cleans up and releases internal resources upon application shutdown. Call this in the main application thread only after all secondary worker threads using ImageMagick functions have completed.
+    </p>
 
-<p>If OpenMP is being used (starting from version 5.0), the OpenMP implementation itself handles starting and stopping worker threads and allocating and freeing resources using its own methods. This means that after calling <code>MagickCoreTerminus()</code>, some OpenMP resources and worker threads might still remain allocated. To address this, the function <code>omp_pause_resource_all(omp_pause_hard)</code> can be invoked. This function, introduced in OpenMP version 5.0, ensures that any resources allocated by OpenMP (such as threads and thread-specific memory) are freed. It's recommended to call this function after <code>MagickCoreTerminus()</code> has completed its execution.</p>
+    <div class="card border-0 bg-body-tertiary shadow-sm mb-3">
+      <div class="card-body">
+        <h4 class="h6 fw-bold mb-2">OpenMP Resource Deallocation (v5.0+)</h4>
+        <p class="small text-muted mb-0">
+          When OpenMP threading is used, the runtime handles worker thread lifecycles and thread-local memory allocation. Consequently, some OpenMP worker threads and memory allocations may persist after <code>MagickCoreTerminus()</code> completes. To release these remaining resources, call <code>omp_pause_resource_all(omp_pause_hard)</code> immediately following <code>MagickCoreTerminus()</code>.
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
