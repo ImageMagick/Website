@@ -2,47 +2,86 @@
 title: "Advanced Windows Source Installation"
 description: "Build ImageMagick from source on Windows with Visual Studio, configure dependencies, and customize advanced build options."
 ---
-<div>
-<p class="lead">This document describes the requirements and instructions to build ImageMagick for Windows on your own machine.</p>
 
-<h2>Requirements</h2>
-<ul>
-<li>Visual Studio 2017 (or newer)</li>
-<li>Git for Windows</li>
-<li>AMD APP SDK (optional for OpenCL support)</li>
-</ul>
+<div class="container-fluid px-0">
+  <!-- Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <p class="lead text-body-secondary">
+        This document outlines the requirements and step-by-step instructions needed to build ImageMagick for Windows from source on your own machine.
+      </p>
+    </div>
+  </div>
 
-<h2>Install Visual Studio dependencies</h2>
-<p>To build ImageMagick with Visual Studio the following components should be installed:</p>
+  <!-- Requirements Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Requirements</h2>
+    <div class="card bg-body-tertiary border-0 shadow-sm">
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Visual Studio 2017 (or newer)</li>
+          <li>Git for Windows</li>
+          <li>AMD APP SDK <span class="text-muted small">(optional for OpenCL support)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<ul>
-<li>Desktop development with C++ (workload)</li>
-<li>Visual C++ ATL for x86 and x64</li>
-<li>Visual C++ MFC for x86 and x64</li>
-<li>Windows XP support for C++ (optional if the output needs to run on Windows XP)</li>
-</ul>
+  <!-- Visual Studio Dependencies Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Install Visual Studio Dependencies</h2>
+    <p>To successfully build ImageMagick with Visual Studio, ensure the following components are installed:</p>
 
-<p>Naming of these components might differ between version of Visual Studio. The example above use the Visual Studio 2017 names.</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Desktop development with C++ (workload)</li>
+          <li>Visual C++ ATL for x86 and x64</li>
+          <li>Visual C++ MFC for x86 and x64</li>
+          <li>Windows XP support for C++ <span class="text-muted small">(optional, if output needs to run on Windows XP)</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="small text-muted mb-0">
+      Component names may vary depending on your specific version of Visual Studio; the example above reflects Visual Studio 2017 naming conventions.
+    </p>
+  </section>
 
-<h2>Clone the dependencies</h2>
-<p>The ImageMagick library is built with a number of third party libraries. Run <code>CloneRepositories.IM7.cmd</code> to clone
-these libraries and the ImageMagick library. To clone the legacy ImageMagick 6 library and it's dependencies
-run <code>CloneRepositories.IM6.cmd</code>.</p>
+  <!-- Clone Dependencies Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Clone the Dependencies</h2>
+    <p>
+      The ImageMagick library relies on several third-party libraries. Run <code>CloneRepositories.IM7.cmd</code> to clone these libraries along with the main ImageMagick repository. If you need the legacy ImageMagick 6 library and its corresponding dependencies instead, run <code>CloneRepositories.IM6.cmd</code>.
+    </p>
+  </section>
 
-<h2>Build Configure.exe</h2>
-<p>One of the folders in this project is called <code>Configure</code>. This folder contains the solution file <code>Configure.sln</code>
-for the latest 2022 version of Visual Studio, and <code>Configure.2017.sln</code> for older versions. Open one of those and
-start a <code>Release</code> build of the project. This will create a file called <code>Configure.exe</code> in the folder. Running this
-program will start a Wizard that allows configuration of ImageMagick and its individual components.</p>
+  <!-- Build Configure.exe Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Build Configure.exe</h2>
+    <p>
+      The project includes a <code>Configure</code> folder containing solution files: use <code>Configure.sln</code> for the latest 2022 version of Visual Studio, or <code>Configure.2017.sln</code> for older versions. Open the appropriate solution and initiate a <code>Release</code> build. This generates a <code>Configure.exe</code> utility in the folder, which launches a configuration wizard to customize ImageMagick and its components.
+    </p>
+  </section>
 
-<h2>Build ImageMagick</h2>
-<p>Depending on which options where chosen when running <code>configure.exe</code> one of the following solutions will be created in the root of the repository:</p>
+  <!-- Build ImageMagick Section -->
+  <section class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">Build ImageMagick</h2>
+    <p>
+      Depending on the options selected during the <code>configure.exe</code> wizard, one of the following solution files will be created in your repository root:
+    </p>
 
-<ul>
-<li>IM7.Dynamic.sln (Dynamic Multi-threaded DLL runtimes)</li>
-<li>IM7.StaticDLL.sln (Static Multi-threaded DLL runtimes)</li>
-<li>IM7.Static.sln (Static Multi-threaded runtimes)</li>
-</ul>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <ul class="mb-0 font-monospace small">
+          <li>IM7.Dynamic.sln <span class="text-muted font-sans-serif">(Dynamic Multi-threaded DLL runtimes)</span></li>
+          <li>IM7.StaticDLL.sln <span class="text-muted font-sans-serif">(Static Multi-threaded DLL runtimes)</span></li>
+          <li>IM7.Static.sln <span class="text-muted font-sans-serif">(Static Multi-threaded runtimes)</span></li>
+        </ul>
+      </div>
+    </div>
 
-<p>Open the solution to start building ImageMagick. The binaries will be created in the <code>Output\bin</code> folder.</p>
+    <p class="mb-0">
+      Open your chosen solution to begin compiling ImageMagick. Upon completion, your compiled binaries will be located in the <code>Output\bin</code> folder.
+    </p>
+  </section>
 </div>
