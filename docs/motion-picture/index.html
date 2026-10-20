@@ -2,44 +2,91 @@
 title: "Motion Picture Digital Images"
 description: "Learn how ImageMagick supports motion picture workflows with DPX, Cineon, and other film formats. Explore tools for reading, writing, and processing high‑resolution frames used in professional cinema production."
 ---
-<div>
-<p class="text-center"><a href="#log">Log Format</a> • <a href="#properties">DPX Properties</a> • <a href="#settings">DPX Settings</a></p>
 
-<p class="lead">DPX (SMPTE 268M-2003) - This format is used in Motion Picture and Effects industry that makes particular use of the extensive header information and the format's flexibility in being able to handle high dynamic range and logarithmic color values at a variety of bit depths using RGB or YCbCr pixel descriptions.  It is based on, but largely supersedes, Kodak's Cineon format that has a more film specific header.</p>
+<div class="container-fluid px-0">
+  <!-- Quick Navigation & Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap gap-2 pt-2 pb-3 border-bottom mb-3">
+        <a href="#log" class="btn btn-outline-secondary btn-sm">Log Format</a>
+        <a href="#properties" class="btn btn-outline-secondary btn-sm">DPX Properties</a>
+        <a href="#settings" class="btn btn-outline-secondary btn-sm">DPX Settings</a>
+      </div>
+      <p class="lead text-body-secondary">
+        DPX (SMPTE 268M-2003) is widely used in the motion picture and visual effects industry, leveraging extensive header information and the flexibility to handle high dynamic range and logarithmic color values across various bit depths using RGB or YCbCr pixel descriptions. It is based on, and largely supersedes, Kodak's Cineon format[cite: 15].
+      </p>
+      <p class="text-muted small">
+        Typical workflows involve scanning film for post-production. Each frame is stored as an individual DPX file ranging from 2K (2048px wide) up to 8K (8192px wide for IMAX) at 8 to 64 bits per color component[cite: 15]. Sequences are processed via compositing software before being recorded back to tape or projected onto film[cite: 15].
+      </p>
+    </div>
+  </div>
 
-<p>One example of it's use includes scanning film for use in post production. Each frame is stored as an individual DPX file ranging from 2k (2048 pixels wide) to 8k (8192 pixels wide - for IMAX frames) at anything between 8 to 64 bits per color component. A sequence of these might then be processed using compositing software, altering the color or adding visual effects. Once complete they might then be recorded digitally to tape or projected back on to film.</p>
+  <!-- Technical Context Section -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">High Dynamic Range &amp; Metadata</h2>
+    <p>
+      The header can contain production-specific film or television data. Television headers can store SMPTE timecodes to allow seamless replacement of shots exported as DPX sequences[cite: 15], while film headers preserve reel information and camera settings[cite: 15]. These details follow the images throughout post-production pipelines[cite: 15].
+    </p>
+  </section>
 
-<p>The color values for each pixel are often stored logarithmically (particularly if the sequence is destined to be transferred back on to film) which more naturally reflects the density of how color information is stored in the emulsion on the original film. When viewed without alteration, logarithmic files appear to have very low contrast and requires a 'look up table' to translate the logarithmic image to something that resembles what you might see if the image was transferred back to film and projected in a cinema. Apart from making the image linear (like most typical computer images) and adjusting the gamma level this table sets where the black and white point lies.</p>
+  <!-- Log Format Section -->
+  <section id="log" class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Logarithmic Color Format</h2>
+    <p>
+      Color values are often stored logarithmically to mirror the density of color information in film emulsion. Unaltered logarithmic files appear low-contrast and require a look-up table (LUT) for cinematic projection[cite: 15]. Beyond linearizing the image and adjusting gamma, LUTs define black and white points[cite: 15].
+    </p>
 
-<p>For a 10 bit logarithmic image where each color component value ranges from 0 to 1023 the black and white points are normally set at 95 for black and 685 for white. What this means is that the logarithmic file stores color values that are lighter than what the linear version will display as pure white and darker than what it will display as pure black. This extra information therefore remains available for an effects artists who might wish to alter the brightness of the image after it has been stored as a DPX file.</p>
+    <div class="row g-4 text-center my-3">
+      <div class="col-md-6">
+        <div class="card h-100 border-0 bg-body-tertiary shadow-sm">
+          <div class="card-body p-2">
+            <a href="/image/bluebells_log.jpg"><img src="/image/bluebells_log.jpg" class="img-fluid rounded" alt="bluebells-log" /></a>
+            <p class="small text-muted mt-2 mb-0">Unaltered Logarithmic Image (Low Contrast)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 bg-body-tertiary shadow-sm">
+          <div class="card-body p-2">
+            <a href="/image/bluebells_lin.jpg"><img src="/image/bluebells_lin.jpg" class="img-fluid rounded" alt="bluebells-linear" /></a>
+            <p class="small text-muted mt-2 mb-0">Corrected / Linearized Image</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<p>As an example, had this information been lost, reducing the brightness of an image uniformly would result in highlights becoming darker, whereas with this extra information the highlights instead reduce in size and start showing details that were previously too bright to be seen. The latter is far closer to what happens in the real world.</p>
+    <p class="mt-3">
+      For 10-bit logarithmic images ranging from 0 to 1023, black and white points are typically set to 95 and 685, respectively. This stores color values lighter than pure white and darker than pure black, preserving extra highlight and shadow data for downstream grading[cite: 15].
+    </p>
 
-<p>The header can contain Film and/or Television specific data related to a production. For example the television header can contain a SMPTE time code so that shots exported as a DPX sequence from a production's edit can be easily replaced once any effects have been added. The film header holds information about the reel of film the frames originated from and various camera settings that were used while filming.  All these details usually stay with the images as they are passed between post-production companies.</p>
+    <div class="row g-4 text-center my-3">
+      <div class="col-md-6">
+        <div class="card h-100 border-0 bg-body-tertiary shadow-sm">
+          <div class="card-body p-2">
+            <a href="/image/bluebells_clipped.jpg"><img src="/image/bluebells_clipped.jpg" class="img-fluid rounded" alt="bluebells-clipped" /></a>
+            <p class="small text-muted mt-2 mb-0">Clipped Highlights (Standard Reduction)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 bg-body-tertiary shadow-sm">
+          <div class="card-body p-2">
+            <a href="/image/bluebells_darker.jpg"><img src="/image/bluebells_darker.jpg" class="img-fluid rounded" alt="bluebells-darker" /></a>
+            <p class="small text-muted mt-2 mb-0">Preserved Highlight Details (DPX Headroom)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2><a class="anchor" id="log"></a>Log Format</h2>
+  <!-- DPX Properties Section -->
+  <section id="properties" class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">DPX Properties</h2>
+    <p>ImageMagick supports a comprehensive set of DPX metadata properties:</p>
 
-<p>The color values for each pixel are often stored logarithmically (particularly if the sequence is destined to be transferred back on to film) which more naturally reflects the density of how color information is stored in the emulsion on the original film. When viewed without alteration logarithmic files appear to have very low contrast (leftmost image), and so require a 'look up table' to translate the logarithmic image to something that resembles what you might see if the image was transferred back to film and projected in a cinema (rightmost image). Apart from making the image linear (like most typical computer images) and adjusting the gamma level this table sets where the black and white point lies.</p>
-
-<ul>
-  <a href="/image/bluebells_log.jpg"><img src="/image/bluebells_log.jpg" width="384" height="288" class="image-slices" alt="bluebells-log" /></a>
-  <a href="/image/bluebells_lin.jpg"><img src="/image/bluebells_lin.jpg" width="384" height="288" class="image-slices" alt="bluebells-linear" /></a>
-</ul>
-
-<p>For a 10 bit logarithmic image where each color component value ranges from 0 to 1023 the black and white points are normally set at 95 for black and 685 for white. What this means is that the logarithmic file stores color values that are lighter than what the linear version will display as pure white and darker than what it will display as pure black. This extra information therefore remains available for an effects artists who might wish to alter the brightness of the image after it has been stored as a DPX file.</p>
-
-<p>As an example, had this information been lost, reducing the brightness of a linear image uniformly would result in highlights becoming darker (leftmost image), whereas with this extra information the highlights instead reduce in size and start showing details that were previously too bright to be seen (rightmost image). The latter is far closer to what happens in the real world.</p>
-
-<ul>
-  <a href="/image/bluebells_clipped.jpg"><img src="/image/bluebells_clipped.jpg" width="384" height="288" class="image-slices" alt="bluebells-clipped" /></a>
-  <a href="/image/bluebells_darker.jpg"><img src="/image/bluebells_darker.jpg" width="384" height="288" class="image-slices" alt="bluebells-darker" /></a>
-</ul>
-
-<h2><a class="anchor" id="properties"></a>DPX Properties</h2>
-
-<p>ImageMagick supports these DPX properties:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>dpx:file.copyright
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body p-0">
+        <pre class="overflow-auto p-3 mb-0 font-monospace text-body-secondary small" style="max-height: 45vh;"><code>dpx:file.copyright
 dpx:file.creator
 dpx:file.filename
 dpx:file.project
@@ -84,36 +131,50 @@ dpx:television.vertical_sample_rate
 dpx:television.video_signal
 dpx:television.white_level
 dpx:user.id
-dpx:user.data
-</code></pre>
+dpx:user.data</code></pre>
+      </div>
+    </div>
 
-<p>Look for any user data as the <code>dpx:user-data</code> image profile.</p>
+    <p class="small text-muted">User data can be accessed via the <code>dpx:user-data</code> image profile.</p>
 
-<p> To determine which properties are associated with your DPX image, use this command for example:</p>
+    <h3 class="h5 mt-4 mb-3">Command-Line Inspection &amp; Modification</h3>
+    <p>Inspect all associated properties using verbose output:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick identify -verbose bluebells.dpx</samp></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick identify -verbose bluebells.dpx
-</samp></pre>
+    <p>Query a specific property format:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick identify -format "%[dpx:television.time.code]" bluebells.dpx</samp></pre>
+      </div>
+    </div>
 
-<p>To identify a particular property, try this:</p>
+    <p>Modify and write a property value:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx</samp></pre>
+      </div>
+    </div>
+  </section>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick identify -format "%[dpx:television.time.code]" bluebells.dpx
-</samp></pre>
+  <!-- DPX Settings Section -->
+  <section id="settings" class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">DPX Settings</h2>
+    <p>
+      Use <a href="/command-line-options/#set">-set</a> to specify gamma, film gamma, or reference black and white points:
+    </p>
 
-<p>Finally, to set a property:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick bluebells.dpx -define dpx:television.time.code=10:00:02:15 bluebells-001.dpx
-</samp></pre>
-
-<h2><a class="anchor" id="settings"></a>DPX Settings</h2>
-
-<p>Use <a href="/command-line-options/#set">-set</a> to specify the image or film gamma or black and white points.  For example use:
-</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-set gamma 1.7
+    <div class="card bg-body-tertiary border-0 shadow-sm">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>-set gamma 1.7
 -set film-gamma 0.6
 -set reference-black 95
 -set reference-white 685
--set profile dpx:user.data
-</code></pre>
-
+-set profile dpx:user.data</code></pre>
+      </div>
+    </div>
+  </section>
 </div>
