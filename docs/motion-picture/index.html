@@ -13,10 +13,10 @@ description: "Learn how ImageMagick supports motion picture workflows with DPX, 
         <a href="#settings" class="btn btn-outline-secondary btn-sm">DPX Settings</a>
       </div>
       <p class="lead text-body-secondary">
-        DPX (SMPTE 268M-2003) is widely used in the motion picture and visual effects industry, leveraging extensive header information and the flexibility to handle high dynamic range and logarithmic color values across various bit depths using RGB or YCbCr pixel descriptions. It is based on, and largely supersedes, Kodak's Cineon format[cite: 15].
+        DPX (SMPTE 268M-2003) is widely used in the motion picture and visual effects industry, leveraging extensive header information and the flexibility to handle high dynamic range and logarithmic color values across various bit depths using RGB or YCbCr pixel descriptions. It is based on, and largely supersedes, Kodak's Cineon format.
       </p>
       <p class="text-muted small">
-        Typical workflows involve scanning film for post-production. Each frame is stored as an individual DPX file ranging from 2K (2048px wide) up to 8K (8192px wide for IMAX) at 8 to 64 bits per color component[cite: 15]. Sequences are processed via compositing software before being recorded back to tape or projected onto film[cite: 15].
+        Typical workflows involve scanning film for post-production. Each frame is stored as an individual DPX file ranging from 2K (2048px wide) up to 8K (8192px wide for IMAX) at 8 to 64 bits per color component. Sequences are processed via compositing software before being recorded back to tape or projected onto film.
       </p>
     </div>
   </div>
@@ -25,7 +25,7 @@ description: "Learn how ImageMagick supports motion picture workflows with DPX, 
   <section class="mb-5">
     <h2 class="h4 pb-2 border-bottom mb-3">High Dynamic Range &amp; Metadata</h2>
     <p>
-      The header can contain production-specific film or television data. Television headers can store SMPTE timecodes to allow seamless replacement of shots exported as DPX sequences[cite: 15], while film headers preserve reel information and camera settings[cite: 15]. These details follow the images throughout post-production pipelines[cite: 15].
+      The header can contain production-specific film or television data. Television headers can store SMPTE timecodes to allow seamless replacement of shots exported as DPX sequences, while film headers preserve reel information and camera settings. These details follow the images throughout post-production pipelines.
     </p>
   </section>
 
@@ -33,7 +33,7 @@ description: "Learn how ImageMagick supports motion picture workflows with DPX, 
   <section id="log" class="mb-5">
     <h2 class="h4 pb-2 border-bottom mb-3">Logarithmic Color Format</h2>
     <p>
-      Color values are often stored logarithmically to mirror the density of color information in film emulsion. Unaltered logarithmic files appear low-contrast and require a look-up table (LUT) for cinematic projection[cite: 15]. Beyond linearizing the image and adjusting gamma, LUTs define black and white points[cite: 15].
+      Color values are often stored logarithmically to mirror the density of color information in film emulsion. Unaltered logarithmic files appear low-contrast and require a look-up table (LUT) for cinematic projection. Beyond linearizing the image and adjusting gamma, LUTs define black and white points.
     </p>
 
     <div class="row g-4 text-center my-3">
@@ -56,7 +56,7 @@ description: "Learn how ImageMagick supports motion picture workflows with DPX, 
     </div>
 
     <p class="mt-3">
-      For 10-bit logarithmic images ranging from 0 to 1023, black and white points are typically set to 95 and 685, respectively. This stores color values lighter than pure white and darker than pure black, preserving extra highlight and shadow data for downstream grading[cite: 15].
+      For 10-bit logarithmic images ranging from 0 to 1023, black and white points are typically set to 95 and 685, respectively. This stores color values lighter than pure white and darker than pure black, preserving extra highlight and shadow data for downstream grading.
     </p>
 
     <div class="row g-4 text-center my-3">
