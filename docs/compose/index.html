@@ -25,15 +25,15 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     </a>
   </div>
   <p class="lead text-body-secondary mb-3">
-    This page describes the image composition methods that define how two images are merged together during operations combining a 'source' (overlay) image with a 'destination' (background) image[cite: 2]. For the Command Line API, the method is normally selected with the <a href="/command-line-options/#compose" class="text-decoration-none fw-semibold">-compose</a> setting, and applied by operators such as <a href="/command-line-options/#composite" class="text-decoration-none">-composite</a>, <a href="/command-line-options/#layers" class="text-decoration-none">-layers</a>, <a href="/command-line-options/#flatten" class="text-decoration-none">-flatten</a>, <a href="/command-line-options/#mosaic" class="text-decoration-none">-mosaic</a>, <a href="/command-line-options/#draw" class="text-decoration-none">-draw</a>, and others[cite: 2].
+    This page describes the image composition methods that define how two images are merged together during operations combining a 'source' (overlay) image with a 'destination' (background) image. For the Command Line API, the method is normally selected with the <a href="/command-line-options/#compose" class="text-decoration-none fw-semibold">-compose</a> setting, and applied by operators such as <a href="/command-line-options/#composite" class="text-decoration-none">-composite</a>, <a href="/command-line-options/#layers" class="text-decoration-none">-layers</a>, <a href="/command-line-options/#flatten" class="text-decoration-none">-flatten</a>, <a href="/command-line-options/#mosaic" class="text-decoration-none">-mosaic</a>, <a href="/command-line-options/#draw" class="text-decoration-none">-draw</a>, and others.
   </p>
   
   <div class="p-4 bg-body-tertiary border rounded-3 mb-4">
     <p class="mb-2">
-      Most alpha-blending operators and lighting modes follow the W3C <a href="https://www.w3.org/TR/SVGCompositing/" target="_blank" class="text-decoration-none">SVG Compositing Specification</a>, extending SVG 1.1 and 1.2 with full Porter–Duff alpha operators[cite: 2]. ImageMagick implements identical mathematical results to SVG, PDF, and modern graphics libraries[cite: 2].
+      Most alpha-blending operators and lighting modes follow the W3C <a href="https://www.w3.org/TR/SVGCompositing/" target="_blank" class="text-decoration-none">SVG Compositing Specification</a>, extending SVG 1.1 and 1.2 with full Porter–Duff alpha operators. ImageMagick implements identical mathematical results to SVG, PDF, and modern graphics libraries.
     </p>
     <p class="mb-0 text-body-secondary small">
-      Composition terminology uses abstract values like <var>QuantumRange</var> and opacity ranging from <var>opaque</var> to <var>transparent</var>[cite: 2]. Method names are case-insensitive and allow <code>_</code> or <code>-</code> separators (e.g., <code>Dst-Over</code> equals <code>dstover</code>)[cite: 2].
+      Composition terminology uses abstract values like <var>QuantumRange</var> and opacity ranging from <var>opaque</var> to <var>transparent</var>. Method names are case-insensitive and allow <code>_</code> or <code>-</code> separators (e.g., <code>Dst-Over</code> equals <code>dstover</code>).
     </p>
   </div>
 </div>
@@ -44,7 +44,7 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     <a href="#duff-porter" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
   </div>
   <p class="text-body-secondary mb-3">
-    The following twelve classical Porter–Duff operators defined by the SVG 1.2 standard merge two images purely according to transparency[cite: 2].
+    The following twelve classical Porter–Duff operators defined by the SVG 1.2 standard merge two images purely according to transparency.
   </p>
   <div class="card im-card overflow-hidden shadow-sm mb-4">
     <div class="table-responsive" style="max-height: 65vh;">
@@ -58,58 +58,58 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">clear</code></td>
-            <td class="font-sans">Both color and alpha of the destination are cleared. Neither source nor destination is used as input (except meta-data). Result is fully transparent[cite: 2].</td>
+            <td class="font-sans">Both color and alpha of the destination are cleared. Neither source nor destination is used as input (except meta-data). Result is fully transparent.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">src</code></td>
-            <td class="font-sans">The source is copied to the destination, completely replacing it. Un-overlaid areas are cleared to transparency[cite: 2].</td>
+            <td class="font-sans">The source is copied to the destination, completely replacing it. Un-overlaid areas are cleared to transparency.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">dst</code></td>
-            <td class="font-sans">The destination is left untouched. Source image is ignored (no-op for color data, useful for testing)[cite: 2].</td>
+            <td class="font-sans">The destination is left untouched. Source image is ignored (no-op for color data, useful for testing).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">src-over</code></td>
-            <td class="font-sans">Source composited over destination. This is the default alpha-blending method when unspecified[cite: 2].</td>
+            <td class="font-sans">Source composited over destination. This is the default alpha-blending method when unspecified.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">dst-over</code></td>
-            <td class="font-sans">Destination composited over source. Places source <em>under</em> destination; ideal for backgrounds or drop shadows[cite: 2].</td>
+            <td class="font-sans">Destination composited over source. Places source <em>under</em> destination; ideal for backgrounds or drop shadows.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">src-in</code></td>
-            <td class="font-sans">Part of source inside destination shape replaces destination. Everything outside is cleared[cite: 2].</td>
+            <td class="font-sans">Part of source inside destination shape replaces destination. Everything outside is cleared.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">dst-in</code></td>
-            <td class="font-sans">Part of destination inside source shape replaces destination. Convenient for alpha masks[cite: 2].</td>
+            <td class="font-sans">Part of destination inside source shape replaces destination. Convenient for alpha masks.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">src-out</code></td>
-            <td class="font-sans">Part of source outside destination shape replaces destination. Overlapping region cleared[cite: 2].</td>
+            <td class="font-sans">Part of source outside destination shape replaces destination. Overlapping region cleared.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">dst-out</code></td>
-            <td class="font-sans">Part of destination outside source shape replaces destination ("punched out" hole)[cite: 2].</td>
+            <td class="font-sans">Part of destination outside source shape replaces destination ("punched out" hole).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">src-atop</code></td>
-            <td class="font-sans">Part of source inside destination shape is composited onto destination, keeping destination shape/alpha[cite: 2].</td>
+            <td class="font-sans">Part of source inside destination shape is composited onto destination, keeping destination shape/alpha.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">dst-atop</code></td>
-            <td class="font-sans">Part of destination inside source shape replaces destination. Result keeps source shape and destination colors[cite: 2].</td>
+            <td class="font-sans">Part of destination inside source shape replaces destination. Result keeps source shape and destination colors.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">xor</code></td>
-            <td class="font-sans">Combines parts of source and destination outside their overlap. Overlapping area is cleared[cite: 2].</td>
+            <td class="font-sans">Combines parts of source and destination outside their overlap. Overlapping area is cleared.</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   <p class="text-body-secondary small mb-3">
-    Shorthand notes: <code class="text-primary">Src-</code> prefixes can be omitted (e.g., <code>Over</code>, <code>In</code>, <code>Out</code>, <code>ATop</code>)[cite: 2]. Un-overlaid clearing behavior for <code>Clear</code>, <code>Src</code>, <code>Src-In</code>, <code>Dst-In</code>, <code>Src-Out</code>, and <code>Dst-ATop</code> can be disabled via <code class="text-primary">-define compose:outside-overlay=false</code>[cite: 2].
+    Shorthand notes: <code class="text-primary">Src-</code> prefixes can be omitted (e.g., <code>Over</code>, <code>In</code>, <code>Out</code>, <code>ATop</code>). Un-overlaid clearing behavior for <code>Clear</code>, <code>Src</code>, <code>Src-In</code>, <code>Dst-In</code>, <code>Src-Out</code>, and <code>Dst-ATop</code> can be disabled via <code class="text-primary">-define compose:outside-overlay=false</code>.
   </p>
   <!-- CLI Example 1 -->
   <div class="terminal-card mb-3">
@@ -153,7 +153,7 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     <a href="#mathematical" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
   </div>
   <p class="text-body-secondary mb-3">
-    These methods combine color channels using arithmetic or comparison formulas rather than transparency alone[cite: 2]. Includes SVG 1.2 separable blend modes like <code>Multiply</code>, <code>Screen</code>, <code>Darken</code>, <code>Lighten</code>, <code>Difference</code>, and <code>Exclusion</code>[cite: 2].
+    These methods combine color channels using arithmetic or comparison formulas rather than transparency alone. Includes SVG 1.2 separable blend modes like <code>Multiply</code>, <code>Screen</code>, <code>Darken</code>, <code>Lighten</code>, <code>Difference</code>, and <code>Exclusion</code>.
   </p>
   <div class="card im-card overflow-hidden shadow-sm mb-4">
     <div class="table-responsive" style="max-height: 65vh;">
@@ -167,98 +167,98 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">multiply</code></td>
-            <td class="font-sans">Source multiplied by destination. Result is at least as dark as inputs. Black produces black; white leaves color unchanged[cite: 2].</td>
+            <td class="font-sans">Source multiplied by destination. Result is at least as dark as inputs. Black produces black; white leaves color unchanged.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">divide</code></td>
-            <td class="font-sans">Divides pixel values of one input image by another channel by channel for normalization or contrast[cite: 2].</td>
+            <td class="font-sans">Divides pixel values of one input image by another channel by channel for normalization or contrast.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">screen</code></td>
-            <td class="font-sans">Complements multiplied, then complemented again. Result is at least as light as inputs (mathematical opposite of multiply)[cite: 2].</td>
+            <td class="font-sans">Complements multiplied, then complemented again. Result is at least as light as inputs (mathematical opposite of multiply).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">bumpmap</code></td>
-            <td class="font-sans">Source intensity multiplied with destination color using single luminance to shade destination (great for embossed textures)[cite: 2].</td>
+            <td class="font-sans">Source intensity multiplied with destination color using single luminance to shade destination (great for embossed textures).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">divide-dst</code></td>
-            <td class="font-sans">True mathematical division of destination by source (<var>Dc / Sc</var>). Equal colors yield white (1.0). Efficient built-in background removal[cite: 2].</td>
+            <td class="font-sans">True mathematical division of destination by source (<var>Dc / Sc</var>). Equal colors yield white (1.0). Efficient built-in background removal.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">divide-src</code></td>
-            <td class="font-sans">Reverse of divide-dst: divides source by destination (<var>Sc / Dc</var>)[cite: 2].</td>
+            <td class="font-sans">Reverse of divide-dst: divides source by destination (<var>Sc / Dc</var>).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">plus</code></td>
-            <td class="font-sans">Source added to destination with alpha channels added. Exceeding <var>QuantumRange</var> is clamped to white[cite: 2].</td>
+            <td class="font-sans">Source added to destination with alpha channels added. Exceeding <var>QuantumRange</var> is clamped to white.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">add<br/><span class="text-muted">(modulus-add)</span></code></td>
-            <td class="font-sans">Like plus, but exceeding <var>QuantumRange</var> wraps around using modulus arithmetic. Transparent areas remain transparent[cite: 2].</td>
+            <td class="font-sans">Like plus, but exceeding <var>QuantumRange</var> wraps around using modulus arithmetic. Transparent areas remain transparent.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">minus<br/><span class="text-muted">(minus-dst)</span></code></td>
-            <td class="font-sans">Subtracts source color from destination (<var>Dc - Sc</var>) with negative results clamped to black[cite: 2].</td>
+            <td class="font-sans">Subtracts source color from destination (<var>Dc - Sc</var>) with negative results clamped to black.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">minus-src</code></td>
-            <td class="font-sans">Reverse of minus-dst: subtracts destination from source (<var>Sc - Dc</var>)[cite: 2].</td>
+            <td class="font-sans">Reverse of minus-dst: subtracts destination from source (<var>Sc - Dc</var>).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">subtract<br/><span class="text-muted">(modulus-subtract)</span></code></td>
-            <td class="font-sans">Subtracts source from destination, wrapping negative results with modulus arithmetic rather than clamping[cite: 2].</td>
+            <td class="font-sans">Subtracts source from destination, wrapping negative results with modulus arithmetic rather than clamping.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">difference</code></td>
-            <td class="font-sans">Absolute difference between colors. White inverts destination; black produces no change; identical colors produce black[cite: 2].</td>
+            <td class="font-sans">Absolute difference between colors. White inverts destination; black produces no change; identical colors produce black.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">exclusion</code></td>
-            <td class="font-sans">Similar to difference but lower in contrast[cite: 2].</td>
+            <td class="font-sans">Similar to difference but lower in contrast.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">darken</code></td>
-            <td class="font-sans">Selects darker of destination and source channel-by-channel[cite: 2].</td>
+            <td class="font-sans">Selects darker of destination and source channel-by-channel.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">lighten</code></td>
-            <td class="font-sans">Selects lighter of destination and source channel-by-channel[cite: 2].</td>
+            <td class="font-sans">Selects lighter of destination and source channel-by-channel.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">darken-intensity</code></td>
-            <td class="font-sans">Compares overall luminance rather than channels; keeps whole pixel that is darker, preserving hue[cite: 2].</td>
+            <td class="font-sans">Compares overall luminance rather than channels; keeps whole pixel that is darker, preserving hue.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">lighten-intensity</code></td>
-            <td class="font-sans">Compares overall luminance; keeps whole pixel that is lighter[cite: 2].</td>
+            <td class="font-sans">Compares overall luminance; keeps whole pixel that is lighter.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">negate</code></td>
-            <td class="font-sans">Opposite of difference; intermediate colors become brighter instead of darker[cite: 2].</td>
+            <td class="font-sans">Opposite of difference; intermediate colors become brighter instead of darker.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">reflect</code></td>
-            <td class="font-sans">Related to color-dodge for adding shiny objects or bright light zones[cite: 2].</td>
+            <td class="font-sans">Related to color-dodge for adding shiny objects or bright light zones.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">freeze</code></td>
-            <td class="font-sans">Inverts base and blend colors, applies reflect, and inverts result to deepen shadows[cite: 2].</td>
+            <td class="font-sans">Inverts base and blend colors, applies reflect, and inverts result to deepen shadows.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">stamp</code></td>
-            <td class="font-sans">Similar to average mode for relief/bump textures while retaining mid-tones[cite: 2].</td>
+            <td class="font-sans">Similar to average mode for relief/bump textures while retaining mid-tones.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">interpolate</code></td>
-            <td class="font-sans">Combines multiply and screen using smooth cosine interpolation (gentle S-curve)[cite: 2].</td>
+            <td class="font-sans">Combines multiply and screen using smooth cosine interpolation (gentle S-curve).</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   <p class="text-body-secondary small mb-3">
-    Use <code class="text-primary">-define compose:sync=false</code> to apply math composition on individual channel bases (including alpha) without alpha composition interference[cite: 2].
+    Use <code class="text-primary">-define compose:sync=false</code> to apply math composition on individual channel bases (including alpha) without alpha composition interference.
   </p>
   <!-- CLI Example 3 -->
   <div class="terminal-card mb-4">
@@ -285,7 +285,7 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     <a href="#lighting" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
   </div>
   <p class="text-body-secondary mb-3">
-    Light, dodge, and burn blend modes standard to SVG 1.2 and popular image editors[cite: 2].
+    Light, dodge, and burn blend modes standard to SVG 1.2 and popular image editors.
   </p>
   <div class="card im-card overflow-hidden shadow-sm mb-4">
     <div class="table-responsive" style="max-height: 65vh;">
@@ -299,59 +299,59 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">linear-dodge</code></td>
-            <td class="font-sans">Equivalent to plus (adds channels without adding alpha), using normal <var>Over</var> alpha blending[cite: 2].</td>
+            <td class="font-sans">Equivalent to plus (adds channels without adding alpha), using normal <var>Over</var> alpha blending.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">linear-burn</code></td>
-            <td class="font-sans">Additive counterpart to screen; subtracts one (full white) from result, darkening image[cite: 2].</td>
+            <td class="font-sans">Additive counterpart to screen; subtracts one (full white) from result, darkening image.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">color-dodge</code></td>
-            <td class="font-sans">Brightens destination to reflect source by dividing destination by inverse source[cite: 2].</td>
+            <td class="font-sans">Brightens destination to reflect source by dividing destination by inverse source.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">color-burn</code></td>
-            <td class="font-sans">Darkens destination to reflect source (inverse of color-dodge)[cite: 2].</td>
+            <td class="font-sans">Darkens destination to reflect source (inverse of color-dodge).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">overlay</code></td>
-            <td class="font-sans">Multiplies or screens colors based on destination color, preserving highlights and shadows[cite: 2].</td>
+            <td class="font-sans">Multiplies or screens colors based on destination color, preserving highlights and shadows.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">hard-light</code></td>
-            <td class="font-sans">Multiplies or screens based on source color value (<0.5 darkens like multiply, >0.5 lightens like screen)[cite: 2].</td>
+            <td class="font-sans">Multiplies or screens based on source color value (<0.5 darkens like multiply, >0.5 lightens like screen).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">hard-mix</code></td>
-            <td class="font-sans">Adds source and destination values then thresholds result to pure black or white per channel[cite: 2].</td>
+            <td class="font-sans">Adds source and destination values then thresholds result to pure black or white per channel.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">linear-light</code></td>
-            <td class="font-sans">Like hard-light, but using linear-dodge and linear-burn for strong contrast impact[cite: 2].</td>
+            <td class="font-sans">Like hard-light, but using linear-dodge and linear-burn for strong contrast impact.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">soft-burn</code></td>
-            <td class="font-sans">Combination of color-burn and inverse color-dodge; lightens base slightly while burning dark blend colors[cite: 2].</td>
+            <td class="font-sans">Combination of color-burn and inverse color-dodge; lightens base slightly while burning dark blend colors.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">soft-dodge</code></td>
-            <td class="font-sans">Combination of color-dodge and inverse color-burn; darkens base slightly while dodging bright blend colors[cite: 2].</td>
+            <td class="font-sans">Combination of color-dodge and inverse color-burn; darkens base slightly while dodging bright blend colors.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">soft-light</code></td>
-            <td class="font-sans">SVG 1.2 soft-light mode; darkens or lightens depending on source value (<0.5 darkens, >0.5 lightens) without pure black/white[cite: 2].</td>
+            <td class="font-sans">SVG 1.2 soft-light mode; darkens or lightens depending on source value (<0.5 darkens, >0.5 lightens) without pure black/white.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">pegtop-light</code></td>
-            <td class="font-sans">Computed with a continuous mathematical formula to avoid soft-light's discontinuity at 0.5[cite: 2].</td>
+            <td class="font-sans">Computed with a continuous mathematical formula to avoid soft-light's discontinuity at 0.5.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">vivid-light</code></td>
-            <td class="font-sans">Modified linear-light designed to preserve strong primary and secondary colors[cite: 2].</td>
+            <td class="font-sans">Modified linear-light designed to preserve strong primary and secondary colors.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">pin-light</code></td>
-            <td class="font-sans">Simulates pinhole light source using sharp linear shadings[cite: 2].</td>
+            <td class="font-sans">Simulates pinhole light source using sharp linear shadings.</td>
           </tr>
         </tbody>
       </table>
@@ -382,7 +382,7 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     <a href="#channel-copying" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
   </div>
   <p class="text-body-secondary mb-3">
-    Transfer individual channels or HSL components (hue, saturation, luminosity) without arithmetical blending[cite: 2].
+    Transfer individual channels or HSL components (hue, saturation, luminosity) without arithmetical blending.
   </p>
   <div class="card im-card overflow-hidden shadow-sm mb-4">
     <div class="table-responsive" style="max-height: 65vh;">
@@ -396,27 +396,27 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">copy</code></td>
-            <td class="font-sans">Equivalent to Src composition without clearing un-overlaid destination parts[cite: 2].</td>
+            <td class="font-sans">Equivalent to Src composition without clearing un-overlaid destination parts.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">copy-&lt;channel&gt;</code></td>
-            <td class="font-sans">Copies specified channel (<code class="text-primary">Red</code>, <code class="text-primary">Green</code>, <code class="text-primary">Blue</code>, <code class="text-primary">Cyan</code>, <code class="text-primary">Magenta</code>, <code class="text-primary">Yellow</code>, <code class="text-primary">Black</code>, <code class="text-primary">Alpha</code>) from source to destination[cite: 2].</td>
+            <td class="font-sans">Copies specified channel (<code class="text-primary">Red</code>, <code class="text-primary">Green</code>, <code class="text-primary">Blue</code>, <code class="text-primary">Cyan</code>, <code class="text-primary">Magenta</code>, <code class="text-primary">Yellow</code>, <code class="text-primary">Black</code>, <code class="text-primary">Alpha</code>) from source to destination.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">hue</code></td>
-            <td class="font-sans">Replaces destination hue with source hue while keeping saturation and luminosity[cite: 2].</td>
+            <td class="font-sans">Replaces destination hue with source hue while keeping saturation and luminosity.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">saturate</code></td>
-            <td class="font-sans">Replaces destination saturation with source saturation while keeping hue and luminosity[cite: 2].</td>
+            <td class="font-sans">Replaces destination saturation with source saturation while keeping hue and luminosity.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">luminize</code></td>
-            <td class="font-sans">Replaces destination luminosity with source luminosity while keeping hue and saturation[cite: 2].</td>
+            <td class="font-sans">Replaces destination luminosity with source luminosity while keeping hue and saturation.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">colorize</code></td>
-            <td class="font-sans">Replaces destination hue and saturation with source while keeping luminosity (ideal for tinting grayscale images)[cite: 2].</td>
+            <td class="font-sans">Replaces destination hue and saturation with source while keeping luminosity (ideal for tinting grayscale images).</td>
           </tr>
         </tbody>
       </table>
@@ -458,15 +458,15 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">no</code></td>
-            <td class="font-sans">True no-op indicating no composition should be performed[cite: 2].</td>
+            <td class="font-sans">True no-op indicating no composition should be performed.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">change-mask</code></td>
-            <td class="font-sans">Replaces destination pixels similar to source pixel (within <a href="/command-line-options/#fuzz" class="text-decoration-none">-fuzz</a> factor) with transparency[cite: 2].</td>
+            <td class="font-sans">Replaces destination pixels similar to source pixel (within <a href="/command-line-options/#fuzz" class="text-decoration-none">-fuzz</a> factor) with transparency.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">stereo</code></td>
-            <td class="font-sans">Creates stereo anaglyph taking red channel from source and green/blue from destination[cite: 2].</td>
+            <td class="font-sans">Creates stereo anaglyph taking red channel from source and green/blue from destination.</td>
           </tr>
         </tbody>
       </table>
@@ -480,7 +480,7 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
     <a href="#argumented" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
   </div>
   <p class="text-body-secondary mb-3">
-    These methods require extra numerical arguments, passed via <code class="text-primary">-define compose:args=...</code> in the <samp>magick</samp> command[cite: 2].
+    These methods require extra numerical arguments, passed via <code class="text-primary">-define compose:args=...</code> in the <samp>magick</samp> command.
   </p>
   <!-- CLI Example 6 -->
   <div class="terminal-card mb-4">
@@ -511,45 +511,45 @@ description: "Complete guide to ImageMagick's -compose operators: Porter–Duff 
         <tbody class="font-mono small">
           <tr>
             <td><code class="fw-semibold">dissolve</code></td>
-            <td class="font-sans">Arguments: <var>src_percent</var>[x<br><var>dst_percent</var>]. Dissolves source image by percentage before overlaying[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>src_percent</var>[x<br><var>dst_percent</var>]. Dissolves source image by percentage before overlaying.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">blend</code></td>
-            <td class="font-sans">Arguments: <var>src_percent</var>[x<br><var>dst_percent</var>]. Averages images together according to percentages and transparency[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>src_percent</var>[x<br><var>dst_percent</var>]. Averages images together according to percentages and transparency.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">mathematics</code></td>
-            <td class="font-sans">Arguments: <var>A, B, C, D</var>. Merges via formula <code class="text-primary">A*Sc*Dc + B*Sc + C*Dc + D</code>[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>A, B, C, D</var>. Merges via formula <code class="text-primary">A*Sc*Dc + B*Sc + C*Dc + D</code>.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">modulate</code></td>
-            <td class="font-sans">Arguments: <var>brightness</var>[x<br><var>saturation</var>]. Takes grayscale image/mask to modify destination brightness/saturation[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>brightness</var>[x<br><var>saturation</var>]. Takes grayscale image/mask to modify destination brightness/saturation.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">displace</code></td>
-            <td class="font-sans">Arguments: <var>X-scale</var>[x<br><var>Y-scale</var>][!][%]. Uses overlay as relative displacement map (lens distortion)[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>X-scale</var>[x<br><var>Y-scale</var>][!][%]. Uses overlay as relative displacement map (lens distortion).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">distort</code></td>
-            <td class="font-sans">Arguments: <var>X-scale</var>[x<br><var>Y-scale</var>[+<br><var>X-center</var>+<br><var>Y-center</var>]]][!][%]. Uses absolute coordinates relative to overlay center[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>X-scale</var>[x<br><var>Y-scale</var>[+<br><var>X-center</var>+<br><var>Y-center</var>]]][!][%]. Uses absolute coordinates relative to overlay center.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">blur</code></td>
-            <td class="font-sans">Arguments: <br><var>Width</var>[x<var>Height</var>[+<var>Angle</var>][+<var>Angle2</var>]]. Variable-blur mapping composition via EWA ellipse[cite: 2].</td>
+            <td class="font-sans">Arguments: <br><var>Width</var>[x<var>Height</var>[+<var>Angle</var>][+<var>Angle2</var>]]. Variable-blur mapping composition via EWA ellipse.</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">seamless-blend</code></td>
-            <td class="font-sans">Arguments: <var>max-iterations</var>x<br><var>distortion</var>. Seamlessly inserts overlay onto background using a mask (best with HDRI)[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>max-iterations</var>x<br><var>distortion</var>. Seamlessly inserts overlay onto background using a mask (best with HDRI).</td>
           </tr>
           <tr>
             <td><code class="fw-semibold">saliency-blend</code></td>
-            <td class="font-sans">Arguments: <var>max-iterations</var>x<br><var>distortion</var>. Merges images based on which has most detail at each pixel (requires mask)[cite: 2].</td>
+            <td class="font-sans">Arguments: <var>max-iterations</var>x<br><var>distortion</var>. Merges images based on which has most detail at each pixel (requires mask).</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   <p class="text-body-secondary small">
-    To print a complete list of all available compose operators supported by your specific build, run <a href="/command-line-options/#list" class="text-decoration-none fw-semibold">magick -list compose</a>[cite: 2].
+    To print a complete list of all available compose operators supported by your specific build, run <a href="/command-line-options/#list" class="text-decoration-none fw-semibold">magick -list compose</a>.
   </p>
 </section>
