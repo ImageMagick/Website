@@ -1,59 +1,142 @@
 ---
 title: "News"
 description: "Stay updated with the latest ImageMagick news, including major security improvements, feature enhancements, and development updates. Learn about new release notes, security policies, multispectral image support, and performance optimizations. Explore contributions from the community, related tools like MagickCache, and guidance for configuring builds across platforms."
+topic: "CLI"
 ---
-<div>
-
-
-<h4>Recent News</h4>
-
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">ImageMagick Security News</h4>
-<p>Over the last several months, ImageMagick has delivered huge security improvements, fixing buffer overflows, policy bypasses, and injection risks.  The GitHub Advisory Database now lists dozens of closed advisories, reflecting the project’s strengthened defenses.</p>
-<hr>
-<p class="mb-0">
-  Reference: <a href="https://github.com/ImageMagick/ImageMagick/security/advisories" class="alert-link">
-    GitHub Closed Advisories
-  </a>
-</p>
+<!-- Page Header & Quick Navigation -->
+<div class="mb-5 border-bottom pb-4">
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+    <a href="#recent" class="btn btn-sm btn-outline-primary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-newspaper"></i> Recent News
+    </a>
+    <a href="#related" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-box-seam"></i> Related Software
+    </a>
+    <a href="#development" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-cpu"></i> Development & Performance
+    </a>
+    <a href="#older" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-clock-history"></i> Older News
+    </a>
+  </div>
+  <p class="lead text-body-secondary mb-0">
+    Stay updated with the latest ImageMagick news, including security improvements, feature enhancements, multispectral support, and performance optimizations.
+  </p>
 </div>
-<p>The <code>magick convert</code> command is deprecated, use <code>magick</code> instead.  The deprecated command still works, however, it now posts a warning it is deprecated.</p>
-
-<p>Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="/security-policy/">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/">validation tool</a>.  As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="/security-policy/">security policies</a>: Open, Limited, Secure, and Websafe.<p>
-
-<p>By default, ImageMagick supports up to 32 channels.  As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <code>--enable-64bit-channel-masks</code> option to the Linux configure build script.  For Windows, just select the option from the configure application.</p>
-
-<p>With recent releases of ImageMagick 7, we continue to evolve our support of <a href="/multispectral-imagery/">Multispectral imagery</a>.  PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.</p>
-
-<p>We now provide <a href="/download/#windows">portable ARM Win64</a> static releases. Just copy to your host and run (no installer, no Windows registry entries).  Thanks to <a href="https://github.com/dlemstra">@dlemstra</a> for the ARM release.</p>
-
-<p><a href="https://github.com/snibgo">@Snibgo</a> contributed a <a href="/fx/">Fx</a> special-effects image operator interpreter.  It has vastly improved error checking and performance.</p>
-
-<p><a href="https://github.com/fmw42">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamless and saliency blending</a> composite operators.</p>
-
-<p>We recently updated Anthony's <a href="https://usage.imagemagick.org/">ImageMagick Example Usage</a> pages to support version 7 tools and options.</p>
-
-
-<h4>Related Software</h4>
-<p>The <a href="https://github.com/ImageMagick/MagickCache/">MagickCache</a> provides methods and tools to cache images, image sequences, video, audio or metadata in a local folder. Any content is memory-mapped for efficient retrieval. Additional efficiencies are possible by retrieving a portion of an image. Content can persist or you can assign a time-to-live (TTL) to automatically expire content when the TTL is exceeded. MagickCache supports virtually unlimited content upwards of billions of images making it suitable as a web image service.
-
-
-<h4>ImageMagick Development</h4>
-<p>The ImageMagick development process ensures a stable API and <a href="https://abi-laboratory.pro/tracker/timeline/imagemagick/">ABI</a>. Before each ImageMagick release, we perform a comprehensive security assessment that includes <a href="https://github.com/google/sanitizers/wiki/AddressSanitizer">memory error</a>, <a href="https://github.com/google/sanitizers/wiki/ThreadSanitizer">thread data race</a> detection, and continuous <a href="https://github.com/google/oss-fuzz">fuzzing</a> to detect and prevent security vulnerabilities.</p>
-
-<p>Want more performance from ImageMagick?  Try these options:</p>
-
-<ul>
-<li>add more memory to your system, see <a href="/architecture/#cache">the pixel cache</a>;</li>
-<li>add more cores to your system, see <a href="/architecture/#threads">threads of execution support</a>;</li>
-<li>reduce lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">tcmalloc</a> memory allocation library;</li>
-<li>push large images to a solid-state drive, see <a href="/architecture/#tera-pixel">large image support</a>.</li>
-</ul>
-<p>If these options are prohibitive, you can reduce the quality of the image results.  The default build is Q16 HDRI.  If you disable <a href="/high-dynamic-range/">HDRI</a>, you use half the memory and instead of predominantly floating point operations, you use the typically more efficient integer operations.  The trade-off is reduced precision and you cannot process out of range pixel values (e.g. negative).  If you build the Q8 non-HDRI  version of ImageMagick, you again reduce the memory requirements in half-- and once again there is a trade-off, even less precision and no out of range pixel values.  For a Q8 non-HDRI build of ImageMagick, use these <code>configure</code> script options: <code>--with-quantum-depth=8 --disable-hdri</code>.</p>
-<h4>Older News</h4>
-<p>We discovered a bug in the pseudo-random generator prior to ImageMagick 7.0.9-11, the first 3 values repeated because the random state was not initialized properly.  As a consequence of the fix, expect a different numerical sequence when seeding (-seed).</p>
-
-<p>As an analog to linear (RGB) and non-linear (sRGB) color colorspaces, as of ImageMagick 7.0.7-17, we introduce the LinearGray colorspace.  Gray is non-linear grayscale and LinearGray is linear (e.g. -colorspace linear-gray).</p>
-
-<p>Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/">https://legacy.imagemagick.org</a>.  Learn how ImageMagick version 7 differs from previous versions with our <a href="/porting/">porting guide</a>.</p>
-</div>
+<!-- Section: Recent News -->
+<section id="recent" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-4">
+    <h2 class="h3 fw-bold mb-0">Recent News</h2>
+    <a href="#recent" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <div class="alert alert-success bg-success bg-opacity-10 border-success border-opacity-25 p-4 rounded-3 mb-4" role="alert">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="bi bi-shield-check-fill text-success fs-4"></i>
+      <h4 class="alert-heading h5 fw-bold mb-0 text-success">ImageMagick Security News</h4>
+    </div>
+    <p class="text-body mb-3">Over the last several months, ImageMagick has delivered huge security improvements, fixing buffer overflows, policy bypasses, and injection risks. The GitHub Advisory Database now lists dozens of closed advisories, reflecting the project’s strengthened defenses.</p>
+    <hr class="border-success border-opacity-25">
+    <p class="mb-0 small">
+      Reference: <a href="https://github.com/ImageMagick/ImageMagick/security/advisories" class="alert-link fw-semibold" target="_blank" rel="noopener">GitHub Closed Advisories <i class="bi bi-box-arrow-up-right small"></i></a>
+    </p>
+  </div>
+  <div class="card im-card p-4 mb-4 border-0 shadow-sm bg-body-tertiary">
+    <p class="text-body-secondary mb-0">
+      The <code class="text-primary fw-semibold">magick convert</code> command is deprecated; use <code class="text-primary fw-semibold">magick</code> instead. The deprecated command still works, but now outputs a deprecation warning.
+    </p>
+  </div>
+  <p class="text-body-secondary">
+    Creating a security policy that fits your specific local environment before making use of ImageMagick is highly advised. You can find guidance on setting up this <a href="/security-policy/" class="text-decoration-none fw-semibold text-primary">policy</a>. Also, it's important to verify your policy using the <a href="https://imagemagick-secevaluator.doyensec.com/" class="text-decoration-none fw-semibold text-primary" target="_blank" rel="noopener">validation tool <i class="bi bi-box-arrow-up-right small"></i></a>. As of ImageMagick version 7.1.1-16, you can choose and customize one of these <a href="/security-policy/" class="text-decoration-none fw-semibold text-primary">security policies</a>: Open, Limited, Secure, and Websafe.
+  </p>
+  <p class="text-body-secondary">
+    By default, ImageMagick supports up to 32 channels. As of ImageMagick version 7.1.1-16, you can enable up to 64 channels by adding the <code class="text-primary fw-semibold">--enable-64bit-channel-masks</code> option to the Linux configure build script. For Windows, just select the option from the configure application.
+  </p>
+  <p class="text-body-secondary">
+    With recent releases of ImageMagick 7, we continue to evolve our support of <a href="/multispectral-imagery/" class="text-decoration-none fw-semibold text-primary">Multispectral imagery</a>. PSD, TIFF, MIFF, MPC, and FTXT can now read and write multispectral images with more multispectral formats to follow.
+  </p>
+  <div class="row g-3 my-4">
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3 border-0 shadow-sm">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <i class="bi bi-cpu-fill text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0 fs-6">Portable ARM Win64</h5>
+        </div>
+        <p class="small text-body-secondary mb-0">We now provide portable ARM Win64 static releases. Just copy to your host and run (no installer, no Windows registry entries). Thanks to <a href="https://github.com/dlemstra" target="_blank" rel="noopener" class="text-decoration-none fw-semibold">@dlemstra</a> for the ARM release.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3 border-0 shadow-sm">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <i class="bi bi-magic text-primary fs-5"></i>
+          <h5 class="fw-bold mb-0 fs-6">Fx Operator & Blending</h5>
+        </div>
+        <p class="small text-body-secondary mb-0"><a href="https://github.com/snibgo" target="_blank" rel="noopener" class="text-decoration-none fw-semibold">@Snibgo</a> contributed an <a href="/fx/" class="text-decoration-none">Fx</a> special-effects image operator interpreter with vastly improved error checking and performance. Additionally, <a href="https://github.com/fmw42" target="_blank" rel="noopener" class="text-decoration-none fw-semibold">@fmw42</a> contributed <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712" target="_blank" rel="noopener" class="text-decoration-none">seamless and saliency blending</a> composite operators.</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-body-secondary">
+    We recently updated Anthony's <a href="https://usage.imagemagick.org/" class="text-decoration-none fw-semibold text-primary" target="_blank" rel="noopener">ImageMagick Example Usage <i class="bi bi-box-arrow-up-right small"></i></a> pages to support version 7 tools and options.
+  </p>
+</section>
+<!-- Section: Related Software -->
+<section id="related" class="mb-5 pt-3 border-top">
+  <div class="d-flex align-items-center gap-2 mb-4">
+    <h2 class="h3 fw-bold mb-0">Related Software</h2>
+    <a href="#related" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <div class="card im-card p-4 border-0 shadow-sm bg-body-tertiary">
+    <h5 class="fw-bold text-primary mb-2"><i class="bi bi-hdd-stack me-2"></i>MagickCache</h5>
+    <p class="text-body-secondary mb-0">
+      The <a href="https://github.com/ImageMagick/MagickCache/" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">MagickCache <i class="bi bi-box-arrow-up-right small"></i></a> provides methods and tools to cache images, image sequences, video, audio, or metadata in a local folder. Any content is memory-mapped for efficient retrieval. Additional efficiencies are possible by retrieving a portion of an image. Content can persist or you can assign a time-to-live (TTL) to automatically expire content when the TTL is exceeded. MagickCache supports virtually unlimited content upwards of billions of images, making it suitable as a web image service.
+    </p>
+  </div>
+</section>
+<!-- Section: ImageMagick Development -->
+<section id="development" class="mb-5 pt-3 border-top">
+  <div class="d-flex align-items-center gap-2 mb-4">
+    <h2 class="h3 fw-bold mb-0">ImageMagick Development</h2>
+    <a href="#development" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <p class="text-body-secondary">
+    The ImageMagick development process ensures a stable API and <a href="https://abi-laboratory.pro/tracker/tracker/timeline/imagemagick/" class="text-decoration-none fw-semibold text-primary" target="_blank" rel="noopener">ABI <i class="bi bi-box-arrow-up-right small"></i></a>. Before each ImageMagick release, we perform a comprehensive security assessment that includes <a href="https://github.com/google/sanitizers/wiki/AddressSanitizer" class="text-decoration-none" target="_blank" rel="noopener">memory error</a>, <a href="https://github.com/google/sanitizers/wiki/ThreadSanitizer" class="text-decoration-none" target="_blank" rel="noopener">thread data race</a> detection, and continuous <a href="https://github.com/google/oss-fuzz" class="text-decoration-none" target="_blank" rel="noopener">fuzzing</a> to detect and prevent security vulnerabilities.
+  </p>
+  <h5 class="fw-bold text-body mt-4 mb-3">Want more performance from ImageMagick? Try these options:</h5>
+  
+  <ul class="text-body-secondary mb-4 vstack gap-2 ps-3">
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-speedometer2 text-primary mt-1"></i>
+      <span>Add more memory to your system, see <a href="/architecture/#cache" class="text-decoration-none fw-semibold">the pixel cache</a>.</span>
+    </li>
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-cpu text-primary mt-1"></i>
+      <span>Add more cores to your system, see <a href="/architecture/#threads" class="text-decoration-none fw-semibold">threads of execution support</a>.</span>
+    </li>
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-layers text-primary mt-1"></i>
+      <span>Reduce lock contention with the <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">tcmalloc <i class="bi bi-box-arrow-up-right small"></i></a> memory allocation library.</span>
+    </li>
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-hdd text-primary mt-1"></i>
+      <span>Push large images to a solid-state drive, see <a href="/architecture/#tera-pixel" class="text-decoration-none fw-semibold">large image support</a>.</span>
+    </li>
+  </ul>
+  <p class="text-body-secondary">
+    If these options are prohibitive, you can reduce the quality of the image results. The default build is Q16 HDRI. If you disable <a href="/high-dynamic-range/" class="text-decoration-none fw-semibold text-primary">HDRI</a>, you use half the memory and instead of predominantly floating-point operations, you use the typically more efficient integer operations. The trade-off is reduced precision and you cannot process out-of-range pixel values (e.g., negative). If you build the Q8 non-HDRI version of ImageMagick, you again reduce the memory requirements in half—and once again there is a trade-off: even less precision and no out-of-range pixel values. For a Q8 non-HDRI build of ImageMagick, use these <code class="text-primary fw-semibold">configure</code> script options: <code class="text-primary">--with-quantum-depth=8 --disable-hdri</code>.
+  </p>
+</section>
+<!-- Section: Older News -->
+<section id="older" class="mb-5 pt-3 border-top">
+  <div class="d-flex align-items-center gap-2 mb-4">
+    <h2 class="h3 fw-bold mb-0">Older News</h2>
+    <a href="#older" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <p class="text-body-secondary">
+    We discovered a bug in the pseudo-random generator prior to ImageMagick 7.0.9-11: the first 3 values repeated because the random state was not initialized properly. As a consequence of the fix, expect a different numerical sequence when seeding (<code class="text-primary fw-semibold">-seed</code>).
+  </p>
+  <p class="text-body-secondary">
+    As an analog to linear (RGB) and non-linear (sRGB) color colorspaces, as of ImageMagick 7.0.7-17, we introduce the LinearGray colorspace. Gray is non-linear grayscale and LinearGray is linear (e.g., <code class="text-primary fw-semibold">-colorspace linear-gray</code>).
+  </p>
+  <p class="text-body-secondary">
+    Now that ImageMagick version 7 is released, we continue to maintain the legacy release of ImageMagick, version 6, at <a href="https://legacy.imagemagick.org/" class="text-decoration-none fw-semibold text-primary" target="_blank" rel="noopener">https://legacy.imagemagick.org <i class="bi bi-box-arrow-up-right small"></i></a>. Learn how ImageMagick version 7 differs from previous versions with our <a href="/porting/" class="text-decoration-none fw-semibold text-primary">porting guide</a>.
+  </p>
+</section>
