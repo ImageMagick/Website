@@ -2,16 +2,10 @@
 title: "Command-line Tools: Identify"
 description: "Use ImageMagick’s Identify tool to examine image format, dimensions, colorspace, metadata, and integrity. Learn verbose options, advanced features, and example commands for detailed analysis."
 ---
-<!-- Quick Jump Navigation Bar -->
-<div class="card im-card p-3 mb-4 bg-body-tertiary border-0 shadow-sm">
-  <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
-    <span class="fw-semibold text-secondary small text-uppercase tracking-wider"><i class="bi bi-compass me-1"></i> Quick Navigation</span>
-    <div class="d-flex gap-2">
-      <a href="#usage" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1"><i class="bi bi-terminal"></i> Example Usage</a>
-      <a href="#options" class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i class="bi bi-list-columns"></i> Option Summary</a>
-    </div>
-  </div>
-</div>
+<!-- Left-aligned Jump Links -->
+<p class="mb-4">
+  <a href="#usage" class="text-decoration-none fw-semibold">Example Usage</a> <span class="text-secondary mx-2">•</span> <a href="#options" class="text-decoration-none fw-semibold">Option Summary</a>
+</p>
 <!-- Introduction Card -->
 <div class="card im-card p-4 mb-5 border-0 shadow-sm">
   <p class="lead mb-3">
@@ -46,12 +40,13 @@ description: "Use ImageMagick’s Identify tool to examine image format, dimensi
       <samp>$ magick identify rose.jpg<br>rose.jpg JPEG 70x46 70x46+0+0 8-bit sRGB 2.36KB 0.000u 0:00.000</samp>
     </div>
   </div>
-  <p class="text-body-secondary mb-2">By default, <code>$ magick identify</code> provides the following output format:</p>
+  <p class="text-body-secondary mb-2">By default, <samp>$ magick identify</samp> provides the following output format:</p>
   
   <div class="card im-card p-3 mb-4 bg-body-tertiary border-0 font-mono small">
     <code>Filename[frame #] image-format widthxheight page-widthxpage-height+x-offset+y-offset colorspace user-time elapsed-time</code>
   </div>
-  <p class="text-body-secondary mb-3">Next, we look at the same image in greater detail using the verbose option:</p>
+  <p class="text-body-secondary mb-3">Next, we look at the same image in greater detail:</p>
+  <!-- Terminal Card for Verbose Output -->
   <div class="terminal-card mb-3">
     <div class="terminal-header">
       <div class="terminal-dot bg-danger"></div>
@@ -60,7 +55,7 @@ description: "Use ImageMagick’s Identify tool to examine image format, dimensi
       <span class="small text-secondary font-mono ms-2">magick identify -verbose rose.jpg</span>
     </div>
     <div class="p-3 text-light font-mono small overflow-auto" style="max-height:75svh;">
-      <samp>Image: rose.jpg<br>
+      <samp>$ magick identify -verbose rose.jpg<br>Image: rose.jpg<br>
   Format: JPEG (Joint Photographic Experts Group JFIF format)<br>
   Mime type: image/jpeg<br>
   Class: DirectClass<br>
