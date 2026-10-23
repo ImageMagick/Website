@@ -1,46 +1,106 @@
 ---
 title: "Parallel Execution with OpenCL"
+description: "Learn how to configure and run OpenCL-accelerated image processing operations in ImageMagick for high-performance parallel execution."
 ---
-<div>
-<p class="lead">ImageMagick has built-in support for some <a href="https://en.wikipedia.org/wiki/OpenCL">OpenCL</a> accelerated operations. However, there are some conditions for its operation. These requirements are listed below.</p>
-
-<ol>
-    <li><strong>OS and drivers:</strong>
-        <ul>
-            <li><strong>macOS:</strong> has built-in support for OpenCL. No other actions required.</li>
-            <li><strong>Linux/Windows:</strong> on supported platforms, install required drivers to enable OpenCL.</li>
-            <li><strong>Mobile:</strong> ImageMagick's OpenCL support is not available on mobile OSes (IOS/Android).</li>
+<div class="opencl-container">
+  <!-- Quick Jump Navigation -->
+  <div class="card im-card p-3 mb-4 bg-body-tertiary border-0 shadow-sm">
+    <div class="d-flex justify-content-center flex-wrap gap-3 fw-semibold small text-uppercase tracking-wider">
+      <a href="#requirements" class="text-decoration-none text-primary"><i class="bi bi-check2-square me-1"></i> Requirements & Conditions</a>
+      <span class="text-muted">•</span>
+      <a href="#notes" class="text-decoration-none text-primary"><i class="bi bi-info-circle me-1"></i> Operation Notes</a>
+      <span class="text-muted">•</span>
+      <a href="#api" class="text-decoration-none text-primary"><i class="bi bi-code-square me-1"></i> Developer API</a>
+    </div>
+  </div>
+  <!-- Introductory Lead Card -->
+  <div class="card im-card p-4 mb-4 shadow-sm bg-body-tertiary border-0">
+    <p class="lead text-body mb-0">
+      ImageMagick has built-in support for some <a href="https://en.wikipedia.org/wiki/OpenCL" class="text-decoration-none" rel="noopener noreferrer" target="_blank">OpenCL</a> accelerated operations. However, there are some conditions for its operation. These requirements are listed below.
+    </p>
+  </div>
+  <!-- Requirements Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="requirements">
+    <a class="anchor text-decoration-none text-body" href="#requirements">OpenCL Operation Requirements</a>
+  </h2>
+  <div class="card im-card p-4 mb-4 shadow-sm border">
+    <ol class="mb-0 ps-3">
+      <li class="mb-3">
+        <strong>OS and drivers:</strong>
+        <ul class="mt-2">
+          <li><strong>macOS:</strong> has built-in support for OpenCL. No other actions required.</li>
+          <li><strong>Linux/Windows:</strong> on supported platforms, install required drivers to enable OpenCL.</li>
+          <li><strong>Mobile:</strong> ImageMagick's OpenCL support is not available on mobile OSes (iOS/Android).</li>
         </ul>
-    </li>
-    <li><strong>Compile-time flag:</strong> ImageMagick's OpenCL must be explicitly enabled when compiling. This is done by running <code>configure</code> with <code>--enable-opencl</code> flag set.</li>
-    <li><strong>Check runtime support:</strong> to verify if OpenCL support is enabled, run <pre><samp>$ magick --version</code></pre>. The command output should read <code>Features: ... <strong>OpenCL</strong> ...</samp></li>
-    <li><strong>Runtime flag:</strong> OpenCL is disabled by default in runtime. To enable it use the environment variable <code>MAGICK_OCL_DEVICE=true</code>, e.g. <code>MAGICK_OCL_DEVICE=true magick &lt;options&gt;</code>. And to only enable a specific device use <code>MAGICK_OCL_DEVICE=GPU</code> or <code>MAGICK_OCL_DEVICE=CPU</code>.</li>
-    <li><strong>Command line utility:</strong> for proper OpenCL support it's recommended to use <code>magick</code> utility over <code>convert</code>, <code>mogrify</samp> and others.</li>
-    <li><strong>Image type:</strong> OpenCL acceleration only works on images without a color map. Use true color images instead.</li>
-    <li><strong>Operators:</strong> the following is a list of image operators that have been OpenCL accelerated.
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">  blur
-  contrast
-  charcoal
-  function
-  grayscale
-  motion-blur
-  resize</pre>
-        The following operators are OpenCL accelerated as well, but they require alpha channel to be enabled, e.g. <pre><samp>$ magick sample.jpg -alpha on -despeckle null:</samp></pre>.
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">  despeckle
-  equalize
-  modulate</pre>
-    </li>
-</ol>
-
-<h4>OpenCL Operation Notes</h4>
-
-<p>When some of the OpenCL accelerated operators are invoked for the first time and all the conditions above are met, ImageMagick conducts a series of tests to configure the OpenCL environment according to the system hardware; therefore, it is normal to experience a higher latency the first time you use an accelerated option.  The OpenCL kernels are embedded inside ImageMagick in source format.  During the initial setup, ImageMagick discovers all the available OpenCL devices and compiles the kernels for each of these targets.  ImageMagick also runs several performance tests internally to determine the preferred device to use.  The compiled kernel code and the performance test results are stored into the cache directory so that the data can be reused by subsequent invocations of the OpenCL path.  By default, the OpenCL cached data is stored in <code>$HOME/.cache/ImageMagick</code> on Linux and on MacOSX or in <code>%LOCALAPPDATA%\ImageMagick</code> on Windows. To run these tests for the first time, use the command below:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>MAGICK_OCL_DEVICE=true magick sample.jpg -blur 0x5 null:</code></pre>
-<p>On Windows the <code>MAGICK_OCL_DEVICE=true<code> part should be removed and the command <code>set MAGICK_OCL_DEVICE=true</code> should be executed before executing the command above to enable OpenCL operations.</p>
-<p>To change the cache directory, set the MAGICK_OPENCL_CACHE_DIR environment variable.  ImageMagick is able to detect hardware changes, driver updates, and new kernel sources and re-run the setup and the calibration test.  You can also force ImageMagick to re-run the process by removing the content from the cache directory.</p>
-<p>In addition to the environment variables mentioned above, ImageMagick provides a set of APIs that allow developers to gain more fine-grained control of the OpenCL acceleration. For example, use the <code>InitializeOpenCL()</code> function to initialize the OpenCL environment:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>clEnv=GetCurrentOpenCLEnv();
+      </li>
+      <li class="mb-3">
+        <strong>Compile-time flag:</strong> ImageMagick's OpenCL must be explicitly enabled when compiling. This is done by running <code>configure</code> with <code>--enable-opencl</code> flag set.
+      </li>
+      <li class="mb-3">
+        <strong>Check runtime support:</strong> to verify if OpenCL support is enabled, run <pre class="d-inline p-1 rounded bg-body-tertiary border font-mono small"><code>$ magick --version</code></pre>. The command output should read <code class="font-mono">Features: ... <strong>OpenCL</strong> ...</code>.
+      </li>
+      <li class="mb-3">
+        <strong>Runtime flag:</strong> OpenCL is disabled by default at runtime. To enable it use the environment variable <code class="font-mono">MAGICK_OCL_DEVICE=true</code>, e.g., <code class="font-mono">MAGICK_OCL_DEVICE=true magick &lt;options&gt;</code>. And to only enable a specific device use <code class="font-mono">MAGICK_OCL_DEVICE=GPU</code> or <code class="font-mono">MAGICK_OCL_DEVICE=CPU</code>.
+      </li>
+      <li class="mb-3">
+        <strong>Command line utility:</strong> for proper OpenCL support it's recommended to use the <code>magick</code> utility over <code>convert</code>, <code>mogrify</code>, and others.
+      </li>
+      <li class="mb-3">
+        <strong>Image type:</strong> OpenCL acceleration only works on images without a color map. Use true color images instead.
+      </li>
+      <li>
+        <strong>Operators:</strong> the following is a list of image operators that have been OpenCL accelerated:
+        <div class="row mt-2 g-3">
+          <div class="col-md-6">
+            <div class="card p-3 bg-body-tertiary border h-100">
+              <span class="fw-semibold small text-uppercase text-muted mb-2">Standard Accelerated</span>
+              <pre class="p-2 mb-0 rounded bg-body border font-mono small">blur
+contrast
+charcoal
+function
+grayscale
+motion-blur
+resize</pre>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-3 bg-body-tertiary border h-100">
+              <span class="fw-semibold small text-uppercase text-muted mb-2">Requires Alpha Channel Enabled</span>
+              <p class="small text-muted mb-2">Example: <code class="font-mono">$ magick sample.jpg -alpha on -despeckle null:</code></p>
+              <pre class="p-2 mb-0 rounded bg-body border font-mono small">despeckle
+equalize
+modulate</pre>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+  <!-- OpenCL Operation Notes Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="notes">
+    <a class="anchor text-decoration-none text-body" href="#notes">OpenCL Operation Notes</a>
+  </h2>
+  <p>
+    When some of the OpenCL accelerated operators are invoked for the first time and all the conditions above are met, ImageMagick conducts a series of tests to configure the OpenCL environment according to the system hardware. Therefore, it is normal to experience a higher latency the first time you use an accelerated option. The OpenCL kernels are embedded inside ImageMagick in source format. During the initial setup, ImageMagick discovers all the available OpenCL devices and compiles the kernels for each of these targets. ImageMagick also runs several performance tests internally to determine the preferred device to use.
+  </p>
+  <p>
+    The compiled kernel code and the performance test results are stored into the cache directory so that the data can be reused by subsequent invocations of the OpenCL path. By default, the OpenCL cached data is stored in <code class="font-mono">$HOME/.cache/ImageMagick</code> on Linux and macOS or in <code class="font-mono">%LOCALAPPDATA%\ImageMagick</code> on Windows. To run these tests for the first time, use the command below:
+  </p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>MAGICK_OCL_DEVICE=true magick sample.jpg -blur 0x5 null:</code></pre>
+  <div class="alert alert-info border-0 shadow-sm mb-4" role="alert">
+    <i class="bi bi-info-circle-fill me-2"></i> On Windows, the <code class="font-mono">MAGICK_OCL_DEVICE=true</code> part should be removed, and the command <code class="font-mono">set MAGICK_OCL_DEVICE=true</code> should be executed before running the command above to enable OpenCL operations.
+  </div>
+  <p class="mb-4">
+    To change the cache directory, set the <code class="font-mono">MAGICK_OPENCL_CACHE_DIR</code> environment variable. ImageMagick is able to detect hardware changes, driver updates, and new kernel sources and re-run the setup and the calibration test. You can also force ImageMagick to re-run the process by removing the content from the cache directory.
+  </p>
+  <!-- Developer API Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="api">
+    <a class="anchor text-decoration-none text-body" href="#api">Developer API Control</a>
+  </h2>
+  <p>
+    In addition to the environment variables mentioned above, ImageMagick provides a set of APIs that allow developers to gain more fine-grained control of the OpenCL acceleration. For example, use the <code class="font-mono">InitializeOpenCL()</code> function to initialize the OpenCL environment:
+  </p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>clEnv=GetCurrentOpenCLEnv();
 if (InitializeOpenCL(clEnv,exception) == MagickFalse)
   {
     /* looks like OpenCL is not supported  */
