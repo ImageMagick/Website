@@ -2,15 +2,32 @@
 title: "Content Provenance and Authenticity"
 description: "Content Provenance and Authenticity (C2PA) is an open standard that provides a framework for embedding secure, tamper-evident metadata into digital media to prove its origin, authenticity, and any edits made"
 ---
-<div>
-<p class="lead">ImageMagick integrates the <strong>C2PA coder</strong> to verify content provenance. This enables trusted workflows for digital assets.</p>
-<h2 class="mt-5">Decoding Example</h2>
-<p>
-To inspect and verify the embedded C2PA data, run:
-</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>magick identify c2pa:signed_image.png</samp></pre>
-
-<h2 class="mt-5">Conclusion</h2>
-<p> The C2PA coder extends ImageMagick’s capabilities by allowing developers to decode provenance metadata alongside standard image processing tasks.
-</p>
+<div class="c2pa-container">
+  <!-- Quick Jump Navigation -->
+  <div class="card im-card p-3 mb-4 bg-body-tertiary border-0 shadow-sm">
+    <div class="d-flex justify-content-center flex-wrap gap-3 fw-semibold small text-uppercase tracking-wider">
+      <a href="#decoding" class="text-decoration-none text-primary"><i class="bi bi-terminal me-1"></i> Decoding Example</a>
+      <span class="text-muted">•</span>
+      <a href="#conclusion" class="text-decoration-none text-primary"><i class="bi bi-check-circle me-1"></i> Conclusion</a>
+    </div>
+  </div>
+  <!-- Introductory Card -->
+  <div class="card im-card p-4 mb-4 shadow-sm bg-body-tertiary border-0">
+    <p class="lead text-body mb-0">
+      ImageMagick integrates the <strong>C2PA coder</strong> to verify content provenance[cite: 14]. This enables trusted workflows for digital assets[cite: 14].
+    </p>
+  </div>
+  <!-- Decoding Example Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="decoding">
+    <a class="anchor text-decoration-none text-body" href="#decoding">Decoding Example</a>
+  </h2>
+  <p class="mb-3">To inspect and verify the embedded C2PA data, run[cite: 14]:</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>magick identify c2pa:signed_image.png</code></pre>
+  <!-- Conclusion Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="conclusion">
+    <a class="anchor text-decoration-none text-body" href="#conclusion">Conclusion</a>
+  </h2>
+  <p class="text-body-secondary mb-4">
+    The C2PA coder extends ImageMagick’s capabilities by allowing developers to decode provenance metadata alongside standard image processing tasks[cite: 14].
+  </p>
 </div>
