@@ -79,8 +79,10 @@ int main(int argc,char **argv)
 }
   MagickBooleanType
     status;
+
   MagickWand
     *magick_wand;
+
   if (argc != 3)
     {
       (void) fprintf(stdout,"Usage: %s image thumbnail\n",argv[0]);
@@ -143,24 +145,30 @@ int main(int argc,char **argv)
   exit(-1); \
 }
   long
+    x,
     y;
+
   MagickBooleanType
     status;
+
   MagickWand
     *contrast_wand,
     *image_wand;
+
   PixelInfo
     pixel;
+
   PixelIterator
     *contrast_iterator,
     *iterator;
+
   PixelWand
     **contrast_pixels,
     **pixels;
-  register long
-    x;
+
   unsigned long
     width;
+
   if (argc != 3)
     {
       (void) fprintf(stdout,"Usage: %s image sigmoidal-image\n",argv[0]);
@@ -238,14 +246,19 @@ static MagickBooleanType SigmoidalContrast(WandView *contrast_view,
 {
 #define SigmoidalContrast(x) \
   (QuantumRange*(1.0/(1+exp(10.0*(0.5-QuantumScale*x)))-0.0066928509)*1.0092503)
+
   PixelInfo
     pixel;
+
   PixelWand
     **pixels;
+
   RectangleInfo
     extent;
-  register ssize_t
+
+  ssize_t
     x;
+
   extent=GetWandViewExtent(contrast_view);
   pixels=GetWandViewPixels(contrast_view);
   for (x=0; x &lt; (ssize_t) extent.width; x++)
@@ -276,12 +289,16 @@ int main(int argc,char **argv)
 }
   MagickBooleanType
     status;
+
   MagickWand
     *contrast_wand;
+
   PixelInfo
     pixel;
+
   WandView
     *contrast_view;
+
   if (argc != 3)
     {
       (void) fprintf(stdout,"Usage: %s image sigmoidal-image\n",argv[0]);
