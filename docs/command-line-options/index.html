@@ -355,7 +355,7 @@ topic: "CLI"
   <!-- ==================== CLI OPTIONS DOCUMENTATION ==================== -->
   <!-- -adaptive-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="adaptive-blur"></a><code>-adaptive-blur <var>radius</var>[x<var>sigma</var>]</code></h2>
     </div>
     <p class="lead">Adaptively blur pixels, with decreasing effect near edges.</p>
@@ -365,7 +365,7 @@ topic: "CLI"
   </section>
   <!-- -adaptive-resize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="adaptive-resize"></a><code>-adaptive-resize <var>geometry</var></code></h2>
     </div>
     <p class="lead">Resize the image using data-dependent triangulation.</p>
@@ -373,7 +373,7 @@ topic: "CLI"
   </section>
   <!-- -adaptive-sharpen -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="adaptive-sharpen"></a><code>-adaptive-sharpen <var>radius</var>[x<var>sigma</var>]</code></h2>
     </div>
     <p class="lead">Adaptively sharpen pixels, with increasing effect near edges.</p>
@@ -383,7 +383,7 @@ topic: "CLI"
   </section>
   <!-- -adjoin -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="adjoin"></a><code>-adjoin</code></h2>
     </div>
     <p class="lead">Join images into a single multi-image file.</p>
@@ -401,14 +401,14 @@ topic: "CLI"
   </section>
   <!-- -affine -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="affine"></a><code>-affine <var>s<sub>x</sub></var>,<var>r<sub>x</sub></var>,<var>r<sub>y</sub></var>,<var>s<sub>y</sub></var>[,<var>t<sub>x</sub></var>,<var>t<sub>y</sub></var>]</code></h2>
     </div>
     <p class="lead">Set the drawing transformation matrix for combined rotating and scaling.</p>
     <p>This option sets a transformation matrix for use by subsequent <a href="#draw">-draw</a> or <a href="#transform">-transform</a> options.</p>
     <p>The matrix entries are entered as comma-separated numeric values either in quotes or without spaces.</p>
     <p>Internally, the transformation matrix has 3x3 elements, but three of them are omitted from the input because they are constant. The new (transformed) coordinates (<var>x'</var>, <var>y'</var>) of a pixel at position (<var>x</var>, <var>y</var>) in the original image are calculated using the matrix equation below:</p>
-    <p class="text-center"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="affine transformation" src="/image/affine.png"/></p>
+    <p class="text-start"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="affine transformation" src="/image/affine.png"/></p>
     <p>The size of the resulting image is that of the smallest rectangle that contains the transformed source image. The parameters <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var> subsequently shift the image pixels so that those that are moved out of the image area are cut off.</p>
     <p>The transformation matrix complies with the left-handed pixel coordinate system: positive <var>x</var> and <var>y</var> directions are rightward and downward, respectively; positive rotation is clockwise.</p>
     <p>If the translation coefficients <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var> are omitted, they default to 0,0. Therefore, four parameters suffice for rotation and scaling without translation.</p>
@@ -423,7 +423,7 @@ topic: "CLI"
   </section>
   <!-- -alpha -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="alpha"></a><code>-alpha <var>type</var></code></h2>
     </div>
     <p class="lead">Gives control of the alpha/matte channel of an image.</p>
@@ -480,7 +480,7 @@ topic: "CLI"
   </section>
   <!-- -annotate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="annotate"></a><code>-annotate <var>degrees</var> <var>text</var></code></h2>
       <h2><code>-annotate <var>Xdegrees</var>x<var>Ydegrees</var> <var>text</var></code></h2>
       <h2><code>-annotate <var>Xdegrees</var>x<var>Ydegrees</var>{+-}<var>t<sub>x</sub></var>{+-}<var>t<sub>y</sub></var> <var>text</var></code></h2>
@@ -491,13 +491,13 @@ topic: "CLI"
     <p>The values <var>Xdegrees</var> and <var>Ydegrees</var> control the shears applied to the text, while <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var> are offsets specifying the location of the text relative to any <a href="#gravity">-gravity</a> setting (defaulting to the upper-left corner of the image).</p>
     <p>Using <a href="#annotate">-annotate</a> <var>degrees</var> or <a href="#annotate">-annotate</a> <var>degrees</var>x<var>degrees</var> produces an unsheared rotation of the text. Positive values indicate a clockwise rotation, conforming to the usual mathematical convention once accounting for the downward positive <var>y</var>-direction.</p>
     <p>The new (transformed) coordinates (<var>x'</var>, <var>y'</var>) of a pixel at position (<var>x</var>, <var>y</var>) in the image are calculated using the matrix equation below:</p>
-    <p class="text-center"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="annotate transformation" src="/image/annotate.png"/></p>
+    <p class="text-start"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="annotate transformation" src="/image/annotate.png"/></p>
     <p>If <var>t<sub>x</sub></var> and <var>t<sub>y</sub></var> are omitted, they default to 0, which makes the bottom-left of the text align with the upper-left corner of the image (often undesirable). Adding a <a href="#gravity">-gravity</a> option leads to much better results.</p>
     <p>Text can be any UTF-8 encoded character sequence. If <var>text</var> takes the form <code>@mytext.txt</code>, the text is read from the file <code>mytext.txt</code> literally, with no embedded formatting characters recognized.</p>
   </section>
   <!-- -antialias -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="antialias"></a><code>-antialias</code></h2>
     </div>
     <p class="lead">Enable or disable the rendering of anti-aliasing pixels when drawing fonts and lines.</p>
@@ -505,7 +505,7 @@ topic: "CLI"
   </section>
   <!-- -append -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="append"></a><code>-append</code></h2>
     </div>
     <p class="lead">Join current images vertically or horizontally.</p>
@@ -515,7 +515,7 @@ topic: "CLI"
   </section>
   <!-- -attenuate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="attenuate"></a><code>-attenuate <var>value</var></code></h2>
     </div>
     <p class="lead">Lessen (or intensify) noise when adding noise to an image.</p>
@@ -523,7 +523,7 @@ topic: "CLI"
   </section>
   <!-- -authenticate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="authenticate"></a><code>-authenticate <var>password</var></code></h2>
     </div>
     <p class="lead">Decrypt a PDF with a password.</p>
@@ -532,7 +532,7 @@ topic: "CLI"
   </section>
   <!-- -auto-gamma -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="auto-gamma"></a><code>-auto-gamma</code></h2>
     </div>
     <p class="lead">Automatically adjust the gamma level of an image.</p>
@@ -542,7 +542,7 @@ topic: "CLI"
   </section>
   <!-- -auto-level -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="auto-level"></a><code>-auto-level</code></h2>
     </div>
     <p class="lead">Automatically adjust color levels of an image.</p>
@@ -552,7 +552,7 @@ topic: "CLI"
   </section>
   <!-- -auto-orient -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="auto-orient"></a><code>-auto-orient</code></h2>
     </div>
     <p class="lead">Adjust an image so that its orientation is suitable for viewing (top-left orientation).</p>
@@ -561,7 +561,7 @@ topic: "CLI"
   </section>
   <!-- -auto-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="auto-threshold"></a><code>-auto-threshold <var>method</var></code></h2>
     </div>
     <p class="lead">Automatically perform image thresholding.</p>
@@ -578,7 +578,7 @@ topic: "CLI"
   </section>
   <!-- -average -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="average"></a><code>-average</code></h2>
     </div>
     <p class="lead">Average a set of images.</p>
@@ -586,7 +586,7 @@ topic: "CLI"
   </section>
   <!-- -backdrop -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="backdrop"></a><code>-backdrop</code></h2>
     </div>
     <p class="lead">Display the image centered on a backdrop.</p>
@@ -594,7 +594,7 @@ topic: "CLI"
   </section>
   <!-- -background -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="background"></a><code>-background <var>color</var></code></h2>
     </div>
     <p class="lead">Set the background color.</p>
@@ -602,7 +602,7 @@ topic: "CLI"
   </section>
   <!-- -bench -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="bench"></a><code>-bench <var>iterations</var></code></h2>
     </div>
     <p class="lead">Measure performance.</p>
@@ -616,7 +616,7 @@ Performance[4]: 5i 0.875657ips 6.880u 0:05.710</samp></pre>
   </section>
   <!-- -bias -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="bias"></a><code>-bias <var>value</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Add bias when convolving an image.</p>
@@ -624,7 +624,7 @@ Performance[4]: 5i 0.875657ips 6.880u 0:05.710</samp></pre>
   </section>
   <!-- -bilateral-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="bilateral-blur"></a><code>-bilateral-blur <var>width</var>{x<var>height</var>}{<var>+intensity-sigma</var>}{<var>+spatial-sigma</var>}</code></h2>
     </div>
     <p class="lead">A non-linear, edge-preserving, noise-reducing smoothing filter.</p>
@@ -632,1997 +632,1997 @@ Performance[4]: 5i 0.875657ips 6.880u 0:05.710</samp></pre>
   </section>
   <!-- -black-point-compensation -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="black-point-compensation"></a><code>-black-point-compensation</code></h2>
     </div>
     <p class="lead">Use black point compensation during color profile conversions.</p>
   </section>
   <!-- -black-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="black-threshold"></a><code>-black-threshold <var>value</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Force pixels below the threshold to black while leaving others unchanged.</p>
   </section>
   <!-- -blend -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="blend"></a><code>-blend <var>geometry</var></code></h2>
     </div>
     <p class="lead">Blend an image into another by an absolute value or percent.</p>
   </section>
   <!-- -blue-primary -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="blue-primary"></a><code>-blue-primary <var>x</var>,<var>y</var></code></h2>
     </div>
     <p class="lead">Set the blue chromaticity primary point.</p>
   </section>
   <!-- -blue-shift -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="blue-shift"></a><code>-blue-shift <var>factor</var></code></h2>
     </div>
     <p class="lead">Simulate a scene at nighttime in moonlight (start with a factor of 1.5).</p>
   </section>
   <!-- -blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="blur"></a><code>-blur <var>radius</var></code><br /><code>-blur <var>radius</var>{x<var>sigma</var>}</code></h2>
     </div>
     <p class="lead">Reduce image noise and detail levels.</p>
     <p>Convolves the image with a Gaussian distribution. Formula:</p>
-    <p class="text-center"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/></p>
+    <p class="text-start"><img class="img-fluid img-thumbnail rounded shadow-sm" alt="gaussian distribution" width="243px" height="42px" src="/image/gaussian-blur.png"/></p>
   </section>
   <!-- -border -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="border"></a><code>-border <var>geometry</var></code></h2>
     </div>
     <p class="lead">Surround the image with a border of color.</p>
   </section>
   <!-- -bordercolor -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="bordercolor"></a><code>-bordercolor <var>color</var></code></h2>
     </div>
     <p class="lead">Set the border color (default is <code>#DFDFDF</code>).</p>
   </section>
   <!-- -borderwidth -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="borderwidth"></a><code>-borderwidth <var>geometry</var></code></h2>
     </div>
     <p class="lead">Set the border width.</p>
   </section>
   <!-- -brightness-contrast -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="brightness-contrast"></a><code>-brightness-contrast <var>brightness</var></code><br /><code>-brightness-contrast <var>brightness</var>{x<var>contrast</var>}{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Adjust the brightness and/or contrast of the image (-100 to +100 range).</p>
   </section>
   <!-- -cache -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="cache"></a><code>-cache <var>threshold</var></code></h2>
     </div>
     <p class="lead">(Replaced by the <a href='#limit'>-limit</a> option).</p>
   </section>
   <!-- -canny -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="canny"></a><code>-canny <var>radius</var></code><br/><code>-canny <var>radius</var>{x<var>sigma</var>}{<var>+lower-percent</var>}{<var>+upper-percent</var>}</code></h2>
     </div>
     <p class="lead">Canny edge detector for multi-stage edge detection.</p>
   </section>
   <!-- -caption -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="caption"></a><code>-caption <var>string</var></code></h2>
     </div>
     <p class="lead">Assign a caption metadata string to an image.</p>
   </section>
   <!-- -cdl -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="cdl"></a><code>-cdl <var>filename</var></code></h2>
     </div>
     <p class="lead">Color correct with an ASC Color Decision List XML file.</p>
   </section>
   <!-- -channel -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="channel"></a><code>-channel <var>type</var></code></h2>
     </div>
     <p class="lead">Specify image color channels for subsequent operators.</p>
   </section>
   <!-- -channel-fx -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="channel-fx"></a><code>-channel-fx <var>expression</var></code></h2>
     </div>
     <p class="lead">Exchange, extract, or copy one or more image channels.</p>
   </section>
   <!-- -charcoal -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="charcoal"></a><code>-charcoal <var>factor</var></code></h2>
     </div>
     <p class="lead">Simulate a charcoal drawing effect.</p>
   </section>
   <!-- -chop -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="chop"></a><code>-chop <var>geometry</var></code></h2>
     </div>
     <p class="lead">Remove pixels from the interior of an image.</p>
   </section>
   <!-- -clahe -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clahe"></a><code>-clahe <var>width</var>x<var>height</var>&#123%}{+}<var>number-bins</var>{+}<var>clip-limit</var>{!}</code></h2>
     </div>
     <p class="lead">Contrast Limited Adaptive Histogram Equalization.</p>
   </section>
   <!-- -clamp -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clamp"></a><code>-clamp</code></h2>
     </div>
     <p class="lead">Clamp pixel values outside the quantum range.</p>
   </section>
   <!-- -clip -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clip"></a><code>-clip</code></h2>
     </div>
     <p class="lead">Apply the embedded clipping path if present.</p>
   </section>
   <!-- -clip-mask -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clip-mask"></a><code>-clip-mask</code></h2>
     </div>
     <p class="lead">Clip the image as defined by a mask.</p>
   </section>
   <!-- -clip-path -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clip-path"></a><code>-clip-path <var>id</var></code></h2>
     </div>
     <p class="lead">Clip along a named path from the 8BIM profile.</p>
   </section>
   <!-- -clone -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clone"></a><code>-clone <var>index(s)</var></code></h2>
     </div>
     <p class="lead">Make a clone of an image or images within the sequence.</p>
   </section>
   <!-- -clut -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="clut"></a><code>-clut</code></h2>
     </div>
     <p class="lead">Color Lookup Table replacement of channel values.</p>
   </section>
   <!-- -coalesce -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="coalesce"></a><code>-coalesce</code></h2>
     </div>
     <p class="lead">Fully define each frame of a GIF animation sequence (film strip layout).</p>
   </section>
   <!-- -colorize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="colorize"></a><code>-colorize <var>value</var></code></h2>
     </div>
     <p class="lead">Colorize the image by a specified percentage using the fill color.</p>
   </section>
   <!-- -colormap -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="colormap"></a><code>-colormap <var>type</var></code></h2>
     </div>
     <p class="lead">Define colormap type (shared or private).</p>
   </section>
   <!-- -colors -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="colors"></a><code>-colors <var>value</var></code></h2>
     </div>
     <p class="lead">Set the preferred number of colors in the image (color reduction).</p>
   </section>
   <!-- -color-matrix -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="color-matrix"></a><code>-color-matrix <var>matrix</var></code></h2>
     </div>
     <p class="lead">Apply color correction transformation matrix.</p>
   </section>
   <!-- -colorspace -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="colorspace"></a><code>-colorspace <var>value</var></code></h2>
     </div>
     <p class="lead">Set the image colorspace.</p>
   </section>
   <!-- -color-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="color-threshold"></a><code>-color-threshold <var>start-color</var>-<var>stop-color</var></code></h2>
     </div>
     <p class="lead">Return a binary image based on a color range.</p>
   </section>
   <!-- -combine -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="combine"></a><code>-combine</code></h2>
     </div>
     <p class="lead">Combine one or more grayscale images into a single multi-channel image.</p>
   </section>
   <!-- -comment -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="comment"></a><code>-comment <var>string</var></code></h2>
     </div>
     <p class="lead">Embed a comment metadata string in an image.</p>
   </section>
   <!-- -compare -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="compare"></a><code>-compare</code></h2>
     </div>
     <p class="lead">Mathematically and visually annotate image differences.</p>
   </section>
   <!-- -complex -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="complex"></a><code>-complex <var>operator</var></code></h2>
     </div>
     <p class="lead">Perform complex mathematics on an image sequence.</p>
   </section>
   <!-- -compose -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="compose"></a><code>-compose <var>operator</var></code></h2>
     </div>
     <p class="lead">Set the type of image composition/blending.</p>
   </section>
   <!-- -composite -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="composite"></a><code>-composite</code></h2>
     </div>
     <p class="lead">Perform alpha composition on two images and an optional mask.</p>
   </section>
   <!-- -compress -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="compress"></a><code>-compress <var>type</var></code></h2>
     </div>
     <p class="lead">Use pixel compression type when writing the image.</p>
   </section>
   <!-- -connected-components -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="connected-components"></a><code>-connected-components <var>connectivity</var></code></h2>
     </div>
     <p class="lead">Connected-components labeling for feature/region analysis.</p>
   </section>
   <!-- -contrast -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="contrast"></a><code>-contrast</code></h2>
     </div>
     <p class="lead">Enhance or reduce image contrast.</p>
   </section>
   <!-- -contrast-stretch -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="contrast-stretch"></a><code>-contrast-stretch <var>black-point</var></code><br /><code>-contrast-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Increase contrast by stretching intensity value range.</p>
   </section>
   <!-- -convolve -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="convolve"></a><code>-convolve <var>kernel</var></code></h2>
     </div>
     <p class="lead">Convolve an image with a user-supplied convolution kernel matrix.</p>
   </section>
   <!-- -copy -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="copy"></a><code>-copy <var>geometry</var> <var>offset</var></code></h2>
     </div>
     <p class="lead">Copy pixels from one area of an image to another.</p>
   </section>
   <!-- -crop -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="crop"></a><code>-crop <var>geometry</var>{<var>@</var>}{<var>!</var>}</code></h2>
     </div>
     <p class="lead">Cut out one or more rectangular regions of an image.</p>
   </section>
   <!-- -cycle -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="cycle"></a><code>-cycle <var>amount</var></code></h2>
     </div>
     <p class="lead">Displace image colormap by a specified amount.</p>
   </section>
   <!-- -debug -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="debug"></a><code>-debug <var>events</var></code></h2>
     </div>
     <p class="lead">Enable detailed debug logging output.</p>
   </section>
   <!-- -decipher -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="decipher"></a><code>-decipher <var>filename</var></code></h2>
     </div>
     <p class="lead">Decipher pixels previously transformed by <a href="#encipher">-encipher</a>.</p>
   </section>
   <!-- -deconstruct -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="deconstruct"></a><code>-deconstruct</code></h2>
     </div>
     <p class="lead">Find areas that have changed between consecutive animation frames.</p>
   </section>
   <!-- -define -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="define"></a><code>-define <var>key</var>{<var>=value</var>}<var>...</var></code></h2>
     </div>
     <p class="lead">Add specific global settings to control coders and image processing operations.</p>
   </section>
   <!-- -delay -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="delay"></a><code>-delay <var>ticks</var></code><br /><code>-delay <var>ticks</var>x<var>ticks-per-second</var> {<var>&lt;</var>} {<var>&gt;</var>}</code></h2>
     </div>
     <p class="lead">Display the next animation frame after a specified pause duration.</p>
   </section>
   <!-- -delete -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="delete"></a><code>-delete <var>indexes</var></code></h2>
     </div>
     <p class="lead">Delete images specified by index from the image sequence.</p>
   </section>
   <!-- -density -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="density"></a><code>-density <var>width</var></code><br /><code>-density <var>width</var>x<var>height</var></code></h2>
     </div>
     <p class="lead">Set the horizontal and vertical resolution (DPI) for rendering or encoding.</p>
   </section>
   <!-- -depth -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="depth"></a><code>-depth <var>value</var></code></h2>
     </div>
     <p class="lead">Set or specify the color bit depth of the image.</p>
   </section>
   <!-- -descend -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="descend"></a><code>-descend</code></h2>
     </div>
     <p class="lead">Obtain image by descending window hierarchy.</p>
   </section>
   <!-- -deskew -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="deskew"></a><code>-deskew <var>threshold&#123%}</var></code></h2>
     </div>
     <p class="lead">Straighten a rotated or skewed scanned document image.</p>
   </section>
   <!-- -despeckle -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="despeckle"></a><code>-despeckle</code></h2>
     </div>
     <p class="lead">Reduce image speckles and noise.</p>
   </section>
   <!-- -direction -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="direction"></a><code>-direction <var>type</var></code></h2>
     </div>
     <p class="lead">Render text right-to-left or left-to-right (requires RAQM library).</p>
   </section>
   <!-- -displace -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="displace"></a><code>-displace <var>horizontal-scale</var>&#123%}{!}</code><br /><code>-displace <var>horizontal-scale</var>x<var>vertical-scale</var>&#123%}{!}</code></h2>
     </div>
     <p class="lead">Shift image pixels as defined by a displacement map.</p>
   </section>
   <!-- -display -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="display"></a><code>-display <var>host:display[.screen]</var></code></h2>
     </div>
     <p class="lead">Specify the X server to contact for display operations.</p>
   </section>
   <!-- -dispose -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="dispose"></a><code>-dispose <var>method</var></code></h2>
     </div>
     <p class="lead">Define GIF animation frame disposal method.</p>
   </section>
   <!-- -dissimilarity-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="dissimilarity-threshold"></a><code>-dissimilarity-threshold <var>value</var></code></h2>
     </div>
     <p class="lead">Maximum Root Mean Square Error (RMSE) for sub-image matching.</p>
   </section>
   <!-- -dissolve -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="dissolve"></a><code>-dissolve <var>src_percent</var>[x<var>dst_percent</var>]</code></h2>
     </div>
     <p class="lead">Dissolve an image into another by given percentages.</p>
   </section>
   <!-- -distort -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="distort"></a><code>-distort <var>method arguments</var></code></h2>
     </div>
     <p class="lead">Distort an image using advanced geometric mapping methods (Affine, Perspective, Arc, Barrel, etc.).</p>
   </section>
   <!-- -distribute-cache -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="distribute-cache"></a><code>-distribute-cache <var>port</var></code></h2>
     </div>
     <p class="lead">Launch a distributed pixel cache network server.</p>
   </section>
   <!-- -dither -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="dither"></a><code>-dither <var>method</var></code></h2>
     </div>
     <p class="lead">Apply error diffusion dithering (Floyd-Steinberg or Riemersma) during color reduction.</p>
   </section>
   <!-- -draw -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="draw"></a><code>-draw <var>string</var></code></h2>
     </div>
     <p class="lead">Annotate an image with vector graphic primitives (lines, rectangles, paths, text).</p>
   </section>
   <!-- -duplicate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="duplicate"></a><code>-duplicate <var>count,indexes</var></code></h2>
     </div>
     <p class="lead">Duplicate frames in an image sequence.</p>
   </section>
   <!-- -edge -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="edge"></a><code>-edge <var>radius</var></code></h2>
     </div>
     <p class="lead">Detect and highlight edges within an image.</p>
   </section>
   <!-- -emboss -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="emboss"></a><code>-emboss <var>radius</var>{x<var>sigma</var>}</code></h2>
     </div>
     <p class="lead">Emboss an image (create a 3D relief effect).</p>
   </section>
   <!-- -encipher -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="encipher"></a><code>-encipher <var>filename</var></code></h2>
     </div>
     <p class="lead">Encipher pixels for secure storage and later deciphering.</p>
   </section>
   <!-- -encoding -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="encoding"></a><code>-encoding <var>type</var></code></h2>
     </div>
     <p class="lead">Specify the text character encoding type.</p>
   </section>
   <!-- -endian -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="endian"></a><code>-endian <var>type</var></code></h2>
     </div>
     <p class="lead">Specify binary data endianness (MSB or LSB).</p>
   </section>
   <!-- -enhance -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="enhance"></a><code>-enhance</code></h2>
     </div>
     <p class="lead">Apply a digital noise-reduction filter to enhance image quality.</p>
   </section>
   <!-- -equalize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="equalize"></a><code>-equalize</code></h2>
     </div>
     <p class="lead">Perform histogram equalization channel-by-channel.</p>
   </section>
   <!-- -evaluate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="evaluate"></a><code>-evaluate <var>operator value</var></code></h2>
     </div>
     <p class="lead">Alter channel pixels via arithmetic, relational, or logical evaluations.</p>
   </section>
   <!-- -evaluate-sequence -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="evaluate-sequence"></a><code>-evaluate-sequence <var>operator</var></code></h2>
     </div>
     <p class="lead">Evaluate expressions across a multi-image sequence.</p>
   </section>
   <!-- -exit -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="exit"></a><code>-exit</code></h2>
     </div>
     <p class="lead">Stop command processing immediately.</p>
   </section>
   <!-- -extent -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="extent"></a><code>-extent <var>geometry</var></code></h2>
     </div>
     <p class="lead">Set final canvas size and image placement offsets.</p>
   </section>
   <!-- -extract -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="extract"></a><code>-extract <var>geometry</var></code></h2>
     </div>
     <p class="lead">Extract a specific subregion from a raw or standard image.</p>
   </section>
   <!-- -family -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="family"></a><code>-family <var>fontFamily</var></code></h2>
     </div>
     <p class="lead">Set the font family name for text rendering.</p>
   </section>
   <!-- -features -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="features"></a><code>-features <var>distance</var></code></h2>
     </div>
     <p class="lead">Display co-occurrence matrix texture features for image channels.</p>
   </section>
   <!-- -fft -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="fft"></a><code>-fft</code></h2>
     </div>
     <p class="lead">Implement the forward Fast Fourier Transform (FFT).</p>
   </section>
   <!-- -fill -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="fill"></a><code>-fill <var>color</var></code></h2>
     </div>
     <p class="lead">Set the fill color for drawing primitives and fonts.</p>
   </section>
   <!-- -filter -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="filter"></a><code>-filter <var>type</var></code></h2>
     </div>
     <p class="lead">Select resampling filter algorithm for resizing and distortion.</p>
   </section>
   <!-- -flatten -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="flatten"></a><code>-flatten</code></h2>
     </div>
     <p class="lead">Flatten multiple image layers onto a single canvas background.</p>
   </section>
   <!-- -flip -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="flip"></a><code>-flip</code></h2>
     </div>
     <p class="lead">Create a vertical mirror image (upside-down).</p>
   </section>
   <!-- -floodfill -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="floodfill"></a><code>-floodfill {<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var> <var>color</var></code></h2>
     </div>
     <p class="lead">Floodfill color starting from a seed point.</p>
   </section>
   <!-- -flop -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="flop"></a><code>-flop</code></h2>
     </div>
     <p class="lead">Create a horizontal mirror image (left-to-right).</p>
   </section>
   <!-- -font -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="font"></a><code>-font <var>name</var></code></h2>
     </div>
     <p class="lead">Set font file or typeface for text annotation and labels.</p>
   </section>
   <!-- -foreground -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="foreground"></a><code>-foreground <var>color</var></code></h2>
     </div>
     <p class="lead">Define foreground color for interactive windows and menus.</p>
   </section>
   <!-- -format -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="format"></a><code>-format <var>type</var> / <var>expression</var></code></h2>
     </div>
     <p class="lead">Specify output image format or print formatted image properties.</p>
   </section>
   <!-- -frame -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="frame"></a><code>-frame <var>geometry</var></code></h2>
     </div>
     <p class="lead">Surround the image with an ornate beveled decorative frame.</p>
   </section>
   <!-- -function -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="function"></a><code>-function <var>function</var> <var>parameters</var></code></h2>
     </div>
     <p class="lead">Apply mathematical functions (Polynomial, Sinusoid, Arcsin, Arctan) to channel values.</p>
   </section>
   <!-- -fuzz -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="fuzz"></a><code>-fuzz <var>distance</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Colors within this tolerance distance are considered matching/equal.</p>
   </section>
   <!-- -fx -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="fx"></a><code>-fx <var>expression</var></code></h2>
     </div>
     <p class="lead">Apply a custom mathematical pixel expression.</p>
   </section>
   <!-- -gamma -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="gamma"></a><code>-gamma <var>value</var></code></h2>
     </div>
     <p class="lead">Apply gamma correction level.</p>
   </section>
   <!-- -gaussian-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="gaussian-blur"></a><code>-gaussian-blur <var>radius</var></code><br /><code>-gaussian-blur <var>radius</var>{x<var>sigma</var>}</code></h2>
     </div>
     <p class="lead">Blur the image using a 2D Gaussian operator.</p>
   </section>
   <!-- -geometry -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="geometry"></a><code>-geometry <var>geometry</var></code></h2>
     </div>
     <p class="lead">Set preferred image dimensions and positioning offsets.</p>
   </section>
   <!-- -gravity -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="gravity"></a><code>-gravity <var>type</var></code></h2>
     </div>
     <p class="lead">Set directional alignment gravity for text, watermarks, and positioning.</p>
   </section>
   <!-- -grayscale -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="grayscale"></a><code>-grayscale <var>method</var></code></h2>
     </div>
     <p class="lead">Convert image color channels to grayscale.</p>
   </section>
   <!-- -green-primary -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="green-primary"></a><code>-green-primary <var>x,y</var></code></h2>
     </div>
     <p class="lead">Set the green chromaticity primary point.</p>
   </section>
   <!-- -hald-clut -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="hald-clut"></a><code>-hald-clut</code></h2>
     </div>
     <p class="lead">Apply a 3D Hald Color Lookup Table transformation.</p>
   </section>
   <!-- -help -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="help"></a><code>-help</code></h2>
     </div>
     <p class="lead">Print command-line usage instructions.</p>
   </section>
   <!-- -highlight-color -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="highlight-color"></a><code>-highlight-color <var>color</var></code></h2>
     </div>
     <p class="lead">Emphasize image differences with a custom highlight color during comparison.</p>
   </section>
   <!-- -hough-lines -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="hough-lines"></a><code>-hough-lines <var>width</var>x<var>height</var>{<var>+threshold</var>}</code></h2>
     </div>
     <p class="lead">Identify and draw straight lines using the Hough transform algorithm.</p>
   </section>
   <!-- -iconGeometry -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="iconGeometry"></a><code>-iconGeometry <var>geometry</var></code></h2>
     </div>
     <p class="lead">Specify X11 window icon geometry.</p>
   </section>
   <!-- -iconic -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="iconic"></a><code>-iconic</code></h2>
     </div>
     <p class="lead">Start application in iconic/minimized window mode.</p>
   </section>
   <!-- -identify -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="identify"></a><code>-identify</code></h2>
     </div>
     <p class="lead">Identify format, dimensions, and characteristics of images.</p>
   </section>
   <!-- -ift -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="ift"></a><code>-ift</code></h2>
     </div>
     <p class="lead">Implement the Inverse Fast Fourier Transform (IFFT).</p>
   </section>
   <!-- -illuminant -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="illuminant"></a><code>-illuminant <var>method</var></code></h2>
     </div>
     <p class="lead">Specify reference white illuminant (A, D65, etc.).</p>
   </section>
   <!-- -immutable -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="immutable"></a><code>-immutable</code></h2>
     </div>
     <p class="lead">Mark image data as immutable.</p>
   </section>
   <!-- -implode -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="implode"></a><code>-implode <var>factor</var></code></h2>
     </div>
     <p class="lead">Implode image pixels inward toward the center.</p>
   </section>
   <!-- -insert -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="insert"></a><code>-insert <var>index</var></code></h2>
     </div>
     <p class="lead">Insert the last image into the sequence at a specific index.</p>
   </section>
   <!-- -intensity -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="intensity"></a><code>-intensity <var>method</var></code></h2>
     </div>
     <p class="lead">Specify calculation method for converting color pixels to grayscale intensity.</p>
   </section>
   <!-- -intent -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="intent"></a><code>-intent <var>type</var></code></h2>
     </div>
     <p class="lead">Specify color management rendering intent (Perceptual, Relative, Absolute, Saturation).</p>
   </section>
   <!-- -interlace -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="interlace"></a><code>-interlace <var>type</var></code></h2>
     </div>
     <p class="lead">Specify interlacing scheme (Line, Plane, Partition, GIF, PNG, JPEG).</p>
   </section>
   <!-- -interline-spacing -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="interline-spacing"></a><code>-interline-spacing <var>value</var></code></h2>
     </div>
     <p class="lead">Set spacing between lines of rendered text.</p>
   </section>
   <!-- -interpolate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="interpolate"></a><code>-interpolate <var>type</var></code></h2>
     </div>
     <p class="lead">Set pixel interpolation method (Bilinear, Nearest-Neighbor, Catrom, etc.).</p>
   </section>
   <!-- -interpolative-resize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="interpolative-resize"></a><code>-interpolative-resize <var>geometry</var></code></h2>
     </div>
     <p class="lead">Resize image using a specific pixel color interpolation method.</p>
   </section>
   <!-- -interword-spacing -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="interword-spacing"></a><code>-interword-spacing <var>value</var></code></h2>
     </div>
     <p class="lead">Set spacing between words in rendered text.</p>
   </section>
   <!-- -integral -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="integral"></a><code>-integral</code></h2>
     </div>
     <p class="lead">Calculate the sum of pixel intensity values in the image.</p>
   </section>
   <!-- -kerning -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="kerning"></a><code>-kerning <var>value</var></code></h2>
     </div>
     <p class="lead">Set character kerning (spacing between letters) for text.</p>
   </section>
   <!-- -kmeans -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="kmeans"></a><code>-kmeans <var>colors</var>{x<var>iterations</var>}{+<var>tolerance</var>}</code></h2>
     </div>
     <p class="lead">K-Means iterative color reduction and image segmentation.</p>
   </section>
   <!-- -kuwahara -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="kuwahara"></a><code>-kuwahara <var>radius</var></code><br /><code>-kuwahara <var>radius</var>{x<var>sigma</var>}</code></h2>
     </div>
     <p class="lead">Edge-preserving noise reduction smoothing filter.</p>
   </section>
   <!-- -label -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="label"></a><code>-label <var>name</var></code></h2>
     </div>
     <p class="lead">Assign a label metadata string to an image.</p>
   </section>
   <!-- -lat -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="lat"></a><code>-lat <var>width</var></code><br /><code>-lat <var>width</var>x<var>height</var>{<var>+-</var>}<var>offset</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Local Adaptive Thresholding for uneven backgrounds.</p>
   </section>
   <!-- -layers -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="layers"></a><code>-layers <var>method</var></code></h2>
     </div>
     <p class="lead">Perform multi-image layer or animation optimization methods.</p>
   </section>
   <!-- -level -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="level"></a><code>-level <var>black_point</var>{,<var>white_point</var>}{<var>%</var>}{,<var>gamma</var>}</code></h2>
     </div>
     <p class="lead">Adjust black and white levels and gamma of image channels.</p>
   </section>
   <!-- -level-colors -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="level-colors"></a><code>-level-colors {<var>black_color</var>}{,}{<var>white_color</var>}</code></h2>
     </div>
     <p class="lead">Adjust image levels using specific custom colors.</p>
   </section>
   <!-- -limit -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="limit"></a><code>-limit <var>type value</var></code></h2>
     </div>
     <p class="lead">Set pixel cache resource limits (memory, disk, map, thread, etc.).</p>
   </section>
   <!-- -linear-stretch -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="linear-stretch"></a><code>-linear-stretch <var>black-point</var></code><br /><code>-linear-stretch <var>black-point</var>{x<var>white-point</var>}{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Linear contrast stretch with saturation.</p>
   </section>
   <!-- -linewidth -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="linewidth"></a><code>-linewidth</code></h2>
     </div>
     <p class="lead">Set line stroke width for subsequent drawing operations.</p>
   </section>
   <!-- -liquid-rescale -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="liquid-rescale"></a><code>-liquid-rescale <var>geometry</var></code></h2>
     </div>
     <p class="lead">Rescale image using seam-carving (content-aware resizing).</p>
   </section>
   <!-- -list -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="list"></a><code>-list <var>type</var></code></h2>
     </div>
     <p class="lead">Print lists of supported arguments, coders, fonts, filters, or metrics.</p>
   </section>
   <!-- -log -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="log"></a><code>-log <var>string</var></code></h2>
     </div>
     <p class="lead">Specify formatting string for debug event logs.</p>
   </section>
   <!-- -loop -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="loop"></a><code>-loop <var>iterations</var></code></h2>
     </div>
     <p class="lead">Set Netscape loop extension count for GIF animations (0 = infinite).</p>
   </section>
   <!-- -lowlight-color -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="lowlight-color"></a><code>-lowlight-color <var>color</var></code></h2>
     </div>
     <p class="lead">De-emphasize pixel differences with a custom color during comparison.</p>
   </section>
   <!-- -magnify -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="magnify"></a><code>-magnify</code></h2>
     </div>
     <p class="lead">Double or triple image size using pixel art scaling algorithms (hq2x, scale2x, etc.).</p>
   </section>
   <!-- -map -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="map"></a><code>-map <var>type</var> / <var>components</var></code></h2>
     </div>
     <p class="lead">Display image using standard colormap or raw pixel component map.</p>
   </section>
   <!-- -mattecolor -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="mattecolor"></a><code>-mattecolor <var>color</var></code></h2>
     </div>
     <p class="lead">Specify color for frames and bevels (default <code>#BDBDBD</code>).</p>
   </section>
   <!-- -maximum -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="maximum"></a><code>-maximum</code></h2>
     </div>
     <p class="lead">Return maximum intensity in a neighborhood or image sequence.</p>
   </section>
   <!-- -median -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="median"></a><code>-median <var>geometry</var></code></h2>
     </div>
     <p class="lead">Apply a median filter to smooth image noise.</p>
   </section>
   <!-- -mean-shift -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="mean-shift"></a><code>-mean-shift <var>width</var>x<var>height</var>{<var>+distance</var>&#123%}</code></h2>
     </div>
     <p class="lead">Image noise removal and color segmentation via mean-shift clustering.</p>
   </section>
   <!-- -metric -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="metric"></a><code>-metric <var>type</var></code></h2>
     </div>
     <p class="lead">Output image difference comparison metrics (RMSE, PSNR, SSIM, AE, etc.).</p>
   </section>
   <!-- -minimum -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="minimum"></a><code>-minimum</code></h2>
     </div>
     <p class="lead">Return minimum intensity in a neighborhood or image sequence.</p>
   </section>
   <!-- -mode -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="mode"></a><code>-mode <var>geometry</var> / <var>value</var></code></h2>
     </div>
     <p class="lead">Set neighborhood predominant color mode or operating layout style.</p>
   </section>
   <!-- -modulate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="modulate"></a><code>-modulate <var>brightness</var>[,<var>saturation</var>,<var>hue</var>]</code></h2>
     </div>
     <p class="lead">Vary image brightness, saturation, and hue percentage levels.</p>
   </section>
   <!-- -moments -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="moments"></a><code>-moments</code></h2>
     </div>
     <p class="lead">Report image geometric moments and perceptual hash values.</p>
   </section>
   <!-- -monitor -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="monitor"></a><code>-monitor</code></h2>
     </div>
     <p class="lead">Monitor progress of image processing tasks.</p>
   </section>
   <!-- -monochrome -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="monochrome"></a><code>-monochrome</code></h2>
     </div>
     <p class="lead">Transform image into pure black and white bi-level.</p>
   </section>
   <!-- -morph -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="morph"></a><code>-morph <var>frames</var></code></h2>
     </div>
     <p class="lead">Morph an image sequence through pixel/size interpolation.</p>
   </section>
   <!-- -morphology -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="morphology"></a><code>-morphology <var>method</var> <var>kernel</var></code></h2>
     </div>
     <p class="lead">Apply mathematical morphology operations (dilate, erode, open, close).</p>
   </section>
   <!-- -mosaic -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="mosaic"></a><code>-mosaic</code></h2>
     </div>
     <p class="lead">Compose image layers into a mosaic canvas.</p>
   </section>
   <!-- -motion-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="motion-blur"></a><code>-motion-blur <var>radius</var></code><br /><code>-motion-blur <var>radius</var>{x<var>sigma</var>}+<var>angle</var></code></h2>
     </div>
     <p class="lead">Simulate directional motion blur.</p>
   </section>
   <!-- -name -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="name"></a><code>-name</code></h2>
     </div>
     <p class="lead">Assign an identifying name to an image.</p>
   </section>
   <!-- -negate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="negate"></a><code>-negate</code></h2>
     </div>
     <p class="lead">Replace each pixel with its complementary negative color.</p>
   </section>
   <!-- -noise -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="noise"></a><code>-noise <var>geometry</var></code><br/><code>+noise <var>type</var></code></h2>
     </div>
     <p class="lead">Add or reduce noise in an image.</p>
   </section>
   <!-- -normalize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="normalize"></a><code>-normalize</code></h2>
     </div>
     <p class="lead">Increase contrast by stretching intensity values across the full range.</p>
   </section>
   <!-- -opaque -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="opaque"></a><code>-opaque <var>color</var></code></h2>
     </div>
     <p class="lead">Change a target color to the current fill color.</p>
   </section>
   <!-- -ordered-dither -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="ordered-dither"></a><code>-ordered-dither <var>threshold_map</var>{,<var>level</var>...}</code></h2>
     </div>
     <p class="lead">Dither image using pre-defined ordered dither threshold maps.</p>
   </section>
   <!-- -orient -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="orient"></a><code>-orient <var>image orientation</var></code></h2>
     </div>
     <p class="lead">Specify EXIF orientation metadata for digital images.</p>
   </section>
   <!-- -page -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="page"></a><code>-page <var>geometry</var></code></h2>
     </div>
     <p class="lead">Set size and location of an image on the virtual canvas.</p>
   </section>
   <!-- -paint -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="paint"></a><code>-paint <var>radius</var></code></h2>
     </div>
     <p class="lead">Simulate an oil painting artistic effect.</p>
   </section>
   <!-- -path -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="path"></a><code>-path <var>path</var></code></h2>
     </div>
     <p class="lead">Write output images to a specified directory path on disk.</p>
   </section>
   <!-- -pause [animate] -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="pause_animate_"></a><code>-pause <var>seconds</var></code></h2>
     </div>
     <p class="lead">Pause duration between animation loops.</p>
   </section>
   <!-- -pause [import] -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="pause_import_"></a><code>-pause <var>seconds</var></code></h2>
     </div>
     <p class="lead">Pause duration between screen capture snapshots.</p>
   </section>
   <!-- -perceptible -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="perceptible"></a><code>-perceptible <var>epsilon</var></code></h2>
     </div>
     <p class="lead">Ensure pixel values are perceptible (above a minimum threshold magnitude).</p>
   </section>
   <!-- -ping -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="ping"></a><code>-ping</code></h2>
     </div>
     <p class="lead">Efficiently query basic image characteristics without fully loading pixel data.</p>
   </section>
   <!-- -pointsize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="pointsize"></a><code>-pointsize <var>value</var></code></h2>
     </div>
     <p class="lead">Set font pointsize for text rendering.</p>
   </section>
   <!-- -polaroid -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="polaroid"></a><code>-polaroid <var>angle</var></code></h2>
     </div>
     <p class="lead">Simulate a Polaroid instant photograph frame and drop shadow.</p>
   </section>
   <!-- -poly -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="poly"></a><code>-poly <var>"wt,exp ..."</var></code></h2>
     </div>
     <p class="lead">Combine multiple images according to a weighted sum of polynomials.</p>
   </section>
   <!-- -posterize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="posterize"></a><code>-posterize <var>levels</var></code></h2>
     </div>
     <p class="lead">Reduce image to a limited number of color levels per channel.</p>
   </section>
   <!-- -precision -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="precision"></a><code>-precision <var>value</var></code></h2>
     </div>
     <p class="lead">Set the maximum number of significant digits to be printed.</p>
   </section>
   <!-- -preview -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="preview"></a><code>-preview <var>type</var></code></h2>
     </div>
     <p class="lead">Generate image preview representations (Gamma, Blur, Solarize, etc.).</p>
   </section>
   <!-- -print -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="print"></a><code>-print <var>string</var></code></h2>
     </div>
     <p class="lead">Interpret string properties and print output to console.</p>
   </section>
   <!-- -process -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="process"></a><code>-process <var>command</var></code></h2>
     </div>
     <p class="lead">Process image using a custom plug-in filter module.</p>
   </section>
   <!-- -profile -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="profile"></a><code>-profile <var>filename</var></code><br/><code>+profile <var>profile_name</var></code></h2>
     </div>
     <p class="lead">Add, remove, or manage ICC color, IPTC, or EXIF profiles.</p>
   </section>
   <!-- -quality -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="quality"></a><code>-quality <var>value</var></code></h2>
     </div>
     <p class="lead">Control compression quality for JPEG, PNG, WebP, and HEIC encoders.</p>
   </section>
   <!-- -quantize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="quantize"></a><code>-quantize <var>colorspace</var></code></h2>
     </div>
     <p class="lead">Specify colorspace used for color reduction and quantization.</p>
   </section>
   <!-- -quiet -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="quiet"></a><code>-quiet</code></h2>
     </div>
     <p class="lead">Suppress all non-fatal warning messages.</p>
   </section>
   <!-- -raise -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="raise"></a><code>-raise <var>thickness</var></code></h2>
     </div>
     <p class="lead">Lighten or darken image edges to create a 3D raised or lowered button effect.</p>
   </section>
   <!-- -random-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="random-threshold"></a><code>-random-threshold <var>low</var>x<var>high</var></code></h2>
     </div>
     <p class="lead">Apply a random threshold to image channels.</p>
   </section>
   <!-- -range-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="range-threshold"></a><code>-range-threshold <var>low-black</var>,<var>low-white</var>,<var>high-white</var>,<var>high-black</var></code></h2>
     </div>
     <p class="lead">Perform hard or soft range thresholding.</p>
   </section>
   <!-- -read -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="read"></a><code>-read <var>filename</var></code></h2>
     </div>
     <p class="lead">Explicitly read an image file (useful for filenames starting with dashes).</p>
   </section>
   <!-- -read-mask -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="read-mask"></a><code>-read-mask <var>filename</var></code></h2>
     </div>
     <p class="lead">Prevent pixel updates to areas specified by a read mask.</p>
   </section>
   <!-- -red-primary -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="red-primary"></a><code>-red-primary <var>x,y</var></code></h2>
     </div>
     <p class="lead">Set the red chromaticity primary point.</p>
   </section>
   <!-- -regard-warnings -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="regard-warnings"></a><code>-regard-warnings</code></h2>
     </div>
     <p class="lead">Treat image format warnings as fatal errors.</p>
   </section>
   <!-- -remap -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="remap"></a><code>-remap <var>filename</var></code></h2>
     </div>
     <p class="lead">Reduce image colors to match the palette of a reference image.</p>
   </section>
   <!-- -region -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="region"></a><code>-region <var>geometry</var></code></h2>
     </div>
     <p class="lead">Restrict subsequent operations to a specific image region.</p>
   </section>
   <!-- -remote -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="remote"></a><code>-remote</code></h2>
     </div>
     <p class="lead">Perform a remote X11 window display operation.</p>
   </section>
   <!-- -render -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="render"></a><code>-render</code></h2>
     </div>
     <p class="lead">Enable vector graphic rendering operations.</p>
   </section>
   <!-- -repage -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="repage"></a><code>-repage <var>geometry</var></code></h2>
     </div>
     <p class="lead">Adjust virtual canvas size and offset metadata of an image.</p>
   </section>
   <!-- -resample -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="resample"></a><code>-resample <var>horizontal</var>x<var>vertical</var></code></h2>
     </div>
     <p class="lead">Resample image to a specified target resolution (DPI).</p>
   </section>
   <!-- -reshape -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="reshape"></a><code>-reshape <var>geometry</var></code></h2>
     </div>
     <p class="lead">Reshape image dimensions.</p>
   </section>
   <!-- -resize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="resize"></a><code>-resize <var>geometry</var></code></h2>
     </div>
     <p class="lead">Resize an image using high-quality filter resampling.</p>
   </section>
   <!-- -respect-parentheses -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="respect-parentheses"></a><code>-respect-parentheses</code></h2>
     </div>
     <p class="lead">Ensure settings remain in effect only until the closing parenthesis boundary.</p>
   </section>
   <!-- -reverse -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="reverse"></a><code>-reverse</code></h2>
     </div>
     <p class="lead">Reverse the order of images in the current sequence.</p>
   </section>
   <!-- -roll -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="roll"></a><code>-roll {<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var></code></h2>
     </div>
     <p class="lead">Roll image vertically or horizontally by a specified offset.</p>
   </section>
   <!-- -rotate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="rotate"></a><code>-rotate <var>degrees</var>{<var>&lt;</var>}{<var>&gt;</var>}</code></h2>
     </div>
     <p class="lead">Apply Paeth image rotation using shear operations.</p>
   </section>
   <!-- -rotational-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="rotational-blur"></a><code>-rotational-blur <var>angle</var></code></h2>
     </div>
     <p class="lead">Radial blur around the center of the image.</p>
   </section>
   <!-- -sample -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sample"></a><code>-sample <var>geometry</var></code></h2>
     </div>
     <p class="lead">Scale image quickly using pixel replication and subsampling (nearest neighbor).</p>
   </section>
   <!-- -sampling-factor -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sampling-factor"></a><code>-sampling-factor <var>horizontal-factor</var>x<var>vertical-factor</var></code></h2>
     </div>
     <p class="lead">Chroma downsampling factors for JPEG, MPEG, and YUV formats.</p>
   </section>
   <!-- -scale -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="scale"></a><code>-scale <var>geometry</var></code></h2>
     </div>
     <p class="lead">Scale image using pixel block averaging (box filter).</p>
   </section>
   <!-- -scene -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="scene"></a><code>-scene <var>value</var></code></h2>
     </div>
     <p class="lead">Set image sequence scene number.</p>
   </section>
   <!-- -screen -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="screen"></a><code>-screen</code></h2>
     </div>
     <p class="lead">Capture root X11 screen window during import.</p>
   </section>
   <!-- -script -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="script"></a><code>-script <var>filename</var></code></h2>
     </div>
     <p class="lead">Transfer execution control to a script file.</p>
   </section>
   <!-- -seed -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="seed"></a><code>-seed</code></h2>
     </div>
     <p class="lead">Seed the pseudo-random number generator sequence.</p>
   </section>
   <!-- -segment -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="segment"></a><code>-segment <var>cluster-threshold</var>x<var>smoothing-threshold</var></code></h2>
     </div>
     <p class="lead">Segment image colors using fuzzy c-means clustering.</p>
   </section>
   <!-- -selective-blur -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="selective-blur"></a><code>-selective-blur <var>radius</var></code><br /><code>-selective-blur <var>radius</var>{x<var>sigma</var>}{<var>+threshold</var>}</code></h2>
     </div>
     <p class="lead">Selectively blur pixels within a specified contrast threshold.</p>
   </section>
   <!-- -separate -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="separate"></a><code>-separate</code></h2>
     </div>
     <p class="lead">Separate an image channel into a distinct grayscale image.</p>
   </section>
   <!-- -sepia-tone -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sepia-tone"></a><code>-sepia-tone <var>percent-threshold</var></code></h2>
     </div>
     <p class="lead">Simulate a vintage sepia-toned photographic print.</p>
   </section>
   <!-- -set -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="set"></a><code>-set <var>key value</var></code><br/><code>+set <var>key</var></code></h2>
     </div>
     <p class="lead">Set image attributes, metadata properties, and global artifacts.</p>
   </section>
   <!-- -shade -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shade"></a><code>-shade <var>azimuth</var>x<var>elevation</var></code></h2>
     </div>
     <p class="lead">Shade the image using a distant directional light source.</p>
   </section>
   <!-- -shadow -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shadow"></a><code>-shadow <var>percent-opacity</var>{x<var>sigma</var>}{<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Simulate a drop shadow effect.</p>
   </section>
   <!-- -shared-memory -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shared-memory"></a><code>-shared-memory</code></h2>
     </div>
     <p class="lead">Use X11 shared memory extension for pixmaps.</p>
   </section>
   <!-- -sharpen -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sharpen"></a><code>-sharpen <var>radius</var></code><br /><code>-sharpen <var>radius</var>{x<var>sigma</var>}</code></h2>
     </div>
     <p class="lead">Sharpen image details using a Gaussian operator.</p>
   </section>
   <!-- -shave -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shave"></a><code>-shave <var>geometry</var></code></h2>
     </div>
     <p class="lead">Shave pixels from all edges of an image.</p>
   </section>
   <!-- -shear -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shear"></a><code>-shear <var>Xdegrees</var>[x<var>Ydegrees</var>]</code></h2>
     </div>
     <p class="lead">Shear image along the x-axis and/or y-axis into a parallelogram.</p>
   </section>
   <!-- -shuffle -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="shuffle"></a><code>-shuffle <var>mode</var></code></h2>
     </div>
     <p class="lead">Reorder image sequence based on ascending, descending, or random mode.</p>
   </section>
   <!-- -sigmoidal-contrast -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sigmoidal-contrast"></a><code>-sigmoidal-contrast <var>contrast</var>x<var>mid-point</var></code></h2>
     </div>
     <p class="lead">Increase contrast without saturating highlights or shadows.</p>
   </section>
   <!-- -silent -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="silent"></a><code>-silent</code></h2>
     </div>
     <p class="lead">Operate silently (used by import tool).</p>
   </section>
   <!-- -similarity-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="similarity-threshold"></a><code>-similarity-threshold <var>value</var></code></h2>
     </div>
     <p class="lead">Minimum RMSE threshold to stop sub-image search matching.</p>
   </section>
   <!-- -size -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="size"></a><code>-size <var>width</var>[x<var>height</var>][<var>+offset</var>]</code></h2>
     </div>
     <p class="lead">Set width, height, and header offset for raw image formats.</p>
   </section>
   <!-- -sketch -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sketch"></a><code>-sketch <var>radius</var></code><br /><code>-sketch <var>radius</var>{x<var>sigma</var>}+<var>angle</var></code></h2>
     </div>
     <p class="lead">Simulate a pencil sketch artistic effect.</p>
   </section>
   <!-- -smush -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="smush"></a><code>-smush <var>offset</var></code></h2>
     </div>
     <p class="lead">Append an image sequence together with a gap or overlap (ignoring transparency).</p>
   </section>
   <!-- -snaps -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="snaps"></a><code>-snaps <var>value</var></code></h2>
     </div>
     <p class="lead">Set number of screen snapshots for animation capture.</p>
   </section>
   <!-- -solarize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="solarize"></a><code>-solarize <var>percent-threshold</var></code></h2>
     </div>
     <p class="lead">Negate all pixels above a threshold level (photographic solarization).</p>
   </section>
   <!-- -sort-pixels -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sort-pixels"></a><code>-sort-pixels</code></h2>
     </div>
     <p class="lead">Sort pixels within each scanline in ascending order of intensity.</p>
   </section>
   <!-- -sparse-color -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="sparse-color"></a><code>-sparse-color <var>method</var> '<var>x</var>,<var>y</var> <var>color</var> ...'</code></h2>
     </div>
     <p class="lead">Color image using sparse control points and spatial interpolation (Barycentric, Voronoi, Shepards).</p>
   </section>
   <!-- -splice -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="splice"></a><code>-splice <var>geometry</var></code></h2>
     </div>
     <p class="lead">Splice background color rows and columns into an image.</p>
   </section>
   <!-- -spread -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="spread"></a><code>-spread <var>amount</var></code></h2>
     </div>
     <p class="lead">Displace image pixels by a random neighborhood amount.</p>
   </section>
   <!-- -statistic -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="statistic"></a><code>-statistic <var>type</var> <var>geometry</var></code></h2>
     </div>
     <p class="lead">Replace each pixel with a neighborhood statistical value (Mean, Median, Mode, StandardDeviation).</p>
   </section>
   <!-- -stegano -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="stegano"></a><code>-stegano <var>offset</var></code></h2>
     </div>
     <p class="lead">Hide or recover a steganographic watermark image.</p>
   </section>
   <!-- -stereo -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="stereo"></a><code>-stereo <var>+x</var>{<var>+y</var>}</code></h2>
     </div>
     <p class="lead">Composite two images into a red/cyan stereo anaglyph.</p>
   </section>
   <!-- -storage-type -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="storage-type"></a><code>-storage-type <var>type</var></code></h2>
     </div>
     <p class="lead">Specify raw pixel storage data type (char, short, float, double).</p>
   </section>
   <!-- -stretch -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="stretch"></a><code>-stretch <var>fontStretch</var></code></h2>
     </div>
     <p class="lead">Set font character stretch style (Condensed, Expanded, Normal).</p>
   </section>
   <!-- -strip -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="strip"></a><code>-strip</code></h2>
     </div>
     <p class="lead">Strip image of all profiles, comments, and non-essential metadata chunks.</p>
   </section>
   <!-- -stroke -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="stroke"></a><code>-stroke <var>color</var></code></h2>
     </div>
     <p class="lead">Set stroke outline color for graphic primitives.</p>
   </section>
   <!-- -strokewidth -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="strokewidth"></a><code>-strokewidth <var>value</var></code></h2>
     </div>
     <p class="lead">Set graphic primitive stroke outline width.</p>
   </section>
   <!-- -style -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="style"></a><code>-style <var>fontStyle</var></code></h2>
     </div>
     <p class="lead">Set font style (Italic, Normal, Oblique).</p>
   </section>
   <!-- -subimage-search -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="subimage-search"></a><code>-subimage-search</code></h2>
     </div>
     <p class="lead">Search for best match location of a sub-image within a larger image.</p>
   </section>
   <!-- -swap -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="swap"></a><code>-swap <var>index,index</var></code></h2>
     </div>
     <p class="lead">Swap positions of two images in the sequence.</p>
   </section>
   <!-- -swirl -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="swirl"></a><code>-swirl <var>degrees</var></code></h2>
     </div>
     <p class="lead">Swirl image pixels around the center point.</p>
   </section>
   <!-- -synchronize -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="synchronize"></a><code>-synchronize</code></h2>
     </div>
     <p class="lead">Synchronize and flush image cache directly to storage device.</p>
   </section>
   <!-- -taint -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="taint"></a><code>-taint</code></h2>
     </div>
     <p class="lead">Mark image as modified/tainted.</p>
   </section>
   <!-- -text-font -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="text-font"></a><code>-text-font <var>name</var></code></h2>
     </div>
     <p class="lead">Set fixed-width font for formatted text.</p>
   </section>
   <!-- -texture -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="texture"></a><code>-texture <var>filename</var></code></h2>
     </div>
     <p class="lead">Name of background texture image to tile.</p>
   </section>
   <!-- -threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="threshold"></a><code>-threshold <var>value</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Apply simultaneous black/white bi-level thresholding.</p>
   </section>
   <!-- -thumbnail -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="thumbnail"></a><code>-thumbnail <var>geometry</var></code></h2>
     </div>
     <p class="lead">Create an optimized, stripped thumbnail image.</p>
   </section>
   <!-- -tile -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="tile"></a><code>-tile <var>filename</var> / <var>geometry</var></code></h2>
     </div>
     <p class="lead">Set tile image for fills or specify image layout grids.</p>
   </section>
   <!-- -tile-offset -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="tile-offset"></a><code>-tile-offset {<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var></code></h2>
     </div>
     <p class="lead">Specify offset for tile patterns and textures.</p>
   </section>
   <!-- -tint -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="tint"></a><code>-tint <var>value</var></code></h2>
     </div>
     <p class="lead">Tint mid-range image colors with the current fill color.</p>
   </section>
   <!-- -title -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="title"></a><code>-title <var>string</var></code></h2>
     </div>
     <p class="lead">Assign window title metadata string.</p>
   </section>
   <!-- -transform -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="transform"></a><code>-transform</code></h2>
     </div>
     <p class="lead">Transform image using previous affine transformation matrix.</p>
   </section>
   <!-- -transparent -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="transparent"></a><code>-transparent <var>color</var></code></h2>
     </div>
     <p class="lead">Make a specified target color transparent.</p>
   </section>
   <!-- -transparent-color -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="transparent-color"></a><code>-transparent-color <var>color</var></code></h2>
     </div>
     <p class="lead">Set transparent palette color representation for indexed formats (GIF, PNG8).</p>
   </section>
   <!-- -transpose -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="transpose"></a><code>-transpose</code></h2>
     </div>
     <p class="lead">Mirror image along top-left to bottom-right diagonal.</p>
   </section>
   <!-- -transverse -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="transverse"></a><code>-transverse</code></h2>
     </div>
     <p class="lead">Mirror image along bottom-left to top-right diagonal.</p>
   </section>
   <!-- -treedepth -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="treedepth"></a><code>-treedepth <var>value</var></code></h2>
     </div>
     <p class="lead">Color reduction quantization tree depth.</p>
   </section>
   <!-- -trim -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="trim"></a><code>-trim</code></h2>
     </div>
     <p class="lead">Trim surrounding border edges matching corner background color.</p>
   </section>
   <!-- -type -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="type"></a><code>-type <var>type</var></code></h2>
     </div>
     <p class="lead">Force specific image type subformat (Grayscale, TrueColor, Palette).</p>
   </section>
   <!-- -undercolor -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="undercolor"></a><code>-undercolor <var>color</var></code></h2>
     </div>
     <p class="lead">Set background bounding box color for text annotations.</p>
   </section>
   <!-- -unique-colors -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="unique-colors"></a><code>-unique-colors</code></h2>
     </div>
     <p class="lead">Discard all duplicate pixel colors, keeping only unique color entries.</p>
   </section>
   <!-- -units -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="units"></a><code>-units <var>type</var></code></h2>
     </div>
     <p class="lead">Units of image resolution (PixelsPerInch or PixelsPerCentimeter).</p>
   </section>
   <!-- -unsharp -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="unsharp"></a><code>-unsharp <var>radius</var></code><br /><code>-unsharp <var>radius</var>{x<var>sigma</var>}{<var>+gain</var>}{<var>+threshold</var>}</code></h2>
     </div>
     <p class="lead">Sharpen image using an unsharp masking operator.</p>
   </section>
   <!-- -update -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="update"></a><code>-update <var>seconds</var></code></h2>
     </div>
     <p class="lead">Monitor image file modifications and redisplay automatically.</p>
   </section>
   <!-- -verbose -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="verbose"></a><code>-verbose</code></h2>
     </div>
     <p class="lead">Print detailed diagnostic information and image characteristics.</p>
   </section>
   <!-- -version -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="version"></a><code>-version</code></h2>
     </div>
     <p class="lead">Print ImageMagick version string and exit.</p>
   </section>
   <!-- -view -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="view"></a><code>-view <var>string</var></code></h2>
     </div>
     <p class="lead">FlashPix viewing parameters.</p>
   </section>
   <!-- -vignette -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="vignette"></a><code>-vignette <var>radius</var>{x<var>sigma</var>}{<var>+-</var>}<var>x</var>{<var>+-</var>}<var>y</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Soften edges of an image in vignette style.</p>
   </section>
   <!-- -virtual-pixel -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="virtual-pixel"></a><code>-virtual-pixel <var>method</var></code></h2>
     </div>
     <p class="lead">Specify background color or pixel extrapolation method for out-of-bounds lookups.</p>
   </section>
   <!-- -visual -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="visual"></a><code>-visual <var>type</var></code></h2>
     </div>
     <p class="lead">Animate or display images using a specific X11 visual class.</p>
   </section>
   <!-- -watermark -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="watermark"></a><code>-watermark <var>brightness</var>x<var>saturation</var></code></h2>
     </div>
     <p class="lead">Watermark an image using brightness and saturation percentages.</p>
   </section>
   <!-- -wave -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="wave"></a><code>-wave <var>amplitude</var></code><br /><code>-wave <var>amplitude</var>x<var>wavelength</var></code></h2>
     </div>
     <p class="lead">Shear image columns into a sinusoidal wave.</p>
   </section>
   <!-- -wavelet-denoise -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="wavelet-denoise"></a><code>-wavelet-denoise <var>threshold</var></code><br /><code>-wavelet-denoise <var>threshold</var>x<var>softness</var></code></h2>
     </div>
     <p class="lead">Remove noise using a wavelet transform filter.</p>
   </section>
   <!-- -weight -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="weight"></a><code>-weight <var>fontWeight</var></code></h2>
     </div>
     <p class="lead">Set font weight style (Bold, Normal, Thin, etc.).</p>
   </section>
   <!-- -white-balance -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="white-balance"></a><code>-white-balance</code></h2>
     </div>
     <p class="lead">Apply automated white balancing in LAB colorspace.</p>
   </section>
   <!-- -white-point -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="white-point"></a><code>-white-point <var>x,y</var></code></h2>
     </div>
     <p class="lead">Set chromaticity white point.</p>
   </section>
   <!-- -white-threshold -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="white-threshold"></a><code>-white-threshold <var>value</var>{<var>%</var>}</code></h2>
     </div>
     <p class="lead">Force pixels above threshold to white.</p>
   </section>
   <!-- -window -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="window"></a><code>-window <var>id</var></code></h2>
     </div>
     <p class="lead">Display image as the background of an X11 window.</p>
   </section>
   <!-- -window-group -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="window-group"></a><code>-window-group</code></h2>
     </div>
     <p class="lead">Specify X11 window group.</p>
   </section>
   <!-- -word-break -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="word-break"></a><code>-word-break <var>type</var></code></h2>
     </div>
     <p class="lead">Set line break wrapping behavior for text content boxes.</p>
   </section>
   <!-- -write -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="write"></a><code>-write <var>filename</var></code></h2>
     </div>
     <p class="lead">Write intermediate image sequence output to file without terminating processing.</p>
   </section>
   <!-- -write-mask -->
   <section class="mb-5">
-    <div class="text-center my-4">
+    <div class="text-start my-4">
       <h2><a class="anchor text-decoration-none" id="write-mask"></a><code>-write-mask <var>filename</var></code></h2>
     </div>
     <p class="lead">Prevent pixel updates to areas specified by a write mask.</p>
