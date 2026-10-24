@@ -206,7 +206,7 @@ if (y &lt; (ssize_t) source->rows)
 
     <h4 class="fw-bold mb-3" id="virtual-pixels">Virtual Pixels</h4>
     <p class="text-body-secondary mb-3">
-      Access to virtual pixels is controlled by the SetImageVirtualPixelMethod() method or <a href="/command-line-options/#virtual-pixel" class="text-decoration-none fw-semibold">-virtual-pixel</a> option. Recognized methods include:
+      A virtual pixel defines what value should be returned when an operation needs a pixel that lies outside the actual image boundaries, such as during blurs, distortions, resizes, or neighborhood-based filters.  Access to virtual pixels is controlled by the SetImageVirtualPixelMethod() method or <a href="/command-line-options/#virtual-pixel" class="text-decoration-none fw-semibold">-virtual-pixel</a> option. Recognized methods include:
     </p>
 
     <div class="card im-card overflow-hidden mb-4">
