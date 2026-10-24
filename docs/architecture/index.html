@@ -177,7 +177,7 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
         <span class="small text-secondary font-mono ms-2">pixel-manipulation.c</span>
       </div>
       <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
-        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>const Quantum *p;<br>
+        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>const Quantum *p;
 Quantum *q;
 ssize_t x, y;<br>
 destination=CloneImage(source,source-&gt;columns,source-&gt;rows,MagickTrue,exception);
@@ -196,7 +196,11 @@ for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
     q+=GetPixelChannels(destination);
   }
   if (SyncAuthenticPixels(destination,exception) == MagickFalse) break;
-}</code></pre>
+}
+if (y &lt; (ssize_t) source->rows)
+  { /* an exception was thrown */ }
+</code></pre>
+      <p>Use GetVirtualMetacontent() to retrieve any meta-content associated with each pixel, for example, an infrared channel.</p>
       </div>
     </div>
 
