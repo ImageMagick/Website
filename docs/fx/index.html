@@ -222,10 +222,13 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
             <button class="nav-link active fw-semibold" id="symbols-tab" data-bs-toggle="tab" data-bs-target="#symbols" type="button" role="tab">Symbols &amp; Variables</button>
           </li>
           <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold" id="constants-tab" data-bs-toggle="tab" data-bs-target="#constants" type="button" role="tab">Constants</button>
+          </li>
+          <li class="nav-item" role="presentation">
             <button class="nav-link fw-semibold" id="math-tab" data-bs-toggle="tab" data-bs-target="#math" type="button" role="tab">Functions &amp; Math</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link fw-semibold" id="operators-tab" data-bs-toggle="tab" data-bs-target="#operators" type="button" role="tab">Operators &amp; Types</button>
+            <button class="nav-link fw-semibold" id="operators-tab" data-bs-toggle="tab" data-bs-target="#operators" type="button" role="tab">Operators &amp; Control</button>
           </li>
         </ul>
       </div>
@@ -252,6 +255,28 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
                 <tr><td>hue, saturation, lightness</td><td>Pixel color channels extracted from HSL space representation.</td></tr>
                 <tr><td>page.x, page.y, page.width</td><td>Canvas page offsets and dimensions.</td></tr>
                 <tr><td>mean, standard_deviation, kurtosis</td><td>Image or individual channel statistics (e.g. <code class="text-primary">mean.r</code>, <code class="text-primary">s.kurtosis</code>).</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Constants Tab -->
+        <div class="tab-pane fade" id="constants" role="tabpanel">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th style="width: 20%;">Constant</th>
+                  <th>Value / Description</th>
+                </tr>
+              </thead>
+              <tbody class="font-mono small">
+                <tr><td>E, e</td><td>Euler's constant ($e \approx 2.7182818$)</td></tr>
+                <tr><td>Epsilon, epsilon</td><td>Smallest difference between distinct values ($1.0 \times 10^{-12}$)</td></tr>
+                <tr><td>QuantumRange, quantumrange</td><td>Maximum channel scalar value dependent on build depth (e.g. $65535$)</td></tr>
+                <tr><td>QuantumScale, quantumscale</td><td>Reciprocal of QuantumRange ($1.0 / \text{QuantumRange}$)</td></tr>
+                <tr><td>PHI, phi</td><td>Golden Ratio ($\phi \approx 1.6180339$)</td></tr>
+                <tr><td>PI, Pi, pi</td><td>Archimedes' constant ($\pi \approx 3.1415926$)</td></tr>
               </tbody>
             </table>
           </div>
@@ -317,23 +342,51 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
             </div>
             <div class="col-md-6">
               <div class="p-2 border rounded bg-body-tertiary">
-                <strong>Iterators:</strong> <code class="font-mono">for(init, condition, step)</code>, <code class="font-mono">while(cond, stmt)</code>, <code class="font-mono">do(cond, stmt)</code>
+                <strong>Iterators &amp; Control Flow:</strong> <code class="font-mono">for(init, condition, step)</code>, <code class="font-mono">while(cond, stmt)</code>, <code class="font-mono">do(stmt, cond)</code>, <code class="font-mono">if(cond, then, else)</code>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Operators Tab -->
+        <!-- Operators & Control Flow Tab -->
         <div class="tab-pane fade" id="operators" role="tabpanel">
-          <ul class="list-group list-group-flush small font-mono">
-            <li class="list-group-item"><strong>Precedence 1 (Power):</strong> ^</li>
-            <li class="list-group-item"><strong>Precedence 2 (Unary/Multiplicative):</strong> -, *, /, %</li>
-            <li class="list-group-item"><strong>Precedence 3 (Additive/Shift):</strong> +, -, &lt;&lt;, &gt;&gt;</li>
-            <li class="list-group-item"><strong>Precedence 4 (Relational):</strong> &lt;, &lt;=, &gt;, &gt;=, ==, !=</li>
-            <li class="list-group-item"><strong>Precedence 5 (Bitwise/Logical):</strong> &amp;, |, ~, &amp;&amp;, ||, !</li>
-            <li class="list-group-item"><strong>Precedence 6 (Conditional):</strong> ?: (Ternary operator)</li>
-            <li class="list-group-item"><strong>Precedence 7 (Assignment):</strong> =, +=, -=, *=, /=, %=</li>
-          </ul>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <h6 class="fw-bold mb-3">Operator Precedence</h6>
+              <ul class="list-group list-group-flush small font-mono">
+                <li class="list-group-item"><strong>Precedence 1 (Power):</strong> ^</li>
+                <li class="list-group-item"><strong>Precedence 2 (Unary/Multiplicative):</strong> -, *, /, %</li>
+                <li class="list-group-item"><strong>Precedence 3 (Additive/Shift):</strong> +, -, &lt;&lt;, &gt;&gt;</li>
+                <li class="list-group-item"><strong>Precedence 4 (Relational):</strong> &lt;, &lt;=, &gt;, &gt;=, ==, !=</li>
+                <li class="list-group-item"><strong>Precedence 5 (Bitwise/Logical):</strong> &amp;, |, ~, &amp;&amp;, ||, !</li>
+                <li class="list-group-item"><strong>Precedence 6 (Conditional):</strong> ?: (Ternary operator)</li>
+                <li class="list-group-item"><strong>Precedence 7 (Assignment):</strong> =, +=, -=, *=, /=, %=</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6">
+              <h6 class="fw-bold mb-3">Control Structures &amp; Conditionals</h6>
+              <div class="d-flex flex-column gap-2 small">
+                <div class="p-2 border rounded bg-body-tertiary">
+                  <div class="fw-semibold text-primary font-mono mb-1">Ternary Operator (condition ? expr1 : expr2)</div>
+                  <div class="text-body-secondary extra-small">Evaluates and returns <code class="font-mono">expr1</code> if condition is non-zero (true); otherwise returns <code class="font-mono">expr2</code>.</div>
+                  <div class="font-mono extra-small mt-1 text-muted">Example: u &gt; 0.5 ? 1.0 : 0.0</div>
+                </div>
+
+                <div class="p-2 border rounded bg-body-tertiary">
+                  <div class="fw-semibold text-primary font-mono mb-1">if(condition, then_statement, else_statement)</div>
+                  <div class="text-body-secondary extra-small">Conditional execution function. Evaluates <code class="font-mono">then_statement</code> if condition holds true, or the optional <code class="font-mono">else_statement</code> if false.</div>
+                  <div class="font-mono extra-small mt-1 text-muted">Example: if(u.r &gt; 0.5, 1, 0)</div>
+                </div>
+
+                <div class="p-2 border rounded bg-body-tertiary">
+                  <div class="fw-semibold text-primary font-mono mb-1">while(condition, statement)</div>
+                  <div class="text-body-secondary extra-small">Repeatedly executes <code class="font-mono">statement</code> as long as <code class="font-mono">condition</code> evaluates to non-zero (true).</div>
+                  <div class="font-mono extra-small mt-1 text-muted">Example: while(x &lt; 10, x+=1)</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
