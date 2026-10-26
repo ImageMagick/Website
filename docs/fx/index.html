@@ -342,7 +342,12 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
             </div>
             <div class="col-md-6">
               <div class="p-2 border rounded bg-body-tertiary">
-                <strong>Iterators &amp; Control Flow:</strong> <code class="font-mono">for(init, condition, step)</code>, <code class="font-mono">while(cond, stmt)</code>, <code class="font-mono">do(stmt, cond)</code>, <code class="font-mono">if(cond, then, else)</code>
+                <strong>Channnel Constructors:</strong> <code class="font-mono">channel()</code>; This takes up to 5 expressions, and returns whichever is appropriate for the channel being processed, in order of RGBKA or CMYKA, e.g., <code class="font-mono">channel(r, g+b, g-b)</code>.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-2 border rounded bg-body-tertiary">
+                <strong>Iterators &amp; Control Flow:</strong> <code class="font-mono">for(init, condition, step)</code>, <code class="font-mono">while(cond, stmt)</code>, <code class="font-mono">do(cond, stmt)</code>, <code class="font-mono">if(cond, then, else)</code>
               </div>
             </div>
           </div>
@@ -384,6 +389,12 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
                   <div class="text-body-secondary extra-small">Repeatedly executes <code class="font-mono">statement</code> as long as <code class="font-mono">condition</code> evaluates to non-zero (true).</div>
                   <div class="font-mono extra-small mt-1 text-muted">Example: while(x &lt; 10, x+=1)</div>
                 </div>
+
+                <div class="p-2 border rounded bg-body-tertiary">
+                  <div class="fw-semibold text-primary font-mono mb-1">do(condition, statement)</div>
+                  <div class="text-body-secondary extra-small">Executes <code class="font-mono">statement</code> at least once, then repeatedly executes it as long as <code class="font-mono">condition</code> evaluates to non-zero (true).</div>
+                  <div class="font-mono extra-small mt-1 text-muted">Example: do(x &lt; 10, x+=1)</div>
+                </div>
               </div>
             </div>
           </div>
@@ -396,10 +407,10 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
       <h5 class="fw-bold mb-3"><i class="bi bi-shield-exclamation text-warning me-2"></i>Syntax &amp; Semantics Rules</h5>
       <ul class="small text-body-secondary mb-0 d-flex flex-column gap-2">
         <li>Symbols and built-in identifiers are <strong>case insensitive</strong>.</li>
-        <li>Only <strong>one ternary conditional</strong> (<code class="font-mono">x ? y : z</code>) is permitted per individual expression statement.</li>
+        <li><strong>Ternary conditionals</strong> (<code class="font-mono">x ? y : z</code>) can be nested within another ternary.</li>
         <li>Single-character variable names are strictly reserved for built-ins. Use multi-character names for custom variables (e.g. <code class="font-mono">Xi</code>, <code class="font-mono">iso</code>).</li>
         <li>Unary operators take a lower priority than binary operators. For instance, <code class="font-mono">-3^2</code> evaluates as <code class="font-mono">-(3^2) = -9</code>. Always use parentheses (<code class="font-mono">(-3)^2 = 9</code>) to explicitly indicate order.</li>
-        <li>Implicit multiplication is not performed over fractions; <code class="font-mono">1/2x</code> is interpreted as <code class="font-mono">(1/2)x</code>. Write <code class="font-mono">1/(2x)</code> explicitly when required.</li>
+        <li>Implicit multiplication is not permitted; e.g., <code class="font-mono">1/2x</code> returns a syntax exception, instead use <code class="font-mono">1/(2x)</code> explicitly.</li>
       </ul>
     </div>
   </section>
