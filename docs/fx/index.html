@@ -410,7 +410,7 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         <li><strong>Ternary conditionals</strong> (<code class="font-mono">x ? y : z</code>) can be nested within another ternary.</li>
         <li>Single-character variable names are strictly reserved for built-ins. Use multi-character names for custom variables (e.g. <code class="font-mono">Xi</code>, <code class="font-mono">iso</code>).</li>
         <li>Unary operators take a lower priority than binary operators. For instance, <code class="font-mono">-3^2</code> evaluates as <code class="font-mono">-(3^2) = -9</code>. Always use parentheses (<code class="font-mono">(-3)^2 = 9</code>) to explicitly indicate order.</li>
-        <li>Implicit multiplication is not permitted; e.g., <code class="font-mono">1/2x</code> returns a syntax exception, instead use <code class="font-mono">1/(2x)</code> explicitly.</li>
+        <li>Implicit multiplication is not permitted; e.g., <code class="font-mono">1/2x</code> returns a syntax exception, instead use <code class="font-mono">1/(2*x)</code> explicitly.</li>
       </ul>
     </div>
   </section>
