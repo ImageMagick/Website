@@ -34,7 +34,6 @@ description: "Learn how ImageMagick leverages a distributed pixel cache to offlo
     </p>
 
     <ul class="text-body-secondary">
-      <li><strong>Enable Encryption:</strong> Enable encryption with the <code>-encipher</code> and <code>-decipher</code> command-line-options.</li>
       <li><strong>Restrict to Loopback:</strong> If distributed caching is only used across processes on the same machine, bind the server strictly to <code>127.0.0.1</code> to eliminate adjacent network visibility.</li>
       <li><strong>Enforce Encrypted Tunnels:</strong> For multi-host deployments, never expose the plaintext TCP port directly. Route traffic through an encrypted, authenticated tunnel (such as WireGuard, IPsec, or an SSH port forward) to provide confidentiality and integrity at the network layer.</li>
     </ul>
@@ -63,18 +62,6 @@ $ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
 $ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=127.0.0.1:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png</samp></pre>
-      </div>
-    </div>
-
-    <h3 class="h5 mt-4 mb-3">Encryption with -encipher and -decipher Example</h3>
-    <p>Use the <code>-encipher</code> and <code>-decipher</code> command-line options to secure pixel data:</p>
-    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
-      <div class="card-body">
-        <pre class="mb-0 font-monospace text-body-secondary"><samp># Encrypt pixel data using a passphrase
-$ magick input.jpg -encipher my-secret-passphrase.bin encrypted_pixels.miff
-
-# Decrypt pixel data back
-$ magick encrypted_pixels.miff -decipher my-secret-passphrase.bin output.jpg</samp></pre>
       </div>
     </div>
 
