@@ -28,6 +28,16 @@ description: "Learn how ImageMagick leverages a distributed pixel cache to offlo
         <pre class="mb-0 font-monospace text-body-secondary"><code>&lt;policy domain="cache" name="shared-secret" value="<em>passphrase</em>" stealth="true"/&gt;</code></pre>
       </div>
     </div>
+
+    <p class="mt-3">
+      Because MagickCore now bundles an internal cryptographic or HMAC library, implementing code-level wire encryption or message authentication is now implemented.
+    </p>
+
+    <ul class="text-body-secondary">
+      <li><strong>Enable Encryption:</strong> Enable encryption with the <code>-encipher</code> and <code>-decipher</code> command-line-options.</li>
+      <li><strong>Restrict to Loopback:</strong> If distributed caching is only used across processes on the same machine, bind the server strictly to <code>127.0.0.1</code> to eliminate adjacent network visibility.</li>
+      <li><strong>Enforce Encrypted Tunnels:</strong> For multi-host deployments, never expose the plaintext TCP port directly. Route traffic through an encrypted, authenticated tunnel (such as WireGuard, IPsec, or an SSH port forward) to provide confidentiality and integrity at the network layer.</li>
+    </ul>
   </section>
 
   <!-- Usage Examples Section -->
@@ -42,6 +52,29 @@ description: "Learn how ImageMagick leverages a distributed pixel cache to offlo
 $ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
   -define registry:cache:hosts=localhost:6668 \
   myhugeimage.jpg -sharpen 5x2 myhugeimage.png</samp></pre>
+      </div>
+    </div>
+
+    <h3 class="h5 mt-4 mb-3">Restrict to Loopback (127.0.0.1) Example</h3>
+    <p>Bind the server strictly to 127.0.0.1 to eliminate adjacent network visibility when processes run on the same machine:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick -distribute-cache 127.0.0.1:6668 &amp;  # bind strictly to loopback
+$ magick -limit memory 1GiB -limit map 2GiB -limit disk 4GiB \
+  -define registry:cache:hosts=127.0.0.1:6668 \
+  myhugeimage.jpg -sharpen 5x2 myhugeimage.png</samp></pre>
+      </div>
+    </div>
+
+    <h3 class="h5 mt-4 mb-3">Encryption with -encipher and -decipher Example</h3>
+    <p>Use the <code>-encipher</code> and <code>-decipher</code> command-line options to secure pixel data:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp># Encrypt pixel data using a passphrase
+$ magick input.jpg -encipher my-secret-passphrase.bin encrypted_pixels.miff
+
+# Decrypt pixel data back
+$ magick encrypted_pixels.miff -decipher my-secret-passphrase.bin output.jpg</samp></pre>
       </div>
     </div>
 
