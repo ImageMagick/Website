@@ -34,7 +34,7 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
     <h2 class="fw-bold mb-0">Linux Binary Release</h2>
   </div>
   <p class="text-body-secondary mb-4">
-    We provide AppImage as the official portable binary format. For specialized configurations, please <a href="/install-source/" class="text-decoration-none">build from source</a>.
+    We provide AppImage as the official portable binary format. For specialized configurations, <a href="/install-source/" class="text-decoration-none">build from source</a>.
   </p>
 
   <div class="card im-card p-4 mb-3">
@@ -47,10 +47,11 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
       </div>
       <div class="col-lg-7">
         <p class="small text-body-secondary mb-2">
-          Complete portable application, zero installation required. Verify using its {% include provenance-link.html %}.
+          Complete portable application, zero installation required. Verify using its {% include provenance-link.html %}. Add a custom <a href="/security-policy/" class="alert-link fw-semibold">security policy</a> and review before using the app.
         </p>
         <div class="bg-dark text-light p-2 rounded small font-mono">
-          $ mkdir -p ~/.config/ImageMagick && ./magick -list policy
+          $ mv ImageMagick-*-x86_64.AppImage magick && chmod +x magick
+          $ cp policy.xml ~/.config/ImageMagick && ./magick -list policy
         </div>
       </div>
     </div>
