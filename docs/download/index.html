@@ -76,7 +76,7 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
 
     <h6 class="fw-bold mb-2">Full Suite (Optional codecs: SVG, RAW, OpenMP)</h6>
     <div class="bg-dark text-light p-3 rounded font-mono small">
-      $ brew install imagemagick-full
+      $ apt install imagemagick-full
     </div>
     <span class="form-text mt-2 d-block">Note: <code>imagemagick-full</code> is keg-only and not automatically linked to your system PATH.</span>
   </div>
@@ -120,28 +120,108 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
         </thead>
         <tbody>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="Q16-x64-dll.exe" %}</td>
+            <td class="ps3">{% include download-link.html variant="Q16-x64-dll.exe" %}</td>
             <td class="pe-3 text-body-secondary small">Win64 dynamic at 16 bits-per-pixel component</td>
           </tr>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="Q16-x64-static.exe" %}</td>
+            <td class="ps3">{% include download-link.html variant="Q16-x64-static.exe" %}</td>
             <td class="pe-3 text-body-secondary small">Win64 static at 16 bits-per-pixel component</td>
           </tr>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="Q8-x64-dll.exe" %}</td>
+            <td class="ps3">{% include download-link.html variant="Q8-x64-dll.exe" %}</td>
             <td class="pe-3 text-body-secondary small">Win64 dynamic at 8 bits-per-pixel component</td>
           </tr>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="Q16-HDRI-x64-static.exe" %}</td>
-            <td class="pe-3 text-body-secondary small">Win64 static at 16 bits-per-pixel with high dynamic-range enabled</td>
+            <td class="ps3">{% include download-link.html variant="Q8-x64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win64 static at 8 bits-per-pixel component</td>
           </tr>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="portable-Q16-x64.7z" %}</td>
-            <td class="pe-3 text-body-secondary small">Portable Win64 static (No installer or registry changes required)</td>
+            <td class="ps3">{% include download-link.html variant="Q16-HDRI-x64-static.exe" %}</td>
+            <td class="ps3" text-body-secondary small>Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
           </tr>
           <tr>
-            <td class="ps-3">{% include download-link.html variant="portable-Q16-HDRI-x64.7z" %}</td>
-            <td class="pe-3 text-body-secondary small">Portable Win64 HDRI static archive</td>
+            <td class="ps3">{% include download-link.html variant="Q8-arm64-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 dynamic at 8 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q8-arm64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 static at 8 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-arm64-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 dynamic at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-arm64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 dynamic at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-HDRI-arm64-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-HDRI-arm64-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-x86-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 dynamic at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-x86-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 static at 16 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q8-x86-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 dynamic at 8 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q8-x86-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 static at 8 bits-per-pixel component</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-HDRI-x86-dll.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 dynamic at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="Q16-HDRI-x86-static.exe" %}</td>
+            <td class="pe-3 text-body-secondary small">Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-x64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-arm64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable ARM64 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-x86.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win32 static at 16 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q8-x64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win64 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q8-arm64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable ARM64 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q8-x86.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win32 static at 8 bits-per-pixel component.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-HDRI-x64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-HDRI-arm64.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable ARM64 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
+          </tr>
+          <tr>
+            <td class="ps3">{% include download-link.html variant="portable-Q16-HDRI-x86.7z" %}</td>
+            <td class="pe-3 text-body-secondary small">Portable Win32 static at 16 bits-per-pixel component with <a href="/high-dynamic-range/">high dynamic-range imaging</a> enabled.  Just copy to your host and run (no installer, no Windows registry entries).</td>
           </tr>
         </tbody>
       </table>
