@@ -1,5 +1,6 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/jekyll:2-3.3-bookworm",
+  "postCreateCommand": "sudo chown -R vscode /usr/local/bundle",
   "postStartCommand": "bundle install && bundle exec jekyll serve --source docs --incremental --force_polling --livereload --port 7070",
   "forwardPorts": [
     7070
