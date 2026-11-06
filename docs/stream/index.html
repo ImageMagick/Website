@@ -1,208 +1,227 @@
 ---
 title: "Command-line Tools: Stream"
 description: "Stream one or more pixel components of the image or portion of the image to your choice of storage formats"
+topic: "CLI"
 ---
-<div>
-<p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
-
-<p class="lead"><code>Stream</code> is a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.  It writes the pixel components as they are read from the input image a row at a time making <code>stream</code> desirable when working with large images or when you require raw pixel components.</p>
-
-<h2><a class="anchor" id="usage"></a>Example Usage</h2>
-
-<p>We list a few examples of the <code>stream</code> command here to illustrate its usefulness and ease of use. To get started, lets stream the red, green, blue components of a 640x480 JPEG image to disk as unsigned characters:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick stream -map rgb -storage-type char image.jpg pixels.dat
-$ magick display -depth 8 -size 640x480 rgb:pixels.dat
-</samp></pre>
-
-<p>Here we extract a 100x100 region from a TIFF image in the grayscale format as doubles:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw
-</samp></pre>
-
-<p>You can also associate the region to extract with the image filename:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw
-</samp></pre>
-
-<p>Streaming requires that the image coder read the image pixels in row order.  Not all formats adhere to this requirement.  Verify a particular image format first, before you utilize streaming in your workflow.</p>
-
-
-<h2><a class="anchor" id="options"></a>Option Summary</h2>
-
-<p>The <code>stream</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
-
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:30%">
-    <col style="width:70%">
-  </colgroup>
-  <thead>
-  <tr>
-    <th scope="col">Option</th>
-    <th scope="col">Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><a href="/command-line-options/#authenticate">-authenticate <var>value</var></a></td>
-    <td>decrypt image with this password</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#channel">-channel <var>type</var></a></td>
-    <td>apply option to select image channels</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colorspace">-colorspace <var>type</var></a></td>
-    <td>set image colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#debug">-debug <var>events</var></a></td>
-    <td>display copious debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#define">-define <var>format:option</var></a></td>
-    <td>define one or more image format options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#density">-density <var>geometry</var></a></td>
-    <td>horizontal and vertical density of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#depth">-depth <var>value</var></a></td>
-    <td>image depth</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#extract">-extract <var>geometry</var></a></td>
-    <td>extract area from image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#help">-help</a></td>
-    <td>print program options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interlace">-interlace <var>type</var></a></td>
-    <td>type of image interlacing scheme</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interpolate">-interpolate <var>method</var></a></td>
-    <td>pixel color interpolation method</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#limit">-limit <var>type value</var></a></td>
-    <td>pixel cache resource limit</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#list">-list <var>type</var></a></td>
-    <td>Color, Configure, Delegate, Format, Magic, Module, Resource, or Type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#log">-log <var>format</var></a></td>
-    <td>format of debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#stream-map">-map <var>components</var></a></td>
-    <td>store pixels in this format.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#monitor">-monitor</a></td>
-    <td>monitor progress</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quantize">-quantize <var>colorspace</var></a></td>
-    <td>reduce image colors in this colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quiet">-quiet</a></td>
-    <td>suppress all warning messages</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#regard-warnings">-regard-warnings</a></td>
-    <td>pay attention to warning messages.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#respect-parentheses">-respect-parentheses</a></td>
-    <td>settings remain in effect until parenthesis boundary.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sampling-factor">-sampling-factor <var>geometry</var></a></td>
-    <td>horizontal and vertical sampling factor</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#seed">-seed <var>value</var></a></td>
-    <td>seed a new sequence of pseudo-random numbers</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#set">-set <var>attribute value</var></a></td>
-    <td>set an image attribute</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#size">-size <var>geometry</var></a></td>
-    <td>width and height of image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#storage-type">-storage-type <var>type</var></a></td>
-    <td>store pixels with this storage type.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#synchronize">-synchronize</a></td>
-    <td>synchronize image to storage device</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#taint">-taint</a></td>
-    <td>mark the image as modified</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#transparent-color">-transparent-color <var>color</var></a></td>
-    <td>transparent color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#verbose">-verbose</a></td>
-    <td>print detailed information about the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#version">-version</a></td>
-    <td>print version information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#virtual-pixel">-virtual-pixel <var>method</var></a></td>
-    <td>access method for pixels outside the boundaries of the image</td>
-  </tr>
-
-  </tbody>
-</table>
+<!-- Page Header & Quick Navigation -->
+<div class="mb-5 border-bottom pb-4">
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+    <a href="#usage" class="btn btn-sm btn-outline-primary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-terminal-fill"></i> Example Usage
+    </a>
+    <a href="#options" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-list-task"></i> Option Summary
+    </a>
+  </div>
+  <p class="lead text-body-secondary mb-0">
+    <code class="text-primary fw-semibold fs-5">stream</code> is a lightweight tool to stream one or more pixel components of an image or portion of an image to your choice of storage formats. It writes pixel components as they are read from the input image a row at a time, making it ideal when working with large images or when raw pixel components are required.
+  </p>
 </div>
-
-</div>
+<!-- Section: Example Usage -->
+<section id="usage" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-4">
+    <h2 class="h3 fw-bold mb-0">Example Usage</h2>
+    <a href="#usage" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <p class="text-body-secondary">
+    Below are practical examples demonstrating how to use the <code class="text-primary fw-semibold">stream</code> command. To get started, let's stream the red, green, and blue components of a 640x480 JPEG image to disk as unsigned characters:
+  </p>
+  <div class="terminal-card mb-4">
+    <div class="terminal-header">
+      <div class="terminal-dot bg-danger"></div>
+      <div class="terminal-dot bg-warning"></div>
+      <div class="terminal-dot bg-success"></div>
+      <span class="small text-secondary font-mono ms-2">stream-rgb.sh</span>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-secondary"># Stream RGB pixels to raw unsigned character data</span>
+$ magick stream -map rgb -storage-type char image.jpg pixels.dat
+<span class="text-secondary"># Display the generated raw pixel file</span>
+$ magick display -depth 8 -size 640x480 rgb:pixels.dat</code></pre>
+    </div>
+  </div>
+  <p class="text-body-secondary">
+    Here we extract a 100x100 region from a TIFF image in grayscale format as double-precision floating-point numbers:
+  </p>
+  <div class="terminal-card mb-4">
+    <div class="terminal-header">
+      <div class="terminal-dot bg-danger"></div>
+      <div class="terminal-dot bg-warning"></div>
+      <div class="terminal-dot bg-success"></div>
+      <span class="small text-secondary font-mono ms-2">stream-extract.sh</span>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-secondary"># Extract 100x100 region with offsets X=30, Y=40</span>
+$ magick stream -map i -storage-type double -extract 100x100+30+40 image.tif gray.raw</code></pre>
+    </div>
+  </div>
+  <p class="text-body-secondary">
+    You can also associate the region to extract directly within the input image filename:
+  </p>
+  <div class="terminal-card mb-4">
+    <div class="terminal-header">
+      <div class="terminal-dot bg-danger"></div>
+      <div class="terminal-dot bg-warning"></div>
+      <div class="terminal-dot bg-success"></div>
+      <span class="small text-secondary font-mono ms-2">stream-inline.sh</span>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-secondary"># Inline geometry selection</span>
+$ magick stream -map i -storage-type double 'image.tif[100x100+30+40]' gray.raw</code></pre>
+    </div>
+  </div>
+  <div class="alert alert-warning bg-warning bg-opacity-10 border-warning border-opacity-25 d-flex align-items-center gap-3 my-4" role="alert">
+    <i class="bi bi-exclamation-triangle-fill text-warning fs-4"></i>
+    <div class="small text-body">
+      <strong>Format Compatibility Note:</strong> Streaming requires the image coder to read pixel data in strict row order. Not all image formats support sequential row-order reading. Always verify your specific input format before incorporating streaming into production workflows.
+    </div>
+  </div>
+</section>
+<!-- Section: Option Summary -->
+<section id="options" class="mb-5 pt-3 border-top">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h2 class="h3 fw-bold mb-0">Option Summary</h2>
+    <a href="#options" class="text-body-tertiary text-decoration-none" aria-label="Anchor link"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <p class="text-body-secondary mb-4">
+    The <code class="text-primary fw-semibold">stream</code> command recognizes the following options. Select an option link for detailed documentation.
+  </p>
+  <div class="card im-card overflow-hidden shadow-sm border-0">
+    <div class="table-responsive" style="max-height: 75vh;">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-light sticky-top shadow-sm">
+          <tr>
+            <th scope="col" style="width: 35%;">Option</th>
+            <th scope="col" style="width: 65%;">Description</th>
+          </tr>
+        </thead>
+        <tbody class="font-mono small">
+          <tr>
+            <td><a href="/command-line-options/#authenticate" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-authenticate <var class="text-secondary">value</var></code></a></td>
+            <td class="font-sans text-body-secondary">Decrypt image with this password</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#channel" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-channel <var class="text-secondary">type</var></code></a></td>
+            <td class="font-sans text-body-secondary">Apply option to select image channels</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colorspace" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-colorspace <var class="text-secondary">type</var></code></a></td>
+            <td class="font-sans text-body-secondary">Set image colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#debug" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-debug <var class="text-secondary">events</var></code></a></td>
+            <td class="font-sans text-body-secondary">Display copious debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#define" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-define <var class="text-secondary">format:option</var></code></a></td>
+            <td class="font-sans text-body-secondary">Define one or more image format options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#density" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-density <var class="text-secondary">geometry</var></code></a></td>
+            <td class="font-sans text-body-secondary">Horizontal and vertical density of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#depth" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-depth <var class="text-secondary">value</var></code></a></td>
+            <td class="font-sans text-body-secondary">Image depth</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#extract" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-extract <var class="text-secondary">geometry</var></code></a></td>
+            <td class="font-sans text-body-secondary">Extract area from image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#help" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-help</code></a></td>
+            <td class="font-sans text-body-secondary">Print program options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interlace" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-interlace <var class="text-secondary">type</var></code></a></td>
+            <td class="font-sans text-body-secondary">Type of image interlacing scheme</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interpolate" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-interpolate <var class="text-secondary">method</var></code></a></td>
+            <td class="font-sans text-body-secondary">Pixel color interpolation method</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#limit" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-limit <var class="text-secondary">type value</var></code></a></td>
+            <td class="font-sans text-body-secondary">Pixel cache resource limit</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#list" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-list <var class="text-secondary">type</var></code></a></td>
+            <td class="font-sans text-body-secondary">Color, Configure, Delegate, Format, Magic, Module, Resource, or Type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#log" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-log <var class="text-secondary">format</var></code></a></td>
+            <td class="font-sans text-body-secondary">Format of debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#stream-map" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-map <var class="text-secondary">components</var></code></a></td>
+            <td class="font-sans text-body-secondary">Store pixels in this format</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#monitor" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-monitor</code></a></td>
+            <td class="font-sans text-body-secondary">Monitor progress</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quantize" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-quantize <var class="text-secondary">colorspace</var></code></a></td>
+            <td class="font-sans text-body-secondary">Reduce image colors in this colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quiet" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-quiet</code></a></td>
+            <td class="font-sans text-body-secondary">Suppress all warning messages</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#regard-warnings" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-regard-warnings</code></a></td>
+            <td class="font-sans text-body-secondary">Pay attention to warning messages</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#respect-parentheses" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-respect-parentheses</code></a></td>
+            <td class="font-sans text-body-secondary">Settings remain in effect until parenthesis boundary</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sampling-factor" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-sampling-factor <var class="text-secondary">geometry</var></code></a></td>
+            <td class="font-sans text-body-secondary">Horizontal and vertical sampling factor</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#seed" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-seed <var class="text-secondary">value</var></code></a></td>
+            <td class="font-sans text-body-secondary">Seed a new sequence of pseudo-random numbers</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#set" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-set <var class="text-secondary">attribute value</var></code></a></td>
+            <td class="font-sans text-body-secondary">Set an image attribute</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#size" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-size <var class="text-secondary">geometry</var></code></a></td>
+            <td class="font-sans text-body-secondary">Width and height of image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#storage-type" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-storage-type <var class="text-secondary">type</var></code></a></td>
+            <td class="font-sans text-body-secondary">Store pixels with this storage type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#synchronize" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-synchronize</code></a></td>
+            <td class="font-sans text-body-secondary">Synchronize image to storage device</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#taint" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-taint</code></a></td>
+            <td class="font-sans text-body-secondary">Mark the image as modified</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#transparent-color" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-transparent-color <var class="text-secondary">color</var></code></a></td>
+            <td class="font-sans text-body-secondary">Transparent color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#verbose" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-verbose</code></a></td>
+            <td class="font-sans text-body-secondary">Print detailed information about the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#version" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-version</code></a></td>
+            <td class="font-sans text-body-secondary">Print version information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#virtual-pixel" class="text-decoration-none fw-semibold text-primary"><code class="text-primary">-virtual-pixel <var class="text-secondary">method</var></code></a></td>
+            <td class="font-sans text-body-secondary">Access method for pixels outside the boundaries of the image</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

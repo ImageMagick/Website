@@ -1,690 +1,285 @@
 ---
 title: "Format and Print Image Properties"
+description: "Learn how to access and print image metadata, attributes, properties, artifacts, and options using percent escapes in ImageMagick."
 ---
-<div>
-<p class="lead">There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations.  You can utilize percent escapes in a number of options, for example in <a href="/command-line-options/#format_identify_">-format</a> or in montage <a href="/command-line-options/#label" >-label</a>, to print various properties and other settings associated with an image.</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-hover table-striped">
-  <colgroup>
-    <col style="width:30%">
-    <col style="width:70%">
-  </colgroup>
-<tr>
-    <td><b>Profile Data</b></td>
-    <td>Such as EXIF: data, containing focal lengths, exposures, dates, and in
-        some cases GPS locations.
-    </td></tr>
-<tr>
-    <td><b>Attributes</b></td>
-    <td>These are directly involved with image data, and more commonly
-        modified as part of normal image processing.  These include
-        width, height, depth, image type (colorspace), timing delays, and
-        background color. Most specific percent escapes is to access this
-        information.
-    </td></tr>
-<tr>
-    <td><b>Properties</b></td>
-    <td>These are stored as a table of free form strings, and are (if possible)
-        saved with the image (especially in MIFF and PNG image file formats).
-        These include: Labels, Captions, Comments.
-    </td></tr>
-<tr>
-    <td><b>Artifacts</b></td>
-    <td>These are various operational (expert) settings that are saved for
-        use by various operators, or by the user for future use.  It is just
-        a table of free-form strings.  They are not saved with the image when
-        written.  See Artifacts and Options below for details.
-    </td></tr>
-<tr>
-    <td><b>Options</b></td>
-    <td>Also operational (expert) settings that are saved for
-        use by various operators, but are set globally for use by a whole
-        image list (also not saved).  See Artifacts and Options below.
-    </td></tr>
-</table></div>
-
-<h2>Percent Escape Handling</h2>
-
-<p>If you request a percent escape such as <code>%[key]</code> the setting
-is looked for in the following order until the first match has been
-found...</p>
-
-<ol>
-<li>Handle special prefixes such as 'artifact:' 'option:' 'exif:', or
-    'fx:'.  This includes and calculations and or globs of those prefixes such
-    as 'exif:*' or 'artifact:*' (see below).</li>
-
-<li>If <code>key</code> contains a glob pattern (but no known prefix)
-    search free-form properties table.</li>
-
-<li>If <code>key</code> is a special image 'attribute' name (see list
-    above) return the associated or calculated image attribute.</li>
-
-<li>Search for setting as a free-form 'property'</li>
-<li>Search for setting as a free-form 'artifact'</li>
-<li>Search for setting as a free-form 'option'</li>
-
-<li>Replace escape with empty string, and perhaps produce a warning.</li>
-</ol>
-
-<p>Remember, all long name forms of percent escapes are handled in a is case
-insensitive manner. </p>
-
-<p>You can now access the Artifact and Option
-free-form string tables directly, allowing you to override the above sequence,
-and avoid accessing an attribute or property of the same name.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>%[artifact:<var>setting</var>]
-%[option:<var>setting</var>] </code></pre>
-
-<p>Escape handling requires access to an image container.  If none are available, a blank image is created to ensure the expression can be processed and a value returned.  For example, <pre><samp>$ magick -print "%[fx:.8765/3.14]" null: null:</samp></pre>.</p>
-
-<h2>Single Letter Attribute Percent Escapes</h2>
-
-<p>Here are common single letter escapes (short form) is used to report the most
-common attributes and properties of an image, such as: the image filename
-filename, type, width, height. </p>
-
-<div>
-<table class="table table-sm table-hover table-striped">
-  <tr>
-    <td>\</td>
-    <td>backslash, the next character is literal and not subject to interpretation</td>
-  </tr>
-  <tr>
-    <td>\n</td>
-    <td>newline</td>
-  </tr>
-  <tr>
-    <td>\r</td>
-    <td>carriage return</td>
-  </tr>
-  <tr>
-    <td>&lt;</td>
-    <td>less-than character.</td>
-  </tr>
-  <tr>
-    <td>&gt;</td>
-    <td>greater-than character.</td>
-  </tr>
-  <tr>
-    <td>&amp;</td>
-    <td>ampersand character.</td>
-  </tr>
-  <tr>
-    <td>%%</td>
-    <td>a percent sign</td>
-  </tr>
-  <tr>
-    <td>%b</td>
-    <td>file size of image read in (use <a href="#precision">-precision</a> 16 to force results in B)</td>
-  </tr>
-  <tr>
-    <td>%c</td>
-    <td>comment meta-data property</td>
-  </tr>
-  <tr>
-    <td>%d</td>
-    <td>directory component of path</td>
-  </tr>
-  <tr>
-    <td>%e</td>
-    <td>filename extension or suffix</td>
-  </tr>
-  <tr>
-    <td>%f</td>
-    <td>filename (including suffix)</td>
-  </tr>
-  <tr>
-    <td>%g</td>
-    <td>layer canvas page geometry   (equivalent to "%Wx%H%X%Y")</td>
-  </tr>
-  <tr>
-    <td>%h</td>
-    <td>current image height in pixels</td>
-  </tr>
-  <tr>
-    <td>%i</td>
-    <td>image filename (note: becomes output filename for "info:")</td>
-  </tr>
-  <tr>
-    <td>%k</td>
-    <td>CALCULATED: number of unique colors</td>
-  </tr>
-  <tr>
-    <td>%l</td>
-    <td>label meta-data property</td>
-  </tr>
-  <tr>
-    <td>%m</td>
-    <td>image file format (file magic)</td>
-  </tr>
-  <tr>
-    <td>%n</td>
-    <td>number of images in current image sequence, report once per frame</td>
-  </tr>
-  <tr>
-    <td>%o</td>
-    <td>output filename  (used for delegates)</td>
-  </tr>
-  <tr>
-    <td>%p</td>
-    <td>index of image in current image list</td>
-  </tr>
-  <tr>
-    <td>%q</td>
-    <td>quantum depth (compile-time constant)</td>
-  </tr>
-  <tr>
-    <td>%r</td>
-    <td>image class and colorspace</td>
-  </tr>
-  <tr>
-    <td>%s</td>
-    <td>scene number (from input unless re-assigned)</td>
-  </tr>
-  <tr>
-    <td>%t</td>
-    <td>filename without directory or extension (suffix)</td>
-  </tr>
-  <tr>
-    <td>%u</td>
-    <td>unique temporary filename (used for delegates)</td>
-  </tr>
-  <tr>
-    <td>%w</td>
-    <td>current width in pixels</td>
-  </tr>
-  <tr>
-    <td>%x</td>
-    <td>x resolution (density)</td>
-  </tr>
-  <tr>
-    <td>%y</td>
-    <td>y resolution (density)</td>
-  </tr>
-  <tr>
-    <td>%z</td>
-    <td>image depth (as read in unless modified, image save depth)</td>
-  </tr>
-  <tr>
-    <td>%A</td>
-    <td>image transparency channel. Values include Undefined (no transparency channel), Blend, Copy, or Update. </td>
-  </tr>
-  <tr>
-    <td>%B</td>
-    <td>file size of image read in bytes</td>
-  </tr>
-  <tr>
-    <td>%C</td>
-    <td>image compression type</td>
-  </tr>
-  <tr>
-    <td>%D</td>
-    <td>image GIF dispose method</td>
-  </tr>
-  <tr>
-    <td>%G</td>
-    <td>original image size (%wx%h; before any resizes)</td>
-  </tr>
-  <tr>
-    <td>%H</td>
-    <td>page (canvas) height</td>
-  </tr>
-  <tr>
-    <td>%M</td>
-    <td>Magick filename (original file exactly as given,  including read mods)</td>
-  </tr>
-  <tr>
-    <td>%N</td>
-    <td>number of images in current image sequence, report once per image sequence</td>
-  </tr>
-  <tr>
-    <td>%O</td>
-    <td>page (canvas) offset ( = %X%Y )</td>
-  </tr>
-  <tr>
-    <td>%P</td>
-    <td>page (canvas) size ( = %Wx%H )</td>
-  </tr>
-  <tr>
-    <td>%Q</td>
-    <td>image compression quality ( 0 = default )</td>
-  </tr>
-  <tr>
-    <td>%S</td>
-    <td>?? scenes ??</td>
-  </tr>
-  <tr>
-    <td>%T</td>
-    <td>image time delay (in centi-seconds)</td>
-  </tr>
-  <tr>
-    <td>%U</td>
-    <td>image resolution units</td>
-  </tr>
-  <tr>
-    <td>%W</td>
-    <td>page (canvas) width</td>
-  </tr>
-  <tr>
-    <td>%X</td>
-    <td>page (canvas) x offset (including sign)</td>
-  </tr>
-  <tr>
-    <td>%Y</td>
-    <td>page (canvas) y offset (including sign)</td>
-  </tr>
-  <tr>
-    <td>%Z</td>
-    <td>unique filename (used for delegates)</td>
-  </tr>
-  <tr>
-    <td>%@</td>
-    <td>CALCULATED: trim bounding box (without actually trimming)</td>
-  </tr>
-  <tr>
-    <td>%#</td>
-    <td>CALCULATED: 'signature' hash of image values</td>
-  </tr>
-</table></div>
-
-<p>Here is a sample command and its output for an image with filename
-<code>bird.miff</code> and whose width is 512 and height is 480.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>-> identify -format "%m:%f %wx%h" bird.miff
-MIFF:bird.miff 512x480 </code></pre>
-
-<p>Note that all single letter percent escapes can also be used using long
-form (from IM version 6.7.6-9, see next). For example <code>%[f]</code> is
-equivalent to the <code>%f</code> short form. </p>
-
-<p><b>WARNING</b>: short form percent escapes are NOT performed when the percent
-is after a number.  For example,  <code>10%x10</code> does not expand the
-<code>%x</code> as a percent escape.  If you specifically want to expand the
-'x', use the long form which overrides this special case. EG:
-<code>10%[x]10</code>. </p>
-
-<p>Also be warned that calculated attributes can take some time to generate,
-especially for large images.</p>
-
-<h2>Long Form Attribute Percent Escapes</h2>
-
-<p>In addition to the above specific and calculated attributes are recognized
-when enclosed in braces (long form):</p>
-
-<div>
-<table class="table table-sm table-hover table-striped">
-  <tr>
-    <td>%[basename]</td>
-    <td>base filename, no suffixes (as %t)</td>
-  </tr>
-  <tr>
-    <td>%[bit-depth]</td>
-    <td>Actual bit-depth of the pixel data</td>
-  </tr>
-  <tr>
-    <td>%[bounding-box]</td>
-    <td>upper left and lower right corners of the image bounding box</td>
-  </tr>
-  <tr>
-    <td>%[caption]</td>
-    <td>caption meta-data property</td>
-  </tr>
-  <tr>
-    <td>%[caption:lines]</td>
-    <td>returns the number lines generated when wrapping the caption</td>
-  </tr>
-  <tr>
-    <td>%[caption:pointsize]</td>
-    <td>returns the pointsize computed during caption: processing</td>
-  </tr>
-  <tr>
-    <td>%[channels]</td>
-    <td>colorspace mnemonic followed by total number of channels and meta channels, e.g., <code>cmyka 8.3</code> indicates a CMYK image with alpha channel for a total of 8 channels and 3 meta channels.</td>
-  </tr>
-  <tr>
-    <td>%[colors]</td>
-    <td>Number of unique colors in the image (as of IM 7.0.3.8)</td>
-  </tr>
-  <tr>
-    <td>%[colorspace]</td>
-    <td>colorspace of Image Data (excluding transparency)</td>
-  </tr>
-  <tr>
-    <td>%[compose]</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>%[compression]</td>
-    <td>image compression type</td>
-  </tr>
-  <tr>
-    <td><a href="/convex-hull/">%[convex-hull]</a></td>
-    <td>points that form a convex hull around the foreground object.  Use <code><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="/command-line-options/#fuzz">-fuzz</a> to allow for a non-uniform background color. </td>
-  </tr>
-  <tr>
-    <td><a href="/convex-hull/">%[convex-hull:extreme-points]</a></td>
-    <td>return the top, right, bottom, and left extreme points of the convex hull.</td>
-  </tr>
-  <tr>
-    <td>%[copyright]</td>
-    <td>ImageMagick Copyright String</td>
-  </tr>
-  <tr>
-    <td>%[depth]</td>
-    <td>depth of image for write (as input unless changed)</td>
-  </tr>
-  <tr>
-    <td>%[deskew:angle]</td>
-    <td>The deskew angle in degrees of rotation</td>
-  </tr>
-  <tr>
-    <td>%[directory]</td>
-    <td>directory part of filename (as %d)</td>
-  </tr>
-  <tr>
-    <td>%[distortion]</td>
-    <td>how well an image resembles a reference image (<a href="/command-line-options/#compare" >-compare</a>)</td>
-  </tr>
-  <tr>
-    <td>%[dominant-color]</td>
-    <td>return the dominate image color in hex.  Precede usage with <a href="/command-line-options/#kmeans" >-kmeans</a>.</td>
-  </tr>
-  <tr>
-    <td>%[entropy]</td>
-    <td>CALCULATED: entropy of the image</td>
-  </tr>
-  <tr>
-    <td>%[extension]</td>
-    <td>extension part of filename (as %e)</td>
-  </tr>
-  <tr>
-    <td>%[gamma]</td>
-    <td>value of image gamma</td>
-  </tr>
-  <tr>
-    <td>%[group]</td>
-    <td>??? window group ???</td>
-  </tr>
-  <tr>
-    <td>%[height]</td>
-    <td>original height of image (when it was read in)</td>
-  </tr>
-  <tr>
-    <td>%[histogram:contrast-stretch]</td>
-    <td>computed min and max contrast stretch percentage</td>
-  </tr>
-  <tr>
-    <td>%[histogram:linear-stretch]</td>
-    <td>computed min and max linear stretch percentage</td>
-  </tr>
-  <tr>
-    <td>%[input]</td>
-    <td>the input image filename.</td>
-  </tr>
-  <tr>
-    <td>%[interlace]</td>
-    <td>Image interlace mode (as of IM 7.0.3.8)</td>
-  </tr>
-  <tr>
-    <td>%[kurtosis]</td>
-    <td>CALCULATED: kurtosis statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[label]</td>
-    <td>label meta-data property</td>
-  </tr>
-   <tr>
-    <td>%[label:pointsize]</td>
-    <td>returns the pointsize computed during label: processing</td>
-  </tr>
-  <tr>
-    <td>%[magick]</td>
-    <td>coder used to read image (not the file suffix)</td>
-  </tr>
-  <tr>
-    <td>%[max]</td>
-    <td>CALCULATED: maximum value statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[mean]</td>
-    <td>CALCULATED: average value statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[median]</td>
-    <td>CALCULATED: median value statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[min]</td>
-    <td>CALCULATED: minimum value statistic of image</td>
-  </tr>
-  <tr>
-    <td><a href="/convex-hull/">%[minimum-bounding-box]</a></td>
-    <td>Use <code><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color.  Use <code><a href="/command-line-options/#fuzz">-fuzz</a> to allow for a non-uniform background color.  In addition to the bounding box points, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, <code>minimum-bounding-box:angle</code>, and <code>minimum-bounding-box:unrotate</code>.</td>
-  </tr>
-  <tr>
-    <td>%[opaque]</td>
-    <td>CALCULATED: is image fully-opaque?</td>
-  </tr>
-  <tr>
-    <td>%[orientation]</td>
-    <td>image orientation</td>
-  </tr>
-  <tr>
-    <td>%[page]</td>
-    <td>Virtual canvas (page) geometry</td>
-  </tr>
-  <tr>
-    <td>%[papersize:<em>name</em>]</td>
-    <td>paper size for <em>name</em> in pixels at 72DPI (e.g. papersize:A4)</td>
-  </tr>
-  <tr>
-    <td>%[printsize.x]</td>
-    <td>X printsize</td>
-  </tr>
-  <tr>
-    <td>%[printsize.y]</td>
-    <td>Y printsize</td>
-  </tr>
-  <tr>
-    <td>%[profile:icc]</td>
-    <td>ICC profile info</td>
-  </tr>
-  <tr>
-    <td>%[profile:icm]</td>
-    <td>ICM profile info</td>
-  </tr>
-  <tr>
-    <td>%[profiles]</td>
-    <td>list of any embedded profiles</td>
-  </tr>
-  <tr>
-    <td>%[quality]</td>
-    <td>Image quality value (as of IM 7.0.3.8)</td>
-  </tr>
-  <tr>
-    <td>%[rendering-intent]</td>
-    <td>Image rendering intent (as of IM 7.0.3.8)</td>
-  </tr>
-  <tr>
-    <td>%[resolution.x]</td>
-    <td>X density (resolution) without units</td>
-  </tr>
-  <tr>
-    <td>%[resolution.y]</td>
-    <td>Y density (resolution) without units</td>
-  </tr>
-  <tr>
-    <td>%[scene]</td>
-    <td>original scene number of image in input file</td>
-  </tr>
-  <tr>
-    <td>%[size]</td>
-    <td>original size of image (when it was read in)</td>
-  </tr>
-  <tr>
-    <td>%[skewness]</td>
-    <td>CALCULATED: skewness statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[standard-deviation]</td>
-    <td>CALCULATED: standard deviation statistic of image</td>
-  </tr>
-  <tr>
-    <td>%[type]</td>
-    <td>CALCULATED: image type</td>
-  </tr>
-  <tr>
-    <td>%[unique]</td>
-    <td>unique temporary filename ???</td>
-  </tr>
-  <tr>
-    <td>%[units]</td>
-    <td>image resolution units</td>
-  </tr>
-  <tr>
-    <td>%[version]</td>
-    <td>Version Information of this running ImageMagick</td>
-  </tr>
-  <tr>
-    <td>%[width]</td>
-    <td>original width of image (when it was read in)</td>
-  </tr>
-  <tr>
-    <td>%[zero]</td>
-    <td>zero (unique filename for delegate use)</td>
-  </tr>
-</table></div>
-
-<h2>Properties</h2>
-
-<p>All other long forms of percent escapes (not single letter long form) are
-handled in a case insensitive manner. Such escapes will attempt to look
-up that name specific data sources. </p>
-
-<p>The primary search space (if not a specific attribute listed above) is
-a free-form property string.  Such strings are associated and saved with
-images, and are typically set using either the <a href="/command-line-options/#set" >-set</a>
-CLI option (or API equivalent), or from special convenience options
-(such as <a href="/command-line-options/#label"
->-label</a>, <a href="/command-line-options/#comment"
->-comment</a>, <a href="/command-line-options/#caption"
->-caption</a>). </p>
-
-<p>These convenience options are globally saved (as 'global options' so they can
-be set before images are read), and later are transferred to the property of
-individual images, only when they are read in. At that time any internal
-percent escape present is then handled. </p>
-
-<p>To change a property of an image already in memory, you need to use <a
-href="/command-line-options/#set" >-set</a>.
-</p>
-
-<p>Note that properties, like attributes (and profiles), are saved with
-images when write, if the image file format allows. </p>
-
-
-<h2>Artifacts and Options</h2>
-
-<p>The previous percent escapes are associated with the primary Attributes and
-Properties. Which is the original and primary focus of such percent escapes.
-</p>
-
-<p>However there are many operational settings that are used by various
-ImageMagick operators that can be useful to set and later access.  These
-consist of per-image Artifacts, and Global options (associated with a list of
-images, typically the current image list).</p>
-
-<p>Note that the major difference between an artifact and a property is that
-artifacts, being an internal operational setting, is not saved with images (if
-such is possible). </p>
-
-<p>For example when you use <code>-define 'distort:viewport=100x100'</code> you
-are in fact generating a global option, which the <a href="/command-line-options/#distort"
->-distort</a> operator will use to modify its behavior (distorted output
-image 'view'). </p>
-
-<p>An Option is essentially an Artifact that has been stored globally as part
-of a list of images (specifically a 'Wand' of images). As such they are
-identical, in that a Option, is simply a global Artifact for all the
-associated images. </p>
-
-<p>As such you can use <code>-set 'option:distort:viewport' '100x100'</code> to
-achieve the same result of setting a Artifact for the distort operation to use.
-</p>
-
-<p><b>Internal Handling of a Global Option...</b></p>
-
-<p>The Core library ('MagickCore') does not generally directly understand
-Global Options. As such, continuing the previous example, the
-<code>DistortImages()</code> function only looks up an artifact to discover if
-a 'viewport' has been provided to it. </p>
-
-<p>How Global Options are used when a library function requests an Artifact is
-one of the key differences between IMv6 and IMv7.</p>
-
-<p>Sets a link back to the global options
-data, so that if a specific per-image Artifact is not found , then it will
-look for a equivalent global Option for that image list.  directly.  This
-saves coping these free-form options into artifacts repeatedly, and means you
-can now separately define a global option for a list, and a individual
-overriding artifact for a specific image in that list. </p>
-
-<p>Note that many API's that do not use Wands (PerlMagick for example using
-arrays of images rather than a Wand). In these API's you will not have Global
-Options, only per-image Artifacts. </p>
-
-<p>In summery a Global Option, if available, is equivalent to a per-image
-Artifact. </p>
-
-
-<h2>Glob-Pattern Listing of Properties, Artifacts and Options</h2>
-
-<p>The <var>setting</var> can contain a glob pattern. As such you can
-now list all free-form string properties, artifacts, and options, (but not
-specific image attributes) using...</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick ... \
+<div class="properties-container">
+  <!-- Quick Jump Navigation -->
+  <div class="card im-card p-3 mb-4 bg-body-tertiary border-0 shadow-sm">
+    <div class="d-flex justify-content-center flex-wrap gap-3 fw-semibold small text-uppercase tracking-wider">
+      <a href="#metadata-types" class="text-decoration-none text-primary"><i class="bi bi-info-circle me-1"></i> Metadata Types</a>
+      <span class="text-muted">•</span>
+      <a href="#percent-escapes" class="text-decoration-none text-primary"><i class="bi bi-code-slash me-1"></i> Percent Escapes</a>
+      <span class="text-muted">•</span>
+      <a href="#single-letter" class="text-decoration-none text-primary"><i class="bi bi-fonts me-1"></i> Short Form</a>
+      <span class="text-muted">•</span>
+      <a href="#long-form" class="text-decoration-none text-primary"><i class="bi bi-braces me-1"></i> Long Form</a>
+      <span class="text-muted">•</span>
+      <a href="#profiles" class="text-decoration-none text-primary"><i class="bi bi-file-earmark-text me-1"></i> Profiles & EXIF/IPTC</a>
+    </div>
+  </div>
+  <p class="lead text-body-secondary mb-4">
+    There are copious amounts of extra data associated with images (metadata), beyond the actual image pixels. This metadata can be useful, either for display, or for various calculations, or in modifying the behavior of later image processing operations. You can utilize percent escapes in a number of options, for example in <a href="/command-line-options/#format_identify_">-format</a> or in montage <a href="/command-line-options/#label">-label</a>, to print various properties and other settings associated with an image.
+  </p>
+  <!-- Metadata Types Table Card -->
+  <div class="card im-card shadow-sm mb-5 overflow-hidden" id="metadata-types">
+    <div class="card-header bg-dark text-white py-3 px-4">
+      <h5 class="mb-0 fw-bold"><i class="bi bi-collection me-2"></i>Image Metadata Categories</h5>
+    </div>
+    <div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;" class="p-0">
+      <table class="table table-hover table-striped mb-0 align-middle">
+        <colgroup>
+          <col style="width:30%">
+          <col style="width:70%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="ps-3 fw-semibold text-primary">Profile Data</td>
+            <td>Such as EXIF data, containing focal lengths, exposures, dates, and in some cases GPS locations.</td>
+          </tr>
+          <tr>
+            <td class="ps-3 fw-semibold text-primary">Attributes</td>
+            <td>These are directly involved with image data, and more commonly modified as part of normal image processing. These include width, height, depth, image type (colorspace), timing delays, and background color. Most specific percent escapes are used to access this information.</td>
+          </tr>
+          <tr>
+            <td class="ps-3 fw-semibold text-primary">Properties</td>
+            <td>These are stored as a table of free form strings, and are (if possible) saved with the image (especially in MIFF and PNG image file formats). These include Labels, Captions, and Comments.</td>
+          </tr>
+          <tr>
+            <td class="ps-3 fw-semibold text-primary">Artifacts</td>
+            <td>These are various operational (expert) settings that are saved for use by various operators, or by the user for future use. It is just a table of free-form strings. They are not saved with the image when written. See Artifacts and Options below for details.</td>
+          </tr>
+          <tr>
+            <td class="ps-3 fw-semibold text-primary">Options</td>
+            <td>Also operational (expert) settings that are saved for use by various operators, but are set globally for use by a whole image list (also not saved). See Artifacts and Options below.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Percent Escape Handling Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="percent-escapes">
+    <a class="anchor text-decoration-none text-body" href="#percent-escapes">Percent Escape Handling</a>
+  </h2>
+  <p>If you request a percent escape such as <code>%[key]</code> the setting is looked for in the following order until the first match has been found:</p>
+  <div class="card im-card p-4 mb-4 shadow-sm bg-body-tertiary">
+    <ol class="mb-0 ps-3">
+      <li class="mb-2">Handle special prefixes such as <code>artifact:</code>, <code>option:</code>, <code>exif:</code>, or <code>fx:</code>. This includes any calculations and/or globs of those prefixes such as <code>exif:*</code> or <code>artifact:*</code> (see below).</li>
+      <li class="mb-2">If <code>key</code> contains a glob pattern (but no known prefix), search the free-form properties table.</li>
+      <li class="mb-2">If <code>key</code> is a special image 'attribute' name (see list above), return the associated or calculated image attribute.</li>
+      <li class="mb-2">Search for setting as a free-form 'property'.</li>
+      <li class="mb-2">Search for setting as a free-form 'artifact'.</li>
+      <li class="mb-2">Search for setting as a free-form 'option'.</li>
+      <li>Replace escape with an empty string, and perhaps produce a warning.</li>
+    </ol>
+  </div>
+  <p>Remember, all long name forms of percent escapes are handled in a case-insensitive manner.</p>
+  <p>You can now access the Artifact and Option free-form string tables directly, allowing you to override the above sequence, and avoid accessing an attribute or property of the same name.</p>
+  <pre class="p-3 mb-4 rounded bg-body-tertiary border font-mono small"><code>%[artifact:<var>setting</var>]
+%[option:<var>setting</var>]</code></pre>
+  <p>Escape handling requires access to an image container. If none are available, a blank image is created to ensure the expression can be processed and a value returned. For example:</p>
+  <pre class="p-3 mb-4 rounded bg-body-tertiary border font-mono small"><code>$ magick -print "%[fx:.8765/3.14]" null: null:</code></pre>
+  <!-- Single Letter Attribute Percent Escapes -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="single-letter">
+    <a class="anchor text-decoration-none text-body" href="#single-letter">Single Letter Attribute Percent Escapes</a>
+  </h2>
+  <p class="text-body-secondary mb-3">Here are common single letter escapes (short form) used to report the most common attributes and properties of an image, such as filename, type, width, and height.</p>
+  <div class="card im-card shadow-sm mb-4 overflow-hidden">
+    <div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;" class="p-0">
+      <table class="table table-sm table-hover table-striped mb-0 align-middle">
+        <thead class="table-dark sticky-top">
+          <tr>
+            <th class="ps-3 py-2" style="width: 20%;">Escape</th>
+            <th class="py-2" style="width: 80%;">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ps-3 font-mono fw-bold">\</td><td>backslash, the next character is literal and not subject to interpretation</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">\n</td><td>newline</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">\r</td><td>carriage return</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">&lt;</td><td>less-than character</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">&gt;</td><td>greater-than character</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">&amp;</td><td>ampersand character</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%%</td><td>a percent sign</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%b</td><td>file size of image read in (use <a href="#precision">-precision</a> 16 to force results in B)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%c</td><td>comment meta-data property</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%d</td><td>directory component of path</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%e</td><td>filename extension or suffix</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%f</td><td>filename (including suffix)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%g</td><td>layer canvas page geometry (equivalent to "%Wx%H%X%Y")</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%h</td><td>current image height in pixels</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%i</td><td>image filename (note: becomes output filename for "info:")</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%k</td><td>CALCULATED: number of unique colors</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%l</td><td>label meta-data property</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%m</td><td>image file format (file magic)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%n</td><td>number of images in current image sequence, report once per frame</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%o</td><td>output filename (used for delegates)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%p</td><td>index of image in current image list</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%q</td><td>quantum depth (compile-time constant)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%r</td><td>image class and colorspace</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%s</td><td>scene number (from input unless re-assigned)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%t</td><td>filename without directory or extension (suffix)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%u</td><td>unique temporary filename (used for delegates)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%w</td><td>current width in pixels</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%x</td><td>x resolution (density)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%y</td><td>y resolution (density)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%z</td><td>image depth (as read in unless modified, image save depth)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%A</td><td>image transparency channel. Values include Undefined (no transparency channel), Blend, Copy, or Update.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%B</td><td>file size of image read in bytes</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%C</td><td>image compression type</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%D</td><td>image GIF dispose method</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%G</td><td>original image size (%wx%h; before any resizes)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%H</td><td>page (canvas) height</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%M</td><td>Magick filename (original file exactly as given, including read mods)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%N</td><td>number of images in current image sequence, report once per image sequence</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%O</td><td>page (canvas) offset ( = %X%Y )</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%P</td><td>page (canvas) size ( = %Wx%H )</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%Q</td><td>image compression quality ( 0 = default )</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%S</td><td>?? scenes ??</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%T</td><td>image time delay (in centi-seconds)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%U</td><td>image resolution units</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%W</td><td>page (canvas) width</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%X</td><td>page (canvas) x offset (including sign)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%Y</td><td>page (canvas) y offset (including sign)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%Z</td><td>unique filename (used for delegates)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%@</td><td>CALCULATED: trim bounding box (without actually trimming)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%#</td><td>CALCULATED: 'signature' hash of image values</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>Here is a sample command and its output for an image with filename <code>bird.miff</code> and whose width is 512 and height is 480.</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>-> identify -format "%m:%f %wx%h" bird.miff
+MIFF:bird.miff 512x480</code></pre>
+  <p>Note that all single letter percent escapes can also be used using long form (from IM version 6.7.6-9). For example, <code>%[f]</code> is equivalent to the <code>%f</code> short form.</p>
+  <div class="alert alert-warning border-0 shadow-sm d-flex align-items-center gap-2 mb-4" role="alert">
+    <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+    <div>
+      <strong>WARNING:</strong> Short form percent escapes are NOT performed when the percent is after a number. For example, <code>10%x10</code> does not expand the <code>%x</code> as a percent escape. If you specifically want to expand the 'x', use the long form which overrides this special case (e.g. <code>10%[x]10</code>).
+    </div>
+  </div>
+  <p class="mb-4">Also be warned that calculated attributes can take some time to generate, especially for large images.</p>
+  <!-- Long Form Attribute Percent Escapes -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="long-form">
+    <a class="anchor text-decoration-none text-body" href="#long-form">Long Form Attribute Percent Escapes</a>
+  </h2>
+  <p class="text-body-secondary mb-3">In addition to the specific and calculated attributes above, the following are recognized when enclosed in braces (long form):</p>
+  <div class="card im-card shadow-sm mb-5 overflow-hidden">
+    <div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;" class="p-0">
+      <table class="table table-sm table-hover table-striped mb-0 align-middle">
+        <thead class="table-dark sticky-top">
+          <tr>
+            <th class="ps-3 py-2" style="width: 30%;">Long Form Escape</th>
+            <th class="py-2" style="width: 70%;">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="ps-3 font-mono fw-bold">%[basename]</td><td>base filename, no suffixes (as %t)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[bit-depth]</td><td>Actual bit-depth of the pixel data</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[bounding-box]</td><td>upper left and lower right corners of the image bounding box</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[caption]</td><td>caption meta-data property</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[caption:lines]</td><td>returns the number lines generated when wrapping the caption</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[caption:pointsize]</td><td>returns the pointsize computed during caption: processing</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[channels]</td><td>colorspace mnemonic followed by total number of channels and meta channels, e.g., <code>cmyka 8.3</code> indicates a CMYK image with alpha channel for a total of 8 channels and 3 meta channels.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[colors]</td><td>Number of unique colors in the image (as of IM 7.0.3.8)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[colorspace]</td><td>colorspace of Image Data (excluding transparency)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[compose]</td><td>&nbsp;</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[compression]</td><td>image compression type</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold"><a href="/convex-hull/" class="text-decoration-none">%[convex-hull]</a></td><td>points that form a convex hull around the foreground object. Use <code><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color. Use <code><a href="/command-line-options/#fuzz">-fuzz</a></code> to allow for a non-uniform background color.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold"><a href="/convex-hull/" class="text-decoration-none">%[convex-hull:extreme-points]</a></td><td>return the top, right, bottom, and left extreme points of the convex hull.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[copyright]</td><td>ImageMagick Copyright String</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[depth]</td><td>depth of image for write (as input unless changed)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[deskew:angle]</td><td>The deskew angle in degrees of rotation</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[directory]</td><td>directory part of filename (as %d)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[distortion]</td><td>how well an image resembles a reference image (<a href="/command-line-options/#compare">-compare</a>)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[dominant-color]</td><td>return the dominate image color in hex. Precede usage with <a href="/command-line-options/#kmeans">-kmeans</a>.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[entropy]</td><td>CALCULATED: entropy of the image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[extension]</td><td>extension part of filename (as %e)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[gamma]</td><td>value of image gamma</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[group]</td><td>??? window group ???</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[height]</td><td>original height of image (when it was read in)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[histogram:contrast-stretch]</td><td>computed min and max contrast stretch percentage</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[histogram:linear-stretch]</td><td>computed min and max linear stretch percentage</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[input]</td><td>the input image filename.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[interlace]</td><td>Image interlace mode (as of IM 7.0.3.8)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[kurtosis]</td><td>CALCULATED: kurtosis statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[label]</td><td>label meta-data property</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[label:pointsize]</td><td>returns the pointsize computed during label: processing</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[magick]</td><td>coder used to read image (not the file suffix)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[max]</td><td>CALCULATED: maximum value statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[mean]</td><td>CALCULATED: average value statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[median]</td><td>CALCULATED: median value statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[min]</td><td>CALCULATED: minimum value statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold"><a href="/convex-hull/" class="text-decoration-none">%[minimum-bounding-box]</a></td><td>Use <code><a href="/command-line-options/#define">-define</a> convex-hull:background-color=<em>color</em></code> to identify the image background color. Use <code><a href="/command-line-options/#fuzz">-fuzz</a></code> to allow for a non-uniform background color. In addition to bounding box points, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, <code>minimum-bounding-box:angle</code>, and <code>minimum-bounding-box:unrotate</code>.</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[opaque]</td><td>CALCULATED: is image fully-opaque?</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[orientation]</td><td>image orientation</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[page]</td><td>Virtual canvas (page) geometry</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[papersize:<em>name</em>]</td><td>paper size for <em>name</em> in pixels at 72DPI (e.g. papersize:A4)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[printsize.x]</td><td>X printsize</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[printsize.y]</td><td>Y printsize</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[profile:icc]</td><td>ICC profile info</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[profile:icm]</td><td>ICM profile info</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[profiles]</td><td>list of any embedded profiles</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[quality]</td><td>Image quality value (as of IM 7.0.3.8)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[rendering-intent]</td><td>Image rendering intent (as of IM 7.0.3.8)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[resolution.x]</td><td>X density (resolution) without units</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[resolution.y]</td><td>Y density (resolution) without units</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[scene]</td><td>original scene number of image in input file</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[size]</td><td>original size of image (when it was read in)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[skewness]</td><td>CALCULATED: skewness statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[standard-deviation]</td><td>CALCULATED: standard deviation statistic of image</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[type]</td><td>CALCULATED: image type</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[unique]</td><td>unique temporary filename ???</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[units]</td><td>image resolution units</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[version]</td><td>Version Information of this running ImageMagick</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[width]</td><td>original width of image (when it was read in)</td></tr>
+          <tr><td class="ps-3 font-mono fw-bold">%[zero]</td><td>zero (unique filename for delegate use)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Properties Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="properties">Properties</h2>
+  <p>All other long forms of percent escapes (not single letter long form) are handled in a case-insensitive manner. Such escapes will attempt to look up that name in specific data sources.</p>
+  <p>The primary search space (if not a specific attribute listed above) is a free-form property string. Such strings are associated and saved with images, and are typically set using either the <a href="/command-line-options/#set">-set</a> CLI option (or API equivalent), or from special convenience options (such as <a href="/command-line-options/#label">-label</a>, <a href="/command-line-options/#comment">-comment</a>, <a href="/command-line-options/#caption">-caption</a>).</p>
+  <p>These convenience options are globally saved (as 'global options' so they can be set before images are read), and later are transferred to the property of individual images only when they are read in. At that time any internal percent escape present is then handled.</p>
+  <p>To change a property of an image already in memory, you need to use <a href="/command-line-options/#set">-set</a>.</p>
+  <p class="mb-4">Note that properties, like attributes (and profiles), are saved with images when written, if the image file format allows.</p>
+  <!-- Artifacts and Options Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="artifacts-options">Artifacts and Options</h2>
+  <p>The previous percent escapes are associated with the primary Attributes and Properties, which is the original and primary focus of such percent escapes.</p>
+  <p>However, there are many operational settings that are used by various ImageMagick operators that can be useful to set and later access. These consist of per-image Artifacts, and Global options (associated with a list of images, typically the current image list).</p>
+  <p>Note that the major difference between an artifact and a property is that artifacts, being an internal operational setting, are not saved with images (if such is possible).</p>
+  <p>For example, when you use <code>-define 'distort:viewport=100x100'</code> you are in fact generating a global option, which the <a href="/command-line-options/#distort">-distort</a> operator will use to modify its behavior (distorted output image 'view').</p>
+  <p>An Option is essentially an Artifact that has been stored globally as part of a list of images (specifically a 'Wand' of images). As such they are identical, in that an Option is simply a global Artifact for all the associated images.</p>
+  <p>As such, you can use <code>-set 'option:distort:viewport' '100x100'</code> to achieve the same result of setting an Artifact for the distort operation to use.</p>
+  <h5 class="fw-bold mt-4 mb-2">Internal Handling of a Global Option...</h5>
+  <p>The Core library ('MagickCore') does not generally directly understand Global Options. As such, continuing the previous example, the <code>DistortImages()</code> function only looks up an artifact to discover if a 'viewport' has been provided to it.</p>
+  <p>How Global Options are used when a library function requests an Artifact is one of the key differences between IMv6 and IMv7.</p>
+  <p>This sets a link back to the global options data, so that if a specific per-image Artifact is not found, then it will look for an equivalent global Option for that image list directly. This saves copying these free-form options into artifacts repeatedly, and means you can now separately define a global option for a list, and an individual overriding artifact for a specific image in that list.</p>
+  <p>Note that many APIs that do not use Wands (PerlMagick for example using arrays of images rather than a Wand) will not have Global Options, only per-image Artifacts.</p>
+  <p class="mb-4">In summary, a Global Option, if available, is equivalent to a per-image Artifact.</p>
+  <!-- Glob-Pattern Listing Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="glob-pattern">Glob-Pattern Listing of Properties, Artifacts and Options</h2>
+  <p>The <var>setting</var> can contain a glob pattern. As such, you can now list all free-form string properties, artifacts, and options (but not specific image attributes) using:</p>
+  <pre class="p-3 mb-4 rounded bg-body-tertiary border font-mono small"><code>magick ... \
    -print "__Properties__\n%[*]" \
    -print "__Artifacts__\n%[artifact:*]" \
    -print "__Options__\n%[option:*]" \
-   ...  </code></pre>
-
-<p> The format of glob patterns are very specific and as such is generally
-only used to list specific settings, such as when debugging, rather than being
-used for image processing use. </p>
-
-
-<h2>Calculated Percent Escape Prefixes</h2>
-
-<p>There are some special prefixes (before the first ':') which performs
-calculations based on the user provided string that follows that prefix.  For
-example you can do a numerical calculation use <code>%[fx:...]</code> to
-evaluate the given <a href="/fx/">FX</a> expressions:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>%[fx:<var>expression</var>] </code></pre>
-
-<p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a
-href="/fx/">FX</a>
-expression:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>%[pixel:<var>expression</var>] </code></pre>
-
-<p>Use <a href="/command-line-options/#define">-define</a> to specify the color compliance (e.g. <code>-define pixel:compliance=css</code>)</p>.
-
-<h2>Specific Profile Percent Escape Prefixes</h2>
-
-<p>You can also use the following special formatting syntax to print EXIF
-mage meta-data that was included in the image read in:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>%[EXIF:<var>tag</var>] </code></pre>
-
-<p>Choose <var>tag</var> from the following:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>
-*  (print all EXIF tags, in keyword=data format)
+   ...</code></pre>
+  <p class="mb-4">The format of glob patterns is very specific and as such is generally only used to list specific settings, such as when debugging, rather than being used for everyday image processing.</p>
+  <!-- Calculated Percent Escape Prefixes Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="calculated-escapes">Calculated Percent Escape Prefixes</h2>
+  <p>There are some special prefixes (before the first ':') which perform calculations based on the user-provided string that follows that prefix. For example, you can do a numerical calculation using <code>%[fx:...]</code> to evaluate the given <a href="/fx/">FX</a> expressions:</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>%[fx:<var>expression</var>]</code></pre>
+  <p>Use <code>pixel:</code> or <code>hex:</code> to evaluate a pixel color as defined by the <a href="/fx/">FX</a> expression:</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>%[pixel:<var>expression</var>]</code></pre>
+  <p class="mb-4">Use <a href="/command-line-options/#define">-define</a> to specify the color compliance (e.g., <code>-define pixel:compliance=css</code>).</p>
+  <!-- Specific Profile Percent Escape Prefixes Section -->
+  <h2 class="fw-bold border-bottom pb-2 mb-4 mt-5" id="profiles">Specific Profile Percent Escape Prefixes</h2>
+  <p>You can also use the following special formatting syntax to print EXIF image metadata that was included in the image read in:</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>%[EXIF:<var>tag</var>]</code></pre>
+  <p>Choose <var>tag</var> from the following:</p>
+  <pre class="overflow-auto p-3 mb-4 rounded bg-body-tertiary border font-mono small" style="max-height:50svh;"><code>*  (print all EXIF tags, in keyword=data format)
 !  (print all EXIF tags, in tag_number data format)
 #hhhh (print data for EXIF tag #hhhh)
 ImageWidth
@@ -768,20 +363,12 @@ SubjectLocation
 ExposureIndex
 SensingMethod
 FileSource
-SceneType </code></pre>
-<br/>
-<p>Surround the format specification with quotation marks to prevent your
-shell from misinterpreting any spaces and square brackets.</p>
-
-<p>The following special formatting syntax can be used to print IPTC
-information contained in the file:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>%[IPTC:<var>dataset</var>:<var>record</var>] </code></pre>
-
-<p>Select <var>dataset</var> and <var>record</var> from the following:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary text-body-secondary bg-body-tertiary;" style="max-height:75svh;"><code>
-  Envelope Record
+SceneType</code></pre>
+  <p>Surround the format specification with quotation marks to prevent your shell from misinterpreting any spaces and square brackets.</p>
+  <p>The following special formatting syntax can be used to print IPTC information contained in the file:</p>
+  <pre class="p-3 mb-3 rounded bg-body-tertiary border font-mono small"><code>%[IPTC:<var>dataset</var>:<var>record</var>]</code></pre>
+  <p>Select <var>dataset</var> and <var>record</var> from the following:</p>
+  <pre class="overflow-auto p-3 mb-4 rounded bg-body-tertiary border font-mono small" style="max-height:50svh;"><code>Envelope Record
   1:00  Model Version
   1:05  Destination
   1:20  File Format
@@ -796,7 +383,6 @@ information contained in the file:</p>
   1:100  UNO (Unique Name of Object)
   1:120  ARM Identifier
   1:122  ARM Version
-
 Application Record
   2:00  Record Version
   2:03  Object Type Reference
@@ -854,16 +440,13 @@ Application Record
   2:200  ObjectData Preview File Format
   2:201  ObjectData Preview File Format Version
   2:202  ObjectData Preview Data
-
 Pre-ObjectData Descriptor Record
   7:10   Size Mode
   7:20   Max Subfile Size
   7:90   ObjectData Size Announced
   7:95   Maximum ObjectData Size
-
 ObjectData Record
   8:10   Subfile
-
 Post ObjectData Descriptor Record
   9:10   Confirmed ObjectData Size</code></pre>
 </div>

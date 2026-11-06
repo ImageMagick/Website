@@ -1,44 +1,113 @@
 ---
 title: "Porting to ImageMagick Version 7"
+description: "Learn how ImageMagick version 7 differs from previous versions, including enhanced multi-channel pixel support, default HDRI, major command-line interface updates, and migration guides for MagickCore and MagickWand APIs."
 ---
-<div>
-<p class="text-center"><a href="#imv7">ImageMagick Version 7</a> • <a href="#hdri">High Dynamic Range Imaging</a> • <a href="#channels">Pixel Channels</a> • <a href="#alpha">Alpha</a> • <a href="#grayscale">Grayscale</a> • <a href="#mask">Masks</a> • <a href="#core">MagickCore API</a> • <a href="#headers">Header Files</a>  • <a href="#deprecate">Deprecated Features Removed</a> • <a href="#cli">Command-line Interface</a> • <a href="#performance">Performance Improvements</a> • <a href="#summary">Version 7 Change Summary</a> </p>
 
-<p class="lead">The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other.  With ImageMagick version 7, we improved the design based on lessons learned from the version 6 implementation.  ImageMagick was originally designed to display RGB images to an X Windows server.  Over time we extended support to RGBA images and then to the CMYK and CMYKA image format.  With ImageMagick version 7, we extend support to arbitrary colorspaces with an arbitrary number of pixel channels.  In addition, ImageMagick 7 stores pixel channels as floats permitting out of band values (e.g. negative) and reduces rounding error.  There are numerous other design enhancements described within.</p>
+<div class="container py-4">
+  <!-- Page Quick Nav Pills -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap justify-content-center gap-2 p-2 bg-body-tertiary rounded-3 border">
+        <a href="#imv7" class="btn btn-sm btn-outline-secondary border-0">Version 7</a>
+        <a href="#hdri" class="btn btn-sm btn-outline-secondary border-0">HDRI</a>
+        <a href="#channels" class="btn btn-sm btn-outline-secondary border-0">Channels</a>
+        <a href="#alpha" class="btn btn-sm btn-outline-secondary border-0">Alpha</a>
+        <a href="#grayscale" class="btn btn-sm btn-outline-secondary border-0">Grayscale</a>
+        <a href="#mask" class="btn btn-sm btn-outline-secondary border-0">Masks</a>
+        <a href="#core" class="btn btn-sm btn-outline-secondary border-0">MagickCore API</a>
+        <a href="#headers" class="btn btn-sm btn-outline-secondary border-0">Headers</a>
+        <a href="#deprecate" class="btn btn-sm btn-outline-secondary border-0">Deprecations</a>
+        <a href="#cli" class="btn btn-sm btn-outline-secondary border-0">CLI</a>
+        <a href="#performance" class="btn btn-sm btn-outline-secondary border-0">Performance</a>
+        <a href="#summary" class="btn btn-sm btn-outline-secondary border-0">Summary</a>
+      </div>
+    </div>
+  </div>
 
-<p>To support variable pixel channels in the MagickCore API, pixel handling has changed when getting or setting the pixel channels.  You can access channels as an array, <var>pixel[i]</var>, or use an accessor method such as GetPixelRed() or SetPixelRed().  There are some modest changes to the MagickCore and MagickWand API's.   The Magick++ and PerlMagick API's have not changed and matches that of the ImageMagick version 6.</p>
+  <!-- Lead Description Section -->
+  <div class="row mb-5" id="imv7">
+    <div class="col-lg-10 mx-auto text-center">
+      <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-3 fs-7">
+        <i class="bi bi-arrow-up-right-circle-fill"></i>
+        <span class="small fw-semibold">Migration Guide</span>
+      </div>
+      <h1 class="display-5 fw-bold mb-3">Porting to ImageMagick Version 7</h1>
+      <p class="lead text-body-secondary">
+        The design of ImageMagick is an evolutionary process, with the design and implementation efforts serving to influence and guide further progress in the other. With ImageMagick version 7, we improved the design based on lessons learned from the version 6 implementation. ImageMagick was originally designed to display RGB images to an X Windows server. Over time we extended support to RGBA images and then to the CMYK and CMYKA image format. With ImageMagick version 7, we extend support to arbitrary colorspaces with an arbitrary number of pixel channels. In addition, ImageMagick 7 stores pixel channels as floats permitting out of band values (e.g. negative) and reduces rounding error. There are numerous other design enhancements described within.
+      </p>
+    </div>
+  </div>
 
-<p>The shell API (command line) of ImageMagick version 7 has undergone
-a major overhaul, with specific emphasis on the ability to read 'options' not
-only from the command line, but also from scripts, and file streams. This
-allows for the use of 'co-processing' programming techniques or performing
-image handling using 'daemon/server backends', and even multi-machine
-distributed processing.</p>
+  <!-- General Overview Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-code-slash me-2"></i>API Changes</h5>
+        <p class="small text-body-secondary mb-0">
+          To support variable pixel channels in the MagickCore API, pixel handling has changed when getting or setting channels. You can access channels as an array, <code>pixel[i]</code>, or use accessor methods. Magick++ and PerlMagick APIs remain unchanged from version 6.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-terminal me-2"></i>Shell API Overhaul</h5>
+        <p class="small text-body-secondary mb-0">
+          The command-line interface has undergone a major overhaul, emphasizing options reading from scripts, file streams, co-processing, daemon/server backends, and multi-machine distributed processing.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-shield-check me-2"></i>Releases & Support</h5>
+        <p class="small text-body-secondary mb-0">
+          ImageMagick version 7 is available now as a <a href="https://download.imagemagick.org/archive/" target="_blank" rel="noopener" class="text-decoration-none fw-semibold">production</a> release. Version 6 continues to be supported for a minimum of 10 years for bug fixes and security patches.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<p>With the shell API overhaul other improvements were made, including:
-better reporting of which option failed, the consolidation and deprecation of
-options, and more global use of 'image properties' (more commonly known as
-'percent escapes' in option arguments. </p>
+  <!-- High Dynamic Range Imaging -->
+  <section class="mb-5" id="hdri">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-brightness-high fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">High Dynamic Range Imaging</h2>
+    </div>
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-0">
+        ImageMagick version 7 enables <a href="/high-dynamic-range/" class="text-decoration-none fw-semibold">high dynamic range imaging</a> (HDRI) by default. HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows. In addition, image processing results are more accurate. The disadvantage is it requires more memory and may result in slower processing times. If you see differences in the results of your version 6 command-line with version 7, it is likely due to HDRI. You may need to add <code>-clamp</code> to your command-line to constrain pixels to the 0 .. QuantumRange range, or disable HDRI when you build ImageMagick version 7. To disable HDRI (recommended for smart phone builds such as iOS or production sites where performance is a premium), simply add <code>--disable-hdri</code> to the configure script command line when building ImageMagick.
+      </p>
+    </div>
+  </section>
 
-<p>ImageMagick version 7 is available now as a <a href="https://download.imagemagick.org/archive/">production</a> release.</p>
+  <!-- Pixel Channels -->
+  <section class="mb-5" id="channels">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-grid-3x3 fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Pixel Channels</h2>
+    </div>
 
-<p>Now that ImageMagick version 7 is released, we continue to support version 6 for a minimum of 10 years.  Support for version 6 is limited primarily to bug fixes and security patches with few enhancements.</p>
+    <p class="text-body-secondary mb-3">
+      A pixel is comprised of one or more color values, or <var>channels</var> (e.g. red pixel channel).
+    </p>
+    <p class="text-body-secondary mb-4">
+      Prior versions of ImageMagick (4-6), support 4 to 5 pixel channels (RGBA or CMYKA). The first 4 channels are accessed with the PixelPacket data structure. The structure includes 4 members of type Quantum (typically 16-bits) of red, green, blue, and opacity. The black channel or colormap indexes are supported by a separate method and structure, IndexPacket. As an example, here is a code snippet from ImageMagick version 6 that negates the color components (but not the alpha component) of the image pixels:
+    </p>
 
-<h2><a class="anchor" id="hdri"></a>High Dynamic Range Imaging</h2>
-<p>ImageMagick version 7 enables <a href="/high-dynamic-range/">high dynamic range imaging</a> (HDRI) by default.  HDRI accurately represents the wide range of intensity levels found in real scenes ranging from the brightest direct sunlight to the deepest darkest shadows.  In addition, image processing results are more accurate.  The disadvantage is it requires more memory and may result in slower processing times.  If you see differences in the results of your version 6 command-line with version 7, it is likely due to HDRI.  You may need to add <code>-clamp</code> to your command-line to constrain pixels to the 0 .. QuantumRange range, or disable HDRI when you build ImageMagick version 7.  To disable HDRI (recommended for smart phone builds such as iOS or production sites where performance is a premium), simply add <code>--disable-hdri</code> to the configure script command line when building ImageMagick.</p>
-
-<h2><a class="anchor" id="channels"></a>Pixel Channels</h2>
-<p>A pixel is comprised of one or more color values, or <var>channels</var> (e.g. red pixel channel).</p>
-<p>Prior versions of ImageMagick (4-6), support 4 to 5 pixel channels (RGBA or CMYKA).  The first 4 channels are accessed with the PixelPacket data structure.   The structure includes 4 members of type Quantum (typically 16-bits) of red, green, blue, and opacity.  The black channel or colormap indexes are supported by a separate method and structure, IndexPacket.  As an example, here is a code snippet from ImageMagick version 6 that negates the color components (but not the alpha component) of the image pixels:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+    <!-- Code Snippet 1 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">im6-pixel-loop.c</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+      <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   IndexPacket
-    *indexes;
-
+    *indexes;<br>
   PixelPacket
-    *q;
-
+    *q;<br>
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
   if (q == (PixelPacket *) NULL)
     {
@@ -62,14 +131,26 @@ options, and more global use of 'image properties' (more commonly known as
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
 }</code></pre>
+      </div>
+    </div>
 
-<p>ImageMagick version 7 supports any number of channels from 1 to 64 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum.   Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7.  We illustrate with an example.  Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:</p>
+    <p class="text-body-secondary mb-4">
+      ImageMagick version 7 supports any number of channels from 1 to 64 (and beyond) and simplifies access with a single method that returns an array of pixel channels of type Quantum. Source code that compiles against prior versions of ImageMagick requires refactoring to work with ImageMagick version 7. We illustrate with an example. Let's naively refactor the version 6 code snippet from above so it works with the ImageMagick version 7 API:
+    </p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+    <!-- Code Snippet 2 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">im7-naive-loop.c</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+      <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
 {
   Quantum
-    *q;
-
+    *q;<br>
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
   if (q == (Quantum *) NULL)
     {
@@ -93,14 +174,24 @@ options, and more global use of 'image properties' (more commonly known as
   if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
     status=MagickFalse;
 }</code></pre>
+      </div>
+    </div>
 
-<p>Let's do that again but take full advantage of the new variable pixel channel support:</p>
+    <p class="text-body-secondary mb-4">Let's do that again but take full advantage of the new variable pixel channel support:</p>
 
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)
+    <!-- Code Snippet 3 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">im7-optimized-loop.c</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>for (y=0; y &lt; (ssize_t) image->rows; y++)<br>
 {
   Quantum
-    *q;
-
+    *q;<br>
   q=GetCacheViewAuthenticPixels(image_view,0,y,image->columns,1,exception);
   if (q == (Quantum *) NULL)
     {
@@ -110,8 +201,7 @@ options, and more global use of 'image properties' (more commonly known as
   for (x = 0; x &lt; (ssize_t) image->columns; x++)
   {
     ssize_t
-      i;
-
+      i;<br>
     if (GetPixelWriteMask(image,q) &lt;= (QuantumRange/2))
       {
         q+=GetPixelChannels(image);
@@ -582,4 +672,342 @@ example "+annotate", "+resize", "+clut", and "+draw" .</p>
 <li>All MagickCore channel method analogs are removed (e.g. NegateImageChannels()).  For version 7, use pixel traits instead.</li>
 <li>The FilterImage() method has been removed.  Use ConvolveImage() instead.</li>
 </ul>
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Note, how we use GetPixelChannels() to advance to the next set of pixel channels.</p>
+    <p class="text-body-secondary mb-3">
+      The colormap indexes and black pixel channel (for the CMYK colorspace) are no longer stored in the index channel, previously accessed with GetAuthenticIndexQueue() and GetCacheViewAuthenticIndexQueue(). Instead they are now a first class pixel channel and accessed as a member of the pixel array (e.g. <code>pixel[4]</code>) or with the convenience pixel accessor methods GetPixelIndex(), SetPixelIndex(), GetPixelBlack(), and SetPixelBlack().
+    </p>
+    <p class="text-body-secondary mb-3">As a consequence of using an array structure for variable pixel channels, auto-vectorization compilers have additional opportunities to speed up pixel loops.</p>
+    <p class="text-body-secondary mb-4">The `sync` channel in IMv6 was really a flag instead of a channel. In IMv7, we instead use a flag: <code>-define compose:sync=false</code>.</p>
+
+    <h4 class="fw-bold mb-3">Pixel Accessors</h4>
+    <p class="text-body-secondary mb-3">You can access pixel channel as array elements (e.g. <code>pixel[1]</code>) or use convenience accessors to get or set pixel channels:</p>
+
+    <div class="terminal-card mb-4">
+      <div class="p-3 text-light font-mono small">
+        GetPixela() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixela()<br>
+        GetPixelAlpha() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelAlpha()<br>
+        GetPixelb() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelb()<br>
+        GetPixelBlack() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelBlack()<br>
+        GetPixelBlue() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelBlue()<br>
+        GetPixelCb() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelCb()<br>
+        GetPixelCr() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelCr()<br>
+        GetPixelCyan() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelCyan()<br>
+        GetPixelGray() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelGray()<br>
+        GetPixelGreen() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelGreen()<br>
+        GetPixelIndex() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelIndex()<br>
+        GetPixelL() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelL()<br>
+        GetPixelMagenta() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelMagenta()<br>
+        GetPixelReadMask() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelReadMask()<br>
+        GetPixelWriteMask() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelWriteMask()<br>
+        GetPixelMetacontentExtent() &nbsp;SetPixelMetacontentExtent()<br>
+        GetPixelOpacity() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelOpacity()<br>
+        GetPixelRed() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelRed()<br>
+        GetPixelYellow() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelYellow()<br>
+        GetPixelY() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelY()
+      </div>
+    </div>
+    <p class="text-body-secondary mb-4">You can find these accessors defined in the header file, <code>MagickCore/pixel-accessor.h</code></p>
+
+    <h4 class="fw-bold mb-3">Pixel Traits</h4>
+    <p class="text-body-secondary mb-3">Each pixel channel includes one or more of these traits:</p>
+    <div class="card im-card p-3 mb-4">
+      <dl class="row mb-0">
+        <dt class="col-md-3 fw-semibold">Undefined</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">no traits associated with this pixel channel</dd>
+        <dt class="col-md-3 fw-semibold">Copy</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">do not update this pixel channel, just copy it</dd>
+        <dt class="col-md-3 fw-semibold">Update</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">update this pixel channel</dd>
+        <dt class="col-md-3 fw-semibold">Blend</dt>
+        <dd class="col-md-9 mb-0 text-body-secondary">blend this pixel channel with the alpha mask if it's enabled</dd>
+      </dl>
+    </div>
+    <p class="text-body-secondary mb-3">We provide these methods to set and get pixel traits:</p>
+    <div class="terminal-card mb-3">
+      <div class="p-3 text-light font-mono small">
+        GetPixelAlphaTraits() &nbsp;&nbsp;&nbsp;SetPixelAlphaTraits()<br>
+        GetPixelBlackTraits() &nbsp;&nbsp;&nbsp;SetPixelBlackTraits()<br>
+        GetPixelBlueTraits() &nbsp;&nbsp;&nbsp;&nbsp;SetPixelBlueTraits()<br>
+        GetPixelCbTraits() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelCbTraits()<br>
+        GetPixelChannelTraits() &nbsp;SetPixelChannelTraits()<br>
+        GetPixelCrTraits() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelCrTraits()<br>
+        GetPixelGrayTraits() &nbsp;&nbsp;&nbsp;&nbsp;SetPixelGrayTraits()<br>
+        GetPixelGreenTraits() &nbsp;&nbsp;&nbsp;SetPixelGreenTraits()<br>
+        GetPixelIndexTraits() &nbsp;&nbsp;&nbsp;SetPixelIndexTraits()<br>
+        GetPixelMagentaTraits() &nbsp;SetPixelMagentaTraits()<br>
+        GetPixelRedTraits() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelRedTraits()<br>
+        GetPixelYellowTraits() &nbsp;&nbsp;SetPixelYellowTraits()<br>
+        GetPixelYTraits() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetPixelYTraits()
+      </div>
+    </div>
+    <p class="text-body-secondary mb-3">For convenience you can set the active trait for a set of pixel channels with a channel mask and this method:</p>
+    <div class="terminal-card mb-4">
+      <div class="p-3 text-light font-mono small">SetImageChannelMask()</div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Previously MagickCore methods had channel analogs, for example, NegateImage() and NegateImageChannels(). The channel analog methods are no longer necessary because the pixel channel traits specify whether to act on a particular pixel channel or whether to blend with the alpha mask. For example, instead of</p>
+    <div class="terminal-card mb-3">
+      <div class="p-3 text-light font-mono small">NegateImageChannel(image,channel);</div>
+    </div>
+    <p class="text-body-secondary mb-3">we use:</p>
+    <div class="terminal-card mb-4">
+      <div class="p-3 text-light font-mono small">
+        channel_mask=SetImageChannelMask(image,channel);<br>
+        NegateImage(image,exception);<br>
+        (void) SetImageChannelMask(image,channel_mask);
+      </div>
+    </div>
+
+    <h4 class="fw-bold mb-3">Pixel User Channels</h4>
+    <p class="text-body-secondary mb-4">
+      In version 7, we introduce pixel user channels. Traditionally we utilize 4 channels, red, green, blue, and alpha. For CMYK we also have a black channel. User channels are designed to contain whatever additional channel information that makes sense for your application. Some examples include extra channels in TIFF or PSD images or perhaps you require a channel with infrared information for the pixel. You can associate traits with the user channels so that when they are acted upon by an image processing algorithm (e.g. blur) the pixels are copied, acted upon by the algorithm, or even blended with the alpha channel if that makes sense.
+    </p>
+
+    <h4 class="fw-bold mb-3">Pixel Metacontent</h4>
+    <p class="text-body-secondary mb-3">
+      In version 7, we introduce pixel metacontent. Metacontent is content about content. So rather than being the content itself, it's something that describes or is associated with the content. Here the content is a pixel. The pixel metacontent is for your exclusive use (internally the data is just copied, it is not modified) and is accessed with these MagickCore API methods:
+    </p>
+    <div class="terminal-card">
+      <div class="p-3 text-light font-mono small">
+        SetImageMetacontentExtent()<br>
+        GetImageMetacontentExtent()<br>
+        GetVirtualMetacontent()<br>
+        GetAuthenticMetacontent()<br>
+        GetCacheViewAuthenticMetacontent()<br>
+        GetCacheViewVirtualMetacontent()
+      </div>
+    </div>
+  </section>
+
+  <!-- Alpha & Colorspace & Grayscale -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4" id="alpha">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-circle-half me-2"></i>Alpha</h5>
+        <p class="small text-body-secondary mb-0">
+          We support alpha now, previously opacity. With alpha, a value of <code>0</code> means transparent and <code>QuantumRange</code> means opaque. The PixelInfo structure member alpha replaces opacity, and hexadecimal sRGB alpha notation is reversed (e.g., #0000 is fully transparent).
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4" id="colorspace">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-palette me-2"></i>Colorspace</h5>
+        <p class="small text-body-secondary mb-0">
+          <code>Rec601Luma</code> and <code>Rec709Luma</code> colorspaces are no longer supported. Specify the <code>gray</code> colorspace and choose from intensity options like <code>Rec601Luminance</code> or <code>Rec709Luminance</code>.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4" id="grayscale">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-file-earmark-text me-2"></i>Grayscale</h5>
+        <p class="small text-body-secondary mb-0">
+          Previously, grayscale images consumed 4 channels (red, green, blue, alpha). With version 7, grayscale consumes only 1 channel, requiring far fewer resources.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masks -->
+  <section class="mb-5" id="mask">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-shield-shaded fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Masks</h2>
+    </div>
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        Version 7 supports masks for most image operators. White pixels in a read mask ignore corresponding pixels in an image, whereas white pixels in a write mask protect corresponding pixels. From the command-line, associate a mask using <code>-read-mask</code> and <code>-write-mask</code> options. The <code>-mask</code> option is also supported for backwards compatibility.
+      </p>
+      <p class="text-body-secondary mb-3">In this example, we compute the distortion of a masked reconstructed image:</p>
+      <div class="terminal-card mb-3">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> compare -metric rmse -read-mask hat_mask.png hat.png wizard.png difference.png
+        </div>
+      </div>
+      <p class="text-body-secondary mb-3">Here we protect certain pixels from change:</p>
+      <div class="terminal-card mb-3">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> magick rose: -write-mask rose_bg_mask.png -modulate 110,100,33.3 +write-mask rose_blue.png
+        </div>
+      </div>
+      <p class="text-body-secondary mb-3">
+        A mask associated with an image persists until modified or removed, which may produce unexpected results for complex command-lines. Here we only want to clip when applying the alpha option, not the resize:
+      </p>
+      <div class="terminal-card">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> magick -density 300 -colorspace srgb image.eps -alpha transparent -clip -alpha opaque +clip -resize 1000x1000 -strip image.png
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APIs & Headers -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6" id="core">
+      <div class="card im-card h-100 p-4">
+        <h4 class="fw-bold mb-3"><i class="bi bi-cpu text-primary me-2"></i>MagickCore API Changes</h4>
+        <ul class="list-unstyled d-flex flex-column gap-2 small text-body-secondary mb-0">
+          <li><i class="bi bi-check2 text-success me-1"></i> Almost all image processing algorithms are now channel aware.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> Adds an <code>ExceptionInfo</code> argument to methods lacking it in v6 (e.g., <code>NegateImage(image,MagickTrue,exception)</code>).</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> All method channel analogs removed (use pixel traits instead).</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> Public/private API calls declared with GCC visibility attribute.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> <code>InterpolatePixelMethod</code> enum is now <code>PixelInterpolateMethod</code>.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> <code>IntegerPixel</code> removed (use <code>LongPixel</code>), <code>LongLongPixel</code> added.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> Image signatures updated for variable pixel channels.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> <code>PixelPacket</code>, <code>LongPacket</code>, and <code>DoublePacket</code> consolidated to <code>PixelInfo</code>.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> ChannelMoments member <code>I</code> renamed to <code>invariant</code> to avoid conflict with <code>complex.h</code>.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> Added length parameter to <code>FormatMagickSize()</code>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-4">
+        <h4 class="fw-bold mb-3"><i class="bi bi-code-square text-primary me-2"></i>MagickWand & Magick++ APIs</h4>
+        <h6 class="fw-semibold text-body mb-2">MagickWand API:</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small text-body-secondary mb-3">
+          <li><i class="bi bi-check2 text-success me-1"></i> Almost all image processing algorithms are channel aware.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> <code>DrawMatte()</code> method is now called <code>DrawAlpha()</code>.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> <code>MagickSetImageBias()</code> and <code>MagickSetImageClipMask()</code> no longer supported.</li>
+        </ul>
+        <h6 class="fw-semibold text-body mb-2">Magick++ API:</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small text-body-secondary mb-0">
+          <li><i class="bi bi-check2 text-success me-1"></i> Channel-aware algorithms.</li>
+          <li><i class="bi bi-check2 text-success me-1"></i> Example construct to avoid operating on alpha channel: <br><code>image.negateChannel(Magick::ChannelType(Magick::CompositeChannels ^ Magick::AlphaChannel));</code></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Files & Deprecations -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6" id="headers">
+      <div class="card im-card h-100 p-4">
+        <h4 class="fw-bold mb-3"><i class="bi bi-file-earmark-code text-primary me-2"></i>Header Files</h4>
+        <p class="small text-body-secondary mb-3">
+          Prior versions of ImageMagick reference header files as <code>magick/</code> and <code>wand/</code>. ImageMagick 7 uses <code>MagickCore/</code> and <code>MagickWand/</code> respectively. For example:
+        </p>
+        <div class="terminal-card">
+          <div class="p-3 text-light font-mono small">
+            #include &lt;MagickCore/MagickCore.h&gt;<br>
+            #include &lt;MagickWand/MagickWand.h&gt;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" id="deprecate">
+      <div class="card im-card h-100 p-4">
+        <h4 class="fw-bold mb-3"><i class="bi bi-trash text-primary me-2"></i>Deprecated Features Removed</h4>
+        <p class="small text-body-secondary mb-3">All deprecated features from v6 are removed, including <code>Magick-config</code> and <code>Wand-config</code>. Use instead:</p>
+        <div class="terminal-card mb-3">
+          <div class="p-3 text-light font-mono small">
+            MagickCore-config<br>
+            MagickWand-config
+          </div>
+        </div>
+        <p class="small text-body-secondary mb-0">
+          The <code>FilterImage()</code> method is removed (use <code>ConvolveImage()</code>). The Bessel filter is removed as an alias for Jinc (use <code>-filter Jinc</code>).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shell API / CLI -->
+  <section class="mb-5" id="cli">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-terminal-fill fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Shell API or Command-line Interface</h2>
+    </div>
+
+    <div class="card im-card p-4 mb-4">
+      <p class="text-body-secondary mb-3">
+        The primary focus of changes to the Shell API/CLI is abstraction so options can be read from command line arguments, files (scripts), or file streams (interactive commands/co-processing).
+      </p>
+      <p class="text-body-secondary mb-3">
+        The CLI parser was rewritten to perform options strictly in a do-it-as-you-see-it order. You can no longer give operations before providing an image. Error reporting now pinpoints exact options causing exceptions.
+      </p>
+      <p class="text-body-secondary mb-0">
+        Parentheses (<code>(</code> and <code>)</code>) push/pull image lists, while curly braces (<code>{</code> and <code>}</code>) push/pull image settings. Command-line character limits increased from 4096 to 131072 characters.
+      </p>
+    </div>
+
+    <h4 class="fw-bold mb-3">Command Changes</h4>
+    <div class="card im-card p-4 mb-4">
+      <dl class="row mb-0">
+        <dt class="col-md-3 font-semibold">magick</dt>
+        <dd class="col-md-9 mb-3 text-body-secondary"><b>IMPORTANT: The <code>magick</code> command is the new primary command of the Shell API, replacing <code>convert</code></b>. Enables magick scripts or piping options.</dd>
+        <dt class="col-md-3 font-semibold">magick-script</dt>
+        <dd class="col-md-9 mb-3 text-body-secondary">Same as <code>magick</code> with an implicit <code>-script</code> option, allowing she-bang scripts (e.g., <code>#!/usr/bin/env magick-script</code>).</dd>
+        <dt class="col-md-3 font-semibold">Other Utilities</dt>
+        <dd class="col-md-9 mb-0 text-body-secondary">animate, compare, composite, conjure, convert, display, identify, import, mogrify, montage, stream are symbolic links to <code>magick</code>. On Windows, use <code>magick compare</code>, <code>magick identify</code>, etc. Do not use <code>magick convert</code>.</dd>
+      </dl>
+    </div>
+
+    <h4 class="fw-bold mb-3">Behavioral Changes</h4>
+    <div class="card im-card p-4 mb-4">
+      <p class="text-body-secondary mb-3">Image settings apply to each image on the command line. Use parentheses to associate settings with particular images:</p>
+      <div class="terminal-card mb-3">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> magick \( -page +10+20 first.png \) \( -page +100+200 second.png \) ...
+        </div>
+      </div>
+      <p class="text-body-secondary mb-0">
+        Default channel updates include RGBA (previously RGB). Use <code>-channel RGB</code> if legacy results differ. <code>+combine</code> requires a colorspace argument. <code>-gamma</code> no longer accepts multiple arguments.
+      </p>
+    </div>
+
+    <h4 class="fw-bold mb-3">New Options</h4>
+    <div class="card im-card p-4 mb-4">
+      <dl class="row mb-0">
+        <dt class="col-md-3 font-semibold">{ ... }</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Save/restore current image settings.</dd>
+        <dt class="col-md-3 font-semibold">-alpha activate/deactivate</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Enables/disables alpha channel with persistence.</dd>
+        <dt class="col-md-3 font-semibold">-alpha discrete</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Treat alpha channel independently without blending.</dd>
+        <dt class="col-md-3 font-semibold">-channel-fx expression</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Exchange, extract, or copy one or more image channels.</dd>
+        <dt class="col-md-3 font-semibold">-exit</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Stop processing immediately.</dd>
+        <dt class="col-md-3 font-semibold">-read {image}</dt>
+        <dd class="col-md-9 mb-2 text-body-secondary">Explicit read of an image.</dd>
+        <dt class="col-md-3 font-semibold">-script {file}</dt>
+        <dd class="col-md-9 mb-0 text-body-secondary">Read further options from a given file or pipeline.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Performance Improvements -->
+  <section class="mb-5" id="performance">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-speedometer2 fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Performance Improvements</h2>
+    </div>
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">Operating on grayscale images is significantly improved as only one channel is required (previously three).</p>
+      <p class="text-body-secondary mb-0">The performance of <a href="/fx/" class="text-decoration-none fw-semibold">-fx</a> option has increased by one to two orders of magnitude.</p>
+    </div>
+  </section>
+
+  <!-- Version 7 Change Summary -->
+  <section class="mb-4" id="summary">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-list-check fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Version 7 Change Summary</h2>
+    </div>
+    <div class="card im-card p-4">
+      <h5 class="fw-bold text-primary mb-2">High Dynamic Range Imaging</h5>
+      <p class="small text-body-secondary mb-3">HDRI enabled by default for accurate results; can be disabled via <code>--disable-hdri</code>.</p>
+
+      <h5 class="fw-bold text-primary mb-2">Pixels & Alpha</h5>
+      <p class="small text-body-secondary mb-3">Addressed as an array of channels (e.g., <code>pixel[PixelRedChannel]</code>) with convenience accessors. Alpha replaces opacity (0 transparent, QuantumRange opaque).</p>
+
+      <h5 class="fw-bold text-primary mb-2">Grayscale & Masks</h5>
+      <p class="small text-body-secondary mb-3">Grayscale consumes one channel. Version 7 fully supports both read and write masks.</p>
+
+      <h5 class="fw-bold text-primary mb-2">MagickCore API & Deprecations</h5>
+      <p class="small text-body-secondary mb-0">Channel-aware algorithms, ExceptionInfo arguments added, and all v6 deprecated channel analogs removed.</p>
+    </div>
+  </section>
 </div>

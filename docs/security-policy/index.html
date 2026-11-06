@@ -1,68 +1,90 @@
 ---
 title: "Security Policy"
-description: "Learn how to configure and enforce ImageMagick’s security policy to balance functionality with protection. Explore policy options, open, limited, secure, and websafe—plus resource limits, coder restrictions, and best practices for safeguarding deployments in containers, servers, and public websites."
+description: "Learn how to configure and enforce ImageMagick’s security policy to balance functionality with protection. Explore open, limited, secure, and websafe options, along with resource limits, coder restrictions, and best practices for securing containers, servers, and web applications."
+topic: "Tools"
 ---
-<div>
-<p class="text-center"><a href="#policy">Security Policy </a> • <a href="#environment">Selecting the Right Security Policy for Your Environment</a> • <a href="#example">Example Security Policy</a> • <a href="#discussion">Security Policy Discussion</a> • <a href="#synchronize">Pixel Cache Synchronize Policy</a> • <a href="#zero-configuration">Zero Configuration Security Policy</a> • <a href="#other">Other Security Considerations</a></p>
-
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">ImageMagick Security Policy</h4>
-<p>Establish a security policy suitable for your local environment before utilizing ImageMagick.  ImageMagick’s security model is “everything allowed unless denied,” and the last matching policy wins.  Be careful when adding new rules: any later policy can override earlier denies or allows. Place broad deny rules first, followed by specific exceptions, and review ordering to avoid accidental authorization.</p>
-</div>
-
-
-<p class="lead">ImageMagick is intentionally open by default, and that design choice reflects its primary use in controlled environments such as Docker containers or other sandboxed deployments.</p>
-<p>Security always involves balancing protection against potential vulnerabilities with the practical need to get work done. In ImageMagick, the security policy is the mechanism that lets you tune that balance. It acts as the control point between strict lockdown and operational convenience, allowing you to decide which features, coders, and operations are permitted in your environment.</p>
-<p>A well‑designed policy can:</p>
-<ul>
-<li>Limit or disable high‑risk coders and operations.</li>
-<li>Constrain resource usage to prevent abuse.</li>
-<li>Define exactly what types of input ImageMagick is allowed to process.</li>
-<li>Adapt the system to your threat model rather than forcing a one‑size‑fits‑all configuration.</li>
-</ul>
-<p>This flexibility is intentional. ImageMagick ships in an open state so it can be embedded into controlled environments, containers, pipelines, or isolated servers, where administrators can then tighten the policy to match their needs. <strong class="text-warning">The more untrusted input you expect to handle, the more restrictive your policy should be</strong>.</p>
-
-<p>ImageMagick generally evaluates security policies using a "last matching policy wins" model. For path policies, ImageMagick additionally evaluates canonical filesystem paths (resolved paths) and enforces canonical denies to prevent policy bypass through alternate path representations, symlinks, or path traversal tricks. As a result, path authorization may be more restrictive than a simple last-match-wins evaluation.<p>
-<p>Path policies are evaluated against both the supplied path and its canonical form. Canonical path denies cannot be bypassed by later rules that only match alternative lexical representations of the same filesystem location.</p>
-
-<h2><a class="anchor" id="environment"></a>Selecting the Right Security Policy for Your Environment</h2>
-
-<p>To ensure optimal security, you can restrict ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG. Alternatively, you can customize the security policy to fit the needs of your local environment or organizational policies. This policy can include details such as memory usage limits, allowed paths for reading and writing, limits on the number of images in a sequence, maximum workflow runtime, allowed disk space for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied. By customizing the security policy, you can help secure your environment and ensure that ImageMagick is a responsible member of your local system, such as by preventing overloading with large images.</p>
-
-<p>It is important to set limits on ImageMagick's resource usage to prevent potentially harmful situations. For example, if you accidentally download an image from the internet that has been crafted to generate a very large image (e.g., 20000 by 20000 pixels), ImageMagick may try to allocate the necessary resources (such as memory and disk space) and your system may deny the request or cause the program to exit. Alternatively, your computer may become temporarily slow or unresponsive, or ImageMagick may be forced to abort. To avoid such situations, you can set limits in the <a href="/source/policy-open.xml">policy.xml</a> configuration file.</p>
-
-<p>Keep in mind that what is considered reasonable for one environment may not be suitable for another. For example, you may have ImageMagick sandboxed in a secure environment, while someone else may use it to process images on a publicly accessible website. Or, ImageMagick may be running on a host with a lot of memory, while another instance is running on a device with limited resources. In the case of the host with large memory, it may make sense to allow large image processing, but not on the device with limited resources. If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</p>
-
-
-<p>To help you get started, as of version 7.1.1-16, ImageMagick provides security polices that you can select when installing ImageMagick.  Choose from:</p>
-
-<ul>
-<dt><a href="/source/policy-open.xml">open</a></dt>
-<dd>The default policy for ImageMagick installations is the open security policy. This policy is designed for usage in secure settings like those protected by firewalls or within Docker containers. Within this framework, ImageMagick enjoys broad access to resources and functionalities. This policy provides convenient and adaptable options for image manipulation. However, it's important to note that it might present security vulnerabilities in less regulated conditions. Thus, organizations should thoroughly assess the appropriateness of the open policy according to their particular use case and security prerequisites.  </dd>
-<dt><a href="/source/policy-limited.xml">limited</a></dt>
-<dd>The primary objective of the limited security policy is to find a middle ground between convenience and security. This policy involves the deactivation of potentially hazardous functionalities, like specific coders such as SVG or HTTP. Furthermore, it establishes several constraints on the utilization of resources like memory, storage, and processing duration, all of which are adjustable. This policy proves advantageous in situations where there's a need to mitigate the potential threat of handling possibly malicious or demanding images, all while retaining essential capabilities for prevalent image formats.</dt>
-<dt><a href="/source/policy-secure.xml">secure</a></dt>
-<dd>This stringent security policy prioritizes the implementation of rigorous controls and restricted resource utilization to establish a profoundly secure setting while employing ImageMagick. It deactivates conceivably hazardous functionalities, including specific coders like SVG or HTTP. The policy promotes the tailoring of security measures to harmonize with the requirements of the local environment and the guidelines of the organization. This protocol encompasses explicit particulars like limitations on memory consumption, sanctioned pathways for reading and writing, confines on image sequences, the utmost permissible duration of workflows, allocation of disk space intended for image data, and even an undisclosed passphrase for remote connections. By adopting this robust policy, entities can elevate their overall security stance and alleviate potential vulnerabilities.</dt>
-<dt><a href="/source/policy-websafe.xml">websafe</a></dt>
-<dd>  This security protocol designed for web-safe usage focuses on situations where ImageMagick is applied in publicly accessible contexts, like websites.  It deactivates the capability to read from or write to any image formats other than web-safe formats like GIF, JPEG, and PNG. Additionally, this policy prohibits the execution of image filters and indirect reads, thereby thwarting potential security breaches. By implementing these limitations, the web-safe policy fortifies the safeguarding of systems accessible to the public, reducing the risk of exploiting ImageMagick's capabilities for potential attacks.</dd>
-</ul>
-<p>Under Linux, select the policy with the <code>--with-security-policy={open, limited, secure, websafe}</code> configure script option.  Under Windows, the choice is presented when you run the configure app.</p>
-
-<p>We encourage you to review each rule in your <code>policy.xml</code> configuration file.  Adjust the parameters according to your organization's requirements. You can modify the allowed image formats, set specific paths, and restrict certain operations based on your security needs.  Remember that customizing the security policy is a delicate balance between functionality and security. Overly restrictive policies might hinder legitimate image processing tasks, while overly permissive policies can introduce vulnerabilities.</p>
-
-<p>Doyensec provides a policy evaluator tool that can assist you in designing and auditing your security policy.  The tool is found at <a href="https://imagemagick-secevaluator.doyensec.com/">imagemagick-secevaluator.doyensec.com</a>.</p>
-
-<h2><a class="anchor" id="example"></a>Example Security Policy</h2>
-
-<p>Here is an example security policy:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+<div class="security-policy-content">
+  <!-- Table of Contents / Quick Nav -->
+  <div class="card im-card p-3 mb-4 bg-body-tertiary border-0">
+    <p class="text-center mb-0 small fw-medium">
+      <a href="#policy" class="text-decoration-none">Security Policy</a> • 
+      <a href="#environment" class="text-decoration-none">Environment Selection</a> • 
+      <a href="#example" class="text-decoration-none">Example Policy</a> • 
+      <a href="#discussion" class="text-decoration-none">Discussion</a> • 
+      <a href="#synchronize" class="text-decoration-none">Pixel Cache Sync</a> • 
+      <a href="#zero-configuration" class="text-decoration-none">Zero Config</a> • 
+      <a href="#other" class="text-decoration-none">Best Practices</a>
+    </p>
+  </div>
+  <!-- Intro Alert -->
+  <div class="alert alert-warning border-0 shadow-sm mb-4" role="alert" id="policy">
+    <h4 class="alert-heading h5 fw-bold mb-2"><i class="bi bi-shield-lock-fill me-2"></i>ImageMagick Security Policy</h4>
+    <p class="mb-0 small">Establish a security policy tailored to your environment before deploying ImageMagick. ImageMagick operates on an <strong>"everything allowed unless denied"</strong> model, where the <em>last matching policy wins</em>. Place broad deny rules first, followed by specific exceptions, and review rule ordering carefully to prevent unintended authorizations.</p>
+  </div>
+  <p class="lead text-body">ImageMagick is intentionally open by default, a design choice optimized for controlled, sandboxed environments like Docker containers and isolated application pipelines.</p>
+  <p>Security involves balancing protection against potential vulnerabilities with practical operational needs. ImageMagick's security policy acts as the control point between strict lockdown and convenience, letting you dictate which features, coders, and operations are permitted.</p>
+  <h3 class="h5 fw-bold mt-4 mb-3">A well-designed policy empowers you to:</h3>
+  <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+    <li class="d-flex align-items-start gap-2"><i class="bi bi-check-circle-fill text-success mt-1"></i><span><strong>Limit or disable high-risk coders</strong> and external operations to minimize attack surfaces.</span></li>
+    <li class="d-flex align-items-start gap-2"><i class="bi bi-check-circle-fill text-success mt-1"></i><span><strong>Constrain resource usage</strong> to prevent denial-of-service (DoS) attacks and resource exhaustion.</span></li>
+    <li class="d-flex align-items-start gap-2"><i class="bi bi-check-circle-fill text-success mt-1"></i><span><strong>Define strict input boundaries</strong> for what file types and formats ImageMagick may process.</span></li>
+    <li class="d-flex align-items-start gap-2"><i class="bi bi-check-circle-fill text-success mt-1"></i><span><strong>Tailor defenses</strong> to your specific threat model rather than relying on a rigid, one-size-fits-all setup.</span></li>
+  </ul>
+  <p>Because ImageMagick ships in an open state for easy integration into containers and automated build pipelines, administrators must tighten policies to match production requirements. <strong class="text-warning-emphasis bg-warning-subtle px-1 rounded">The more untrusted input your application handles, the more restrictive your policy must be.</strong></p>
+  <p>Policies are evaluated using a "last matching policy wins" model. For filesystem paths, ImageMagick evaluates canonical (fully resolved) paths and enforces canonical denies to block bypass attempts via symlinks, alternate representations, or path traversal tricks.</p>
+  <hr class="my-4 text-muted opacity-25">
+  <h2 class="h4 fw-bold mt-4 mb-3" id="environment"><i class="bi bi-sliders me-2 text-primary"></i>Selecting the Right Security Policy for Your Environment</h2>
+  <p>To ensure optimal security in public-facing applications, you can restrict ImageMagick exclusively to web-safe formats like GIF, JPEG, and PNG. Alternatively, you can customize limits for memory allocation, allowed read/write paths, sequence frame counts, workflow runtime, and pixel cache disk space.</p>
+  <p>Setting resource limits protects against malicious or malformed files—such as an internet-sourced image crafted to declare 20,000×20,000 dimensions. Without limits, such files can exhaust memory and disk space, causing system slowdowns or crashes. You can configure these limits in your <code>policy.xml</code> file.</p>
+  <p>Environments vary wildly: a sandboxed internal service with abundant RAM has different security needs than a public web server processing user uploads. To simplify hardening, ImageMagick provides four pre-built security policies (available as of version 7.1.1-16):</p>
+  <div class="row g-3 my-3">
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3">
+        <h5 class="fw-bold text-primary"><a href="/source/policy-open.xml" class="text-decoration-none">open</a></h5>
+        <p class="small text-body-secondary mb-0">The default profile. Ideal for secure, firewalled environments or Docker containers where broad functionality and convenience are prioritized over strict lockdown.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3">
+        <h5 class="fw-bold text-warning"><a href="/source/policy-limited.xml" class="text-decoration-none">limited</a></h5>
+        <p class="small text-body-secondary mb-0">Strikes a balance between usability and security. Disables hazardous coders (like SVG or HTTP) and applies adjustable resource constraints on memory, storage, and runtime.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3">
+        <h5 class="fw-bold text-danger"><a href="/source/policy-secure.xml" class="text-decoration-none">secure</a></h5>
+        <p class="small text-body-secondary mb-0">A rigorous profile enforcing strict resource caps, explicit read/write pathways, sequence limits, and disabled high-risk capabilities for hardened deployments.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card im-card h-100 p-3">
+        <h5 class="fw-bold text-success"><a href="/source/policy-websafe.xml" class="text-decoration-none">websafe</a></h5>
+        <p class="small text-body-secondary mb-0">Designed for public websites. Restricts I/O strictly to GIF, JPEG, and PNG formats while blocking image filters and indirect reads to prevent exploitation.</p>
+      </div>
+    </div>
+  </div>
+  <p class="small text-muted mt-2">Under Linux, select your policy using the configure script option <code>--with-security-policy={open,limited,secure,websafe}</code>. Under Windows, select it during the GUI configuration app workflow.</p>
+  <p>We encourage reviewing every rule in your <code>policy.xml</code>. Finding the right balance ensures robust defense without breaking legitimate image processing pipelines.</p>
+  <div class="p-3 bg-body-tertiary rounded border border-secondary-subtle my-3">
+    <p class="mb-0 small"><i class="bi bi-tools text-warning me-2"></i><strong>Policy Evaluator:</strong> Doyensec provides a helpful interactive security policy auditor at <a href="https://imagemagick-secevaluator.doyensec.com/" target="_blank" rel="noopener">imagemagick-secevaluator.doyensec.com</a>.</p>
+  </div>
+  <hr class="my-4 text-muted opacity-25">
+  <h2 class="h4 fw-bold mt-4 mb-3" id="example"><i class="bi bi-file-earmark-code me-2 text-primary"></i>Example Hardened Security Policy</h2>
+  <p>Below is a production-ready example of a hardened security policy tailored for public-facing web applications:</p>
+  <div class="card terminal-card mb-3">
+    <div class="terminal-header">
+      <div class="terminal-dot bg-danger"></div>
+      <div class="terminal-dot bg-warning"></div>
+      <div class="terminal-dot bg-success"></div>
+      <span class="small text-secondary font-mono ms-2">policy.xml</span>
+    </div>
+    <div class="p-3 bg-body text-body font-mono small overflow-auto" style="max-height: 500px;">
+<pre class="mb-0"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!DOCTYPE policymap [
   &lt;!ELEMENT policymap (policy)*>
   &lt;!ATTLIST policymap
     xmlns CDATA #FIXED ""
   >
-
   &lt;!ELEMENT policy EMPTY>
   &lt;!ATTLIST policy
     xmlns   CDATA   #FIXED ""
@@ -74,312 +96,95 @@ description: "Learn how to configure and enforce ImageMagick’s security policy
     value   CDATA   #IMPLIED
   >
 ]>
-
-&lt;!--
-  Hardened ImageMagick Security Policy
-
-  This policy is intended for processing untrusted images in publicly
-  accessible environments such as web applications and internet-facing
-  services.
-
-  Key protections include:
-
-    * Restrictive resource limits to mitigate denial-of-service attacks.
-    * Delegates and image filters disabled to prevent external code execution.
-    * Path restrictions to block indirect reads, pipes, file descriptors,
-      relative path traversal, and access to sensitive system files.
-    * Only a limited set of web-safe image formats are permitted.
-    * SVG entity substitution is explicitly disabled.
-    * Symlink following is disabled.
-    * Memory initialization and cache synchronization are enabled to improve
-      security and data integrity.
-
-  Before deploying ImageMagick, customize this policy to suit your environment.
-  Review the ImageMagick security policy documentation:
-
-      https://imagemagick.org/security-policy/
-
-  Validate any policy changes with:
-
-      https://imagemagick-secevaluator.doyensec.com/
-
-  After modifying policy.xml, test all restrictions to verify that the
-  intended protections are enforced in your deployment environment.
--->
-
 &lt;policymap>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- Resource Limits                                                -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Maximum number of worker threads. -->
+  &lt;!-- Resource Limits -->
   &lt;policy domain="resource" name="thread" value="4"/>
-
-  &lt;!-- Maximum processing time before an exception is thrown. -->
   &lt;policy domain="resource" name="time" value="60"/>
-
-  &lt;!-- Maximum number of open pixel cache files. -->
   &lt;policy domain="resource" name="file" value="768"/>
-
-  &lt;!-- Maximum heap memory available to the pixel cache. -->
   &lt;policy domain="resource" name="memory" value="256MiB"/>
-
-  &lt;!-- Maximum memory-mapped cache size before spilling to disk. -->
   &lt;policy domain="resource" name="map" value="512MiB"/>
-
-  &lt;!-- Maximum image area cached in memory. Larger images use disk cache. -->
   &lt;policy domain="resource" name="area" value="32MP"/>
-
-  &lt;!-- Maximum disk space available for the pixel cache. -->
   &lt;policy domain="resource" name="disk" value="1GiB"/>
-
-  &lt;!-- Maximum number of images allowed in an image sequence. -->
   &lt;policy domain="resource" name="list-length" value="16"/>
-
-  &lt;!-- Maximum permitted image width. -->
   &lt;policy domain="resource" name="width" value="4KP"/>
-
-  &lt;!-- Maximum permitted image height. -->
   &lt;policy domain="resource" name="height" value="4KP"/>
-
-  &lt;!-- Periodically yield the CPU (milliseconds). -->
   &lt;policy domain="resource" name="throttle" value="2"/>
-
-  &lt;!-- Disable load-based dynamic throttling. -->
   &lt;policy domain="resource" name="dynamic-throttle" value="false"/>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- Pixel Cache Security                                           -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Initialize selected allocations with anonymous memory mapping. -->
+  &lt;!-- Pixel Cache Security -->
   &lt;policy domain="cache" name="memory-map" value="anonymous"/>
-
-  &lt;!-- Force cache data to be flushed and synchronized to disk. -->
   &lt;policy domain="cache" name="synchronize" value="true"/>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- Delegate and Filter Restrictions                               -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Disable all external delegates. -->
+  &lt;!-- Delegate and Filter Restrictions -->
   &lt;policy domain="delegate" rights="none" pattern="*"/>
-
-  &lt;!-- Disable all image filters. -->
   &lt;policy domain="filter" rights="none" pattern="*"/>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- Path Restrictions                                              -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Disallow stdin and stdout access. -->
+  &lt;!-- Path Restrictions -->
   &lt;policy domain="path" rights="none" pattern="-"/>
-
-  &lt;!-- Disallow file descriptor access such as fd:3. -->
-  &lt;policy domain="path" rights="none" pattern="[Ff][Dd\]:*"/>
-
-  &lt;!-- Protect sensitive system files. -->
+  &lt;policy domain="path" rights="none" pattern="[Ff][Dd]:*"/>
   &lt;policy domain="path" rights="none" pattern="/etc/*"/>
-
-  &lt;!-- Prevent relative path traversal. -->
   &lt;policy domain="path" rights="none" pattern="*../*"/>
-
-  &lt;!-- Prevent indirect file reads using @filename syntax. -->
   &lt;policy domain="path" rights="none" pattern="@*"/>
-
-  &lt;!-- Prevent pipe-based input. -->
   &lt;policy domain="path" rights="none" pattern="|*"/>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- Module Restrictions                                             -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Deny all image modules by default. -->
+  &lt;!-- Module Restrictions -->
   &lt;policy domain="module" rights="none" pattern="*"/>
-
-  &lt;!-- Permit only web-safe image formats. -->
-  &lt;policy domain="module" rights="read | write"
-          pattern="{GIF,JPEG,PNG,WEBP}"/>
-
-  &lt;!-- ============================================================= -->
-  &lt;!-- System Security Options                                        -->
-  &lt;!-- ============================================================= -->
-
-  &lt;!-- Overwrite sensitive temporary data before removal. -->
+  &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}"/>
+  &lt;!-- System Security Options -->
   &lt;policy domain="system" name="shred" value="1"/>
-
-  &lt;!-- Initialize buffers using anonymous memory mapping. -->
   &lt;policy domain="system" name="memory-map" value="anonymous"/>
-
-  &lt;!-- Maximum single allocation request. -->
   &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
-
-  &lt;!-- Prevent following symbolic links. -->
-  &lt;policy domain="system" name="symlink"
-          rights="none" pattern="follow"/>
-
-  &lt;!-- Disable SVG entity substitution. -->
-  &lt;policy domain="system" name="svg"
-          rights="none" pattern="substitute-entities"/>
-
+  &lt;policy domain="system" name="max-profile-size" value="16MiB"/>
+  &lt;policy domain="system" name="max-profile-count" value="16"/>
+  &lt;policy domain="system" name="symlink" rights="none" pattern="follow"/>
+  &lt;policy domain="system" name="svg" rights="none" pattern="substitute-entities"/>
 &lt;/policymap></code></pre>
-
-<p>To prevent one session from consuming all available memory when processing multiple sessions at the same time, large images are cached to disk with this policy. If an image exceeds the pixel cache disk limit, the program will exit. Additionally, a time limit has been set to prevent any processing tasks from running for too long. If an image has a width or height larger than 4096 pixels, or if an image sequence has more than 16 frames, processing will stop and an exception will be thrown.</p>
-
-<h2><a class="anchor" id="discussion"></a>Security Policy Discussion</h2>
-
-<p>Starting with ImageMagick 7.0.1-8, you can prevent the use of any external delegate or all external delegates (by setting the pattern to "*"). Prior to these releases, you can use the domain of <code>coder</code> and set rights to none and the glob pattern to HTTPS to prevent external delegate usage. Additionally, users are prevented from executing any image filters and from performing indirect reads. If you want to, for example, read text from a file (e.g. <code>caption:@myCaption.txt</code>), you'll need to disable this path policy.</p>
-
-<p>Policy <a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a>, before ImageMagick 7.1.1-16, are <em>case sensitive</em>.  To get expected behavior, coders and modules must be upper-case (e.g. "EPS" not "eps") or use a case-insensitive pattern such as <code>[Pp][Nn][Gg]</code>.</p>
-
-<p>Here is what you can expect when you restrict the HTTPS coder, for example:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick https://imagemagick.org/image/wizard.png wizard.jpg
-convert: attempt to perform an operation not allowed by the security policy `HTTPS'
-convert: no images defined `wizard.jpg'</samp></pre>
-
-<p>As of ImageMagick version 7.0.4-7, you can conveniently deny access to all external delegates and coders except for a small subset of proven web-safe image types.  For example,</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="delegate" rights="none" pattern="*" />
-&lt;policy domain="module" rights="none" pattern="*" />
-&lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}" /></code></pre>
-
-<p>The module policy enables or disables a complete module for both read or write.  To just read or write an image format, use the coder policy instead.  For example, we disable reading just a few Postscript related formats, however, you can still write them:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="coder" rights="write" pattern="{PDF,PS,PS2,PS3,XPS}" /></code></pre>
-
-<p>As of ImageMagick 7.0.7-0, you can allocate the pixel cache and some internal buffers with anonymous memory mapping rather than from heap.  As a consequence, the pixels are initialized to zero resulting in a minor performance penalty.  You can also jumble the contents of certain memory buffers (requires version 7.1.0-38) and temporary files before they are freed or deleted.  The shred value is the number of times to replace content with random data.  For example,</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="system" name="memory-map" value="anonymous"/>
-&lt;policy domain="cache" name="memory-map" value="anonymous"/>
-&lt;policy domain="system" name="shred" value="1"/></code></pre>
-<p>For performance reasons, the first pass is fast by repeating the random sequence as necessary to overwrite the contents of the buffer or file.  Subsequent passes are an order of magnitude slower, but generate cryptographically strong random bytes for the length of the buffer or file.</p>
-
-<p>Some image processing algorithms (e.g. wavelet transform) might consume a substantial amount of memory to complete.  ImageMagick maintains a separate memory pool for these large resource requests and as of 7.0.6-1 permits you to set a maximum request limit.  If the limit is exceeded, the allocation is instead memory-mapped on disk.  Here we limit the maximum memory request by policy:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="system" name="max-memory-request" value="256MiB"/> </code></pre>
-
-<p>As of ImageMagick version 7.0.4-23, you can limit the maximum number of images in a sequence.  For example, to limit an image sequence to at most 64 frames, use:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="resource" name="list-length" value="64"/></code></pre>
-
-<p>Note, numeric values in policies are floating-point with an optional SI prefix (e.g., 10MiB).</p>
-
-<p>For additional details about resource limits and the policy configuration file, read <a href="/resources/">Resources</a> and <a href="/architecture/">Architecture</a>.</p>
-
-<p>As of ImageMagick 7.0.6-0, you can programmatically set the ImageMagick security policy with SetMagickSecurityPolicy() (MagickCore) or MagickSetSecurityPolicy() (MagickWand).</p>
-
-<p>As of ImageMagick version 7.0.8-11, you can set a <code>module</code> security policy.  For example, to prevent Postscript or PDF interpretation, use:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="module" rights="none" pattern="{ps,pdf,xps}/></code></pre>
-
-<p>As of ImageMagick version 7.0-10-52, you can set a <code>font</code> policy.  Specify a path to a Unicode font that ImageMagick defaults to whenever the user does not specify a font preference:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="system" name="font" value="/usr/share/fonts/arial-unicode.ttf"/></code></pre>
-
-<p>Note, in file path glob patterns, use the backslash character (\) to escape characters that would otherwise be interpreted as special characters. For example:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="path" rights="none" pattern="c:\\\\*"/></code></pre>
-
-<p>You can verify your policy changes are in effect with this command:</p>
-
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ magick identify -list policy
-Path: ImageMagick-7/policy.xml
-  Policy: Cache
-    name: memory-map
-    value: anonymous
-  Policy: Cache
-    name: synchronize
-    value: true
-  Policy: Resource
-    name: list-length
-    value: 32
-  Policy: Resource
-    name: time
-    value: 120
-  Policy: Resource
-    name: thread
-    value: 2
-  Policy: Resource
-    name: file
-    value: 768
-  Policy: Resource
-    name: disk
-    value: 1GiB
-  Policy: Resource
-    name: map
-    value: 512MiB
-  Policy: Resource
-    name: memory
-    value: 256MiB
-  Policy: Resource
-    name: area
-    value: 16KP
-  Policy: Resource
-    name: height
-    value: 8KP
-  Policy: Resource
-    name: width
-    value: 8KP
-  Policy: Resource
-    name: temporary-path
-    value: /opt/tmp
-  Policy: Module
-    rights: Write
-    pattern: {HTTP,HTTPS,MVG,PS,PDF}
-  Policy: Filter
-    rights: None
-    pattern: *
-  Policy: Path
-    rights: None
-    pattern: @*
-  Policy: System
-    name: font
-    value: ImageMagick-7/arial-unicode.ttf
-
-Path: [built-in]
-  Policy: Undefined
-    rights: None</samp></pre>
-<p>Notice the <code>shared-secret</code> policy is not listed due to the <code>stealth</code> property.</p>
-
-
-<h2><a class="anchor" id="synchronize"></a>Pixel Cache Synchronize Policy</h2>
-
-<p>When writing image pixels to disk, ImageMagick first preallocates the disk file, which is faster than fully populating the file with zeros. To improve performance even further, the file is memory-mapped on disk. This can result in an increase in performance of up to 5 times, but there is a possibility that the disk file may run out of free space as it is populated, causing the operating system (OS) to throw a SIGBUS signal which prevents ImageMagick from continuing. To prevent a SIGBUS signal from occurring, use this security policy:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary">
-&lt;policy domain="cache" name="synchronize" value="True"/>
-</pre>
-
-<p>Set to True to ensure all image data is fully flushed and synchronized to disk. There is a performance penalty, however, the benefits include ensuring a valid image file in the event of a system crash and early reporting if there is not enough disk space for the image pixel cache.</p>
-
-<h2><a class="anchor" id="zero-configuration"></a>Zero Configuration Security Policy</h2>
-
-<p>A zero configuration build of ImageMagick does not permit external configuration files.  To define your security policy, you must instead edit the <code>MagickCore/policy-private.h</code> source module, add your policy statements, and then build the ImageMagick distribution.  Here is an example zero configuration security policy:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>static const char
-  *ZeroConfigurationPolicy = \
-"&lt;policymap> \
-  &lt;policy domain=\"module\" rights=\"none\" pattern=\"MVG\"/> \
-&lt;/policymap>";</code></pre>
-
-<h2><a class="anchor" id="other"></a>Other Security Considerations</h2>
-
-<p>If you spot a vulnerability in ImageMagick, first determine if the vulnerability can be mitigated by the security policy. ImageMagick, by default, is open. Use the security policy to add constraints to meet the requirements of your local security governance. If you feel confident that the security policy does not address the vulnerability, post the vulnerability as a <a href="https://github.com/ImageMagick/ImageMagick/security/advisories/new">security advisory</a>. Most vulnerabilities are reviewed and resolved within 48 hours.</p>
-
-<p>There are several ways to keep ImageMagick safer:<p>
-<ol>
-<li>Use web-safe image formats: Limiting ImageMagick to only reading or writing web-safe image formats like GIF, JPEG, and PNG can help increase security.</li>
-
-<li>Customize the security policy: You can customize the security policy to fit the needs of your local environment or organizational policies. This policy can cover aspects such as memory usage, allowable paths for reading and writing, the number of images allowed in a sequence, the maximum time a workflow can run, the amount of disk space allowed for image pixels, a secret passphrase for remote connections, and which coders are permitted or denied.</li>
-
-<li>Set limits on resource usage: You can set limits on resources such as memory usage, disk space, and workflow runtime to prevent potentially harmful situations.</li>
-
-<li>Use sandboxing: Sandboxing is a security technique that allows you to run a program in a restricted environment to prevent it from accessing sensitive information or making changes to the system.</li>
-
-<li>Disable potentially dangerous coders: If you are using ImageMagick on a public website, you may want to increase security by disabling certain coders such as MVG or HTTPS.</li>
-
-<li>Review <a href="/source/delegates.xml">delegates.xml</a> and disable by policy any that are not suitable in your environment.  For those that remain, use <code>configure --with--frozenpaths=yes</code> to ensure that every delegate program uses an <strong>absolute pathname</strong>, for example <code>/usr/bin/gs</code> instead of <code>gs</code>, so that delegate resolution is deterministic and not dependent on the environment’s <code>PATH</code>.</li> 
-
-<li>Prevent execution of image filters and indirect reads: You can prevent users from executing image filters and performing indirect reads to increase security.</li>
-
-<li>Enable pipes only when needed: Pipe support is disabled by default. Configuring ImageMagick with <code>--enable-pipes</code> allows filenames beginning with <code>|</code> to read from or write to external commands. This can enable command execution through untrusted filenames, so validate and sanitize user input carefully. If pipes are enabled but not needed at runtime, deny them with a path policy such as <code>&lt;policy domain="path" rights="none" pattern="|*"/&gt;</code>.</li>
-
-<li>Use a current version of ImageMagick: It is important to use a current version of ImageMagick to take advantage of the latest security fixes and updates.</li>
-</ol>
-
+    </div>
+  </div>
+  <hr class="my-4 text-muted opacity-25">
+  <h2 class="h4 fw-bold mt-4 mb-3" id="discussion"><i class="bi bi-chat-left-text me-2 text-primary"></i>Security Policy Discussion & Advanced Tuning</h2>
+  <p>Starting with ImageMagick 7.0.1-8, external delegates can be globally disabled by setting the pattern to <code>"*"</code>. Glob patterns are case-sensitive prior to version 7.1.1-16, so coders must be uppercase (e.g., <code>"EPS"</code>) or use case-insensitive patterns like <code>[Pp][Nn][Gg]</code>.</p>
+  <p>When restricting coders like HTTPS, attempting an unauthorized operation returns an error:</p>
+  <div class="card terminal-card mb-3">
+    <div class="p-3 bg-body font-mono small text-secondary">
+      $ magick https://imagemagick.org/image/wizard.png wizard.jpg<br>
+      magick: attempt to perform an operation not allowed by the security policy `HTTPS'<br>
+      magick: no images defined `wizard.jpg'
+    </div>
+  </div>
+  <p>You can also use anonymous memory mapping and buffer shredding to enhance data hygiene:</p>
+  <div class="card terminal-card mb-3">
+    <div class="p-3 bg-body font-mono small">
+      &lt;policy domain="system" name="memory-map" value="anonymous"/&gt;<br>
+      &lt;policy domain="cache" name="memory-map" value="anonymous"/&gt;<br>
+      &lt;policy domain="system" name="shred" value="1"/&gt;
+    </div>
+  </div>
+  <p>To verify your active security policy configuration at any time, run:</p>
+  <div class="card terminal-card mb-3">
+    <div class="p-3 bg-body font-mono small text-secondary">
+      $ magick identify -list policy
+    </div>
+  </div>
+  <hr class="my-4 text-muted opacity-25">
+  <h2 class="h4 fw-bold mt-4 mb-3" id="synchronize"><i class="bi bi-hdd me-2 text-primary"></i>Pixel Cache Synchronize Policy</h2>
+  <p>When writing pixels to disk, ImageMagick preallocates and memory-maps files for performance. However, if disk space runs out during population, the OS may trigger a <code>SIGBUS</code> signal. Setting <code>synchronize</code> to <code>true</code> ensures data is flushed and synchronized immediately, preventing crashes and offering early error reporting:</p>
+  <div class="card terminal-card mb-3">
+    <div class="p-3 bg-body font-mono small">
+      &lt;policy domain="cache" name="synchronize" value="true"/&gt;
+    </div>
+  </div>
+  <h2 class="h4 fw-bold mt-4 mb-3" id="zero-configuration"><i class="bi bi-cpu me-2 text-primary"></i>Zero Configuration Security Policy</h2>
+  <p>For embedded builds that prohibit external configuration files, you can embed policies directly into the source module <code>MagickCore/policy-private.h</code> before compilation:</p>
+  <div class="card terminal-card mb-3">
+    <div class="p-3 bg-body font-mono small">
+      static const char *ZeroConfigurationPolicy = \<br>
+      "&lt;policymap&gt; &lt;policy domain=\"module\" rights=\"none\" pattern=\"MVG\"/&gt; &lt;/policymap&gt;";
+    </div>
+  </div>
+  <h2 class="h4 fw-bold mt-4 mb-3" id="other"><i class="bi bi-shield-check me-2 text-primary"></i>Other Security Best Practices</h2>
+  <ol class="list-group list-group-numbered list-group-flush mb-4">
+    <li class="list-group-item bg-transparent"><strong>Use web-safe image formats:</strong> Restrict processing strictly to trusted formats like GIF, JPEG, and PNG.</li>
+    <li class="list-group-item bg-transparent"><strong>Customize resource limits:</strong> Control memory, disk space, and runtime bounds to thwart denial-of-service attacks.</li>
+    <li class="list-group-item bg-transparent"><strong>Deploy sandboxing:</strong> Run ImageMagick inside isolated containers or restricted user namespaces.</li>
+    <li class="list-group-item bg-transparent"><strong>Disable dangerous coders:</strong> Turn off vector graphics (MVG) and remote network fetches (HTTPS) on public instances.</li>
+    <li class="list-group-item bg-transparent"><strong>Review delegates:</strong> Audit <code>delegates.xml</code> and use absolute pathnames (e.g., <code>/usr/bin/gs</code>) to prevent path hijacking.</li>
+    <li class="list-group-item bg-transparent"><strong>Keep ImageMagick updated:</strong> Always run the latest stable release to incorporate critical security patches.</li>
+  </ol>
 </div>

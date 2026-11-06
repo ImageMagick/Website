@@ -2,101 +2,159 @@
 title: "Install from Source"
 description: "Learn how to install ImageMagick from source on Linux, macOS, FreeBSD, Solaris, or Windows. Step-by-step instructions for compiling, configuring, and verifying your build, with guidance on optional libraries, advanced installation, and troubleshooting."
 ---
-<div>
-<p class="text-center"><a href="#linux">Install from Linux Source</a> • <a href="#windows">Install from Windows Source</a></p>
 
-<p class="lead">Chances are, ImageMagick is already installed on your computer if you are using some flavor of Linux, and its likely not installed if you are using some form of Windows.  In either case, you can type the following to find out:</p>
+<div class="container-fluid px-0">
+  <!-- Quick Navigation & Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap gap-2 pt-2 pb-3 border-bottom mb-3">
+        <a href="#linux" class="btn btn-outline-secondary btn-sm">Install from Linux Source</a>
+        <a href="#windows" class="btn btn-outline-secondary btn-sm">Install from Windows Source</a>
+      </div>
+      <p class="lead text-body-secondary">
+        Chances are, ImageMagick is already installed on your computer if you use Linux, whereas it likely isn't if you are on Windows. In either case, you can check quickly by running:
+      </p>
+      <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+        <div class="card-body">
+          <pre class="mb-0 font-monospace text-body-secondary"><code>magick identify -version</code></pre>
+        </div>
+      </div>
+      <p class="text-muted small">
+        If the <a href="/identify/">identify</a> program executes successfully, you may not need to install from source unless you want to add support for specific image formats or upgrade. Alternatively, you can install a pre-compiled <a href="/download/">binary release</a>. Before proceeding with a source build, you may want to review recent <a href="/changelog" rel="noopener noreferrer" target="_blank">changes</a> to the distribution. The authoritative repository is available at <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>.
+      </p>
+    </div>
+  </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><code>magick identify -version
-</code></pre>
+  <!-- Linux Source Installation Section -->
+  <section id="linux" class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Install from Linux Source</h2>
+    <p>
+      ImageMagick builds seamlessly on Linux and Unix-like operating systems including Solaris, FreeBSD, and macOS. A compiler is required, and almost all modern systems include one.
+    </p>
 
-<p>If the <a href="/identify/">identify</a> program executes and identifies itself as ImageMagick, you may not need to install ImageMagick from source unless you want to add support for additional image formats or upgrade to a newer version.  You also have the option of installing a pre-compiled <a href="/download/">binary release</a>.  However, if you still want to install from source, choose a platform, <a href="#linux">Linux</a> or <a href="#windows">Windows</a>.  Before installing from source, you may want to review recent <a href="/changelog" rel="noopener noreferrer" target="_blank">changes</a> to the ImageMagick distribution.</p>
+    <h3 class="h6 fw-bold mt-4 mb-2">1. Obtain the Source Code</h3>
+    <p>Clone the latest release from the official repository:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-{{ site.magick.version }}</code></pre>
+      </div>
+    </div>
+    <p class="small text-muted">
+      Alternatively, download {% include download-link.html variant="source" %} from <a href="https://github.com/ImageMagick/ImageMagick/releases">GitHub</a> and verify its distribution against its {% include provenance-link.html %}.
+    </p>
 
-<p>The authoritative source code repository is <a href="https://github.com/ImageMagick">https://github.com/ImageMagick</a>. </p>
-
-<h2><a class="anchor" id="linux"></a>Install from Linux Source</h2>
-
-<p>ImageMagick builds on a variety of Linux and Linux-like operating systems including Linux, Solaris, FreeBSD, macOS, and others.  A compiler is required and fortunately almost all modern Linux systems have one.</p>
-
-<p>Clone the latest release from the source repository:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>git clone --depth 1 --branch [latest_release_tag] https://github.com/ImageMagick/ImageMagick.git ImageMagick-{{ site.magick.version }}</code></pre>
-
-<p>Or download {% include download-link.html variant="source" %} from <a href="https://github.com/ImageMagick/ImageMagick/releases">GitHub</a> and verify the distribution against its {% include provenance-link.html %}.</p>
-
-<p>Next configure and compile ImageMagick.  Note the <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required so that ImageMagick can find certain optional delegate libraries on your system.  To configure, type:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cd ImageMagick-{{ site.magick.version }}
+    <h3 class="h6 fw-bold mt-4 mb-2">2. Configure and Compile</h3>
+    <p>
+      The <a href="https://en.wikipedia.org/wiki/Pkg-config">pkg-config</a> script is required to locate optional delegate libraries. Configure and compile by running:
+    </p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>cd ImageMagick-{{ site.magick.version }}
 
 ./configure
 make</code></pre>
+      </div>
+    </div>
+    <p class="small text-muted">If the build fails, try running <code>gmake</code> instead. For advanced users, a modules build is recommended:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>./configure --with-modules</code></pre>
+      </div>
+    </div>
 
-<p>If build fails, try <code>gmake</code> instead.</p>
+    <h3 class="h6 fw-bold mt-4 mb-2">3. Install and Verify</h3>
+    <p>Administrator privileges are required for installation. Run the following commands:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>sudo make install
+sudo ldconfig /usr/local/lib</code></pre>
+      </div>
+    </div>
 
-<p>For advanced users, we recommend a modules build:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>./configure --with-modules</code></pre>
-<p>If ImageMagick configured and compiled without complaint, you are ready to install it on your system.  Administrator privileges are required to install.  To install, type</p>
+    <p>Verify that your installation functions properly:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>/usr/local/bin/magick logo: logo.gif</code></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>sudo make install
-</code></pre>
+    <p>For comprehensive verification, run the validation suite:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>make check</code></pre>
+      </div>
+    </div>
+    <div class="card border-0 bg-body-tertiary shadow-sm mb-3">
+      <div class="card-body">
+        <p class="small text-muted mb-0">
+          <strong>Note:</strong> Ghostscript and FreeType are prerequisites; otherwise, tests involving text annotations and formats like EPS, PS, and PDF will fail. These unit tests require the open security policy to pass.
+        </p>
+      </div>
+    </div>
 
-<p>You may need to configure the dynamic linker run-time bindings:</p>
+    <p class="mt-3">
+      Congratulations! You have a working distribution ready to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> images or use one of the <a href="/develop/">APIs</a>. For advanced questions, non-default installation paths, or troubleshooting, see <a href="/advanced-linux-installation/">Advanced Linux Source Installation</a>.
+    </p>
+  </section>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>sudo ldconfig /usr/local/lib
-</code></pre>
+  <!-- Windows Source Installation Section -->
+  <section id="windows" class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">Install from Windows Source</h2>
+    <div class="card border-0 bg-warning-subtle text-warning-emphasis shadow-sm mb-3">
+      <div class="card-body py-2 small">
+        <strong>Recommendation:</strong> Uninstall any existing versions of ImageMagick first to avoid command conflicts with old binaries.
+      </div>
+    </div>
+    <p>
+      Building under Windows requires a modern version of Microsoft Visual Studio IDE (though Borland C++ has also been reported to work). If you do not have a compiler, you can install a pre-built <a href="/download/">binary release</a> instead.
+    </p>
 
-<p>Finally, verify the ImageMagick install worked properly, type</p>
+    <h3 class="h6 fw-bold mt-4 mb-2">1. Clone or Download the Source</h3>
+    <p>Clone the GitHub repository:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
+      </div>
+    </div>
+    <p>Then run <code>CloneRepositories.cmd</code>, or download <code>ImageMagick-{{ site.magick.version }}.7z</code> from <a href="https://github.com/ImageMagick/ImageMagick/releases">GitHub</a> and verify its provenance:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>unzip ImageMagick-windows.zip</code></pre>
+      </div>
+    </div>
+    <p class="small text-muted">Be sure to unzip into a folder that does not require Administrator privileges so Visual Studio can build the solution successfully.</p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>/usr/local/bin/magick logo: logo.gif
-</code></pre>
+    <h3 class="h6 fw-bold mt-4 mb-2">2. Compile via Visual Studio</h3>
+    <p>
+      Launch Visual Studio, choose <strong>File &gt; Open &gt; Project/Solution</strong>, open <code>configure.sln</code> located in the <code>ImageMagick-{{ site.magick.lib_version }}/VisualMagick/configure</code> folder, and build the solution.
+    </p>
 
-<p>For a more comprehensive test, run the ImageMagick validation suite. Ghostscript and Freetype are prerequisites, otherwise expect the EPS, PS, PDF and text annotations tests to fail.</p>
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm" src="/image/configure.jpg" alt="[configure]" style="max-height: 350px;" />
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>make check
-</code></pre>
+    <p>
+      Run the resulting configuration utility, select the multi-threaded static build option by clicking <strong>Next</strong>, and click <strong>Finish</strong>. Then, open the newly created <code>VisualStaticMT</code> workspace in <code>ImageMagick-{{ site.magick.lib_version }}/VisualMagick/</code> and build the complete solution.
+    </p>
+    <p class="small text-muted">You can also execute <code>configure.exe</code> from the command line; examples are available in <a href="https://github.com/ImageMagick/ImageMagick/blob/18e15da2dc6ceae05e95077f85e9d67dac31c5d8/.github/workflows/release.yml#L212">our GitHub actions build</a>.</p>
 
-<p>Ghostscript and Freetype are prerequisites, otherwise certain unit tests that render text and the EPS, PS, and PDF formats will likely fail. These unit tests require the open security policy to pass.</p>
-
-<p>Congratulations, you have a working ImageMagick distribution and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
-
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you don't have administrator privileges and what if you don't want to install ImageMagick in the default <code>/../usr/local</code> folder?  You will find the answer to these questions, and more, in <a href="/advanced-linux-installation/">Advanced Linux Source Installation</a>.</p>
-
-<h2><a class="anchor" id="windows"></a>Install from Windows Source</h2>
-<p>We recommend you first uninstall an existing ImageMagick, else you might be surprised that your <samp>$ magick</samp> commands go to the old version.<p>
-<p>Building ImageMagick source for Windows can be done with a modern version of Microsoft Visual Studio IDE.  Users have reported success with the Borland C++ compiler as well.  If you don't have a compiler you can still install a self-installing <a href="/download/">binary release</a>.</p>
-
-<p>Clone the Github repo:<p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>git clone https://github.com/ImageMagick/ImageMagick-Windows.git ImageMagick-Windows-7</code></pre>
-
-
-<p>and run <code>CloneRepositories.cmd</code>. Or download ImageMagick-{{ site.magick.version }}.7z from <a href="https://github.com/ImageMagick/ImageMagick/releases">GitHub</a> and verify the distribution against its {% include provenance-link.html %}.</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>unzip ImageMagick-windows.zip</code></pre>
-<p> Unzip in a folder that does not need Admin permissions, otherwise Visual Studio will not be able to build the solution.<p>
-<p>Next, launch your Visual Studio IDE and choose <code>Open->Project</code>.  Select the configure workspace from the <code>ImageMagick-{{ site.magick.lib_version }}/VisualMagick/configure</code> folder and open configure.sln.  Choose <code>Build->Build Solution</code>
-to compile the program and on completion run the program.</p>
-
-<ul><img class="img-fluid img-thumbnail" src="/image/configure.jpg" alt="[configure]" /></ul>
-
-<p>Press <code>Next</code> and click on the multi-threaded static build.  Now press, on <code>Next</code> twice and finally <code>Finish</code>.  The configuration utility just created a workspace required to build ImageMagick from source.  Choose <code>Open->Project</code> and select the VisualStaticMT workspace from the <code>ImageMagick-{{ site.magick.lib_version }}/VisualMagick/</code>  folder.  Finally, choose <code>Build->Build Solution</code> to compile and build the ImageMagick distribution.</p>
-
-<p>The configure.exe utility can also be run on the command line instead of through the GUI wizard. You can see an example in <a href="https://github.com/ImageMagick/ImageMagick/blob/18e15da2dc6ceae05e95077f85e9d67dac31c5d8/.github/workflows/release.yml#L212">our GitHub actions build</a>.</p>
-
-<p>To verify ImageMagick is working properly, launch a MS-DOS Command Prompt window and type</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>cd ImageMagick-{{ site.magick.version }}
-
+    <h3 class="h6 fw-bold mt-4 mb-2">3. Verify the Installation</h3>
+    <p>Open an MS-DOS Command Prompt and run:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>cd ImageMagick-{{ site.magick.version }}
 magick logo: image.jpg</code></pre>
+      </div>
+    </div>
+    <p class="small text-muted">Consider adding the full path to <code>VisualMagick\bin</code> to your system PATH environment variable to call <code>magick</code> from any directory. For a thorough test, run the validation suite:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><code>validate</code></pre>
+      </div>
+    </div>
 
-<p>You may want to add the full path to VisualMagick\bin for your environment PATH variable, so you can call <code>magick</code> from any directory.<p>
-<p>For a more comprehensive test, run the ImageMagick validation suite:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>validate
-</code></pre>
-
-<p>Congratulations, you have a working ImageMagick distribution under Windows and you are ready to use ImageMagick to <a href="https://usage.imagemagick.org/">convert, compose, or edit</a> your images or perhaps you'll want to use one of the <a href="/develop/">Application Program Interfaces</a> for C, C++, Perl, and others.</p>
-
-<p>The above instructions will satisfy a great number of ImageMagick users, but we suspect a few will have additional questions or problems to consider.  For example, what does one do if ImageMagick fails to configure or compile?  Or what if you want to install ImageMagick in a place other than the <code>ImageMagick-{{ site.magick.lib_version }}/VisualMagick/bin</code> folder?  You will find the answer to these questions, and more, in <a href="/advanced-windows-installation/">Advanced Windows Source Installation</a>.</p>
-
+    <p class="mt-3">
+      Congratulations! You have a working Windows source build ready for use. For custom installation paths or troubleshooting compilation errors, consult <a href="/advanced-windows-installation/">Advanced Windows Source Installation</a>.
+    </p>
+  </section>
 </div>

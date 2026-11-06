@@ -12,4 +12,4 @@
   {% assign link_text = filename %}
 {% endif %}
 
-<a href="{{ release_url }}{{ filename }}">{{ link_text }}</a>
+<a href="{{ release_url }}{{ filename }}"{% if include.type == "button" %} class="btn btn-primary btn-sm"{% endif %}>{{ link_text }}</a>

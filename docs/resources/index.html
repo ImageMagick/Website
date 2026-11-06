@@ -2,299 +2,443 @@
 title: "Resources"
 description: "Learn about ImageMagick resources including configuration files, modules, fonts, and environment variables. Understand how XML files map formats, colors, delegates, locales, logging, and MIME types to support image processing."
 ---
-<div>
-<p class="text-center"><a href="#configure">Configuration Files</a> • <a href="#modules">Modules</a> • <a href="#fonts">Fonts</a> • <a href="#environment">Environment Variables</a></p>
 
-<p class="lead">ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.</p>
+<div class="container py-4">
+  <!-- Page Quick Nav Pills -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap justify-content-center gap-2 p-2 bg-body-tertiary rounded-3 border">
+        <a href="#configure" class="btn btn-sm btn-outline-secondary border-0">Configuration Files</a>
+        <a href="#modules" class="btn btn-sm btn-outline-secondary border-0">Modules</a>
+        <a href="#fonts" class="btn btn-sm btn-outline-secondary border-0">Fonts</a>
+        <a href="#environment" class="btn btn-sm btn-outline-secondary border-0">Environment Variables</a>
+      </div>
+    </div>
+  </div>
 
-<h2><a class="anchor" id="configure"></a>Configuration Files</h2>
+  <!-- Lead Description -->
+  <div class="row mb-5">
+    <div class="col-lg-10 mx-auto text-center">
+      <p class="lead text-body-secondary">
+        ImageMagick depends on a number of external resources including configuration files, loadable modules, fonts, and environment variables.
+      </p>
+    </div>
+  </div>
 
-<p>ImageMagick depends on a number of external configuration files detailed here:</p>
+  <!-- Configuration Files Section -->
+  <section id="configure" class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-file-earmark-code fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Configuration Files</h2>
+    </div>
+    
+    <p class="text-body-secondary mb-4">
+      ImageMagick depends on a number of external configuration files detailed here:
+    </p>
 
-<dl class="row">
+    <div class="row g-4 mb-4">
+      <!-- colors.xml -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/colors.xml" class="text-decoration-none">colors.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Associate a color name with its red, green, blue, and alpha intensities. Many command line options require a <a href="/color/">color parameter</a>. It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).
+            </p>
+          </div>
+        </div>
+      </div>
 
-<dt class="col-md-4"><a href="/source/colors.xml">colors.xml</a></dt>
-  <dd class="col-md-8">Associate a color name with its red, green, blue, and alpha intensities.
+      <!-- configure.xml -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/configure.xml" class="text-decoration-none" id="configure.xml">configure.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Set ImageMagick build parameters and system-wide environment variables (e.g. <code>MAGICK_TEMPORARY_PATH</code>), including version, release date, delegate libraries, and quantum depth.
+            </p>
+          </div>
+        </div>
+      </div>
 
-  A number of command line options require a <a href="/color/">color parameter</a>.  It is often convenient to refer to a color by name (e.g. white) rather than by hex value (e.g. #fff).  This file maps a color name to its equivalent red, green, blue, and alpha intensities (e.g. for white, red = 255, green = 255, blue = 255, and alpha = 0).
-  </dd>
+      <!-- delegates.xml -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/delegates.xml" class="text-decoration-none">delegates.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Associate delegate programs with certain image formats, such as <a href="https://www.darktable.org/" target="_blank" rel="noopener">darktable</a> for raw camera formats or <a href="http://www.cs.wisc.edu/~ghost/" target="_blank" rel="noopener">Ghostscript</a> for Postscript images.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<dt class="col-md-4"><a class="anchor" id="configure.xml"/><a href="/source/configure.xml">configure.xml</a></dt>
-  <dd class="col-md-8">Set ImageMagick build parameters and system-wide environment variables (e.g. MAGICK_TEMPORARY_PATH).
-  As ImageMagick is built, a number of build parameters are saved to this configuration file.  They include the version, release date, dependent delegate libraries, and quantum depth among others.
-  </dd>
+      <!-- locale files -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary">Locale Files (<a href="/source/english.xml">english.xml</a>, <a href="/source/francais.xml">francais.xml</a>, <a href="/source/locale.xml">locale.xml</a>)</h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Associate message tags (such as <var>FileNotFound</var> or <var>MemoryAllocationFailed</var>) with local translations. Currently available in English and French.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<dt class="col-md-4"><a href="/source/delegates.xml">delegates.xml</a></dt>
-  <dd class="col-md-8">Associate delegate programs with certain image formats.
+      <!-- log.xml -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/log.xml" class="text-decoration-none">log.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Configure logging parameters. Control how informational or debugging statements appear and where they are posted.
+            </p>
+          </div>
+        </div>
+      </div>
 
-  ImageMagick relies on a number of delegate programs to support certain image formats such as <a href="https://www.darktable.org/">darktable</a> to read raw camera formats or <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> to read Postscript images.  Use this configuration file to map an input or output format to an external delegate program.
-  </dd>
+      <!-- mime.xml -->
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/mime.xml" class="text-decoration-none">mime.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Associate internet media types with unique identifiers and filename patterns (e.g. <code>*.cdr</code>) to quickly determine file formats or data streams.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<dt class="col-md-4"><a href="/source/english.xml">english.xml</a></dt>
-  <dd class="col-md-8">Associate message tags with English translations.</dd>
+      <!-- policy.xml -->
+      <div class="col-12">
+        <div class="card im-card p-4">
+          <h5 class="card-title fw-bold font-mono text-primary"><a href="/source/policy-open.xml" class="text-decoration-none">policy.xml</a></h5>
+          <p class="card-text small text-body-secondary mt-2">
+            Configure ImageMagick <a href="/security-policy/">security policies</a> to restrict coders, delegates, filters, or file paths, and set resource limits for multi-user servers.
+          </p>
+          <div class="mt-3">
+            <p class="small fw-semibold text-body mb-2">Example Resource Limit Policies:</p>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="p-2 bg-body-tertiary rounded border font-mono small">
+                  &lt;policy domain="resource" name="area" value="100MP"/&gt;
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-2 bg-body-tertiary rounded border font-mono small">
+                  &lt;policy domain="resource" name="width" value="8KP"/&gt;
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-2 bg-body-tertiary rounded border font-mono small">
+                  &lt;policy domain="resource" name="time" value="300"/&gt;
+                </div>
+              </div>
+            </div>
+            <p class="small text-body-secondary mt-2 mb-0">
+              Memory, map, and disk arguments support SI prefixes (e.g. <code>100MB</code>). Policies represent maximum limits per ImageMagick instance.
+            </p>
+          </div>
+        </div>
+      </div>
 
-<dt class="col-md-4"><a href="/source/francais.xml">francais.xml</a></dt>
-  <dd class="col-md-8">Associate message tags with French translations.  </dd>
+      <!-- other xml files -->
+      <div class="col-md-4">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary fs-6"><a href="/source/quantization-table.xml" class="text-decoration-none">quantization-table.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Custom JPEG quantization tables. Activate with <code>-define:q-table=quantization-table.xml</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary fs-6"><a href="/source/thresholds.xml" class="text-decoration-none">thresholds.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Set threshold maps for ordered posterized dither.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary fs-6"><a href="/source/type.xml" class="text-decoration-none" id="type.xml">type.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Configure font name, family, foundry, style, format, metrics, and glyphs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary fs-6"><a href="/source/type-ghostscript.xml" class="text-decoration-none">type-ghostscript.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Configure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> fonts accessible within ImageMagick.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card im-card h-100 p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold font-mono text-primary fs-6"><a href="/source/type-windows.xml" class="text-decoration-none">type-windows.xml</a></h5>
+            <p class="card-text small text-body-secondary mt-2">
+              Associate names with Windows font glyphs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<dt class="col-md-4"><a href="/source/locale.xml">locale.xml</a></dt>
-  <dd class="col-md-8">Associate message tags with a  translation for your locale.
+    <!-- Search Paths Card -->
+    <div class="card im-card p-4 bg-body-tertiary">
+      <h5 class="fw-bold mb-3">Configuration File Search Order</h5>
+      <p class="small text-body-secondary mb-3">
+        Under Linux and Unix operating systems, ImageMagick searches directories in this order:
+      </p>
+      <div class="p-3 bg-body rounded border font-mono small mb-3">
+        $MAGICK_CONFIGURE_PATH<br>
+        $PREFIX/etc/ImageMagick-7<br>
+        $PREFIX/share/ImageMagick-7<br>
+        $XDG_CACHE_HOME/ImageMagick<br>
+        $HOME/.config/ImageMagick<br>
+        &lt;<var>client path</var>&gt;/etc/ImageMagick
+      </div>
+      <p class="small text-body-secondary mb-3">
+        For Linux pre-compiled uninstalled binary distributions:
+      </p>
+      <div class="p-3 bg-body rounded border font-mono small mb-3">
+        $MAGICK_CONFIGURE_PATH<br>
+        $MAGICK_HOME/etc/ImageMagick-7<br>
+        $MAGICK_HOME/share/ImageMagick-7<br>
+        $PREFIX/share/ImageMagick-7<br>
+        $XDG_CACHE_HOME/ImageMagick<br>
+        $HOME/.config/ImageMagick/<br>
+        &lt;<var>client path</var>&gt;/etc/ImageMagick<br>
+        &lt;<var>current directory</var>&gt;
+      </div>
+      <p class="small text-body-secondary mb-3">
+        Under Windows:
+      </p>
+      <div class="p-3 bg-body rounded border font-mono small mb-3">
+        $MAGICK_CONFIGURE_PATH<br>
+        &lt;<var>windows registry</var>&gt;<br>
+        $PREFIX/config<br>
+        $USERPROFILE/.config/ImageMagick<br>
+        &lt;<var>client path</var>&gt;
+      </div>
+      <p class="small text-body-secondary mb-0">
+        If a configuration file cannot be found, ImageMagick relies on built-in default values.
+      </p>
+    </div>
+  </section>
 
-  ImageMagick has a number of informational, warning, and error messages that are represented as tags.  Tags are short descriptions of a message such as
-  <var>FileNotFound</var> or <var>MemoryAllocationFailed</var>.  This configuration file lists locales that have a translation for each tag recognized by ImageMagick.  Currently only English and French translations are available in the <code>english.xml</code> and <code>francais.xml</code> configuration files.
-  </dd>
+  <!-- Modules Section -->
+  <section id="modules" class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-boxes fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Modules</h2>
+    </div>
 
-<dt class="col-md-4"><a href="/source/log.xml">log.xml</a></dt>
-  <dd class="col-md-8">Configure logging parameters.
-  ImageMagick is capable of spewing copious amounts of informational or debugging statements.  Use this file to configure how the information will appear in a log message and where you want the logging messages posted.
-  </dd>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card im-card h-100 p-4">
+          <h5 class="fw-bold text-primary mb-3">Coders</h5>
+          <p class="small text-body-secondary mb-3">
+            An image coder (encoder/decoder) manages a specific format (PNG, GIF, JPEG). Search order:
+          </p>
+          <div class="p-3 bg-body-tertiary rounded border font-mono small">
+            $MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders<br>
+            &lt;<var>client path</var>&gt;/../lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders<br>
+            $MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders<br>
+            $XDG_CACHE_HOME/ImageMagick<br>
+            $HOME/.config/ImageMagick<br>
+            &lt;<var>client path</var>&gt;/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card im-card h-100 p-4">
+          <h5 class="fw-bold text-primary mb-3">Filters</h5>
+          <p class="small text-body-secondary mb-3">
+            Custom image processing algorithm modules. Search order:
+          </p>
+          <div class="p-3 bg-body-tertiary rounded border font-mono small">
+            $MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters<br>
+            &lt;<var>client path</var>&gt;/../lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters<br>
+            $MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters<br>
+            $XDG_CACHE_HOME/ImageMagick<br>
+            $HOME/.config/ImageMagick<br>
+            &lt;<var>client path</var>&gt;/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<dt class="col-md-4"><a href="/source/mime.xml">mime.xml</a></dt>
-  <dd class="col-md-8">Associate an internet media type with a unique identifier.
-  Many files and data streams have identifiers that uniquely identify a
-particular internet media type. For example, files in the "Corel Draw
-drawing" format (mime type="application/vnd.corel-draw") are associated with
-the filename pattern <code>*.cdr</code>, and also have an initial string of the
-characters "CDRXvrsn". ImageMagick uses combinations of this information,
-when available, to attempt to quickly determine the internet media type of a
-file or data stream.
-</dd>
+  <!-- Fonts Section -->
+  <section id="fonts" class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-fonts fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Fonts</h2>
+    </div>
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        ImageMagick loads raw TrueType and Postscript font files, searching for <a href="#type.xml">type.xml</a> in this order:
+      </p>
+      <div class="p-3 bg-body-tertiary rounded border font-mono small">
+        $MAGICK_CONFIGURE_PATH<br>
+        $MAGICK_HOME/etc/ImageMagick-{{ site.magick.lib_version }}<br>
+        $MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}<br>
+        $XDG_CACHE_HOME/ImageMagick<br>
+        $HOME/.config/ImageMagick<br>
+        &lt;<var>client path</var>&gt;/etc/ImageMagick<br>
+        $MAGICK_FONT_PATH
+      </div>
+    </div>
+  </section>
 
-<dt class="col-md-4"><a href="/source/policy-open.xml">policy.xml</a></dt>
-  <dd class="col-md-8">Configure ImageMagick <a href="/security-policy/">security policies</a>.
-  By default any coder, delegate, filter, or file path is permitted.  Use a policy to deny access to, for example, the MPEG video delegate, or permit reading images from a file system but deny writing to that same file system.  Or use the resource policy to set resource limits.  Policies are useful for multi-user servers that want to limit the overall impact ImageMagick has on the system.  For example, to limit the maximum image size in memory to 100MP:
+  <!-- Environment Variables Section -->
+  <section id="environment" class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-terminal-dash fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Environment Variables</h2>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="resource" name="area" value="100MP"/></code></pre>
+    <p class="text-body-secondary mb-4">
+      Environment variables recognized by ImageMagick include:
+    </p>
 
-Any image larger than this area limit is cached to disk rather than memory.
+    <div class="card im-card overflow-hidden">
+      <div class="table-responsive" style="max-height: 75svh;">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" style="width: 30%;">Variable</th>
+              <th scope="col" style="width: 70%;">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">HOME</td>
+              <td class="small text-body-secondary">Set path to search for configuration files in <code>$HOME/.config/ImageMagick</code> if the directory exists.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">LD_LIBRARY_PATH</td>
+              <td class="small text-body-secondary">Set path to the ImageMagick shareable libraries and other dependent libraries.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_AREA_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum <var>width * height</var> of an image residing in pixel cache memory. Exceeding limits caches to disk.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_FILTER_MODULE_PATH</td>
+              <td class="small text-body-secondary">Set search path when searching for filter process modules invoked via <a href="/command-line-options/#process">-process</a>.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_CODER_MODULE_PATH</td>
+              <td class="small text-body-secondary">Set path where ImageMagick locates coder modules to extend supported image formats.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_CONFIGURE_PATH</td>
+              <td class="small text-body-secondary">Set path where ImageMagick locates configuration (.xml) files. Searched before defaults.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_DATE_PRECISION</td>
+              <td class="small text-body-secondary">Set maximum number of characters printed for any timestamp.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_DEBUG</td>
+              <td class="small text-body-secondary">Set debug options. See <a href="/command-line-options/#debug">-debug</a> for a description.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary" id="disk-limit">MAGICK_DISK_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum amount of disk space in bytes permitted for use by the pixel cache.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_ERRORMODE</td>
+              <td class="small text-body-secondary">Set process error mode (Windows only).</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_FILE_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum number of open pixel cache files.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_FONT_PATH</td>
+              <td class="small text-body-secondary">Set path searched for TrueType and Postscript Type1 font files.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_HEIGHT_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum <var>height</var> of an image.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_HOME</td>
+              <td class="small text-body-secondary">Set top-level path of the ImageMagick installation directory for uninstalled builds.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_LIST_LENGTH_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum length of an image sequence.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary" id="map-limit">MAGICK_MAP_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum amount of memory map in bytes to allocate for the pixel cache.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_MEMORY_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum amount of heap memory in bytes to allocate for the pixel cache.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_OCL_DEVICE</td>
+              <td class="small text-body-secondary">Set to <code>off</code> to disable hardware acceleration of accelerated algorithms.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_PRECISION</td>
+              <td class="small text-body-secondary">Set maximum number of significant digits to be printed.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_SHRED_PASSES</td>
+              <td class="small text-body-secondary">Overwrite temporary files with zeros or random data before removal.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_SYNCHRONIZE</td>
+              <td class="small text-body-secondary">Set to "true" to ensure all image data is fully flushed and synchronized to disk.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_TEMPORARY_PATH</td>
+              <td class="small text-body-secondary">Set path to store temporary files.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_THREAD_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum parallel threads for multi-processor systems.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_THROTTLE_LIMIT</td>
+              <td class="small text-body-secondary">Periodically yield the CPU for at least the time specified in milliseconds.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_TIME_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum time in seconds before throwing an exception.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">MAGICK_WIDTH_LIMIT</td>
+              <td class="small text-body-secondary">Set maximum <var>width</var> of an image.</td>
+            </tr>
+            <tr>
+              <td class="font-mono fw-semibold text-primary">SOURCE_DATE_EPOCH</td>
+              <td class="small text-body-secondary">UNIX timestamp defining seconds since <code>01 Jan 1970 00:00:00 UTC</code> for pipeline builds.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-Use <code>width</code> to limit the maximum width of an image in pixels.  Exceed this limit and an exception is thrown and processing stops.
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="resource" name="width" value="8KP"/></code></pre>
-
-To limit the elapsed time of any ImageMagick command to 5 minutes, use this policy:
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>&lt;policy domain="resource" name="time" value="300"/></code></pre>
-For convenience, define arguments for the memory, map, and disk resources with SI prefixes (e.g. 100MB).  In addition, resource policies are maximums for each instance of ImageMagick (e.g. policy memory limit 1GB, the <code>-limit 2GB</code> option exceeds policy maximum so memory limit is 1GB). </dd>
-
-<dt class="col-md-4"><a href="/source/quantization-table.xml">quantization-table.xml</a></dt>
-  <dd class="col-md-8">Custom JPEG quantization tables. Activate with <code>-define:q-table=quantization-table.xml</code>.</dd>
-
-<dt class="col-md-4"><a href="/source/thresholds.xml">thresholds.xml</a></dt>
-  <dd class="col-md-8">Set threshold maps for ordered posterized dither.</dd>
-
-<dt class="col-md-4"><a class="anchor" id="type.xml"></a><a href="/source/type.xml">type.xml</a></dt>
-  <dd class="col-md-8">Configure fonts.
-  Define the font name, family, foundry, style, format, metrics, and glyphs for any font you want to use within ImageMagick.
-  </dd>
-
-<dt class="col-md-4"><a href="/source/type-ghostscript.xml">type-ghostscript.xml</a></dt>
-  <dd class="col-md-8">Configure <a href="http://www.cs.wisc.edu/~ghost/">Ghostscript</a> fonts.
-  The Ghostscript package includes a number of <a href="https://sourceforge.net/projects/gs-fonts/">fonts</a> that can be accessed with ImageMagick.
-  </dd>
-
-<dt class="col-md-4"><a href="/source/type-windows.xml">type-windows.xml</a></dt>
-  <dd class="col-md-8">Associate names with Windows font glyphs.</dd>
-</dl>
-
-<p>Under Linux and Linux-like operating systems, ImageMagick searches for each of the configuration files listed above by looking in the locations given below, in order, and loads them if found:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
-$PREFIX/etc/ImageMagick-7
-$PREFIX/share/ImageMagick-7
-$XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/etc/ImageMagick</code></pre>
-
-<p>The environmental variable $PREFIX is the default install path (e.g. <code>/usr/local</code>). The <var>client path</var> is the execution path of your ImageMagick client (e.g. <code>/usr/local</code>) .</p>
-
-<p>For the Linux or Linux pre-compiled uninstalled binary distributions, the configuration load order is:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick-7
-$MAGICK_HOME/share/ImageMagick-7
-$PREFIX/share/ImageMagick-7
-$XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick/
-&lt;<var>client path</var>&gt;/etc/ImageMagick
-&lt;<var>current directory</var>&gt;</code></pre>
-
-<p>Under Windows, ImageMagick searches for these configuration files in the following order, and loads them if found:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
-&lt;<var>windows registry</var>&gt;
-$PREFIX/config
-$USERPROFILE/.config/ImageMagick
-&lt;<var>client path</var>&gt;</code></pre>
-
-<p>Above, $PREFIX is the default install path, typically <code>c:\\Program Files\\ImageMagick-{{ site.magick.lib_version }}</code>.</p>
-
-<p>For an uninstalled Windows installation, the configuration load order is:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
-$MAGICK_HOME
-$USERPROFILE/.config/ImageMagick
-<var>client path</var>
-&lt;<var>current directory</var>&gt;</code></pre>
-
-<p>If a configuration file cannot not be found, ImageMagick relies on built-in default values.</p>
-
-<h2><a class="anchor" id="modules"></a>Modules</h2>
-
-<h4>Coders</h4>
-<p>An image coder (i.e. encoder / decoder) is responsible for registering, optionally classifying, optionally reading, optionally writing, and unregistering one image format (e.g. PNG, GIF, JPEG, etc.).  ImageMagick searches for coders in the following order and it uses the first match found:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders
-$MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders
-$MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders
-$XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/coders</code></pre>
-
-<h4>Filters</h4>
-<p>ImageMagick provides a convenient mechanism for adding your own custom image processing algorithms.  ImageMagick searches for filters in the following order and it uses the first match found:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters
-&lt;<var>client path</var>&gt;/../lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters
-$MAGICK_HOME/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters
-$MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters
-$XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/lib/ImageMagick-{{ site.magick.lib_version }}/modules-Q16/filters</code></pre>
-
-<h2><a class="anchor" id="fonts"></a>Fonts</h2>
-
-<p>ImageMagick is able to load raw TrueType and Postscript font files.  It searches for the font configuration file, <a href="#type.xml">type.xml</a>, in the following order, and loads them if found:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>$MAGICK_CONFIGURE_PATH
-$MAGICK_HOME/etc/ImageMagick/-{{ site.magick.lib_version }}
-
-$MAGICK_HOME/share/ImageMagick-{{ site.magick.lib_version }}
-
-$XDG_CACHE_HOME/ImageMagick
-$HOME/.config/ImageMagick
-&lt;<var>client path</var>&gt;/etc/ImageMagick
-$MAGICK_FONT_PATH</code></pre>
-
-<h2><a class="anchor" id="environment"></a>Environment Variables</h2>
-
-<p>Environment variables recognized by ImageMagick include:</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:30%">
-    <col style="width:70%">
-  </colgroup>
-  <tr>
-    <td>HOME</td>
-    <td>Set path to search for configuration files in <code>$HOME/.config/ImageMagick</code> if the directory exists.</td>
-  </tr>
-  <tr>
-    <td>LD_LIBRARY_PATH</td>
-    <td>Set path to the ImageMagick shareable libraries and other dependent libraries.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_AREA_LIMIT</td>
-    <td>Set the maximum <var>width * height</var> of an image that can reside in the pixel cache memory.  Images that exceed the area limit are cached to disk (see <a href="#disk-limit">MAGICK_DISK_LIMIT</a>) and optionally memory-mapped.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_FILTER_MODULE_PATH</td>
-    <td>Set search path to use when searching for filter process modules (invoked via  <a href="/command-line-options/#process">-process</a>).  This path permits the user to extend ImageMagick's image processing functionality by adding loadable modules to a preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_CODER_MODULE_PATH</td>
-    <td>Set path where ImageMagick can locate its coder modules.  This path permits the user to arbitrarily extend the image formats supported by ImageMagick by adding loadable coder modules from an preferred location rather than copying them into the ImageMagick installation directory.  The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#modules">default search path</a>.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_CONFIGURE_PATH</td>
-    <td>Set path where ImageMagick can locate its configuration files.  Use this search path to search for configuration (.xml) files. The formatting of the search path is similar to operating system search paths (i.e. colon delimited for Linux, and semi-colon delimited for Microsoft Windows). This user specified search path is searched before trying the <a href="#configure">default search path</a>.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_DATE_PRECISION</td>
-    <td>Set the maximum number of characters printed for any timestamp.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_DEBUG</td>
-    <td>Set debug options.  See <a href="/command-line-options/#debug">-debug</a> for a description of debugging options.</td>
-  </tr>
-  <tr>
-    <td><a class="anchor" id="disk-limit"></a>MAGICK_DISK_LIMIT</td>
-    <td>Set maximum amount of disk space in bytes permitted for use by the pixel cache.  When this limit is exceeded, the pixel cache is not be created and an error message is returned.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_ERRORMODE</td>
-    <td>Set the process error mode (Windows only).  A typical use might be a value of 1 to prevent error mode dialogs from displaying a message box and hanging the application.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_FILE_LIMIT</td>
-    <td>Set maximum number of open pixel cache files.  When this limit is exceeded, any subsequent pixels cached to disk are closed and reopened on demand.  This behavior permits a large number of images to be accessed simultaneously on disk, but with a speed penalty due to repeated open/close calls.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_FONT_PATH</td>
-    <td>Set path ImageMagick searches for TrueType and Postscript Type1 font files.  This path is only consulted if a particular font file is not found in the current directory.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_HEIGHT_LIMIT</td>
-    <td>Set the maximum <var>height</var> of an image.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_HOME</td>
-    <td>Set the path at the top of ImageMagick installation directory.  This path is consulted by <var>uninstalled</var> builds of ImageMagick which do not have their location hard-coded or set by an installer.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_LIST_LENGTH_LIMIT</td>
-    <td>Set the maximum length of an image sequence.</td>
-  </tr>
-  <tr>
-    <td><a class="anchor" id="map-limit"></a>MAGICK_MAP_LIMIT</td>
-    <td>Set maximum amount of memory map in bytes to allocate for the pixel cache.  When this limit is exceeded, the image pixels are cached to disk (see MAGICK_DISK_LIMIT).</td>
-  </tr>
-  <tr>
-    <td>MAGICK_MEMORY_LIMIT</td>
-    <td>Set maximum amount of memory in bytes to allocate for the pixel cache from the heap.  When this limit is exceeded, the image pixels are cached to memory-mapped disk (see <a href="#map-limit">MAGICK_MAP_LIMIT</a>).</td>
-  </tr>
-  <tr>
-    <td>MAGICK_OCL_DEVICE</td>
-    <td>Set to <code>off</code> to disable hardware acceleration of certain accelerated algorithms (e.g. blur, convolve, etc.).</td>
-  </tr>
-  <tr>
-    <td>MAGICK_PRECISION</td>
-    <td>Set the maximum number of significant digits to be printed.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_SHRED_PASSES</td>
-    <td>If you want to keep the temporary files ImageMagick creates private, overwrite them with zeros or random data before they are removed.  On the first pass, the file is zeroed.  For subsequent passes, random data is written.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_SYNCHRONIZE</td>
-    <td>Set to "true" to ensure all image data is fully flushed and synchronized to disk. There is a performance penalty, however, the benefits include ensuring a valid image file in the event of a system crash and early reporting if there is not enough disk space for the image pixel cache.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_TEMPORARY_PATH</td>
-    <td>Set path to store temporary files.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_THREAD_LIMIT</td>
-    <td>Set maximum parallel threads.  Many ImageMagick algorithms run in parallel on multi-processor systems.  Use this environment variable to set the maximum number of threads that are permitted to run in parallel.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_THROTTLE_LIMIT</td>
-    <td>Periodically yield the CPU for at least the time specified in milliseconds.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_TIME_LIMIT</td>
-    <td>Set maximum time in seconds.  When this limit is exceeded, an exception is thrown and processing stops.</td>
-  </tr>
-  <tr>
-    <td>MAGICK_WIDTH_LIMIT</td>
-    <td>Set the maximum <var>width</var> of an image.</td>
-  </tr>
-  <tr>
-    <td>SOURCE_DATE_EPOCH</td>
-    <td>A UNIX timestamp, defined as the number of seconds, excluding leap seconds, since <code>01 Jan 1970 00:00:00 UTC</code>.  Special-purpose setting for pipeline builds.  This setting disables the time-to-live settings.</td>
-  </tr>
-</table></div>
-
-<p>Define arguments for the <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MEMORY_LIMIT</code> environment variables with SI prefixes (e.g. <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code> and <code>MAGICK_AREA_LIMIT</code> accepts pixel suffixes such as MP for mega-pixels (e.g. 100MP).  Note, you can restrict limits relative to any <a href="/security-policy/">security policies</a>, but you cannot relax them.</p>
-
+    <p class="small text-body-secondary mt-3">
+      Define arguments for <code>MAGICK_MEMORY_LIMIT</code>, <code>MAGICK_DISK_LIMIT</code>, and <code>MAGICK_MAP_LIMIT</code> with SI prefixes (e.g. <code>100MB</code>). <code>MAGICK_WIDTH_LIMIT</code>, <code>MAGICK_HEIGHT_LIMIT</code>, and <code>MAGICK_AREA_LIMIT</code> accept pixel suffixes such as MP for mega-pixels (e.g. <code>100MP</code>). Limits can restrict security policies, but cannot relax them.
+    </p>
+  </section>
 </div>

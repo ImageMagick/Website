@@ -1,61 +1,128 @@
 ---
 title: "Convex Hull"
+description: "Learn how ImageMagick computes convex hulls, minimum bounding boxes, and automatically unrotates images using image geometry properties."
 ---
-<div>
-<p class="text-center"><a href="#about">Convex Hull</a> • <a href="#box">Minimum Bounding Box</a> • <a href="#unrotate">Unrotate an Image</a></p>
 
-<p>The convex hull is the is the smallest area convex polygon containing the set of points inside it. The convex hull may be visualized as the shape enclosed by a rubber band stretched around the set of points.</p>
+<div class="container-fluid px-0">
+  <!-- Quick Navigation & Lead Introduction -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex flex-wrap gap-2 pt-2 pb-3 border-bottom mb-3">
+        <a href="#about" class="btn btn-outline-secondary btn-sm">Convex Hull</a>
+        <a href="#box" class="btn btn-outline-secondary btn-sm">Minimum Bounding Box</a>
+        <a href="#unrotate" class="btn btn-outline-secondary btn-sm">Unrotate an Image</a>
+      </div>
+      <p class="lead text-body-secondary" id="about">
+        The convex hull is the smallest area convex polygon containing the set of points inside it. It may be visualized as the shape enclosed by a rubber band stretched around the set of points.
+      </p>
+      <p class="text-muted small">
+        The convex-hull string format returns a list of <em>x</em>,<em>y</em> coordinates of the vertices of the polygon containing all non-black pixels within it.
+      </p>
+    </div>
+  </div>
 
-<p>The convex-hull string format returns a list of x,y coordinates of the vertices of the convex-hull polygon containing all the non-black pixels within it.</p>
+  <!-- Convex Hull Syntax & Basics -->
+  <section class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Convex Hull Format &amp; Options</h2>
+    
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:</samp></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick [-fuzz <var>value</var>%] [-background <var>background-color</var>] -format "%[convex-hull]" info:</samp> </pre>
+    <p>
+      Use <code>%[convex-hull:extreme-points]</code> to return only the top, right, bottom, and left extreme points. The string format is sensitive to an optional <code>-fuzz</code> value and an optional background color specified by the define. The command automatically finds the background color according to the fuzz value unless the background color is explicitly defined. The fuzz value defaults to 0 when not specified.
+    </p>
 
-<p>Use <code>%[convex-hull:extreme-points]</code> to only return the top, right, bottom, and left extreme points.</p>
+    <h3 class="h5 mt-4 mb-3">Example 1: White Rectangle</h3>
+    <p>Consider the following white rectangle on a black background:</p>
+    
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm border" src="/image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" />
+    </div>
 
-<p>where the string format is sensitive to an optional <code>-fuzz</code> value and to an optional background color specified by the define. The command above will find the background color automatically according to the fuzz value unless the background color is defined. The fuzz value defaults to 0 when not specified.</p>
+    <p>The convex hull set of points is computed as follows:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary small"><code>$ magick rect.png -format "%[convex-hull]" info:
+190,121 193,122 281,154 377,189 378,190 377,193 345,281 310,377 309,378 306,377 218,345 122,310 121,309 122,306 154,218 189,122 190,121</code></pre>
+      </div>
+    </div>
 
-<p>For example, consider the following white rectangle on a black background:</p>
+    <p>The convex hull can also be drawn as a polygon (filled or unfilled) using <code>-draw</code>:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick rect.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</samp></pre>
+      </div>
+    </div>
 
-<ul><img class="img-fluid img-thumbnail" src="/image/convex-hull.png" alt="[Convex Hull]" width="250" height="250" name="convert-hull" /></ul>
+    <h3 class="h5 mt-4 mb-3">Example 2: Non-Convex Shapes</h3>
+    <p>Here is an example using a non-convex shaped image on a black background:</p>
+    
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm border" src="/image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" />
+    </div>
 
-<p>The convex hull set of points may be computed as:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick blocks_black.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</samp></pre>
+      </div>
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rect.png -format "%[convex-hull]" info:
-190,121 193,122 281,154 377,189 378,190 377,193 345,281 310,377 309,378 306,377 218,345 122,310 121,309 122,306 154,218 189,122 190,121
-</samp></pre>
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm border" src="/image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" />
+    </div>
 
-<p>The convex hull may also be drawn as a polygon (filled or unfilled) using <code>-draw</code> as follows:</p>
+    <h3 class="h5 mt-4 mb-3">Example 3: Non-Constant Background</h3>
+    <p>Finally, here is an example with a non-constant, non-black background using <code>-fuzz</code> to determine the background color:</p>
+    
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm border" src="/image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" />
+    </div>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick rect.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</samp></pre>
+    <p>Highlighting the convex hull of the image foreground object:</p>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick barn_rot20.png -fuzz 10% -set hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</samp></pre>
+      </div>
+    </div>
 
-<p>Here is an example using a non-convex shaped image on a black background:</p>
+    <div class="text-center my-3">
+      <img class="img-fluid img-thumbnail rounded shadow-sm border" src="/image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" />
+    </div>
+  </section>
 
-<ul><img class="img-fluid img-thumbnail" src="/image/convex-hull-blocks.png" alt="[Convex Hull Blocks]" width="128" height="128" name="convert-hull-blocks" /></ul>
+  <!-- Minimum Bounding Box Section -->
+  <section id="box" class="mb-5">
+    <h2 class="h4 pb-2 border-bottom mb-3">Minimum Bounding Box</h2>
+    <p>
+      Similar to the convex hull of foreground objects, the minimum bounding box provides bounding geometry. Use <code>%[minimum-bounding-box]</code> to return the points making up the bounding box. Additionally, properties such as <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, and <code>minimum-bounding-box:angle</code> are set.
+    </p>
 
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick blocks_black.png -set option:hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" blocks_hull.png</samp></pre>
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick barn_rot20.png -fuzz 10% -background gray25 -set MBR "%[minimum-bounding-box]" -fill none -stroke red -strokewidth 1 -draw "polygon %[MBR]" barn-mbr.png</samp></pre>
+      </div>
+    </div>
+  </section>
 
-<ul><img class="img-fluid img-thumbnail" src="/image/convex-hull-blocks-closure.png" alt="[Convex Hull Blocks Closure]" width="128" height="128" name="convert-hull" /></ul>
+  <!-- Unrotate an Image Section -->
+  <section id="unrotate" class="mb-4">
+    <h2 class="h4 pb-2 border-bottom mb-3">Unrotate an Image</h2>
+    <p>
+      Use <code>%[minimum-bounding-box:unrotate]</code> to correct for rotation in an image. Unless you specify orientation, the unrotate angle properly aligns the image for angles &lt;= 45&deg;; for angles &gt; 45&deg;, it aligns with the incorrect coordinate axis. 
+    </p>
+    <p>
+      Set the correct image orientation using <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to ensure the proper unrotate angle is returned. Like convex-hull, the string format is sensitive to optional <a href="/command-line-options/#fuzz">-fuzz</a> and <a href="/command-line-options/#background">-background</a> values.
+    </p>
 
-<p>Finally, here is an example with a non-constant, non-black background using -fuzz to determine the background color:</p>
+    <p>Since the barn image above is rotated by 20 degrees, here is how we automatically correct for rotation and restore its original landscape orientation:</p>
 
-<ul><img class="img-fluid img-thumbnail" src="/image/convex-hull-barn.jpg" alt="[Convex Hull Barn]" width="250" height="250" name="convert-hull-barn" /></ul>
-
-<p>Now let's highlight the convex hull of the image foreground object:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick barn_rot20.png -fuzz 10% -set hull "%[convex-hull]" -fill none -stroke red -strokewidth 1 -draw "polygon %[hull]" barn_rot20_hull.png</samp></pre>
-
-<ul><img class="img-fluid img-thumbnail" src="/image/convex-hull-barn-closure.jpg" alt="[Convex Hull Barn Closure]" width="250" height="250" name="convert-hull-barn-closure" /></ul>
-
-<h2><a class="anchor" id="box"></a>Minimum Bounding Box</h2>
-<p>Similar to the convex hull of the image foreground object(s), is the minimum bounding box.  Use <code>%[minimum-bounding-box]</code> to return the points that make up the bounding box.  In addition, these properties are set: <code>minimum-bounding-box:area</code>, <code>minimum-bounding-box:width</code>, <code>minimum-bounding-box:height</code>, and <code>minimum-bounding-box:angle</code>.
-
-pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick barn_rot20.png -fuzz 10% -background gray25 -set MBR "%[minimum-bounding-box]" -fill none -stroke red -strokewidth 1 -draw "polygon %[MBR]" barn-mbr.png</samp></pre>
-
-<h2><a class="anchor" id="unrotate"></a>Unrotate an Image</h2>
-<p>Use <code>%[minimum-bounding-box:unrotate]</code> to correct for any rotation the image may exhibit.  Unless you specify the image orientation, the unrotate angle should properly align the image to the correct coordinate axis for angles &lt;= 45.  For angles > 45, the image will align with the wrong coordinate axis.  Set the correct image orientation to ensure the proper unrotate angle is returned. Use <code>-define minimum-bounding-box:orientation=<em>{landscape,portrait}</em></code> to set the image orientation. Note, that like convex-hull, the string format is sensitive to an optional <a href="/command-line-options/#fuzz">-fuzz</a> value and an optional <a href="/command-line-options/#background">-background</a> color.</p>
-
-<p>The barn image above is rotated by 20 degrees.  Here is how we can automatically correct for the rotation and return it to its original landscape orientation:
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick barn_rotate20.jpg -fuzz 15% -set option:angle "%[minimum-bounding-box:unrotate]" -background gray -rotate "%[angle]" -trim barn_unrotate.jpg</samp></pre>
-</p>
-
+    <div class="card bg-body-tertiary border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <pre class="mb-0 font-monospace text-body-secondary"><samp>$ magick barn_rotate20.jpg -fuzz 15% -set option:angle "%[minimum-bounding-box:unrotate]" -background gray -rotate "%[angle]" -trim barn_unrotate.jpg</samp></pre>
+      </div>
+    </div>
+  </section>
 </div>

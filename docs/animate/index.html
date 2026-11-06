@@ -1,462 +1,459 @@
 ---
 title: "Command-line Tools: Animate"
+description: "Animate an image sequence on any X server with ImageMagick command line tools."
 ---
-<div>
-<p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
-
-<p class="lead">Use the <code>animate</code> program to animate an image sequence on any X server.   See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>animate</code> command or see below for example usages of the command.</p>
-
-<h2><a class="anchor" id="usage"></a>Example Usage</h2>
-
-<p>We list a few examples of the <code>animate</code> command here to illustrate its usefulness and ease of use.  To get started, lets animate an image sequence in the GIF format:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick animate movie.gif </samp></pre>
-
-<p>To animate a directory of JPEG images, use:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick animate *.jpg </samp></pre>
-
-<p>You can find additional examples of using <code>animate</code> in <a href="https://usage.imagemagick.org/basics/#animate">Examples of ImageMagick Usage</a>.</p>
-
-
-<h2><a class="anchor" id="options"></a>Option Summary</h2>
-
-<p>The <code>animate</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <tbody>
-  <colgroup>
-    <col style="width:30%">
-    <col style="width:70%">
-  </colgroup>
-  <tr>
-    <th align="left">Option</th>
-    <th align="left">Description</th>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#alpha">-alpha</a></td>
-    <td>on, activate, off, deactivate, set, opaque, copy",
-transparent, extract, background, or shape the alpha channel</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#antialias">-antialias</a></td>
-    <td>remove pixel-aliasing</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#authenticate">-authenticate <var>value</var></a></td>
-    <td>decrypt image with this password</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#backdrop">-backdrop</a></td>
-    <td>display the image centered on a backdrop</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#background">-background <var>color</var></a></td>
-    <td>background color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#border">-border <var>geometry</var></a></td>
-    <td>surround image with a border of color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#bordercolor">-bordercolor <var>color</var></a></td>
-    <td>border color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#channel">-channel <var>type</var></a></td>
-    <td>apply option to select image channels</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#clip">-clip</a></td>
-    <td>clip along the first path from the 8BIM profile</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#clip-path">-clip-path <var>id</var></a></td>
-    <td>clip along a named path from the 8BIM profile</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#coalesce">-coalesce</a></td>
-    <td>merge a sequence of images</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colormap">-colormap <var>type</var></a></td>
-    <td>Shared or Private</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colors">-colors <var>value</var></a></td>
-    <td>preferred number of colors in the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colorspace">-colorspace <var>type</var></a></td>
-    <td>set image colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#comment">-comment <var>string</var></a></td>
-    <td>annotate image with comment</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#compress">-compress <var>type</var></a></td>
-    <td>image compression type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#contrast">-contrast</a></td>
-    <td>enhance or reduce the image contrast</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#crop">-crop <var>geometry</var></a></td>
-    <td>preferred size and location of the cropped image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#debug">-debug <var>events</var></a></td>
-    <td>animate copious debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#decipher">-decipher <var>filename</var></a></td>
-    <td>convert cipher pixels to plain</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#define">-define <var>format:option</var></a></td>
-    <td>define one or more image format options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#delay">-delay <var>centiseconds</var></a></td>
-    <td>animate the next image after pausing</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#density">-density <var>geometry</var></a></td>
-    <td>horizontal and vertical density of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#depth">-depth <var>value</var></a></td>
-    <td>image depth</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#despeckle">-despeckle</a></td>
-    <td>reduce the speckles within an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#animate">-display <var>server</var></a></td>
-    <td>get image or font from this X server</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#dispose">-dispose <var>method</var></a></td>
-    <td>layer disposal method</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#dither">-dither  <var>method</var></a></td>
-    <td>apply error diffusion to image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#edge">-edge <var>radius</var></a></td>
-    <td>apply a filter to detect edges in the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#endian">-endian <var>type</var></a></td>
-    <td>endianness (MSB or LSB) of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#enhance">-enhance</a></td>
-    <td>apply a digital filter to enhance a noisy image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#extract">-extract <var>geometry</var></a></td>
-    <td>extract area from image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#filter">-filter <var>type</var></a></td>
-    <td>use this filter when resizing an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#flatten">-flatten</a></td>
-    <td>flatten a sequence of images</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#flip">-flip</a></td>
-    <td>flip image in the vertical direction</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#flop">-flop</a></td>
-    <td>flop image in the horizontal direction</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#frame">-frame <var>geometry</var></a></td>
-    <td>surround image with an ornamental border</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#gamma">-gamma <var>value</var></a></td>
-    <td>level of gamma correction</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#geometry">-geometry <var>geometry</var></a></td>
-    <td>preferred size or location of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#gravity">-gravity <var>geometry</var></a></td>
-    <td>horizontal and vertical backdrop placement</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#help">-help</a></td>
-    <td>print program options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#identify">-identify</a></td>
-    <td>identify the format and characteristics of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#immutable">-immutable <var>type</var></a></td>
-    <td>prohibit image edits</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interlace">-interlace <var>type</var></a></td>
-    <td>type of image interlacing scheme</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interpolate">-interpolate <var>method</var></a></td>
-    <td>pixel color interpolation method</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#label">-label <var>name</var></a></td>
-    <td>assign a label to an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#limit">-limit <var>type value</var></a></td>
-    <td>pixel cache resource limit</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#log">-log <var>format</var></a></td>
-    <td>format of debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#map">-map <var>filename</var></a></td>
-    <td>transform image colors to match this set of colors</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#mattecolor">-mattecolor <var>color</var></a></td>
-    <td>frame color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#monitor">-monitor</a></td>
-    <td>monitor progress</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#monochrome">-monochrome</a></td>
-    <td>transform image to black and white</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#negate">-negate</a></td>
-    <td>replace each pixel with its complementary color </td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#page">-page <var>geometry</var></a></td>
-    <td>size and location of an image canvas (setting)</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#profile">-profile <var>filename</var></a></td>
-    <td>add, delete, or apply an image profile</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quantize">-quantize <var>colorspace</var></a></td>
-    <td>reduce image colors in this colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quiet">-quiet</a></td>
-    <td>suppress all warning messages</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#raise">-raise <var>value</var></a></td>
-    <td>lighten/darken image edges to create a 3-D effect</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#regard-warnings">-regard-warnings</a></td>
-    <td>pay attention to warning messages.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#remote">-remote <var>command</var></a></td>
-    <td>execute a command in an remote animate process</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#resample">-resample <var>geometry</var></a></td>
-    <td>change the resolution of an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#resize">-resize <var>geometry</var></a></td>
-    <td>resize the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#respect-parentheses">-respect-parentheses</a></td>
-    <td>settings remain in effect until parenthesis boundary.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#roll">-roll <var>geometry</var></a></td>
-    <td>roll an image vertically or horizontally</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#rotate">-rotate <var>degrees</var></a></td>
-    <td>apply Paeth rotation to the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sample">-sample <var>geometry</var></a></td>
-    <td>scale image with pixel sampling</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sampling-factor">-sampling-factor <var>geometry</var></a></td>
-    <td>horizontal and vertical sampling factor</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#scene">-scene <var>value</var></a></td>
-    <td>image scene number</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#segment">-segment <var>values</var></a></td>
-    <td>segment an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#seed">-seed <var>value</var></a></td>
-    <td>seed a new sequence of pseudo-random numbers</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#set">-set <var>attribute value</var></a></td>
-    <td>set an image attribute</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sharpen">-sharpen <var>geometry</var></a></td>
-    <td>sharpen the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#size">-size <var>geometry</var></a></td>
-    <td>width and height of image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#strip">-strip</a></td>
-    <td>strip image of all profiles and comments</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#thumbnail">-thumbnail <var>geometry</var></a></td>
-    <td>create a thumbnail of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#transparent-color">-transparent-color <var>color</var></a></td>
-    <td>transparent color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#trim">-trim</a></td>
-    <td>trim image edges</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#update">-update <var>seconds</var></a></td>
-    <td>detect when image file is modified and reanimate</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#verbose">-verbose</a></td>
-    <td>print detailed information about the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#version">-version</a></td>
-    <td>print version information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#virtual-pixel">-virtual-pixel <var>method</var></a></td>
-    <td>access method for pixels outside the boundaries of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#visual">-visual</a></td>
-    <td>animate image using this visual type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#write">-window <var>id</var></a></td>
-    <td>animate images to background of this window</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#write">-window-group <var>id</var></a></td>
-    <td>exit program when this window id is destroyed</td>
-  </tr>
-
-  </tbody>
-</table>
+<!-- Page Header & Quick Navigation -->
+<div class="mb-5 border-bottom pb-4">
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+    <a href="#usage" class="btn btn-sm btn-outline-primary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-play-circle-fill"></i> Example Usage
+    </a>
+    <a href="#options" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-list-nested"></i> Option Summary
+    </a>
+  </div>
+  <p class="lead text-body-secondary mb-0">
+    Use the <code class="text-primary fw-semibold">animate</code> program to animate an image sequence on any X server. See <a href="/command-line-processing/" class="text-decoration-none">Command Line Processing</a> for advice on how to structure your <code class="text-primary fw-semibold">animate</code> command, or check below for usage examples.
+  </p>
 </div>
-</div>
+<!-- Section: Example Usage -->
+<section id="usage" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h2 class="h3 fw-bold mb-0">Example Usage</h2>
+    <a href="#usage" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  
+  <p class="text-body-secondary">
+    Below are common examples illustrating how to use the <code>animate</code> command. To get started, animate an image sequence in GIF format:
+  </p>
+  <!-- Terminal Code Block 1 -->
+  <div class="terminal-card mb-4">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">animate-gif.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick animate movie.gif')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono"><code><span class="text-success">$</span> magick animate movie.gif</code></pre>
+    </div>
+  </div>
+  <p class="text-body-secondary">To animate an entire directory of JPEG images, pass a wildcard pattern:</p>
+  <!-- Terminal Code Block 2 -->
+  <div class="terminal-card mb-4">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">animate-folder.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick animate *.jpg')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono"><code><span class="text-success">$</span> magick animate *.jpg</code></pre>
+    </div>
+  </div>
+  <div class="alert alert-info d-flex align-items-center gap-3 border-0 bg-info bg-opacity-10 text-info-emphasis rounded-3" role="alert">
+    <i class="bi bi-info-circle-fill fs-4 flex-shrink-0"></i>
+    <div>
+      Looking for advanced parameters? You can find additional examples in the <a href="https://usage.imagemagick.org/basics/#animate" target="_blank" class="alert-link">ImageMagick Usage Documentation</a>.
+    </div>
+  </div>
+</section>
+<!-- Section: Option Summary -->
+<section id="options" class="mb-5">
+  <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+    <div class="d-flex align-items-center gap-2">
+      <h2 class="h3 fw-bold mb-0">Option Summary</h2>
+      <a href="#options" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
+    </div>
+    <!-- Live Search Filter for Options -->
+    <div class="input-group input-group-sm style-search" style="max-width: 280px;">
+      <span class="input-group-text bg-body-tertiary border-end-0"><i class="bi bi-filter text-secondary"></i></span>
+      <input type="text" id="optionSearch" class="form-control border-start-0 bg-body-tertiary" placeholder="Filter options..." onkeyup="filterOptions()">
+    </div>
+  </div>
+  <p class="text-body-secondary">
+    The <code>animate</code> command recognizes the following command-line options. Select any option link for detailed descriptions.
+  </p>
+  <!-- Options Table Wrapper with Sticky Header -->
+  <div class="card im-card overflow-hidden shadow-sm">
+    <div class="table-responsive" style="max-height: 65vh;">
+      <table class="table table-hover table-striped align-middle mb-0" id="optionsTable">
+        <thead class="table-light sticky-top shadow-sm">
+          <tr>
+            <th scope="col" style="width: 35%;">Option</th>
+            <th scope="col" style="width: 65%;">Description</th>
+          </tr>
+        </thead>
+        <tbody class="font-mono small">
+          <tr>
+            <td><a href="/command-line-options/#alpha" class="fw-semibold text-decoration-none">-alpha</a></td>
+            <td>on, activate, off, deactivate, set, opaque, copy, transparent, extract, background, or shape the alpha channel</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#antialias" class="fw-semibold text-decoration-none">-antialias</a></td>
+            <td>remove pixel-aliasing</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#authenticate" class="fw-semibold text-decoration-none">-authenticate <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>decrypt image with this password</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#backdrop" class="fw-semibold text-decoration-none">-backdrop</a></td>
+            <td>display the image centered on a backdrop</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#background" class="fw-semibold text-decoration-none">-background <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td>background color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#border" class="fw-semibold text-decoration-none">-border <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>surround image with a border of color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#bordercolor" class="fw-semibold text-decoration-none">-bordercolor <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td>border color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#channel" class="fw-semibold text-decoration-none">-channel <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>apply option to select image channels</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#clip" class="fw-semibold text-decoration-none">-clip</a></td>
+            <td>clip along the first path from the 8BIM profile</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#clip-path" class="fw-semibold text-decoration-none">-clip-path <var class="text-secondary">&lt;id&gt;</var></a></td>
+            <td>clip along a named path from the 8BIM profile</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#coalesce" class="fw-semibold text-decoration-none">-coalesce</a></td>
+            <td>merge a sequence of images</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colormap" class="fw-semibold text-decoration-none">-colormap <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>Shared or Private</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colors" class="fw-semibold text-decoration-none">-colors <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>preferred number of colors in the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colorspace" class="fw-semibold text-decoration-none">-colorspace <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>set image colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#comment" class="fw-semibold text-decoration-none">-comment <var class="text-secondary">&lt;string&gt;</var></a></td>
+            <td>annotate image with comment</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#compress" class="fw-semibold text-decoration-none">-compress <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>image compression type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#contrast" class="fw-semibold text-decoration-none">-contrast</a></td>
+            <td>enhance or reduce the image contrast</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#crop" class="fw-semibold text-decoration-none">-crop <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>preferred size and location of the cropped image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#debug" class="fw-semibold text-decoration-none">-debug <var class="text-secondary">&lt;events&gt;</var></a></td>
+            <td>animate copious debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#decipher" class="fw-semibold text-decoration-none">-decipher <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td>convert cipher pixels to plain</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#define" class="fw-semibold text-decoration-none">-define <var class="text-secondary">&lt;format:option&gt;</var></a></td>
+            <td>define one or more image format options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#delay" class="fw-semibold text-decoration-none">-delay <var class="text-secondary">&lt;centiseconds&gt;</var></a></td>
+            <td>animate the next image after pausing</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#density" class="fw-semibold text-decoration-none">-density <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>horizontal and vertical density of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#depth" class="fw-semibold text-decoration-none">-depth <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>image depth</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#despeckle" class="fw-semibold text-decoration-none">-despeckle</a></td>
+            <td>reduce the speckles within an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#display" class="fw-semibold text-decoration-none">-display <var class="text-secondary">&lt;server&gt;</var></a></td>
+            <td>get image or font from this X server</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#dispose" class="fw-semibold text-decoration-none">-dispose <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td>layer disposal method</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#dither" class="fw-semibold text-decoration-none">-dither <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td>apply error diffusion to image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#edge" class="fw-semibold text-decoration-none">-edge <var class="text-secondary">&lt;radius&gt;</var></a></td>
+            <td>apply a filter to detect edges in the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#endian" class="fw-semibold text-decoration-none">-endian <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>endianness (MSB or LSB) of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#enhance" class="fw-semibold text-decoration-none">-enhance</a></td>
+            <td>apply a digital filter to enhance a noisy image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#extract" class="fw-semibold text-decoration-none">-extract <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>extract area from image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#filter" class="fw-semibold text-decoration-none">-filter <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>use this filter when resizing an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#flatten" class="fw-semibold text-decoration-none">-flatten</a></td>
+            <td>flatten a sequence of images</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#flip" class="fw-semibold text-decoration-none">-flip</a></td>
+            <td>flip image in the vertical direction</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#flop" class="fw-semibold text-decoration-none">-flop</a></td>
+            <td>flop image in the horizontal direction</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#frame" class="fw-semibold text-decoration-none">-frame <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>surround image with an ornamental border</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#gamma" class="fw-semibold text-decoration-none">-gamma <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>level of gamma correction</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#geometry" class="fw-semibold text-decoration-none">-geometry <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>preferred size or location of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#gravity" class="fw-semibold text-decoration-none">-gravity <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>horizontal and vertical backdrop placement</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#help" class="fw-semibold text-decoration-none">-help</a></td>
+            <td>print program options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#identify" class="fw-semibold text-decoration-none">-identify</a></td>
+            <td>identify the format and characteristics of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#immutable" class="fw-semibold text-decoration-none">-immutable <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>prohibit image edits</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interlace" class="fw-semibold text-decoration-none">-interlace <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td>type of image interlacing scheme</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interpolate" class="fw-semibold text-decoration-none">-interpolate <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td>pixel color interpolation method</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#label" class="fw-semibold text-decoration-none">-label <var class="text-secondary">&lt;name&gt;</var></a></td>
+            <td>assign a label to an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#limit" class="fw-semibold text-decoration-none">-limit <var class="text-secondary">&lt;type value&gt;</var></a></td>
+            <td>pixel cache resource limit</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#log" class="fw-semibold text-decoration-none">-log <var class="text-secondary">&lt;format&gt;</var></a></td>
+            <td>format of debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#map" class="fw-semibold text-decoration-none">-map <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td>transform image colors to match this set of colors</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#mattecolor" class="fw-semibold text-decoration-none">-mattecolor <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td>frame color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#monitor" class="fw-semibold text-decoration-none">-monitor</a></td>
+            <td>monitor progress</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#monochrome" class="fw-semibold text-decoration-none">-monochrome</a></td>
+            <td>transform image to black and white</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#negate" class="fw-semibold text-decoration-none">-negate</a></td>
+            <td>replace each pixel with its complementary color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#page" class="fw-semibold text-decoration-none">-page <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>size and location of an image canvas (setting)</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#profile" class="fw-semibold text-decoration-none">-profile <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td>add, delete, or apply an image profile</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quantize" class="fw-semibold text-decoration-none">-quantize <var class="text-secondary">&lt;colorspace&gt;</var></a></td>
+            <td>reduce image colors in this colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quiet" class="fw-semibold text-decoration-none">-quiet</a></td>
+            <td>suppress all warning messages</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#raise" class="fw-semibold text-decoration-none">-raise <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>lighten/darken image edges to create a 3-D effect</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#regard-warnings" class="fw-semibold text-decoration-none">-regard-warnings</a></td>
+            <td>pay attention to warning messages.</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#remote" class="fw-semibold text-decoration-none">-remote <var class="text-secondary">&lt;command&gt;</var></a></td>
+            <td>execute a command in a remote animate process</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#resample" class="fw-semibold text-decoration-none">-resample <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>change the resolution of an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#resize" class="fw-semibold text-decoration-none">-resize <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>resize the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#respect-parentheses" class="fw-semibold text-decoration-none">-respect-parentheses</a></td>
+            <td>settings remain in effect until parenthesis boundary.</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#roll" class="fw-semibold text-decoration-none">-roll <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>roll an image vertically or horizontally</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#rotate" class="fw-semibold text-decoration-none">-rotate <var class="text-secondary">&lt;degrees&gt;</var></a></td>
+            <td>apply Paeth rotation to the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sample" class="fw-semibold text-decoration-none">-sample <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>scale image with pixel sampling</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sampling-factor" class="fw-semibold text-decoration-none">-sampling-factor <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>horizontal and vertical sampling factor</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#scene" class="fw-semibold text-decoration-none">-scene <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>image scene number</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#segment" class="fw-semibold text-decoration-none">-segment <var class="text-secondary">&lt;values&gt;</var></a></td>
+            <td>segment an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#seed" class="fw-semibold text-decoration-none">-seed <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td>seed a new sequence of pseudo-random numbers</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#set" class="fw-semibold text-decoration-none">-set <var class="text-secondary">&lt;attribute value&gt;</var></a></td>
+            <td>set an image attribute</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sharpen" class="fw-semibold text-decoration-none">-sharpen <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>sharpen the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#size" class="fw-semibold text-decoration-none">-size <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>width and height of image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#strip" class="fw-semibold text-decoration-none">-strip</a></td>
+            <td>strip image of all profiles and comments</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#thumbnail" class="fw-semibold text-decoration-none">-thumbnail <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td>create a thumbnail of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#transparent-color" class="fw-semibold text-decoration-none">-transparent-color <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td>transparent color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#trim" class="fw-semibold text-decoration-none">-trim</a></td>
+            <td>trim image edges</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#update" class="fw-semibold text-decoration-none">-update <var class="text-secondary">&lt;seconds&gt;</var></a></td>
+            <td>detect when image file is modified and reanimate</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#verbose" class="fw-semibold text-decoration-none">-verbose</a></td>
+            <td>print detailed information about the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#version" class="fw-semibold text-decoration-none">-version</a></td>
+            <td>print version information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#virtual-pixel" class="fw-semibold text-decoration-none">-virtual-pixel <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td>access method for pixels outside the boundaries of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#visual" class="fw-semibold text-decoration-none">-visual</a></td>
+            <td>animate image using this visual type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#window" class="fw-semibold text-decoration-none">-window <var class="text-secondary">&lt;id&gt;</var></a></td>
+            <td>animate images to background of this window</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#window-group" class="fw-semibold text-decoration-none">-window-group <var class="text-secondary">&lt;id&gt;</var></a></td>
+            <td>exit program when this window id is destroyed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<script>
+  function filterOptions() {
+    const input = document.getElementById('optionSearch');
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById('optionsTable');
+    const tr = table.getElementsByTagName('tr');
+    for (let i = 1; i < tr.length; i++) {
+      const tdOption = tr[i].getElementsByTagName('td')[0];
+      const tdDesc = tr[i].getElementsByTagName('td')[1];
+      if (tdOption || tdDesc) {
+        const optionText = tdOption.textContent || tdOption.innerText;
+        const descText = tdDesc.textContent || tdDesc.innerText;
+        if (optionText.toLowerCase().indexOf(filter) > -1 || descText.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>

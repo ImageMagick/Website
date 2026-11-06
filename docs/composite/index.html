@@ -2,464 +2,503 @@
 title: "Command-line Tools: Composite"
 description: "Use ImageMagick’s Composite tool to overlay, blend, and seamlessly merge images. Explore example commands, advanced options like masks and seamless blending, and learn how to create rich visual compositions."
 ---
-<div>
-<p class="text-center"><a href="#usage">Example Usage</a> • <a href="#options">Option Summary</a></p>
-
-<p class="lead">Use the <code>composite</code> program to overlap one image over another.  See <a href="/command-line-processing/">Command Line Processing</a> for advice on how to structure your <code>composite</code> command or see below for example usages of the command.</p>
-
-<h2><a class="anchor" id="usage"></a>Example Usage</h2>
-
-<p>We list a few examples of the <code>composite</code> command here to illustrate its usefulness and ease of use.  To get started, lets overlay a smiley face over a rose:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick composite -gravity center smile.gif  rose: rose-over.png </samp></pre>
-
-<ul>
-  <a href="/image/smile.gif"><img src="/image/smile.gif" width="48" height="48" alt="smile" /></a>
-  <img src="/image/over.gif" width="56" height="46" alt="over" />
-  <a href="/image/rose.jpg"><img src="/image/rose.jpg" width="70" height="46" alt="rose" /></a>
-  <img style="margin-top:13px; margin-bottom:13px;" src="/image/right.gif" width="20" height="20" alt="==>" />
-  <a href="/image/rose-over.png"><img src="/image/rose-over.png" width="70" height="46" alt="rose" /></a>
-</ul>
-
-<p>You can create three-dimensional effect with the <var>Atop</var>:</p>
-
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
-$ magick -size 70x70 canvas:none -draw "circle 35,35 35,20" -channel RGB -negate -channel A -gaussian-blur 0x8 white-highlight.png
-$ magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png </samp></pre>
-
-<ul>
-  <a href="/image/white-highlight.png"><img src="/image/white-highlight.png" width="70" height="70" alt="white highlight" /></a>
-  <img src="/image/atop.gif" width="56" height="70" alt="atop" />
-  <a href="/image/red-circle.png"><img src="/image/red-circle.png" width="70" height="70" alt="red circle" /></a>
-  <img style="margin-top:25px; margin-bottom:25px;" src="/image/right.gif" width="20" height="20" alt="==>" />
-  <a href="/image/red-ball.png"><img src="/image/red-ball.png" width="70" height="70" alt="red ball" /></a>
-</ul>
-
-<p>Or suppose you want to blend a bear into a stream <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712">seamlessly</a>.  Try this command:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 \
-  -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png </samp></pre>
-<p>The mask marks the area around the bear to blend.  Seamless blending is an iterative process.  Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations.  Note, seamless blending works most effectively when the HDRI feature is enabled.</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary cli"><samp>$ magick -verbose stream.jpg \( bear.jpg -read-mask only_bear.png \) bear_mask.png \
-  -define compose:args=400x0.0002+100 -compose seamless-blend -geometry +30+30 -composite \
-  bear-in-stream.png </samp></pre>
-<p>Here we create read mask that marks the foreground object from its background. No blending is applied to the foreground object, just its surroundings. The read-mask preserves the colors of the bear and prevents them from lightening as in the first example. Note that read-masks must be black on white background as opposed to normal masks, which are white on black background.</p>
-
-<p>You can find additional examples of using <code>composite</code> in <a href="https://usage.imagemagick.org/">Examples of ImageMagick Usage</a>.  You can find out more about them and the mathematics by looking at <a href="http://www.w3.org/TR/SVG12/rendering.html">SVG Alpha Compositing</a></p>
-
-<h2><a class="anchor" id="options"></a>Option Summary</h2>
-
-<p>The <code>composite</code> command recognizes these options.  Click on an option to get more details about how that option works.</p>
-
-<div style="max-height:75svh; overflow-y:auto; overflow-x:hidden;">
-<table class="table table-sm table-hover table-striped">
-  <colgroup>
-    <col style="width:30%">
-    <col style="width:70%">
-  </colgroup>
-  <tbody>
-  <tr>
-    <th align="left">Option</th>
-    <th align="left">Description</th>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#affine">-affine <var>matrix</var></a></td>
-    <td>affine transform matrix</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#alpha">-alpha</a></td>
-    <td>on, activate, off, deactivate, set, opaque, copy",
-transparent, extract, background, or shape the alpha channel</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#authenticate">-authenticate <var>value</var></a></td>
-    <td>decrypt image with this password</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#blend">-blend <var>geometry</var></a></td>
-    <td>blend images</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#blue-primary">-blue-primary <var>point</var></a></td>
-    <td>chromaticity blue primary point</td>
-  </tr>
-
-
-  <tr>
-    <td><a href="/command-line-options/#border">-border <var>geometry</var></a></td>
-    <td>surround image with a border of color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#bordercolor">-bordercolor <var>color</var></a></td>
-    <td>border color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#channel">-channel <var>type</var></a></td>
-    <td>apply option to select image channels</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colors">-colors <var>value</var></a></td>
-    <td>preferred number of colors in the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#colorspace">-colorspace <var>type</var></a></td>
-    <td>set image colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#comment">-comment <var>string</var></a></td>
-    <td>annotate image with comment</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#compose">-compose <var>operator</var></a></td>
-    <td>set image composite operator</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#compress">-compress <var>type</var></a></td>
-    <td>image compression type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#debug">-debug <var>events</var></a></td>
-    <td>display copious debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#decipher">-decipher <var>filename</var></a></td>
-    <td>convert cipher pixels to plain</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#define">-define <var>format:option</var></a></td>
-    <td>define one or more image format options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#density">-density <var>geometry</var></a></td>
-    <td>horizontal and vertical density of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#depth">-depth <var>value</var></a></td>
-    <td>image depth</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#displace">-displace <var>geometry</var></a></td>
-    <td>shift image pixels defined by a displacement map</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#dissolve">-dissolve <var>value</var></a></td>
-    <td>dissolve the two images a given percent</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#dither">-dither  <var>method</var></a></td>
-    <td>apply error diffusion to image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#encipher">-encipher <var>filename</var></a></td>
-    <td>convert plain pixels to cipher pixels</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#encoding">-encoding <var>type</var></a></td>
-    <td>text encoding type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#endian">-endian <var>type</var></a></td>
-    <td>endianness (MSB or LSB) of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#extract">-extract <var>geometry</var></a></td>
-    <td>extract area from image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#filter">-filter <var>type</var></a></td>
-    <td>use this filter when resizing an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#font">-font <var>name</var></a></td>
-    <td>render text with this font</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#geometry">-geometry <var>geometry</var></a></td>
-    <td>preferred size or location of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#gravity">-gravity <var>type</var></a></td>
-    <td>horizontal and vertical text placement</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#green-primary">-green-primary <var>point</var></a></td>
-    <td>chromaticity green primary point</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#help">-help</a></td>
-    <td>print program options</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#identify">-identify</a></td>
-    <td>identify the format and characteristics of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interlace">-interlace <var>type</var></a></td>
-    <td>type of image interlacing scheme</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#interpolate">-interpolate <var>method</var></a></td>
-    <td>pixel color interpolation method</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#label">-label <var>string</var></a></td>
-    <td>assign a label to an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#level">-level <var>value</var></a></td>
-    <td>adjust the level of image contrast</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#limit">-limit <var>type value</var></a></td>
-    <td>pixel cache resource limit</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#log">-log <var>format</var></a></td>
-    <td>format of debugging information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#monitor">-monitor</a></td>
-    <td>monitor progress</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#monochrome">-monochrome</a></td>
-    <td>transform image to black and white</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#negate">-negate</a></td>
-    <td>replace each pixel with its complementary color </td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#page">-page <var>geometry</var></a></td>
-    <td>size and location of an image canvas (setting)</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#pointsize">-pointsize <var>value</var></a></td>
-    <td>font point size</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#profile">-profile <var>filename</var></a></td>
-    <td>add, delete, or apply an image profile</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quality">-quality <var>value</var></a></td>
-    <td>JPEG/MIFF/PNG compression level</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quantize">-quantize <var>colorspace</var></a></td>
-    <td>reduce image colors in this colorspace</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#quiet">-quiet</a></td>
-    <td>suppress all warning messages</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#red-primary">-red-primary <var>point</var></a></td>
-    <td>chromaticity red primary point</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#regard-warnings">-regard-warnings</a></td>
-    <td>pay attention to warning messages.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#respect-parentheses">-respect-parentheses</a></td>
-    <td>settings remain in effect until parenthesis boundary.</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#rotate">-rotate <var>degrees</var></a></td>
-    <td>apply Paeth rotation to the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sampling-factor">-sampling-factor <var>geometry</var></a></td>
-    <td>horizontal and vertical sampling factor</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#scene">-scene <var>value</var></a></td>
-    <td>image scene number</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#seed">-seed <var>value</var></a></td>
-    <td>seed a new sequence of pseudo-random numbers</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#set">-set <var>attribute value</var></a></td>
-    <td>set an image attribute</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#sharpen">-sharpen <var>geometry</var></a></td>
-    <td>sharpen the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#shave">-shave <var>geometry</var></a></td>
-    <td>shave pixels from the image edges</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#size">-size <var>geometry</var></a></td>
-    <td>width and height of image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#stegano">-stegano <var>offset</var></a></td>
-    <td>hide watermark within an image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#stereo">-stereo <var>geometry</var></a></td>
-    <td>combine two image to create a stereo anaglyph</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#strip">-strip</a></td>
-    <td>strip image of all profiles and comments</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#swap">-swap <var>indexes</var></a></td>
-    <td>swap two images in the image sequence</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#synchronize">-synchronize</a></td>
-    <td>synchronize image to storage device</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#taint">-taint</a></td>
-    <td>mark the image as modified</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#thumbnail">-thumbnail <var>geometry</var></a></td>
-    <td>create a thumbnail of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#tile">-tile</a></td>
-    <td>repeat composite operation across and down image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#transform">-transform</a></td>
-    <td>affine transform image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#transparent-color">-transparent-color <var>color</var></a></td>
-    <td>transparent color</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#treedepth">-treedepth <var>value</var></a></td>
-    <td>color tree depth</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#type">-type <var>type</var></a></td>
-    <td>image type</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#units">-units <var>type</var></a></td>
-    <td>the units of image resolution</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#unsharp">-unsharp <var>geometry</var></a></td>
-    <td>sharpen the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#verbose">-verbose</a></td>
-    <td>print detailed information about the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#version">-version</a></td>
-    <td>print version information</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#virtual-pixel">-virtual-pixel <var>method</var></a></td>
-    <td>access method for pixels outside the boundaries of the image</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#watermark">-watermark <var>geometry</var></a></td>
-    <td>percent brightness and saturation of a watermark</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#white-point">-white-point <var>point</var></a></td>
-    <td>chromaticity white point</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#white-threshold">-white-threshold <var>value</var></a></td>
-    <td>force all pixels above the threshold into white</td>
-  </tr>
-
-  <tr>
-    <td><a href="/command-line-options/#write">-write <var>filename</var></a></td>
-    <td>write images to this file</td>
-  </tr>
-
-  </tbody>
-</table>
+<!-- Page Header & Quick Navigation -->
+<div class="mb-5 border-bottom pb-4">
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+    <a href="#usage" class="btn btn-sm btn-outline-primary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-play-circle-fill"></i> Example Usage
+    </a>
+    <a href="#options" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-inline-flex align-items-center gap-2">
+      <i class="bi bi-list-nested"></i> Option Summary
+    </a>
+  </div>
+  <p class="lead text-body-secondary mb-0">
+    Use the <code class="text-primary fw-semibold">composite</code> program to overlap one image over another. See <a href="/command-line-processing/" class="text-decoration-none">Command Line Processing</a> for advice on how to structure your <code class="text-primary fw-semibold">composite</code> command, or check below for usage examples.
+  </p>
 </div>
-</div>
+<!-- Section: Example Usage -->
+<section id="usage" class="mb-5">
+  <div class="d-flex align-items-center gap-2 mb-3">
+    <h2 class="h3 fw-bold mb-0">Example Usage</h2>
+    <a href="#usage" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
+  </div>
+  <p class="text-body-secondary mb-3">
+    We list a few examples of the <code class="text-primary">composite</code> command here to illustrate its usefulness and ease of use. To get started, let's overlay a smiley face over a rose:
+  </p>
+  <!-- Terminal Code Block 1 -->
+  <div class="terminal-card mb-3">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">composite-smiley.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick composite -gravity center smile.gif  rose: rose-over.png')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono"><code><span class="text-success">$</span> magick composite -gravity center smile.gif  rose: rose-over.png</code></pre>
+    </div>
+  </div>
+  <!-- Image Flow Preview 1 -->
+  <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 p-3 bg-body-tertiary border rounded-3 mb-4 shadow-sm">
+    <a href="/image/smile.gif" class="text-decoration-none text-center"><img src="/image/smile.gif" width="48" height="48" alt="smile" class="rounded border bg-white p-1" /><div class="small text-muted mt-1">smile.gif</div></a>
+    <img src="/image/over.gif" width="56" height="46" alt="over" />
+    <a href="/image/rose.jpg" class="text-decoration-none text-center"><img src="/image/rose.jpg" width="70" height="46" alt="rose" class="rounded border" /><div class="small text-muted mt-1">rose:</div></a>
+    <img src="/image/right.gif" width="20" height="20" alt="==>" />
+    <a href="/image/rose-over.png" class="text-decoration-none text-center"><img src="/image/rose-over.png" width="70" height="46" alt="rose" class="rounded border" /><div class="small text-muted mt-1">rose-over.png</div></a>
+  </div>
+  <p class="text-body-secondary mb-3">
+    You can create a three-dimensional effect with the <var class="text-primary fw-semibold">Atop</var> operator:
+  </p>
+  <!-- Terminal Code Block 2 -->
+  <div class="terminal-card mb-3">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">red-ball.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick -size 70x70 canvas:none -fill red -draw \'circle 35,35 10,30\' red-circle.png\nmagick -size 70x70 canvas:none -draw \"circle 35,35 35,20\" -channel RGB -negate -channel A -gaussian-blur 0x8 white-highlight.png\nmagick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-success">$</span> magick -size 70x70 canvas:none -fill red -draw 'circle 35,35 10,30' red-circle.png
+<span class="text-success">$</span> magick -size 70x70 canvas:none -draw "circle 35,35 35,20" -channel RGB -negate -channel A -gaussian-blur 0x8 white-highlight.png
+<span class="text-success">$</span> magick composite -compose atop -geometry -13-17 white-highlight.png red-circle.png red-ball.png</code></pre>
+    </div>
+  </div>
+  <!-- Image Flow Preview 2 -->
+  <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 p-3 bg-body-tertiary border rounded-3 mb-4 shadow-sm">
+    <a href="/image/white-highlight.png" class="text-decoration-none text-center"><img src="/image/white-highlight.png" width="70" height="70" alt="white highlight" class="rounded border bg-white p-1" /><div class="small text-muted mt-1">highlight</div></a>
+    <img src="/image/atop.gif" width="56" height="70" alt="atop" />
+    <a href="/image/red-circle.png" class="text-decoration-none text-center"><img src="/image/red-circle.png" width="70" height="70" alt="red circle" class="rounded border bg-white p-1" /><div class="small text-muted mt-1">circle</div></a>
+    <img src="/image/right.gif" width="20" height="20" alt="==>" />
+    <a href="/image/red-ball.png" class="text-decoration-none text-center"><img src="/image/red-ball.png" width="70" height="70" alt="red ball" class="rounded border bg-white p-1" /><div class="small text-muted mt-1">red-ball.png</div></a>
+  </div>
+  <p class="text-body-secondary mb-3">
+    Or suppose you want to blend a bear into a stream <a href="https://github.com/ImageMagick/ImageMagick/discussions/4712" target="_blank" class="text-decoration-none">seamlessly</a>. Try this command:
+  </p>
+  <!-- Terminal Code Block 3 -->
+  <div class="terminal-card mb-3">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">seamless-blend.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick -verbose stream.jpg bear.jpg bear_mask.png -define compose:args=400x0.0002+100 -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-success">$</span> magick -verbose stream.jpg bear.jpg bear_mask.png \
+  -define compose:args=400x0.0002+100 -compose seamless-blend \
+  -geometry +30+30 -composite bear-in-stream.png</code></pre>
+    </div>
+  </div>
+  <p class="text-body-secondary mb-3">
+    The mask marks the area around the bear to blend. Seamless blending is an iterative process. Here, we limit the iterations to 400 or less if the blending converges (residual has an RMSE of less than 0.0002). The residual value (RMSE) is printed every 100 iterations. Note that seamless blending works most effectively when the HDRI feature is enabled.
+  </p>
+  <!-- Terminal Code Block 4 -->
+  <div class="terminal-card mb-3">
+    <div class="terminal-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">read-mask.sh</span>
+      </div>
+      <button class="btn btn-sm text-secondary border-0 p-0" onclick="navigator.clipboard.writeText('magick -verbose stream.jpg \\( bear.jpg -read-mask only_bear.png \\) bear_mask.png -define compose:args=400x0.0002+100 -compose seamless-blend -geometry +30+30 -composite bear-in-stream.png')" title="Copy Command">
+        <i class="bi bi-clipboard"></i>
+      </button>
+    </div>
+    <div class="p-3">
+      <pre class="mb-0 text-light font-mono small"><code><span class="text-success">$</span> magick -verbose stream.jpg \( bear.jpg -read-mask only_bear.png \) bear_mask.png \
+  -define compose:args=400x0.0002+100 -compose seamless-blend \
+  -geometry +30+30 -composite bear-in-stream.png</code></pre>
+    </div>
+  </div>
+  <p class="text-body-secondary mb-4">
+    Here we create a read mask that marks the foreground object from its background. No blending is applied to the foreground object, just its surroundings. The read-mask preserves the colors of the bear and prevents them from lightening as in the first example. Note that read-masks must be black on white background as opposed to normal masks, which are white on black background.
+  </p>
+  <div class="alert alert-info d-flex align-items-center gap-3 border-0 bg-info bg-opacity-10 text-info-emphasis rounded-3" role="alert">
+    <i class="bi bi-info-circle-fill fs-4 flex-shrink-0"></i>
+    <div>
+      You can find additional examples in <a href="https://usage.imagemagick.org/" target="_blank" class="alert-link">Examples of ImageMagick Usage</a>, and learn more about mathematics at <a href="http://www.w3.org/TR/SVG12/rendering.html" target="_blank" class="alert-link">SVG Alpha Compositing</a>.
+    </div>
+  </div>
+</section>
+<!-- Section: Option Summary -->
+<section id="options" class="mb-5">
+  <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+    <div class="d-flex align-items-center gap-2">
+      <h2 class="h3 fw-bold mb-0">Option Summary</h2>
+      <a href="#options" class="text-body-tertiary text-decoration-none"><i class="bi bi-link-45deg fs-4"></i></a>
+    </div>
+    <!-- Live Search Filter for Options -->
+    <div class="input-group input-group-sm" style="max-width: 280px;">
+      <span class="input-group-text bg-body-tertiary border-end-0"><i class="bi bi-filter text-secondary"></i></span>
+      <input type="text" id="optionSearch" class="form-control border-start-0 bg-body-tertiary" placeholder="Filter options..." onkeyup="filterOptions()">
+    </div>
+  </div>
+  <p class="text-body-secondary mb-3">
+    The <code class="text-primary">composite</code> command recognizes these options. Click on an option to get more details about how that option works.
+  </p>
+  <div class="card im-card overflow-hidden shadow-sm">
+    <div class="table-responsive" style="max-height: 65vh;">
+      <table class="table table-hover table-striped align-middle mb-0" id="optionsTable">
+        <thead class="table-light sticky-top shadow-sm">
+          <tr>
+            <th scope="col" style="width: 35%;">Option</th>
+            <th scope="col" style="width: 65%;">Description</th>
+          </tr>
+        </thead>
+        <tbody class="font-mono small">
+          <tr>
+            <td><a href="/command-line-options/#affine" class="fw-semibold text-decoration-none">-affine <var class="text-secondary">&lt;matrix&gt;</var></a></td>
+            <td class="font-sans">affine transform matrix</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#alpha" class="fw-semibold text-decoration-none">-alpha</a></td>
+            <td class="font-sans">on, activate, off, deactivate, set, opaque, copy, transparent, extract, background, or shape the alpha channel</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#authenticate" class="fw-semibold text-decoration-none">-authenticate <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">decrypt image with this password</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#blend" class="fw-semibold text-decoration-none">-blend <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">blend images</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#blue-primary" class="fw-semibold text-decoration-none">-blue-primary <var class="text-secondary">&lt;point&gt;</var></a></td>
+            <td class="font-sans">chromaticity blue primary point</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#border" class="fw-semibold text-decoration-none">-border <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">surround image with a border of color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#bordercolor" class="fw-semibold text-decoration-none">-bordercolor <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td class="font-sans">border color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#channel" class="fw-semibold text-decoration-none">-channel <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">apply option to select image channels</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colors" class="fw-semibold text-decoration-none">-colors <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">preferred number of colors in the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#colorspace" class="fw-semibold text-decoration-none">-colorspace <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">set image colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#comment" class="fw-semibold text-decoration-none">-comment <var class="text-secondary">&lt;string&gt;</var></a></td>
+            <td class="font-sans">annotate image with comment</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#compose" class="fw-semibold text-decoration-none">-compose <var class="text-secondary">&lt;operator&gt;</var></a></td>
+            <td class="font-sans">set image composite operator</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#compress" class="fw-semibold text-decoration-none">-compress <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">image compression type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#debug" class="fw-semibold text-decoration-none">-debug <var class="text-secondary">&lt;events&gt;</var></a></td>
+            <td class="font-sans">display copious debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#decipher" class="fw-semibold text-decoration-none">-decipher <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td class="font-sans">convert cipher pixels to plain</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#define" class="fw-semibold text-decoration-none">-define <var class="text-secondary">&lt;format:option&gt;</var></a></td>
+            <td class="font-sans">define one or more image format options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#density" class="fw-semibold text-decoration-none">-density <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">horizontal and vertical density of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#depth" class="fw-semibold text-decoration-none">-depth <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">image depth</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#displace" class="fw-semibold text-decoration-none">-displace <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">shift image pixels defined by a displacement map</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#dissolve" class="fw-semibold text-decoration-none">-dissolve <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">dissolve the two images a given percent</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#dither" class="fw-semibold text-decoration-none">-dither <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td class="font-sans">apply error diffusion to image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#encipher" class="fw-semibold text-decoration-none">-encipher <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td class="font-sans">convert plain pixels to cipher pixels</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#encoding" class="fw-semibold text-decoration-none">-encoding <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">text encoding type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#endian" class="fw-semibold text-decoration-none">-endian <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">endianness (MSB or LSB) of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#extract" class="fw-semibold text-decoration-none">-extract <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">extract area from image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#filter" class="fw-semibold text-decoration-none">-filter <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">use this filter when resizing an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#font" class="fw-semibold text-decoration-none">-font <var class="text-secondary">&lt;name&gt;</var></a></td>
+            <td class="font-sans">render text with this font</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#geometry" class="fw-semibold text-decoration-none">-geometry <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">preferred size or location of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#gravity" class="fw-semibold text-decoration-none">-gravity <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">horizontal and vertical text placement</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#green-primary" class="fw-semibold text-decoration-none">-green-primary <var class="text-secondary">&lt;point&gt;</var></a></td>
+            <td class="font-sans">chromaticity green primary point</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#help" class="fw-semibold text-decoration-none">-help</a></td>
+            <td class="font-sans">print program options</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#identify" class="fw-semibold text-decoration-none">-identify</a></td>
+            <td class="font-sans">identify the format and characteristics of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interlace" class="fw-semibold text-decoration-none">-interlace <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">type of image interlacing scheme</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#interpolate" class="fw-semibold text-decoration-none">-interpolate <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td class="font-sans">pixel color interpolation method</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#label" class="fw-semibold text-decoration-none">-label <var class="text-secondary">&lt;string&gt;</var></a></td>
+            <td class="font-sans">assign a label to an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#level" class="fw-semibold text-decoration-none">-level <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">adjust the level of image contrast</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#limit" class="fw-semibold text-decoration-none">-limit <var class="text-secondary">&lt;type value&gt;</var></a></td>
+            <td class="font-sans">pixel cache resource limit</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#log" class="fw-semibold text-decoration-none">-log <var class="text-secondary">&lt;format&gt;</var></a></td>
+            <td class="font-sans">format of debugging information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#monitor" class="fw-semibold text-decoration-none">-monitor</a></td>
+            <td class="font-sans">monitor progress</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#monochrome" class="fw-semibold text-decoration-none">-monochrome</a></td>
+            <td class="font-sans">transform image to black and white</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#negate" class="fw-semibold text-decoration-none">-negate</a></td>
+            <td class="font-sans">replace each pixel with its complementary color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#page" class="fw-semibold text-decoration-none">-page <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">size and location of an image canvas (setting)</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#pointsize" class="fw-semibold text-decoration-none">-pointsize <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">font point size</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#profile" class="fw-semibold text-decoration-none">-profile <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td class="font-sans">add, delete, or apply an image profile</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quality" class="fw-semibold text-decoration-none">-quality <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">JPEG/MIFF/PNG compression level</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quantize" class="fw-semibold text-decoration-none">-quantize <var class="text-secondary">&lt;colorspace&gt;</var></a></td>
+            <td class="font-sans">reduce image colors in this colorspace</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#quiet" class="fw-semibold text-decoration-none">-quiet</a></td>
+            <td class="font-sans">suppress all warning messages</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#red-primary" class="fw-semibold text-decoration-none">-red-primary <var class="text-secondary">&lt;point&gt;</var></a></td>
+            <td class="font-sans">chromaticity red primary point</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#regard-warnings" class="fw-semibold text-decoration-none">-regard-warnings</a></td>
+            <td class="font-sans">pay attention to warning messages</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#respect-parentheses" class="fw-semibold text-decoration-none">-respect-parentheses</a></td>
+            <td class="font-sans">settings remain in effect until parenthesis boundary</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#rotate" class="fw-semibold text-decoration-none">-rotate <var class="text-secondary">&lt;degrees&gt;</var></a></td>
+            <td class="font-sans">apply Paeth rotation to the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sampling-factor" class="fw-semibold text-decoration-none">-sampling-factor <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">horizontal and vertical sampling factor</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#scene" class="fw-semibold text-decoration-none">-scene <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">image scene number</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#seed" class="fw-semibold text-decoration-none">-seed <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">seed a new sequence of pseudo-random numbers</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#set" class="fw-semibold text-decoration-none">-set <var class="text-secondary">&lt;attribute value&gt;</var></a></td>
+            <td class="font-sans">set an image attribute</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#sharpen" class="fw-semibold text-decoration-none">-sharpen <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">sharpen the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#shave" class="fw-semibold text-decoration-none">-shave <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">shave pixels from the image edges</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#size" class="fw-semibold text-decoration-none">-size <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">width and height of image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#stegano" class="fw-semibold text-decoration-none">-stegano <var class="text-secondary">&lt;offset&gt;</var></a></td>
+            <td class="font-sans">hide watermark within an image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#stereo" class="fw-semibold text-decoration-none">-stereo <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">combine two image to create a stereo anaglyph</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#strip" class="fw-semibold text-decoration-none">-strip</a></td>
+            <td class="font-sans">strip image of all profiles and comments</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#swap" class="fw-semibold text-decoration-none">-swap <var class="text-secondary">&lt;indexes&gt;</var></a></td>
+            <td class="font-sans">swap two images in the image sequence</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#synchronize" class="fw-semibold text-decoration-none">-synchronize</a></td>
+            <td class="font-sans">synchronize image to storage device</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#taint" class="fw-semibold text-decoration-none">-taint</a></td>
+            <td class="font-sans">mark the image as modified</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#thumbnail" class="fw-semibold text-decoration-none">-thumbnail <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">create a thumbnail of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#tile" class="fw-semibold text-decoration-none">-tile</a></td>
+            <td class="font-sans">repeat composite operation across and down image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#transform" class="fw-semibold text-decoration-none">-transform</a></td>
+            <td class="font-sans">affine transform image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#transparent-color" class="fw-semibold text-decoration-none">-transparent-color <var class="text-secondary">&lt;color&gt;</var></a></td>
+            <td class="font-sans">transparent color</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#treedepth" class="fw-semibold text-decoration-none">-treedepth <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">color tree depth</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#type" class="fw-semibold text-decoration-none">-type <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">image type</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#units" class="fw-semibold text-decoration-none">-units <var class="text-secondary">&lt;type&gt;</var></a></td>
+            <td class="font-sans">the units of image resolution</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#unsharp" class="fw-semibold text-decoration-none">-unsharp <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">sharpen the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#verbose" class="fw-semibold text-decoration-none">-verbose</a></td>
+            <td class="font-sans">print detailed information about the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#version" class="fw-semibold text-decoration-none">-version</a></td>
+            <td class="font-sans">print version information</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#virtual-pixel" class="fw-semibold text-decoration-none">-virtual-pixel <var class="text-secondary">&lt;method&gt;</var></a></td>
+            <td class="font-sans">access method for pixels outside the boundaries of the image</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#watermark" class="fw-semibold text-decoration-none">-watermark <var class="text-secondary">&lt;geometry&gt;</var></a></td>
+            <td class="font-sans">percent brightness and saturation of a watermark</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#white-point" class="fw-semibold text-decoration-none">-white-point <var class="text-secondary">&lt;point&gt;</var></a></td>
+            <td class="font-sans">chromaticity white point</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#white-threshold" class="fw-semibold text-decoration-none">-white-threshold <var class="text-secondary">&lt;value&gt;</var></a></td>
+            <td class="font-sans">force all pixels above the threshold into white</td>
+          </tr>
+          <tr>
+            <td><a href="/command-line-options/#write" class="fw-semibold text-decoration-none">-write <var class="text-secondary">&lt;filename&gt;</var></a></td>
+            <td class="font-sans">write images to this file</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<script>
+  function filterOptions() {
+    const input = document.getElementById('optionSearch');
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById('optionsTable');
+    const tr = table.getElementsByTagName('tr');
+    for (let i = 1; i < tr.length; i++) {
+      const tdOption = tr[i].getElementsByTagName('td')[0];
+      const tdDesc = tr[i].getElementsByTagName('td')[1];
+      if (tdOption || tdDesc) {
+        const optionText = tdOption.textContent || tdOption.innerText;
+        const descText = tdDesc.textContent || tdDesc.innerText;
+        if (optionText.toLowerCase().indexOf(filter) > -1 || descText.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>

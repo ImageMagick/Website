@@ -1,21 +1,122 @@
 ---
 title: "Multispectral Imagery"
+description: "Learn about multispectral imagery support in ImageMagick, capturing wider wavelengths from ultraviolet to infrared, handling meta channels, and processing multi-band images."
 ---
-<div>
-<p class="lead">Multispectral imagery refers to images that are captured using multiple bands of the electromagnetic spectrum, beyond just the visible light spectrum. This means that they capture data across a wider range of wavelengths, from ultraviolet to infrared.</p>
-<p>By capturing data across multiple spectral bands, multispectral imagery can provide additional information about the objects or scenes being imaged, such as their composition, temperature, and vegetation health. This information can be used for a wide range of applications, including agriculture, environmental monitoring, disaster response, and military surveillance.</p>
-<p>Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images that display the information captured in each spectral band.</p>
-<p>Overall, multispectral imagery provides a powerful tool for analyzing and understanding the world around us, allowing us to gain insights that would be impossible to obtain using visible light imagery alone.</p>
-<h4>Multispectral Support in ImageMagick</h4>
-<p>ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image.  However, not all image formats support multispectral images.  PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels. If you build ImageMagick with the configure script <code>--enable-64bit-channel-masks</code> option, you can process 62 band multispectral images with up to 52 meta channels.</p>
-<p>We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels.  We label them as "meta", "meta1", "meta2", etc..  Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc.</p>
-<h5>Create a Multispectral Image</h5>
-<p>Begin with a multispectral image, typically in the TIFF or PSD format.  If you don't have one, you can create your own.  In our example, we create a single CMYK pixel with two meta channels.  Stuff this in a file titled <code>multiMeta.txt</code>:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><code>0,0: 10,20,30,40,50,60</code></pre>
-<p>Let's convert that to the TIFF image format:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><samp>$ magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif</samp></pre>
-<p>Let confirm that worked as expected:<p>
-<pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
+
+<div class="container py-4">
+  <!-- Lead Section -->
+  <div class="row mb-4">
+    <div class="col-lg-10 mx-auto text-center">
+      <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-3 fs-7">
+        <i class="bi bi-layers-fill"></i>
+        <span class="small fw-semibold">Advanced Image Processing</span>
+      </div>
+      <h1 class="display-5 fw-bold mb-3">Multispectral Imagery</h1>
+      <p class="lead text-body-secondary">
+        Multispectral imagery refers to images that are captured using multiple bands of the electromagnetic spectrum, beyond just the visible light spectrum. This means that they capture data across a wider range of wavelengths, from ultraviolet to infrared.
+      </p>
+    </div>
+  </div>
+
+  <!-- Information Grid Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-info-circle me-2"></i>Applications</h5>
+        <p class="small text-body-secondary mb-0">
+          By capturing data across multiple spectral bands, multispectral imagery provides additional information about objects or scenes, such as composition, temperature, and vegetation health, for use in agriculture, environmental monitoring, disaster response, and military surveillance.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-broadcast me-2"></i>Data Acquisition</h5>
+        <p class="small text-body-secondary mb-0">
+          Multispectral imagery is often captured using specialized sensors on satellites, drones, or aircraft. The data is then processed using specialized software to create images displaying the information captured in each spectral band.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card im-card h-100 p-4">
+        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-lightbulb me-2"></i>Insights</h5>
+        <p class="small text-body-secondary mb-0">
+          Overall, multispectral imagery provides a powerful tool for analyzing and understanding the world around us, allowing insights that would be impossible to obtain using visible light imagery alone.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multispectral Support in ImageMagick -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-cpu fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Multispectral Support in ImageMagick</h2>
+    </div>
+
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        ImageMagick supports multispectral images where all channels have the same dimensions and number of pixels as the original image. However, not all image formats support multispectral images. PSD, TIFF, MIFF, MPC, and <a href="http://im.snibgo.com/fmttxt.htm" target="_blank" rel="noopener">FTXT</a> have full support for multispectral images up to 31 bands with 21 meta channels.
+      </p>
+      <p class="text-body-secondary mb-3">
+        If you build ImageMagick with the configure script <code>--enable-64bit-channel-masks</code> option, you can process 62 band multispectral images with up to 52 meta channels.
+      </p>
+      <p class="text-body-secondary mb-0">
+        We call image channels beyond the standard RGB(A) or CMYK(A) channels, "meta" channels. We label them as "meta", "meta1", "meta2", etc. Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon—e.g., resized, gamma adjusted, etc.
+      </p>
+    </div>
+  </section>
+
+  <!-- Create a Multispectral Image -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-file-earmark-plus fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Create a Multispectral Image</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      Begin with a multispectral image, typically in the TIFF or PSD format. If you don't have one, you can create your own. In our example, we create a single CMYK pixel with two meta channels. Stuff this in a file titled <code>multiMeta.txt</code>:
+    </p>
+
+    <!-- Code Block 1 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">multiMeta.txt</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        0,0: 10,20,30,40,50,60
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Let's convert that to the TIFF image format:</p>
+
+    <!-- Code Block 2 -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">convert.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick -size 1x1 -colorspace CMYK -define ftxt:format="\x,\y:\c\n" -define ftxt:hasalpha=false -define ftxt:nummeta=2 ftxt:multiMeta.txt multiMeta.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">Let's confirm that worked as expected:</p>
+
+    <!-- Verbose Output Terminal Block -->
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">identify-verbose.log</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><samp>$ identify -verbose multiMeta.tif
 Image:
   Filename: multiMeta.tif
   Permissions: rw-------
@@ -138,19 +239,90 @@ Image:
     verbose: true
   Tainted: False
   Filesize: 306B
-  Number pixels: 1
-</samp></pre>
-<p>Notice the channel depth and statistics associated with the two meta channels.<p>
-<h5>Working with Multispectral Images</h5>
-<p>Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon-- e.g., resized, gamma adjusted, etc..  Here, we replace the first channel with the contents of the meta channel:<p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif</samp></pre></pre>
-<p>The original cyan channel has an intensity of 10.  It's now, per the channel FX instructions, 50.<p>
-<p>And in this example, we create two meta channels:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif</samp></pre></pre>
-<p>In this example, we blend two meta channels into a single alpha channel:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff</samp></pre></pre>
-<br/>
-<h5>Writing Multispectral Images</h5>
-<p>You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD.  If you write to other image formats that do not support multispectral images, the channels are not preserved and instead lost-- e.g., PNG.  In this example, we read, resize, and  write a multispectral image:</p>
-<pre class="p-3 mb-2 text-body-secondary bg-body-tertiary"><pre><samp>$ magick multiMeta.tif -resize 50% resizedMeta.tif</samp></pre></pre>
+  Number pixels: 1</samp></pre>
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-0">Notice the channel depth and statistics associated with the two meta channels.</p>
+  </section>
+
+  <!-- Working with Multispectral Images -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-sliders fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Working with Multispectral Images</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      Meta channels are treated the same as any other channel meaning they can be read, written, and operated upon—e.g., resized, gamma adjusted, etc. Here, we replace the first channel with the contents of the meta channel:
+    </p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">replace-channel.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick multiMeta.tif -channel-fx 'meta1=>cyan' multiMeta-1.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      The original cyan channel has an intensity of 10. It's now, per the channel FX instructions, 50.
+    </p>
+
+    <p class="text-body-secondary mb-3">And in this example, we create two meta channels:</p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">create-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick lena.png \( mandril3.jpg -colorspace gray \) -channel-fx '| gray=>meta' \( zelda1.jpg -colorspace gray \) -channel-fx '| gray=>meta1' meta.tif
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">In this example, we blend two meta channels into a single alpha channel:</p>
+
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">blend-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick in.tiff -alpha opaque \( +clone -set colorspace sRGB -channel-fx "meta0=>red meta1=>green" \) -channel A -fx "(v.r+v.g)/2" +channel out.tiff
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing Multispectral Images -->
+  <section class="mb-5">
+    <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-2">
+      <i class="bi bi-file-earmark-arrow-down fs-4 text-primary"></i>
+      <h2 class="h3 fw-bold mb-0">Writing Multispectral Images</h2>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      You can preserve multispectral images by writing them to a format that supports meta channels such as TIFF or PSD. If you write to other image formats that do not support multispectral images, the channels are not preserved and instead lost—e.g., PNG. In this example, we read, resize, and write a multispectral image:
+    </p>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">resize-meta.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick multiMeta.tif -resize 50% resizedMeta.tif
+      </div>
+    </div>
+  </section>
 </div>

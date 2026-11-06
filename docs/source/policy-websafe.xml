@@ -84,6 +84,10 @@
   <!-- Prevent excessively large single memory allocation requests. -->
   <policy domain="system" name="max-memory-request" value="512MiB"/>
 
+  <!-- Maximum size of a single image profile. -->
+  <policy domain="system" name="max-profile-size" value="16MiB"/>
+  <policy domain="system" name="max-profile-count" value="16"/>
+
   <!-- ============================================================= -->
   <!-- Path Restrictions                                              -->
   <!-- ============================================================= -->
@@ -103,7 +107,7 @@
   <!-- Prevent access to Linux process and runtime information. -->
   <policy domain="path" rights="none" pattern="/proc/*"/>
 
-  <!-- Prevent access to Linux kernel and device nformation. -->
+  <!-- Prevent access to Linux kernel and device information. -->
   <policy domain="path" rights="none" pattern="/sys/*"/>
 
   <!-- Disable pipe-based I/O. -->
