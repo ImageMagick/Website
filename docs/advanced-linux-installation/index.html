@@ -225,14 +225,15 @@ Options used to compile and link:
         <tbody>
           <tr>
             <td class="ps-3 font-mono small">--with-quantum-depth</td>
-            <td>Number of bits in a pixel quantum (default 16). Specify bits per pixel quantum (red, green, blue, alpha components). Supported arguments are 8, 16, or 32 (default 16 recommended).
+            <td>Number of bits in a pixel quantum (default 16). Specify bits per pixel quantum (red, green, blue, alpha components). Supported arguments are 8, 16, 32, or 64 (default 16 recommended).
             <br /><br />
             Ranges:
-            <pre class="p-2 mt-2 mb-2 bg-body border font-mono small"><code>Quantum Depth     Valid Range (Decimal)   Valid Range (Hex)
+            <pre class="p-2 mt-2 mb-2 bg-body border font-mono small"><code>Quantum Depth         Valid Range (Decimal)   Valid Range (Hex)
     8             0-255                   00-FF
    16             0-65535                 0000-FFFF
    32             0-4294967295            00000000-FFFFFFFF</code></pre>
-            Larger quantums require more memory and can run more slowly (e.g., 16-bit can be 15% to 50% slower and take twice as much memory as 8-bit). Virtual memory equation: <var>(5 * Quantum Depth * Rows * Columns) / 8</var>.</td>
+   64             0-18446744073709551615  0000000000000000-FFFFFFFFFFFFFFFF</code></pre>
+            Larger quantums require more memory and can run more slowly (e.g., 16-bit can be 15% to 50% slower and take twice as much memory as 8-bit). Virtual memory consumption per image is approximately: <var>(# channels * quantum-depth * rows * columns) / 8</var>.</td>
           </tr>
           <tr>
             <td class="ps-3 font-mono small">--enable-hdri</td>
