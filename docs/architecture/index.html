@@ -8,11 +8,12 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
   <div class="row mb-4">
     <div class="col-12">
       <div class="d-flex flex-wrap justify-content-center gap-2 p-2 bg-body-tertiary rounded-3 border">
+        <a href="#overview" class="btn btn-sm btn-outline-secondary border-0">Overview</a>
         <a href="#cache" class="btn btn-sm btn-outline-secondary border-0">Pixel Cache</a>
-        <a href="#properties" class="btn btn-sm btn-outline-secondary border-0">Properties & Profiles</a>
+        <a href="#properties" class="btn btn-sm btn-outline-secondary border-0">Properties &amp; Profiles</a>
         <a href="#multispectral" class="btn btn-sm btn-outline-secondary border-0">Multispectral</a>
-        <a href="#tera-pixel" class="btn btn-sm btn-outline-secondary border-0">Large Images</a>
         <a href="#stream" class="btn btn-sm btn-outline-secondary border-0">Streaming</a>
+        <a href="#tera-pixel" class="btn btn-sm btn-outline-secondary border-0">Large Images</a>
         <a href="#threads" class="btn btn-sm btn-outline-secondary border-0">Threads</a>
         <a href="#dynamic-throttle" class="btn btn-sm btn-outline-secondary border-0">Throttling</a>
         <a href="#distributed" class="btn btn-sm btn-outline-secondary border-0">Distributed</a>
@@ -45,7 +46,7 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
 
     <div class="card im-card p-4 mb-4">
       <p class="text-body-secondary mb-3">
-        An image typically consists of a rectangular region of pixels and metadata. To convert, edit, or compose an image in an efficient manner, we need convenient access to any pixel anywhere within the region (and sometimes outside the region). And in the case of an image sequence, we need access to any pixel of any region of any image in the sequence. However, there are hundreds of image formats such JPEG, TIFF, PNG, GIF, etc., that makes it difficult to access pixels on demand. Within these formats we find differences in:
+        An image typically consists of a rectangular region of pixels and metadata. To convert, edit, or compose an image efficiently, we need convenient access to any pixel anywhere within the region (and sometimes outside the region), as well as across any image in an image sequence. However, hundreds of image formats—such as JPEG, TIFF, PNG, and GIF—complicate on-demand pixel access due to differences in:
       </p>
       <div class="row g-3 mb-3">
         <div class="col-md-6">
@@ -64,25 +65,42 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
         </div>
       </div>
       <p class="text-body-secondary mb-0">
-        In addition, some image pixels may require attenuation, some formats permit more than one frame, and some formats contain vector graphics that must first be rasterized (converted from vector to pixels).
+        Additionally, some image pixels require attenuation, some formats permit multiple frames, and vector formats must first be rasterized into pixels.
       </p>
     </div>
 
-    <div class="card im-card p-4">
+    <div class="card im-card p-4 mb-4">
       <h5 class="fw-bold text-primary mb-3"><i class="bi bi-list-check me-2"></i>Processing Requirements</h5>
-      <p class="small text-body-secondary mb-3">An efficient implementation of an image processing algorithm may require we get or set:</p>
+      <p class="small text-body-secondary mb-3">An efficient implementation of an image processing algorithm may require getting or setting:</p>
       <ul class="list-unstyled row g-2 small text-body-secondary mb-0">
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> One pixel a time (e.g. pixel at location 10,3)</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> One pixel at a time (e.g. location 10,3)</li>
         <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A single scanline (e.g. all pixels from row 4)</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A few scanlines at once (e.g. pixel rows 4-7)</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A single column or columns of pixels</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> An arbitrary region of pixels from the image</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A pixel in random order (e.g. 14,15 and 640,480)</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Pixels from two different images</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A few scanlines at once (e.g. pixel rows 4–7)</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> A single column or columns of pixels (e.g. column 11)</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> An arbitrary region of pixels (e.g. 10,7 to 10,19)</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Pixels in random order (e.g. 14,15 and 640,480)</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Pixels from two different images (e.g. 5,1 in image 1 &amp; 2)</li>
         <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Pixels outside image boundaries (e.g. -1,-3)</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> High-dynamic range or floating-point components</li>
-        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Multi-threaded execution &amp; heterogeneous platforms</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Unsigned (e.g. 65311) or floating-point (e.g. 0.17836) components</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> High-dynamic range values, including negative (-0.007297) or out-of-range (&gt;65535) values</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> One or more pixels simultaneously across multiple threads</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> All pixels in memory for heterogeneous execution across CPUs, GPUs, and accelerators</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Channel traits specifying whether each channel is copied, updated, or blended</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Pixel masks defining which pixels are eligible to be updated</li>
+        <li class="col-md-6"><i class="bi bi-check2 text-success me-1"></i> Extra user-defined meta-channels left untouched by standard algorithms</li>
       </ul>
+    </div>
+
+    <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        To handle these varied formats and requirements, ImageMagick implements the <a href="#cache" class="text-decoration-none fw-semibold">pixel cache</a>, providing sequential or parallel on-demand access to any pixel inside an image region (<a href="#authentic-pixels" class="text-decoration-none fw-semibold">authentic pixels</a>), across image sequences, or outside image boundaries (<a href="#virtual-pixels" class="text-decoration-none fw-semibold">virtual pixels</a>).
+      </p>
+      <p class="text-body-secondary mb-3">
+        Alongside pixels, images carry <a href="#properties" class="text-decoration-none fw-semibold">properties and profiles</a>—such as width, height, depth, colorspace, author, comments, creation date, color management profiles, and EXIF, IPTC, 8BIM, or XMP metadata—accessible via command-line options or API calls.
+      </p>
+      <p class="text-body-secondary mb-0">
+        Although ImageMagick comprises nearly half a million lines of C code (plus millions of lines in optional delegate libraries like JPEG, PNG, and TIFF), most image processing boils down to reading and writing pixels and metadata. The sections below detail the pixel cache, metadata handling, <a href="#threads" class="text-decoration-none fw-semibold">multithreading</a>, <a href="#coders" class="text-decoration-none fw-semibold">image coders</a>, and custom <a href="#filters" class="text-decoration-none fw-semibold">filters</a>.
+      </p>
     </div>
   </section>
 
@@ -95,23 +113,30 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
 
     <div class="card im-card p-4 mb-4">
       <p class="text-body-secondary mb-3">
-        The ImageMagick pixel cache is a repository for image pixels with up to 64 channels. The channels are stored contiguously at the depth specified when ImageMagick was built. The channel depths are 8 bits-per-pixel component for the Q8 version of ImageMagick, 16 bits-per-pixel component for the Q16 version, and 32 bits-per-pixel component for the Q32 version. By default pixel components are 32-bit floating-bit <a href="/high-dynamic-range/" class="text-decoration-none fw-semibold">high dynamic-range</a> quantities. The channels can hold any value but typically contain red, green, blue, and alpha intensities or cyan, magenta, yellow, black and alpha intensities.
+        The ImageMagick pixel cache is a repository for image pixels with up to 64 channels stored contiguously at the build-time quantum depth: 8 bits per channel for Q8, 16 bits for Q16, and 32 bits for Q32. By default, pixel components are 32-bit floating-point <a href="/high-dynamic-range/" class="text-decoration-none fw-semibold">high dynamic-range (HDRI)</a> quantities. Channels typically hold red, green, blue, and alpha intensities—or cyan, magenta, yellow, black, and alpha—and can also store colormap indexes for colormapped images.
+      </p>
+      <p class="text-body-secondary mb-0">
+        Pixel cache storage may reside in heap memory, disk-backed memory-mapped files, or directly on disk. The cache is reference-counted: cloning an image copies only the cache properties, while the pixel data itself is copied only when you signal an intention to modify it (copy-on-write).
       </p>
     </div>
 
     <h4 class="fw-bold mb-3">Create the Pixel Cache</h4>
-    <p class="text-body-secondary mb-3">The pixel cache is associated with an image when it is created and it is initialized when you try to get or put pixels. Here are three common methods to associate a pixel cache with an image:</p>
-    
+    <p class="text-body-secondary mb-3">
+      The pixel cache is associated with an image upon creation and initialized when you first read or write pixels. While these examples use the <a href="/magick-core/" class="text-decoration-none fw-semibold">MagickCore API</a>, the same principles apply across all ImageMagick language bindings:
+    </p>
+
     <div class="row g-4 mb-4">
       <div class="col-md-4">
         <div class="card im-card h-100 p-3">
           <h6 class="fw-bold text-primary mb-2">Canvas Initialized</h6>
-          <p class="small text-body-secondary mb-2">Create canvas to background color:</p>
+          <p class="small text-body-secondary mb-2">Create a canvas initialized to a background color:</p>
           <div class="terminal-card">
             <div class="p-2 text-light font-mono small">
               image=AllocateImage(image_info);<br>
-              SetImageExtent(image,640,480);<br>
-              QueryMagickColor("red",...);<br>
+              if (SetImageExtent(image,640,480) == MagickFalse)<br>
+              &nbsp;&nbsp;{ /* an exception was thrown */ }<br>
+              (void) QueryMagickColor("red",<br>
+              &nbsp;&nbsp;&amp;image-&gt;background_color,&amp;image-&gt;exception);<br>
               SetImageBackgroundColor(image);
             </div>
           </div>
@@ -120,11 +145,13 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
       <div class="col-md-4">
         <div class="card im-card h-100 p-3">
           <h6 class="fw-bold text-primary mb-2">From Disk Image</h6>
-          <p class="small text-body-secondary mb-2">Create from a JPEG on disk:</p>
+          <p class="small text-body-secondary mb-2">Create from a JPEG image on disk:</p>
           <div class="terminal-card">
             <div class="p-2 text-light font-mono small">
-              strcpy(image_info-&gt;filename,"image.jpg");<br>
-              image=ReadImage(image_info,exception);
+              (void) strcpy(image_info-&gt;filename,"image.jpg");<br>
+              image=ReadImage(image_info,exception);<br>
+              if (image == (Image *) NULL)<br>
+              &nbsp;&nbsp;{ /* an exception was thrown */ }
             </div>
           </div>
         </div>
@@ -132,10 +159,12 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
       <div class="col-md-4">
         <div class="card im-card h-100 p-3">
           <h6 class="fw-bold text-primary mb-2">From Memory Blob</h6>
-          <p class="small text-body-secondary mb-2">Create from a memory blob:</p>
+          <p class="small text-body-secondary mb-2">Create from a memory-based image blob:</p>
           <div class="terminal-card">
             <div class="p-2 text-light font-mono small">
-              image=BlobToImage(blob_info,blob,extent,exception);
+              image=BlobToImage(blob_info,blob,extent,exception);<br>
+              if (image == (Image *) NULL)<br>
+              &nbsp;&nbsp;{ /* an exception was thrown */ }
             </div>
           </div>
         </div>
@@ -143,7 +172,7 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
     </div>
 
     <p class="text-body-secondary mb-3">
-      When the pixel cache is initialized, pixels are scaled from whatever bit depth they originated from to that required by the pixel cache. You can determine which version you have with the <a href="/command-line-options/#version" class="text-decoration-none fw-semibold">-version</a> option:
+      When initialized, pixels are scaled from their native bit depth to the pixel cache depth—for example, a 1-channel 1-bit monochrome PBM image scales to 8-bit gray in Q8 or 16-bit RGBA in Q16. While storing a 1-bit image at 16-bit depth trades storage and full-image buffering for uniform access, the convenience generally outweighs the overhead. Check your build quantum depth and features using <a href="/command-line-options/#version" class="text-decoration-none fw-semibold">-version</a>:
     </p>
 
     <div class="terminal-card mb-4">
@@ -160,15 +189,15 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
     </div>
 
     <h4 class="fw-bold mb-3" id="authentic-pixels">Access the Pixel Cache</h4>
-    <p class="text-body-secondary mb-3">Once associated, use these methods to access pixels in the cache:</p>
+    <p class="text-body-secondary mb-3">Pixels inside the image region are <a href="#authentic-pixels" class="text-decoration-none fw-semibold">authentic pixels</a>, while those outside are <a href="#virtual-pixels" class="text-decoration-none fw-semibold">virtual pixels</a>. Access them with:</p>
     <ul class="list-unstyled d-flex flex-column gap-2 small text-body-secondary mb-4">
-      <li><i class="bi bi-check2 text-success me-1"></i> <strong>GetVirtualPixels():</strong> gets pixels you do not intend to modify or outside region (<a href="#virtual-pixels">virtual pixels</a>).</li>
-      <li><i class="bi bi-check2 text-success me-1"></i> <strong>GetAuthenticPixels():</strong> gets pixels you intend to modify (<a href="#authentic-pixels">authentic pixels</a>).</li>
-      <li><i class="bi bi-check2 text-success me-1"></i> <strong>QueueAuthenticPixels():</strong> queue pixels you intend to set.</li>
-      <li><i class="bi bi-check2 text-success me-1"></i> <strong>SyncAuthenticPixels():</strong> update the pixel cache with modified pixels.</li>
+      <li><i class="bi bi-check2 text-success me-1"></i> <strong>GetVirtualPixels():</strong> gets pixels you do not intend to modify or pixels outside the image region (e.g. at <code>-1,-3</code>).</li>
+      <li><i class="bi bi-check2 text-success me-1"></i> <strong>GetAuthenticPixels():</strong> gets existing pixels inside the image bounds that you intend to modify.</li>
+      <li><i class="bi bi-check2 text-success me-1"></i> <strong>QueueAuthenticPixels():</strong> queues pixels you intend to overwrite without reading existing values first (slightly faster when initializing pixels).</li>
+      <li><i class="bi bi-check2 text-success me-1"></i> <strong>SyncAuthenticPixels():</strong> pushes any modified pixels from intermediate buffers back into the pixel cache.</li>
     </ul>
 
-    <p class="text-body-secondary mb-3">Here is a typical MagickCore code snippet copying pixels and decreasing intensity by 10%:</p>
+    <p class="text-body-secondary mb-3">Here is a typical <a href="/magick-core/" class="text-decoration-none fw-semibold">MagickCore</a> snippet copying pixels and reducing intensity by 10%:</p>
     <div class="terminal-card mb-4">
       <div class="terminal-header">
         <div class="terminal-dot bg-danger"></div>
@@ -177,15 +206,25 @@ description: "Discover the architecture of ImageMagick, including its pixel cach
         <span class="small text-secondary font-mono ms-2">pixel-manipulation.c</span>
       </div>
       <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
-        <pre class="overflow-auto p-3 mb-2 text-body-secondary bg-body-tertiary" style="max-height:75svh;"><code>const Quantum *p;
-Quantum *q;
-ssize_t x, y;<br>
+        <pre class="mb-0 text-light"><code>const Quantum
+  *p;
+
+Quantum
+  *q;
+
+ssize_t
+  x,
+  y;
+
 destination=CloneImage(source,source-&gt;columns,source-&gt;rows,MagickTrue,exception);
+if (destination == (Image *) NULL)
+  { /* an exception was thrown */ }
 for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
 {
   p=GetVirtualPixels(source,0,y,source-&gt;columns,1,exception);
   q=GetAuthenticPixels(destination,0,y,destination-&gt;columns,1,exception);
-  if ((p == (const Quantum *) NULL) || (q == (Quantum *) NULL)) break;
+  if ((p == (const Quantum *) NULL) || (q == (Quantum *) NULL))
+    break;
   for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)
   {
     SetPixelRed(image,90*p-&gt;red/100,q);
@@ -195,18 +234,47 @@ for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
     p+=GetPixelChannels(source);
     q+=GetPixelChannels(destination);
   }
-  if (SyncAuthenticPixels(destination,exception) == MagickFalse) break;
+  if (SyncAuthenticPixels(destination,exception) == MagickFalse)
+    break;
 }
-if (y &lt; (ssize_t) source->rows)
-  { /* an exception was thrown */ }
-</code></pre>
+if (y &lt; (ssize_t) source-&gt;rows)
+  { /* an exception was thrown */ }</code></pre>
       </div>
     </div>
-    <p>Use GetVirtualMetacontent() to retrieve any meta-content associated with each pixel, for example, an infrared channel.</p>
+
+    <p class="text-body-secondary mb-3">
+      Because the pixel cache manager may stage pixels in an intermediate buffer, you must call <code>SyncAuthenticPixels()</code> after updates—which is why reading or updating a single scanline or a few scanlines at a time is recommended. Note that <code>GetAuthenticPixels()</code> throws an exception if requested coordinates fall outside the image bounds (e.g. row 480 on a 640&times;480 image, where rows are 0–479), whereas <code>GetVirtualPixels()</code> seamlessly returns out-of-bounds pixels (e.g. <code>GetVirtualPixels(source,-3,-3,source-&gt;columns+3,6,exception)</code>).
+    </p>
+    <p class="text-body-secondary mb-4">
+      You can also associate arbitrary <em>metacontent</em> with each pixel, accessed via <code>GetVirtualMetacontent()</code> (read-only) or <code>GetAuthenticMetacontent()</code> (read/write):
+    </p>
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">metacontent.c</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <pre class="mb-0 text-light"><code>const void
+  *metacontent;
+
+for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
+{
+  p=GetVirtualPixels(source,0,y,source-&gt;columns,1,exception);
+  if (p == (const Quantum *) NULL)
+    break;
+  metacontent=GetVirtualMetacontent(source);
+  /* print meta content here */
+}
+if (y &lt; (ssize_t) source-&gt;rows)
+  { /* an exception was thrown */ }</code></pre>
+      </div>
+    </div>
 
     <h4 class="fw-bold mb-3" id="virtual-pixels">Virtual Pixels</h4>
     <p class="text-body-secondary mb-3">
-      A virtual pixel defines what value should be returned when an operation needs a pixel that lies outside the actual image boundaries, such as during blurs, distortions, resizes, or neighborhood-based filters.  Access to virtual pixels is controlled by the SetImageVirtualPixelMethod() method or <a href="/command-line-options/#virtual-pixel" class="text-decoration-none fw-semibold">-virtual-pixel</a> option. Recognized methods include:
+      Many neighborhood-based algorithms (blurs, distortions, resizes, convolutions) require pixels surrounding edge pixels. Virtual pixels eliminate custom edge-handling logic by defining what value is returned outside image boundaries. Configure them via <code>SetImageVirtualPixelMethod()</code> or <a href="/command-line-options/#virtual-pixel" class="text-decoration-none fw-semibold">-virtual-pixel</a>:
     </p>
 
     <div class="card im-card overflow-hidden mb-4">
@@ -219,21 +287,21 @@ if (y &lt; (ssize_t) source->rows)
             </tr>
           </thead>
           <tbody class="font-mono small">
-            <tr><td>background</td><td>surrounding area is background color</td></tr>
-            <tr><td>black</td><td>surrounding area is black</td></tr>
+            <tr><td>background</td><td>the area surrounding the image is the background color</td></tr>
+            <tr><td>black</td><td>the area surrounding the image is black</td></tr>
             <tr><td>checker-tile</td><td>alternate squares with image and background color</td></tr>
             <tr><td>dither</td><td>non-random 32x32 dithered pattern</td></tr>
-            <tr><td>edge</td><td>extend edge pixel toward infinity (default)</td></tr>
-            <tr><td>gray</td><td>surrounding area is gray</td></tr>
-            <tr><td>horizontal-tile</td><td>horizontally tile image, background color above/below</td></tr>
-            <tr><td>horizontal-tile-edge</td><td>horizontally tile image and replicate side edge pixels</td></tr>
-            <tr><td>mirror</td><td>mirror tile image</td></tr>
-            <tr><td>random</td><td>choose random pixel from image</td></tr>
-            <tr><td>tile</td><td>tile image</td></tr>
-            <tr><td>transparent</td><td>surrounding area is transparent blackness</td></tr>
-            <tr><td>vertical-tile</td><td>vertically tile image, sides are background color</td></tr>
-            <tr><td>vertical-tile-edge</td><td>vertically tile image and replicate side edge pixels</td></tr>
-            <tr><td>white</td><td>surrounding area is white</td></tr>
+            <tr><td>edge</td><td>extend the edge pixel toward infinity (default)</td></tr>
+            <tr><td>gray</td><td>the area surrounding the image is gray</td></tr>
+            <tr><td>horizontal-tile</td><td>horizontally tile the image, background color above/below</td></tr>
+            <tr><td>horizontal-tile-edge</td><td>horizontally tile the image and replicate the side edge pixels</td></tr>
+            <tr><td>mirror</td><td>mirror tile the image</td></tr>
+            <tr><td>random</td><td>choose a random pixel from the image</td></tr>
+            <tr><td>tile</td><td>tile the image</td></tr>
+            <tr><td>transparent</td><td>the area surrounding the image is transparent blackness</td></tr>
+            <tr><td>vertical-tile</td><td>vertically tile the image, sides are background color</td></tr>
+            <tr><td>vertical-tile-edge</td><td>vertically tile the image and replicate the side edge pixels</td></tr>
+            <tr><td>white</td><td>the area surrounding the image is white</td></tr>
           </tbody>
         </table>
       </div>
@@ -241,7 +309,10 @@ if (y &lt; (ssize_t) source->rows)
 
     <h4 class="fw-bold mb-3">Cache Storage and Resource Requirements</h4>
     <p class="text-body-secondary mb-3">
-      Pixel cache storage scales with image area and component bit depth. Large images automatically spill from heap memory to disk, and are optionally memory-mapped. Resource limits can be tuned via policies (<a href="/security-policy/" class="text-decoration-none fw-semibold">security policy</a>, <a href="/source/policy-open.xml">policy.xml</a>), environment variables, or <a href="/command-line-options/#limit" class="text-decoration-none fw-semibold">-limit</a>.
+      Pixel cache size scales as <em>width &times; height &times; (bit-depth / 8) &times; channels</em>: a 640&times;480 non-HDRI Q16 RGBA image consumes ~2.3 MiB, whereas a 25,000&times;25,000 image requires ~4.7 GiB. ImageMagick automatically allocates pixel caches in heap memory first, spilling to disk-backed memory-mapped files (up to 5&times; faster than standard disk I/O) and then standard disk I/O (up to 1000&times; slower than RAM) as limits are reached.
+    </p>
+    <p class="text-body-secondary mb-3">
+      Resource limits apply globally across all open images in an ImageMagick invocation (though certain algorithms and external delegate libraries such as JPEG or TIFF do not enforce them). Configure limits via <a href="/security-policy/" class="text-decoration-none fw-semibold">policy.xml</a>, <a href="/resources/#environment" class="text-decoration-none fw-semibold">environment variables</a>, <a href="/command-line-options/#limit" class="text-decoration-none fw-semibold">-limit</a>, or <code>SetMagickResourceLimit()</code>:
     </p>
 
     <div class="card im-card overflow-hidden mb-4">
@@ -254,24 +325,204 @@ if (y &lt; (ssize_t) source->rows)
             </tr>
           </thead>
           <tbody class="font-mono small">
-            <tr><td>width</td><td>maximum width of an image</td></tr>
-            <tr><td>height</td><td>maximum height of an image</td></tr>
-            <tr><td>area</td><td>maximum area in bytes in cache memory before spilling to disk</td></tr>
-            <tr><td>memory</td><td>maximum heap memory allocated for pixel cache</td></tr>
-            <tr><td>map</td><td>maximum memory map allocation for pixel cache</td></tr>
-            <tr><td>disk</td><td>maximum disk space permitted for pixel cache</td></tr>
-            <tr><td>files</td><td>maximum number of open pixel cache files</td></tr>
-            <tr><td>thread</td><td>maximum parallel threads permitted</td></tr>
-            <tr><td>time</td><td>maximum seconds execution time permitted</td></tr>
+            <tr><td>width</td><td>maximum width of an image; exceeding throws an exception and stops processing</td></tr>
+            <tr><td>height</td><td>maximum height of an image; exceeding throws an exception and stops processing</td></tr>
+            <tr><td>area</td><td>maximum area in bytes in cache memory before automagically spilling to disk/memory-map</td></tr>
+            <tr><td>memory</td><td>maximum heap memory in bytes allocated for the pixel cache</td></tr>
+            <tr><td>map</td><td>maximum memory-map allocation in bytes for the pixel cache</td></tr>
+            <tr><td>disk</td><td>maximum disk space in bytes permitted for the pixel cache; exceeding throws a fatal exception</td></tr>
+            <tr><td>files</td><td>maximum open pixel cache files; excess disk caches close and reopen on demand</td></tr>
+            <tr><td>thread</td><td>maximum parallel threads permitted (defaults to host CPU core count; set to 1 for single-threaded execution)</td></tr>
+            <tr><td>time</td><td>maximum execution time in seconds before throwing an exception and halting</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <p class="text-body-secondary mb-3">To check current resource settings, run:</p>
+    <p class="text-body-secondary mb-3">Inspect active resource limits with <code>identify -list resource</code>, or trace live cache allocations with <a href="/command-line-options/#debug" class="text-decoration-none fw-semibold">-debug cache</a>:</p>
     <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">resource-and-debug.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <pre class="mb-0 text-light"><samp><span class="text-success">$</span> identify -list resource
+Resource limits:
+  Width: 100MP
+  Height: 100MP
+  Area: 25.181GB
+  Memory: 11.726GiB
+  Map: 23.452GiB
+  Disk: unlimited
+  File: 768
+  Thread: 12
+  Throttle: 0
+  Time: unlimited
+
+<span class="text-success">$</span> magick -debug cache logo: -sharpen 3x2 null:
+2016-12-17T13:33:42-05:00 0:00.000 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
+  open LOGO[0] (Heap Memory, 640x480x4 4.688MiB)
+2016-12-17T13:33:42-05:00 0:00.010 0.000u 7.0.0 Cache magick: cache.c/OpenPixelCache/3834/Cache
+  open LOGO[0] (Heap Memory, 640x480x3 3.516MiB)</samp></pre>
+      </div>
+    </div>
+
+    <p class="text-body-secondary mb-3">
+      For public web services such as <a href="https://magickstudio.imagemagick.org/" class="text-decoration-none fw-semibold">MagickStudio</a>, a hardened <a href="/source/policy-open.xml" class="text-decoration-none fw-semibold">policy.xml</a> prevents denial-of-service and unauthorized file or delegate execution (note that prior to ImageMagick 7.0.1-8, delegate restrictions used <code>domain="coder"</code> instead of <code>domain="delegate"</code>):
+    </p>
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">policy.xml</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <pre class="mb-0 text-light"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE policymap [
+  &lt;!ELEMENT policymap (policy)*&gt;
+  &lt;!ATTLIST policymap xmlns CDATA #FIXED ""&gt;
+  &lt;!ELEMENT policy EMPTY&gt;
+  &lt;!ATTLIST policy
+    xmlns   CDATA   #FIXED ""
+    domain  NMTOKEN #REQUIRED
+    name    NMTOKEN #IMPLIED
+    pattern CDATA   #IMPLIED
+    rights  NMTOKEN #IMPLIED
+    stealth NMTOKEN #IMPLIED
+    value   CDATA   #IMPLIED&gt;
+]&gt;
+&lt;policymap&gt;
+  &lt;!-- Resource Limits --&gt;
+  &lt;policy domain="resource" name="thread" value="4"/&gt;
+  &lt;policy domain="resource" name="time" value="60"/&gt;
+  &lt;policy domain="resource" name="file" value="768"/&gt;
+  &lt;policy domain="resource" name="memory" value="256MiB"/&gt;
+  &lt;policy domain="resource" name="map" value="512MiB"/&gt;
+  &lt;policy domain="resource" name="area" value="32MP"/&gt;
+  &lt;policy domain="resource" name="disk" value="1GiB"/&gt;
+  &lt;policy domain="resource" name="list-length" value="16"/&gt;
+  &lt;policy domain="resource" name="width" value="4KP"/&gt;
+  &lt;policy domain="resource" name="height" value="4KP"/&gt;
+  &lt;policy domain="resource" name="throttle" value="2"/&gt;
+  &lt;policy domain="resource" name="dynamic-throttle" value="false"/&gt;
+
+  &lt;!-- Pixel Cache &amp; System Security --&gt;
+  &lt;policy domain="cache" name="memory-map" value="anonymous"/&gt;
+  &lt;policy domain="cache" name="synchronize" value="true"/&gt;
+  &lt;policy domain="system" name="shred" value="1"/&gt;
+  &lt;policy domain="system" name="memory-map" value="anonymous"/&gt;
+  &lt;policy domain="system" name="max-memory-request" value="256MiB"/&gt;
+  &lt;policy domain="system" name="symlink" rights="none" pattern="follow"/&gt;
+  &lt;policy domain="system" name="svg" rights="none" pattern="substitute-entities"/&gt;
+
+  &lt;!-- Delegate, Filter, Path &amp; Module Restrictions --&gt;
+  &lt;policy domain="delegate" rights="none" pattern="*"/&gt;
+  &lt;policy domain="filter" rights="none" pattern="*"/&gt;
+  &lt;policy domain="path" rights="none" pattern="-"/&gt;
+  &lt;policy domain="path" rights="none" pattern="[Ff][Dd]:*"/&gt;
+  &lt;policy domain="path" rights="none" pattern="/etc/*"/&gt;
+  &lt;policy domain="path" rights="none" pattern="*../*"/&gt;
+  &lt;policy domain="path" rights="none" pattern="@*"/&gt;
+  &lt;policy domain="path" rights="none" pattern="|*"/&gt;
+  &lt;policy domain="module" rights="none" pattern="*"/&gt;
+  &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}"/&gt;
+&lt;/policymap&gt;</code></pre>
+      </div>
+    </div>
+
+    <h4 class="fw-bold mb-3">Distributed Pixel Cache</h4>
+    <p class="text-body-secondary mb-3">
+      A distributed pixel cache extends the local cache across one or more remote servers so very large images can scale beyond single-host memory and disk limits. When local cache resources are exhausted, ImageMagick marshals pixels over the network to remote pixel servers (trading network latency for capacity):
+    </p>
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">distributed-cache.sh</span>
+      </div>
       <div class="p-3 text-light font-mono small">
-        <span class="text-success">$</span> identify -list resource
+        <span class="text-success">$</span> magick -distribute-cache 6668 &amp;  <span class="text-secondary"># start on 192.168.100.50</span><br>
+        <span class="text-success">$</span> magick -define registry:cache:hosts=192.168.100.50:6668 myimage.jpg -sharpen 5x2 mimage.png
+      </div>
+    </div>
+
+    <h4 class="fw-bold mb-3">Cache Views</h4>
+    <p class="text-body-secondary mb-3">
+      Standard accessors (<code>GetVirtualPixels()</code>, <code>GetAuthenticPixels()</code>, <code>QueueAuthenticPixels()</code>, <code>SyncAuthenticPixels()</code>) operate on a single cache region per image at a time. To access multiple regions simultaneously—or across multiple <a href="#threads" class="text-decoration-none fw-semibold">threads of execution</a>—open a <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/cache-view.h" class="text-decoration-none fw-semibold">cache view</a> and destroy it when finished:
+    </p>
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">cache-view.c</span>
+      </div>
+      <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+        <pre class="mb-0 text-light"><code>CacheView
+  *first_row,
+  *last_row;
+
+first_row=AcquireVirtualCacheView(source,exception);
+last_row=AcquireVirtualCacheView(source,exception);
+for (y=0; y &lt; (ssize_t) source-&gt;rows; y++)
+{
+  const Quantum
+    *p,
+    *q;
+
+  p=GetCacheViewVirtualPixels(first_row,0,y,source-&gt;columns,1,exception);
+  q=GetCacheViewVirtualPixels(last_row,0,source-&gt;rows-y-1,source-&gt;columns,1,exception);
+  if ((p == (const Quantum *) NULL) || (q == (const Quantum *) NULL))
+    break;
+  for (x=0; x &lt; (ssize_t) source-&gt;columns; x++)
+  {
+    /* do something with p &amp; q here */
+  }
+}
+last_row=DestroyCacheView(last_row);
+first_row=DestroyCacheView(first_row);
+if (y &lt; (ssize_t) source-&gt;rows)
+  { /* an exception was thrown */ }</code></pre>
+      </div>
+    </div>
+
+    <h4 class="fw-bold mb-3">Magick Pixel Cache (MPC) Format</h4>
+    <p class="text-body-secondary mb-3">
+      The native Magick Pixel Cache (MPC) format eliminates decode/encode overhead by saving two files: <code>.mpc</code> (image properties) and <code>.cache</code> (raw native pixel cache). When read back, ImageMagick memory-maps the <code>.cache</code> file directly with near-zero decoding overhead—ideal for write-once, read-many workflows (such as repeated crops on web servers like <a href="https://magickstudio.imagemagick.org/scripts/MagickStudio.cgi" class="text-decoration-none fw-semibold">MagickStudio</a>):
+    </p>
+    <div class="terminal-card mb-4">
+      <div class="terminal-header">
+        <div class="terminal-dot bg-danger"></div>
+        <div class="terminal-dot bg-warning"></div>
+        <div class="terminal-dot bg-success"></div>
+        <span class="small text-secondary font-mono ms-2">mpc-workflow.sh</span>
+      </div>
+      <div class="p-3 text-light font-mono small">
+        <span class="text-success">$</span> magick image.tif image.mpc<br>
+        <span class="text-success">$</span> magick image.mpc -crop 100x100+0+0 +repage 1.png<br>
+        <span class="text-success">$</span> magick image.mpc -crop 100x100+100+0 +repage 2.png<br>
+        <span class="text-success">$</span> magick image.mpc -crop 100x100+200+0 +repage 3.png
+      </div>
+    </div>
+
+    <div class="card im-card p-4">
+      <h5 class="fw-bold text-primary mb-3"><i class="bi bi-lightbulb me-2"></i>Pixel Cache Best Practices</h5>
+      <ul class="list-unstyled d-flex flex-column gap-2 small text-body-secondary mb-3">
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Prefer sequential row access:</strong> Access a single scanline or a few scanlines at a time, top-to-bottom, rather than column-by-column or random regions.</li>
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Use Queue over Get when initializing:</strong> Call <code>QueueAuthenticPixels()</code> / <code>QueueCacheViewAuthenticPixels()</code> when setting new pixels to avoid an unnecessary read, and always call <code>SyncAuthenticPixels()</code> / <code>SyncCacheViewAuthenticPixels()</code> afterward.</li>
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Use Cache Views for concurrency:</strong> Direct accessors are slightly faster for single-region, single-thread work, but cache views are mandatory for multi-region or multithreaded access.</li>
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Stay in-bounds &amp; in-memory:</strong> Requesting in-bounds pixels is faster than virtual pixels, and keeping the cache in heap memory avoids disk I/O penalties (up to 1000&times; slower).</li>
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Choose Q8 vs. Q16/HDRI intentionally:</strong> Q8 uses half the cache memory of Q16 and executes faster; HDRI stores 32-bit floats without clamping out-of-band values.</li>
+        <li><i class="bi bi-check2 text-success me-1"></i> <strong>Point large disk caches to fast storage:</strong> Set <code>registry:temporary-path</code> (defaulting to <code>/tmp</code> on Linux or <code>c:/temp</code> on Windows) to a partition with ample free space.</li>
+      </ul>
+      <div class="terminal-card">
+        <div class="p-2 text-light font-mono small">
+          <span class="text-success">$</span> magick -limit memory 2GB -limit map 4GB -define registry:temporary-path=/data/tmp ...
+        </div>
       </div>
     </div>
   </section>
@@ -284,17 +535,38 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        Images have metadata associated with them in the form of properties (width, height, description) and profiles (EXIF, IPTC, color management). Get, set, or update properties using GetImageProperty() and SetImageProperty():
+        Core image attributes are stored directly on the <code>Image</code> structure (e.g. <code>image-&gt;columns</code>, <code>image-&gt;rows</code>), while arbitrary metadata properties (such as comments or descriptions) are managed via <code>GetImageProperty()</code> and <code>SetImageProperty()</code>. ImageMagick also supports stealth properties called <em>artifacts</em> via <code>GetImageArtifact()</code> and <code>SetImageArtifact()</code>, which are not exported to output image files.
       </p>
-      <div class="terminal-card mb-3">
-        <div class="p-3 text-light font-mono small">
-          SetImageProperty(image,"comment","This space for rent");<br>
-          comment=GetImageProperty(image,"comment");
+      <p class="text-body-secondary mb-3">
+        Binary profiles (EXIF, IPTC, ICC color profiles, 8BIM, XMP) are managed with <code>GetImageProfile()</code>, <code>SetImageProfile()</code>, and <code>ProfileImage()</code>:
+      </p>
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">properties-and-profiles.c</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><code>/* Properties */
+const char *comment;
+(void) SetImageProperty(image,"comment","This space for rent");
+comment=GetImageProperty(image,"comment");
+if (comment != (const char *) NULL)
+  (void) printf("Image comment: %s
+",comment);
+
+/* Profiles */
+StringInfo *profile;
+profile=AcquireStringInfo(length);
+SetStringInfoDatum(profile,my_exif_profile);
+(void) SetImageProfile(image,"EXIF",profile);
+DestroyStringInfo(profile);
+profile=GetImageProfile(image,"EXIF");
+if (profile != (StringInfo *) NULL)
+  (void) PrintStringInfo(stdout,"EXIF",profile);</code></pre>
         </div>
       </div>
-      <p class="text-body-secondary mb-0">
-        Profiles are handled via GetImageProfile(), SetImageProfile(), and ProfileImage().
-      </p>
     </div>
   </section>
 
@@ -305,8 +577,11 @@ if (y &lt; (ssize_t) source->rows)
       <h2 class="h3 fw-bold mb-0">Multispectral Imagery</h2>
     </div>
     <div class="card im-card p-4">
+      <p class="text-body-secondary mb-3">
+        ImageMagick supports <a href="/multispectral-imagery/" class="text-decoration-none fw-semibold">multispectral imagery</a> where all channels share the same dimensions and pixel count. PSD, TIFF, MIFF, MPC, and FTXT fully support multispectral images up to 31 bands (21 meta channels), or up to 62 bands (52 meta channels) when built with <code>--enable-64bit-channel-masks</code>.
+      </p>
       <p class="text-body-secondary mb-0">
-        ImageMagick supports <a href="/multispectral-imagery/" class="text-decoration-none fw-semibold">multispectral imagery</a> where all channels have the same dimensions and number of pixels. PSD, TIFF, MIFF, MPC, and FTXT fully support multispectral images up to 31 bands (21 meta channels), or up to 62 bands (52 meta channels) if built with <code>--enable-64bit-channel-masks</code>.
+        If you have a multispectral use case not currently supported by a given image format, share it on the <a href="https://github.com/ImageMagick/ImageMagick/discussions" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">ImageMagick discussion forum</a> for consideration in a future release.
       </p>
     </div>
   </section>
@@ -319,8 +594,35 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        Pixel streaming allows consuming pixels as they are read/written, scaling resource usage with image width rather than area. Use ReadStream() or WriteStream(), or the lightweight <a href="/stream/" class="text-decoration-none fw-semibold">stream</a> tool.
+        Pixel streaming processes pixels row-by-row as they are read or written. Unlike the pixel cache—whose memory scales with image <em>area</em>—pixel streaming scales with image <em>width</em>, though pixels are not persisted in memory once consumed. Use <code>ReadStream()</code> or <code>WriteStream()</code> with a callback in MagickCore, or use the standalone <a href="/stream/" class="text-decoration-none fw-semibold">stream</a> CLI utility to extract raw pixel components from large images (note that a few formats, such as PSD, do not store pixels in standard top-to-bottom, left-to-right scanline order):
       </p>
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">read-stream.c</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><code>static size_t StreamPixels(const Image *image,const void *pixels,const size_t columns)
+{
+  const Quantum *p;
+  MyData *my_data;
+
+  my_data=(MyData *) image-&gt;client_data;
+  p=(const Quantum *) pixels;
+  if (p != (const Quantum *) NULL)
+    {
+      /* process pixels here */
+    }
+  return(columns);
+}
+
+/* Invoke the pixel stream */
+image_info-&gt;client_data=(void *) MyData;
+image=ReadStream(image_info,&amp;StreamPixels,exception);</code></pre>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -332,11 +634,30 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        ImageMagick supports mega- to tera-pixel image sizes. When memory is exhausted, temporary disk caches are utilized. You can monitor large image processing or offload tasks to a distributed pixel cache across remote servers.
+        ImageMagick supports mega- to tera-pixel images—theoretically up to 31 million rows/columns on 32-bit systems and 31 trillion on 64-bit systems, bounded by host resources and format limits (for instance, Photoshop PSD files cap dimensions at 300,000 pixels). Because disk-backed caches are roughly 1000&times; slower than RAM, use resource limits, progress monitoring, fast temporary storage, or remote cache servers when scaling up:
       </p>
       <div class="terminal-card">
-        <div class="p-3 text-light font-mono small">
-          <span class="text-success">$</span> magick logo: -resize 250000x250000 logo.miff
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">tera-pixel.sh</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><samp><span class="text-secondary"># Resize to 250,000x250,000 using a custom temporary partition</span>
+<span class="text-success">$</span> magick -define registry:temporary-path=/data/tmp logo: -resize 250000x250000 logo.miff
+
+<span class="text-secondary"># Force pixels to memory-mapped disk or purely on disk (-limit area 0)</span>
+<span class="text-success">$</span> magick -define registry:temporary-path=/data/tmp -limit memory 16mb logo: -resize 250000x250000 logo.miff
+<span class="text-success">$</span> magick -define registry:temporary-path=/data/tmp -limit area 0 logo: -resize 250000x250000 logo.miff
+
+<span class="text-secondary"># Monitor long-running disk-backed operations</span>
+<span class="text-success">$</span> magick -monitor -limit memory 2GiB -limit map 4GiB -define registry:temporary-path=/data/tmp   logo: -resize 250000x250000 logo.miff
+
+<span class="text-secondary"># Offload across multiple distributed pixel cache hosts</span>
+<span class="text-success">$</span> magick -distribute-cache 6668 &amp;  <span class="text-secondary"># on 192.168.100.50</span>
+<span class="text-success">$</span> magick -distribute-cache 6668 &amp;  <span class="text-secondary"># on 192.168.100.51</span>
+<span class="text-success">$</span> magick -limit memory 2mb -limit map 2mb -limit disk 2gb   -define registry:cache:hosts=192.168.100.50:6668,192.168.100.51:6668   myhugeimage.jpg -sharpen 5x2 myhugeimage.png</samp></pre>
         </div>
       </div>
     </div>
@@ -348,10 +669,84 @@ if (y &lt; (ssize_t) source->rows)
       <i class="bi bi-cpu fs-4 text-primary"></i>
       <h2 class="h3 fw-bold mb-0">Threads of Execution</h2>
     </div>
-    <div class="card im-card p-4">
+    <div class="card im-card p-4 mb-4">
       <p class="text-body-secondary mb-3">
-        Many internal algorithms use OpenMP multi-threading. When writing custom multithreaded code using MagickCore, use <strong>cache views</strong> (e.g., AcquireVirtualCacheView()) rather than direct pixel cache accessors to ensure thread safety.
+        Many internal ImageMagick algorithms are multithreaded with <a href="/openmp/" class="text-decoration-none fw-semibold">OpenMP</a>. While higher-level APIs like <a href="/magick-wand/" class="text-decoration-none fw-semibold">MagickWand</a> are thread-safe, MagickCore's direct pixel accessors (<code>GetVirtualPixels()</code>, <code>GetAuthenticPixels()</code>, <code>QueueAuthenticPixels()</code>, <code>SyncAuthenticPixels()</code>) are not safe across multiple concurrent threads outside an internal OpenMP loop. Always acquire a separate <strong>cache view</strong> per thread (e.g. <code>AcquireVirtualCacheView()</code> / <code>GetCacheViewAuthenticPixels()</code>), or use <a href="/magick-wand/#wand-view" class="text-decoration-none fw-semibold">wand views</a> / <a href="/magick-core/#image-view" class="text-decoration-none fw-semibold">image views</a> for row-parallel callbacks.
       </p>
+      <p class="text-body-secondary mb-3">
+        Note that if your OpenMP application dynamically increases its thread count, do so <em>before</em> invoking ImageMagick APIs. On macOS or older Linux systems where mixing POSIX threads and OpenMP causes conflicts, build with <code>--disable-openmp</code>. You can also reduce lock contention with <code>--with-tcmalloc</code>.
+      </p>
+
+      <div class="terminal-card mb-4">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">openmp-cache-view.c</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><code>CacheView *image_view;
+MagickBooleanType status = MagickTrue;
+ssize_t y;
+
+image_view=AcquireVirtualCacheView(image,exception);
+#pragma omp parallel for schedule(static,4) shared(status)
+for (y=0; y &lt; (ssize_t) image-&gt;rows; y++)
+{
+  Quantum *q;
+  ssize_t x;
+  void *metacontent;
+
+  if (status == MagickFalse)
+    continue;
+  q=GetCacheViewAuthenticPixels(image_view,0,y,image-&gt;columns,1,exception);
+  if (q == (Quantum *) NULL)
+    {
+      status=MagickFalse;
+      continue;
+    }
+  metacontent=GetCacheViewAuthenticMetacontent(image_view);
+  for (x=0; x &lt; (ssize_t) image-&gt;columns; x++)
+  {
+    SetPixelRed(image,...,q);
+    SetPixelGreen(image,...,q);
+    SetPixelBlue(image,...,q);
+    SetPixelAlpha(image,...,q);
+    if (metacontent != NULL)
+      metacontent[indexes+x]=...;
+    q+=GetPixelChannels(image);
+  }
+  if (SyncCacheViewAuthenticPixels(image_view,exception) == MagickFalse)
+    status=MagickFalse;
+}
+image_view=DestroyCacheView(image_view);</code></pre>
+        </div>
+      </div>
+
+      <h5 class="fw-bold text-primary mb-2">Threading Performance &amp; Tuning</h5>
+      <p class="text-body-secondary mb-3">
+        By default, ImageMagick sets threads to the host's logical CPU count. On virtual hosts with capped vCPUs or hyperthreaded CPUs where hyperthreads add contention, constrain threads via <code>MAGICK_THREAD_LIMIT</code>, <code>-limit thread</code>, or <code>policy.xml</code>, and verify the sweet spot with <code>-bench</code>:
+      </p>
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">thread-benchmark.sh</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><samp><span class="text-success">$</span> export MAGICK_THREAD_LIMIT=6
+<span class="text-success">$</span> magick -bench 10 model.png -sharpen 5x2 null:
+Performance[1]: 10i 1.135ips 1.000e 8.760u 0:08.810
+Performance[2]: 10i 2.020ips 0.640e 9.190u 0:04.950
+Performance[3]: 10i 2.786ips 0.710e 9.400u 0:03.590
+Performance[4]: 10i 3.378ips 0.749e 9.580u 0:02.960
+Performance[5]: 10i 4.032ips 0.780e 9.580u 0:02.480
+Performance[6]: 10i 4.566ips 0.801e 9.640u 0:02.190
+Performance[7]: 10i 3.788ips 0.769e 10.980u 0:02.640
+Performance[12]: 10i 4.525ips 0.799e 18.320u 0:02.210</samp></pre>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -363,7 +758,7 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        Enable dynamic throttling to automatically introduce slight delays between processing scanlines based on system load average, preventing resource exhaustion under heavy workloads:
+        Enable dynamic throttling to automatically introduce slight delays between processing scanlines based on your system's current load average, preventing resource exhaustion under heavy workloads:
       </p>
       <div class="terminal-card">
         <div class="p-3 text-light font-mono small">
@@ -381,11 +776,19 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        ImageMagick supports heterogeneous distributed processing using the <a href="https://en.wikipedia.org/wiki/OpenCL" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">OpenCL</a> framework across CPUs, GPUs, and accelerators. Verify OpenCL availability with:
+        ImageMagick supports heterogeneous distributed processing via the <a href="https://en.wikipedia.org/wiki/OpenCL" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">OpenCL</a> framework, executing kernels across CPUs, GPUs, and accelerators for order-of-magnitude speed-ups. If an accelerator is unavailable or fails to respond (such as triggering Windows GPU Timeout Detection and Recovery, which can be mitigated by increasing the <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/display/tdr-registry-keys" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">TdrDelay</a> registry key), ImageMagick automatically falls back to the standard CPU path. See <a href="https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/accelerate.c" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">MagickCore/accelerate.c</a> for the full OpenCL kernel implementations:
       </p>
       <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">opencl-check.sh</span>
+        </div>
         <div class="p-3 text-light font-mono small">
-          <span class="text-success">$</span> magick identify -version
+          <span class="text-success">$</span> magick identify -version<br>
+          Features: DPC Cipher Modules OpenCL OpenMP(4.5)<br>
+          <span class="text-success">$</span> magick image.png -convolve '-1, -1, -1, -1, 9, -1, -1, -1, -1' convolve.png
         </div>
       </div>
     </div>
@@ -398,9 +801,67 @@ if (y &lt; (ssize_t) source->rows)
       <h2 class="h3 fw-bold mb-0">Custom Image Coders</h2>
     </div>
     <div class="card im-card p-4">
-      <p class="text-body-secondary mb-0">
-        An image coder (encoder/decoder) registers, classifies, reads, writes, and unregisters image formats. Custom coders can be implemented and loaded as modules using the <a href="https://download.imagemagick.org/archive/kits/" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">Magick Coder Kit</a>.
+      <p class="text-body-secondary mb-3">
+        An image coder (encoder/decoder) registers a format with ImageMagick, optionally inspects magic header bytes to classify files (<code>IsMGK</code>), reads image metadata and pixels into the pixel cache (<code>ReadMGKImage</code>), writes pixels out to disk or blob (<code>WriteMGKImage</code>), and unregisters the format upon unload. Below is an abbreviated example of the custom <a href="/source/mgk.c" class="text-decoration-none fw-semibold">MGK coder</a> (header <code>id=mgk</code>, dimensions, and raw RGB bytes). Build custom modules using the <a href="https://download.imagemagick.org/archive/kits/" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">Magick Coder Kit</a> (set <code>PKG_CONFIG_PATH</code> if ImageMagick is installed in a non-default prefix):
       </p>
+      <div class="terminal-card mb-3">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">mgk-coder.c</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><code>static MagickBooleanType IsMGK(const unsigned char *magick,const size_t length)
+{
+  if (length &lt; 7)
+    return(MagickFalse);
+  if (LocaleNCompare((char *) magick,"id=mgk",7) == 0)
+    return(MagickTrue);
+  return(MagickFalse);
+}
+
+static Image *ReadMGKImage(const ImageInfo *image_info,ExceptionInfo *exception)
+{
+  /* Open blob, validate "id=mgk" header, parse columns &amp; rows,
+     allocate pixel cache via SetImageExtent(), read RGB scanlines with
+     QueueAuthenticPixels() + SyncAuthenticPixels(), and support multi-frame lists. */
+}
+
+static MagickBooleanType WriteMGKImage(const ImageInfo *image_info,Image *image,
+  ExceptionInfo *exception)
+{
+  /* Convert to RGBColorspace, write "id=mgk
+&lt;cols&gt; &lt;rows&gt;
+" header,
+     and stream scanlines via GetVirtualPixels() + WriteBlob(). */
+}
+
+ModuleExport unsigned long RegisterMGKImage(void)
+{
+  MagickInfo *entry;
+
+  entry=AcquireMagickInfo("MGK","MGK","MGK image");
+  entry-&gt;decoder=(DecodeImageHandler *) ReadMGKImage;
+  entry-&gt;encoder=(EncodeImageHandler *) WriteMGKImage;
+  entry-&gt;magick=(IsImageFormatHandler *) IsMGK;
+  (void) RegisterMagickInfo(entry);
+  return(MagickImageCoderSignature);
+}
+
+ModuleExport void UnregisterMGKImage(void)
+{
+  (void) UnregisterMagickInfo("MGK");
+}</code></pre>
+        </div>
+      </div>
+      <div class="terminal-card">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig<br>
+          <span class="text-success">$</span> magick logo: logo.mgk<br>
+          <span class="text-success">$</span> display logo.mgk
+        </div>
+      </div>
     </div>
   </section>
 
@@ -412,8 +873,55 @@ if (y &lt; (ssize_t) source->rows)
     </div>
     <div class="card im-card p-4">
       <p class="text-body-secondary mb-3">
-        Add custom image processing algorithms invoked via the <a href="/command-line-options/#process" class="text-decoration-none fw-semibold">-process</a> option or ExecuteModuleProcess(). Get started quickly with the <a href="https://download.imagemagick.org/archive/kits/" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">Magick Filter Kit</a>.
+        Custom image filters let you plug custom processing algorithms into ImageMagick, invoked from the CLI with <a href="/command-line-options/#process" class="text-decoration-none fw-semibold">-process</a> or via <code>ExecuteModuleProcess()</code> in MagickCore. Below is an outline of the sample <a href="/source/analyze.c" class="text-decoration-none fw-semibold">analyze filter</a>, which computes brightness and saturation statistics (mean, standard deviation, skewness, kurtosis) in parallel with OpenMP and stores them as image properties. Get started with the <a href="https://download.imagemagick.org/archive/kits/" class="text-decoration-none fw-semibold" target="_blank" rel="noopener">Magick Filter Kit</a>:
       </p>
+      <div class="terminal-card mb-3">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-danger"></div>
+          <div class="terminal-dot bg-warning"></div>
+          <div class="terminal-dot bg-success"></div>
+          <span class="small text-secondary font-mono ms-2">analyze-filter.c</span>
+        </div>
+        <div class="p-3 text-light font-mono small overflow-auto" style="max-height: 75svh;">
+          <pre class="mb-0 text-light"><code>ModuleExport size_t analyzeImage(Image **images,const int argc,
+  const char **argv,ExceptionInfo *exception)
+{
+  Image *image;
+
+  for (image=(*images); image != (Image *) NULL; image=GetNextImageInList(image))
+  {
+    CacheView *image_view = AcquireVirtualCacheView(image,exception);
+    #pragma omp parallel for schedule(static)
+    for (ssize_t y=0; y &lt; (ssize_t) image-&gt;rows; y++)
+    {
+      const Quantum *p = GetCacheViewVirtualPixels(image_view,0,y,image-&gt;columns,1,exception);
+      for (ssize_t x=0; x &lt; (ssize_t) image-&gt;columns; x++)
+      {
+        /* ConvertRGBToHSL() and accumulate 1st–4th moments for brightness &amp; saturation */
+        p+=GetPixelChannels(image);
+      }
+    }
+    image_view=DestroyCacheView(image_view);
+    /* Compute mean, std-dev, kurtosis, skewness and record via SetImageProperty() */
+  }
+  return(MagickImageFilterSignature);
+}</code></pre>
+        </div>
+      </div>
+      <div class="terminal-card">
+        <div class="p-3 text-light font-mono small">
+          <span class="text-success">$</span> export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig<br>
+          <span class="text-success">$</span> magick logo: -process "analyze" -verbose info:<br>
+          &nbsp;&nbsp;filter:brightness:kurtosis: 3.97886<br>
+          &nbsp;&nbsp;filter:brightness:mean: 58901.3<br>
+          &nbsp;&nbsp;filter:brightness:skewness: -2.30827<br>
+          &nbsp;&nbsp;filter:brightness:standard-deviation: 16179.8<br>
+          &nbsp;&nbsp;filter:saturation:kurtosis: 6.59719<br>
+          &nbsp;&nbsp;filter:saturation:mean: 5321.05<br>
+          &nbsp;&nbsp;filter:saturation:skewness: 2.75679<br>
+          &nbsp;&nbsp;filter:saturation:standard-deviation: 14484.7
+        </div>
+      </div>
     </div>
   </section>
 </div>
