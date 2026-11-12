@@ -85,6 +85,7 @@ topic: "Tools"
   &lt;!ATTLIST policymap
     xmlns CDATA #FIXED ""
   >
+
   &lt;!ELEMENT policy EMPTY>
   &lt;!ATTLIST policy
     xmlns   CDATA   #FIXED ""
@@ -96,46 +97,128 @@ topic: "Tools"
     value   CDATA   #IMPLIED
   >
 ]>
+
+&lt;!--
+  ImageMagick Web-Safe Security Policy
+
+  This policy is intended for public-facing services that process untrusted
+  images. It reduces ImageMagick's attack surface while preserving support
+  for common raster image operations.
+
+  Security objectives:
+
+    * Limit CPU, memory, disk, and file resource consumption.
+    * Mitigate denial-of-service attacks through resource and runtime limits.
+    * Prevent access to sensitive local files and Linux virtual filesystems.
+    * Prevent indirect file reads via @filename expansion.
+    * Prevent use of stdin/stdout and file descriptor paths.
+    * Disable all delegates and loadable filters.
+    * Disable selected embedded scripting modules that provide scripting, vector
+      graphics processing, or URL access.
+
+  This policy does not restrict ImageMagick to a specific image format
+  allowlist. Additional coder or module restrictions may be added for
+  deployments requiring a stricter security posture.
+
+  References:
+
+    https://imagemagick.org/security-policy/
+    https://imagemagick-secevaluator.doyensec.com/
+-->
+
 &lt;policymap>
-  &lt;!-- Resource Limits -->
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Resource Limits                                                -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Limit ImageMagick to at most four worker threads. -->
   &lt;policy domain="resource" name="thread" value="4"/>
-  &lt;policy domain="resource" name="time" value="60"/>
+
+  &lt;!-- Abort operations that exceed 30 seconds of processing time. -->
+  &lt;policy domain="resource" name="time" value="30"/>
+
+  &lt;!-- Maximum number of simultaneously open pixel-cache files. -->
   &lt;policy domain="resource" name="file" value="768"/>
-  &lt;policy domain="resource" name="memory" value="256MiB"/>
-  &lt;policy domain="resource" name="map" value="512MiB"/>
+
+  &lt;!-- Maximum heap memory available to the pixel cache. -->
+  &lt;policy domain="resource" name="memory" value="512MiB"/>
+
+  &lt;!-- Maximum amount of memory-mapped pixel cache storage. -->
+  &lt;policy domain="resource" name="map" value="1024MiB"/>
+
+  &lt;!-- Images larger than 32 megapixels spill to disk-backed cache. -->
   &lt;policy domain="resource" name="area" value="32MP"/>
-  &lt;policy domain="resource" name="disk" value="1GiB"/>
+
+  &lt;!-- Limit total disk usage for pixel cache and temporary files. -->
+  &lt;policy domain="resource" name="disk" value="2GiB"/>
+
+  &lt;!-- Limit the number of images permitted in a sequence. -->
   &lt;policy domain="resource" name="list-length" value="16"/>
-  &lt;policy domain="resource" name="width" value="4KP"/>
-  &lt;policy domain="resource" name="height" value="4KP"/>
-  &lt;policy domain="resource" name="throttle" value="2"/>
-  &lt;policy domain="resource" name="dynamic-throttle" value="false"/>
-  &lt;!-- Pixel Cache Security -->
-  &lt;policy domain="cache" name="memory-map" value="anonymous"/>
-  &lt;policy domain="cache" name="synchronize" value="true"/>
-  &lt;!-- Delegate and Filter Restrictions -->
-  &lt;policy domain="delegate" rights="none" pattern="*"/>
-  &lt;policy domain="filter" rights="none" pattern="*"/>
-  &lt;!-- Path Restrictions -->
-  &lt;policy domain="path" rights="none" pattern="-"/>
-  &lt;policy domain="path" rights="none" pattern="[Ff][Dd]:*"/>
-  &lt;policy domain="path" rights="none" pattern="/etc/*"/>
-  &lt;policy domain="path" rights="none" pattern="*../*"/>
-  &lt;policy domain="path" rights="none" pattern="@*"/>
-  &lt;policy domain="path" rights="none" pattern="|*"/>
-  &lt;!-- Module Restrictions -->
-  &lt;policy domain="module" rights="none" pattern="*"/>
-  &lt;policy domain="module" rights="read | write" pattern="{GIF,JPEG,PNG,WEBP}"/>
-  &lt;!-- System Security Options -->
-  &lt;policy domain="system" name="shred" value="1"/>
-  &lt;policy domain="system" name="memory-map" value="anonymous"/>
-  &lt;policy domain="system" name="max-memory-request" value="256MiB"/>
+
+  &lt;!-- Reject images wider than approximately 8192 pixels. -->
+  &lt;policy domain="resource" name="width" value="8KP"/>
+
+  &lt;!-- Reject images taller than approximately 8192 pixels. -->
+  &lt;policy domain="resource" name="height" value="8KP"/>
+
+  &lt;!-- Prevent excessively large single memory allocation requests. -->
+  &lt;policy domain="system" name="max-memory-request" value="512MiB"/>
+
+  &lt;!-- Maximum size of a single image profile. -->
   &lt;policy domain="system" name="max-profile-size" value="16MiB"/>
   &lt;policy domain="system" name="max-profile-count" value="16"/>
-  &lt;policy domain="system" name="symlink" rights="none" pattern="follow"/>
-  &lt;policy domain="system" name="svg" rights="none" pattern="substitute-entities"/>
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Path Restrictions                                              -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Disallow reading from or writing to stdin/stdout via "-". -->
+  &lt;policy domain="path" rights="none" pattern="-"/>
+
+  &lt;!-- Disable indirect file reads such as @filename. -->
+  &lt;policy domain="path" rights="none" pattern="@*"/>
+
+  &lt;!-- Prevent access to file descriptors (fd:). -->
+  &lt;policy domain="path" rights="none" pattern="[Ff][Dd\\]:*"/>
+
+  &lt;!-- Prevent access to operating system configuration files. -->
+  &lt;policy domain="path" rights="none" pattern="/etc/*"/>
+
+  &lt;!-- Prevent access to Linux process and runtime information. -->
+  &lt;policy domain="path" rights="none" pattern="/proc/*"/>
+
+  &lt;!-- Prevent access to Linux kernel and device information. -->
+  &lt;policy domain="path" rights="none" pattern="/sys/*"/>
+
+  &lt;!-- Disable pipe-based I/O. -->
+  &lt;policy domain="path" rights="none" pattern="|*"/>
+
+  &lt;!-- ============================================================= -->
+  &lt;!-- Feature Restrictions                                           -->
+  &lt;!-- ============================================================= -->
+
+  &lt;!-- Disable all external delegates (Ghostscript, ffmpeg, etc.). -->
+  &lt;policy domain="delegate" rights="none" pattern="*"/>
+
+  &lt;!-- Disable all loadable image filters. -->
+  &lt;policy domain="filter" rights="none" pattern="*"/>
+
+  &lt;!--
+    Restrict embedded scripting coders.
+
+    Certain modules are denied, whereas, read access is denied while write
+    access remains permitted for others.  This allows ImageMagick to generate
+    these formats without accepting potentially untrusted input through them.
+  -->
+  &lt;policy domain="module" rights="none" pattern="{MSL,URL,VIDEO}"/>
+  &lt;policy domain="coder" rights="write" pattern="{MVG,PDF,PS,SVG,TXT,XPS}"/>
+
+  &lt;!-- Treat filenames with percent signs (%) as plain text rather than
+       formatting placeholders. -->
   &lt;policy domain="system" name="filename:literal" value="true"/>
-&lt;/policymap></code></pre>
+&lt;/policymap>
+</code></pre>
     </div>
   </div>
   <hr class="my-4 text-muted opacity-25">
