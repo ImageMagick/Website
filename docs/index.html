@@ -87,60 +87,178 @@ description: "ImageMagick is a powerful open-source software suite for creating,
       <input type="text" id="featureSearch" class="form-control" placeholder="Filter capabilities (e.g., blur, animation)...">
     </div>
   </div>
+<!-- Scrollable Wrapper -->
+<div class="overflow-auto" style="max-height: 75svh;">
 
   <!-- Interactive Grid Container -->
-  <div class="row row-cols-1 row-cols-md-2 g-3" id="featureGrid">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3" id="featureGrid">
 
+    <!-- Animation -->
     <div class="col feature-item" data-title="Animation">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="https://usage.imagemagick.org/anim_basics/" class="fw-bold text-decoration-none fs-6">Animation</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Format</span>
         </div>
-        <p class="small text-body-secondary mb-0">Create GIF or WebP animated sequences from image frames.</p>
+        <p class="small text-body-secondary mb-0">Create a GIF animation sequence from a group of images.</p>
       </div>
     </div>
 
+    <!-- Bilateral Blur -->
     <div class="col feature-item" data-title="Bilateral blur">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/command-line-options/#bilateral-blur" class="fw-bold text-decoration-none fs-6">Bilateral Blur</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Filter</span>
         </div>
-        <p class="small text-body-secondary mb-0">Edge-preserving, noise-reducing non-linear smoothing filter.</p>
+        <p class="small text-body-secondary mb-0">Non-linear, edge-preserving, and noise-reducing smoothing filter.</p>
       </div>
     </div>
 
+    <!-- Color Management -->
     <div class="col feature-item" data-title="Color management">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/color-management/" class="fw-bold text-decoration-none fs-6">Color Management</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Color</span>
         </div>
-        <p class="small text-body-secondary mb-0">Accurate profile processing with built-in gamma compression and expansion.</p>
+        <p class="small text-body-secondary mb-0">Accurate color management with color profiles or built-in gamma compression/expansion.</p>
       </div>
     </div>
 
+    <!-- Color Thresholding -->
+    <div class="col feature-item" data-title="Color thresholding">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/color-thresholding/" class="fw-bold text-decoration-none fs-6">Color Thresholding</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Color</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Force all pixels in the color range to white otherwise black.</p>
+      </div>
+    </div>
+
+    <!-- Command-Line Processing -->
     <div class="col feature-item" data-title="Command-line processing">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/command-line-processing/" class="fw-bold text-decoration-none fs-6">Command-Line Processing</a>
           <span class="badge bg-primary-subtle text-primary-emphasis">Core</span>
         </div>
-        <p class="small text-body-secondary mb-0">Automate and script complex multi-step operations efficiently from terminal interfaces.</p>
+        <p class="small text-body-secondary mb-0">Utilize ImageMagick from the command-line to automate and script complex operations.</p>
       </div>
     </div>
 
+    <!-- Complex Text Layout -->
+    <div class="col feature-item" data-title="Complex text layout">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://en.wikipedia.org/wiki/Complex_text_layout" class="fw-bold text-decoration-none fs-6">Complex Text Layout</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Text</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Bidirectional text support and shaping.</p>
+      </div>
+    </div>
+
+    <!-- Composite -->
+    <div class="col feature-item" data-title="Composite">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/composite/" class="fw-bold text-decoration-none fs-6">Composite</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Overlap one image over another.</p>
+      </div>
+    </div>
+
+    <!-- Connected Component Labeling -->
+    <div class="col feature-item" data-title="Connected component labeling">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/connected-components/" class="fw-bold text-decoration-none fs-6">Connected Component Labeling</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Vision</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Uniquely label connected regions in an image.</p>
+      </div>
+    </div>
+
+    <!-- Convex Hull -->
     <div class="col feature-item" data-title="Convex hull & Minimum Bounding Box">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/convex-hull/" class="fw-bold text-decoration-none fs-6">Convex Hull</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Vision</span>
         </div>
-        <p class="small text-body-secondary mb-0">Calculate smallest area bounding polygons, unrotate angles, and geometry metadata.</p>
+        <p class="small text-body-secondary mb-0">Smallest area convex polygon containing foreground objects, minimum bounding box, and unrotate angle.</p>
       </div>
     </div>
 
+    <!-- Decorate -->
+    <div class="col feature-item" data-title="Decorate">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/crop/" class="fw-bold text-decoration-none fs-6">Decorate</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Add a border or frame to an image.</p>
+      </div>
+    </div>
+
+    <!-- Delineate Image Features -->
+    <div class="col feature-item" data-title="Delineate image features">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/transform/#vision" class="fw-bold text-decoration-none fs-6">Delineate Image Features</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Vision</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Includes Canny edge detection and Hough lines.</p>
+      </div>
+    </div>
+
+    <!-- Discrete Fourier Transform -->
+    <div class="col feature-item" data-title="Discrete Fourier transform">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/fourier/" class="fw-bold text-decoration-none fs-6">Discrete Fourier Transform</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Math</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Implements forward and inverse Discrete Fourier Transform (DFT).</p>
+      </div>
+    </div>
+
+    <!-- Distributed Pixel Cache -->
+    <div class="col feature-item" data-title="Distributed pixel cache">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/distribute-pixel-cache/" class="fw-bold text-decoration-none fs-6">Distributed Pixel Cache</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Performance</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Offload intermediate pixel storage to one or more remote servers.</p>
+      </div>
+    </div>
+
+    <!-- Draw -->
+    <div class="col feature-item" data-title="Draw">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/draw/" class="fw-bold text-decoration-none fs-6">Draw</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Add shapes or text to an image.</p>
+      </div>
+    </div>
+
+    <!-- Encipher or Decipher an Image -->
+    <div class="col feature-item" data-title="Encipher or decipher an image">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/cipher/" class="fw-bold text-decoration-none fs-6">Encipher / Decipher</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Security</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Convert ordinary images into unintelligible gibberish and back again.</p>
+      </div>
+    </div>
+
+    <!-- Format Conversion -->
     <div class="col feature-item" data-title="Format conversion">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
@@ -151,27 +269,247 @@ description: "ImageMagick is a powerful open-source software suite for creating,
       </div>
     </div>
 
+    <!-- Generalized Pixel Distortion -->
+    <div class="col feature-item" data-title="Generalized pixel distortion">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/distorts/" class="fw-bold text-decoration-none fs-6">Generalized Pixel Distortion</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Transform</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Correct for, or induce image distortions including perspective.</p>
+      </div>
+    </div>
+
+    <!-- Heterogeneous Distributed Processing -->
+    <div class="col feature-item" data-title="Heterogeneous distributed processing">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/architecture/#distributed" class="fw-bold text-decoration-none fs-6">Heterogeneous Distributed Processing</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Performance</span>
+        </div>
+        <p class="small text-body-secondary mb-0">OpenCL-enabled algorithms executing across CPUs, GPUs, and other processors.</p>
+      </div>
+    </div>
+
+    <!-- High Dynamic-Range Images -->
     <div class="col feature-item" data-title="High dynamic-range images HDR">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/high-dynamic-range/" class="fw-bold text-decoration-none fs-6">High Dynamic-Range (HDR)</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Rendering</span>
         </div>
-        <p class="small text-body-secondary mb-0">Represent wide ranges of intensity levels across extreme light and shadow contrast.</p>
+        <p class="small text-body-secondary mb-0">Accurately represent wide ranges of intensity levels across extreme light and shadow contrast.</p>
       </div>
     </div>
 
+    <!-- Histogram Equalization -->
+    <div class="col feature-item" data-title="Histogram equalization">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/clahe/" class="fw-bold text-decoration-none fs-6">Histogram Equalization</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Filter</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Use adaptive histogram equalization to improve contrast in images.</p>
+      </div>
+    </div>
+
+    <!-- Image Cache -->
+    <div class="col feature-item" data-title="Image cache">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/magick-cache/" class="fw-bold text-decoration-none fs-6">Image Cache</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Performance</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Secure methods and tools to cache images, image sequences, video, audio or metadata locally.</p>
+      </div>
+    </div>
+
+    <!-- Image Calculator -->
+    <div class="col feature-item" data-title="Image calculator">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/fx/" class="fw-bold text-decoration-none fs-6">Image Calculator</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Math</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Apply a mathematical expression to an image, sequence, or color channels.</p>
+      </div>
+    </div>
+
+    <!-- Image Gradients -->
+    <div class="col feature-item" data-title="Image gradients">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/gradient/" class="fw-bold text-decoration-none fs-6">Image Gradients</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Create gradual color blends in horizontal, vertical, circular, or elliptical shapes.</p>
+      </div>
+    </div>
+
+    <!-- Image Identification -->
+    <div class="col feature-item" data-title="Image identification">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/identify/" class="fw-bold text-decoration-none fs-6">Image Identification</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Core</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Describe the format and attributes of an image.</p>
+      </div>
+    </div>
+
+    <!-- ImageMagick on the iPhone -->
+    <div class="col feature-item" data-title="ImageMagick on the iPhone">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/download/#iOS" class="fw-bold text-decoration-none fs-6">ImageMagick on iOS</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Platform</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Convert, edit, or compose images directly on your iPhone or iPad.</p>
+      </div>
+    </div>
+
+    <!-- Large Image Support (Tera-Pixel) -->
     <div class="col feature-item" data-title="Large image support tera-pixel">
       <div class="card h-100 im-card p-3">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <a href="/architecture/#tera-pixel" class="fw-bold text-decoration-none fs-6">Tera-Pixel Support</a>
           <span class="badge bg-secondary-subtle text-secondary-emphasis">Performance</span>
         </div>
-        <p class="small text-body-secondary mb-0">Seamlessly read, process, and write gigapixel- or terapixel-scale images.</p>
+        <p class="small text-body-secondary mb-0">Seamlessly read, process, and write mega-, giga-, or terapixel-scale images.</p>
       </div>
     </div>
 
-  </div>
+    <!-- Montage -->
+    <div class="col feature-item" data-title="Montage">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/montage/" class="fw-bold text-decoration-none fs-6">Montage</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Juxtapose image thumbnails on an image canvas.</p>
+      </div>
+    </div>
+
+    <!-- Morphology of Shapes -->
+    <div class="col feature-item" data-title="Morphology of shapes">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/morphology/" class="fw-bold text-decoration-none fs-6">Morphology of Shapes</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Vision</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Extract features, describe shapes, and recognize patterns in images.</p>
+      </div>
+    </div>
+
+    <!-- Motion Picture Support -->
+    <div class="col feature-item" data-title="Motion picture support">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/motion-picture/" class="fw-bold text-decoration-none fs-6">Motion Picture Support</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Format</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Read and write common image formats used in digital film work.</p>
+      </div>
+    </div>
+
+    <!-- Multispectral Imagery -->
+    <div class="col feature-item" data-title="Multispectral imagery">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/multispectral-imagery/" class="fw-bold text-decoration-none fs-6">Multispectral Imagery</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Format</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Support multispectral imagery up to 32 bands, 22 of them meta channels.</p>
+      </div>
+    </div>
+
+    <!-- Noise and Color Reduction -->
+    <div class="col feature-item" data-title="Noise and color reduction">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/transform/#vision" class="fw-bold text-decoration-none fs-6">Noise & Color Reduction</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Filter</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Includes Kuwahara Filter and mean-shift filtering.</p>
+      </div>
+    </div>
+
+    <!-- Perceptual Hash -->
+    <div class="col feature-item" data-title="Perceptual hash">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="http://www.fmwconcepts.com/misc_tests/perceptual_hash_test_results_510/index.html" class="fw-bold text-decoration-none fs-6">Perceptual Hash</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Analysis</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Map visually identical images to similar hashes for retrieval, authentication, and copy detection.</p>
+      </div>
+    </div>
+
+    <!-- Special Effects -->
+    <div class="col feature-item" data-title="Special effects">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/blur/" class="fw-bold text-decoration-none fs-6">Special Effects</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Filter</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Blur, sharpen, threshold, or tint an image.</p>
+      </div>
+    </div>
+
+    <!-- Text & Comments -->
+    <div class="col feature-item" data-title="Text & comments">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/text/" class="fw-bold text-decoration-none fs-6">Text &amp; Comments</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Text</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Insert descriptive or artistic text in an image.</p>
+      </div>
+    </div>
+
+    <!-- Threads of Execution Support -->
+    <div class="col feature-item" data-title="Threads of execution support">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/architecture/#threads" class="fw-bold text-decoration-none fs-6">Multithreading Support</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Performance</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Thread-safe execution running internal algorithms in parallel for multicore processors.</p>
+      </div>
+    </div>
+
+    <!-- Transform -->
+    <div class="col feature-item" data-title="Transform">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/resize/" class="fw-bold text-decoration-none fs-6">Transform</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Transform</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Resize, rotate, deskew, crop, flip, or trim an image.</p>
+      </div>
+    </div>
+
+    <!-- Transparency -->
+    <div class="col feature-item" data-title="Transparency">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="https://usage.imagemagick.org/masking/" class="fw-bold text-decoration-none fs-6">Transparency</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Editing</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Render portions of an image invisible.</p>
+      </div>
+    </div>
+
+    <!-- Virtual Pixel Support -->
+    <div class="col feature-item" data-title="Virtual pixel support">
+      <div class="card h-100 im-card p-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <a href="/architecture/#virtual-pixels" class="fw-bold text-decoration-none fs-6">Virtual Pixel Support</a>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis">Core</span>
+        </div>
+        <p class="small text-body-secondary mb-0">Convenient access to pixels outside the image boundaries.</p>
+      </div>
+</div>
 </section>
 
 <!-- Community Section -->
