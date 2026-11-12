@@ -12,9 +12,10 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
       </div>
       <div class="d-flex flex-wrap gap-2">
         <a href="#fx-overview" class="btn btn-sm btn-outline-secondary rounded-pill">Overview</a>
-        <a href="#fx-examples" class="btn btn-sm btn-outline-secondary rounded-pill">Examples & Scripts</a>
+        <a href="#fx-examples" class="btn btn-sm btn-outline-secondary rounded-pill">Examples &amp; Scripts</a>
         <a href="#anatomy" class="btn btn-sm btn-outline-secondary rounded-pill">Language Specification</a>
-        <a href="#source-images" class="btn btn-sm btn-outline-secondary rounded-pill">Source Images & Pixels</a>
+        <a href="#source-images" class="btn btn-sm btn-outline-secondary rounded-pill">Source Images &amp; Pixels</a>
+        <a href="#results-escapes" class="btn btn-sm btn-outline-secondary rounded-pill">Results &amp; Format Escapes</a>
       </div>
     </div>
   </div>
@@ -23,20 +24,20 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
   <section id="fx-overview" class="mb-5">
     <div class="mb-4">
       <p class="lead text-body">
-        The <a href="http://im.snibgo.com/fxnew.htm" rel="noopener noreferrer" target="_blank" class="fw-medium text-decoration-none">FX special effects image operator</a> applies mathematical expressions to each pixel channel of an image. The FX expression language provides a flexible mechanism for fine-grained pixel-level transformations, analysis, and custom procedural generation.
+        The <a href="http://im.snibgo.com/fxnew.htm" rel="noopener noreferrer" target="_blank" class="fw-medium text-decoration-none">FX special effects image operator</a> applies mathematical expressions to each pixel channel of an image. The FX expression language provides a flexible mechanism for fine-grained pixel-level transformations, analysis, and procedural generation.
       </p>
     </div>
 
     <div class="row g-3 mb-4">
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="p-3 border rounded-3 bg-body h-100 shadow-sm">
           <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-semibold">
             <i class="bi bi-palette fs-5"></i> Procedural Generation
           </div>
-          <p class="small text-body-secondary mb-0">Create procedural canvases, mathematical gradients, colormaps, and fractal sets from equations.</p>
+          <p class="small text-body-secondary mb-0">Create procedural canvases, gradients, and mathematical colormaps from equations.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="p-3 border rounded-3 bg-body h-100 shadow-sm">
           <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-semibold">
             <i class="bi bi-arrows-move fs-5"></i> Geometric Distortion
@@ -44,28 +45,44 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
           <p class="small text-body-secondary mb-0">Translate, flip, mirror, rotate, scale, shear, and warp images using custom coordinate functions.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="p-3 border rounded-3 bg-body h-100 shadow-sm">
           <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-semibold">
-            <i class="bi bi-layers fs-5"></i> Compositing & Channel Routing
+            <i class="bi bi-layers fs-5"></i> Compositing &amp; Routing
           </div>
-          <p class="small text-body-secondary mb-0">Move color channels between images, convolve pixel neighborhoods, and merge multiple inputs seamlessly.</p>
+          <p class="small text-body-secondary mb-0">Move color values between images and channels, convolve neighboring pixels, and merge multiple inputs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="p-3 border rounded-3 bg-body h-100 shadow-sm">
+          <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-semibold">
+            <i class="bi bi-fingerprint fs-5"></i> Image Metrics
+          </div>
+          <p class="small text-body-secondary mb-0">Compute statistical metrics, evaluate properties, and generate custom image "fingerprints."</p>
         </div>
       </div>
     </div>
 
-    <div class="alert alert-info d-flex align-items-start gap-3 border-0 shadow-sm" role="alert">
+    <div class="alert alert-info d-flex align-items-start gap-3 border-0 shadow-sm mb-3" role="alert">
       <i class="bi bi-info-circle-fill fs-5 mt-1 flex-shrink-0"></i>
       <div>
-        <strong>Sequence Processing Note:</strong>
-        The operator loops through all pixels and channels, returning a modified copy of the first image in the sequence (<code class="font-mono">u</code>). Other images in the sequence serve as reference data unless <code class="font-mono">+fx</code> is used to process every image individually.
+        <strong>Sequence Processing (<code class="font-mono">-fx</code> vs. <code class="font-mono">+fx</code>):</strong>
+        The operator loops through all pixels and active channels, replacing the entire image sequence with a modified clone of the first image (<code class="font-mono">u</code>). Other images in the sequence serve only as reference data unless <code class="font-mono">+fx</code> is used to apply the expression to every image in the sequence individually.
+      </div>
+    </div>
+
+    <div class="alert alert-secondary d-flex align-items-start gap-3 border-0 shadow-sm" role="alert">
+      <i class="bi bi-cpu fs-5 mt-1 flex-shrink-0"></i>
+      <div>
+        <strong>Threading &amp; Execution:</strong>
+        FX expressions are compiled in a single thread, then executed across multiple threads in parallel unless the expression calls <code class="font-mono">debug()</code>, which forces single-threaded execution for clean console output.
       </div>
     </div>
   </section>
 
   <!-- Section 2: Examples & Demonstration -->
   <section id="fx-examples" class="mb-5">
-    <h3 class="fw-bold pb-2 border-bottom mb-4">Examples & Scripting Workflows</h3>
+    <h3 class="fw-bold pb-2 border-bottom mb-4">Examples &amp; Scripting Workflows</h3>
 
     <!-- Example 1 -->
     <div class="card im-card mb-4 overflow-hidden">
@@ -79,12 +96,12 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         </div>
         <div class="d-flex align-items-center justify-content-center gap-4 p-3 bg-body-tertiary rounded">
           <div class="text-center">
-            <img src="/image/black.png" class="img-thumbnail mb-1" width="64" height="64" alt="Black canvas input" />
+            <a href="/image/black.png"><img src="/image/black.png" class="img-thumbnail mb-1" width="64" height="64" alt="Black canvas input" /></a>
             <div class="badge bg-secondary d-block">Input</div>
           </div>
           <i class="bi bi-arrow-right fs-4 text-secondary"></i>
           <div class="text-center">
-            <img src="/image/navy.png" class="img-thumbnail mb-1" width="64" height="64" alt="Navy canvas output" />
+            <a href="/image/navy.png"><img src="/image/navy.png" class="img-thumbnail mb-1" width="64" height="64" alt="Navy canvas output" /></a>
             <div class="badge bg-primary d-block">Output</div>
           </div>
         </div>
@@ -97,18 +114,20 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         2. Non-linear Sigmoidal Contrast Transfer Function
       </div>
       <div class="card-body">
-        <p class="small text-body-secondary">Apply an exponential contrast curve formula to adjust image luminance response:</p>
+        <p class="small text-body-secondary">Apply an exponential contrast curve formula to produce a high-contrast version of the source image:</p>
         <div class="bg-dark text-light rounded p-3 mb-3 font-mono border border-secondary border-opacity-25">
-          <span class="text-secondary">$</span> magick rose: -fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" rose-sigmoidal.png
+          <span class="text-secondary">$</span> magick rose: \<br>
+          &nbsp;&nbsp;-fx "(1.0/(1.0+exp(10.0*(0.5-u)))-0.006693)*1.0092503" \<br>
+          &nbsp;&nbsp;rose-sigmoidal.png
         </div>
         <div class="d-flex align-items-center justify-content-center gap-4 p-3 bg-body-tertiary rounded">
           <div class="text-center">
-            <img src="/image/rose.jpg" class="img-thumbnail mb-1" width="70" height="46" alt="Rose original" />
+            <a href="/image/rose.jpg"><img src="/image/rose.jpg" class="img-thumbnail mb-1" width="70" height="46" alt="Rose original" /></a>
             <div class="badge bg-secondary d-block">Original</div>
           </div>
           <i class="bi bi-arrow-right fs-4 text-secondary"></i>
           <div class="text-center">
-            <img src="/image/rose-sigmoidal.png" class="img-thumbnail mb-1" width="70" height="46" alt="Rose high contrast" />
+            <a href="/image/rose-sigmoidal.png"><img src="/image/rose-sigmoidal.png" class="img-thumbnail mb-1" width="70" height="46" alt="Rose high contrast" /></a>
             <div class="badge bg-primary d-block">High Contrast</div>
           </div>
         </div>
@@ -118,16 +137,18 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
     <!-- Example 3 -->
     <div class="card im-card mb-4 overflow-hidden">
       <div class="card-header bg-body-tertiary fw-semibold">
-        3. Custom Variables & Radial Gradients
+        3. Variable Assignments &amp; Radial Gradients
       </div>
       <div class="card-body">
-        <p class="small text-body-secondary">Assign intermediate variable calculations (<code class="font-mono">Xi</code>, <code class="font-mono">Yj</code>) to construct mathematical gradients:</p>
+        <p class="small text-body-secondary">Variable assignments (<code class="font-mono">Xi</code>, <code class="font-mono">Yj</code>) reduce expression complexity and enable multi-step calculations such as constructing a radial gradient:</p>
         <div class="bg-dark text-light rounded p-3 mb-3 font-mono border border-secondary border-opacity-25">
-          <span class="text-secondary">$</span> magick -size 70x70 canvas: -fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" radial-gradient.png
+          <span class="text-secondary">$</span> magick -size 70x70 canvas: \<br>
+          &nbsp;&nbsp;-fx "Xi=i-w/2; Yj=j-h/2; 1.2*(0.5-hypot(Xi,Yj)/70.0)+0.5" \<br>
+          &nbsp;&nbsp;radial-gradient.png
         </div>
         <div class="d-flex align-items-center justify-content-center p-3 bg-body-tertiary rounded">
           <div class="text-center">
-            <img src="/image/radial-gradient.png" class="img-thumbnail mb-1" width="70" height="70" alt="Radial gradient" />
+            <a href="/image/radial-gradient.png"><img src="/image/radial-gradient.png" class="img-thumbnail mb-1" width="70" height="70" alt="Radial gradient" /></a>
             <div class="badge bg-success d-block">Generated Pattern</div>
           </div>
         </div>
@@ -139,12 +160,12 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
       <div class="accordion-item border rounded-3 overflow-hidden">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNoise">
-            Advanced: Gaussian Noise Generation
+            Advanced: Gaussian Random Noise Generation
           </button>
         </h2>
         <div id="collapseNoise" class="accordion-collapse collapse" data-bs-parent="#advancedScripts">
           <div class="accordion-body bg-body-tertiary">
-            <p class="small text-body-secondary">Inject custom statistical Gaussian noise into an image pipeline:</p>
+            <p class="small text-body-secondary">Inject Box-Muller Gaussian random noise scaled per color channel:</p>
             <div class="bg-dark text-light rounded p-3 font-mono border border-secondary border-opacity-25">
               <span class="text-secondary">$</span> magick photo.jpg -fx 'iso=32; rone=rand(); rtwo=rand(); \<br>
               &nbsp;&nbsp;myn=sqrt(-2*ln(rone))*cos(2*Pi*rtwo); myntwo=sqrt(-2*ln(rtwo))* \<br>
@@ -163,7 +184,7 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         </h2>
         <div id="collapseJulia" class="accordion-collapse collapse" data-bs-parent="#advancedScripts">
           <div class="accordion-body bg-body-tertiary">
-            <p class="small text-body-secondary">Leverage iterative <code class="font-mono">for()</code> loops to map complex polynomial fractal calculations into color lookup tables (CLUT):</p>
+            <p class="small text-body-secondary">Use an iterative <code class="font-mono">for()</code> loop to render a <a href="https://en.wikipedia.org/wiki/Julia_set" target="_blank" rel="noopener">Julia set</a> fractal and map escape iterations through a color lookup table (<code class="font-mono">-clut</code>):</p>
             <div class="bg-dark text-light rounded p-3 mb-3 font-mono border border-secondary border-opacity-25">
               <span class="text-secondary">$</span> magick -size 400x400 xc:gray -fx " \<br>
               &nbsp;&nbsp;Xi=2.4*i/w-1.2; \<br>
@@ -180,7 +201,7 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
               &nbsp;&nbsp;-clut -rotate -90 julia-set.png
             </div>
             <div class="text-center">
-              <img src="/image/julia-set.png" class="img-thumbnail" width="160" height="160" alt="Julia Fractals" />
+              <a href="/image/julia-set.png"><img src="/image/julia-set.png" class="img-thumbnail" width="160" height="160" alt="Julia Fractals" /></a>
             </div>
           </div>
         </div>
@@ -194,7 +215,7 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         </h2>
         <div id="collapsePrimes" class="accordion-collapse collapse" data-bs-parent="#advancedScripts">
           <div class="accordion-body bg-body-tertiary">
-            <p class="small text-body-secondary">Use the <code class="font-mono">debug()</code> statement inside FX loops to calculate math output directly to standard output:</p>
+            <p class="small text-body-secondary">Print the first 10 prime numbers to standard output using nested <code class="font-mono">for()</code> loops and <code class="font-mono">debug()</code>:</p>
             <div class="bg-dark text-light rounded p-3 font-mono border border-secondary border-opacity-25">
               <span class="text-secondary">$</span> magick xc:gray -fx " \<br>
               &nbsp;&nbsp;for (prime=2, prime &lt; 30, composite=0; \<br>
@@ -207,7 +228,7 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
     </div>
 
     <p class="small text-body-secondary text-end">
-      For more script examples, visit the official <a href="https://usage.imagemagick.org/transform/index.html#fx" target="_blank" rel="noopener">ImageMagick Usage Guide</a>.
+      For more script examples, visit <a href="https://usage.imagemagick.org/transform/index.html#fx" target="_blank" rel="noopener">Using FX, The Special Effects Image Operator</a>.
     </p>
   </section>
 
@@ -219,43 +240,99 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
       <div class="card-header bg-body-tertiary">
         <ul class="nav nav-tabs card-header-tabs" id="fxRefTabs" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active fw-semibold" id="symbols-tab" data-bs-toggle="tab" data-bs-target="#symbols" type="button" role="tab">Symbols &amp; Variables</button>
+            <button class="nav-link active fw-semibold" id="grammar-tab" data-bs-toggle="tab" data-bs-target="#grammar" type="button" role="tab">Grammar &amp; Literals</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold" id="symbols-tab" data-bs-toggle="tab" data-bs-target="#symbols" type="button" role="tab">Symbols &amp; Attributes</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link fw-semibold" id="constants-tab" data-bs-toggle="tab" data-bs-target="#constants" type="button" role="tab">Constants</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link fw-semibold" id="math-tab" data-bs-toggle="tab" data-bs-target="#math" type="button" role="tab">Functions &amp; Math</button>
+            <button class="nav-link fw-semibold" id="math-tab" data-bs-toggle="tab" data-bs-target="#math" type="button" role="tab">Functions &amp; Iterators</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link fw-semibold" id="operators-tab" data-bs-toggle="tab" data-bs-target="#operators" type="button" role="tab">Operators &amp; Control</button>
+            <button class="nav-link fw-semibold" id="operators-tab" data-bs-toggle="tab" data-bs-target="#operators" type="button" role="tab">Operators &amp; Precedence</button>
           </li>
         </ul>
       </div>
 
       <div class="card-body tab-content" id="fxRefTabsContent">
+        <!-- Grammar & Literals Tab -->
+        <div class="tab-pane fade show active" id="grammar" role="tabpanel">
+          <p class="small text-body-secondary mb-3">Formal building blocks recognized by the FX expression parser:</p>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle small">
+              <thead class="table-light">
+                <tr>
+                  <th style="width: 24%;">Element</th>
+                  <th>Specification &amp; Examples</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-semibold">Numbers</td>
+                  <td>Integers, floating-point values, scientific notation (explicit <code class="font-mono">+</code>/<code class="font-mono">-</code> required on exponent, e.g., <code class="font-mono">3.81469e-06</code>), and International System / IEC postfixes (<code class="font-mono">KB</code>, <code class="font-mono">MiB</code>, <code class="font-mono">GB</code>, etc.).</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">Color Names</td>
+                  <td>Named ImageMagick colors such as <code class="font-mono">red</code>, <code class="font-mono">green</code>, <code class="font-mono">blue</code>, <code class="font-mono">cyan</code>, <code class="font-mono">black</code>.</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">Color Hex Values</td>
+                  <td>3-, 6-, or 8-digit hexadecimal color specifications such as <code class="font-mono">#ccc</code>, <code class="font-mono">#cbfed0</code>, or <code class="font-mono">#b9e1cc00</code>.</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">Color Functions</td>
+                  <td><code class="font-mono">srgb()</code>, <code class="font-mono">srgba()</code>, <code class="font-mono">rgb()</code>, <code class="font-mono">rgba()</code>, <code class="font-mono">cmyk()</code>, <code class="font-mono">cmyka()</code>, <code class="font-mono">hsl()</code>, <code class="font-mono">hsla()</code>, etc.</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">Channel Constructor</td>
+                  <td><code class="font-mono">channel(...)</code> accepts 0 to 5 arguments and returns the value matching the channel currently being processed (in order RGBKA or CMYKA), zeroing omitted trailing channels (e.g., <code class="font-mono">channel(0.1)</code> sets the first channel to <code class="font-mono">0.1</code> and others to <code class="font-mono">0</code>).</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">Array Storage</td>
+                  <td>An image acts as 2D array storage bounded by its width and height (e.g., <code class="font-mono">p[-1,-1].r</code>), and an image sequence provides multiple arrays (e.g., <code class="font-mono">u.p[0,0].r</code>, <code class="font-mono">v.p[0,0].r</code>). Storage precision is Quantum-limited (<code class="font-mono">[0..65535]</code> for Q16) or floating-point on HDRI-enabled builds.</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold">User Settings</td>
+                  <td>Define reusable FX symbols via image options, e.g.:<br>
+                  <code class="font-mono">$ magick ... -set option:wd1 "%[fx:w/2]" -resize "%[fx:wd1-5]" ...</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <!-- Symbols Tab -->
-        <div class="tab-pane fade show active" id="symbols" role="tabpanel">
+        <div class="tab-pane fade" id="symbols" role="tabpanel">
           <div class="table-responsive">
             <table class="table table-hover align-middle">
               <thead class="table-light">
                 <tr>
-                  <th style="width: 20%;">Symbol</th>
+                  <th style="width: 28%;">Symbol</th>
                   <th>Description</th>
                 </tr>
               </thead>
               <tbody class="font-mono small">
-                <tr><td>u, v</td><td>First (<code class="text-primary">u</code>) and second (<code class="text-primary">v</code>) images in the active sequence list.</td></tr>
-                <tr><td>s, t, n</td><td>Current image reference (<code class="text-primary">s</code>), image sequence index (<code class="text-primary">t</code>), total image count (<code class="text-primary">n</code>).</td></tr>
-                <tr><td>i, j, p</td><td>Current column offset (<code class="text-primary">i</code>), row offset (<code class="text-primary">j</code>), target pixel channel accessor (<code class="text-primary">p</code>).</td></tr>
-                <tr><td>w, h, z</td><td>Current image width (<code class="text-primary">w</code>), height (<code class="text-primary">h</code>), channel depth (<code class="text-primary">z</code>).</td></tr>
-                <tr><td>r, g, b</td><td>Red, green, and blue values of the target pixel.</td></tr>
-                <tr><td>c, m, y, k</td><td>Cyan, magenta, yellow, and black values for CMYK target pixels.</td></tr>
-                <tr><td>a, o</td><td>Alpha and opacity values of the target pixel.</td></tr>
-                <tr><td>intensity, luma</td><td>Calculated pixel color intensity or luma weighted scalar.</td></tr>
-                <tr><td>hue, saturation, lightness</td><td>Pixel color channels extracted from HSL space representation.</td></tr>
-                <tr><td>page.x, page.y, page.width</td><td>Canvas page offsets and dimensions.</td></tr>
-                <tr><td>mean, standard_deviation, kurtosis</td><td>Image or individual channel statistics (e.g. <code class="text-primary">mean.r</code>, <code class="text-primary">s.kurtosis</code>).</td></tr>
+                <tr><td>u, v</td><td>First (<code class="text-primary">u</code>) and second (<code class="text-primary">v</code>) images in the sequence list.</td></tr>
+                <tr><td>s, t, n</td><td>Current image in list (<code class="text-primary">s</code>; equals <code class="text-primary">u</code> outside <code class="text-primary">%[fx:]</code>), current image index (<code class="text-primary">t</code>), and total image count (<code class="text-primary">n</code>).</td></tr>
+                <tr><td>i, j, p</td><td>Column offset (<code class="text-primary">i</code>), row offset (<code class="text-primary">j</code>), and pixel accessor (<code class="text-primary">p</code>, absolute or relative to current pixel).</td></tr>
+                <tr><td>w, h, z</td><td>Image width (<code class="text-primary">w</code>), height (<code class="text-primary">h</code>), and channel depth (<code class="text-primary">z</code>).</td></tr>
+                <tr><td>r, g, b, a, o</td><td>Red, green, blue, alpha, and opacity values (from RGBA) of a specific or current pixel.</td></tr>
+                <tr><td>c, m, y, k</td><td>Cyan, magenta, yellow, and black values of a CMYK pixel.</td></tr>
+                <tr><td>all, this</td><td>Channel specifiers targeting all channels (<code class="text-primary">all</code>) or the active channel being processed (<code class="text-primary">this</code>).</td></tr>
+                <tr><td>intensity</td><td>Pixel intensity, respecting the <a href="/command-line-options/#intensity">-intensity</a> setting.</td></tr>
+                <tr><td>hue, saturation</td><td>Pixel hue and saturation components.</td></tr>
+                <tr><td>lightness</td><td>Pixel lightness: <code class="text-primary">0.5*max(red,green,blue) + 0.5*min(red,green,blue)</code>.</td></tr>
+                <tr><td>luma, luminance</td><td>Pixel luma / luminance: <code class="text-primary">0.212656*red + 0.715158*green + 0.072186*blue</code>.</td></tr>
+                <tr><td>page.width, page.height, page.x, page.y</td><td>Virtual canvas page dimensions and x/y offsets.</td></tr>
+                <tr><td>printsize.x, printsize.y</td><td>Horizontal and vertical print size.</td></tr>
+                <tr><td>resolution.x, resolution.y</td><td>Horizontal and vertical image resolution.</td></tr>
+                <tr><td>depth, extent</td><td>Image bit depth and file extent.</td></tr>
+                <tr><td>minima, maxima, mean, median</td><td>Whole-image statistics. Append a channel specifier for per-channel stats (e.g., <code class="text-primary">depth.r</code>, <code class="text-primary">mean.this</code>, <code class="text-primary">mean.all</code>).</td></tr>
+                <tr><td>standard_deviation, kurtosis, skewness</td><td>Statistical dispersion, kurtosis, and skewness across the image or a specified channel.</td></tr>
+                <tr><td>s.depth, s.kurtosis, s.maxima, s.mean, s.median, s.minima, s.resolution.x, s.resolution.y, s.skewness, s.standard_deviation</td><td>Image attributes prefixed by image reference (<code class="text-primary">s.</code>, <code class="text-primary">u.</code>, <code class="text-primary">v.</code>, or <code class="text-primary">image.</code>).</td></tr>
               </tbody>
             </table>
           </div>
@@ -267,17 +344,19 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
             <table class="table table-hover align-middle">
               <thead class="table-light">
                 <tr>
-                  <th style="width: 20%;">Constant</th>
+                  <th style="width: 26%;">Constant</th>
                   <th>Value / Description</th>
                 </tr>
               </thead>
               <tbody class="font-mono small">
-                <tr><td>E, e</td><td>Euler's constant (e ≈ 2.7182818)</td></tr>
-                <tr><td>Epsilon, epsilon</td><td>Smallest difference between distinct values (1.0 × 10⁻¹²)</td></tr>
-                <tr><td>QuantumRange, quantumrange</td><td>Maximum channel scalar value dependent on build depth (e.g. 65535)</td></tr>
-                <tr><td>QuantumScale, quantumscale</td><td>Reciprocal of QuantumRange (1.0 / QuantumRange)</td></tr>
-                <tr><td>PHI, phi</td><td>Golden Ratio (φ ≈ 1.6180339)</td></tr>
-                <tr><td>PI, Pi, pi</td><td>Archimedes' constant (π ≈ 3.1415926)</td></tr>
+                <tr><td>E, e</td><td>Euler's number (<code class="text-primary">2.7182818...</code>)</td></tr>
+                <tr><td>Epsilon, epsilon</td><td>Floating-point comparison tolerance (<code class="text-primary">1.0 × 10⁻¹²</code>)</td></tr>
+                <tr><td>Opaque</td><td>Full opacity constant (<code class="text-primary">1.0</code>)</td></tr>
+                <tr><td>PHI, phi</td><td>Golden ratio (<code class="text-primary">1.6180339...</code>)</td></tr>
+                <tr><td>PI, Pi, pi</td><td>Archimedes' constant π (<code class="text-primary">3.14159265359...</code>)</td></tr>
+                <tr><td>QuantumRange, quantumrange</td><td>Maximum pixel channel value for the build depth (<code class="text-primary">255</code> for Q8, <code class="text-primary">65535</code> for Q16)</td></tr>
+                <tr><td>QuantumScale, quantumscale</td><td>Reciprocal of QuantumRange (<code class="text-primary">1.0 / QuantumRange</code>)</td></tr>
+                <tr><td>Transparent</td><td>Full transparency constant (<code class="text-primary">0.0</code>)</td></tr>
               </tbody>
             </table>
           </div>
@@ -285,72 +364,61 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
 
         <!-- Math Functions Tab -->
         <div class="tab-pane fade" id="math" role="tabpanel">
-          <p class="small text-body-secondary mb-3">Supported native built-in mathematical functions:</p>
-          <div class="d-flex flex-wrap gap-1 font-mono small mb-3">
-            <span class="badge text-bg-light border">abs()</span>
-            <span class="badge text-bg-light border">acos()</span>
-            <span class="badge text-bg-light border">acosh()</span>
-            <span class="badge text-bg-light border">airy()</span>
-            <span class="badge text-bg-light border">alt()</span>
-            <span class="badge text-bg-light border">asin()</span>
-            <span class="badge text-bg-light border">asinh()</span>
-            <span class="badge text-bg-light border">atan()</span>
-            <span class="badge text-bg-light border">atan2()</span>
-            <span class="badge text-bg-light border">ceil()</span>
-            <span class="badge text-bg-light border">clamp()</span>
-            <span class="badge text-bg-light border">cos()</span>
-            <span class="badge text-bg-light border">cosh()</span>
-            <span class="badge text-bg-light border">debug()</span>
-            <span class="badge text-bg-light border">drc()</span>
-            <span class="badge text-bg-light border">epoch()</span>
-            <span class="badge text-bg-light border">erf()</span>
-            <span class="badge text-bg-light border">exp()</span>
-            <span class="badge text-bg-light border">floor()</span>
-            <span class="badge text-bg-light border">gauss()</span>
-            <span class="badge text-bg-light border">gcd()</span>
-            <span class="badge text-bg-light border">hypot()</span>
-            <span class="badge text-bg-light border">int()</span>
-            <span class="badge text-bg-light border">isnan()</span>
-            <span class="badge text-bg-light border">j0()</span>
-            <span class="badge text-bg-light border">j1()</span>
-            <span class="badge text-bg-light border">jinc()</span>
-            <span class="badge text-bg-light border">ln()</span>
-            <span class="badge text-bg-light border">log()</span>
-            <span class="badge text-bg-light border">logtwo()</span>
-            <span class="badge text-bg-light border">magicktime()</span>
-            <span class="badge text-bg-light border">max()</span>
-            <span class="badge text-bg-light border">min()</span>
-            <span class="badge text-bg-light border">mod()</span>
-            <span class="badge text-bg-light border">not()</span>
-            <span class="badge text-bg-light border">pow()</span>
-            <span class="badge text-bg-light border">rand()</span>
-            <span class="badge text-bg-light border">round()</span>
-            <span class="badge text-bg-light border">sign()</span>
-            <span class="badge text-bg-light border">sin()</span>
-            <span class="badge text-bg-light border">sinc()</span>
-            <span class="badge text-bg-light border">sinh()</span>
-            <span class="badge text-bg-light border">sqrt()</span>
-            <span class="badge text-bg-light border">squish()</span>
-            <span class="badge text-bg-light border">tan()</span>
-            <span class="badge text-bg-light border">tanh()</span>
-            <span class="badge text-bg-light border">trunc()</span>
-          </div>
-          <div class="row g-3 small">
-            <div class="col-md-12">
-              <div class="p-2 border rounded bg-body-tertiary">
-                <strong>Color Constructors:</strong> <code class="font-mono">rgb()</code>, <code class="font-mono">rgba()</code>, <code class="font-mono">hsl()</code>, <code class="font-mono">hsla()</code>, <code class="font-mono">cmyk()</code>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="p-2 border rounded bg-body-tertiary">
-                <strong>Channel Constructor:</strong> <code class="font-mono">channel()</code>; This takes up to 5 expressions, and returns whichever is appropriate for the channel being processed, in order of RGBKA or CMYKA, e.g., <code class="font-mono">channel(r, g+b, g-b)</code>.
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="p-2 border rounded bg-body-tertiary">
-                <strong>Iterators &amp; Control Flow:</strong> <code class="font-mono">for(init, condition, step)</code>, <code class="font-mono">while(cond, stmt)</code>, <code class="font-mono">do(cond, stmt)</code>, <code class="font-mono">if(cond, then, else)</code>
-              </div>
-            </div>
+          <p class="small text-body-secondary mb-3">Complete reference of built-in mathematical, utility, and control-flow functions:</p>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle small">
+              <thead class="table-light">
+                <tr>
+                  <th style="width: 28%;">Function</th>
+                  <th>Description &amp; Formula</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="font-mono">abs(<var>x</var>)</td><td>Absolute value of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">acos(<var>x</var>), acosh(<var>x</var>)</td><td>Arc cosine and inverse hyperbolic cosine of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">airy(<var>x</var>)</td><td>Airy function (<code class="font-mono">max=1, min=0</code>): <code class="font-mono">[jinc(x)]² = [2*j1(pi*x)/(pi*x)]²</code>.</td></tr>
+                <tr><td class="font-mono">alt(<var>x</var>)</td><td>Sign alternation: returns <code class="font-mono">1.0</code> if <code class="font-mono">int(x)</code> is even, <code class="font-mono">-1.0</code> if odd.</td></tr>
+                <tr><td class="font-mono">asin(<var>x</var>), asinh(<var>x</var>)</td><td>Arc sine and inverse hyperbolic sine of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">atan(<var>x</var>), atanh(<var>x</var>)</td><td>Arc tangent and inverse hyperbolic tangent of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">atan2(<var>y</var>, <var>x</var>)</td><td>Two-argument arc tangent of <var>y</var>/<var>x</var>.</td></tr>
+                <tr><td class="font-mono">ceil(<var>x</var>)</td><td>Smallest integral value not less than <var>x</var>.</td></tr>
+                <tr><td class="font-mono">channel(...)</td><td>Accepts 0–5 channel expressions; returns the value for the active channel and zeros omitted channels.</td></tr>
+                <tr><td class="font-mono">clamp(<var>x</var>)</td><td>Clamps <var>x</var> to the normalized <code class="font-mono">[0.0, 1.0]</code> range.</td></tr>
+                <tr><td class="font-mono">cos(<var>x</var>), cosh(<var>x</var>)</td><td>Cosine and hyperbolic cosine of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">debug(<var>x</var>)</td><td>Prints <var>x</var> to stderr/stdout for expression debugging (forces single-threaded execution).</td></tr>
+                <tr><td class="font-mono">do(<var>cond</var>, <var>stmts</var>)</td><td>Executes <var>stmts</var>, then repeats while <var>cond</var> is non-zero.</td></tr>
+                <tr><td class="font-mono">drc(<var>x</var>, <var>y</var>)</td><td>Dynamic range compression (knee curve): <code class="font-mono">x / (y*(x - 1) + 1)</code> for <code class="font-mono">-1 &lt; y &lt; 1</code>.</td></tr>
+                <tr><td class="font-mono">epoch(<var>date-time</var>)</td><td>Converts a date-time property into seconds since the Unix epoch (<code class="font-mono">00:00:00 UTC</code>).</td></tr>
+                <tr><td class="font-mono">erf(<var>x</var>)</td><td>Gauss error function of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">exp(<var>x</var>)</td><td>Natural exponential function (<code class="font-mono">e<sup>x</sup></code>).</td></tr>
+                <tr><td class="font-mono">floor(<var>x</var>)</td><td>Largest integral value not greater than <var>x</var>.</td></tr>
+                <tr><td class="font-mono">for(<var>init</var>, <var>cond</var>, <var>stmts</var>)</td><td>Evaluates <var>init</var>, then iterates <var>stmts</var> while <var>cond</var> is non-zero.</td></tr>
+                <tr><td class="font-mono">gauss(<var>x</var>)</td><td>Gaussian function: <code class="font-mono">exp(-x*x/2) / sqrt(2*pi)</code>.</td></tr>
+                <tr><td class="font-mono">gcd(<var>x</var>, <var>y</var>)</td><td>Greatest common divisor of <var>x</var> and <var>y</var>.</td></tr>
+                <tr><td class="font-mono">hypot(<var>x</var>, <var>y</var>)</td><td>Euclidean hypotenuse: <code class="font-mono">sqrt(x² + y²)</code>.</td></tr>
+                <tr><td class="font-mono">if(<var>cond</var>, <var>then</var>, <var>else</var>)</td><td>Evaluates <var>then</var> if <var>cond</var> is non-zero, otherwise <var>else</var>.</td></tr>
+                <tr><td class="font-mono">int(<var>x</var>)</td><td>Greatest integer less than or equal to <var>x</var>.</td></tr>
+                <tr><td class="font-mono">isnan(<var>x</var>)</td><td>Returns <code class="font-mono">1.0</code> if <var>x</var> is NaN, otherwise <code class="font-mono">0.0</code>.</td></tr>
+                <tr><td class="font-mono">j0(<var>x</var>), j1(<var>x</var>)</td><td>Bessel functions of the first kind of order 0 and order 1.</td></tr>
+                <tr><td class="font-mono">jinc(<var>x</var>)</td><td>Jinc function (<code class="font-mono">max=1, min=-0.1323</code>): <code class="font-mono">2*j1(pi*x)/(pi*x)</code>.</td></tr>
+                <tr><td class="font-mono">ln(<var>x</var>), log(<var>x</var>), logtwo(<var>x</var>)</td><td>Natural logarithm (base <var>e</var>), base-10 logarithm, and base-2 logarithm.</td></tr>
+                <tr><td class="font-mono">magicktime()</td><td>Current system time in seconds since the Unix epoch (<code class="font-mono">00:00:00 UTC</code>).</td></tr>
+                <tr><td class="font-mono">max(<var>x</var>, <var>y</var>), min(<var>x</var>, <var>y</var>)</td><td>Maximum or minimum of <var>x</var> and <var>y</var>.</td></tr>
+                <tr><td class="font-mono">mod(<var>x</var>, <var>y</var>)</td><td>Floating-point remainder of <var>x</var> divided by <var>y</var>.</td></tr>
+                <tr><td class="font-mono">not(<var>x</var>)</td><td>Returns <code class="font-mono">1.0</code> if <var>x</var> is zero, otherwise <code class="font-mono">0.0</code>.</td></tr>
+                <tr><td class="font-mono">pow(<var>x</var>, <var>y</var>)</td><td>Power function (<code class="font-mono">x<sup>y</sup></code>).</td></tr>
+                <tr><td class="font-mono">rand()</td><td>Uniform pseudo-random value in <code class="font-mono">[0.0, 1.0)</code> with a <code class="font-mono">2¹²⁸ - 1</code> period.</td></tr>
+                <tr><td class="font-mono">round(<var>x</var>)</td><td>Rounds <var>x</var> to the nearest integral value.</td></tr>
+                <tr><td class="font-mono">sign(<var>x</var>)</td><td>Returns <code class="font-mono">-1.0</code> if <var>x &lt; 0.0</code>, otherwise <code class="font-mono">1.0</code>.</td></tr>
+                <tr><td class="font-mono">sin(<var>x</var>), sinh(<var>x</var>)</td><td>Sine and hyperbolic sine of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">sinc(<var>x</var>)</td><td>Normalized sinc function (<code class="font-mono">max=1, min=-0.21</code>): <code class="font-mono">sin(pi*x)/(pi*x)</code>.</td></tr>
+                <tr><td class="font-mono">sqrt(<var>x</var>)</td><td>Square root of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">squish(<var>x</var>)</td><td>Logistic sigmoid function: <code class="font-mono">1.0 / (1.0 + exp(-x))</code>.</td></tr>
+                <tr><td class="font-mono">tan(<var>x</var>), tanh(<var>x</var>)</td><td>Tangent and hyperbolic tangent of <var>x</var>.</td></tr>
+                <tr><td class="font-mono">trunc(<var>x</var>)</td><td>Truncates <var>x</var> to an integer toward zero.</td></tr>
+                <tr><td class="font-mono">while(<var>cond</var>, <var>stmts</var>)</td><td>Iterates <var>stmts</var> while <var>cond</var> is non-zero.</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -358,43 +426,40 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         <div class="tab-pane fade" id="operators" role="tabpanel">
           <div class="row g-4">
             <div class="col-lg-6">
-              <h6 class="fw-bold mb-3">Operator Precedence</h6>
+              <h6 class="fw-bold mb-3">Operator Precedence (Highest to Lowest)</h6>
               <ul class="list-group list-group-flush small font-mono">
-                <li class="list-group-item"><strong>Precedence 1 (Power):</strong> ^</li>
-                <li class="list-group-item"><strong>Precedence 2 (Unary/Multiplicative):</strong> -, *, /, %</li>
-                <li class="list-group-item"><strong>Precedence 3 (Additive/Shift):</strong> +, -, &lt;&lt;, &gt;&gt;</li>
-                <li class="list-group-item"><strong>Precedence 4 (Relational):</strong> &lt;, &lt;=, &gt;, &gt;=, ==, !=</li>
-                <li class="list-group-item"><strong>Precedence 5 (Bitwise/Logical):</strong> &amp;, |, ~, &amp;&amp;, ||, !</li>
-                <li class="list-group-item"><strong>Precedence 6 (Conditional):</strong> ?: (Ternary operator)</li>
-                <li class="list-group-item"><strong>Precedence 7 (Assignment):</strong> =, +=, -=, *=, /=, %=</li>
+                <li class="list-group-item"><strong>1. Exponentiation:</strong> ^</li>
+                <li class="list-group-item"><strong>2. Unary &amp; Multiplicative:</strong> unary -, *, /, %</li>
+                <li class="list-group-item"><strong>3. Additive &amp; Bitwise Shift:</strong> +, -, &lt;&lt;, &gt;&gt;</li>
+                <li class="list-group-item"><strong>4. Relational &amp; Equality:</strong> &lt;, &lt;=, &gt;, &gt;=, ==, !=</li>
+                <li class="list-group-item"><strong>5. Compound Assignment &amp; Inc/Dec:</strong> +=, -=, *=, /=, %=, &lt;&lt;=, &gt;&gt;=, &amp;=, |=, ++, --</li>
+                <li class="list-group-item"><strong>6. Bitwise &amp; Logical:</strong> &amp;, |, &amp;&amp;, ||, ~ (logical NOT)</li>
+                <li class="list-group-item"><strong>7. Ternary Conditional:</strong> ?:</li>
+                <li class="list-group-item"><strong>8. Statement Assignment &amp; Separator:</strong> =, ;</li>
               </ul>
             </div>
 
             <div class="col-lg-6">
-              <h6 class="fw-bold mb-3">Control Structures &amp; Conditionals</h6>
+              <h6 class="fw-bold mb-3">Operator Semantics &amp; Boolean Rules</h6>
               <div class="d-flex flex-column gap-2 small">
                 <div class="p-2 border rounded bg-body-tertiary">
-                  <div class="fw-semibold text-primary font-mono mb-1">Ternary Operator (condition ? expr1 : expr2)</div>
-                  <div class="text-body-secondary extra-small">Evaluates and returns <code class="font-mono">expr1</code> if condition is non-zero (true); otherwise returns <code class="font-mono">expr2</code>.</div>
-                  <div class="font-mono extra-small mt-1 text-muted">Example: u &gt; 0.5 ? 1.0 : 0.0</div>
+                  <div class="fw-semibold text-primary font-mono mb-1">Equality &amp; Relational (<code class="font-mono">==, !=, &lt;, &lt;=, &gt;, &gt;=</code>)</div>
+                  <div class="text-body-secondary extra-small">Returns <code class="font-mono">1.0</code> when true and <code class="font-mono">0.0</code> when false. <code class="font-mono">==</code> and <code class="font-mono">!=</code> compare values within <code class="font-mono">Epsilon</code> (<code class="font-mono">1e-12</code>).</div>
                 </div>
 
                 <div class="p-2 border rounded bg-body-tertiary">
-                  <div class="fw-semibold text-primary font-mono mb-1">if(condition, then_statement, else_statement)</div>
-                  <div class="text-body-secondary extra-small">Conditional execution function. Evaluates <code class="font-mono">then_statement</code> if condition holds true, or the optional <code class="font-mono">else_statement</code> if false.</div>
-                  <div class="font-mono extra-small mt-1 text-muted">Example: if(u.r &gt; 0.5, 1, 0)</div>
+                  <div class="fw-semibold text-primary font-mono mb-1">Logical Connectives (<code class="font-mono">&amp;&amp;, ||, ~</code>)</div>
+                  <div class="text-body-secondary extra-small"><code class="font-mono">x &amp;&amp; y</code> returns <code class="font-mono">1.0</code> if <code class="font-mono">x &gt; 0</code> and <code class="font-mono">y &gt; 0</code>; <code class="font-mono">x || y</code> returns <code class="font-mono">1.0</code> if either <code class="font-mono">&gt; 0</code>; <code class="font-mono">~x</code> (logical NOT) returns <code class="font-mono">1.0</code> if not <code class="font-mono">x &gt; 0</code>. Bitwise AND/OR use <code class="font-mono">&amp;</code> and <code class="font-mono">|</code>.</div>
                 </div>
 
                 <div class="p-2 border rounded bg-body-tertiary">
-                  <div class="fw-semibold text-primary font-mono mb-1">while(condition, statement)</div>
-                  <div class="text-body-secondary extra-small">Repeatedly executes <code class="font-mono">statement</code> as long as <code class="font-mono">condition</code> evaluates to non-zero (true).</div>
-                  <div class="font-mono extra-small mt-1 text-muted">Example: while(x &lt; 10, x+=1)</div>
+                  <div class="fw-semibold text-primary font-mono mb-1">Ternary (<code class="font-mono">cond ? true-stmts : false-stmts</code>)</div>
+                  <div class="text-body-secondary extra-small">Evaluates <code class="font-mono">true-stmts</code> if <code class="font-mono">cond != 0</code>, otherwise <code class="font-mono">false-stmts</code>. Only one ternary conditional is allowed per statement.</div>
                 </div>
 
                 <div class="p-2 border rounded bg-body-tertiary">
-                  <div class="fw-semibold text-primary font-mono mb-1">do(condition, statement)</div>
-                  <div class="text-body-secondary extra-small">Executes <code class="font-mono">statement</code> at least once, then repeatedly executes it as long as <code class="font-mono">condition</code> evaluates to non-zero (true).</div>
-                  <div class="font-mono extra-small mt-1 text-muted">Example: do(x &lt; 10, x+=1)</div>
+                  <div class="fw-semibold text-primary font-mono mb-1">Loops &amp; Branches (<code class="font-mono">if, for, while, do</code>)</div>
+                  <div class="text-body-secondary extra-small"><code class="font-mono">if(cond, nonzero, zero)</code>, <code class="font-mono">for(init, cond, stmts)</code>, <code class="font-mono">while(cond, stmts)</code>, and <code class="font-mono">do(cond, stmts)</code> iterate while <code class="font-mono">cond != 0</code>.</div>
                 </div>
               </div>
             </div>
@@ -407,25 +472,26 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
     <div class="card im-card p-4">
       <h5 class="fw-bold mb-3"><i class="bi bi-shield-exclamation text-warning me-2"></i>Syntax &amp; Semantics Rules</h5>
       <ul class="small text-body-secondary mb-0 d-flex flex-column gap-2">
-        <li>Symbols and built-in identifiers are <strong>case insensitive</strong>.</li>
-        <li><strong>Ternary conditionals</strong> (<code class="font-mono">x ? y : z</code>) can be nested within another ternary.</li>
-        <li>Single-character variable names are strictly reserved for built-ins. Use multi-character names for custom variables (e.g. <code class="font-mono">Xi</code>, <code class="font-mono">iso</code>).</li>
-        <li>Unary operators take a lower priority than binary operators. For instance, <code class="font-mono">-3^2</code> evaluates as <code class="font-mono">-(3^2) = -9</code>. Always use parentheses (<code class="font-mono">(-3)^2 = 9</code>) to explicitly indicate order.</li>
-        <li>Implicit multiplication is not permitted; e.g., <code class="font-mono">1/2x</code> returns a syntax exception, instead use <code class="font-mono">1/(2*x)</code> explicitly.</li>
+        <li><strong>Case Insensitivity:</strong> Symbols and built-in identifiers are case insensitive.</li>
+        <li><strong>Statements &amp; Assignments:</strong> Statements are separated by <code class="font-mono">;</code> and consist of variable assignments or the final return expression. Assignment starts a statement—it is not an operator—and at most one ternary conditional (<code class="font-mono">x ? y : z</code>) is permitted per statement.</li>
+        <li><strong>Variable Naming:</strong> Single-character names are reserved for built-ins; assigning to one throws an exception (e.g., <code class="font-mono">r=3.0; r</code> raises <em>Attempted assignment to non-UserSymbol 'r'</em>). Custom variables must use two or more letters only (e.g., <code class="font-mono">Xi</code>, not <code class="font-mono">X1</code>).</li>
+        <li><strong>Unary vs. Binary Precedence:</strong> Unary operators have lower precedence than exponentiation: <code class="font-mono">-3^2</code> evaluates as <code class="font-mono">-(3^2) = -9</code>. Use parentheses (<code class="font-mono">(-3)^2 = 9</code>) to override.</li>
+        <li><strong>Division &amp; Implicit Multiplication:</strong> <code class="font-mono">1/2x</code> is parsed as <code class="font-mono">(1/2)x</code>; write <code class="font-mono">1/(2*x)</code> explicitly when dividing by a product.</li>
+        <li><strong>Subtracting Negative Numbers:</strong> Because <code class="font-mono">--</code> is the decrement operator, wrap negative right-hand operands in parentheses: <code class="font-mono">-4-(-5)</code>.</li>
       </ul>
     </div>
   </section>
 
   <!-- Section 4: Source Image Access & Relative Addressing -->
   <section id="source-images" class="mb-5">
-    <h3 class="fw-bold pb-2 border-bottom mb-4">Source Images &amp; Pixel Addressing</h3>
+    <h3 class="fw-bold pb-2 border-bottom mb-4">Source Images, Pixel Addressing &amp; Channels</h3>
 
     <div class="row g-4 mb-4">
       <div class="col-lg-6">
         <div class="card im-card h-100 p-4">
           <h5 class="fw-bold mb-3"><i class="bi bi-images text-primary me-2"></i>Image Sequence Indexes</h5>
           <p class="small text-body-secondary">
-            Use index qualifiers on image references to query other images in the current sequence stack. Zero is the first image; negative indexes count backward from the end.
+            <code class="font-mono">u</code> and <code class="font-mono">v</code> reference the first and second images in the sequence. Index any image reference with brackets (0-based; negative indexes count from the end; out-of-range indexes wrap around, so in a 3-image list <code class="font-mono">u[-1]</code>, <code class="font-mono">u[2]</code>, and <code class="font-mono">u[5]</code> all select the third image):
           </p>
           <ul class="list-group list-group-flush font-mono small mb-3">
             <li class="list-group-item bg-transparent">u[0] <span class="text-body-secondary float-end">First image</span></li>
@@ -433,8 +499,9 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
             <li class="list-group-item bg-transparent">u[-1] <span class="text-body-secondary float-end">Last image in list</span></li>
             <li class="list-group-item bg-transparent">u[t] <span class="text-body-secondary float-end">Current image (s)</span></li>
           </ul>
+          <p class="extra-small text-body-secondary mb-2">Average the first and third images (the second image at index 1 is ignored and discarded):</p>
           <div class="bg-dark text-light rounded p-2 font-mono extra-small">
-            $ magick img1.jpg img2.jpg img3.jpg -fx "(u+u[2])/2" out.jpg
+            $ magick image1.jpg image2.jpg image3.jpg -fx "(u+u[2])/2" image.jpg
           </div>
         </div>
       </div>
@@ -443,45 +510,110 @@ description: "Explore ImageMagick’s FX special effects operator, a powerful pi
         <div class="card im-card h-100 p-4">
           <h5 class="fw-bold mb-3"><i class="bi bi-grid-3x3 text-primary me-2"></i>Pixel &amp; Neighborhood Access</h5>
           <p class="small text-body-secondary">
-            All color values are normalized in the range <strong>0.0 to 1.0</strong>. Use relative indexing (brackets) or absolute coordinates (braces) with <code class="font-mono">p</code>:
+            All color values are normalized to <strong>0.0–1.0</strong> (alpha ranges from <code class="font-mono">0.0</code> transparent to <code class="font-mono">1.0</code> opaque). By default, <code class="font-mono">p</code>, <code class="font-mono">r</code>, <code class="font-mono">g</code>, <code class="font-mono">b</code>, and <code class="font-mono">a</code> read from <code class="font-mono">s</code> (equivalent to <code class="font-mono">u</code> except inside <code class="font-mono">%[fx:...]</code>).
           </p>
           <div class="bg-body-tertiary p-3 rounded font-mono small border mb-3">
-            <div class="mb-2"><strong>Relative Offset:</strong></div>
+            <div class="mb-1"><strong>Relative Indexing (Brackets):</strong></div>
+            <div class="text-primary">p[-1].g</div>
+            <div class="text-body-secondary extra-small mb-2">Green value of pixel immediately left of current pixel</div>
             <div class="text-primary">p[-1,-1].r</div>
-            <div class="text-body-secondary extra-small mb-2">Red channel of the pixel diagonally top-left from current location</div>
+            <div class="text-body-secondary extra-small mb-3">Red value of pixel diagonally up and left</div>
 
-            <div class="mb-2"><strong>Absolute Offset:</strong></div>
+            <div class="mb-1"><strong>Absolute Coordinates (Braces):</strong></div>
+            <div class="text-primary">p{0,0}.r</div>
+            <div class="text-body-secondary extra-small mb-2">Red value of upper-left corner pixel</div>
             <div class="text-primary">p{12,34}.b</div>
-            <div class="text-body-secondary extra-small">Blue channel value at column 12, row 34</div>
+            <div class="text-body-secondary extra-small">Blue value at column 12, row 34</div>
+          </div>
+          <p class="extra-small text-body-secondary mb-0">
+            Fractional coordinates return blended colors according to <a href="/command-line-options/#interpolate">-interpolate</a>, and out-of-bounds coordinates follow <a href="/command-line-options/#virtual-pixel">-virtual-pixel</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel Selection & Asymmetric Example -->
+    <div class="card im-card p-4">
+      <h5 class="fw-bold mb-3"><i class="bi bi-sliders text-primary me-2"></i>Channel Selection &amp; Output Channels</h5>
+      <p class="small text-body-secondary">
+        Use <a href="/command-line-options/#channel">-channel</a> to choose which output channels <code class="font-mono">-fx</code> updates (by default, all channels except opacity are updated). Appending a channel qualifier such as <code class="font-mono">u.r</code> reads a specific input channel; omitting it reads the active channel. Use <code class="font-mono">mean.this</code> for the current channel's mean or <code class="font-mono">mean.all</code> for the overall mean across channels.
+      </p>
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-7">
+          <p class="extra-small text-body-secondary mb-1">Replace the red channel of <code class="font-mono">alpha.png</code> with the average of the green channels from <code class="font-mono">alpha.png</code> and <code class="font-mono">beta.png</code>:</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small mb-3">
+            $ magick alpha.png beta.png -channel red -fx "(u.g+v.g)/2" gamma.png
+          </div>
+          <p class="extra-small text-body-secondary mb-1">Because only the first image (<code class="font-mono">u</code>) is cloned and modified on the selected <code class="font-mono">-channel green</code>, blending a flopped logo with an unflopped logo produces an asymmetric result:</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick logo: -flop logo: -resize "20%" -channel green -fx "(u+v)/2" image.jpg
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex align-items-center justify-content-center gap-2 p-3 bg-body-tertiary rounded">
+            <a href="/image/logo-sm-flop.png"><img src="/image/logo-sm-flop.png" class="img-thumbnail" width="96" height="72" alt="logo-sm-flop.png" /></a>
+            <a href="/image/logo-sm.png"><img src="/image/logo-sm.png" class="img-thumbnail" width="96" height="72" alt="logo-sm.png" /></a>
+            <i class="bi bi-arrow-right fs-5 text-secondary"></i>
+            <a href="/image/logo-sm-fx.png"><img src="/image/logo-sm-fx.png" class="img-thumbnail" width="96" height="72" alt="logo-sm-fx.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Results & Format Escapes -->
+  <section id="results-escapes" class="mb-5">
+    <h3 class="fw-bold pb-2 border-bottom mb-4">Results &amp; Format Escapes</h3>
+
+    <p class="small text-body-secondary mb-4">
+      When <code class="font-mono">-fx</code> runs, computed channel values are written into a clone of <code class="font-mono">u</code> (<code class="font-mono">s = u</code>, <code class="font-mono">t = 0</code>), which then replaces the entire input image list. Instead of modifying image pixels, FX expressions can also be evaluated inside <a href="/command-line-options/#format_identify_">-format</a> and <code class="font-mono">-set</code> string escapes:
+    </p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-body-tertiary h-100">
+          <h6><code class="font-mono">%[fx:...]</code> Value Escape</h6>
+          <p class="extra-small text-body-secondary">Evaluated once per image in the sequence (<code class="font-mono">s</code> and <code class="font-mono">t</code> step through each image, <code class="font-mono">i = j = 0</code>, channel defaults to red, and <code class="font-mono">-channel</code> is ignored).</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick canvas:'rgb(25%,50%,75%)' rose: -colorspace gray \<br>
+            &nbsp;&nbsp;-format 'Red channel of NW corner of image #%[fx:t] is %[fx:s]
+' info:<br>
+            <span class="text-info">Red channel of NW corner of image #0 is 0.464883<br>
+            Red channel of NW corner of image #1 is 0.184582</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 border rounded bg-body-tertiary h-100">
+          <h6><code class="font-mono">%[pixel:...]</code> &amp; <code class="font-mono">%[hex:...]</code> Color Escapes</h6>
+          <p class="extra-small text-body-secondary">Evaluated once per image and per color channel (<code class="font-mono">-channel</code> ignored, <code class="font-mono">i = j = 0</code>), converting the resulting channel values into a named or hexadecimal color string.</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick rose: -format '%[pixel:p{0,0}]' info:
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Escapes & Formats -->
     <div class="card im-card p-4">
-      <h5 class="fw-bold mb-3"><i class="bi bi-terminal-split text-success me-2"></i>Format Escapes &amp; String Evaluations</h5>
-      <p class="small text-body-secondary">
-        Instead of modifying pixels directly on an image canvas, FX formulas can be embedded into string escapes for metadata queries or dynamic settings:
-      </p>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="p-3 border rounded bg-body-tertiary h-100">
-            <h6><code class="font-mono">%[fx:]</code> Value Escape</h6>
-            <p class="extra-small text-body-secondary">Evaluated once per image in sequence. Returns numerical computation result directly into format attributes.</p>
-            <div class="bg-dark text-light rounded p-2 font-mono extra-small">
-              $ magick rose: -format '%[fx:w*h]' info:
-            </div>
+      <h5 class="fw-bold mb-3"><i class="bi bi-code-square text-success me-2"></i>Practical Escape Examples</h5>
+      <div class="d-flex flex-column gap-3 small">
+        <div>
+          <p class="text-body-secondary mb-1">Rotate each duplicated frame proportionally and set a longer animation pause on the first frame (<code class="font-mono">t == 0</code>):</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick rose: -duplicate 29 -virtual-pixel Gray -distort SRT '%[fx:360.0*t/n]' \<br>
+            &nbsp;&nbsp;-set delay '%[fx:t == 0 ? 240 : 10]' -loop 0 rose.gif
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-3 border rounded bg-body-tertiary h-100">
-            <h6><code class="font-mono">%[pixel:]</code> Color Escape</h6>
-            <p class="extra-small text-body-secondary">Evaluates formula across color channels and automatically outputs a standardized CSS color or hex string.</p>
-            <div class="bg-dark text-light rounded p-2 font-mono extra-small">
-              $ magick rose: -format '%[pixel:p{0,0}]' info:
-            </div>
+        <div>
+          <p class="text-body-secondary mb-1">Compare two images with RMSE and return <code class="font-mono">1</code> if the distortion exceeds <code class="font-mono">0.1</code> (otherwise <code class="font-mono">0</code>):</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick water.png reference.png -metric RMSE -compare -format "%[fx:%[distortion]&gt;0.1]" info:
+          </div>
+        </div>
+        <div>
+          <p class="text-body-secondary mb-1">Convert an image modification date-time property into Unix epoch seconds using <code class="font-mono">epoch()</code>:</p>
+          <div class="bg-dark text-light rounded p-2 font-mono extra-small">
+            $ magick rose.png -precision 16 -format '%[fx:epoch(%%[date:modify])]' info:
           </div>
         </div>
       </div>
