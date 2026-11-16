@@ -70,7 +70,7 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
     </div>
   </div>
 
-  <!-- Portable Windows Archives -->
+  <!-- Portable Linux Archives -->
   <h5 class="fw-bold mb-3">Portable Linux Archives</h5>
   <p class="text-body-secondary small">These are static builds bundled as portable .tar.xz archives. Extract an archive to use it.</p>
   <div class="card im-card overflow-hidden mb-4" style="width: 540px; max-width: 100%;">
@@ -157,6 +157,46 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
       $ brew install imagemagick-full
     </div>
     <span class="form-text mt-2 d-block">Note: <code>imagemagick-full</code> is keg-only and not automatically linked to your system PATH.</span>
+  </div>
+
+  <!-- Portable macOS Archives -->
+  <h5 class="fw-bold mb-3">Portable macOS Archives</h5>
+  <p class="text-body-secondary small">These are static builds bundled as portable .tar.xz archives. Extract an archive to use it.</p>
+  <div class="card im-card overflow-hidden mb-4" style="width: 540px; max-width: 100%;">
+    <div class="table-responsive" style="max-height: 450px;">
+      <table class="table table-hover table-striped mb-0 align-middle w-100" style="table-layout: fixed;">
+        <colgroup>
+          <col style="width: 35%;">
+          <col style="width: 65%;">
+        </colgroup>
+        <thead class="table-dark">
+          <tr>
+            <th class="ps-3">Build</th>
+            <th class="pe-3">Downloads by Architecture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ps-3">Q16-HDRI Static</td>
+            <td class="pe-3"><div class="d-flex flex-wrap gap-2">
+              {% include download-link.html variant="portable-Q16-HDRI-macos-arm64.tar.xz" label="arm64" type="button" %}
+            </div></td>
+          </tr>
+          <tr>
+            <td class="ps-3">Q16 Static</td>
+            <td class="pe-3"><div class="d-flex flex-wrap gap-2">
+              {% include download-link.html variant="portable-Q16-macos-arm64.tar.xz" label="arm64" type="button" %}
+            </div></td>
+          </tr>
+          <tr>
+            <td class="ps-3">Q8 Static</td>
+            <td class="pe-3"><div class="d-flex flex-wrap gap-2">
+              {% include download-link.html variant="portable-Q8-macos-arm64.tar.xz" label="arm64" type="button" %}
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
