@@ -36,12 +36,6 @@
 /*
   Include declarations.
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <assert.h>
-#include <math.h>
 #include "MagickCore/studio.h"
 #include "MagickCore/MagickCore.h"
 
@@ -91,34 +85,10 @@ typedef struct _StatisticsInfo
     skewness;
 } StatisticsInfo;
 
-static inline int GetMagickNumberThreads(const Image *source,
-  const Image *destination,const size_t chunk,int multithreaded)
-{
-#define MagickMax(x,y)  (((x) > (y)) ? (x) : (y))
-#define MagickMin(x,y)  (((x) < (y)) ? (x) : (y))
-
-  /*
-    Number of threads bounded by the amount of work and any thread resource
-    limit.  The limit is 2 if the pixel cache type is not memory or
-    memory-mapped.
-  */
-  if (multithreaded == 0)
-    return(1);
-  if (((GetImagePixelCacheType(source) != MemoryCache) &&
-       (GetImagePixelCacheType(source) != MapCache)) ||
-      ((GetImagePixelCacheType(destination) != MemoryCache) &&
-       (GetImagePixelCacheType(destination) != MapCache)))
-    return(MagickMax(MagickMin(GetMagickResourceLimit(ThreadResource),2),1));
-  return(MagickMax(MagickMin((ssize_t) GetMagickResourceLimit(ThreadResource),
-    (ssize_t) (chunk)/64),1));
-}
-
 ModuleExport size_t analyzeImage(Image **images,const int argc,
   const char **argv,ExceptionInfo *exception)
 {
 #define AnalyzeImageFilterTag  "Filter/Analyze"
-#define magick_number_threads(source,destination,chunk,multithreaded) \
-  num_threads(GetMagickNumberThreads(source,destination,chunk,multithreaded))
 
   char
     text[MagickPathExtent];
@@ -163,8 +133,7 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
     image_view=AcquireVirtualCacheView(image,exception);
 #if defined(MAGICKCORE_OPENMP_SUPPORT)
   #pragma omp parallel for schedule(static) \
-    shared(progress,status,brightness,saturation) \
-    magick_number_threads(image,image,image->rows,1)
+    shared(progress,status,brightness,saturation)
 #endif
     for (y=0; y < (ssize_t) image->rows; y++)
     {
@@ -198,13 +167,13 @@ ModuleExport size_t analyzeImage(Image **images,const int argc,
 
         ConvertRGBToHSL(GetPixelRed(image,p),GetPixelGreen(image,p),
           GetPixelBlue(image,p),&h,&s,&b);
-        b*=QuantumRange;
+        b*=(double) QuantumRange;
         for (i=1; i <= 4; i++)
           local_brightness.sum[i]+=pow(b,(double) i);
-        s*=QuantumRange;
+        s*=(double) QuantumRange;
         for (i=1; i <= 4; i++)
           local_saturation.sum[i]+=pow(s,(double) i);
-        p+=GetPixelChannels(image);
+        p+=(ptrdiff_t) GetPixelChannels(image);
       }
 #if defined(MAGICKCORE_OPENMP_SUPPORT)
       #pragma omp critical (analyzeImage)
