@@ -610,7 +610,7 @@ channel data, to create an alpha channel, or to perform other operations on the 
     <dt class="col-md-4">shape</dt>
     <dd class="col-md-8">
        As per 'Copy' but also colors the resulting shape mask with
-       the current background color.  That is the RGB color channels is
+       the current background color.  That is the RGB color channels are
        replaced, with appropriate alpha shape.
        </dd>
 
@@ -2862,7 +2862,7 @@ ground. </p>
 
 <p>The output image size will by default be the same as the input image.  This
 means that if the part of the distorted image falls outside the viewed area of
-the 'distorted space', those parts is clipped and lost.  However if you use
+the 'distorted space', those parts are clipped and lost.  However if you use
 the plus form of the operator (<a href="#distort" >+distort</a>) the operator
 will attempt (if possible) to show the whole of the distorted image, while
 retaining a correct 'virtual canvas' offset, for image layering. This offset
@@ -3571,12 +3571,12 @@ href="#adjoin">+adjoin</a> following -fft in the command line.</p>
 is padded automagically to the larger of the width or height of the input
 image and to an even number of pixels. The padding will occur at the bottom
 and/or right sides of the input image. The resulting output magnitude and
-phase images is square at this size. The kind of padding relies on the <a
+phase images are square at this size. The kind of padding relies on the <a
 href="#virtual-pixel">-virtual-pixel</a> setting.</p>
 
 <p>Both output components will have dynamic ranges that fit within
 [0, <var>QuantumRange</var>], so that HDRI need not be enabled.
-Phase values nominally range from 0 to 2*π, but is scaled to span the full
+Phase values nominally range from 0 to 2*π, but are scaled to span the full
 dynamic range.  (The first few releases had non-HDRI scaled but HDRI not
 scaled). The magnitude image is not scaled and thus generally will contain
 very small values. As such, the image normally will appear totally black. In
@@ -3793,7 +3793,7 @@ href="#set" >-set</a>):-</p>
     support range) with the given filter. This allows you to specify a filter
     function to be used as a windowing function for these IIR filters.
     Many of the defined filters are actually windowing functions for these IIR
-    filters.  A typical choices is <code>Box</code>, (which effectively turns
+    filters.  A typical choice is <code>Box</code>, (which effectively turns
     off the windowing function).  </td>
   </tr>
 
@@ -5099,7 +5099,7 @@ animation, or a fully-'coalesced' animation sequence. </p>
         image sequence, then adjust the offsets so all images are contained on
         a minimal positive canvas. None of the image data is modified or
         merged, only the individual image virtual canvas size and offset.
-        All the images is given the same canvas size, and will have
+        All the images are given the same canvas size, and will have
         a positive offset, but will remain in the same position relative to
         each other. As a result of the minimal canvas size at least one image
         will touch every edge of that canvas.  The image data touching those
@@ -6155,7 +6155,7 @@ Wave
 
 <p class="lead">Process the image with a custom image filter.</p>
 
-<p>The command arguments has the form <code>"module arg1 arg2 arg3 ...
+<p>The command arguments have the form <code>"module arg1 arg2 arg3 ...
 argN"</code> where <code>module</code> is the name of the module to invoke (e.g.
 "Analyze") and arg1 arg2 arg3 ... argN are an arbitrary number of arguments to
 pass to the process module.</p>
@@ -6397,7 +6397,7 @@ images. This ensures all the images follow a single color map. </p>
 <p>If the number of colors over all the images is less than 256, then <a
 href="#remap">+remap</a> should not perform any color reduction or dithering, as
 no color changes are needed. In that case, its only effect is to force the use
-of a global color table.  This recommended after using either <a
+of a global color table.  This is recommended after using either <a
 href="#colors">-colors</a> or <a href="#ordered-dither">-ordered-dither</a> to
 reduce the number of colors in an animated image sequence. </p>
 
