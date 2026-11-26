@@ -343,17 +343,20 @@ description: "Download ImageMagick for Linux, macOS, and Windows. Access ready-t
   <!-- Package Managers -->
   <h5 class="fw-bold mb-3">Command-Line Package Managers</h5>
   <div class="card im-card p-4 mb-4">
-    <p class="small text-body-secondary mb-3">Quickly install via winget:</p>
-    <div class="d-flex flex-column gap-2 font-mono small">
-      <div class="bg-dark text-light p-2 rounded">$ winget install ImageMagick.Q16-HDRI</div>
-      <div class="bg-dark text-light p-2 rounded">$ winget install ImageMagick.Q16</div>
-      <div class="bg-dark text-light p-2 rounded">$ winget install ImageMagick.Q8</div>
+    <p class="small text-body-secondary mb-3">Quickly install via winget</p>
+    <div class="bg-dark text-light p-3 rounded font-mono small mb-3">
+      $ winget install ImageMagick.Q16-HDRI<br>
+      $ winget install ImageMagick.Q16<br>
+      $ winget install ImageMagick.Q8
     </div>
+    <p class="small text-body-secondary mb-0">
+      ImageMagick uses Advanced Installer to <a href="https://www.advancedinstaller.com/imagemagick-latest-release-automatically-published-to-winget.html">publish the latest release to the winget repository</a>.</p>
+    </p>
   </div>
 
   <!-- Verification Snippet -->
+  <h5 class="fw-bold mb-3">Verify Installation</h5>
   <div class="card im-card p-4">
-    <h6 class="fw-bold mb-2">Verify Installation</h6>
     <div class="bg-dark text-light p-3 rounded font-mono small mb-3">
       $ magick logo: logo.gif<br>
       $ magick identify logo.gif
