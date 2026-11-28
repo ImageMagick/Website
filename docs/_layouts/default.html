@@ -76,11 +76,11 @@
       gap: 0.5rem;
     }
 
-    /* Hero Section */
+    /* Compact Hero Section */
     .im-hero {
       background: var(--im-bg-gradient);
       color: #ffffff;
-      padding: 4rem 0 3.5rem;
+      padding: 5.25rem 0 2rem;
       position: relative;
       overflow: hidden;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -282,36 +282,39 @@
   </nav>
 
   <!-- Hero Header Block -->
-  <header class="im-hero mt-5 pt-5">
-    <div class="container-xl pt-3">
+  <header class="im-hero">
+    <div class="container-xl">
       <div class="row align-items-center g-4">
-        <div class="col-lg-7">
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-20 text-primary border border-primary border-opacity-30 mb-3 fs-7">
+        <div class="{% if page.url == '/' %}col-lg-7{% else %}col-lg-10{% endif %}">
+          <div class="d-inline-flex align-items-center gap-2 px-2 py-1 rounded-pill bg-primary bg-opacity-20 text-primary border border-primary border-opacity-30 mb-2 small">
             <span class="badge bg-primary">v{{ site.magick.version | default: "7.1.1" }}</span>
-            <span class="small text-light">Latest Stable Release</span>
+            <span class="text-light">Latest Stable Release</span>
           </div>
-          <h1 class="display-4 fw-bold mb-3 tracking-tight">{{ page.title }}</h1>
-          <p class="lead text-light opacity-75 mb-4 fs-5">{{ page.description }}</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/download/" class="btn btn-primary btn-lg px-4 fw-semibold d-flex align-items-center gap-2 shadow">
+          <h1 class="display-6 fw-bold mb-2 tracking-tight">{{ page.title }}</h1>
+          <p class="text-light opacity-75 mb-3 fs-6">{{ page.description }}</p>
+          {% if page.url == '/' %}
+          <div class="d-flex flex-wrap gap-2">
+            <a href="/download/" class="btn btn-primary px-3 fw-semibold d-flex align-items-center gap-2 shadow-sm">
               <i class="bi bi-download"></i> Get ImageMagick
             </a>
-            <a href="/command-line-processing/" class="btn btn-outline-light btn-lg px-4 fw-semibold d-flex align-items-center gap-2">
+            <a href="/command-line-processing/" class="btn btn-outline-light px-3 fw-semibold d-flex align-items-center gap-2">
               <i class="bi bi-terminal"></i> Documentation
             </a>
           </div>
+          {% endif %}
         </div>
 
-        <!-- Terminal Quickstart Preview -->
+        {% if page.url == '/' %}
+        <!-- Terminal Quickstart Preview (Homepage Only) -->
         <div class="col-lg-5">
           <div class="terminal-card">
-            <div class="terminal-header">
+            <div class="terminal-header py-1 px-3">
               <div class="terminal-dot bg-danger"></div>
               <div class="terminal-dot bg-warning"></div>
               <div class="terminal-dot bg-success"></div>
               <span class="small text-secondary font-mono ms-2">quickstart.sh</span>
             </div>
-            <div class="p-3 text-light font-mono small">
+            <div class="p-3 text-light font-mono small" style="line-height: 1.4;">
               <div class="text-secondary"># Install via your favorite Package Manager</div>
               <div class="text-success">$ apt install imagemagick</div>
               <div class="text-secondary mt-2"># Convert PNG to WebP with compression</div>
@@ -321,6 +324,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
       </div>
     </div>
   </header>
